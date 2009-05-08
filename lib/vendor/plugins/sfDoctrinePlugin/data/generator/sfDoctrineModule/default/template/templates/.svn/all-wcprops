@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/!svn/ver/16952/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/default/template/templates
+END
+showSuccess.php
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/default/template/templates/showSuccess.php
+END
+editSuccess.php
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/default/template/templates/editSuccess.php
+END
+indexSuccess.php
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/!svn/ver/16952/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/default/template/templates/indexSuccess.php
+END
+_form.php
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/!svn/ver/14510/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/default/template/templates/_form.php
+END
+newSuccess.php
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/default/template/templates/newSuccess.php
+END

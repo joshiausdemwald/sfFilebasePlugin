@@ -1,0 +1,34 @@
+9
+
+dir
+17984
+http://svn.symfony-project.com/branches/1.2/lib/plugins/sfPropelPlugin/data/generator/sfPropelAdmin/default
+http://svn.symfony-project.com
+
+
+
+2009-04-03T15:52:30.605444Z
+16948
+fabien
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+ee427ae8-e902-0410-961c-c3ed070cd9f9
+
+skeleton
+dir
+
+template
+dir
+

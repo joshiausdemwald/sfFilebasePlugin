@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/15828/branches/1.2/lib/plugins/sfDoctrinePlugin/lib/record
+END
+sfDoctrineRecordI18nFilter.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/!svn/ver/14472/branches/1.2/lib/plugins/sfDoctrinePlugin/lib/record/sfDoctrineRecordI18nFilter.class.php
+END
+sfDoctrineRecordListener.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/lib/record/sfDoctrineRecordListener.class.php
+END
+sfDoctrineRecord.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/!svn/ver/15828/branches/1.2/lib/plugins/sfDoctrinePlugin/lib/record/sfDoctrineRecord.class.php
+END

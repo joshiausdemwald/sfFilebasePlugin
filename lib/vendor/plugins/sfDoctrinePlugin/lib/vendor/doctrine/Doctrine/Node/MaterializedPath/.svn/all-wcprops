@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Node/MaterializedPath
+END
+PostOrderIterator.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Node/MaterializedPath/PostOrderIterator.php
+END
+PreOrderIterator.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Node/MaterializedPath/PreOrderIterator.php
+END
+LevelOrderIterator.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Node/MaterializedPath/LevelOrderIterator.php
+END

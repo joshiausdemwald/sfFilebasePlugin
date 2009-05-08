@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/!svn/ver/14927/branches/1.2/lib/plugins/sfPropelPlugin/data/generator/sfPropelAdmin/default/template/templates
+END
+_list_actions.php
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/!svn/ver/13515/branches/1.2/lib/plugins/sfPropelPlugin/data/generator/sfPropelAdmin/default/template/templates/_list_actions.php
+END
+_list_batch_actions.php
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/!svn/ver/13515/branches/1.2/lib/plugins/sfPropelPlugin/data/generator/sfPropelAdmin/default/template/templates/_list_batch_actions.php
+END
+_edit_header.php
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/!svn/ver/13515/branches/1.2/lib/plugins/sfPropelPlugin/data/generator/sfPropelAdmin/default/template/templates/_edit_header.php
+END
+_list_td_stacked.php
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/!svn/ver/13515/branches/1.2/lib/plugins/sfPropelPlugin/data/generator/sfPropelAdmin/default/template/templates/_list_td_stacked.php
+END
+_list_messages.php
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/!svn/ver/13515/branches/1.2/lib/plugins/sfPropelPlugin/data/generator/sfPropelAdmin/default/template/templates/_list_messages.php
+END
+_edit_footer.php
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/!svn/ver/13515/branches/1.2/lib/plugins/sfPropelPlugin/data/generator/sfPropelAdmin/default/template/templates/_edit_footer.php
+END
+_list_th_stacked.php
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/!svn/ver/13515/branches/1.2/lib/plugins/sfPropelPlugin/data/generator/sfPropelAdmin/default/template/templates/_list_th_stacked.php
+END
+_edit_actions.php
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/!svn/ver/13515/branches/1.2/lib/plugins/sfPropelPlugin/data/generator/sfPropelAdmin/default/template/templates/_edit_actions.php
+END
+listSuccess.php
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/!svn/ver/13515/branches/1.2/lib/plugins/sfPropelPlugin/data/generator/sfPropelAdmin/default/template/templates/listSuccess.php
+END
+_filters.php
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/!svn/ver/13515/branches/1.2/lib/plugins/sfPropelPlugin/data/generator/sfPropelAdmin/default/template/templates/_filters.php
+END
+_edit_form.php
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/!svn/ver/13515/branches/1.2/lib/plugins/sfPropelPlugin/data/generator/sfPropelAdmin/default/template/templates/_edit_form.php
+END
+_list.php
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/!svn/ver/14927/branches/1.2/lib/plugins/sfPropelPlugin/data/generator/sfPropelAdmin/default/template/templates/_list.php
+END
+_list_td_tabular.php
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/!svn/ver/13515/branches/1.2/lib/plugins/sfPropelPlugin/data/generator/sfPropelAdmin/default/template/templates/_list_td_tabular.php
+END
+_edit_messages.php
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/!svn/ver/13515/branches/1.2/lib/plugins/sfPropelPlugin/data/generator/sfPropelAdmin/default/template/templates/_edit_messages.php
+END
+editSuccess.php
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/!svn/ver/13515/branches/1.2/lib/plugins/sfPropelPlugin/data/generator/sfPropelAdmin/default/template/templates/editSuccess.php
+END
+_list_th_tabular.php
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/!svn/ver/13515/branches/1.2/lib/plugins/sfPropelPlugin/data/generator/sfPropelAdmin/default/template/templates/_list_th_tabular.php
+END
+_list_td_actions.php
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/!svn/ver/13515/branches/1.2/lib/plugins/sfPropelPlugin/data/generator/sfPropelAdmin/default/template/templates/_list_td_actions.php
+END
+_list_td_batch_actions.php
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/!svn/ver/13515/branches/1.2/lib/plugins/sfPropelPlugin/data/generator/sfPropelAdmin/default/template/templates/_list_td_batch_actions.php
+END
+_list_header.php
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/!svn/ver/13515/branches/1.2/lib/plugins/sfPropelPlugin/data/generator/sfPropelAdmin/default/template/templates/_list_header.php
+END
+_list_footer.php
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/!svn/ver/13515/branches/1.2/lib/plugins/sfPropelPlugin/data/generator/sfPropelAdmin/default/template/templates/_list_footer.php
+END

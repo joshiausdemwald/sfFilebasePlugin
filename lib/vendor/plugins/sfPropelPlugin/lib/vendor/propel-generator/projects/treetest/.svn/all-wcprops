@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/propel/!svn/ver/509/branches/1.3/generator/projects/treetest
+END
+runtime-conf.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/propel/!svn/ver/505/branches/1.3/generator/projects/treetest/runtime-conf.xml
+END
+build.properties
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/propel/!svn/ver/505/branches/1.3/generator/projects/treetest/build.properties
+END
+treetest-schema.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/propel/!svn/ver/509/branches/1.3/generator/projects/treetest/treetest-schema.xml
+END

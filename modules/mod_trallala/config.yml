@@ -1,0 +1,9 @@
+## YAML Template.
+module:
+  name: "Trallala"
+  author: "Käse"
+  dependancies: ["Hanswurst"]
+  fileName: Hanswurst.php
+  mainClassName: Hanswurst
+  eventListeners:
+    Hanswurst: [saved]

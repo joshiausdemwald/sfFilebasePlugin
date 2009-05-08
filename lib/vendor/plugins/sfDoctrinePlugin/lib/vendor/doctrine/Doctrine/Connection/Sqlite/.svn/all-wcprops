@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Connection/Sqlite
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Connection/Sqlite/Exception.php
+END

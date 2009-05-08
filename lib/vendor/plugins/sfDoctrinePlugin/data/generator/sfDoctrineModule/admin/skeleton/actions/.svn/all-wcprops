@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/skeleton/actions
+END
+actions.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/skeleton/actions/actions.class.php
+END

@@ -1,0 +1,7 @@
+K 13
+svn:externals
+V 160
+i18n http://svn.symfony-project.com/branches/1.2/lib/plugins/sfPropelPlugin/i18n
+web http://svn.symfony-project.com/branches/1.2/lib/plugins/sfPropelPlugin/web
+
+END

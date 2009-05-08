@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/!svn/ver/9991/branches/1.2/lib/task/i18n
+END
+sfI18nExtractTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/9991/branches/1.2/lib/task/i18n/sfI18nExtractTask.class.php
+END
+sfI18nFindTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/9991/branches/1.2/lib/task/i18n/sfI18nFindTask.class.php
+END

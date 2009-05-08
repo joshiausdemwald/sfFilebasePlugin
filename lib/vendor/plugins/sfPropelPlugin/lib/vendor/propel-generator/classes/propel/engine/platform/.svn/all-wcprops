@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/propel/!svn/ver/1102/branches/1.3/generator/classes/propel/engine/platform
+END
+DefaultPlatform.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/propel/!svn/ver/989/branches/1.3/generator/classes/propel/engine/platform/DefaultPlatform.php
+END
+MysqlPlatform.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/propel/!svn/ver/949/branches/1.3/generator/classes/propel/engine/platform/MysqlPlatform.php
+END
+OraclePlatform.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/propel/!svn/ver/1102/branches/1.3/generator/classes/propel/engine/platform/OraclePlatform.php
+END
+PgsqlPlatform.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/propel/!svn/ver/844/branches/1.3/generator/classes/propel/engine/platform/PgsqlPlatform.php
+END
+MssqlPlatform.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/propel/!svn/ver/521/branches/1.3/generator/classes/propel/engine/platform/MssqlPlatform.php
+END
+Platform.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/propel/!svn/ver/989/branches/1.3/generator/classes/propel/engine/platform/Platform.php
+END
+SqlitePlatform.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/propel/!svn/ver/578/branches/1.3/generator/classes/propel/engine/platform/SqlitePlatform.php
+END

@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/!svn/ver/17586/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/parts
+END
+fieldsConfiguration.php
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/!svn/ver/15623/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/parts/fieldsConfiguration.php
+END
+processFormAction.php
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/!svn/ver/17109/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/parts/processFormAction.php
+END
+filtersConfiguration.php
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/parts/filtersConfiguration.php
+END
+deleteAction.php
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/parts/deleteAction.php
+END
+createAction.php
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/parts/createAction.php
+END
+indexAction.php
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/parts/indexAction.php
+END
+filtersAction.php
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/parts/filtersAction.php
+END
+configuration.php
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/!svn/ver/17586/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/parts/configuration.php
+END
+sortingConfiguration.php
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/!svn/ver/13805/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/parts/sortingConfiguration.php
+END
+batchAction.php
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/parts/batchAction.php
+END
+updateAction.php
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/parts/updateAction.php
+END
+paginationConfiguration.php
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/parts/paginationConfiguration.php
+END
+sortingAction.php
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/parts/sortingAction.php
+END
+filterAction.php
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/!svn/ver/14512/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/parts/filterAction.php
+END
+editAction.php
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/parts/editAction.php
+END
+paginationAction.php
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/!svn/ver/15240/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/parts/paginationAction.php
+END
+newAction.php
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/parts/newAction.php
+END
+actionsConfiguration.php
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/parts/actionsConfiguration.php
+END

@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/!svn/ver/13515/branches/1.2/lib/plugins/sfPropelPlugin/test/functional/fixtures/apps/crud/modules/error/actions
+END
+actions.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/!svn/ver/13515/branches/1.2/lib/plugins/sfPropelPlugin/test/functional/fixtures/apps/crud/modules/error/actions/actions.class.php
+END

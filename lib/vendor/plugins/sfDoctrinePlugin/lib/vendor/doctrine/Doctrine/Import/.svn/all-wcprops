@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Import
+END
+Informix.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Import/Informix.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Import/Exception.php
+END
+Mssql.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Import/Mssql.php
+END
+Schema.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Import/Schema.php
+END
+Sqlite.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Import/Sqlite.php
+END
+Mysql.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Import/Mysql.php
+END
+Oracle.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Import/Oracle.php
+END
+Builder.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Import/Builder.php
+END
+Firebird.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Import/Firebird.php
+END
+Pgsql.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Import/Pgsql.php
+END

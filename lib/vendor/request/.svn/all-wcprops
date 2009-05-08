@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/!svn/ver/17975/branches/1.2/lib/request
+END
+sfWebRequest.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/17975/branches/1.2/lib/request/sfWebRequest.class.php
+END
+sfRequest.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/12660/branches/1.2/lib/request/sfRequest.class.php
+END
+sfConsoleRequest.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/11313/branches/1.2/lib/request/sfConsoleRequest.class.php
+END

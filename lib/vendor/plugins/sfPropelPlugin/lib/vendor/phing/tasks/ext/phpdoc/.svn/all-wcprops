@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/354/branches/2.3/classes/phing/tasks/ext/phpdoc
+END
+PhpDocumentorTask.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/352/branches/2.3/classes/phing/tasks/ext/phpdoc/PhpDocumentorTask.php
+END
+PhpDocumentorExternalTask.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/352/branches/2.3/classes/phing/tasks/ext/phpdoc/PhpDocumentorExternalTask.php
+END
+PhingPhpDocumentorSetup.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/354/branches/2.3/classes/phing/tasks/ext/phpdoc/PhingPhpDocumentorSetup.php
+END

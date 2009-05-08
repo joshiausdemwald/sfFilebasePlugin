@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/test/unit
+END
+sfDoctrineColumnTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/test/unit/sfDoctrineColumnTest.php
+END
+sfDoctrineDatabaseTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/test/unit/sfDoctrineDatabaseTest.php
+END

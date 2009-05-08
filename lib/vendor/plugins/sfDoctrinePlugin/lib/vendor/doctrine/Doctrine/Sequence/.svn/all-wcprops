@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Sequence
+END
+Informix.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Sequence/Informix.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Sequence/Exception.php
+END
+Mssql.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Sequence/Mssql.php
+END
+Sqlite.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Sequence/Sqlite.php
+END
+Mysql.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Sequence/Mysql.php
+END
+Oracle.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Sequence/Oracle.php
+END
+Firebird.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Sequence/Firebird.php
+END
+Pgsql.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Sequence/Pgsql.php
+END
+Db2.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Sequence/Db2.php
+END

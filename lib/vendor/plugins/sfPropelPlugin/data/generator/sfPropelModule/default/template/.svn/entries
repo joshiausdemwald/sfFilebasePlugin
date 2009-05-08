@@ -1,0 +1,34 @@
+9
+
+dir
+17984
+http://svn.symfony-project.com/branches/1.2/lib/plugins/sfPropelPlugin/data/generator/sfPropelModule/default/template
+http://svn.symfony-project.com
+
+
+
+2009-01-06T19:12:41.457959Z
+14507
+Kris.Wallsmith
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+ee427ae8-e902-0410-961c-c3ed070cd9f9
+
+actions
+dir
+
+templates
+dir
+

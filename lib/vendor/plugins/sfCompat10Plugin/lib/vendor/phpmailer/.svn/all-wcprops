@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/9991/branches/1.2/lib/plugins/sfCompat10Plugin/lib/vendor/phpmailer
+END
+class.phpmailer.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/!svn/ver/9991/branches/1.2/lib/plugins/sfCompat10Plugin/lib/vendor/phpmailer/class.phpmailer.php
+END
+class.smtp.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/9991/branches/1.2/lib/plugins/sfCompat10Plugin/lib/vendor/phpmailer/class.smtp.php
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Pager
+END
+Range.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Pager/Range.php
+END
+Layout.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Pager/Layout.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Pager/Exception.php
+END

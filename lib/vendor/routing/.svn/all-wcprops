@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/!svn/ver/17749/branches/1.2/lib/routing
+END
+sfRoute.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/17382/branches/1.2/lib/routing/sfRoute.class.php
+END
+sfPathInfoRouting.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/11313/branches/1.2/lib/routing/sfPathInfoRouting.class.php
+END
+sfObjectRouteCollection.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/17398/branches/1.2/lib/routing/sfObjectRouteCollection.class.php
+END
+sfNoRouting.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/11313/branches/1.2/lib/routing/sfNoRouting.class.php
+END
+sfObjectRoute.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/15850/branches/1.2/lib/routing/sfObjectRoute.class.php
+END
+sfPatternRouting.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/17746/branches/1.2/lib/routing/sfPatternRouting.class.php
+END
+sfRequestRoute.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/11794/branches/1.2/lib/routing/sfRequestRoute.class.php
+END
+sfRouting.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/17749/branches/1.2/lib/routing/sfRouting.class.php
+END
+sfRouteCollection.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/11471/branches/1.2/lib/routing/sfRouteCollection.class.php
+END

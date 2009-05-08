@@ -1,0 +1,21 @@
+    # Be sure to only have this line once in your configuration
+    NameVirtualHost 127.0.0.1:80
+
+    # This is the configuration for test
+    Listen 127.0.0.1:80
+
+    <VirtualHost 127.0.0.1:80>
+      ServerName test.localhost
+      DocumentRoot "/home/joshi/www/test/web"
+      DirectoryIndex index.php
+      <Directory "/home/joshi/www/test/web">
+        AllowOverride All
+        Allow from All
+      </Directory>
+
+      Alias /sf "/home/joshi/symfony/1.2/data/web/sf"
+      <Directory "/home/joshi/symfony/1.2/data/web/sf">
+        AllowOverride All
+        Allow from All
+      </Directory>
+    </VirtualHost>

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/11644/branches/1.2/lib/plugins/sfCompat10Plugin/config
+END
+mailer.yml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/9991/branches/1.2/lib/plugins/sfCompat10Plugin/config/mailer.yml
+END
+config.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/11644/branches/1.2/lib/plugins/sfCompat10Plugin/config/config.php
+END

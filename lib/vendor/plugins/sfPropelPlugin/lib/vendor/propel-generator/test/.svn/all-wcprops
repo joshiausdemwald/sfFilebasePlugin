@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/propel/!svn/ver/1098/branches/1.3/generator/test
+END
+tree-test.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/propel/!svn/ver/563/branches/1.3/generator/test/tree-test.php
+END
+bookstore-packaged-test.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/propel/!svn/ver/563/branches/1.3/generator/test/bookstore-packaged-test.php
+END
+bookstore-test.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/propel/!svn/ver/563/branches/1.3/generator/test/bookstore-test.php
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/propel/!svn/ver/1079/branches/1.3/generator/test/README
+END
+test.xml
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/propel/!svn/ver/781/branches/1.3/generator/test/test.xml
+END

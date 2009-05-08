@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/15942/branches/1.2/lib/plugins/sfDoctrinePlugin/test/functional
+END
+PagerTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/14793/branches/1.2/lib/plugins/sfDoctrinePlugin/test/functional/PagerTest.php
+END
+I18nTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/15828/branches/1.2/lib/plugins/sfDoctrinePlugin/test/functional/I18nTest.php
+END
+sfDoctrineRecordTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/test/functional/sfDoctrineRecordTest.php
+END
+FormTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/14982/branches/1.2/lib/plugins/sfDoctrinePlugin/test/functional/FormTest.php
+END
+EnvironmentSetupTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/test/functional/EnvironmentSetupTest.php
+END
+UniqueTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/14782/branches/1.2/lib/plugins/sfDoctrinePlugin/test/functional/UniqueTest.php
+END

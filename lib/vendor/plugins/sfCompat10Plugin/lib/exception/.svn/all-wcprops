@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/9991/branches/1.2/lib/plugins/sfCompat10Plugin/lib/exception
+END
+sfActionException.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/!svn/ver/9991/branches/1.2/lib/plugins/sfCompat10Plugin/lib/exception/sfActionException.class.php
+END
+sfValidatorException.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/!svn/ver/9991/branches/1.2/lib/plugins/sfCompat10Plugin/lib/exception/sfValidatorException.class.php
+END

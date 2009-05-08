@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/!svn/ver/427/branches/2.3/classes/phing
+END
+ProjectComponent.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/228/branches/2.3/classes/phing/ProjectComponent.php
+END
+BuildLogger.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/228/branches/2.3/classes/phing/BuildLogger.php
+END
+IntrospectionHelper.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/228/branches/2.3/classes/phing/IntrospectionHelper.php
+END
+BuildEvent.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/228/branches/2.3/classes/phing/BuildEvent.php
+END
+Task.php
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/228/branches/2.3/classes/phing/Task.php
+END
+TaskAdapter.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/228/branches/2.3/classes/phing/TaskAdapter.php
+END
+RuntimeConfigurable.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/228/branches/2.3/classes/phing/RuntimeConfigurable.php
+END
+BuildListener.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/228/branches/2.3/classes/phing/BuildListener.php
+END
+Phing.php
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/385/branches/2.3/classes/phing/Phing.php
+END
+TaskContainer.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/228/branches/2.3/classes/phing/TaskContainer.php
+END
+Project.php
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/345/branches/2.3/classes/phing/Project.php
+END
+UnknownElement.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/228/branches/2.3/classes/phing/UnknownElement.php
+END
+BuildException.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/287/branches/2.3/classes/phing/BuildException.php
+END
+ConfigurationException.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/288/branches/2.3/classes/phing/ConfigurationException.php
+END
+Target.php
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/228/branches/2.3/classes/phing/Target.php
+END

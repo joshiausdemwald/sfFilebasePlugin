@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/!svn/ver/17858/branches/1.2/lib/exception
+END
+sfRenderException.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/9991/branches/1.2/lib/exception/sfRenderException.class.php
+END
+sfFileException.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/9991/branches/1.2/lib/exception/sfFileException.class.php
+END
+sfException.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/17858/branches/1.2/lib/exception/sfException.class.php
+END
+sfError404Exception.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/11471/branches/1.2/lib/exception/sfError404Exception.class.php
+END
+sfControllerException.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/9991/branches/1.2/lib/exception/sfControllerException.class.php
+END
+sfStopException.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/9991/branches/1.2/lib/exception/sfStopException.class.php
+END
+sfFilterException.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/9991/branches/1.2/lib/exception/sfFilterException.class.php
+END
+sfInitializationException.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/9991/branches/1.2/lib/exception/sfInitializationException.class.php
+END
+sfCacheException.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/9991/branches/1.2/lib/exception/sfCacheException.class.php
+END
+sfForwardException.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/9991/branches/1.2/lib/exception/sfForwardException.class.php
+END
+sfDatabaseException.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/9991/branches/1.2/lib/exception/sfDatabaseException.class.php
+END
+sfStorageException.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/9991/branches/1.2/lib/exception/sfStorageException.class.php
+END
+sfSecurityException.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/9991/branches/1.2/lib/exception/sfSecurityException.class.php
+END
+sfFactoryException.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/9991/branches/1.2/lib/exception/sfFactoryException.class.php
+END
+sfConfigurationException.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/9991/branches/1.2/lib/exception/sfConfigurationException.class.php
+END
+sfParseException.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/9991/branches/1.2/lib/exception/sfParseException.class.php
+END
+sfViewException.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/9991/branches/1.2/lib/exception/sfViewException.class.php
+END

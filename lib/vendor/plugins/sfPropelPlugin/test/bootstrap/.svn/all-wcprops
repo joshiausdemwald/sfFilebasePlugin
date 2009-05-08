@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/14687/branches/1.2/lib/plugins/sfPropelPlugin/test/bootstrap
+END
+unit.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/14687/branches/1.2/lib/plugins/sfPropelPlugin/test/bootstrap/unit.php
+END
+functional.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/13515/branches/1.2/lib/plugins/sfPropelPlugin/test/bootstrap/functional.php
+END

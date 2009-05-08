@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/!svn/ver/17749/branches/1.2/lib/task/project
+END
+sfProjectDisableTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/9991/branches/1.2/lib/task/project/sfProjectDisableTask.class.php
+END
+sfProjectUnfreezeTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/13212/branches/1.2/lib/task/project/sfProjectUnfreezeTask.class.php
+END
+sfUpgradeTo11Task.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/10628/branches/1.2/lib/task/project/sfUpgradeTo11Task.class.php
+END
+sfProjectEnableTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/15156/branches/1.2/lib/task/project/sfProjectEnableTask.class.php
+END
+sfUpgradeTo12Task.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/10628/branches/1.2/lib/task/project/sfUpgradeTo12Task.class.php
+END
+sfProjectPermissionsTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/13423/branches/1.2/lib/task/project/sfProjectPermissionsTask.class.php
+END
+sfProjectDeployTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/10956/branches/1.2/lib/task/project/sfProjectDeployTask.class.php
+END
+sfProjectClearControllersTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/10582/branches/1.2/lib/task/project/sfProjectClearControllersTask.class.php
+END
+sfProjectFreezeTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/14421/branches/1.2/lib/task/project/sfProjectFreezeTask.class.php
+END

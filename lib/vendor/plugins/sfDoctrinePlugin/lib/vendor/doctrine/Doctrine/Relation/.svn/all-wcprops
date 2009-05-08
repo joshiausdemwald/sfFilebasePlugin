@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Relation
+END
+Nest.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Relation/Nest.php
+END
+Association.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Relation/Association.php
+END
+Parser.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Relation/Parser.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Relation/Exception.php
+END
+ForeignKey.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Relation/ForeignKey.php
+END
+LocalKey.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Relation/LocalKey.php
+END

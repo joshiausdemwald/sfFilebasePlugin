@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/!svn/ver/17749/branches/1.2/lib/user
+END
+sfUser.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/15553/branches/1.2/lib/user/sfUser.class.php
+END
+sfSecurityUser.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/17749/branches/1.2/lib/user/sfSecurityUser.class.php
+END
+sfBasicSecurityUser.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/17749/branches/1.2/lib/user/sfBasicSecurityUser.class.php
+END

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/9991/branches/1.2/lib/plugins/sfCompat10Plugin/test/functional/fixtures/web
+END
+frontend_dev.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/!svn/ver/9991/branches/1.2/lib/plugins/sfCompat10Plugin/test/functional/fixtures/web/frontend_dev.php
+END
+robots.txt
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/!svn/ver/9991/branches/1.2/lib/plugins/sfCompat10Plugin/test/functional/fixtures/web/robots.txt
+END
+.htaccess
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/!svn/ver/9991/branches/1.2/lib/plugins/sfCompat10Plugin/test/functional/fixtures/web/.htaccess
+END
+index.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/!svn/ver/9991/branches/1.2/lib/plugins/sfCompat10Plugin/test/functional/fixtures/web/index.php
+END

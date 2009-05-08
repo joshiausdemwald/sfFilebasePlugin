@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Hydrator
+END
+ArrayDriver.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Hydrator/ArrayDriver.php
+END
+RecordDriver.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Hydrator/RecordDriver.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Hydrator/Exception.php
+END
+Abstract.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Hydrator/Abstract.php
+END
