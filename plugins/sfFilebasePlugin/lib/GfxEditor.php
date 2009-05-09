@@ -27,13 +27,16 @@ class GfxEditor
    * The instance that handles
    * the image transformations.
    *
-   * @var GfxEditorAdapter $adapter
+   * @var IGfxEditorAdapter $adapter
    */
   protected $adapter;
 
   /**
    * Constructor.
-   * 
+   *
+   * At this point, all available adapters are checked. If no fitting
+   * adapter is found, an exception will be thrown.
+   *
    * @param Filebase $filebase
    * @throws FilebaseException
    */
@@ -43,31 +46,28 @@ class GfxEditor
     
     if(array_key_exists($preferred_adapter, self::$available_adapters))
     {
-      $this->adapter = self::$available_adapters[$preferred_adapter];
+      $this->adapter = clone(self::$available_adapters[$preferred_adapter]);
+      $this->adapter->initialize($this);
     }
     else
     {
       throw new FilebaseException(sprintf('Prefered GfxEditorAdapter %s has never been registered.', $preferred_adapter));
     }
-
-    /*if(!$this->adapter->isSupported())
+    $iter = new ArrayIterator(self::$available_adapters);
+    while(!$this->adapter->isSupported())
     {
-      $iter = new ArrayIterator(self::$available_adapters);
-      $iter->seek($preferred_adapter);
-      while(!$this->adapter->isSupported())
+      if(!$iter->current())
       {
-        $iter->next();
-        if(!$iter->current())
-        {
-          $iter->rewind();
-        }
-        if($iter->key == $preferred_adapter)
-        {
-          throw new FilebaseException('No supported Adapters found, image transformation not possible.');
-        }
-        $this->adapter = $iter->current();
+        throw new FilebaseException('No adapter found that supports image transformation on your platform. Please consider to upgrading your platform.');
       }
-    }*/
+      
+      if($iter->key() != get_class($this->adapter))
+      {
+        $this->adapter = clone $iter->current();
+        $this->adapter->initialize($this);
+      }
+      $iter->next();
+    }
   }
 
   /**
@@ -79,13 +79,13 @@ class GfxEditor
    *
    * @param string $adapter: Classname of Adapter
    */
-  public static function registerAdapter($adapter)
+  public static function registerAdapter($class_name)
   {
-    if(!array_key_exists($adapter, self::$available_adapters))
+    if(!array_key_exists($class_name, self::$available_adapters))
     {
-      $candidate = new $adapter();
-      if(!$candidate instanceof IGfxEditorAdapter) throw new FilebaseException(sprintf('Adapter %s must be an instanceof GfxEditorAdapter.', $adapter));
-      self::$available_adapters[$adapter] = $candidate;
+      $candidate = new $class_name();
+      if(!$candidate instanceof IGfxEditorAdapter) throw new FilebaseException(sprintf('Adapter %s must be an instanceof GfxEditorAdapter.', $class_name));
+      self::$available_adapters[$class_name] = $candidate;
     }
   }
 
@@ -108,11 +108,6 @@ class GfxEditor
   {
     $quality = (int) $quality;
 
-    $new_width  = null;
-    $new_height = null;
-    $height     = 0;
-    $width      = 0;
-
     $src = $this->filebase->getFilebaseFile($src);
     $dst = $this->filebase->getFilebaseFile($dst);
     $dst_dir = $this->filebase->getFilebaseFile($dst->getPath());
@@ -124,7 +119,7 @@ class GfxEditor
     if(!$src->isReadable())                                         throw new FilebaseException(sprintf('Source image %s is read protected.', $src));
 
     if(!$this->filebase->isInFilebase($dst))                        throw new FilebaseException(sprintf('Destination image %s does not belong to filebase, access restricted due to security issues.', $dst));
-
+    
     if($dst->fileExists())
     {
       if($overwrite)
@@ -139,39 +134,12 @@ class GfxEditor
     }
 
     if($quality < 0 || $quality > 100) throw new FilebaseException('Quality must be an intval out of 0 to 100');
-
-    $image_data = $this->getScaledImageData($src, $dimensions);
-
-    $width                = $image_data['orig_width'];
-    $height               = $image_data['orig_height'];
-    $new_width            = $image_data['new_width'];
-    $new_height           = $image_data['new_height'];
-    $extension            = $image_data['extension'];
-
-    switch (strtolower($extension))
-    {
-      case  'jpg':
-      case 'jpeg':
-        $image = imagecreatefromjpeg($src->getPathname());
-        $image_p = imagecreatetruecolor($new_width, $new_height);
-        imagecopyresampled($image_p, $image, 0, 0, 0, 0, $new_width, $new_height, $width, $height);
-        imagejpeg($image_p, $dst->getPathname(), $quality);
-        break;
-      case 'png':
-        $image = imagecreatefrompng($src->getPathname());
-        $image_p = imagecreatetruecolor($new_width, $new_height);
-        imagecopyresampled($image_p, $image, 0, 0, 0, 0, $new_width, $new_height, $width, $height);
-        imagepng($image_p, $dst->getPathname(), round($quality/10));
-        break;
-
-      case 'gif':
-        $image = imagecreatefromgif($src->getPathname());
-        $image_p = imagecreate($new_width, $new_height);
-        imagecopyresampled($image_p, $image, 0, 0, 0, 0, $new_width, $new_height, $width, $height);
-        imagegif($image_p, $dst->getPathname());
-        break;
-    }
-    return $dst;
+    
+    $this->adapter->setSource($src);
+    $this->adapter->setDestination($dst);
+    $this->adapter->resize($dimensions);
+    $this->adapter->setQuality($quality);
+    return $this->adapter->save();
   }
   
   /**
@@ -181,17 +149,17 @@ class GfxEditor
    * @param mixed FilebaseImage $fileinfo
    * @param array $dimensions = array(width, height)
    */
-  public function createThumbnail(FilebaseImage $fileinfo, array $dimensions, $quality)
+  public function createThumbnail(FilebaseImage $fileinfo, array $dimensions, $quality, $mime)
   {
     // Check cache directory
     if(!$this->filebase->getCacheDirectory()->fileExists()) throw new FilebaseException(sprintf('Cache directory %s does not exist.', $this->filebase->getCacheDirectory()->getPathname()));
-    
+
     // Check if original file is writable...
     if(!$fileinfo->fileExists())        throw new FilebaseException(sprintf('File %s does not exist', $fileinfo->getPathname()));
     if(!$fileinfo->isReadable())        throw new FilebaseException(sprintf('File %s is write protected.', $fileinfo->getPathname()));
     if(!$fileinfo->isImage())           throw new FilebaseException(sprintf('File %s is not an image.', $fileinfo));
     if(!$this->filebase->isInFilebase($fileinfo)) throw new FilebaseException(sprintf('FilebaseFile %s does not belong to Filebase %s, cannot be deleted due to security issues', $fileinfo->getPathname(), $this->filebase->getPathname()));
-    $destination = $this->getThumbnailFileinfo($fileinfo, $dimensions);
+    $destination = $this->getThumbnailFileinfo($fileinfo, $dimensions, $mime);
     return $this->imageCopyResampled($fileinfo, $destination, $dimensions, true);
   }
 
@@ -206,7 +174,7 @@ class GfxEditor
    * @throws FilebaseException
    * @return array $thumbnail_properties
    */
-  protected function getScaledImageData(FilebaseImage $image, array $dimensions)
+  public function getScaledImageData(FilebaseImage $image, array $dimensions)
   {
     $width      = 0;
     $height     = 0;
@@ -233,7 +201,7 @@ class GfxEditor
     {
       $new_width  = round($width * $new_height / $height);
     }
-    return array ('orig_width' => $width, 'orig_height' => $height, 'new_width' => $new_width, 'new_height' => $new_height, 'extension' => $extension);
+    return array ('orig_width' => $width, 'orig_height' => $height, 'new_width' => $new_width, 'new_height' => $new_height, 'extension' => $extension, 'mime' => FilebaseUtil::getMimeByExtension($extension));
   }
 
   /**
@@ -244,11 +212,11 @@ class GfxEditor
    * @param array $thumbnail_properties
    * @return FilebaseImage $filename
    */
-  protected function getThumbnailFileinfo(FilebaseImage $file, $dimensions)
+  public function getThumbnailFileinfo(FilebaseImage $file, $dimensions, $mime)
   {
     $thumbnail_properties = $this->getScaledImageData($file, $dimensions);
     // Wrap in FilebaseImage because isImage may return false if file does not exist.
-    return new FilebaseThumbnail($this->filebase->getFilebaseFile($this->filebase->getCacheDirectory() . DIRECTORY_SEPARATOR . $this->filebase->getHashForFile($file) . '_' . $thumbnail_properties['new_width'] . '_' . $thumbnail_properties['new_height'] . '.' . $thumbnail_properties['extension']), $this->filebase, $file);
+    return new FilebaseThumbnail($this->filebase->getFilebaseFile($this->filebase->getCacheDirectory() . DIRECTORY_SEPARATOR . $this->filebase->getHashForFile($file) . '_' . $thumbnail_properties['new_width'] . '_' . $thumbnail_properties['new_height'] . '.' . (FilebaseUtil::getExtensionByMime($mime) === null ? $thumbnail_properties['extension'] : FilebaseUtil::getExtensionByMime($mime))), $this->filebase, $file);
   }
 
   /**
@@ -263,3 +231,4 @@ class GfxEditor
 }
 
 GfxEditor::registerAdapter('GfxEditorAdapterGD');
+//GfxEditor::registerAdapter('GfxEditorAdapterImagick');

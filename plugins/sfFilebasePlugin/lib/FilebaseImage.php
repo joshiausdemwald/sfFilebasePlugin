@@ -23,9 +23,9 @@ class FilebaseImage extends FilebaseFile
    * @param array $dimensions = array(width, height)
    * @return FilebaseFile $file
    */
-  public function getThumbnail(array $dimensions, $quality = 60)
+  public function getThumbnail(array $dimensions, $quality = 60, $mime='image/png')
   {
-    return $this->filebase->getThumbnailForImage($this, $dimensions, $quality);
+    return $this->filebase->getThumbnailForImage($this, $dimensions, $quality, $mime);
   }
 
   /**
@@ -99,22 +99,5 @@ class FilebaseImage extends FilebaseFile
        return new FilebaseFileExif($this);
     }
     else throw new FilebaseException(sprintf('Image type %s hat no build-in support for exif metadata.', $this->getExtension()));
-  }
-
-  /**
-   * Creates a thumbnail of this image.
-   *
-   * @see Filebase::createThumbnail()
-   * @param array $dimensions:  Can be an array with numeric indizes,
-   *                            0 => %width%, 1 => %height% or string-indizes,
-   *                            width => %width%, height => %height%. If only
-   *                            one size attribute is given, the image is
-   *                            proportionally scaled.
-   *
-   * @param integer $quality: Quality in Percent.
-   */
-  public function createThumbnail(array $dimensions, $quality = 60)
-  {
-    return $this->filebase->createThumbnail($this, $dimensions, $quality);
   }
 }

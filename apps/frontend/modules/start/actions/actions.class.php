@@ -23,13 +23,14 @@ class startActions extends sfActions
     $mm->checkDependancies();*/
 
     $this->filebase = new Filebase();
+    $this->filebase->clearCache();
     $files = $this->filebase->moveAllUploadedFiles($this->filebase->getPathname());
     $this->images = array();
     foreach($files AS $file)
     {
       if($file instanceof FilebaseImage)
       {
-        $this->images[] = $file->createThumbnail(array(150));
+        $this->images[] = $file->getThumbnail(array(150));
       }
     }
   }

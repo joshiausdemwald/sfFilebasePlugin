@@ -440,6 +440,18 @@ class FilebaseUtil
   }
 
   /**
+   *
+   * @param string $extension
+   * @param mixed $default
+   * @return string mime-type
+   */
+  public static function getMimeByExtension($extension, $default = null)
+  {
+    $ret_val = array_search(strtolower($extension), self::$extensions);
+    return $ret_val ? $ret_val : $default;
+  }
+
+  /**
    * Returns an corresponding file-extension
    * to given mime-type or $default if that
    * extension was not found.
@@ -454,21 +466,6 @@ class FilebaseUtil
     return array_key_exists($mime, self::$extensions) ? self::$extensions[$mime] : $default;
   }
 
-  /**
-   * Returns corresponding mime-type by the given 
-   * file-extension.
-   *
-   * @param string $extension
-   * @param mixed $default
-   * @return string $mime
-   */
-  public function getMimeByExtension($extension, $default=null)
-  {
-    $extension = strtolower($extension);
-    $val = array_search($extension, self::$extensions);
-    return $val === false ? $default : $val;
-  }
-  
   /**
    * 
    * Replaces Backslashes and removes

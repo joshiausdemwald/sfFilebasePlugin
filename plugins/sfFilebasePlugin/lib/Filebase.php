@@ -414,31 +414,19 @@ class Filebase extends FilebaseDirectory
   }
 
   /**
-   * Creates a Thumbnail named by md5-hash of the image
-   * and its file ending.
-   *
-   * @param mixed FilebaseImage $fileinfo
-   * @param array $dimensions = array(width, height)
-   */
-  public function createThumbnail(FilebaseImage $fileinfo, array $dimensions, $quality)
-  {
-    return $this->gfxEditor->createThumbnail($fileinfo, $dimensions, $quality);
-  }
-
-  /**
    *
    * @param mixed FilebaseImage | string $image
    * @param array $dimensions
    * @param integer $quality
    * @return FilebaseImage $thumbnail
    */
-  public function getThumbnailForImage($image, array $dimensions, $quality = 60)
-  {
+  public function getThumbnailForImage($image, array $dimensions, $quality = 60, $mime='image/png')
+  { 
     $image = $this->getFilebaseFile($image);
-    $cache_fileinfo = $this->getFilebase()->getThumbnailFileinfo($image,$dimensions);
+    $cache_fileinfo = $this->gfxEditor->getThumbnailFileinfo($image,$dimensions, $mime);
     if(!$cache_fileinfo->fileExists())
     {
-      $this->createThumbnail($image, $dimensions, $quality);
+      return $this->gfxEditor->createThumbnail($image, $dimensions, $quality, $mime);
     }
     return $cache_fileinfo;
   }
