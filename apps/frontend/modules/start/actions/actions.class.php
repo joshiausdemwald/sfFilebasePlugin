@@ -30,7 +30,7 @@ class startActions extends sfActions
     {
       if($file instanceof FilebaseImage)
       {
-        $this->images[] = $file->getThumbnail(array(150));
+        $this->images[] = $file->getThumbnail(array(500));
       }
     }
   }
