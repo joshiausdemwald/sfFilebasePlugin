@@ -22,12 +22,15 @@ test:
 all:
   .settings:
     # Form security secret (CSRF protection)
-    csrf_secret:       null     # Unique secret to enable CSRF protection or false to disable
+    csrf_secret:       false     # Unique secret to enable CSRF protection or false to disable
 
     # Output escaping settings
     escaping_strategy:      false            # Determines how variables are made available to templates. Accepted values: on, off.
     escaping_method:        ESC_SPECIALCHARS # Function or helper used for escaping. Accepted values: ESC_RAW, ESC_ENTITIES, ESC_JS, ESC_JS_NO_ENTITIES, and ESC_SPECIALCHARS.
-    rich_text_js_dir:       js/tiny_mce
+
+    # Cache settings
+    lazy_cache_key:         on        # Delays creation of a cache key until after checking whether an action or partial is cacheable
+
 #all:
 #  .actions:
 #    error_404_module:       default   # To be called when a 404 error is raised
@@ -62,12 +65,14 @@ all:
 #    # Cache settings
 #    cache:                  off       # Enable the template cache
 #    etag:                   on        # Enable etag handling
+#    lazy_cache_key:         off       # Delays creation of a cache key until after checking whether an action or partial is cacheable (defaults to false for backward compatibility)
 #
 #    # Logging and debugging settings
 #    web_debug:              off       # Enable the web debug toolbar
 #    error_reporting:        <?php echo (E_PARSE | E_COMPILE_ERROR | E_ERROR | E_CORE_ERROR | E_USER_ERROR)."\n" ?> # Determines which events are logged.
 #
 #    # Assets paths
+#    rich_text_js_dir:       js/tiny_mce
 #    admin_web_dir:          /sf/sf_admin
 #    web_debug_web_dir:      /sf/sf_web_debug
 #    calendar_web_dir:       /sf/calendar
