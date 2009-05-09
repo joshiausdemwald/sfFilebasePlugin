@@ -40,7 +40,7 @@ class GfxEditor
    * @param Filebase $filebase
    * @throws FilebaseException
    */
-  function __construct(Filebase $filebase, $preferred_adapter = 'GfxEditorAdapterGD')
+  function __construct(Filebase $filebase, $preferred_adapter = 'GfxEditorAdapterIMagick')
   {
     $this->filebase = $filebase;
     
@@ -139,7 +139,9 @@ class GfxEditor
     $this->adapter->setDestination($dst);
     $this->adapter->resize($dimensions);
     $this->adapter->setQuality($quality);
-    return $this->adapter->save();
+    $img = $this->adapter->save();
+    $this->adapter->destroy();
+    return $img;
   }
   
   /**
@@ -231,4 +233,4 @@ class GfxEditor
 }
 
 GfxEditor::registerAdapter('GfxEditorAdapterGD');
-//GfxEditor::registerAdapter('GfxEditorAdapterImagick');
+GfxEditor::registerAdapter('GfxEditorAdapterIMagick');

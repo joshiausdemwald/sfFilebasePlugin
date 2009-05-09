@@ -23,14 +23,14 @@ class GfxEditorAdapterGD implements IGfxEditorAdapter
   protected $destination;
 
   /**
-   * @var ressource $ressource;
+   * @var resource $resource;
    */
-  protected $source_ressource;
+  protected $source_resource;
 
   /**
-   * @var ressource $ressource
+   * @var resource $resource
    */
-  protected $destination_ressource;
+  protected $destination_resource;
 
   /**
    * Reference to editor.
@@ -43,12 +43,25 @@ class GfxEditorAdapterGD implements IGfxEditorAdapter
    * @var integer Quality in %
    */
   protected $destinationQuality = 80;
+  
+  /**
+   * Compatibility layer to switch on the fly between
+   * gd versions.
+   * @var array $funcs
+   */
+  protected $funcs = array();
 
   /**
    * @param GfxEditor $editor
    */
   public function initialize(GfxEditor $gfxEditor)
   {
+    $this->funcs['imagecreatefromtruecolor'] = function_exists('imagecreatefromtruecolor') ?
+      'imagecreatefromtruecolor' :
+      'imagecreate';
+    $this->funcs['imagecopyresampled'] = function_exists('imagecopyresampled') ? 
+      'imagecopyresampled' :
+      'imagecopyresized';
     $this->gfxEditor = $gfxEditor;
   }
 
@@ -70,13 +83,13 @@ class GfxEditorAdapterGD implements IGfxEditorAdapter
     switch($source->getMimeType())
     {
       case 'image/jpeg':
-        $this->source_ressource = imagecreatefromjpeg($this->source->getPathname());
+        $this->source_resource = imagecreatefromjpeg($this->source->getPathname());
         return;
       case 'image/gif':
-        $this->source_ressource = imagecreatefromgif($this->source->getPathname());
+        $this->source_resource = imagecreatefromgif($this->source->getPathname());
         return;
       case 'image/png':
-        $this->source_ressource = imagecreatefrompng($this->source->getPathname());
+        $this->source_resource = imagecreatefrompng($this->source->getPathname());
         return;
     }
   }
@@ -108,17 +121,17 @@ class GfxEditorAdapterGD implements IGfxEditorAdapter
    */
   public function save($chmod = 0777)
   {
-    if(!is_resource($this->destination_ressource)) throw new FilebaseException('Nothing to save.');
+    if(!is_resource($this->destination_resource)) throw new FilebaseException('Nothing to save.');
     switch($this->destination->getMimeType())
     {
       case 'image/jpeg':
-        imagejpeg($this->destination_ressource, $this->destination->getPathname(), $this->destinationQuality);
+        imagejpeg($this->destination_resource, $this->destination->getPathname(), $this->destinationQuality);
         break;
       case 'image/gif':
-        imagegif($this->destination_ressource, $this->destination->getPathname());
+        imagegif($this->destination_resource, $this->destination->getPathname());
         break;
       case 'image/png':
-        imagepng($this->destination_ressource, $this->destination->getPathname(), round($this->destinationQuality/10));
+        imagepng($this->destination_resource, $this->destination->getPathname(), round($this->destinationQuality/10));
         break;
     }
     $this->destination->chmod($chmod);
@@ -131,10 +144,10 @@ class GfxEditorAdapterGD implements IGfxEditorAdapter
    */
   public function destroy()
   {
-    imagedestroy($this->destination_ressource);
-    imagedestroy($this->source_ressource);
-    $this->destination_ressource  = null;
-    $this->target_ressource       = null;
+    imagedestroy($this->destination_resource);
+    imagedestroy($this->source_resource);
+    $this->destination_resource  = null;
+    $this->target_resource       = null;
     $this->destination            = null;
     $this->source                 = null;
   }
@@ -146,7 +159,7 @@ class GfxEditorAdapterGD implements IGfxEditorAdapter
    */
   public function resize(array $dimensions)
   {
-    if(!is_resource($this->source_ressource) || !$this->destination instanceof FilebaseImage) throw new FilebaseException('You must set a source and a destination image to resize.');
+    if(!is_resource($this->source_resource) || !$this->destination instanceof FilebaseImage) throw new FilebaseException('You must set a source and a destination image to resize.');
     
     $image_data = $this->gfxEditor->getScaledImageData($this->source, $dimensions);
 
@@ -159,16 +172,16 @@ class GfxEditorAdapterGD implements IGfxEditorAdapter
     switch ($mime)
     {
       case  'image/jpeg':
-        $this->destination_ressource = imagecreatetruecolor($new_width, $new_height);
-        imagecopyresampled($this->destination_ressource, $this->source_ressource, 0, 0, 0, 0, $new_width, $new_height, $width, $height);
+        $this->destination_resource = imagecreatetruecolor($new_width, $new_height);
+        $this->funcs['imagecopyresampled']($this->destination_resource, $this->source_resource, 0, 0, 0, 0, $new_width, $new_height, $width, $height);
         break;
       case 'image/png':
-        $this->destination_ressource = imagecreatetruecolor($new_width, $new_height);
-        imagecopyresampled($this->destination_ressource, $this->source_ressource, 0, 0, 0, 0, $new_width, $new_height, $width, $height);
+        $this->destination_resource = imagecreatetruecolor($new_width, $new_height);
+        $this->funcs['imagecopyresampled']($this->destination_resource, $this->source_resource, 0, 0, 0, 0, $new_width, $new_height, $width, $height);
         break;
       case 'image/gif':
-        $this->destination_ressource = imagecreate($new_width, $new_height);
-        imagecopyresampled($this->destination_ressource, $this->source_ressource, 0, 0, 0, 0, $new_width, $new_height, $width, $height);
+        $this->destination_resource = imagecreate($new_width, $new_height);
+        $this->funcs['imagecopyresampled']($this->destination_resource, $this->source_resource, 0, 0, 0, 0, $new_width, $new_height, $width, $height);
         break;
     }
     return true;
