@@ -1,37 +1,0 @@
-9
-
-dir
-17984
-http://svn.symfony-project.com/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/default/skeleton
-http://svn.symfony-project.com
-
-
-
-2008-11-05T22:27:51.925709Z
-12669
-Jonathan.Wage
-
-
-svn:special svn:externals svn:needs-lock
-
-
-
-
-
-
-
-
-
-
-
-ee427ae8-e902-0410-961c-c3ed070cd9f9
-
-actions
-dir
-
-config
-dir
-
-templates
-dir
-

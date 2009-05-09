@@ -1,8 +1,0 @@
-K 13
-svn:externals
-V 217
-phing -r435 http://svn.phing.info/branches/2.3/classes/phing
-propel -r1102  http://svn.phpdb.org/propel/branches/1.3/runtime/classes/propel/
-propel-generator -r1102 http://svn.phpdb.org/propel/branches/1.3/generator/
-
-END

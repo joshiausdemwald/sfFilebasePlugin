@@ -1,34 +1,0 @@
-9
-
-dir
-17984
-http://svn.symfony-project.com/branches/1.2/lib/plugins/sfPropelPlugin/web
-http://svn.symfony-project.com
-
-
-
-2009-03-18T15:58:40.441514Z
-16402
-hartym
-
-
-svn:special svn:externals svn:needs-lock
-
-
-
-
-
-
-
-
-
-
-
-ee427ae8-e902-0410-961c-c3ed070cd9f9
-
-images
-dir
-
-css
-dir
-

@@ -1,6 +1,0 @@
-K 13
-svn:externals
-V 57
-doctrine http://svn.doctrine-project.org/tags/1.0.8/lib/
-
-END
