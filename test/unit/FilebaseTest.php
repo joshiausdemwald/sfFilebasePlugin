@@ -5,29 +5,29 @@
  */
 include(dirname(__FILE__).'/../bootstrap/unit.php');
 
-$t = new lime_test(76, new lime_output_color());
+$t = new lime_test(75, new lime_output_color());
 $t->diag('Ok, let\'s take a look... These tests are as incomplete as tests can be.');
 $t->diag('Any exeptions thrown during testrun may cause in file-permission issues. After a test-run failed, please manually clean up the standard-filebase-directory unter sfConfig::get(sf_upload_dir) and run php ./symfony fix-perms task as a system administrator.');
 
 ###  INSTANCIATING FILEBASE
-$t->isa_ok(new Filebase(), 'Filebase', 'Filebase instanziated.');
+$t->isa_ok(new sfFilebasePlugin(), 'sfFilebasePlugin', 'sfFilebasePlugin instanziated.');
 $t->diag('Performing some file operations.');
 
-$f = new Filebase();
+$f = new sfFilebasePlugin();
 $t->diag('Lets try to generate a directory with mkDir().');
 
 $dir = null;
 
 try
 {
-  $t->isa_ok($dir = $f->mkDir('my_dir', 0777), 'FilebaseDirectory', 'mkDir() successfully created a new directory.');
+  $t->isa_ok($dir = $f->mkDir('my_dir', 0777), 'sfFilebasePluginDirectory', 'mkDir() successfully created a new directory.');
 }
 catch (Exception $e)
 {
   $t->fail((string)$e->getMessage());
   $t->diag('Maybe the directory already exists....');
 }
-$t->ok($dir instanceof FilebaseDirectory, 'mkDir() returns instance of FilebaseDirectory.');
+$t->ok($dir instanceof sfFilebasePluginDirectory, 'mkDir() returns instance of sfFilebasePluginDirectory.');
 
 $t->diag('Directory was created, now try to delete it.');
 
@@ -49,16 +49,16 @@ $t->diag('Lets check this twice:');
 $t->is($dir->fileExists(), false, 'fileExists() returns false, that means the directory was really deleted.');
 
 $t->diag('Now I want to rename a directory.');
-$t->isa_ok($f->mkDir('my_dir'), 'FilebaseDirectory', 'Directory "my_dir" successfully created by Filebase::mkDir().');
+$t->isa_ok($f->mkDir('my_dir'), 'sfFilebasePluginDirectory', 'Directory "my_dir" successfully created by sfFilebasePlugin::mkDir().');
 
-$t->isa_ok($dir = $dir->rename('my_other_dir'), 'FilebaseDirectory', 'Directory "my_dir" was successfully renamed to "my_other_dir"');
+$t->isa_ok($dir = $dir->rename('my_other_dir'), 'sfFilebasePluginDirectory', 'Directory "my_dir" was successfully renamed to "my_other_dir"');
 
-$t->isa_ok($dir = $dir->rename('my_dir'), 'FilebaseDirectory', 'Directory re-renamed to "my_dir"');
+$t->isa_ok($dir = $dir->rename('my_dir'), 'sfFilebasePluginDirectory', 'Directory re-renamed to "my_dir"');
 
 ###  CHMOD
 $t->diag('Let\'s chmod the directory');
-$t->isa_ok($dir->chmod(0755), 'FilebaseDirectory', 'chmod() 0755 successful.');
-$t->isa_ok($dir->chmod(0777), 'FilebaseDirectory', 'chmod() 0777 successful.');
+$t->isa_ok($dir->chmod(0755), 'sfFilebasePluginDirectory', 'chmod() 0755 successful.');
+$t->isa_ok($dir->chmod(0777), 'sfFilebasePluginDirectory', 'chmod() 0777 successful.');
 
 ### File paths
 $t->diag('I want to get the paths');
@@ -70,31 +70,31 @@ $t->isa_ok($path = $dir->getAbsolutePathFromWebroot(), 'string', 'getAbsolutePat
 $t->diag('I want to perform some file operations, but before that i have to copy a file into filebase...');
 
 $t->diag('Fetching test-image');
-$t->isa_ok($image = $f->getFilebaseFile(dirname(__FILE__) . '/' . 'test.JPG'), 'FilebaseImage', 'Image fetched ./test.JPG as instance of FilebaseImage');
+$t->isa_ok($image = $f->getFilebaseFile(dirname(__FILE__) . '/' . 'test.JPG'), 'sfFilebasePluginImage', 'Image fetched ./test.JPG as instance of sfFilebasePluginImage');
 
 $t->diag('Copying test-image to filebase');
-$t->isa_ok($copy=$image->copy($dir . '/test.jpg'), 'FilebaseImage', 'copy() returns instanceof FilebaseImage');
+$t->isa_ok($copy=$image->copy($dir . '/test.jpg'), 'sfFilebasePluginImage', 'copy() returns instanceof sfFilebasePluginImage');
 $t->diag('Does the copied image exist at the destinated location?');
 $t->is($copy->fileExists(), true, 'fileExists() returns true');
 $t->diag('Let\'s create a thumbnail...');
-$t->isa_ok($tn = $copy->getThumbnail(array('width'=>20)), 'FilebaseThumbnail', 'Thumbnail created as instanceof FilebaseThumbnail');
+$t->isa_ok($tn = $copy->getThumbnail(array('width'=>20)), 'sfFilebasePluginThumbnail', 'Thumbnail created as instanceof sfFilebasePluginThumbnail');
 
 $t->diag('This is nonsense: Open thumbnail and print its content to stdout:');
 $t->diag($tn->openFile()->fileGetContents() . "..");
-$t->is($tn->fileExists(), true, 'FilebaseThumbnail::fileExists() returns true.');
+$t->is($tn->fileExists(), true, 'sfFilebasePluginThumbnail::fileExists() returns true.');
 
-$t->isa_ok($copy = $copy->rename('renamed_image.jpg'), 'FilebaseImage', 'Performing a rename(), returns instanceof FilebaseImage.');
+$t->isa_ok($copy = $copy->rename('renamed_image.jpg'), 'sfFilebasePluginImage', 'Performing a rename(), returns instanceof sfFilebasePluginImage.');
 $t->is($copy->fileExists(), true, 'fileExists() returns true, so renamed image exists in file system.');
 
 $t->diag('Lets resize the original image');
-$t->isa_ok($copy->resize(array('1000')), 'FilebaseImage', 'Resize ok, resize() returns instance of FilebaseImage');
+$t->isa_ok($copy->resize(array('1000')), 'sfFilebasePluginImage', 'Resize ok, resize() returns instance of sfFilebasePluginImage');
 $t->is($copy->getWidth(), 1000, 'Image now has 1000 pixels width.');
 $t->is($copy->getMimeType(), 'image/jpeg', 'getMimeType() says: Image has mime-type image/jpeg');
 $t->is($copy->getHumanReadableFileType(), 'jpeg image', 'getHumanReadableFileType() says "jpeg image"');
 ### Writing stuff into a new file
 $t->diag('I want to write some line into my new file...');
-$t->isa_ok($new_file = $f->touch('new_file.txt', 0777), 'FilebaseFile', 'touch() returns a new instanceof FilebaseFile');
-$t->isa_ok($fp = $new_file->openFile('a+'), 'FilebaseFileObject', 'touch()ed file was opened. Return value is a pointer of type FilebaseFileObject.');
+$t->isa_ok($new_file = $f->touch('new_file.txt', 0777), 'sfFilebasePluginFile', 'touch() returns a new instanceof sfFilebasePluginFile');
+$t->isa_ok($fp = $new_file->openFile('a+'), 'sfFilebasePluginFileObject', 'touch()ed file was opened. Return value is a pointer of type sfFilebasePluginFileObject.');
 
 $t->isa_ok($fp->fwrite("This line is written by tester.\n"), 'integer', 'Successfully written by fwrite()');
 $t->isa_ok($fp->fwrite("This second line is written by tester.\n"), 'integer', 'Successfully written by fwrite()');
@@ -116,20 +116,20 @@ $t->diag('Creating some files');
 $new_fs = array();
 for($i=0; $i<10; $i++)
 {
-  $t->isa_ok($new_f = $f->touch(uniqid()), 'FilebaseFile', 'touch() created File ' . $new_f);
+  $t->isa_ok($new_f = $f->touch(uniqid()), 'sfFilebasePluginFile', 'touch() created File ' . $new_f);
   $new_fs[] = $new_f;
 }
 
-$t->isa_ok($iter = $f->getIterator(), 'RecursiveFilebaseIterator', 'getIterator() returns valid RecursiveFilebaseIterator');
+$t->isa_ok($iter = $f->getIterator(), 'sfFilebasePluginRecursiveDirectoryIterator', 'getIterator() returns valid sfFilebasePluginRecursiveDirectoryIterator');
 
 $t->diag('Testing iteration...');
 foreach($f AS $file)
 {
-  $t->ok($file instanceof FilebaseFile, 'File' . $file . ' is instanceof FilebaseFile, espacially ' . get_class($file));
+  $t->ok($file instanceof sfFilebasePluginFile, 'File' . $file . ' is instanceof sfFilebasePluginFile, espacially ' . get_class($file));
 }
 
 $t->diag('Picking some file by ArrayAccess-Methods:');
-$t->isa_ok($f[$new_fs[3]], 'FilebaseFile', 'File with index 3 is a FilebaseFile named '.$f[$new_fs[3]]);
+$t->isa_ok($f[$new_fs[3]], 'sfFilebasePluginFile', 'File with index 3 is a sfFilebasePluginFile named '.$f[$new_fs[3]]);
 
 $t->diag('Cleanup...');
 
