@@ -30,23 +30,24 @@
     <file role="php" name="config.php" />
    </dir>
    <dir name="lib">
-     <file role="php" name="Filebase.php" />
-     <file role="php" name="FilebaseDirectory.php" />
-     <file role="php" name="FilebaseException.php" />
-     <file role="php" name="FilebaseFile.php" />
-     <file role="php" name="FilebaseFileExif.php" />
-     <file role="php" name="FilebaseFileObject.php" />
-     <file role="php" name="FilebaseFileImage.php" />
-     <file role="php" name="FilebaseThumbnail.php" />
-     <file role="php" name="FilebaseUploadedFile.php" />
-     <file role="php" name="FilebaseUtil.php" />
-     <file role="php" name="GfxEditor.php" />
-     <file role="php" name="GfxEditorAdapterGD.php" />
-     <file role="php" name="GfxEditorAdapterIMagick.php" />
-     <file role="php" name="IGfxEditorAdapter.php" />
-     <file role="php" name="RecursiveFilebaseIterator.php" />
-     <file role="php" name="RecursiveFilebaseIteratorIterator.php" />
-     <file role="php" name="UploadedFilesManager.php" />
+     <file role="php" name="sfFilebasePlugin.php" />
+     <file role="php" name="sfFilebasePluginDirectory.php" />
+     <file role="php" name="sfFilebasePluginException.php" />
+     <file role="php" name="sfFilebasePluginFile.php" />
+     <file role="php" name="sfFilebasePluginFileExif.php" />
+     <file role="php" name="sfFilebasePluginFileObject.php" />
+     <file role="php" name="sfFilebasePluginFileImage.php" />
+     <file role="php" name="sfFilebasePluginThumbnail.php" />
+     <file role="php" name="sfFilebasePluginUploadedFile.php" />
+     <file role="php" name="sfFilebasePluginUtil.php" />
+     <file role="php" name="sfFilebasePluginGfxEditor.php" />
+     <file role="php" name="sfFilebasePluginGfxEditorAdapterGD.php" />
+     <file role="php" name="sfFilebasePluginGfxEditorAdapterIMagick.php" />
+     <file role="php" name="sfFilebasePluginGfxEditorAdapterInterface.php" />
+     <file role="php" name="sfFilebasePluginRecursiveDirectoryIterator.php" />
+     <file role="php" name="sfFilebasePluginRecursiveIteratorIterator.phps" />
+     <file role="php" name="sfFilebasePluginUploadedFilesManager.php" />
+     <file role="php" name="sfFilebasePluginStruct.php" />
    </dir>
   </dir>
  </contents>
