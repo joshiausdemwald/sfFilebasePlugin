@@ -29,7 +29,7 @@
 				<li><span class="field">see:</span> SplFileInfo</li>
 			</ul>
 		<p class="notes">
-			Located in <a class="field" href="_lib---Filebase.php.html">/lib/Filebase.php</a> (line <span class="field">17</span>)
+			Located in <a class="field" href="_Filebase.php.html">/Filebase.php</a> (line <span class="field">17</span>)
 		</p>
 		
 				
@@ -86,7 +86,7 @@
 		</div>
 		<div class="info-box-body">			
 			<div class="method-summary">
-																																																																																																																																																												
+																																																																																																																																																																												
 												<div class="method-definition">
 											<span class="method-result">Filebase</span>
 										<a href="#__construct" title="details" class="method-name">__construct</a>
@@ -126,6 +126,11 @@
 											<span class="method-result">string</span>
 										<a href="#getHashForFile" title="details" class="method-name">getHashForFile</a>
 											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$file</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#getIsImage" title="details" class="method-name">getIsImage</a>
+											(<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/FilebaseFile.html">FilebaseFile</a></span>&nbsp;<span class="var-name">$file</span>)
 									</div>
 																<div class="method-definition">
 											<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/FilebaseImage.html">FilebaseImage</a></span>
@@ -176,6 +181,11 @@
 											<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/FilebaseImage.html">FilebaseImage</a></span>
 										<a href="#resizeImage" title="details" class="method-name">resizeImage</a>
 											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$image</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$dimensions</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$quality</span> = <span class="var-default">60</span>], <span class="var-type">array</span>&nbsp;<span class="var-name">$dimensions:</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/FilebaseImage.html">FilebaseImage</a></span>
+										<a href="#rotateImage" title="details" class="method-name">rotateImage</a>
+											(<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/FilebaseImage.html">FilebaseImage</a></span>&nbsp;<span class="var-name">$image</span>, <span class="var-type">float</span>&nbsp;<span class="var-name">$deg</span>, [<span class="var-type">$bgcolor:</span>&nbsp;<span class="var-name">$bgcolor</span> = <span class="var-default">'#000000'</span>])
 									</div>
 																<div class="method-definition">
 											<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/FilebaseFile.html">FilebaseFile</a></span>
@@ -341,13 +351,12 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">chmodFile</span> (line <span class="line-number">256</span>)
+		<span class="method-title">chmodFile</span> (line <span class="line-number">255</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
 <p class="short-description">Changes the access permissions of a FilebaseFile</p>
 	<ul class="tags">
-				<li><span class="field">todo:</span> move it to filebase</li>
 				<li><span class="field">throws:</span> FilebaseException</li>
 				<li><span class="field">access:</span> public</li>
 			</ul>
@@ -547,11 +556,43 @@
 		
 			
 	</div>
-<a name="methodgetThumbnailForImage" id="getThumbnailForImage"><!-- --></a>
+<a name="methodgetIsImage" id="getIsImage"><!-- --></a>
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getThumbnailForImage</span> (line <span class="line-number">428</span>)
+		<span class="method-title">getIsImage</span> (line <span class="line-number">462</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns true if FilebaseFile is a</p>
+<p class="description"><p>web image file. Used to factory  a FilebaseImage instance by Filebase::  getFilebaseFile()</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> true if file is an image</li>
+				<li><span class="field">todo:</span> improved mime-type detection</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			getIsImage
+		</span>
+					(<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/FilebaseFile.html">FilebaseFile</a></span>&nbsp;<span class="var-name">$file</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/FilebaseFile.html">FilebaseFile</a></span>
+				<span class="var-name">$file</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetThumbnailForImage" id="getThumbnailForImage"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getThumbnailForImage</span> (line <span class="line-number">427</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -585,10 +626,10 @@
 			
 	</div>
 <a name="methodgetUploadedFiles" id="getUploadedFiles"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getUploadedFiles</span> (line <span class="line-number">340</span>)
+		<span class="method-title">getUploadedFiles</span> (line <span class="line-number">339</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -610,10 +651,10 @@
 			
 	</div>
 <a name="methodimageCopyResampled" id="imageCopyResampled"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">imageCopyResampled</span> (line <span class="line-number">416</span>)
+		<span class="method-title">imageCopyResampled</span> (line <span class="line-number">415</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -664,7 +705,7 @@
 			
 	</div>
 <a name="methodinitCache" id="initCache"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">initCache</span> (line <span class="line-number">78</span>)
@@ -694,10 +735,10 @@
 			
 	</div>
 <a name="methodisInFilebase" id="isInFilebase"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">isInFilebase</span> (line <span class="line-number">318</span>)
+		<span class="method-title">isInFilebase</span> (line <span class="line-number">317</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -724,10 +765,10 @@
 			
 	</div>
 <a name="methodmkDir" id="mkDir"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">mkDir</span> (line <span class="line-number">273</span>)
+		<span class="method-title">mkDir</span> (line <span class="line-number">272</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -757,10 +798,10 @@
 			
 	</div>
 <a name="methodmoveAllUploadedFiles" id="moveAllUploadedFiles"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">moveAllUploadedFiles</span> (line <span class="line-number">356</span>)
+		<span class="method-title">moveAllUploadedFiles</span> (line <span class="line-number">355</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -800,10 +841,10 @@
 			
 	</div>
 <a name="methodmoveUploadedFile" id="moveUploadedFile"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">moveUploadedFile</span> (line <span class="line-number">382</span>)
+		<span class="method-title">moveUploadedFile</span> (line <span class="line-number">381</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -855,7 +896,7 @@
 			
 	</div>
 <a name="methodrenameFile" id="renameFile"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">renameFile</span> (line <span class="line-number">180</span>)
@@ -891,10 +932,10 @@
 			
 	</div>
 <a name="methodresizeImage" id="resizeImage"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">resizeImage</span> (line <span class="line-number">396</span>)
+		<span class="method-title">resizeImage</span> (line <span class="line-number">395</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -928,11 +969,48 @@
 		
 			
 	</div>
+<a name="methodrotateImage" id="rotateImage"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">rotateImage</span> (line <span class="line-number">448</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Rotates an image file</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the rotated image</li>
+				<li><span class="field">see:</span> <a href="../de-optimusprime-sfFilebasePlugin/GfxEditor.html#methodimageRotate">GfxEditor::imageRotate()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/FilebaseImage.html">FilebaseImage</a></span>
+		<span class="method-name">
+			rotateImage
+		</span>
+					(<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/FilebaseImage.html">FilebaseImage</a></span>&nbsp;<span class="var-name">$image</span>, <span class="var-type">float</span>&nbsp;<span class="var-name">$deg</span>, [<span class="var-type">$bgcolor:</span>&nbsp;<span class="var-name">$bgcolor</span> = <span class="var-default">'#000000'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/FilebaseImage.html">FilebaseImage</a></span>
+				<span class="var-name">$image</span>			</li>
+					<li>
+				<span class="var-type">float</span>
+				<span class="var-name">$deg</span>			</li>
+					<li>
+				<span class="var-type">$bgcolor:</span>
+				<span class="var-name">$bgcolor</span><span class="var-description">: The background color of the rotated image in html-hex                   notation, default #00000</span>			</li>
+				</ul>
+		
+			
+	</div>
 <a name="methodtouch" id="touch"><!-- --></a>
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">touch</span> (line <span class="line-number">296</span>)
+		<span class="method-title">touch</span> (line <span class="line-number">295</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1047,7 +1125,7 @@
 
 
 	<p class="notes" id="credit">
-		Documentation generated on Sat, 09 May 2009 23:43:17 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Sun, 10 May 2009 12:58:55 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</div></body>
 </html>

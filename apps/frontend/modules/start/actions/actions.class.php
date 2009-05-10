@@ -30,8 +30,14 @@ class startActions extends sfActions
     {
       if($file instanceof FilebaseImage)
       {
+        $file->rotate(30);
         $this->images[] = $file->getThumbnail(array(500));
       }
     }
+    
+    $this->hamburg_bilder = array();
+    foreach($this->filebase AS $file)
+      if($file instanceof FilebaseImage)
+        $this->hamburg_bilder[] = $file;
   }
 }

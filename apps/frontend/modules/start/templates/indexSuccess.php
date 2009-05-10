@@ -7,4 +7,8 @@
   <!--input type="file" name="heiner[wotz][hans][]"/-->
   <input type="submit"/>
 </form>
+
+<?php foreach ($hamburg_bilder AS $image):?>
+  <?php echo image_tag($image->getThumbnail(array(300))->getAbsolutePathFromWebroot())?>
+<?php endforeach?>
 <?php #echo textarea_tag('hans',null, array('rich'=>true, 'tinymce_options'=>'language: "de"'))?>

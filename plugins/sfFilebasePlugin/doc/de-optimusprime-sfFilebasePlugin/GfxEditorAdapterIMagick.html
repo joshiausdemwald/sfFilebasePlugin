@@ -27,15 +27,14 @@
                 <li><a href="../de-optimusprime-sfFilebasePlugin/IGfxEditorAdapter.html">IGfxEditorAdapter</a></li>            </ul>
         </p>
         		<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Library for performing image transformations using image-magick</p>
-<p class="description"><p>in combination with php's imagick extension</p></p>
+<p class="short-description">Library for performing image transformations using image-magick  in combination with php's imagick extension</p>
 	<ul class="tags">
 				<li><span class="field">author:</span> Johannes Heinen &lt;<a href="mailto:johannes.heinen@gmail.com">johannes.heinen@gmail.com</a>&gt;</li>
 				<li><span class="field">copyright:</span> Johannes Heinen &lt;johannes.heinen@gmail.com&gt;</li>
 				<li><span class="field">todo:</span> Implement improved image editing capabilities.</li>
 			</ul>
 		<p class="notes">
-			Located in <a class="field" href="_lib---GfxEditorAdapterIMagick.php.html">/lib/GfxEditorAdapterIMagick.php</a> (line <span class="field">18</span>)
+			Located in <a class="field" href="_GfxEditorAdapterIMagick.php.html">/GfxEditorAdapterIMagick.php</a> (line <span class="field">18</span>)
 		</p>
 		
 				
@@ -102,7 +101,7 @@
 		</div>
 		<div class="info-box-body">			
 			<div class="method-summary">
-																																																																				
+																																																																												
 												<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#destroy" title="details" class="method-name">destroy</a>
@@ -122,6 +121,11 @@
 											<span class="method-result">void</span>
 										<a href="#resize" title="details" class="method-name">resize</a>
 											(<span class="var-type"></span>&nbsp;<span class="var-name">$dimensions</span>, <span class="var-type">true</span>&nbsp;<span class="var-name">$scale</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/FilebaseImage.html">FilebaseImage</a></span>
+										<a href="#rotate" title="details" class="method-name">rotate</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$deg</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$bgcolor</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$deg:</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$bgcolor:</span>)
 									</div>
 																<div class="method-definition">
 											<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/FilebaseImage.html">FilebaseImage</a></span>
@@ -161,7 +165,7 @@
 					</div>
 		<div class="info-box-body">
 			<a name="var$destination" id="$destination"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="var-header">
 		<span class="var-title">
@@ -182,7 +186,7 @@
 
 </div>
 <a name="var$destinationQuality" id="$destinationQuality"><!-- --></A>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div class="var-header">
 		<span class="var-title">
@@ -204,7 +208,7 @@
 
 </div>
 <a name="var$destination_resource" id="$destination_resource"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="var-header">
 		<span class="var-title">
@@ -225,7 +229,7 @@
 
 </div>
 <a name="var$funcs" id="$funcs"><!-- --></A>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div class="var-header">
 		<span class="var-title">
@@ -247,7 +251,7 @@
 
 </div>
 <a name="var$gfxEditor" id="$gfxEditor"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="var-header">
 		<span class="var-title">
@@ -269,7 +273,7 @@
 
 </div>
 <a name="var$source" id="$source"><!-- --></A>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div class="var-header">
 		<span class="var-title">
@@ -290,7 +294,7 @@
 
 </div>
 <a name="var$source_resource" id="$source_resource"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="var-header">
 		<span class="var-title">
@@ -327,7 +331,7 @@
 			<A NAME='method_detail'></A>
 
 <a name="methoddestroy" id="destroy"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">destroy</span> (line <span class="line-number">123</span>)
@@ -357,7 +361,7 @@
 			
 	</div>
 <a name="methodinitialize" id="initialize"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">initialize</span> (line <span class="line-number">63</span>)
@@ -394,7 +398,7 @@
 			
 	</div>
 <a name="methodisSupported" id="isSupported"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">isSupported</span> (line <span class="line-number">72</span>)
@@ -423,7 +427,7 @@
 			
 	</div>
 <a name="methodresize" id="resize"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">resize</span> (line <span class="line-number">136</span>)
@@ -457,6 +461,51 @@
 			<dl>
 			<dt><a href="../de-optimusprime-sfFilebasePlugin/IGfxEditorAdapter.html#methodresize">IGfxEditorAdapter::resize()</a></dt>
 						<dd>Resizes an image.  If scale set to true, image  may be resized greater than its original size.</dd>
+					</dl>
+			
+	</div>
+<a name="methodrotate" id="rotate"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">rotate</span> (line <span class="line-number">158</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Rotates an image to $deg degree</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> THe rotated image</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/FilebaseImage.html">FilebaseImage</a></span>
+		<span class="method-name">
+			rotate
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$deg</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$bgcolor</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$deg:</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$bgcolor:</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$deg:</span><span class="var-description">: The amount to rotate</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$bgcolor:</span><span class="var-description">: The background color in html hexadecimal notation</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$deg</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$bgcolor</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../de-optimusprime-sfFilebasePlugin/IGfxEditorAdapter.html#methodrotate">IGfxEditorAdapter::rotate()</a></dt>
+						<dd>Rotates an image to $deg degree</dd>
 					</dl>
 			
 	</div>
@@ -601,7 +650,7 @@
 
 
 	<p class="notes" id="credit">
-		Documentation generated on Sat, 09 May 2009 23:43:19 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Sun, 10 May 2009 12:58:57 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</div></body>
 </html>

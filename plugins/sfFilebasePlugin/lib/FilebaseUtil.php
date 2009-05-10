@@ -606,4 +606,18 @@ class FilebaseUtil
   {
     return $color;
   }
+
+  /**
+   * Returns true if FilebaseFile is a
+   * web image file. Used to factory
+   * a FilebaseImage instance by Filebase::
+   * getFilebaseFile()
+   *
+   * @todo improved mime-type detection
+   * @return boolean true if file is an image
+   */
+  public function getIsImage(FilebaseFile $file)
+  {
+    return in_array(strtolower($file->getExtension()), array('jpg','jpeg','gif','png'));
+  }
 }

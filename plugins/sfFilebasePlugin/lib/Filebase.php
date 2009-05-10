@@ -249,7 +249,6 @@ class Filebase extends FilebaseDirectory
    *
    * @param FilebaseFile | string: The file to chmod()
    * @param integer
-   * @todo move it to filebase
    * @throws FilebaseException
    * @return FilebaseFile $file
    */
@@ -449,5 +448,19 @@ class Filebase extends FilebaseDirectory
   public function rotateImage (FilebaseImage $image, $deg, $bgcolor = '#000000')
   {
     return $this->gfxEditor->imageRotate($image, $deg, $bgcolor);
+  }
+
+   /**
+   * Returns true if FilebaseFile is a
+   * web image file. Used to factory
+   * a FilebaseImage instance by Filebase::
+   * getFilebaseFile()
+   *
+   * @todo improved mime-type detection
+   * @return boolean true if file is an image
+   */
+  public function getIsImage(FilebaseFile $file)
+  {
+    return FilebaseUtil::getIsImage($file);
   }
 }

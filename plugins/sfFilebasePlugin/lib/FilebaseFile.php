@@ -80,12 +80,11 @@ class FilebaseFile extends SplFileInfo
    * getFilebaseFile()
    *
    * @todo improved mime-type detection
-   * @todo move it to Filebase
    * @return boolean true if file is an image
    */
   public function isImage()
   {
-    return in_array(strtolower($this->getExtension()), array('jpg','jpeg','gif','png'));
+    return $this->filebase->getIsImage($this);
   }
 
   /**
