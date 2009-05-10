@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title></title>
+			<link rel="stylesheet" href="media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+						<a name="top"></a>
+<h2>[de-optimusprime-util-stuct] element index</h2>
+	<h3>Package indexes</h3>
+	<ul>
+				<li><a href="elementindex_de-optimusprime-sfFilebasePlugin.html">de-optimusprime-sfFilebasePlugin</a></li>
+					</ul>
+<a href="elementindex.html">All elements</a>
+<br />
+<div class="index-letter-menu">
+	<a class="index-letter" href="elementindex_de-optimusprime-util-stuct.html#c">c</a>
+	<a class="index-letter" href="elementindex_de-optimusprime-util-stuct.html#g">g</a>
+	<a class="index-letter" href="elementindex_de-optimusprime-util-stuct.html#o">o</a>
+	<a class="index-letter" href="elementindex_de-optimusprime-util-stuct.html#s">s</a>
+	<a class="index-letter" href="elementindex_de-optimusprime-util-stuct.html#_">_</a>
+</div>
+
+	<a name="_"></a>
+	<div class="index-letter-section">
+		<div style="float: left" class="index-letter-title">_</div>
+		<div style="float: right"><a href="#top">top</a></div>
+		<div style="clear: both"></div>
+	</div>
+	<dl>
+			<dt class="field">
+						<span class="method-title">__call</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="de-optimusprime-util-stuct/sfFilebasePluginStruct.html#method__call">sfFilebasePluginStruct::__call()</a> in sfFilebasePluginStruct.php</div>
+							<div class="index-item-description">Provides data access by using standard getter/setter-  syntax. E.g.:</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">__construct</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="de-optimusprime-util-stuct/sfFilebasePluginStruct.html#method__construct">sfFilebasePluginStruct::__construct()</a> in sfFilebasePluginStruct.php</div>
+							<div class="index-item-description">Constructor. Takes an array with store-values  as an optional argument.</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">__get</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="de-optimusprime-util-stuct/sfFilebasePluginStruct.html#method__get">sfFilebasePluginStruct::__get()</a> in sfFilebasePluginStruct.php</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">__set</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="de-optimusprime-util-stuct/sfFilebasePluginStruct.html#method__set">sfFilebasePluginStruct::__set()</a> in sfFilebasePluginStruct.php</div>
+							<div class="index-item-description">Adds a new Value to this struct. Converts all  nested arrays into structs.</div>
+					</dd>
+		</dl>
+	<a name="c"></a>
+	<div class="index-letter-section">
+		<div style="float: left" class="index-letter-title">c</div>
+		<div style="float: right"><a href="#top">top</a></div>
+		<div style="clear: both"></div>
+	</div>
+	<dl>
+			<dt class="field">
+						<span class="var-title">$class_name</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="de-optimusprime-util-stuct/sfFilebasePluginStruct.html#var$class_name">sfFilebasePluginStruct::$class_name</a> in sfFilebasePluginStruct.php</div>
+					</dd>
+		</dl>
+	<a name="g"></a>
+	<div class="index-letter-section">
+		<div style="float: left" class="index-letter-title">g</div>
+		<div style="float: right"><a href="#top">top</a></div>
+		<div style="clear: both"></div>
+	</div>
+	<dl>
+			<dt class="field">
+						<span class="method-title">getAttribute</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="de-optimusprime-util-stuct/sfFilebasePluginStruct.html#methodgetAttribute">sfFilebasePluginStruct::getAttribute()</a> in sfFilebasePluginStruct.php</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">getIterator</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="de-optimusprime-util-stuct/sfFilebasePluginStruct.html#methodgetIterator">sfFilebasePluginStruct::getIterator()</a> in sfFilebasePluginStruct.php</div>
+							<div class="index-item-description">Returns Array Iterator over struct data</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">getNameFromGetterSetter</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="de-optimusprime-util-stuct/sfFilebasePluginStruct.html#methodgetNameFromGetterSetter">sfFilebasePluginStruct::getNameFromGetterSetter()</a> in sfFilebasePluginStruct.php</div>
+							<div class="index-item-description">Calculates the substring of a getter/setter  method. E.g. getHanswurst() =&gt; hanswurst</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">getStore</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="de-optimusprime-util-stuct/sfFilebasePluginStruct.html#methodgetStore">sfFilebasePluginStruct::getStore()</a> in sfFilebasePluginStruct.php</div>
+							<div class="index-item-description">Returns this store as an instance of  Array Iterator. Wrapper for getIterator()</div>
+					</dd>
+		</dl>
+	<a name="o"></a>
+	<div class="index-letter-section">
+		<div style="float: left" class="index-letter-title">o</div>
+		<div style="float: right"><a href="#top">top</a></div>
+		<div style="clear: both"></div>
+	</div>
+	<dl>
+			<dt class="field">
+						<span class="method-title">offsetExists</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="de-optimusprime-util-stuct/sfFilebasePluginStruct.html#methodoffsetExists">sfFilebasePluginStruct::offsetExists()</a> in sfFilebasePluginStruct.php</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">offsetGet</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="de-optimusprime-util-stuct/sfFilebasePluginStruct.html#methodoffsetGet">sfFilebasePluginStruct::offsetGet()</a> in sfFilebasePluginStruct.php</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">offsetSet</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="de-optimusprime-util-stuct/sfFilebasePluginStruct.html#methodoffsetSet">sfFilebasePluginStruct::offsetSet()</a> in sfFilebasePluginStruct.php</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">offsetUnset</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="de-optimusprime-util-stuct/sfFilebasePluginStruct.html#methodoffsetUnset">sfFilebasePluginStruct::offsetUnset()</a> in sfFilebasePluginStruct.php</div>
+					</dd>
+		</dl>
+	<a name="s"></a>
+	<div class="index-letter-section">
+		<div style="float: left" class="index-letter-title">s</div>
+		<div style="float: right"><a href="#top">top</a></div>
+		<div style="clear: both"></div>
+	</div>
+	<dl>
+			<dt class="field">
+						<span class="var-title">$store</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="de-optimusprime-util-stuct/sfFilebasePluginStruct.html#var$store">sfFilebasePluginStruct::$store</a> in sfFilebasePluginStruct.php</div>
+							<div class="index-item-description">Store-Array. All Data assigned to this store will  be put in that data-structure.</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">setAttribute</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="de-optimusprime-util-stuct/sfFilebasePluginStruct.html#methodsetAttribute">sfFilebasePluginStruct::setAttribute()</a> in sfFilebasePluginStruct.php</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">setStore</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="de-optimusprime-util-stuct/sfFilebasePluginStruct.html#methodsetStore">sfFilebasePluginStruct::setStore()</a> in sfFilebasePluginStruct.php</div>
+							<div class="index-item-description">Sets the variable store of this struct.</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">setStructClass</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="de-optimusprime-util-stuct/sfFilebasePluginStruct.html#methodsetStructClass">sfFilebasePluginStruct::setStructClass()</a> in sfFilebasePluginStruct.php</div>
+							<div class="index-item-description">Sets the class name for sub-structs</div>
+					</dd>
+			<dt class="field">
+						sfFilebasePluginStruct
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="de-optimusprime-util-stuct/sfFilebasePluginStruct.html">sfFilebasePluginStruct</a> in sfFilebasePluginStruct.php</div>
+							<div class="index-item-description">To change this template, choose Tools | Templates  and open the template in the editor.</div>
+					</dd>
+			<dt class="field">
+						<span class="include-title">sfFilebasePluginStruct.php</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="de-optimusprime-util-stuct/_sfFilebasePluginStruct.php.html">sfFilebasePluginStruct.php</a> in sfFilebasePluginStruct.php</div>
+					</dd>
+		</dl>
+
+<div class="index-letter-menu">
+	<a class="index-letter" href="elementindex_de-optimusprime-util-stuct.html#c">c</a>
+	<a class="index-letter" href="elementindex_de-optimusprime-util-stuct.html#g">g</a>
+	<a class="index-letter" href="elementindex_de-optimusprime-util-stuct.html#o">o</a>
+	<a class="index-letter" href="elementindex_de-optimusprime-util-stuct.html#s">s</a>
+	<a class="index-letter" href="elementindex_de-optimusprime-util-stuct.html#_">_</a>
+</div>	</body>
+</html>

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/!svn/ver/18107/plugins/sfFilebasePlugin
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/!svn/ver/18108/plugins/sfFilebasePlugin/LICENSE
+END
+package.xml
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/18108/plugins/sfFilebasePlugin/package.xml
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/!svn/ver/18108/plugins/sfFilebasePlugin/README
+END
