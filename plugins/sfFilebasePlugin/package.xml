@@ -21,7 +21,7 @@
   <api>alpha</api>
  </stability>
  <license uri="http://www.symfony-project.org/license">MIT license</license>
- <notes>-</notes>
+ <notes>This is the first release, completely namespaced by sfFilebasePlugin... Due to the half-automatically refactoring i do not guarantee that all files are reference properly, sorry. This will be checked intensively soon.</notes>
  <contents>
   <dir name="/">
    <file role="data" name="README" />
