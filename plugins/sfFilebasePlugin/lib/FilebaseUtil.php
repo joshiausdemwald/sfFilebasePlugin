@@ -616,7 +616,7 @@ class FilebaseUtil
    * @todo improved mime-type detection
    * @return boolean true if file is an image
    */
-  public function getIsImage(FilebaseFile $file)
+  public static function getIsImage(FilebaseFile $file)
   {
     return in_array(strtolower($file->getExtension()), array('jpg','jpeg','gif','png'));
   }
