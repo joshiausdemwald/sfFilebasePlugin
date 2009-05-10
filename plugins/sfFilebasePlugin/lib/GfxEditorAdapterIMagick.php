@@ -1,13 +1,19 @@
 <?php
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * This file is part of the sfFilebase symfony plugin.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 /**
- * Description of GfxEditorAdapterGD
+ * Library for performing image transformations using image-magick
+ * in combination with php's imagick extension
  *
- * @author joshi
+ * @package    de.optimusprime.sfFilebasePlugin
+ * @todo       Implement improved image editing capabilities.
+ * @author     Johannes Heinen <johannes.heinen@gmail.com>
+ * @copyright  Johannes Heinen <johannes.heinen@gmail.com>
  */
 class GfxEditorAdapterIMagick implements IGfxEditorAdapter
 {
@@ -141,5 +147,18 @@ class GfxEditorAdapterIMagick implements IGfxEditorAdapter
 
     $this->destination_resource->thumbnailImage($new_width, $new_height);
     return true;
+  }
+
+  /**
+   * Rotates an image to $deg degree
+   * @param integer $deg: The amount to rotate
+   * @param string $bgcolor: The background color in html hexadecimal notation
+   * @return FilebaseImage $image: THe rotated image
+   */
+  public function rotate($deg, $bgcolor)
+  {
+     $ret_val = $this->destination_resource->rotateImage(new ImagickPixel($bgcolor), $deg);
+     if($ret_val !== true) throw new FilebaseException(sprintf('Failed to rotate image %s.', $this->source));
+     return $ret_val;
   }
 }

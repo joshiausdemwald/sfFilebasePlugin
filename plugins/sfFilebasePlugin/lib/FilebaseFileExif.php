@@ -1,15 +1,19 @@
 <?php
-/* 
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * This file is part of the sfFilebase symfony plugin.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 /**
- * Description of FilebaseFileExif
+ * FilebaseFileExif represents exif-data of a FilebaseImage
  *
- * @author    Joshi
- * @copyright Joshi
- * @package   de.optimusprime.util.filebase
+ * @see        exif_read_data()
+ * @see        FilebaseImage
+ * @package    de.optimusprime.sfFilebasePlugin
+ * @author     Johannes Heinen <johannes.heinen@gmail.com>
+ * @copyright  Johannes Heinen <johannes.heinen@gmail.com>
  */
 class FilebaseFileExif extends Struct
 {

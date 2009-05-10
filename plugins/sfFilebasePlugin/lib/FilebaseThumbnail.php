@@ -1,13 +1,20 @@
 <?php
-/* 
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * This file is part of the sfFilebase symfony plugin.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 /**
- * Description of FilebaseThumbnail
- *
- * @author joshi
+ * FilebaseThumbnail is a clone of a FilebaseImage that represents
+ * a thumbnail
+ * 
+ * @package    de.optimusprime.sfFilebasePlugin
+ * @see        SplFileInfo
+ * @see        FilebaseImage
+ * @author     Johannes Heinen <johannes.heinen@gmail.com>
+ * @copyright  Johannes Heinen <johannes.heinen@gmail.com>
  */
 class FilebaseThumbnail extends FilebaseImage
 {

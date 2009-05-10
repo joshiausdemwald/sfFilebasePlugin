@@ -1,9 +1,18 @@
 <?php
 /**
+ * This file is part of the sfFilebase symfony plugin.
  *
- * @author    Joshi
- * @copyright Joshi
- * @package   de.optimusprime.util.filebase
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+/**
+ * Filebase directory represents a directory
+ *
+ * @see        SplFileInfo
+ * @package    de.optimusprime.sfFilebasePlugin
+ * @author     Johannes Heinen <johannes.heinen@gmail.com>
+ * @copyright  Johannes Heinen <johannes.heinen@gmail.com>
  */
 class FilebaseDirectory extends FilebaseFile implements IteratorAggregate, ArrayAccess, Countable
 {

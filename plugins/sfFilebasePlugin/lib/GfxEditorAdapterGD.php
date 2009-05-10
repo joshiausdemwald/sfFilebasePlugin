@@ -1,13 +1,18 @@
 <?php
-/* 
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * This file is part of the sfFilebase symfony plugin.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 /**
- * Description of GfxEditorAdapterGD
+ * Adapter for transforming images using the gd1/2 library
  *
- * @author joshi
+ * @todo       Implement improved image editing capabilities.
+ * @package    de.optimusprime.sfFilebasePlugin
+ * @author     Johannes Heinen <johannes.heinen@gmail.com>
+ * @copyright  Johannes Heinen <johannes.heinen@gmail.com>
  */
 class GfxEditorAdapterGD implements IGfxEditorAdapter
 {
@@ -184,6 +189,26 @@ class GfxEditorAdapterGD implements IGfxEditorAdapter
         $this->funcs['imagecopyresampled']($this->destination_resource, $this->source_resource, 0, 0, 0, 0, $new_width, $new_height, $width, $height);
         break;
     }
+    return true;
+  }
+
+  /**
+   * Rotates an image to $deg degree
+   *
+   * @uses  imagerotate():     Hinweis: Diese Funktion steht nur zur Verfügung, wenn PHP mit der GD Bibliothek übersetzt wurde, die mit PHP zusammen erhältlich ist.
+   * @todo Implement fallback. Its a performance issue.
+   * @experimental
+   * @param float  $deg: The amount to rotate
+   * @param string $bgcolor: The background color in html hexadecimal notation
+   * @return FilebaseImage $image: THe rotated image
+   */
+  public function rotate($deg,  $bgcolor)
+  {
+    $bgcolor=0;
+    if(!function_exists('imagerotate')) throw new FilebaseException('Imagerotate() is not supported by your gd-version, you must compile php with the pre-built gd2-library.');
+    if(!is_resource($this->source_resource) || !$this->destination instanceof FilebaseImage) throw new FilebaseException('You must set a source and a destination image to resize.');
+    $this->destination_resource = imagerotate($this->source_resource, $deg, FilebaseUtil::parseHTMLColor($bgcolor), true);
+    if(!is_resource($this->destination_resource)) throw new FilebaseException(sprintf('Failed to rotate image %s.', $this->source));
     return true;
   }
 }

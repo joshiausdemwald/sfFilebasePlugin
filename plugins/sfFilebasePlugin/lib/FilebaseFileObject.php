@@ -1,22 +1,18 @@
 <?php
 /**
- * Class to handle file operations,
- * derived from splfileobject.inc
- * 
- * @file splfileobject.inc
- * @ingroup SPL
- * @brief class FileObject
- * @author  Marcus Boerger
- * @date    2003 - 2006
+ * This file is part of the sfFilebase symfony plugin.
  *
- * SPL - Standard PHP Library
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
+
 /**
- * @ingroup SPL
- * @brief   Object representation for any stream
- * @author  Marcus Boerger
- * @version 1.1
- * @since PHP 5.1
+ * FilebaseFileObject enriches splFileObject
+ *
+ * @see        SplFileObject
+ * @package    de.optimusprime.sfFilebasePlugin
+ * @author     Johannes Heinen <johannes.heinen@gmail.com>
+ * @copyright  Johannes Heinen <johannes.heinen@gmail.com>
  */
 class FilebaseFileObject extends splFileObject
 {

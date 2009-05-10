@@ -1,12 +1,18 @@
 <?php
-/* 
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * This file is part of the sfFilebase symfony plugin.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 /**
+ * Interface for implementing new GfxEditorAdapters.
  *
- * @author joshi
+ * @todo       Implement improved image editing capabilities.
+ * @package    de.optimusprime.sfFilebasePlugin
+ * @author     Johannes Heinen <johannes.heinen@gmail.com>
+ * @copyright  Johannes Heinen <johannes.heinen@gmail.com>
  */
 interface IGfxEditorAdapter
 {
@@ -43,6 +49,16 @@ interface IGfxEditorAdapter
    */
   public function resize(array $dimensions);
 
+
+  /**
+   * Rotates an image to $deg degree
+   * 
+   * @param integer $deg: The amount to rotate
+   * @param string $bgcolor: The background color in html hexadecimal notation
+   * @return FilebaseImage $image: THe rotated image
+   */
+  public function rotate($deg, $bgcolor);
+  
   /**
    * Saves target image.
    * @return true if successfully saved

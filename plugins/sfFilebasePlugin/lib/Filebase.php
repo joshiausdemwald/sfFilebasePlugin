@@ -1,13 +1,18 @@
 <?php
-/* 
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * This file is part of the sfFilebase symfony plugin.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 /**
- * Description of Filebase
+ * Filebase provides easy access to file system in oop style
  *
- * @author joshi
+ * @see        SplFileInfo
+ * @package    de.optimusprime.sfFilebasePlugin
+ * @author     Johannes Heinen <johannes.heinen@gmail.com>
+ * @copyright  Johannes Heinen <johannes.heinen@gmail.com>
  */
 class Filebase extends FilebaseDirectory
 {
@@ -150,7 +155,7 @@ class Filebase extends FilebaseDirectory
       {
         if(!$destination->isWritable()) throw new FilebaseException(sprintf('Destination file %s is write protected.', $destination->getPathname()));
       }
-      else throw new FilebaseException(sprintf('Error copying file %s into %s: Target already exists.', $source->getPathname(), $target->getPathname()));
+      else throw new FilebaseException(sprintf('Error copying file %s into %s: Target already exists.', $source->getPathname(), $destination->getPathname()));
     }
     else
     {
@@ -429,5 +434,20 @@ class Filebase extends FilebaseDirectory
       return $this->gfxEditor->createThumbnail($image, $dimensions, $quality, $mime);
     }
     return $cache_fileinfo;
+  }
+
+  /**
+   * Rotates an image file
+   *
+   * @see GfxEditor::imageRotate()
+   * @param FilebaseImage $image
+   * @param float $deg
+   * @param $bgcolor: The background color of the rotated image in html-hex
+   *                  notation, default #00000
+   * @return FilebaseImage $img: the rotated image
+   */
+  public function rotateImage (FilebaseImage $image, $deg, $bgcolor = '#000000')
+  {
+    return $this->gfxEditor->imageRotate($image, $deg, $bgcolor);
   }
 }

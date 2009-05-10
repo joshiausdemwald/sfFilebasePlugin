@@ -1,13 +1,20 @@
 <?php
-/* 
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * This file is part of the sfFilebase symfony plugin.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 /**
- * Description of UploadedFilesManager
+ * UploadedFilesManager holds instances of FilebaseUploadedFiles.
+ * It provide methods to access these objects and moves their referenced
+ * temp-files to there targeted destinations.
  *
- * @author joshi
+ * @see        RecursiveDirectoryIterator
+ * @package    de.optimusprime.sfFilebasePlugin
+ * @author     Johannes Heinen <johannes.heinen@gmail.com>
+ * @copyright  Johannes Heinen <johannes.heinen@gmail.com>
  */
 class UploadedFilesManager
 {

@@ -10,15 +10,15 @@
   <email>johannes.heinen@gmail.com</email>
   <active>yes</active>
  </lead>
- <date>2009-05-01</date>
- <time>20:00:00</time>
+ <date>2009-05-10</date>
+ <time>23:59:59</time>
  <version>
   <release>0.0.1</release>
   <api>0.0.1</api>
  </version>
  <stability>
-  <release>unstable</release>
-  <api>unstable</api>
+  <release>alpha</release>
+  <api>alpha</api>
  </stability>
  <license uri="http://www.symfony-project.org/license">MIT license</license>
  <notes>-</notes>
@@ -27,47 +27,26 @@
    <file role="data" name="README" />
    <file role="data" name="LICENSE" />
    <dir name="config">
-    <!-- model -->
-    <file role="data" name="schema.yml" />
-   </dir>
-   <dir name="data">
-    <dir name="fixtures">
-     <!-- fixtures -->
-     <file role="data" name="fixtures.yml" />
-    </dir>
+    <file role="php" name="config.php" />
    </dir>
    <dir name="lib">
-    <dir name="model">
-     <!-- model classes -->
-     <file role="data" name="sfSampleFooBar.php" />
-     <file role="data" name="sfSampleFooBarPeer.php" />
-    </dir>
-    <dir name="task">
-     <!-- tasks -->
-     <file role="data" name="sfSampleTask.class.php" />
-    </dir>
-    <dir name="validator">
-     <!-- validators -->
-     <file role="data" name="sfSampleValidator.class.php" />
-    </dir>
-   </dir>
-   <dir name="modules">
-    <dir name="sfSampleModule">
-     <file role="data" name="actions/actions.class.php" />
-     <file role="data" name="config/security.yml" />
-     <file role="data" name="lib/BasesfSampleModuleActions.class.php" />
-     <file role="data" name="templates/indexSuccess.php" />
-    </dir>
-   </dir>
-   <dir name="web">
-    <dir name="css">
-     <!-- stylesheets -->
-     <file role="data" name="sfSampleStyle.css" />
-    </dir>
-    <dir name="images">
-     <!-- images -->
-     <file role="data" name="sfSampleImage.png" />
-    </dir>
+     <file role="php" name="Filebase.php" />
+     <file role="php" name="FilebaseDirectory.php" />
+     <file role="php" name="FilebaseException.php" />
+     <file role="php" name="FilebaseFile.php" />
+     <file role="php" name="FilebaseFileExif.php" />
+     <file role="php" name="FilebaseFileObject.php" />
+     <file role="php" name="FilebaseFileImage.php" />
+     <file role="php" name="FilebaseThumbnail.php" />
+     <file role="php" name="FilebaseUploadedFile.php" />
+     <file role="php" name="FilebaseUtil.php" />
+     <file role="php" name="GfxEditor.php" />
+     <file role="php" name="GfxEditorAdapterGD.php" />
+     <file role="php" name="GfxEditorAdapterIMagick.php" />
+     <file role="php" name="IGfxEditorAdapter.php" />
+     <file role="php" name="RecursiveFilebaseIterator.php" />
+     <file role="php" name="RecursiveFilebaseIteratorIterator.php" />
+     <file role="php" name="UploadedFilesManager.php" />
    </dir>
   </dir>
  </contents>
@@ -88,5 +67,4 @@
   </required>
  </dependencies>
  <phprelease />
- <changelog />
 </package>

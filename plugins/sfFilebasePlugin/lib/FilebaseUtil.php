@@ -1,8 +1,18 @@
 <?php
 /**
- * Description of FilebaseUtil
+ * This file is part of the sfFilebase symfony plugin.
  *
- * @author joshi
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+/**
+ * Filebase Util is a static class that provides useful
+ * methods for dealing with files.
+ *
+ * @package    de.optimusprime.sfFilebasePlugin
+ * @author     Johannes Heinen <johannes.heinen@gmail.com>
+ * @copyright  Johannes Heinen <johannes.heinen@gmail.com>
  */
 class FilebaseUtil
 {
@@ -581,5 +591,19 @@ class FilebaseUtil
   public static function isAbsolutePathname($pathname)
   {
     return strpos($pathname, '/') === 0 || preg_match('#^[a-z]:/|\\\#i',$pathname);
+  }
+
+  /**
+   * Parses a css color notation into
+   * a hexadecimal value.
+   *
+   * rgb(0,0,0); cmyl(0,0,0,0), #123456 ...
+   *
+   * @todo implement ;)
+   * @param string $color
+   */
+  public static function parseHTMLColor($color)
+  {
+    return $color;
   }
 }

@@ -1,13 +1,20 @@
 <?php
-/* 
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * This file is part of the sfFilebase symfony plugin.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 /**
- * Description of FilebaseImage
+ * FilebaseImage is a special FilebaseFile which represents an
+ * image file.
  *
- * @author joshi
+ * @see        SplFileInfo
+ * @see        FilebaseFile
+ * @package    de.optimusprime.sfFilebasePlugin
+ * @author     Johannes Heinen <johannes.heinen@gmail.com>
+ * @copyright  Johannes Heinen <johannes.heinen@gmail.com>
  */
 class FilebaseImage extends FilebaseFile
 {
@@ -99,5 +106,17 @@ class FilebaseImage extends FilebaseFile
        return new FilebaseFileExif($this);
     }
     else throw new FilebaseException(sprintf('Image type %s hat no build-in support for exif metadata.', $this->getExtension()));
+  }
+
+  /**
+   * Rotates an image to $deg degree
+   * @param float  $deg: The amount to rotate
+   * @param string $bgcolor: The background color of the rotated image, #00000
+   *                         as default, in html-hexadecimal notation.
+   * @return FilebaseImage $image: THe rotated image
+   */
+  public function rotate($deg, $bgcolor = '#000000')
+  {
+    return $this->filebase->rotateImage($this, $deg, $bgcolor);
   }
 }

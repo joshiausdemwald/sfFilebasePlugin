@@ -1,13 +1,18 @@
 <?php
-/* 
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * This file is part of the sfFilebase symfony plugin.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 /**
- * Description of GfxEditor
- *
- * @author joshi
+ * GfxEditor edits images. Ärm. Ok, it can create thumbnails.
+ * 
+ * @package    de.optimusprime.sfFilebasePlugin
+ * @todo       Implement improved image editing capabilities.
+ * @author     Johannes Heinen <johannes.heinen@gmail.com>
+ * @copyright  Johannes Heinen <johannes.heinen@gmail.com>
  */
 class GfxEditor
 {
@@ -139,6 +144,24 @@ class GfxEditor
     $this->adapter->setDestination($dst);
     $this->adapter->resize($dimensions);
     $this->adapter->setQuality($quality);
+    $img = $this->adapter->save();
+    $this->adapter->destroy();
+    return $img;
+  }
+
+  /**
+   * Rotates an image to $deg degree.
+   *
+   * @param  FilebaseImage $image: The image that shall be rotated.
+   * @param  integer       $deg:   The amount in degree.
+   * @param  string        $bgcolor: HTML-Hex-Color
+   * @return FilebaseImage $image: The rotated image.
+   */
+  public function imageRotate(FilebaseImage $fileinfo, $deg, $bgcolor)
+  {
+    $this->adapter->setSource($fileinfo);
+    $this->adapter->setDestination($fileinfo);
+    $this->adapter->rotate($deg, $bgcolor);
     $img = $this->adapter->save();
     $this->adapter->destroy();
     return $img;

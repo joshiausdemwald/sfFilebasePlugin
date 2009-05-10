@@ -1,8 +1,19 @@
 <?php
 /**
- * @author    Joshi
- * @copyright Joshi
- * @package   de.optimusprime.util.filebase
+ * This file is part of the sfFilebase symfony plugin.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+/**
+ * FilebaseException is only a stub class for
+ * exception handling.
+ *
+ * @see Exception
+ * @package    de.optimusprime.sfFilebasePlugin
+ * @author     Johannes Heinen <johannes.heinen@gmail.com>
+ * @copyright  Johannes Heinen <johannes.heinen@gmail.com>
  */
 class FilebaseException extends Exception
 {
