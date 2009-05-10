@@ -26,6 +26,9 @@ svn:special svn:externals svn:needs-lock
 
 ee427ae8-e902-0410-961c-c3ed070cd9f9
 
+test
+dir
+
 LICENSE
 file
 18108

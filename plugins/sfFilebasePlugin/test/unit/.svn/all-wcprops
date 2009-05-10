@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/18110/plugins/sfFilebasePlugin/test/unit
+END
+sample.txt
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/18110/plugins/sfFilebasePlugin/test/unit/sample.txt
+END
+FilebaseTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/18110/plugins/sfFilebasePlugin/test/unit/FilebaseTest.php
+END
+splTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/18110/plugins/sfFilebasePlugin/test/unit/splTest.php
+END
+test.JPG
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/18110/plugins/sfFilebasePlugin/test/unit/test.JPG
+END
