@@ -12,4 +12,4 @@
  * @copyright  Johannes Heinen <johannes.heinen@gmail.com>
  */
 
-sfConfig::set('sf_public_filebase', new Filebase());
+sfConfig::set('sf_public_filebase', new sfFilebasePlugin());

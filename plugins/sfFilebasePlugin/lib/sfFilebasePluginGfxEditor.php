@@ -185,7 +185,7 @@ class sfFilebasePluginGfxEditor
     if(!$fileinfo->isImage())           throw new sfFilebasePluginException(sprintf('File %s is not an image.', $fileinfo));
     if(!$this->filebase->isInFilebase($fileinfo)) throw new sfFilebasePluginException(sprintf('FilebaseFile %s does not belong to Filebase %s, cannot be deleted due to security issues', $fileinfo->getPathname(), $this->filebase->getPathname()));
     $destination = $this->getThumbnailFileinfo($fileinfo, $dimensions, $mime);
-    return new sfFilebasePluginThumbnail($this->imageCopyResampled($fileinfo, $destination, $dimensions, true));
+    return new sfFilebasePluginThumbnail($this->imageCopyResampled($fileinfo, $destination, $dimensions, true), $this->filebase, $fileinfo);
   }
 
   /**

@@ -22,13 +22,13 @@ class startActions extends sfActions
     $mm->load(sfConfig::get('cms_module_dir'));
     $mm->checkDependancies();*/
 
-    $this->filebase = new Filebase();
+    $this->filebase = new sfFilebasePlugin();
     $this->filebase->clearCache();
     $files = $this->filebase->moveAllUploadedFiles($this->filebase->getPathname());
     $this->images = array();
     foreach($files AS $file)
     {
-      if($file instanceof FilebaseImage)
+      if($file instanceof sfFilebasePluginImage)
       {
         $file->rotate(30);
         $this->images[] = $file->getThumbnail(array(500));
@@ -37,7 +37,7 @@ class startActions extends sfActions
     
     $this->hamburg_bilder = array();
     foreach($this->filebase AS $file)
-      if($file instanceof FilebaseImage)
+      if($file instanceof sfFilebasePluginImage)
         $this->hamburg_bilder[] = $file;
   }
 }
