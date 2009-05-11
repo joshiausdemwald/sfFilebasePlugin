@@ -1,15 +1,15 @@
 9
 
 dir
-18107
+18153
 http://svn.symfony-project.com/plugins/sfFilebasePlugin
 http://svn.symfony-project.com
 
 
 
-2009-05-10T13:00:01.835407Z
-18107
-plugin.bot
+2009-05-11T21:02:54.332587Z
+18153
+joshiausdemwald
 
 
 svn:special svn:externals svn:needs-lock
@@ -31,7 +31,7 @@ dir
 
 LICENSE
 file
-18108
+
 
 
 
@@ -77,7 +77,7 @@ dir
 
 package.xml
 file
-18153
+
 
 
 
@@ -111,7 +111,7 @@ joshiausdemwald
 
 README
 file
-18153
+
 
 
 

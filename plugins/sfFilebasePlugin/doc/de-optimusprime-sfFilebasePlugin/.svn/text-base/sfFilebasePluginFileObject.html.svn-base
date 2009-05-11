@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class sfFilebasePluginFileObject</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class sfFilebasePluginFileObject</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+											<a href="#sec-consts">Constants</a>
+						
+			</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">sfFilebasePluginFileObject enriches splFileObject</p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Johannes Heinen &lt;<a href="mailto:johannes.heinen@gmail.com">johannes.heinen@gmail.com</a>&gt;</li>
+				<li><span class="field">copyright:</span> Johannes Heinen &lt;johannes.heinen@gmail.com&gt;</li>
+				<li><span class="field">see:</span> SplFileObject</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_sfFilebasePluginFileObject.php.html">/sfFilebasePluginFileObject.php</a> (line <span class="field">17</span>)
+		</p>
+		
+				
+		<pre>SplFileObject
+   |
+   --sfFilebasePluginFileObject</pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+															<a href="#sec-consts">Constants</a>
+							
+					</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																<div class="var-title">
+					<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>
+					<a href="#$file" title="details" class="var-name">$file</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html">sfFilebasePlugin</a></span>
+					<a href="#$filebase" title="details" class="var-name">$filebase</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-consts">Constants</a>
+							
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																				
+												<div class="method-definition">
+											<span class="method-result">sfFilebasePluginFileObject</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											(<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>&nbsp;<span class="var-name">$file_name</span>, <span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html">sfFilebasePlugin</a></span>&nbsp;<span class="var-name">$filebase</span>, [<span class="var-type">$open_mode</span>&nbsp;<span class="var-name">$open_mode</span> = <span class="var-default">'r'</span>], [<span class="var-type">$use_include_path</span>&nbsp;<span class="var-name">$use_include_path</span> = <span class="var-default">false</span>], [<span class="var-type">$context</span>&nbsp;<span class="var-name">$context</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#fileGetContents" title="details" class="method-name">fileGetContents</a>
+											([<span class="var-type">flags</span>&nbsp;<span class="var-name">$flags</span> = <span class="var-default">null</span>], [<span class="var-type">context</span>&nbsp;<span class="var-name">$context</span> = <span class="var-default">null</span>], [<span class="var-type">offset</span>&nbsp;<span class="var-name">$offset</span> = <span class="var-default">null</span>], [<span class="var-type">maxlen</span>&nbsp;<span class="var-name">$maxlen</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>
+										<a href="#getFilebaseFile" title="details" class="method-name">getFilebaseFile</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#write" title="details" class="method-name">write</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$length</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#writeLn" title="details" class="method-name">writeLn</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$nl_delim</span> = <span class="var-default">&quot;\n&quot;</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$length</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#__call" title="details" class="method-name">__call</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$method_name</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$args</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$method</span>)
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-consts">Constants</a>
+							
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$file" id="$file"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>
+			<span class="var-name">$file</span>
+						(line <span class="line-number">28</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$filebase" id="$filebase"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html">sfFilebasePlugin</a></span>
+			<span class="var-name">$filebase</span>
+						(line <span class="line-number">22</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																			<a href="#sec-consts">Constants</a>
+							
+										<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">55</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructs a new file object</p>
+	
+	<div class="method-signature">
+		<span class="method-result">sfFilebasePluginFileObject</span>
+		<span class="method-name">
+			__construct
+		</span>
+					(<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>&nbsp;<span class="var-name">$file_name</span>, <span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html">sfFilebasePlugin</a></span>&nbsp;<span class="var-name">$filebase</span>, [<span class="var-type">$open_mode</span>&nbsp;<span class="var-name">$open_mode</span> = <span class="var-default">'r'</span>], [<span class="var-type">$use_include_path</span>&nbsp;<span class="var-name">$use_include_path</span> = <span class="var-default">false</span>], [<span class="var-type">$context</span>&nbsp;<span class="var-name">$context</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>
+				<span class="var-name">$file_name</span><span class="var-description">: The name of the stream to open</span>			</li>
+					<li>
+				<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html">sfFilebasePlugin</a></span>
+				<span class="var-name">$filebase</span>			</li>
+					<li>
+				<span class="var-type">$open_mode</span>
+				<span class="var-name">$open_mode</span><span class="var-description">: The file open mode</span>			</li>
+					<li>
+				<span class="var-type">$use_include_path</span>
+				<span class="var-name">$use_include_path</span><span class="var-description">: Whether to search in include paths</span>			</li>
+					<li>
+				<span class="var-type">$context</span>
+				<span class="var-name">$context</span><span class="var-description">: A stream context</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt>SplFileObject::constructor __construct ( $file_name, [$open_mode = ], [$use_include_path = ], [$context = ] )</dt>
+					</dl>
+			
+	</div>
+<a name="methodfileGetContents" id="fileGetContents"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">fileGetContents</span> (line <span class="line-number">150</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Wraps native function file_get_contents()</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The function returns the read data or false on failure.</li>
+				<li><span class="field">throws:</span> sfFilebasePluginException  &lt;/p&gt;</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			fileGetContents
+		</span>
+					([<span class="var-type">flags</span>&nbsp;<span class="var-name">$flags</span> = <span class="var-default">null</span>], [<span class="var-type">context</span>&nbsp;<span class="var-name">$context</span> = <span class="var-default">null</span>], [<span class="var-type">offset</span>&nbsp;<span class="var-name">$offset</span> = <span class="var-default">null</span>], [<span class="var-type">maxlen</span>&nbsp;<span class="var-name">$maxlen</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">flags</span>
+				<span class="var-name">$flags</span><span class="var-description">: int[optional] &lt;p&gt;  For all versions prior to PHP 6, this parameter is called  use_include_path and is a bool.  The flags parameter is only available since  PHP 6. If you use an older version and want to search for  filename in the  include path, this  parameter must be true. Since PHP 6, you have to use the  FILE_USE_INCLUDE_PATH flag instead.  &lt;/p&gt;  &lt;p&gt;
+ The value of flags can be any combination of  the following flags (with some restrictions), joined with the binary OR  (|) operator.  &lt;/p&gt;  &lt;p&gt;
+ &lt;table&gt;  Available flags  &lt;tr valign=&quot;top&quot;&gt;  &lt;td&gt;Flag&lt;/td&gt;  &lt;td&gt;Description&lt;/td&gt;  &lt;/tr&gt;  &lt;tr valign=&quot;top&quot;&gt;  &lt;td&gt;  FILE_USE_INCLUDE_PATH  &lt;/td&gt;  &lt;td&gt;  Search for filename in the include directory.  See include_path for more  information.  &lt;/td&gt;  &lt;/tr&gt;  &lt;tr valign=&quot;top&quot;&gt;  &lt;td&gt;  FILE_TEXT  &lt;/td&gt;  &lt;td&gt;  If unicode semantics are enabled, the default encoding of the read  data is UTF-8. You can specify a different encoding by creating a  custom context or by changing the default using  stream_default_encoding. This flag cannot be  used with FILE_BINARY.  &lt;/td&gt;  &lt;/tr&gt;  &lt;tr valign=&quot;top&quot;&gt;  &lt;td&gt;  FILE_BINARY  &lt;/td&gt;  &lt;td&gt;  With this flag, the file is read in binary mode. This is the default  setting and cannot be used with FILE_TEXT.  &lt;/td&gt;  &lt;/tr&gt;  &lt;/table&gt;  &lt;/p&gt;</span>			</li>
+					<li>
+				<span class="var-type">context</span>
+				<span class="var-name">$context</span><span class="var-description">: resource[optional] &lt;p&gt;  A valid context resource created with  stream_context_create. If you don't need to use a  custom context, you can skip this parameter by &amp;null;.  &lt;/p&gt;</span>			</li>
+					<li>
+				<span class="var-type">offset</span>
+				<span class="var-name">$offset</span><span class="var-description">: int[optional] &lt;p&gt;  The offset where the reading starts.  &lt;/p&gt;</span>			</li>
+					<li>
+				<span class="var-type">maxlen</span>
+				<span class="var-name">$maxlen</span><span class="var-description">: int[optional] &lt;p&gt;  Maximum length of data read.  &lt;/p&gt;</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetFilebaseFile" id="getFilebaseFile"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getFilebaseFile</span> (line <span class="line-number">72</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the underlying sfFilebasePluginInfo  instance.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>
+		<span class="method-name">
+			getFilebaseFile
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodwrite" id="write"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">write</span> (line <span class="line-number">184</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Writes $length bytes of $str.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			write
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$length</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$length</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodwriteLn" id="writeLn"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">writeLn</span> (line <span class="line-number">199</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Writes a portion of string ending  by a new line delimiter with maxlength =  $length bytes.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			writeLn
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$nl_delim</span> = <span class="var-default">&quot;\n&quot;</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$length</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$nl_delim</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$length</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__call" id="__call"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">__call</span> (line <span class="line-number">37</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Delegates method calls to the underlying  sfFilebasePluginFile-Instance.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__call
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$method_name</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$args</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$method</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$method</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$args</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$method_name</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname">SplFileObject (Internal Class)</span></p>
+					<blockquote>
+													<span class="method-name">constructor __construct ( $file_name, [$open_mode = ], [$use_include_path = ], [$context = ] )</span><br>
+													<span class="method-name">current (  )</span><br>
+													<span class="method-name">eof (  )</span><br>
+													<span class="method-name">fflush (  )</span><br>
+													<span class="method-name">fgetc (  )</span><br>
+													<span class="method-name">fgetcsv ( [$delimiter = ], [$enclosure = ] )</span><br>
+													<span class="method-name">fgets (  )</span><br>
+													<span class="method-name">fgetss ( [$allowable_tags = ] )</span><br>
+													<span class="method-name">flock ( $operation, [&$wouldblock = ] )</span><br>
+													<span class="method-name">fpassthru (  )</span><br>
+													<span class="method-name">fscanf ( $format )</span><br>
+													<span class="method-name">fseek ( $pos, [$whence = ] )</span><br>
+													<span class="method-name">fstat (  )</span><br>
+													<span class="method-name">ftell (  )</span><br>
+													<span class="method-name">ftruncate ( $size )</span><br>
+													<span class="method-name">fwrite ( $str, [$length = ] )</span><br>
+													<span class="method-name">getATime (  )</span><br>
+													<span class="method-name">getBasename ( [$suffix = ] )</span><br>
+													<span class="method-name">getChildren (  )</span><br>
+													<span class="method-name">getCsvControl (  )</span><br>
+													<span class="method-name">getCTime (  )</span><br>
+													<span class="method-name">getCurrentLine (  )</span><br>
+													<span class="method-name">getFileInfo ( [$class_name = ] )</span><br>
+													<span class="method-name">getFilename (  )</span><br>
+													<span class="method-name">getFlags (  )</span><br>
+													<span class="method-name">getGroup (  )</span><br>
+													<span class="method-name">getInode (  )</span><br>
+													<span class="method-name">getLinkTarget (  )</span><br>
+													<span class="method-name">getMaxLineLen (  )</span><br>
+													<span class="method-name">getMTime (  )</span><br>
+													<span class="method-name">getOwner (  )</span><br>
+													<span class="method-name">getPath (  )</span><br>
+													<span class="method-name">getPathInfo ( [$class_name = ] )</span><br>
+													<span class="method-name">getPathname (  )</span><br>
+													<span class="method-name">getPerms (  )</span><br>
+													<span class="method-name">getRealPath (  )</span><br>
+													<span class="method-name">getSize (  )</span><br>
+													<span class="method-name">getType (  )</span><br>
+													<span class="method-name">hasChildren (  )</span><br>
+													<span class="method-name">isDir (  )</span><br>
+													<span class="method-name">isExecutable (  )</span><br>
+													<span class="method-name">isFile (  )</span><br>
+													<span class="method-name">isLink (  )</span><br>
+													<span class="method-name">isReadable (  )</span><br>
+													<span class="method-name">isWritable (  )</span><br>
+													<span class="method-name">key (  )</span><br>
+													<span class="method-name">next (  )</span><br>
+													<span class="method-name">openFile ( [$open_mode = ], [$use_include_path = ], [$context = ] )</span><br>
+													<span class="method-name">rewind (  )</span><br>
+													<span class="method-name">seek ( $line_pos )</span><br>
+													<span class="method-name">setCsvControl ( [$delimiter = ], [$enclosure = ] )</span><br>
+													<span class="method-name">setFileClass ( [$class_name = ] )</span><br>
+													<span class="method-name">setFlags ( $flags )</span><br>
+													<span class="method-name">setInfoClass ( [$class_name = ] )</span><br>
+													<span class="method-name">setMaxLineLen ( $max_len )</span><br>
+													<span class="method-name">valid (  )</span><br>
+													<span class="method-name">__toString (  )</span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	<a name="sec-consts"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+										<h4>Inherited Constants</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname">SplFileObject (Internal Class)</span></p>
+					<blockquote>
+													<img src="../media/images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name">DROP_NEW_LINE = 1</span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name">READ_AHEAD = 2</span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name">READ_CSV = 8</span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name">SKIP_EMPTY = 6</span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 10 May 2009 16:41:58 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+	</p>
+	</div></body>
+</html>
