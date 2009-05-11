@@ -84,6 +84,15 @@ provides general worker methods.
 Examples
 --------
 
+There is a sample project under version control:
+[http://svn.symfony-project.com/plugins/sfFilebasePlugin/apps/](http://svn.symfony-project.com/plugins/sfFilebasePlugin/apps/)
+Simple create a new symfony project, copy the apps-folder, thats it (i think).
+You'll see some forms, can upload files, create directories and see some image
+transformations in action. Perhaps it can be useful.
+
+Short code samples
+------------------
+
 Create a new sfFilebasePlugin:
 
     $filebase = new sfFilebasePlugin('/var/www/my_filebase_dir');
