@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/18152/plugins/sfFilebasePlugin/apps/frontend/config
+END
+factories.yml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/18152/plugins/sfFilebasePlugin/apps/frontend/config/factories.yml
+END
+app.yml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/18152/plugins/sfFilebasePlugin/apps/frontend/config/app.yml
+END
+settings.yml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/18152/plugins/sfFilebasePlugin/apps/frontend/config/settings.yml
+END
+frontendConfiguration.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/18152/plugins/sfFilebasePlugin/apps/frontend/config/frontendConfiguration.class.php
+END
+cache.yml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/18152/plugins/sfFilebasePlugin/apps/frontend/config/cache.yml
+END
+routing.yml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/18152/plugins/sfFilebasePlugin/apps/frontend/config/routing.yml
+END
+security.yml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/18152/plugins/sfFilebasePlugin/apps/frontend/config/security.yml
+END
+filters.yml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/18152/plugins/sfFilebasePlugin/apps/frontend/config/filters.yml
+END
+view.yml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/18152/plugins/sfFilebasePlugin/apps/frontend/config/view.yml
+END

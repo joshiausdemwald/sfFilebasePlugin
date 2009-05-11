@@ -13,7 +13,7 @@
   <date>2009-05-11</date>
   <time>23:59:59</time>
   <version>
-    <release>0.0.8</release>
+    <release>0.0.9</release>
     <api>0.0.8</api>
   </version>
   <stability>
@@ -71,6 +71,21 @@
   <phprelease>
   </phprelease>
   <changelog>
+    <release>
+      <version>
+        <release>0.0.9</release>
+        <api>0.0.8</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-05-11</date>
+      <notes>
+      * Added link to sample project to README
+      </notes>
+    </release>
     <release>
       <version>
         <release>0.0.8</release>
