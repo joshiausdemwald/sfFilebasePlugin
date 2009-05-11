@@ -67,17 +67,7 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
     $this->gfxEditor           = new sfFilebasePluginGfxEditor($this);
   }
 
-  /**
-   * Checks if a file exists in file system.
-   *
-   * @param boolean true if $filename exists filebase
-   */
-  public function getFileExists($filename)
-  {
-    return file_exists($this->getFilebaseFile($filename));
-  }
-
-  /**
+    /**
    * Checks if CacheDirectory exists, if
    * not, then create it.
    *
@@ -282,7 +272,7 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
   public function mkDir($path, $perms = 0755)
   {
     // Wrap around, because isDir() returs false on non-existing files.
-    $path = new sfFilebasePluginDirectory($this->getFilebaseFile($path), $this);
+    $path = new sfFilebasePluginDirectory(self::getFilebaseFile($path), $this);
     $dest = new sfFilebasePluginDirectory($path->getPath(), $this);
     if(!$dest->fileExists()) throw new sfFilebasePluginException(sprintf('Destination directory %s does not exist.', $dest->getPathname()));
     if(!$dest->isDir()) throw new sfFilebasePluginException (sprintf('Destination %s is not a directory.',$dest->getPathname()));

@@ -19,7 +19,7 @@ class sfFilebasePluginRecursiveIteratorIterator extends RecursiveIteratorIterato
 {
   private $tokenBegin;
   private $tokenEnd;
-  public function __construct(sfFilebasePluginRecursiveDirectoryIterator $iterator, $mode=sfFilebasePluginRecursiveIteratorIterator::SELF_FIRST, $flags=0, $tokenBegin = "", $tokenEnd = "")
+  public function __construct(RecursiveIterator $iterator, $tokenBegin = "", $tokenEnd = "", $mode=sfFilebasePluginRecursiveIteratorIterator::SELF_FIRST, $flags=0)
   {
     $this->tokenBegin = $tokenBegin;
     $this->tokenEnd = $tokenEnd;

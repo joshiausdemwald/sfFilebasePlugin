@@ -10,11 +10,11 @@
     <email>johannes.heinen@gmail.com</email>
     <active>yes</active>
   </lead>
-  <date>2009-05-10</date>
+  <date>2009-05-11</date>
   <time>23:59:59</time>
   <version>
-    <release>0.0.7</release>
-    <api>0.0.7</api>
+    <release>0.0.8</release>
+    <api>0.0.8</api>
   </version>
   <stability>
     <release>stable</release>
@@ -71,6 +71,26 @@
   <phprelease>
   </phprelease>
   <changelog>
+    <release>
+      <version>
+        <release>0.0.8</release>
+        <api>0.0.6</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-05-11</date>
+      <notes>
+      * Minor improvements
+      * add getFileExists to sfFilebasePlugin, modified sfFilebasePluginFile::fileExists()
+        as a proxy
+      * add isLink()
+      * add unsupported Exception when Link is requested by sfFilebasePlugin::getFilebaseFile()
+      * Double slashes removed in sfFilebasePlugin::getFilebaseFile()
+      </notes>
+    </release>
      <release>
       <version>
         <release>0.0.7</release>

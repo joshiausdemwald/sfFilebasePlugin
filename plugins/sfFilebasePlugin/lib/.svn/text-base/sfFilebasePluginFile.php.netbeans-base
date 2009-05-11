@@ -70,45 +70,7 @@ class sfFilebasePluginFile extends SplFileInfo
    */
   public function fileExists()
   {
-    return $this->filebase->getFileExists($this);
-  }
-
-  /**
-   * Returns true if a file is hidden or null
-   * if that cannot be determined (e.g. unter
-   * windows).
-   *
-   * @todo check functionlity under windows ntfs
-   * @return boolean $is_hidden: true if file is hidden
-   */
-  public function isHidden()
-  {
-    if(!$this->fileExists()) throw new sfFilebasePluginException(sprintf('File %s does not exist.', $this->getPathname()));
-    if(!$this->isReadable()) throw new sfFilebasePluginException(sprintf('File %s is not readable.', $this->getPathname()));
-
-    $is_hidden = false;
-
-    // *nix: Simply check the dot.
-    if(strlen($this->getFilename()) > 1 && strpos($this->getFilename(), '.') === 0)
-    {
-      $is_hidden = true;
-    }
-
-    // Windoof...this is taken from php.net
-    $attr = trim(@exec('FOR %A IN ("'.$this->getPathname().'") DO @ECHO %~aA'));
-    if(isset($attr[3]))
-    {
-      $attr[3] === 'h' && $is_hidden = true;
-    }
-    return $is_hidden;
-  }
-
-  /**
-   * Returns true if file is a link
-   */
-  public function isLink()
-  {
-    return is_link($this->getPathname());
+    return file_exists($this->getPathname());
   }
   
   /**
@@ -310,38 +272,8 @@ class sfFilebasePluginFile extends SplFileInfo
   }
 
   /**
-   * Returns a new (child of) sfFilebasePluginFile. It returns an instance,
-   * not regarding if the file exists or not. So you can fetch an instance
-   * and create the underlying file by sfFilebasePlugin-methods.
-   *
-   * This method checks if file is a directory, an image
-   * a link ... but beware, some attributes can only
-   * be calculated if the file really exists in file system.
-   *
-   * For example, if you want to retrieve a directory that does
-   * not exists, an instance of sfFilebasePluginFile is recieved.
-   *
-   * This behavior is simple and logically correct, but you have to keep it in
-   * mind: sfFilebasePlugin cannot forecast what files you want to create. It
-   * is probably more confusing for windows users where files are mostly
-   * identified by its extension.
-   *
-   * If the dir exists, you'll get a sfFilebasePluginDirectory.
-   *
-   * @example $filebase->getFilebaseFile('path/to/directory') retrieves a dir
-   *          if it exists in FS, or a sfFilebaseFile if not.
-   *
-   * @example Creating a new file:
-   *          $new_file = $filebase->getFilebaseFile('path/to/new/file.txt');
-   *          $filebase->touch($new_file);
-   *          In Short: $filebase->touch('path/to/new/file.txt');
-   *
-   * @example Short way retrieving files:
-   *          foreach ($filebase AS $file) ...
-   *          with ArrayAccess:
-   *          $file = $filebase['/path/to/file'];
-   *
-   * @todo Implement (sym)link handling.
+   * Returns a new sfFilebasePluginFile
+   * 
    * @param string | sfFilebasePluginFile  $filename
    * @return sfFilebasePluginFile
    */
@@ -349,7 +281,6 @@ class sfFilebasePluginFile extends SplFileInfo
   {
     if(is_string($filename))
     {
-      $filename = sfFilebasePluginUtil::unifySlashes($filename);
       if(strlen($filename)>0)
       {
         if(sfFilebasePluginUtil::isAbsolutePathname($filename))
@@ -369,13 +300,7 @@ class sfFilebasePluginFile extends SplFileInfo
     if($filename instanceof sfFilebasePluginFile)
     {
       // returns only true if file exists, so beware of that
-      if($filename->isLink())
-      {
-        throw new sfFilebasePluginException(sprintf('Error retrieving link %s: Link handling is not yet implemented', $filename->getPathname()));
-        //return new sfFilebasePluginLink($filename->getPathname());
-      }
-      // returns only true if file exists, so beware of that
-      elseif($filename->isDir())
+      if($filename->isDir())
       {
         $filename = new sfFilebasePluginDirectory($filename->getPathname(), $this->filebase);
       }

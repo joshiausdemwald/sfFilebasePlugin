@@ -50,6 +50,7 @@ class sfFilebasePluginRecursiveDirectoryIterator extends RecursiveDirectoryItera
     {
       if (parent::isDot() || (parent::isDir() && strpos(parent::getFilename(), '.') === 0))
       {
+        //echo parent::current() . parent::isDir() . strpos(parent::getFilename(),'.') . "<br/>";
         parent::next(); // zum nächsten eintrag hüpfen
         return $this->valid(); // nochmal prüfen
       }
