@@ -1,0 +1,115 @@
+# sfLanguageSwitch plugin #
+
+The *sfLanguageSwitchPlugin* is a symfony plugin that provides a simple 
+language switch generator. The available languages depends on the settings
+from app.yml. You have to call a simple component only and you will get a 
+list of flags to switch the interface language.
+
+# Installation 1.0 #
+
+*   Install the plugin
+
+        php symfony plugin-install http://plugins.symfony-project.com/sfLanguageSwitchPlugin
+
+*   Enable the module in your *settings.yml*
+
+        all:
+          .settings:
+            enabled_modules: [sfLanguageSwitch]
+
+*   Clear you cache
+
+        php symfony cc
+
+*   Add the available languages and settings to *app.yml*
+
+        all:
+          sfLanguageSwitch:
+            flagPath:  /sfLanguageSwitch/images/flag   # optional if you wanna change the path
+            availableLanguages:
+              de:
+                title: Deutsch
+              en:
+                title: English
+                image: /sfLanguageSwitch/images/flag/us.png   # optional if you wanna change the flag
+
+*   Change your routing on *routing.yml*
+
+        homepage:
+          url:   /
+          param: { sf_culture: de, module: home, action: index }
+
+        default_index:
+          url:   /:sf_culture/:module
+          requirements: { sf_culture: (?:en|de) }
+          param: { action: index }
+
+        default:
+          url:   /:sf_culture/:module/:action/*
+          requirements: { sf_culture: (?:en|de) }
+
+# Installation 1.1 & 1.2 #
+
+*   Install the plugin
+
+        php symfony plugin:install sfLanguageSwitchPlugin
+
+*   Enable the module in your *settings.yml*
+
+        all:
+          .settings:
+            enabled_modules: [sfLanguageSwitch]
+
+*   Clear you cache
+
+        php symfony cc
+
+*   Add the available languages and settings to *app.yml*
+
+        all:
+          sfLanguageSwitch:
+            flagPath:  /sfLanguageSwitch/images/flag   # optional if you wanna change the path
+            availableLanguages:
+              de:
+                title: Deutsch
+              en:
+                title: English
+                image: /sfLanguageSwitch/images/flag/us.png   # optional if you wanna change the flag
+
+*   Change your routing on *routing.yml*
+
+        homepage:
+          url:   /
+          param: { sf_culture: de, module: home, action: index }
+
+        default_index:
+          url:   /:sf_culture/:module
+          requirements: { sf_culture: (?:en|de) }
+          param: { action: index }
+
+        default:
+          url:   /:sf_culture/:module/:action/*
+          requirements: { sf_culture: (?:en|de) }
+
+# Use component #
+
+If you have done the installation steps above you only got to call the component within 
+you layout or module template like this:
+
+    <?php include_component('sfLanguageSwitch', 'get') ?>
+
+# Customize template #
+
+By default, *sfLanguageSwitch* module comes with 1 very simple template:
+
+*   _get.php
+
+If you want to customize this template:
+
+*   Create a *sfLanguageSwitch* module in your application (don't use the
+    *init-module* task, just create a *sfLanguageSwitch* directory)
+ 
+*   Create a template with the name of the template you want to customize in
+    the *sfLanguageSwitch/templates* directory
+
+*   symfony now renders your template instead of the default one
