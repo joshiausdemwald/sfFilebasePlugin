@@ -486,6 +486,7 @@ class sfFilebasePluginUtil
    */
   public static function unifySlashes($path)
   {
+    $path = preg_replace('#[\\\/]+#','/', $path);
     return rtrim(str_replace('\\','/',$path),'/');
   }
 

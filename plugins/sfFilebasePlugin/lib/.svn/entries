@@ -33,18 +33,17 @@ svn:special svn:externals svn:needs-lock
 
 0
 
-sfFilebasePluginRecursiveIteratorIterator.php
+sfFilebasePluginGfxEditor.php
 file
 
 
 
 
 2009-05-10T14:29:59.000000Z
-3ad46d62bf9f6c2bad9a3d6acdfbf31b
+1f97361c9b600652494955a73915b45d
 2009-05-10T14:31:02.996692Z
 18108
 joshiausdemwald
-has-props
 
 
 
@@ -65,7 +64,8 @@ has-props
 
 
 
-1069
+
+10955
 
 sfFilebasePluginFileExif.php
 file
@@ -101,17 +101,18 @@ joshiausdemwald
 
 1000
 
-sfFilebasePluginGfxEditor.php
+sfFilebasePluginRecursiveIteratorIterator.php
 file
+18151
 
 
 
-
-2009-05-10T14:29:59.000000Z
-1f97361c9b600652494955a73915b45d
-2009-05-10T14:31:02.996692Z
-18108
+2009-05-11T18:02:41.000000Z
+d165406fcab5780ed132b4522dd7a02c
+2009-05-11T20:37:16.388919Z
+18151
 joshiausdemwald
+has-props
 
 
 
@@ -132,8 +133,7 @@ joshiausdemwald
 
 
 
-
-10955
+1094
 
 sfFilebasePluginUploadedFile.php
 file
@@ -209,7 +209,7 @@ file
 
 
 
-2009-05-10T14:29:59.000000Z
+2009-05-11T17:59:45.000000Z
 8d642dcf42c25d0e5189e429f0e617c9
 2009-05-10T14:31:02.996692Z
 18108
@@ -236,6 +236,40 @@ has-props
 
 
 5968
+
+sfFilebasePluginRecursiveDirectoryIterator.php
+file
+18151
+
+
+
+2009-05-11T18:00:41.000000Z
+2b1ae725aada098baf0a24f46978fb5b
+2009-05-11T20:37:16.388919Z
+18151
+joshiausdemwald
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2357
 
 sfFilebasePluginFileObject.php
 file
@@ -270,40 +304,6 @@ joshiausdemwald
 
 
 5798
-
-sfFilebasePluginRecursiveDirectoryIterator.php
-file
-
-
-
-
-2009-05-10T14:29:59.000000Z
-2eccb4b14d716db36e66acf7ce14bdba
-2009-05-10T14:31:02.996692Z
-18108
-joshiausdemwald
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2455
 
 sfFilebasePluginGfxEditorAdapterGD.php
 file
@@ -373,6 +373,40 @@ joshiausdemwald
 
 9866
 
+sfFilebasePluginUtil.php
+file
+18151
+
+
+
+2009-05-11T19:50:28.000000Z
+f66f57ee76c513e7bdf0a3ee7b50cba0
+2009-05-11T20:37:16.388919Z
+18151
+joshiausdemwald
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+21627
+
 sfFilebasePluginGfxEditorAdapterInterface.php
 file
 
@@ -407,84 +441,16 @@ joshiausdemwald
 
 1842
 
-sfFilebasePluginUtil.php
-file
-
-
-
-
-2009-05-10T14:29:59.000000Z
-4e717d83f7285b0844a86f9e8fc227ad
-2009-05-10T14:31:02.996692Z
-18108
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-21577
-
-sfFilebasePlugin.php
-file
-
-
-
-
-2009-05-10T14:29:59.000000Z
-d323c64fc8afb24550a4e8f689701544
-2009-05-10T14:31:02.996692Z
-18108
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-20522
-
 sfFilebasePluginFile.php
 file
+18151
 
 
 
-
-2009-05-10T14:29:59.000000Z
-86b58ab1f33d474f34c24628798b8b4c
-2009-05-10T14:31:02.996692Z
-18108
+2009-05-11T20:15:10.000000Z
+4cb600801deac922e322a5c09714e170
+2009-05-11T20:37:16.388919Z
+18151
 joshiausdemwald
 has-props
 
@@ -507,7 +473,41 @@ has-props
 
 
 
-8855
+11717
+
+sfFilebasePlugin.php
+file
+18151
+
+
+
+2009-05-11T20:14:46.000000Z
+98ab4c06ceac050812f698be2fbd1af3
+2009-05-11T20:37:16.388919Z
+18151
+joshiausdemwald
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+20748
 
 sfFilebasePluginGfxEditorAdapterIMagick.php
 file
