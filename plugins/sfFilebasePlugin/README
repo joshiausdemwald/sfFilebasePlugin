@@ -1,30 +1,39 @@
 sfFilebasePlugin
 ================
 
-sfFilebasePlugin provides an unified API for filesystem-related operations with focus on web-based applications.
+sfFilebasePlugin provides an unified API for filesystem related operations with
+focus on web based applications.
 
-It consists off a set of classes based on build-in SPL-file-classes (SplFileInfo/-Object, DirectoryIterator ...)
-written by Marcus Boerger.
-Documentation for these classes may be found in the [http://www.php.net/~helly/php/ext/spl/ API-docs].
-It tries to fix the lack of the build-in SPL-Classes by dissociating different types of files. So there are
-classes like sfFilebasePluginDirectory, sfFilebasePluginImage, sfFilebasePluginObject, sfFilebasePluginThumbnail... planning sfFilebasePluginZIP or
-something like that.
+It consists of a set of classes based on built in SPL classes (SplFileInfo/
+-Object, DirectoryIterator ...) written by Marcus Boerger.
 
-sfFilebasePlugin can help you if you want to
+Documentation for these classes may be found in the
+[API-docs](http://www.php.net/~helly/php/ext/spl/).
+
+It extends the built in SPL-Classes by dissociating more and different files or
+types. Resulting in a collection of classes like "sfFilebasePluginDirectory",
+"sfFilebasePluginImage", "sfFilebasePluginThumbnail" ... planning
+sfFilebasePluginZIP or something like that. Additionally, the plugin provides an
+extension of SplFileObject named "sfFilebasePluginFileObject".
+
+SfFilebasePlugin can help you if you want to
 
 *  upload files,
 
-*  retrieve files from filesystem,
+*  search and retrieve files from filesystem,
 
 *  read/write/execute files,
 
-*  do core fs-operations like chmod, mkdir, touch [...],
+*  do architecture dependent filesystem operations like chmod, mkdir, touch.
 
-*  render appropriate file-name conversions (/var/www/files/images/image.jpg to
-   /files/images/image.jpg); imagine you have a temp dir to store uploaed preview
-   images and want to display them to the client in a one-line-code segment.
+*  easily convert path names from absolute to relative, web root based or filebase
+   root based. Each file related plugin method has an overloaded signature, so
+   that it does not matter whether you pass an absolute, relative pathname or an
+   instance of sfFilebasePluginFile or one of its children.
+
 *  manipulate images, generating thumbnails (please help to implement much more
-   image-manipulation capabilities) including cached file management
+   image-manipulation capabilities). Included is a hidden cache layer which
+   automatically stores generated binary data.
 
 Installation
 ------------
@@ -56,14 +65,21 @@ You're done.
 have to uncomment the related line in your `php.ini` and restart your web
 server to enable PHP image handling functions.
 
-*Note*: To use !ImageMagick, you'll need to download and install the
-binaries from [http://www.imagemagick.org](http://www.imagemagick.org).
+*Note*: To use !ImageMagick, you'll need to install the pecl
+[imagick extension](http://php.net/imagick). On debian/ubuntu, do something
+like
+
+    sudo apt-get install php5-imagick
+
+On Windows, you'll probably have to activate the extension in your php.ini.
 
 Contents
 --------
 
-The plugin contains a set of classes, that are all instanciated by a file controller called sfFilebasePlugin. Please look at the phpdocs to see how it works.
-There is a static utility class named sfFilebasePluginUtil that provides general worker methods.
+The plugin contains a set of classes, that are all instanciated by a file
+controller called sfFilebasePlugin. Please take a look at the phpdocs to see how
+it works. There is a static utility class named sfFilebasePluginUtil that
+provides general worker methods.
 
 Examples
 --------
@@ -76,7 +92,9 @@ Create a new sfFilebasePlugin in sf_project/web/uploads:
 
     $filebase = new sfFilebasePlugin()
 
-The sfFilebasePlugin "root"-directory must be writable by php. In standard-php configurations with mod_php you usually have to chmod(777) it or change the ownership to wwwrun or something like that.
+The sfFilebasePlugin "root"-directory must be writable by php. In standard php
+configurations with mod_php you usually have to chmod(777) it or change the
+ownership to wwwrun or something like that.
 
 Iterate over sub-directories:
 
@@ -107,33 +125,59 @@ File-Uploads:
 
 Error-Handling
 --------------
-The above code is crap because it does not regard any error handling. sfFilebasePlugin handles errors by insanely throwing sfFilebasePluginException that can be
-catched for merly any operation. Please get me a hint if you think that there is an exception that makes no sense in the context or if you miss one in another part of the code.
+The above code is incomplete because it does not show any error handling.
+SfFilebasePlugin handles errors by insanely throwing sfFilebasePluginException
+that can be caught for merely any operation. Please give me a hint if you think
+that there is an exception that makes no sense in the context or if you miss one
+in another part of the code or this particular runtime situation.
 
 Developement
 ------------
 
-SfFilebasePlugin is in developement state. Standard methods to deal with files are meant to be stable, but there is space for lot of improvements. Code Contributions and -improvements, bug-reports as fixes very welcomed!
+SfFilebasePlugin is in developement state. Standard methods to deal with files
+are meant to be stable, but there is space for a lot of improvements. Code
+contributions and -improvements, error reportings as bugfixes are very welcomed!
 
 Roadmap
 -------
-I'd love to see some file compession support in the sfFilebasePlugin - but i think its better to work on stability.
+I'd love to see some file compression support in the sfFilebasePlugin - but i
+think at the moment it'd be better to work on improving stability and testing.
 
-There are a few concrete features that i have in mind:
+This plugin is ideal if you want to have a solid "virtual filesystem" in a new
+project and you are also willing to improve and fix it while coding as well as
+optimizing the api for usability. That's what agile devopement is meant to
+be ;););).
+
+There are a few concrete features that i have in mind for the near future:
 
 * Improving unit and functional tests
 * Bug tracking and fixing
 * Better symfony-integration
 
-  * Integration in sfForms as an alternative sfValidatorFile, or perhaps a combination or both
-  * Image processing: There are two adapters for imagick (no system calls like in sfThumbnailPlugin, but i even don't know which is the better way) and GD. This is redundant, because sfThumbnailPlugin also provides 2 adapters. Perhaps integrate it as a plugin-dependancy?
-  * More, More, More! Image processing capabilities (experimental rotation is build in, perhaps a web2.0 mirror effect or something like this)
+  * Integration in sfForms as an alternative to sfValidatorFile, or perhaps a
+    combination of both
+  * Image processing: There are two adapters, one for imagick extension (no 
+    system calls like in sfThumbnailPlugin, but i simply don't know what is the
+    better way doing it) and GD. This is redundant, because sfThumbnailPlugin 
+    also provides 2 adapters. Perhaps integrate it as a plugin-dependancy?
+  * More, More, More! Image processing capabilities (experimental rotation is
+    built in, perhaps a web2.0 mirror effect or something like this)
 
 Test
 ----
 
-I began to write some unit-tests on it, but they do not fit every aspect. So if you want to report a bug, i would appreciate if you'd pass unit or functional tests that reproduces the issue.
+I began to write some unit-tests on it, but they do not fit in every aspect. So
+if you want to report a bug, i would appreciate if you'd pass unit or functional
+tests that reproduce the issue.
 
-Ok, i hope that this plugin is useful, i'd love to hear your comments and critiques.
+Please note that sfFilebasePlugin was developed on a linux machine running
+ubuntu and php5.2.6 and symfony 1.2. It should run on similar platforms, too,
+but i did not test it.
+
+Tests should also consider other operating systems like (what was its name?
+ahhh, got it:) windows and rich man's MacOS.
+
+Ok, i hope that this plugin is useful, i'd love to receive your comments and
+critiques.
 
 Have fun ;)
