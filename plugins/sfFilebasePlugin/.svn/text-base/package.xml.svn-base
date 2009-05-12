@@ -13,8 +13,8 @@
   <date>2009-05-12</date>
   <time>23:59:59</time>
   <version>
-    <release>0.5.1</release>
-    <api>0.5.1</api>
+    <release>0.5.2</release>
+    <api>0.5.2</api>
   </version>
   <stability>
     <release>stable</release>
@@ -74,6 +74,32 @@
   <phprelease>
   </phprelease>
   <changelog>
+    <release>
+      <version>
+        <release>0.5.2</release>
+        <api>0.5.2</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-05-12</date>
+      <notes>
+      * Fixed bug in helper -.-
+      * V 0.5.1:
+        * Worked on improved symfony integration:
+
+           * Implemented factory method sfFilebasePlugin::getInstance();
+           * Implemented sfFilebasePluginWebRequest, refer to README
+             to learn about how to use this class in factories.yml
+           * You now can specify the default filebase- and cache directory
+             in your apps/yourapp/config/app.yml. Refer to the README file
+             or look at the phpdoc of sfFilebasePlugin
+           * Added helper sfFilebasePluginHelper
+                get_filebase(): retrieves your filebase in a view
+      </notes>
+    </release>
     <release>
       <version>
         <release>0.5.1</release>
