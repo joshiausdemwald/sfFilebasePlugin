@@ -1,3 +1,4 @@
+<?php use_helper('sfFilebasePlugin')?>
 <h1>Filebase Sample application</h1>
 <h2>Upload a file</h2>
 <?php if(isset($error)):?>
@@ -44,8 +45,8 @@
 </form>
 
 <h2>FBFS ;): Filebase Filesystem</h2>
-<code>uploads/<br/>
-<?php foreach ($iter = new RecursiveIteratorIterator($filebase, RecursiveIteratorIterator::SELF_FIRST) AS $file):?>
+<code><?php echo get_filebase()->getFilename()?>/<br/>
+<?php foreach ($iter = new RecursiveIteratorIterator(get_filebase(), RecursiveIteratorIterator::SELF_FIRST) AS $file):?>
 <?php if(!$file->isHidden()):?>
 <?php echo str_repeat('&nbsp;&nbsp;&nbsp;&nbsp;', $iter->getDepth()+1)?>
 <?php if($file instanceof sfFilebasePluginDirectory):?>
@@ -61,7 +62,7 @@
 <?php endforeach?>
 </code>
 <h2>Image Gallery</h2>
-<?php foreach ($iter = new RecursiveIteratorIterator($filebase, RecursiveIteratorIterator::SELF_FIRST) AS $file):?>
+<?php foreach ($iter = new RecursiveIteratorIterator(get_filebase(), RecursiveIteratorIterator::SELF_FIRST) AS $file):?>
   <?php if($file instanceof sfFilebasePluginImage):?>
     <div style="float:left; width: 130px; overflow: hidden">
       <span style="height: 30px; display: block; font-size:0.6em"><?php echo $file->getAbsolutePathFromWebroot()?>:</span>

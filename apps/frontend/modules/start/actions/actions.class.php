@@ -17,12 +17,7 @@ class startActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
-    /*sfConfig::set('cms_module_dir',sfConfig::get('sf_root_dir').'/modules');
-    $mm = ModuleManager::instance($this->getContext());
-    $mm->load(sfConfig::get('cms_module_dir'));
-    $mm->checkDependancies();*/
-
-    $this->filebase = new sfFilebasePlugin();
+    $filebase = sfFilebasePlugin::getInstance();
     $this->upload_form = new UploadForm();
     $this->create_directory_form = new CreateDirectoryForm();
 
@@ -35,16 +30,21 @@ class startActions extends sfActions
       if($upload_data !== null)
       {
         
-        $filebase = new sfFilebasePlugin();
+        $filebase = sfFilebasePlugin::getInstance();
 
-        $this->upload_form->bind($upload_data, $filebase->getUploadedFiles('upload'));
+        // This does work, if you define sfFilebasePluginWebRequest as the
+        // default request-instance in apps/myapp/config/factories.yml
+        //
+        // If you dont want to do so, use
+        // $filebase->getUploadedFiles('upload')
+        $this->upload_form->bind($upload_data, $request->getUploadedFiles('upload'));
         
         if($this->upload_form->isValid())
         {
           $files = $this->upload_form->getValue('files');
           foreach($files AS $file)
           {
-            $file = $file->moveUploadedFile($this->filebase->getFilebaseFile((string)$this->upload_form->getValue('directory')));
+            $file = $file->moveUploadedFile($filebase->getFilebaseFile((string)$this->upload_form->getValue('directory')));
             if($file instanceof sfFilebasePluginImage)
             {
               $file->rotate('20');
@@ -62,15 +62,15 @@ class startActions extends sfActions
           $directory = $this->create_directory_form->getValue('directory');
           $name      = $this->create_directory_form->getValue('name');
          
-          $dirname = $this->filebase->getPathname() . '/' . $directory . '/' . $name;
-          if($this->filebase->getFileExists($dirname))
+          $dirname = $filebase->getPathname() . '/' . $directory . '/' . $name;
+          if($filebase->getFileExists($dirname))
           {
             $this->error = "Directory already exists";
           }
           else
           {
             $this->getUser()->setFlash('message', 'Directory created.');
-            $this->filebase->mkDir($dirname, 0777);
+            $filebase->mkDir($dirname, 0777);
             $this->redirect('start/index');
 
           }
@@ -83,7 +83,7 @@ class startActions extends sfActions
   {
     $hash = $request->getParameter('f', null);
     $this->forward404If($hash === null);
-    $filebase = new sfFilebasePlugin();
+    $filebase = sfFilebasePlugin::getInstance();
     $file = $filebase->getFileByHash($hash);
     $this->forward404Unless($file instanceof sfFilebasePluginFile);
     $file->delete();

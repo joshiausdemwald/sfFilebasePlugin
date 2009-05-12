@@ -1,2 +1,6 @@
 # default values
 #all:
+
+all:
+  sf_filebase_plugin:
+    path_name: /home/joshi/www/test/web/uploads/assets

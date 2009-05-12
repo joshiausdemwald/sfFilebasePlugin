@@ -31,6 +31,9 @@ all:
       generate_shortest_url:            true
       extra_parameters_as_query_string: true
 
+  request:
+    class: sfFilebasePluginWebRequest
+
 #all:
 #  controller:
 #    class: sfFrontWebController

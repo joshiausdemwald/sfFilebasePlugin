@@ -45,6 +45,19 @@ SfFilebasePlugin can help you if you want to
    image-manipulation capabilities). Included is a hidden cache layer which
    automatically stores generated binary data.
 
+Recent chances
+--------------
+
+*  Addes sfFilebasePluginValidatorFile. See sfValidatorFile, it uses nearly the
+   same API. The difference is,  that you'll have to use
+   sfFilebasePlugin::getUploadedFiles() instead of
+   sfWebRequest::getUploadedFileswhen you pass Files to sfForm:
+
+        sfForm::bind($my_params, $my_filebase->getUploadedFiles())
+
+   With sfFilebasePluginValidatorFile, you can easily move the uploaded files,
+   create thumbnail out of recently uploaded images and so on...
+
 Installation
 ------------
 

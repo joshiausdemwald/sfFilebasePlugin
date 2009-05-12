@@ -1,14 +1,14 @@
 9
 
 dir
-18153
+18191
 http://svn.symfony-project.com/plugins/sfFilebasePlugin
 http://svn.symfony-project.com
 
 
 
-2009-05-11T21:02:54.332587Z
-18153
+2009-05-12T19:54:57.151612Z
+18191
 joshiausdemwald
 
 
@@ -25,30 +25,6 @@ svn:special svn:externals svn:needs-lock
 
 
 ee427ae8-e902-0410-961c-c3ed070cd9f9
-
-test
-dir
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
 
 LICENSE
 file
@@ -84,33 +60,9 @@ joshiausdemwald
 
 1063
 
-apps
-dir
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
-
 makedoc
 file
-18172
+
 
 
 
@@ -144,16 +96,7 @@ has-props
 
 sfFilebasePlugin-0.5.0.tgz
 file
-18179
-
-
-
-2009-05-12T15:17:00.000000Z
-664eb777e399374d9310b0351014f245
-2009-05-12T15:21:04.449136Z
-18179
-joshiausdemwald
-has-props
+18192
 
 
 
@@ -173,8 +116,7 @@ has-props
 
 
 
-
-31713
+deleted
 
 doc
 dir
@@ -187,14 +129,14 @@ dir
 
 package.xml
 file
-18172
 
 
 
-2009-05-12T14:44:15.000000Z
-afc7a24dc73f60e77654cb048c857fa3
-2009-05-12T14:49:10.687647Z
-18172
+
+2009-05-12T19:51:19.000000Z
+95a9af96ca8bf4c58a6a80baef2021a2
+2009-05-12T19:54:57.151612Z
+18191
 joshiausdemwald
 
 
@@ -217,18 +159,18 @@ joshiausdemwald
 
 
 
-7467
+8358
 
 README
 file
-18172
+18193
 
 
 
-2009-05-12T14:48:17.000000Z
-27f9de594b71f74872515fa88738869c
-2009-05-12T14:49:10.687647Z
-18172
+2009-05-12T20:00:47.000000Z
+c27242b64e325e15800afd79db9fd1a0
+2009-05-12T20:01:16.732074Z
+18193
 joshiausdemwald
 
 
@@ -251,5 +193,5 @@ joshiausdemwald
 
 
 
-8031
+9075
 

@@ -23,7 +23,7 @@ class sfFilebasePluginRecursiveIteratorIterator extends RecursiveIteratorIterato
   {
     $this->tokenBegin = $tokenBegin;
     $this->tokenEnd = $tokenEnd;
-    parent::__construct($iterator, $mode, $flags); 
+    parent::__construct($iterator, $mode, $flags);
   }
   
   public function beginChildren()

@@ -34,8 +34,29 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
   protected $gfxEditor;
 
   /**
+   * Holds cached instances of filebase for retrieving
+   * them by a static factory method.
+   *
+   
+   * @see sfFilebasePlugin::getInstance()
+   * @staticvar array sfFilebasePlugin $sf_filebase_plugins
+   */
+  static protected $instances = array();
+
+  /**
    * Constructor. Parameters are filebase-"root"-directory and cache-dir for
    * e.g. temp-files and thumbnails.
+   *
+   * You can specify $path_name and $cache_directory by yourself, but you don't
+   * have to. In symfony context, the $path_name is
+   *   app.yml:
+   *     sf_filebase_plugin:
+   *       path_name: /your/path/to/filebase
+   *       cache_directory: /your/path/to/.cache
+   *
+   * or, if not defined, calculated from the predefined sfConfig-variables:
+   *   $path_name       = sfConfig::get('sf_upload_dir') => web/uploads
+   *   $cache_directory = sfConfig::get('sf_upload_dir') . '/.hash_from_clasname'
    *
    * @param   string $cache_directory:    Cache directory may explicitely be
    *                                      specified. Consider that the default
@@ -51,6 +72,15 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
    */
   function __construct($path_name = null, $cache_directory = null)
   {
+    if($path_name === null)
+    {
+      $path_name = sfConfig::get('app_sf_filebase_plugin_path_name', sfConfig::get('sf_upload_dir'));
+    }
+    if($cache_directory === null)
+    {
+      $cache_directory = sfConfig::get('app_sf_filebase_plugin_cache_directory', $path_name . '/.' . md5(get_class()));
+    }
+
     $path_name === null && $path_name = sfConfig::get('sf_upload_dir', null);
 
     parent::__construct($path_name, $this);
@@ -64,7 +94,25 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
     // Initialize cache.
     $this->initCache($cache_directory);
     $this->uploadedFilesManager = new sfFilebasePluginUploadedFilesManager($this);
-    $this->gfxEditor           = new sfFilebasePluginGfxEditor($this);
+    $this->gfxEditor            = new sfFilebasePluginGfxEditor($this);
+  }
+
+  /**
+   * Static factory for filebases, can be used to access
+   * filebase from everywhere without creating more than
+   * one instance with the same properties.
+   * 
+   * @param string $path_name
+   * @param string $cache_directory
+   */
+  public static function getInstance($path_name = null, $cache_directory = null)
+  {
+    $hashcookie = md5($path_name.$cache_directory);
+    if(!array_key_exists($hashcookie, self::$instances))
+    {
+      self::$instances[$hashcookie] = new sfFilebasePlugin($path_name, $cache_directory);
+    }
+    return self::$instances[$hashcookie];
   }
 
   /**
@@ -85,9 +133,9 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
    * @throws sfFilebasePluginException
    * @return sfFilebasePluginFile $cache_directory
    */
-  protected function initCache($cache_directory = null)
+  protected function initCache($cache_directory)
   {
-    $this->cacheDirectory = $this->getFilebaseFile('.'.md5(get_class()));
+    $this->cacheDirectory = $this->getFilebaseFile($cache_directory);
 
     if(!$this->cacheDirectory->fileExists())
     {
@@ -481,5 +529,25 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
   public function getIsImage(sfFilebasePluginFile $file)
   {
     return sfFilebasePluginUtil::getIsImage($file);
+  }
+
+  /**
+   * Returns a file that filename previously was
+   * encoded by getHash().
+   *
+   * Returns null if file does not exist.
+   *
+   * @return sfFilebasePluginFile $file
+   */
+  public function getFileByHash($hash)
+  {
+    foreach(new RecursiveIteratorIterator($this->getIterator(), RecursiveIteratorIterator::SELF_FIRST) AS $file)
+    {
+      if($file->getHash() === $hash)
+      {
+        return $file;
+      }
+    }
+    return null;
   }
 }

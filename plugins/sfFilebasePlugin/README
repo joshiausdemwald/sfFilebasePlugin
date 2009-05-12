@@ -47,7 +47,19 @@ SfFilebasePlugin can help you if you want to
 
 Recent chances
 --------------
+*V 0.5.1:*
+*  Worked on improved symfony integration:
 
+     * Implemented factory method sfFilebasePlugin::getInstance();
+     * Implemented sfFilebasePluginWebRequest, refer to README
+       to learn about how to use this class in factories.yml
+     * You now can specify the default filebase- and cache directory
+       in your apps/yourapp/config/app.yml. Refer to the README file
+       or look at the phpdoc of sfFilebasePlugin
+     * Added helper sfFilebasePluginHelper
+          get_filebase(): retrieves your filebase in a view
+
+*V 0.5.0:*
 *  Addes sfFilebasePluginValidatorFile. See sfValidatorFile, it uses nearly the
    same API. The difference is,  that you'll have to use
    sfFilebasePlugin::getUploadedFiles() instead of
@@ -118,17 +130,30 @@ transformations in action. Perhaps it can be useful.
 Short code samples
 ------------------
 
-Create a new sfFilebasePlugin:
-
-    $filebase = new sfFilebasePlugin('/var/www/my_filebase_dir');
-
 Create a new sfFilebasePlugin in sf_project/web/uploads:
 
-    $filebase = new sfFilebasePlugin()
+    sfFilebasePlugin::getInstance()
+
+Change the default location of the filebase directory:
+In /apps/my_app/config/app.yml write:
+
+    env:
+      sf_filebase_plugin:
+        path_name: /path/to/filebase
+        cache_directory: /path/to/cache
+
+Create a new sfFilebasePlugin by a custom directory:
+
+    $filebase = sfFilebasePlugin::getInstance('/var/www/my_filebase_dir');
 
 The sfFilebasePlugin "root"-directory must be writable by php. In standard php
 configurations with mod_php you usually have to chmod(777) it or change the
 ownership to wwwrun or something like that.
+
+You must consider by yourself if the filebase dir is accessible via browser
+(i lies in web-root) or not - due to security issues. It is really simple
+to passthru files by php and sync them e.g. with a database and a permission
+management by using transactions.
 
 Iterate over sub-directories:
 
