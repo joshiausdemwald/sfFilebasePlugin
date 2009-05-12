@@ -126,14 +126,41 @@ dir
 
 sfFilebasePlugin-0.5.2.tgz
 file
-18196
+18204
 
 
 
-2009-05-12T20:09:16.000000Z
-61946635e07fb453f5257b1ca7c4553d
-2009-05-12T21:36:45.978142Z
-18196
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+deleted
+
+lib
+dir
+
+sfFilebasePlugin-0.5.3.tgz
+file
+18204
+
+
+
+2009-05-12T22:48:02.000000Z
+314fddaf8404f66c62de9849b40c38ba
+2009-05-12T22:48:54.500132Z
+18204
 joshiausdemwald
 has-props
 
@@ -156,21 +183,18 @@ has-props
 
 
 
-32903
-
-lib
-dir
+33098
 
 package.xml
 file
-18195
+18204
 
 
 
-2009-05-12T20:08:50.000000Z
-b07af2e490f1662c869973a0eea6b606
-2009-05-12T20:09:01.178186Z
-18195
+2009-05-12T22:47:40.000000Z
+af0098ea403056ead36686ea13c33f49
+2009-05-12T22:48:54.500132Z
+18204
 joshiausdemwald
 
 
@@ -193,7 +217,7 @@ joshiausdemwald
 
 
 
-9300
+9849
 
 README
 file
