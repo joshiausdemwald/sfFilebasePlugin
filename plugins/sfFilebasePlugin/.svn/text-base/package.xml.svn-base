@@ -10,10 +10,10 @@
     <email>johannes.heinen@gmail.com</email>
     <active>yes</active>
   </lead>
-  <date>2009-05-11</date>
+  <date>2009-05-12</date>
   <time>23:59:59</time>
   <version>
-    <release>0.0.9</release>
+    <release>0.0.10</release>
     <api>0.0.8</api>
   </version>
   <stability>
@@ -36,18 +36,18 @@
         <file role="php" name="sfFilebasePluginFile.php" />
         <file role="php" name="sfFilebasePluginFileExif.php" />
         <file role="php" name="sfFilebasePluginFileObject.php" />
-        <file role="php" name="sfFilebasePluginImage.php" />
-        <file role="php" name="sfFilebasePluginThumbnail.php" />
-        <file role="php" name="sfFilebasePluginUploadedFile.php" />
-        <file role="php" name="sfFilebasePluginUtil.php" />
         <file role="php" name="sfFilebasePluginGfxEditor.php" />
         <file role="php" name="sfFilebasePluginGfxEditorAdapterGD.php" />
         <file role="php" name="sfFilebasePluginGfxEditorAdapterIMagick.php" />
         <file role="php" name="sfFilebasePluginGfxEditorAdapterInterface.php" />
+        <file role="php" name="sfFilebasePluginImage.php" />
         <file role="php" name="sfFilebasePluginRecursiveDirectoryIterator.php" />
         <file role="php" name="sfFilebasePluginRecursiveIteratorIterator.php" />
-        <file role="php" name="sfFilebasePluginUploadedFilesManager.php" />
         <file role="php" name="sfFilebasePluginStruct.php" />
+        <file role="php" name="sfFilebasePluginThumbnail.php" />
+        <file role="php" name="sfFilebasePluginUploadedFile.php" />
+        <file role="php" name="sfFilebasePluginUploadedFilesManager.php" />
+        <file role="php" name="sfFilebasePluginUtil.php" />
       </dir>
     </dir>
   </contents>
@@ -71,6 +71,21 @@
   <phprelease>
   </phprelease>
   <changelog>
+    <release>
+      <version>
+        <release>0.0.10</release>
+        <api>0.0.8</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-05-12</date>
+      <notes>
+      * Added link to sample project to README
+      </notes>
+    </release>
     <release>
       <version>
         <release>0.0.9</release>

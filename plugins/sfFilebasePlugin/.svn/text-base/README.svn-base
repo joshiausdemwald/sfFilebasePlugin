@@ -7,8 +7,18 @@ focus on web based applications.
 It consists of a set of classes based on built in SPL classes (SplFileInfo/
 -Object, DirectoryIterator ...) written by Marcus Boerger.
 
-Documentation for these classes may be found in the
+Documentation for these base classes may be found in the
 [API-docs](http://www.php.net/~helly/php/ext/spl/).
+
+The API Documentation for sfFilebasePlugin can be found in 
+./plugins/sfFilebasePlugin/doc. The API doc is not included in the pear-
+package, so you'll have had to browse the svn-repository
+[http://svn.symfony-project.com/plugins/sfFilebasePlugin/](http://svn.symfony-project.com/plugins/sfFilebasePlugin/)
+or my github-repository
+[http://github.com/joshiausdemwald/sfFilebasePlugin](http://github.com/joshiausdemwald/sfFilebasePlugin).
+
+The git repos also contains a sample symfony project which shows a few
+features.
 
 It extends the built in SPL-Classes by dissociating more and different files or
 types. Resulting in a collection of classes like "sfFilebasePluginDirectory",
@@ -84,9 +94,11 @@ provides general worker methods.
 Examples
 --------
 
-There is a sample project under version control:
-[http://svn.symfony-project.com/plugins/sfFilebasePlugin/apps/](http://svn.symfony-project.com/plugins/sfFilebasePlugin/apps/)
-Simple create a new symfony project, copy the apps-folder, thats it (i think).
+There is a sample project at github:
+[http://github.com/joshiausdemwald/sfFilebasePlugin](http://github.com/joshiausdemwald/sfFilebasePlugin)
+
+Simply use this project to test sfFilebasePlugin, or create a new project, copy the apps-folder, 
+thats it (i think).
 You'll see some forms, can upload files, create directories and see some image
 transformations in action. Perhaps it can be useful.
 
