@@ -26,7 +26,6 @@
 	<a class="index-letter" href="elementindex.html#g">g</a>
 	<a class="index-letter" href="elementindex.html#i">i</a>
 	<a class="index-letter" href="elementindex.html#m">m</a>
-	<a class="index-letter" href="elementindex.html#n">n</a>
 	<a class="index-letter" href="elementindex.html#o">o</a>
 	<a class="index-letter" href="elementindex.html#p">p</a>
 	<a class="index-letter" href="elementindex.html#r">r</a>
@@ -272,19 +271,6 @@
 	</div>
 	<dl>
 			<dt class="field">
-						<span class="var-title">$error</span>
-					</dt>
-		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginUploadedFile.html#var$error">sfFilebasePluginUploadedFile::$error</a> in sfFilebasePluginUploadedFile.php</div>
-					</dd>
-			<dt class="field">
-						<span class="var-title">$extensions</span>
-					</dt>
-		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginUtil.html#var$extensions">sfFilebasePluginUtil::$extensions</a> in sfFilebasePluginUtil.php</div>
-							<div class="index-item-description">Holds an associative array  with mime-type as key and file-extension  as value.</div>
-					</dd>
-			<dt class="field">
 						<span class="method-title">endChildren</span>
 					</dt>
 		<dd class="index-item-body">
@@ -327,18 +313,6 @@
 						<span class="var-title">$filebase</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginUploadedFile.html#var$filebase">sfFilebasePluginUploadedFile::$filebase</a> in sfFilebasePluginUploadedFile.php</div>
-					</dd>
-			<dt class="field">
-						<span class="var-title">$filebase</span>
-					</dt>
-		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginUploadedFilesManager.html#var$filebase">sfFilebasePluginUploadedFilesManager::$filebase</a> in sfFilebasePluginUploadedFilesManager.php</div>
-					</dd>
-			<dt class="field">
-						<span class="var-title">$filebase</span>
-					</dt>
-		<dd class="index-item-body">
 			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#var$filebase">sfFilebasePluginFile::$filebase</a> in sfFilebasePluginFile.php</div>
 							<div class="index-item-description">Reference to files' Filebase-instance</div>
 					</dd>
@@ -347,6 +321,12 @@
 					</dt>
 		<dd class="index-item-body">
 			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginFileObject.html#var$filebase">sfFilebasePluginFileObject::$filebase</a> in sfFilebasePluginFileObject.php</div>
+					</dd>
+			<dt class="field">
+						<span class="var-title">$filebase</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginUploadedFilesManager.html#var$filebase">sfFilebasePluginUploadedFilesManager::$filebase</a> in sfFilebasePluginUploadedFilesManager.php</div>
 					</dd>
 			<dt class="field">
 						<span class="var-title">$filebaseFileObject</span>
@@ -395,7 +375,8 @@
 						<span class="var-title">$gfxEditor</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html#var$gfxEditor">sfFilebasePlugin::$gfxEditor</a> in sfFilebasePlugin.php</div>
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditorAdapterGD.html#var$gfxEditor">sfFilebasePluginGfxEditorAdapterGD::$gfxEditor</a> in sfFilebasePluginGfxEditorAdapterGD.php</div>
+							<div class="index-item-description">Reference to editor.</div>
 					</dd>
 			<dt class="field">
 						<span class="var-title">$gfxEditor</span>
@@ -408,8 +389,7 @@
 						<span class="var-title">$gfxEditor</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditorAdapterGD.html#var$gfxEditor">sfFilebasePluginGfxEditorAdapterGD::$gfxEditor</a> in sfFilebasePluginGfxEditorAdapterGD.php</div>
-							<div class="index-item-description">Reference to editor.</div>
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html#var$gfxEditor">sfFilebasePlugin::$gfxEditor</a> in sfFilebasePlugin.php</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">getAbsolutePathFromWebroot</span>
@@ -518,7 +498,14 @@
 					</dt>
 		<dd class="index-item-body">
 			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodgetFilebaseFile">sfFilebasePluginFile::getFilebaseFile()</a> in sfFilebasePluginFile.php</div>
-							<div class="index-item-description">Returns a new sfFilebasePluginFile</div>
+							<div class="index-item-description">Returns a new (child of) sfFilebasePluginFile. It returns an instance,  not regarding if the file exists or not. So you can fetch an instance  and create the underlying file by sfFilebasePlugin-methods.</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">getFileExists</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html#methodgetFileExists">sfFilebasePlugin::getFileExists()</a> in sfFilebasePlugin.php</div>
+							<div class="index-item-description">Checks if a file exists in file system.</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">getHash</span>
@@ -637,13 +624,6 @@
 							<div class="index-item-description">Returns the original name of  the file.</div>
 					</dd>
 			<dt class="field">
-						<span class="method-title">getNameFromGetterSetter</span>
-					</dt>
-		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-util-stuct/sfFilebasePluginStruct.html#methodgetNameFromGetterSetter">sfFilebasePluginStruct::getNameFromGetterSetter()</a> in sfFilebasePluginStruct.php</div>
-							<div class="index-item-description">Calculates the substring of a getter/setter  method. E.g. getHanswurst() =&gt; hanswurst</div>
-					</dd>
-			<dt class="field">
 						<span class="method-title">getOriginalImage</span>
 					</dt>
 		<dd class="index-item-body">
@@ -668,13 +648,6 @@
 						<span class="method-title">getSize</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginDirectory.html#methodgetSize">sfFilebasePluginDirectory::getSize()</a> in sfFilebasePluginDirectory.php</div>
-							<div class="index-item-description">Calculates size of the directory,  cumulating every sub-file and dir.</div>
-					</dd>
-			<dt class="field">
-						<span class="method-title">getSize</span>
-					</dt>
-		<dd class="index-item-body">
 			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginUploadedFile.html#methodgetSize">sfFilebasePluginUploadedFile::getSize()</a> in sfFilebasePluginUploadedFile.php</div>
 							<div class="index-item-description">Returns the size of the uploaded file,  as provided by browser.</div>
 					</dd>
@@ -684,6 +657,13 @@
 		<dd class="index-item-body">
 			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodgetSize">sfFilebasePluginFile::getSize()</a> in sfFilebasePluginFile.php</div>
 							<div class="index-item-description">If Format is string, Size will be formatted (kb, mb ...)</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">getSize</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginDirectory.html#methodgetSize">sfFilebasePluginDirectory::getSize()</a> in sfFilebasePluginDirectory.php</div>
+							<div class="index-item-description">Calculates size of the directory,  cumulating every sub-file and dir.</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">getStore</span>
@@ -744,14 +724,14 @@
 						<span class="method-title">getUploadedFiles</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html#methodgetUploadedFiles">sfFilebasePlugin::getUploadedFiles()</a> in sfFilebasePlugin.php</div>
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginUploadedFilesManager.html#methodgetUploadedFiles">sfFilebasePluginUploadedFilesManager::getUploadedFiles()</a> in sfFilebasePluginUploadedFilesManager.php</div>
 							<div class="index-item-description">Returns the data describing  uploaded files to handle by  move uploaded files.</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">getUploadedFiles</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginUploadedFilesManager.html#methodgetUploadedFiles">sfFilebasePluginUploadedFilesManager::getUploadedFiles()</a> in sfFilebasePluginUploadedFilesManager.php</div>
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html#methodgetUploadedFiles">sfFilebasePlugin::getUploadedFiles()</a> in sfFilebasePlugin.php</div>
 							<div class="index-item-description">Returns the data describing  uploaded files to handle by  move uploaded files.</div>
 					</dd>
 			<dt class="field">
@@ -770,23 +750,17 @@
 	</div>
 	<dl>
 			<dt class="field">
-						<span class="var-title">$imageFile</span>
-					</dt>
-		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginFileExif.html#var$imageFile">sfFilebasePluginFileExif::$imageFile</a> in sfFilebasePluginFileExif.php</div>
-					</dd>
-			<dt class="field">
 						<span class="method-title">imageCopyResampled</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditor.html#methodimageCopyResampled">sfFilebasePluginGfxEditor::imageCopyResampled()</a> in sfFilebasePluginGfxEditor.php</div>
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html#methodimageCopyResampled">sfFilebasePlugin::imageCopyResampled()</a> in sfFilebasePlugin.php</div>
 							<div class="index-item-description">Resamples an image using php internal gd-functions. Used by thumbnail and resize  method.</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">imageCopyResampled</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html#methodimageCopyResampled">sfFilebasePlugin::imageCopyResampled()</a> in sfFilebasePlugin.php</div>
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditor.html#methodimageCopyResampled">sfFilebasePluginGfxEditor::imageCopyResampled()</a> in sfFilebasePluginGfxEditor.php</div>
 							<div class="index-item-description">Resamples an image using php internal gd-functions. Used by thumbnail and resize  method.</div>
 					</dd>
 			<dt class="field">
@@ -807,14 +781,14 @@
 						<span class="method-title">initialize</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditorAdapterInterface.html#methodinitialize">sfFilebasePluginGfxEditorAdapterInterface::initialize()</a> in sfFilebasePluginGfxEditorAdapterInterface.php</div>
-							<div class="index-item-description">&quot;fake&quot; Constructor</div>
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditorAdapterIMagick.html#methodinitialize">sfFilebasePluginGfxEditorAdapterIMagick::initialize()</a> in sfFilebasePluginGfxEditorAdapterIMagick.php</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">initialize</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditorAdapterIMagick.html#methodinitialize">sfFilebasePluginGfxEditorAdapterIMagick::initialize()</a> in sfFilebasePluginGfxEditorAdapterIMagick.php</div>
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditorAdapterInterface.html#methodinitialize">sfFilebasePluginGfxEditorAdapterInterface::initialize()</a> in sfFilebasePluginGfxEditorAdapterInterface.php</div>
+							<div class="index-item-description">&quot;fake&quot; Constructor</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">initialize</span>
@@ -844,6 +818,13 @@
 							<div class="index-item-description">Returns true if an upload</div>
 					</dd>
 			<dt class="field">
+						<span class="method-title">isHidden</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodisHidden">sfFilebasePluginFile::isHidden()</a> in sfFilebasePluginFile.php</div>
+							<div class="index-item-description">Returns true if a file is hidden or null  if that cannot be determined (e.g. unter  windows).</div>
+					</dd>
+			<dt class="field">
 						<span class="method-title">isImage</span>
 					</dt>
 		<dd class="index-item-body">
@@ -856,6 +837,13 @@
 		<dd class="index-item-body">
 			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html#methodisInFilebase">sfFilebasePlugin::isInFilebase()</a> in sfFilebasePlugin.php</div>
 							<div class="index-item-description">Checks if a file really belongs to this filebase.</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">isLink</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodisLink">sfFilebasePluginFile::isLink()</a> in sfFilebasePluginFile.php</div>
+							<div class="index-item-description">Returns true if file is a link</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">isRWritable</span>
@@ -938,20 +926,6 @@
 		<dd class="index-item-body">
 			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html#methodmoveUploadedFile">sfFilebasePlugin::moveUploadedFile()</a> in sfFilebasePlugin.php</div>
 							<div class="index-item-description">Moves an uploaded File to specified Destination.</div>
-					</dd>
-		</dl>
-	<a name="n"></a>
-	<div class="index-letter-section">
-		<div style="float: left" class="index-letter-title">n</div>
-		<div style="float: right"><a href="#top">top</a></div>
-		<div style="clear: both"></div>
-	</div>
-	<dl>
-			<dt class="field">
-						<span class="var-title">$name</span>
-					</dt>
-		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginUploadedFile.html#var$name">sfFilebasePluginUploadedFile::$name</a> in sfFilebasePluginUploadedFile.php</div>
 					</dd>
 		</dl>
 	<a name="o"></a>
@@ -1065,13 +1039,6 @@
 							<div class="index-item-description">Reads exif info from image files</div>
 					</dd>
 			<dt class="field">
-						<span class="method-title">recurseFilesArray</span>
-					</dt>
-		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginUploadedFilesManager.html#methodrecurseFilesArray">sfFilebasePluginUploadedFilesManager::recurseFilesArray()</a> in sfFilebasePluginUploadedFilesManager.php</div>
-							<div class="index-item-description">Recurses Uploaded Files array and populates  files return value from getUploadedFiles()</div>
-					</dd>
-			<dt class="field">
 						<span class="method-title">registerAdapter</span>
 					</dt>
 		<dd class="index-item-body">
@@ -1082,15 +1049,15 @@
 						<span class="method-title">rename</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodrename">sfFilebasePluginFile::rename()</a> in sfFilebasePluginFile.php</div>
-							<div class="index-item-description">Renames a file.</div>
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginDirectory.html#methodrename">sfFilebasePluginDirectory::rename()</a> in sfFilebasePluginDirectory.php</div>
+							<div class="index-item-description">Wraps a sfFilebasePluginDirectory around the return  value of sfFilebasePluginFile::rename() to handle  the proper instance.</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">rename</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginDirectory.html#methodrename">sfFilebasePluginDirectory::rename()</a> in sfFilebasePluginDirectory.php</div>
-							<div class="index-item-description">Wraps a sfFilebasePluginDirectory around the return  value of sfFilebasePluginFile::rename() to handle  the proper instance.</div>
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodrename">sfFilebasePluginFile::rename()</a> in sfFilebasePluginFile.php</div>
+							<div class="index-item-description">Renames a file.</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">renameFile</span>
@@ -1177,22 +1144,16 @@
 	</div>
 	<dl>
 			<dt class="field">
-						<span class="var-title">$size</span>
+						<span class="var-title">$source</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginUploadedFile.html#var$size">sfFilebasePluginUploadedFile::$size</a> in sfFilebasePluginUploadedFile.php</div>
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditorAdapterIMagick.html#var$source">sfFilebasePluginGfxEditorAdapterIMagick::$source</a> in sfFilebasePluginGfxEditorAdapterIMagick.php</div>
 					</dd>
 			<dt class="field">
 						<span class="var-title">$source</span>
 					</dt>
 		<dd class="index-item-body">
 			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditorAdapterGD.html#var$source">sfFilebasePluginGfxEditorAdapterGD::$source</a> in sfFilebasePluginGfxEditorAdapterGD.php</div>
-					</dd>
-			<dt class="field">
-						<span class="var-title">$source</span>
-					</dt>
-		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditorAdapterIMagick.html#var$source">sfFilebasePluginGfxEditorAdapterIMagick::$source</a> in sfFilebasePluginGfxEditorAdapterIMagick.php</div>
 					</dd>
 			<dt class="field">
 						<span class="var-title">$source_resource</span>
@@ -1224,15 +1185,15 @@
 						<span class="method-title">save</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditorAdapterInterface.html#methodsave">sfFilebasePluginGfxEditorAdapterInterface::save()</a> in sfFilebasePluginGfxEditorAdapterInterface.php</div>
-							<div class="index-item-description">Saves target image.</div>
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditorAdapterIMagick.html#methodsave">sfFilebasePluginGfxEditorAdapterIMagick::save()</a> in sfFilebasePluginGfxEditorAdapterIMagick.php</div>
+							<div class="index-item-description">Saves the image as destination path name to disc.</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">save</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditorAdapterIMagick.html#methodsave">sfFilebasePluginGfxEditorAdapterIMagick::save()</a> in sfFilebasePluginGfxEditorAdapterIMagick.php</div>
-							<div class="index-item-description">Saves the image as destination path name to disc.</div>
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditorAdapterInterface.html#methodsave">sfFilebasePluginGfxEditorAdapterInterface::save()</a> in sfFilebasePluginGfxEditorAdapterInterface.php</div>
+							<div class="index-item-description">Saves target image.</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">setAttribute</span>
@@ -1279,13 +1240,13 @@
 						<span class="method-title">setSource</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditorAdapterGD.html#methodsetSource">sfFilebasePluginGfxEditorAdapterGD::setSource()</a> in sfFilebasePluginGfxEditorAdapterGD.php</div>
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditorAdapterIMagick.html#methodsetSource">sfFilebasePluginGfxEditorAdapterIMagick::setSource()</a> in sfFilebasePluginGfxEditorAdapterIMagick.php</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">setSource</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditorAdapterIMagick.html#methodsetSource">sfFilebasePluginGfxEditorAdapterIMagick::setSource()</a> in sfFilebasePluginGfxEditorAdapterIMagick.php</div>
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditorAdapterGD.html#methodsetSource">sfFilebasePluginGfxEditorAdapterGD::setSource()</a> in sfFilebasePluginGfxEditorAdapterGD.php</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">setSource</span>
@@ -1550,30 +1511,6 @@
 	</div>
 	<dl>
 			<dt class="field">
-						<span class="var-title">$tmp_name</span>
-					</dt>
-		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginUploadedFile.html#var$tmp_name">sfFilebasePluginUploadedFile::$tmp_name</a> in sfFilebasePluginUploadedFile.php</div>
-					</dd>
-			<dt class="field">
-						<span class="var-title">$tokenBegin</span>
-					</dt>
-		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginRecursiveIteratorIterator.html#var$tokenBegin">sfFilebasePluginRecursiveIteratorIterator::$tokenBegin</a> in sfFilebasePluginRecursiveIteratorIterator.php</div>
-					</dd>
-			<dt class="field">
-						<span class="var-title">$tokenEnd</span>
-					</dt>
-		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginRecursiveIteratorIterator.html#var$tokenEnd">sfFilebasePluginRecursiveIteratorIterator::$tokenEnd</a> in sfFilebasePluginRecursiveIteratorIterator.php</div>
-					</dd>
-			<dt class="field">
-						<span class="var-title">$type</span>
-					</dt>
-		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginUploadedFile.html#var$type">sfFilebasePluginUploadedFile::$type</a> in sfFilebasePluginUploadedFile.php</div>
-					</dd>
-			<dt class="field">
 						<span class="method-title">touch</span>
 					</dt>
 		<dd class="index-item-body">
@@ -1822,7 +1759,6 @@
 	<a class="index-letter" href="elementindex.html#g">g</a>
 	<a class="index-letter" href="elementindex.html#i">i</a>
 	<a class="index-letter" href="elementindex.html#m">m</a>
-	<a class="index-letter" href="elementindex.html#n">n</a>
 	<a class="index-letter" href="elementindex.html#o">o</a>
 	<a class="index-letter" href="elementindex.html#p">p</a>
 	<a class="index-letter" href="elementindex.html#r">r</a>

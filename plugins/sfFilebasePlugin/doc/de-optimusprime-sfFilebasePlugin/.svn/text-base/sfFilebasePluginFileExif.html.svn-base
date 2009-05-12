@@ -16,7 +16,7 @@
 	<div class="info-box-title">Description</div>
 	<div class="nav-bar">
 					<span class="disabled">Description</span> |
-													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+													<a href="#sec-vars">Vars</a>
 						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
 						
 					</div>
@@ -43,32 +43,13 @@
 
 
 
-	<a name="sec-var-summary"></a>
-	<div class="info-box">
-		<div class="info-box-title">Variable Summary</span></div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
-							| 
-									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
-							
-								</div>
-		<div class="info-box-body">
-			<div class="var-summary">
-																								<div class="var-title">
-					<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>
-					<a href="#$imageFile" title="details" class="var-name">$imageFile</a>
-				</div>
-											</div>
-		</div>
-	</div>
 
 	<a name="sec-method-summary"></a>
 	<div class="info-box">
 		<div class="info-box-title">Method Summary</span></div>
 		<div class="nav-bar">
 			<a href="#sec-description">Description</a> |
-																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																		<a href="#sec-vars">Vars</a>
 				 
 				|
 						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
@@ -103,28 +84,7 @@
 							
 					</div>
 		<div class="info-box-body">
-			<a name="var$imageFile" id="$imageFile"><!-- --></A>
-<div class="oddrow">
-
-	<div class="var-header">
-		<span class="var-title">
-			<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>
-			<span class="var-name">$imageFile</span>
-						(line <span class="line-number">24</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">access:</span> private</li>
-			</ul>
-	
-	
-		
-		
-
-</div>
-							<h4>Inherited Variables</h4>
+										<h4>Inherited Variables</h4>
 				<A NAME='inherited_vars'><!-- --></A>
 									<p>Inherited from <span class="classname"><a href="../de-optimusprime-util-stuct/sfFilebasePluginStruct.html">sfFilebasePluginStruct</a></span></p>
 					<blockquote>
@@ -144,7 +104,7 @@
 		<div class="info-box-title">Methods</div>
 		<div class="nav-bar">
 			<a href="#sec-description">Description</a> |
-															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+															<a href="#sec-vars">Vars</a>
 																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
 						
 		</div>
@@ -217,7 +177,6 @@
 													<span class="method-name"><a href="../de-optimusprime-util-stuct/sfFilebasePluginStruct.html#method__construct">sfFilebasePluginStruct::__construct()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-util-stuct/sfFilebasePluginStruct.html#methodgetAttribute">sfFilebasePluginStruct::getAttribute()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-util-stuct/sfFilebasePluginStruct.html#methodgetIterator">sfFilebasePluginStruct::getIterator()</a></span><br>
-													<span class="method-name"><a href="../de-optimusprime-util-stuct/sfFilebasePluginStruct.html#methodgetNameFromGetterSetter">sfFilebasePluginStruct::getNameFromGetterSetter()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-util-stuct/sfFilebasePluginStruct.html#methodgetStore">sfFilebasePluginStruct::getStore()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-util-stuct/sfFilebasePluginStruct.html#methodoffsetExists">sfFilebasePluginStruct::offsetExists()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-util-stuct/sfFilebasePluginStruct.html#methodoffsetGet">sfFilebasePluginStruct::offsetGet()</a></span><br>
@@ -236,7 +195,7 @@
 
 
 	<p class="notes" id="credit">
-		Documentation generated on Sun, 10 May 2009 16:41:58 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Mon, 11 May 2009 23:49:30 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</div></body>
 </html>

@@ -42,6 +42,12 @@
 <h1>sfFilebasePluginFile.php</h1>
 <h2>Warnings:</h2><br>
 <b>Warning on line 17</b> - no @package tag was used in a DocBlock for file /home/joshi/www/test/plugins/sfFilebasePlugin/lib/sfFilebasePluginFile.php<br>
+<b>Warning on line 347</b> - example file "          if it exists in FS, or a sfFilebaseFile if not." does not exist<br>
+<b>Warning on line 347</b> - example file "Creating a new file:
+          $new_file = $filebase->getFilebaseFile('path/to/new/file.txt');
+          $filebase->touch($new_file);
+          In Short: $filebase->touch('path/to/new/file.txt');" does not exist<br>
+<b>Warning on line 347</b> - example file "          foreach ($filebase AS $file) ..." does not exist<br>
 <a name="sfFilebasePluginFileExif.php"></a>
 <h1>sfFilebasePluginFileExif.php</h1>
 <h2>Warnings:</h2><br>
@@ -83,8 +89,8 @@
 <a name="sfFilebasePluginStruct.php"></a>
 <h1>sfFilebasePluginStruct.php</h1>
 <h2>Warnings:</h2><br>
-<b>Warning on line 108</b> - example file "$this->getVarname(std_value) returns value of "varname" or std_value if not set" does not exist<br>
 <b>Warning on line 108</b> - example file "$this->setVarname(value) sets "varname" to "value"" does not exist<br>
+<b>Warning on line 108</b> - example file "$this->getVarname(std_value) returns value of "varname" or std_value if not set" does not exist<br>
 <b>Warning on line 108</b> - example file "$this->getVarname() returns valueof "varname", error if not set" does not exist<br>
 <a name="sfFilebasePluginThumbnail.php"></a>
 <h1>sfFilebasePluginThumbnail.php</h1>
@@ -103,7 +109,7 @@
 <h2>Warnings:</h2><br>
 <b>Warning on line 16</b> - no @package tag was used in a DocBlock for file /home/joshi/www/test/plugins/sfFilebasePlugin/lib/sfFilebasePluginUtil.php<br>
 	<p class="notes" id="credit">
-		Documentation generated on Sun, 10 May 2009 16:42:00 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Mon, 11 May 2009 23:49:31 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</body>
 </html>

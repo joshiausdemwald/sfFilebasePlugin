@@ -1,0 +1,1 @@
+phpdoc -d config -d lib -t doc -pp -ric README -ric LICENSE
