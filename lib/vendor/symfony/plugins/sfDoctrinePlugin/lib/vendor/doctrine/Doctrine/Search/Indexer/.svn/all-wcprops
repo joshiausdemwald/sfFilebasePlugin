@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Search/Indexer
+END
+Dir.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Search/Indexer/Dir.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Search/Indexer/Exception.php
+END

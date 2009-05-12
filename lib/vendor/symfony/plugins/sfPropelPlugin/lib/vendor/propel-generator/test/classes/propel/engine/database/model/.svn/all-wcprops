@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/propel/!svn/ver/759/branches/1.3/generator/test/classes/propel/engine/database/model
+END
+ColumnTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/propel/!svn/ver/759/branches/1.3/generator/test/classes/propel/engine/database/model/ColumnTest.php
+END
+TableTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/propel/!svn/ver/759/branches/1.3/generator/test/classes/propel/engine/database/model/TableTest.php
+END
+NameFactoryTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/propel/!svn/ver/521/branches/1.3/generator/test/classes/propel/engine/database/model/NameFactoryTest.php
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/17747/branches/1.2/lib/plugins/sfPropelPlugin/test/functional
+END
+i18nTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/13515/branches/1.2/lib/plugins/sfPropelPlugin/test/functional/i18nTest.php
+END
+formTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/15627/branches/1.2/lib/plugins/sfPropelPlugin/test/functional/formTest.php
+END
+poolingTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/14025/branches/1.2/lib/plugins/sfPropelPlugin/test/functional/poolingTest.php
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/!svn/ver/9991/branches/1.2/lib/plugins/sfCompat10Plugin/test/functional/fixtures/apps/frontend/modules/validation/templates
+END
+indexSuccess.php
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/!svn/ver/9991/branches/1.2/lib/plugins/sfCompat10Plugin/test/functional/fixtures/apps/frontend/modules/validation/templates/indexSuccess.php
+END
+Index2Success.php
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/!svn/ver/9991/branches/1.2/lib/plugins/sfCompat10Plugin/test/functional/fixtures/apps/frontend/modules/validation/templates/Index2Success.php
+END
+groupSuccess.php
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/!svn/ver/9991/branches/1.2/lib/plugins/sfCompat10Plugin/test/functional/fixtures/apps/frontend/modules/validation/templates/groupSuccess.php
+END

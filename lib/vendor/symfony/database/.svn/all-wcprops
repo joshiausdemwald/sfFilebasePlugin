@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/!svn/ver/17858/branches/1.2/lib/database
+END
+sfDatabaseManager.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/17858/branches/1.2/lib/database/sfDatabaseManager.class.php
+END
+sfMySQLiDatabase.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/17858/branches/1.2/lib/database/sfMySQLiDatabase.class.php
+END
+sfDatabase.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/9991/branches/1.2/lib/database/sfDatabase.class.php
+END
+sfPDODatabase.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/17858/branches/1.2/lib/database/sfPDODatabase.class.php
+END
+sfPostgreSQLDatabase.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/9991/branches/1.2/lib/database/sfPostgreSQLDatabase.class.php
+END
+sfMySQLDatabase.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/17858/branches/1.2/lib/database/sfMySQLDatabase.class.php
+END

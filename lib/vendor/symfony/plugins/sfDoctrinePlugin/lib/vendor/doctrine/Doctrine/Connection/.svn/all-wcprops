@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Connection
+END
+Mock.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Connection/Mock.php
+END
+Informix.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Connection/Informix.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Connection/Exception.php
+END
+Mssql.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Connection/Mssql.php
+END
+Sqlite.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Connection/Sqlite.php
+END
+Statement.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Connection/Statement.php
+END
+Oracle.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Connection/Oracle.php
+END
+Mysql.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Connection/Mysql.php
+END
+Db2.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Connection/Db2.php
+END
+UnitOfWork.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Connection/UnitOfWork.php
+END
+Profiler.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Connection/Profiler.php
+END
+Module.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Connection/Module.php
+END
+Pgsql.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Connection/Pgsql.php
+END
+Firebird.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Connection/Firebird.php
+END
+Common.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Connection/Common.php
+END

@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/propel/!svn/ver/989/branches/1.3/runtime/classes/propel/validator
+END
+MinLengthValidator.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/propel/!svn/ver/521/branches/1.3/runtime/classes/propel/validator/MinLengthValidator.php
+END
+UniqueValidator.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/propel/!svn/ver/989/branches/1.3/runtime/classes/propel/validator/UniqueValidator.php
+END
+MaxLengthValidator.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/propel/!svn/ver/521/branches/1.3/runtime/classes/propel/validator/MaxLengthValidator.php
+END
+ValidationFailed.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/propel/!svn/ver/521/branches/1.3/runtime/classes/propel/validator/ValidationFailed.php
+END
+MatchValidator.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/propel/!svn/ver/521/branches/1.3/runtime/classes/propel/validator/MatchValidator.php
+END
+NotMatchValidator.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/propel/!svn/ver/521/branches/1.3/runtime/classes/propel/validator/NotMatchValidator.php
+END
+ValidValuesValidator.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/propel/!svn/ver/964/branches/1.3/runtime/classes/propel/validator/ValidValuesValidator.php
+END
+MinValueValidator.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/propel/!svn/ver/521/branches/1.3/runtime/classes/propel/validator/MinValueValidator.php
+END
+RequiredValidator.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/propel/!svn/ver/521/branches/1.3/runtime/classes/propel/validator/RequiredValidator.php
+END
+BasicValidator.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/propel/!svn/ver/521/branches/1.3/runtime/classes/propel/validator/BasicValidator.php
+END
+TypeValidator.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/propel/!svn/ver/964/branches/1.3/runtime/classes/propel/validator/TypeValidator.php
+END
+MaxValueValidator.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/propel/!svn/ver/521/branches/1.3/runtime/classes/propel/validator/MaxValueValidator.php
+END

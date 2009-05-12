@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Data
+END
+Import.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Data/Import.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Data/Exception.php
+END
+Export.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Data/Export.php
+END

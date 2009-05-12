@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/!svn/ver/17857/branches/1.2/lib/util
+END
+sfBrowserBase.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/17749/branches/1.2/lib/util/sfBrowserBase.class.php
+END
+sfParameterHolder.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/10835/branches/1.2/lib/util/sfParameterHolder.class.php
+END
+sfCallable.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/11534/branches/1.2/lib/util/sfCallable.class.php
+END
+sfNamespacedParameterHolder.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/9991/branches/1.2/lib/util/sfNamespacedParameterHolder.class.php
+END
+sfBrowser.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/15726/branches/1.2/lib/util/sfBrowser.class.php
+END
+sfContext.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/16165/branches/1.2/lib/util/sfContext.class.php
+END
+sfInflector.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/13896/branches/1.2/lib/util/sfInflector.class.php
+END
+sfToolkit.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/14169/branches/1.2/lib/util/sfToolkit.class.php
+END
+sfFinder.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/17857/branches/1.2/lib/util/sfFinder.class.php
+END
+sfDomCssSelector.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/14516/branches/1.2/lib/util/sfDomCssSelector.class.php
+END

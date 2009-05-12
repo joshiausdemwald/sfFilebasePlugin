@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.4.6" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
+  <name>sfFilebasePlugin</name>
+  <channel>plugins.symfony-project.org</channel>
+  <summary>Plugin for easily managing filesystem related operations based on SPL.</summary>
+  <description>Plugin for easily managing filesystem related operations based on SPL.</description>
+  <lead>
+    <name>Johannes Heinen</name>
+    <user>joshiausdemwald</user>
+    <email>johannes.heinen@gmail.com</email>
+    <active>yes</active>
+  </lead>
+  <date>2009-05-12</date>
+  <time>23:59:59</time>
+  <version>
+    <release>0.5.0</release>
+    <api>0.5.0</api>
+  </version>
+  <stability>
+    <release>stable</release>
+    <api>stable</api>
+  </stability>
+  <license uri="http://www.symfony-project.org/license">MIT license</license>
+  <notes>This is the first release, completely namespaced by sfFilebasePlugin... Due to the half-automatically refactoring i do not guarantee that all files are reference properly, sorry. This will be checked intensively soon.</notes>
+  <contents>
+    <dir name="/">
+      <file role="data" name="README" />
+      <file role="data" name="LICENSE" />
+      <dir name="config">
+        <file role="php" name="config.php" />
+      </dir>
+      <dir name="lib">
+        <dir name="Validator">
+          <file role="php" name="sfFilebasePluginValidatorFile.php" />
+        </dir>
+        <file role="php" name="sfFilebasePlugin.php" />
+        <file role="php" name="sfFilebasePluginDirectory.php" />
+        <file role="php" name="sfFilebasePluginException.php" />
+        <file role="php" name="sfFilebasePluginFile.php" />
+        <file role="php" name="sfFilebasePluginFileExif.php" />
+        <file role="php" name="sfFilebasePluginFileObject.php" />
+        <file role="php" name="sfFilebasePluginGfxEditor.php" />
+        <file role="php" name="sfFilebasePluginGfxEditorAdapterGD.php" />
+        <file role="php" name="sfFilebasePluginGfxEditorAdapterIMagick.php" />
+        <file role="php" name="sfFilebasePluginGfxEditorAdapterInterface.php" />
+        <file role="php" name="sfFilebasePluginImage.php" />
+        <file role="php" name="sfFilebasePluginRecursiveDirectoryIterator.php" />
+        <file role="php" name="sfFilebasePluginRecursiveIteratorIterator.php" />
+        <file role="php" name="sfFilebasePluginStruct.php" />
+        <file role="php" name="sfFilebasePluginThumbnail.php" />
+        <file role="php" name="sfFilebasePluginUploadedFile.php" />
+        <file role="php" name="sfFilebasePluginUploadedFilesManager.php" />
+        <file role="php" name="sfFilebasePluginUtil.php" />
+      </dir>
+    </dir>
+  </contents>
+  <dependencies>
+    <required>
+      <php>
+        <min>5.1.6</min>
+      </php>
+      <pearinstaller>
+        <min>1.4.1</min>
+      </pearinstaller>
+      <package>
+        <name>symfony</name>
+        <channel>pear.symfony-project.com</channel>
+        <min>1.2.0</min>
+        <max>1.3.0</max>
+        <exclude>1.3.0</exclude>
+      </package>
+    </required>
+  </dependencies>
+  <phprelease>
+  </phprelease>
+  <changelog>
+    <release>
+      <version>
+        <release>0.5.0</release>
+        <api>0.5.0</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-05-12</date>
+      <notes>
+      * Added sfFilebasePluginValidatorFile for native File upload
+        validation.
+      </notes>
+    </release>
+    <release>
+      <version>
+        <release>0.0.10</release>
+        <api>0.0.8</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-05-12</date>
+      <notes>
+      * Added link to sample project to README
+      </notes>
+    </release>
+    <release>
+      <version>
+        <release>0.0.9</release>
+        <api>0.0.8</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-05-11</date>
+      <notes>
+      * Added link to sample project to README
+      </notes>
+    </release>
+    <release>
+      <version>
+        <release>0.0.8</release>
+        <api>0.0.6</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-05-11</date>
+      <notes>
+      * Minor improvements
+      * add getFileExists to sfFilebasePlugin, modified sfFilebasePluginFile::fileExists()
+        as a proxy
+      * add isLink()
+      * add unsupported Exception when Link is requested by sfFilebasePlugin::getFilebaseFile()
+      * Double slashes removed in sfFilebasePlugin::getFilebaseFile()
+      </notes>
+    </release>
+     <release>
+      <version>
+        <release>0.0.7</release>
+        <api>0.0.6</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-05-10</date>
+      <notes>
+      * Worked on README, installation notes and a few syntax improvements
+      </notes>
+    </release>
+     <release>
+      <version>
+        <release>0.0.6</release>
+        <api>0.0.6</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-05-10</date>
+      <notes>
+      * Finally removed optional deps from packege.xml to get things work.
+      </notes>
+    </release>
+    <release>
+      <version>
+        <release>0.0.5</release>
+        <api>0.0.5</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-05-10</date>
+      <notes>
+      * Changed release and api state to stable for installer. hope it works.
+      </notes>
+    </release>
+    <release>
+      <version>
+        <release>0.0.4</release>
+        <api>0.0.1</api>
+      </version>
+      <stability>
+        <release>alpha</release>
+        <api>alpha</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-05-10</date>
+      <notes>
+      * Trying to fill in this package.xml properly :'(
+      </notes>
+    </release>
+    <release>
+      <version>
+        <release>0.0.3</release>
+        <api>0.0.1</api>
+      </version>
+      <stability>
+        <release>alpha</release>
+        <api>alpha</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-05-10</date>
+      <notes>
+      * Fixed bug while retrieving thumbnail representation
+      </notes>
+    </release>
+    <release>
+      <version>
+        <release>0.0.2</release>
+        <api>0.0.1</api>
+      </version>
+      <stability>
+        <release>alpha</release>
+        <api>alpha</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-05-10</date>
+      <notes>
+      * Fixed README
+      * Fixed bug while retrieving thumbnail representation
+      </notes>
+    </release>
+  </changelog>
+</package>

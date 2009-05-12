@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/!svn/ver/17749/branches/1.2/lib/view
+END
+sfPHPView.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/11783/branches/1.2/lib/view/sfPHPView.class.php
+END
+sfPartialView.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/17749/branches/1.2/lib/view/sfPartialView.class.php
+END
+sfViewCacheManager.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/17477/branches/1.2/lib/view/sfViewCacheManager.class.php
+END
+sfViewParameterHolder.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/9991/branches/1.2/lib/view/sfViewParameterHolder.class.php
+END
+sfView.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/13572/branches/1.2/lib/view/sfView.class.php
+END

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/9991/branches/1.2/lib/task/generator/skeleton/project/test/bootstrap
+END
+unit.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/9991/branches/1.2/lib/task/generator/skeleton/project/test/bootstrap/unit.php
+END
+functional.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/9991/branches/1.2/lib/task/generator/skeleton/project/test/bootstrap/functional.php
+END

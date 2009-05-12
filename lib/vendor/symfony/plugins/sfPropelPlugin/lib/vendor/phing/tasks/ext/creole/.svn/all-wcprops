@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/266/branches/2.3/classes/phing/tasks/ext/creole
+END
+CreoleTask.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/259/branches/2.3/classes/phing/tasks/ext/creole/CreoleTask.php
+END
+CreoleSQLExecTask.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/266/branches/2.3/classes/phing/tasks/ext/creole/CreoleSQLExecTask.php
+END

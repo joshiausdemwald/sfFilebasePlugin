@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/!svn/ver/17749/branches/1.2/lib/log
+END
+sfNoLogger.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/9991/branches/1.2/lib/log/sfNoLogger.class.php
+END
+sfFileLogger.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/10964/branches/1.2/lib/log/sfFileLogger.class.php
+END
+sfLogger.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/16344/branches/1.2/lib/log/sfLogger.class.php
+END
+sfLoggerInterface.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/9991/branches/1.2/lib/log/sfLoggerInterface.class.php
+END
+sfLoggerWrapper.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/9991/branches/1.2/lib/log/sfLoggerWrapper.class.php
+END
+sfConsoleLogger.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/10952/branches/1.2/lib/log/sfConsoleLogger.class.php
+END
+sfWebDebugLogger.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/17749/branches/1.2/lib/log/sfWebDebugLogger.class.php
+END
+sfAggregateLogger.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/9991/branches/1.2/lib/log/sfAggregateLogger.class.php
+END
+sfVarLogger.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/14173/branches/1.2/lib/log/sfVarLogger.class.php
+END
+sfStreamLogger.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/9991/branches/1.2/lib/log/sfStreamLogger.class.php
+END

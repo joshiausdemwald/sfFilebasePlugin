@@ -1,0 +1,161 @@
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/!svn/ver/17109/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/template/templates
+END
+_list_actions.php
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/!svn/ver/17063/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/template/templates/_list_actions.php
+END
+_list_batch_actions.php
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/!svn/ver/15374/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/template/templates/_list_batch_actions.php
+END
+_list_td_stacked.php
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/template/templates/_list_td_stacked.php
+END
+indexSuccess.php
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/template/templates/indexSuccess.php
+END
+_assets.php
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/template/templates/_assets.php
+END
+_form.php
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/template/templates/_form.php
+END
+_list_th_stacked.php
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/template/templates/_list_th_stacked.php
+END
+_form_field.php
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/template/templates/_form_field.php
+END
+_filters.php
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/!svn/ver/14926/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/template/templates/_filters.php
+END
+_list.php
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/!svn/ver/16172/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/template/templates/_list.php
+END
+_form_header.php
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/template/templates/_form_header.php
+END
+_filters_field.php
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/template/templates/_filters_field.php
+END
+_list_td_tabular.php
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/!svn/ver/14783/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/template/templates/_list_td_tabular.php
+END
+_list_field_boolean.php
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/template/templates/_list_field_boolean.php
+END
+editSuccess.php
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/template/templates/editSuccess.php
+END
+_list_th_tabular.php
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/!svn/ver/17109/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/template/templates/_list_th_tabular.php
+END
+_form_footer.php
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/template/templates/_form_footer.php
+END
+_form_fieldset.php
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/template/templates/_form_fieldset.php
+END
+_list_td_actions.php
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/template/templates/_list_td_actions.php
+END
+_list_header.php
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/template/templates/_list_header.php
+END
+_form_actions.php
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/template/templates/_form_actions.php
+END
+_list_td_batch_actions.php
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/template/templates/_list_td_batch_actions.php
+END
+newSuccess.php
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/template/templates/newSuccess.php
+END
+_flashes.php
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/template/templates/_flashes.php
+END
+_list_footer.php
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/!svn/ver/13517/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/template/templates/_list_footer.php
+END
+_pagination.php
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/!svn/ver/17109/branches/1.2/lib/plugins/sfDoctrinePlugin/data/generator/sfDoctrineModule/admin/template/templates/_pagination.php
+END

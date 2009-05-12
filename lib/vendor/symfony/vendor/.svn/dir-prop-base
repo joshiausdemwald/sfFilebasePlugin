@@ -1,0 +1,6 @@
+K 13
+svn:externals
+V 70
+lime http://svn.symfony-project.com/tools/lime/tags/RELEASE_1_0_5/lib
+
+END

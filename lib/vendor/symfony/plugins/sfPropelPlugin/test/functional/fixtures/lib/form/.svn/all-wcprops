@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/14010/branches/1.2/lib/plugins/sfPropelPlugin/test/functional/fixtures/lib/form
+END
+AuthorForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/!svn/ver/13515/branches/1.2/lib/plugins/sfPropelPlugin/test/functional/fixtures/lib/form/AuthorForm.class.php
+END
+ArticleForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/!svn/ver/14010/branches/1.2/lib/plugins/sfPropelPlugin/test/functional/fixtures/lib/form/ArticleForm.class.php
+END
+AuthorArticleForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/!svn/ver/13515/branches/1.2/lib/plugins/sfPropelPlugin/test/functional/fixtures/lib/form/AuthorArticleForm.class.php
+END
+AttachmentForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/!svn/ver/13515/branches/1.2/lib/plugins/sfPropelPlugin/test/functional/fixtures/lib/form/AttachmentForm.class.php
+END
+BookForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/!svn/ver/13515/branches/1.2/lib/plugins/sfPropelPlugin/test/functional/fixtures/lib/form/BookForm.class.php
+END
+BaseFormPropel.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/!svn/ver/13515/branches/1.2/lib/plugins/sfPropelPlugin/test/functional/fixtures/lib/form/BaseFormPropel.class.php
+END
+CategoryForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/!svn/ver/13515/branches/1.2/lib/plugins/sfPropelPlugin/test/functional/fixtures/lib/form/CategoryForm.class.php
+END
+MovieForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/!svn/ver/13515/branches/1.2/lib/plugins/sfPropelPlugin/test/functional/fixtures/lib/form/MovieForm.class.php
+END
+MovieI18nForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/!svn/ver/13515/branches/1.2/lib/plugins/sfPropelPlugin/test/functional/fixtures/lib/form/MovieI18nForm.class.php
+END
+ProductForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/!svn/ver/13515/branches/1.2/lib/plugins/sfPropelPlugin/test/functional/fixtures/lib/form/ProductForm.class.php
+END
+ProductI18nForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/!svn/ver/13515/branches/1.2/lib/plugins/sfPropelPlugin/test/functional/fixtures/lib/form/ProductI18nForm.class.php
+END

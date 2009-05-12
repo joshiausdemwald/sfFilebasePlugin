@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/9991/branches/1.2/lib/plugins/sfCompat10Plugin/test/bootstrap
+END
+unit.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/9991/branches/1.2/lib/plugins/sfCompat10Plugin/test/bootstrap/unit.php
+END
+functional.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/9991/branches/1.2/lib/plugins/sfCompat10Plugin/test/bootstrap/functional.php
+END

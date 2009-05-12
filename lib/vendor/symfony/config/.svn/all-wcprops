@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/!svn/ver/17858/branches/1.2/lib/config
+END
+sfAutoloadConfigHandler.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/17047/branches/1.2/lib/config/sfAutoloadConfigHandler.class.php
+END
+sfProjectConfiguration.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/17858/branches/1.2/lib/config/sfProjectConfiguration.class.php
+END
+sfViewConfigHandler.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/17858/branches/1.2/lib/config/sfViewConfigHandler.class.php
+END
+sfSimpleYamlConfigHandler.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/9991/branches/1.2/lib/config/sfSimpleYamlConfigHandler.class.php
+END
+sfDefineEnvironmentConfigHandler.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/17858/branches/1.2/lib/config/sfDefineEnvironmentConfigHandler.class.php
+END
+sfConfigHandler.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/13547/branches/1.2/lib/config/sfConfigHandler.class.php
+END
+sfConfig.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/9991/branches/1.2/lib/config/sfConfig.class.php
+END
+sfLoader.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/17858/branches/1.2/lib/config/sfLoader.class.php
+END
+sfRootConfigHandler.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/13547/branches/1.2/lib/config/sfRootConfigHandler.class.php
+END
+sfFilterConfigHandler.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/17858/branches/1.2/lib/config/sfFilterConfigHandler.class.php
+END
+sfGeneratorConfigHandler.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/13464/branches/1.2/lib/config/sfGeneratorConfigHandler.class.php
+END
+sfRoutingConfigHandler.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/12339/branches/1.2/lib/config/sfRoutingConfigHandler.class.php
+END
+sfCompileConfigHandler.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/17858/branches/1.2/lib/config/sfCompileConfigHandler.class.php
+END
+sfPluginConfigurationGeneric.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/12503/branches/1.2/lib/config/sfPluginConfigurationGeneric.class.php
+END
+sfYamlConfigHandler.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/17858/branches/1.2/lib/config/sfYamlConfigHandler.class.php
+END
+sfPluginConfiguration.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/17858/branches/1.2/lib/config/sfPluginConfiguration.class.php
+END
+sfCacheConfigHandler.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/17858/branches/1.2/lib/config/sfCacheConfigHandler.class.php
+END
+sfDatabaseConfigHandler.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/12159/branches/1.2/lib/config/sfDatabaseConfigHandler.class.php
+END
+sfConfigCache.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/17858/branches/1.2/lib/config/sfConfigCache.class.php
+END
+sfFactoryConfigHandler.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/13547/branches/1.2/lib/config/sfFactoryConfigHandler.class.php
+END
+sfApplicationConfiguration.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/17858/branches/1.2/lib/config/sfApplicationConfiguration.class.php
+END
+sfSecurityConfigHandler.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/9991/branches/1.2/lib/config/sfSecurityConfigHandler.class.php
+END

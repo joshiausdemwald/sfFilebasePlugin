@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Migration
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Migration/Exception.php
+END
+Process.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Migration/Process.php
+END
+Builder.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Migration/Builder.php
+END
+IrreversibleMigrationException.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Migration/IrreversibleMigrationException.php
+END

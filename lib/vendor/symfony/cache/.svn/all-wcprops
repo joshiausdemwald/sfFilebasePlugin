@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/!svn/ver/17858/branches/1.2/lib/cache
+END
+sfEAcceleratorCache.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/9991/branches/1.2/lib/cache/sfEAcceleratorCache.class.php
+END
+sfXCacheCache.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/17858/branches/1.2/lib/cache/sfXCacheCache.class.php
+END
+sfNoCache.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/10970/branches/1.2/lib/cache/sfNoCache.class.php
+END
+sfCache.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/17858/branches/1.2/lib/cache/sfCache.class.php
+END
+sfFileCache.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/17858/branches/1.2/lib/cache/sfFileCache.class.php
+END
+sfSQLiteCache.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/9991/branches/1.2/lib/cache/sfSQLiteCache.class.php
+END
+sfMemcacheCache.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/17858/branches/1.2/lib/cache/sfMemcacheCache.class.php
+END
+sfAPCCache.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/9991/branches/1.2/lib/cache/sfAPCCache.class.php
+END
+sfFunctionCache.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/17858/branches/1.2/lib/cache/sfFunctionCache.class.php
+END

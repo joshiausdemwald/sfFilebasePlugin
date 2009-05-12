@@ -1,0 +1,167 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/!svn/ver/17749/branches/1.2/lib/widget
+END
+sfWidgetFormSelectMany.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/9991/branches/1.2/lib/widget/sfWidgetFormSelectMany.class.php
+END
+sfWidgetFormFilterInput.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/13510/branches/1.2/lib/widget/sfWidgetFormFilterInput.class.php
+END
+sfWidgetFormInputCheckbox.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/11279/branches/1.2/lib/widget/sfWidgetFormInputCheckbox.class.php
+END
+sfWidgetFormInputHidden.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/9991/branches/1.2/lib/widget/sfWidgetFormInputHidden.class.php
+END
+sfWidgetFormDate.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/16259/branches/1.2/lib/widget/sfWidgetFormDate.class.php
+END
+sfWidgetFormTextarea.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/9991/branches/1.2/lib/widget/sfWidgetFormTextarea.class.php
+END
+sfWidgetFormChoiceMany.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/11539/branches/1.2/lib/widget/sfWidgetFormChoiceMany.class.php
+END
+sfWidgetForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/17749/branches/1.2/lib/widget/sfWidgetForm.class.php
+END
+sfWidgetFormSelect.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/17068/branches/1.2/lib/widget/sfWidgetFormSelect.class.php
+END
+sfWidgetFormSchemaFormatterList.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/9991/branches/1.2/lib/widget/sfWidgetFormSchemaFormatterList.class.php
+END
+sfWidgetFormInputPassword.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/9991/branches/1.2/lib/widget/sfWidgetFormInputPassword.class.php
+END
+sfWidgetFormFilterDate.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/11672/branches/1.2/lib/widget/sfWidgetFormFilterDate.class.php
+END
+sfWidgetFormSchemaFormatter.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/13844/branches/1.2/lib/widget/sfWidgetFormSchemaFormatter.class.php
+END
+sfWidgetFormSelectCheckbox.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/17068/branches/1.2/lib/widget/sfWidgetFormSelectCheckbox.class.php
+END
+sfWidgetFormSchemaForEach.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/9991/branches/1.2/lib/widget/sfWidgetFormSchemaForEach.class.php
+END
+sfWidgetFormInputFileEditable.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/11544/branches/1.2/lib/widget/sfWidgetFormInputFileEditable.class.php
+END
+sfWidgetFormDateRange.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/12873/branches/1.2/lib/widget/sfWidgetFormDateRange.class.php
+END
+sfWidgetFormChoice.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/17068/branches/1.2/lib/widget/sfWidgetFormChoice.class.php
+END
+sfWidget.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/17749/branches/1.2/lib/widget/sfWidget.class.php
+END
+sfWidgetFormDateTime.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/15962/branches/1.2/lib/widget/sfWidgetFormDateTime.class.php
+END
+sfWidgetFormSchemaFormatterTable.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/9991/branches/1.2/lib/widget/sfWidgetFormSchemaFormatterTable.class.php
+END
+sfWidgetFormSelectRadio.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/17068/branches/1.2/lib/widget/sfWidgetFormSelectRadio.class.php
+END
+sfWidgetFormTime.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/15283/branches/1.2/lib/widget/sfWidgetFormTime.class.php
+END
+sfWidgetFormInputFile.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/9991/branches/1.2/lib/widget/sfWidgetFormInputFile.class.php
+END
+sfWidgetFormInput.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/9991/branches/1.2/lib/widget/sfWidgetFormInput.class.php
+END
+sfWidgetFormSchema.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/17749/branches/1.2/lib/widget/sfWidgetFormSchema.class.php
+END
+sfWidgetFormSchemaDecorator.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/17749/branches/1.2/lib/widget/sfWidgetFormSchemaDecorator.class.php
+END

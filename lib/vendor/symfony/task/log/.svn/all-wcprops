@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/!svn/ver/9991/branches/1.2/lib/task/log
+END
+sfLogRotateTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/9991/branches/1.2/lib/task/log/sfLogRotateTask.class.php
+END
+sfLogClearTask.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/9991/branches/1.2/lib/task/log/sfLogClearTask.class.php
+END

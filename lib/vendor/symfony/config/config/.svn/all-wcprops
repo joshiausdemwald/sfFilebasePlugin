@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/!svn/ver/17217/branches/1.2/lib/config/config
+END
+factories.yml
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/11499/branches/1.2/lib/config/config/factories.yml
+END
+core_compile.yml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/9991/branches/1.2/lib/config/config/core_compile.yml
+END
+settings.yml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/17217/branches/1.2/lib/config/config/settings.yml
+END
+config_handlers.yml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/9991/branches/1.2/lib/config/config/config_handlers.yml
+END
+module.yml
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/9991/branches/1.2/lib/config/config/module.yml
+END
+security.yml
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/9991/branches/1.2/lib/config/config/security.yml
+END
+autoload.yml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/12503/branches/1.2/lib/config/config/autoload.yml
+END
+filters.yml
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/9991/branches/1.2/lib/config/config/filters.yml
+END
+view.yml
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/9991/branches/1.2/lib/config/config/view.yml
+END

@@ -1,0 +1,34 @@
+9
+
+dir
+18164
+http://svn.symfony-project.com/branches/1.2/lib/plugins/sfPropelPlugin/test/functional/fixtures/apps/frontend/modules/i18n
+http://svn.symfony-project.com
+
+
+
+2008-11-09T20:08:32.276277Z
+12854
+fabien
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+ee427ae8-e902-0410-961c-c3ed070cd9f9
+
+actions
+dir
+
+templates
+dir
+

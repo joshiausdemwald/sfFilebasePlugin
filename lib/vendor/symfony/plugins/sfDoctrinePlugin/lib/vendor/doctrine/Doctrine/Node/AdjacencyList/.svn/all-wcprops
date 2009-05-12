@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Node/AdjacencyList
+END
+PostOrderIterator.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Node/AdjacencyList/PostOrderIterator.php
+END
+PreOrderIterator.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Node/AdjacencyList/PreOrderIterator.php
+END
+LevelOrderIterator.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/5566/tags/1.0.8/lib/Doctrine/Node/AdjacencyList/LevelOrderIterator.php
+END

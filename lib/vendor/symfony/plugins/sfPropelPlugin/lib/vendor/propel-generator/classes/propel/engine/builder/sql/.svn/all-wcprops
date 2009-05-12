@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/propel/!svn/ver/1067/branches/1.3/generator/classes/propel/engine/builder/sql
+END
+DDLBuilder.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/propel/!svn/ver/1067/branches/1.3/generator/classes/propel/engine/builder/sql/DDLBuilder.php
+END
+DataSQLBuilder.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/propel/!svn/ver/989/branches/1.3/generator/classes/propel/engine/builder/sql/DataSQLBuilder.php
+END

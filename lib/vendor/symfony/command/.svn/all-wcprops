@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/!svn/ver/18135/branches/1.2/lib/command
+END
+sfAnsiColorFormatter.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/17858/branches/1.2/lib/command/sfAnsiColorFormatter.class.php
+END
+sfCommandArgumentSet.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/17858/branches/1.2/lib/command/sfCommandArgumentSet.class.php
+END
+sfCommandException.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/9991/branches/1.2/lib/command/sfCommandException.class.php
+END
+sfCommandLogger.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/17858/branches/1.2/lib/command/sfCommandLogger.class.php
+END
+sfCommandArgument.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/17858/branches/1.2/lib/command/sfCommandArgument.class.php
+END
+sfCommandApplication.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/18135/branches/1.2/lib/command/sfCommandApplication.class.php
+END
+sfCommandArgumentsException.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/9991/branches/1.2/lib/command/sfCommandArgumentsException.class.php
+END
+sfCommandOptionSet.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/17858/branches/1.2/lib/command/sfCommandOptionSet.class.php
+END
+sfFormatter.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/17858/branches/1.2/lib/command/sfFormatter.class.php
+END
+sfCommandOption.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/17858/branches/1.2/lib/command/sfCommandOption.class.php
+END
+sfSymfonyCommandApplication.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/18135/branches/1.2/lib/command/sfSymfonyCommandApplication.class.php
+END
+sfCommandManager.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/17858/branches/1.2/lib/command/sfCommandManager.class.php
+END
+cli.php
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/!svn/ver/9991/branches/1.2/lib/command/cli.php
+END

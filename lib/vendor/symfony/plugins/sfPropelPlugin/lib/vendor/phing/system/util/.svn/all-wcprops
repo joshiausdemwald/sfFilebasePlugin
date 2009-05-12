@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/325/branches/2.3/classes/phing/system/util
+END
+Properties.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/325/branches/2.3/classes/phing/system/util/Properties.php
+END
+Timer.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/228/branches/2.3/classes/phing/system/util/Timer.php
+END
+Message.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/325/branches/2.3/classes/phing/system/util/Message.php
+END
+Register.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/325/branches/2.3/classes/phing/system/util/Register.php
+END
