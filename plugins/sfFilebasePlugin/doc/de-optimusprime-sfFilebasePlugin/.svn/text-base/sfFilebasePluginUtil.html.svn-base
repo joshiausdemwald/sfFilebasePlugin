@@ -225,7 +225,7 @@
 					</div>
 		<div class="info-box-body">
 			<a name="var$extensions" id="$extensions"><!-- --></A>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div class="var-header">
 		<span class="var-title">
@@ -266,7 +266,7 @@
 		<div class="info-box-body">
 			<A NAME='method_detail'></A>
 <a name="methodgetExtensionByMime" id="getExtensionByMime"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">static getExtensionByMime</span> (line <span class="line-number">473</span>)
@@ -298,7 +298,7 @@
 			
 	</div>
 <a name="methodgetIsImage" id="getIsImage"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">static getIsImage</span> (line <span class="line-number">620</span>)
@@ -330,7 +330,7 @@
 			
 	</div>
 <a name="methodgetMaxUploadFileSize" id="getMaxUploadFileSize"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">static getMaxUploadFileSize</span> (line <span class="line-number">520</span>)
@@ -360,7 +360,7 @@
 			
 	</div>
 <a name="methodgetMimeByExtension" id="getMimeByExtension"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">static getMimeByExtension</span> (line <span class="line-number">458</span>)
@@ -392,7 +392,7 @@
 			
 	</div>
 <a name="methodgetMimeExtensions" id="getMimeExtensions"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">static getMimeExtensions</span> (line <span class="line-number">447</span>)
@@ -416,7 +416,7 @@
 			
 	</div>
 <a name="methodgetStringFilesize" id="getStringFilesize"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">static getStringFilesize</span> (line <span class="line-number">499</span>)
@@ -445,7 +445,7 @@
 			
 	</div>
 <a name="methodgetStringTypeByExtension" id="getStringTypeByExtension"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">static getStringTypeByExtension</span> (line <span class="line-number">555</span>)
@@ -474,7 +474,7 @@
 			
 	</div>
 <a name="methodisAbsolutePathname" id="isAbsolutePathname"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">static isAbsolutePathname</span> (line <span class="line-number">592</span>)
@@ -504,7 +504,7 @@
 			
 	</div>
 <a name="methodparseHTMLColor" id="parseHTMLColor"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">static parseHTMLColor</span> (line <span class="line-number">606</span>)
@@ -535,7 +535,7 @@
 			
 	</div>
 <a name="methodunifySlashes" id="unifySlashes"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">static unifySlashes</span> (line <span class="line-number">487</span>)
@@ -570,7 +570,7 @@
 
 
 	<p class="notes" id="credit">
-		Documentation generated on Tue, 12 May 2009 08:50:30 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Tue, 12 May 2009 17:01:48 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</div></body>
 </html>

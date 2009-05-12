@@ -25,6 +25,10 @@
 <a href="#sfFilebasePluginUploadedFile.php">sfFilebasePluginUploadedFile.php</a><br>
 <a href="#sfFilebasePluginUploadedFilesManager.php">sfFilebasePluginUploadedFilesManager.php</a><br>
 <a href="#sfFilebasePluginUtil.php">sfFilebasePluginUtil.php</a><br>
+<a name="Post-parsing"></a>
+<h1>Post-parsing</h1>
+<h2>Warnings:</h2><br>
+<b>Warning</b> - Class sfFilebasePluginValidatorFile parent sfValidatorBase not found<br>
 <a name="sfFilebasePlugin.php"></a>
 <h1>sfFilebasePlugin.php</h1>
 <h2>Warnings:</h2><br>
@@ -88,8 +92,8 @@
 <a name="sfFilebasePluginStruct.php"></a>
 <h1>sfFilebasePluginStruct.php</h1>
 <h2>Warnings:</h2><br>
-<b>Warning on line 108</b> - example file "$this->setVarname(value) sets "varname" to "value"" does not exist<br>
 <b>Warning on line 108</b> - example file "$this->getVarname(std_value) returns value of "varname" or std_value if not set" does not exist<br>
+<b>Warning on line 108</b> - example file "$this->setVarname(value) sets "varname" to "value"" does not exist<br>
 <b>Warning on line 108</b> - example file "$this->getVarname() returns valueof "varname", error if not set" does not exist<br>
 <a name="sfFilebasePluginThumbnail.php"></a>
 <h1>sfFilebasePluginThumbnail.php</h1>
@@ -99,6 +103,8 @@
 <h1>sfFilebasePluginUploadedFile.php</h1>
 <h2>Warnings:</h2><br>
 <b>Warning on line 17</b> - no @package tag was used in a DocBlock for file /home/joshi/www/test/plugins/sfFilebasePlugin/lib/sfFilebasePluginUploadedFile.php<br>
+<b>Warning on line 154</b> - example file "$file->isError(sfFilebaseUploadedFile::UPLOAD_ERR_NO_FILE)" does not exist<br>
+<b>Warning on line 154</b> - example file "$file->isError()" does not exist<br>
 <a name="sfFilebasePluginUploadedFilesManager.php"></a>
 <h1>sfFilebasePluginUploadedFilesManager.php</h1>
 <h2>Warnings:</h2><br>
@@ -108,7 +114,7 @@
 <h2>Warnings:</h2><br>
 <b>Warning on line 16</b> - no @package tag was used in a DocBlock for file /home/joshi/www/test/plugins/sfFilebasePlugin/lib/sfFilebasePluginUtil.php<br>
 	<p class="notes" id="credit">
-		Documentation generated on Tue, 12 May 2009 08:50:30 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Tue, 12 May 2009 17:01:48 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</body>
 </html>

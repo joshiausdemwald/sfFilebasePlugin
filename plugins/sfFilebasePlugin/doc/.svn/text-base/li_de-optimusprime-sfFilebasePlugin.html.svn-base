@@ -108,7 +108,7 @@ if (document.getElementById) {
     			
     			    			        			    			        			    			        			    			        			    			        			    			        			    			        			    			        			    			        			    			            				var classe = new WebFXTreeItem('sfFilebasePluginGfxEditorAdapterInterface', 'de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditorAdapterInterface.html');
         				tree_classe.add(classe);
-        			    			    			        			    			        			    			        			    			        			    			        			    			        			    			        			
+        			    			    			        			    			        			    			        			    			        			    			        			    			        			    			        			    			        			
     			tree.add(tree_classe);
     						    		    			var tree_classe = new WebFXTreeItem('Class(es)', '');
     			
@@ -143,6 +143,8 @@ if (document.getElementById) {
         			    			    			            				var classe = new WebFXTreeItem('sfFilebasePluginUploadedFilesManager', 'de-optimusprime-sfFilebasePlugin/sfFilebasePluginUploadedFilesManager.html');
         				tree_classe.add(classe);
         			    			    			            				var classe = new WebFXTreeItem('sfFilebasePluginUtil', 'de-optimusprime-sfFilebasePlugin/sfFilebasePluginUtil.html');
+        				tree_classe.add(classe);
+        			    			    			            				var classe = new WebFXTreeItem('sfFilebasePluginValidatorFile', 'de-optimusprime-sfFilebasePlugin/sfFilebasePluginValidatorFile.html');
         				tree_classe.add(classe);
         			    			    	
     			tree.add(tree_classe);
@@ -185,6 +187,8 @@ if (document.getElementById) {
 							var file = new WebFXTreeItem('sfFilebasePluginUploadedFilesManager.php', 'de-optimusprime-sfFilebasePlugin/_lib---sfFilebasePluginUploadedFilesManager.php.html');
 				tree_file.add(file);
 							var file = new WebFXTreeItem('sfFilebasePluginUtil.php', 'de-optimusprime-sfFilebasePlugin/_lib---sfFilebasePluginUtil.php.html');
+				tree_file.add(file);
+							var file = new WebFXTreeItem('sfFilebasePluginValidatorFile.php', 'de-optimusprime-sfFilebasePlugin/_lib---Validator---sfFilebasePluginValidatorFile.php.html');
 				tree_file.add(file);
 				
 			tree.add(tree_file);
