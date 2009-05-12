@@ -2,11 +2,18 @@
 /* 
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
+ *
+ *
  */
 
 /**
- * Description of sfFilebasePluginValidatorFile
+ * sfFilebasePluginValidatorFile validates uploaded files, internally based
+ * on sfFilebasePluginUploadedFile object, not on the raw file-array that you
+ * can access through sfWebRequest::getFiles() or php internal $_FILES globals.
  *
+ * @package de.optimusprime.sfFilebasePlugin
+ * @see sfValidatorFile
+ * @author the original sfValidatorFile-Class: Fabien Potencier <fabien.potencier@symfony-project.com>
  * @author joshi
  */
 class sfFilebasePluginValidatorFile extends sfValidatorBase
@@ -14,20 +21,25 @@ class sfFilebasePluginValidatorFile extends sfValidatorBase
    /**
    * Configures the current validator.
    *
+   * The api for sfFilebasePluginValidatorFile is derived from sfValidatorFile.
+   * So there are only little changes in handling, but the return value
+   * is of type sfFilebaseUploadedFile, which have a few ways to deal with
+   * uploaded files, move them, create thumbnails and so on...
+   *
+   * There are no mime guessers, the sfFilebasePluginUploadedFilesManager
+   * deals with that when you call sfFilebasePlugin::getUploadedFiles().
+   *
+   * There is also no path to specify, you do that later directly by calling
+   * sfFilebasePluginUploadedFile::moveUploadedFile
+   *
+   * As a compromise, you cannot specify your own fileclass anymore, beside
+   * extending sfFilebaseUploadedFile and -manager.
+   *
    * Available options:
    *
    *  * max_size:             The maximum file size
    *  * mime_types:           Allowed mime types array or category (available categories: web_images)
-   *  * mime_type_guessers:   An array of mime type guesser PHP callables (must return the mime type or null)
    *  * mime_categories:      An array of mime type categories (web_images is defined by default)
-   *  * path:                 The path where to save the file - as used by the sfValidatedFile class (optional)
-   *  * validated_file_class: Name of the class that manages the cleaned uploaded file (optional)
-   *
-   * There are 3 built-in mime type guessers:
-   *
-   *  * guessFromFileinfo:        Uses the finfo_open() function (from the Fileinfo PECL extension)
-   *  * guessFromMimeContentType: Uses the mime_content_type() function (deprecated)
-   *  * guessFromFileBinary:      Uses the file binary (only works on *nix system)
    *
    * Available error codes:
    *
