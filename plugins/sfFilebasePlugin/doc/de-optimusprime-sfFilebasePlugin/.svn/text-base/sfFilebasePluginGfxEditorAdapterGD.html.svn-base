@@ -2,11 +2,87 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
   <html xmlns="http://www.w3.org/1999/xhtml">
 		<head>
-			<!-- template designed by Marco Von Ballmoos -->
+			<!-- template designed by Marco Von Ballmoos  -->
 			<title>Docs For Class sfFilebasePluginGfxEditorAdapterGD</title>
 			<link rel="stylesheet" href="../media/stylesheet.css" />
-			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
-		</head>
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
 		<body>
 			<div class="page-body">			
 <h2 class="class-name">Class sfFilebasePluginGfxEditorAdapterGD</h2>
@@ -34,7 +110,7 @@
 				<li><span class="field">todo:</span> Implement improved image editing capabilities.</li>
 			</ul>
 		<p class="notes">
-			Located in <a class="field" href="_sfFilebasePluginGfxEditorAdapterGD.php.html">/sfFilebasePluginGfxEditorAdapterGD.php</a> (line <span class="field">17</span>)
+			Located in <a class="field" href="_lib---sfFilebasePluginGfxEditorAdapterGD.php.html">/lib/sfFilebasePluginGfxEditorAdapterGD.php</a> (line <span class="field">17</span>)
 		</p>
 		
 				
@@ -101,53 +177,61 @@
 		</div>
 		<div class="info-box-body">			
 			<div class="method-summary">
-																																																																												
-												<div class="method-definition">
+																																																																																						
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#destroy" title="details" class="method-name">destroy</a>
 										()
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#initialize" title="details" class="method-name">initialize</a>
 											(<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditor.html">sfFilebasePluginGfxEditor</a></span>&nbsp;<span class="var-name">$gfxEditor</span>, <span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditor.html">sfFilebasePluginGfxEditor</a></span>&nbsp;<span class="var-name">$editor</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">boolean</span>
 										<a href="#isSupported" title="details" class="method-name">isSupported</a>
 										()
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#resize" title="details" class="method-name">resize</a>
 											(<span class="var-type"></span>&nbsp;<span class="var-name">$dimensions</span>, <span class="var-type">true</span>&nbsp;<span class="var-name">$scale</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginImage.html">sfFilebasePluginImage</a></span>
 										<a href="#rotate" title="details" class="method-name">rotate</a>
 											(<span class="var-type"></span>&nbsp;<span class="var-name">$deg</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$bgcolor</span>, <span class="var-type">float</span>&nbsp;<span class="var-name">$deg:</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$bgcolor:</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginImage.html">sfFilebasePluginImage</a></span>
 										<a href="#save" title="details" class="method-name">save</a>
 											([<span class="var-type">integer</span>&nbsp;<span class="var-name">$chmod</span> = <span class="var-default">0777</span>])
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#setDestination" title="details" class="method-name">setDestination</a>
 											(<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginImage.html">sfFilebasePluginImage</a></span>&nbsp;<span class="var-name">$destination</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#setQuality" title="details" class="method-name">setQuality</a>
 											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$quality</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#setSource" title="details" class="method-name">setSource</a>
 											(<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginImage.html">sfFilebasePluginImage</a></span>&nbsp;<span class="var-name">$source</span>, <span class="var-type">FimebaseImage</span>&nbsp;<span class="var-name">$image</span>)
 									</div>
-								</div>
+											</div>
 		</div>
 	</div>		
 
@@ -164,7 +248,8 @@
 							
 					</div>
 		<div class="info-box-body">
-			<a name="var$destination" id="$destination"><!-- --></A>
+			
+<a name="var$destination" id="$destination"><!-- --></A>
 <div class="evenrow">
 
 	<div class="var-header">
@@ -329,7 +414,6 @@
 		</div>
 		<div class="info-box-body">
 			<A NAME='method_detail'></A>
-
 <a name="methoddestroy" id="destroy"><!-- --></a>
 <div class="oddrow">
 	
@@ -652,7 +736,7 @@
 
 
 	<p class="notes" id="credit">
-		Documentation generated on Tue, 12 May 2009 08:07:26 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Tue, 12 May 2009 08:50:29 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</div></body>
 </html>
