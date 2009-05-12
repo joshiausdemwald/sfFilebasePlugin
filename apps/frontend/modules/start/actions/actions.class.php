@@ -53,7 +53,6 @@ class startActions extends sfActions
           $this->getUser()->setFlash('message', 'Files uploaded. Images slightly rotated because it makes no sense.');
           $this->redirect('start/index');
         }
-        exit;
       }
       if($create_directory_data !== null)
       {
