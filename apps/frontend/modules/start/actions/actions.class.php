@@ -86,6 +86,11 @@ class startActions extends sfActions
     $filebase = sfFilebasePlugin::getInstance();
     $file = $filebase->getFileByHash($hash);
     $this->forward404Unless($file instanceof sfFilebasePluginFile);
+    if($file instanceof sfFilebasePluginDirectory && ! $file->isEmpty())
+    {
+      $this->getUser()->setFlash('message', 'Directory not empty. Use sfFilebasePluginDirectory::delete(true) or sfFilebasePluginDirectory::deleteRecursive() to delete dir with containing files.');
+      $this->redirect('start/index');
+    }
     $file->delete();
     $this->getUser()->setFlash('message', 'File successfully deleted.');
     $this->redirect('start/index');

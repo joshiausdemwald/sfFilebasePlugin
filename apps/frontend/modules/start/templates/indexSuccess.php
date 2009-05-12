@@ -51,6 +51,7 @@
 <?php echo str_repeat('&nbsp;&nbsp;&nbsp;&nbsp;', $iter->getDepth()+1)?>
 <?php if($file instanceof sfFilebasePluginDirectory):?>
 <?php echo $file->getFilename()?>/
+<a href="<?php echo url_for('start/delete?f='.$file->getHash())?>">Delete this directory</a>
 <?php else:?>
 <a href="<?php echo $file->getAbsolutePathFromWebroot()?>">
 <?php echo $file->getFilename()?>

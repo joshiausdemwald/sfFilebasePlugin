@@ -46,20 +46,11 @@ class sfFilebasePluginDirectory extends sfFilebasePluginFile implements Iterator
    * Trys to delete the directory from fs.
    *
    * @throws sfFilebasePluginException
-   * @param boolean $ignore_contents: If set to true, dir is deleted
-   *                                  despite of its contents.
    * @return boolean true if deletion was successful
    */
-  public function delete($ignore_contents = false)
+  public function delete()
   {
-    if($ignore_contents)
-    {
-      return $this->deleteRecursive();
-    }
-    else
-    {
-      return $this->filebase->deleteDirectory($this);
-    }
+    return $this->filebase->deleteDirectory($this);
   }
 
   /**
