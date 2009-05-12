@@ -54,6 +54,7 @@
 <a href="<?php echo $file->getAbsolutePathFromWebroot()?>">
 <?php echo $file->getFilename()?>
 </a>
+<a href="<?php echo url_for('start/delete?f='.$file->getHash())?>">Delete this file</a>
 <?php endif?>
 <br />
 <?php endif?>

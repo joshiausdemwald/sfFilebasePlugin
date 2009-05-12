@@ -77,22 +77,17 @@ class startActions extends sfActions
         }
       }
     }
-    //$this->filebase = new sfFilebasePlugin();
-    
-    //$files = $this->filebase->moveAllUploadedFiles($this->filebase->getPathname());
-    //$this->images = array();
-    /*foreach($files AS $file)
-    {
-      if($file instanceof sfFilebasePluginImage)
-      {
-        $file->rotate(30);
-        $this->images[] = $file->getThumbnail(array(500));
-      }
-    }*/
-    
-    //$this->hamburg_bilder = array();
-    //foreach($this->filebase AS $file)
-    //  if($file instanceof sfFilebasePluginImage)
-    //    $this->hamburg_bilder[] = $file;
+  }
+
+  public function executeDelete(sfwebRequest $request)
+  {
+    $hash = $request->getParameter('f', null);
+    $this->forward404If($hash === null);
+    $filebase = new sfFilebasePlugin();
+    $file = $filebase->getFileByHash($hash);
+    $this->forward404Unless($file instanceof sfFilebasePluginFile);
+    $file->delete();
+    $this->getUser()->setFlash('message', 'File successfully deleted.');
+    $this->redirect('start/index');
   }
 }
