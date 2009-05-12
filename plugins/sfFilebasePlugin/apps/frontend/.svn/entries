@@ -1,50 +1,0 @@
-9
-
-dir
-18153
-http://svn.symfony-project.com/plugins/sfFilebasePlugin/apps/frontend
-http://svn.symfony-project.com
-
-
-
-2009-05-11T20:58:31.766060Z
-18152
-joshiausdemwald
-
-
-svn:special svn:externals svn:needs-lock
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-0
-
-i18n
-dir
-
-config
-dir
-
-lib
-dir
-
-modules
-dir
-
-templates
-dir
-
