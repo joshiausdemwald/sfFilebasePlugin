@@ -29,6 +29,7 @@
 <h1>Post-parsing</h1>
 <h2>Warnings:</h2><br>
 <b>Warning</b> - Class sfFilebasePluginValidatorFile parent sfValidatorBase not found<br>
+<b>Warning</b> - Class sfFilebasePluginWebRequest parent sfWebRequest not found<br>
 <a name="sfFilebasePlugin.php"></a>
 <h1>sfFilebasePlugin.php</h1>
 <h2>Warnings:</h2><br>
@@ -114,7 +115,7 @@
 <h2>Warnings:</h2><br>
 <b>Warning on line 16</b> - no @package tag was used in a DocBlock for file /home/joshi/www/test/plugins/sfFilebasePlugin/lib/sfFilebasePluginUtil.php<br>
 	<p class="notes" id="credit">
-		Documentation generated on Tue, 12 May 2009 17:14:54 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Tue, 12 May 2009 23:36:11 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</body>
 </html>

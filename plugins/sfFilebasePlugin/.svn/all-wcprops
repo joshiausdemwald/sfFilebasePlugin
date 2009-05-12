@@ -15,6 +15,12 @@ svn:wc:ra_dav:version-url
 V 48
 /!svn/ver/18172/plugins/sfFilebasePlugin/makedoc
 END
+sfFilebasePlugin-0.5.2.tgz
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/18196/plugins/sfFilebasePlugin/sfFilebasePlugin-0.5.2.tgz
+END
 package.xml
 K 25
 svn:wc:ra_dav:version-url
