@@ -107,7 +107,7 @@
 			<A NAME='method_detail'></A>
 
 <a name="methoddestroy" id="destroy"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">destroy</span> (line <span class="line-number">71</span>)
@@ -131,7 +131,7 @@
 			
 	</div>
 <a name="methodinitialize" id="initialize"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">initialize</span> (line <span class="line-number">24</span>)
@@ -160,7 +160,7 @@
 			
 	</div>
 <a name="methodisSupported" id="isSupported"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">isSupported</span> (line <span class="line-number">29</span>)
@@ -183,14 +183,14 @@
 			
 	</div>
 <a name="methodresize" id="resize"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">resize</span> (line <span class="line-number">50</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Resizes an image.  If scale set to true, image  may be resized greater than its original size.</p>
+<p class="short-description">Resizes an image. If scale set to true, image  may be resized greater than its original size.</p>
 	<ul class="tags">
 				<li><span class="field">return:</span> if success</li>
 				<li><span class="field">access:</span> public</li>
@@ -213,7 +213,7 @@
 			
 	</div>
 <a name="methodrotate" id="rotate"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">rotate</span> (line <span class="line-number">60</span>)
@@ -252,7 +252,7 @@
 			
 	</div>
 <a name="methodsave" id="save"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">save</span> (line <span class="line-number">66</span>)
@@ -282,7 +282,7 @@
 			
 	</div>
 <a name="methodsetDestination" id="setDestination"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">setDestination</span> (line <span class="line-number">41</span>)
@@ -315,7 +315,7 @@
 			
 	</div>
 <a name="methodsetSource" id="setSource"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">setSource</span> (line <span class="line-number">34</span>)
@@ -351,7 +351,7 @@
 
 
 	<p class="notes" id="credit">
-		Documentation generated on Mon, 11 May 2009 23:49:30 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Tue, 12 May 2009 08:07:26 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</div></body>
 </html>

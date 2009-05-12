@@ -329,10 +329,10 @@
 			<ul class="parameters">
 					<li>
 				<span class="var-type">string</span>
-				<span class="var-name">$cache_directory:</span><span class="var-description">: Cache directory may explicitely be                                       specified. Consider that the default                                       directory is accessible via browser.                                       Default is a subdirectory of                                       sfConfig::get('sf_upload_dir')</span>			</li>
+				<span class="var-name">$cache_directory:</span><span class="var-description">: Cache directory may explicitely be  specified. Consider that the default  directory is accessible via browser.  Default is a subdirectory of  sfConfig::get('sf_upload_dir')</span>			</li>
 					<li>
 				<span class="var-type">string</span>
-				<span class="var-name">$filebaseDirectory:</span><span class="var-description">: Filebase directory may explicetly be                                       specified. Consider that the default                                       directory is accessible via browser.                                       Default is sfConfig::get('sf_upload_dir')</span>			</li>
+				<span class="var-name">$filebaseDirectory:</span><span class="var-description">: Filebase directory may explicetly be  specified. Consider that the default  directory is accessible via browser.  Default is sfConfig::get('sf_upload_dir')</span>			</li>
 					<li>
 				<span class="var-type">string</span>
 				<span class="var-name">$mode</span>			</li>
@@ -883,7 +883,7 @@
 	
 	<!-- ========== Info from phpDoc block ========= -->
 <p class="short-description">Moves an uploaded File to specified Destination.</p>
-<p class="description"><p>Inclusion and exclusion rules consist of regex-strings,  they are used to check the target filenames against them.  Exclusion:   Matched filenames throw exceptions.  Incluseion:  Matched filenames will be passed as valid filenames.</p><p>$destination can be a string (absolute or relative pathname) or an  instance of sfFilebasePluginFile, it is the directory, not the full pathName of  the new file. The file can be renamed by setting $file_name, otherwise  the original name will be taken as filename.</p></p>
+<p class="description"><p>Inclusion and exclusion rules consist of regex-strings,  they are used to check the target filenames against them.  Exclusion: Matched filenames throw exceptions.  Incluseion: Matched filenames will be passed as valid filenames.</p><p>$destination can be a string (absolute or relative pathname) or an  instance of sfFilebasePluginFile, it is the directory, not the full pathName of  the new file. The file can be renamed by setting $file_name, otherwise  the original name will be taken as filename.</p></p>
 	<ul class="tags">
 				<li><span class="field">throws:</span> sfFilebasePluginException</li>
 				<li><span class="field">access:</span> public</li>
@@ -954,7 +954,7 @@
 			<ul class="parameters">
 					<li>
 				<span class="var-type">mixed</span>
-				<span class="var-name">$source</span><span class="var-description">: sfFilebasePluginFile | string $source:      The source file-name</span>			</li>
+				<span class="var-name">$source</span><span class="var-description">: sfFilebasePluginFile | string $source: The source file-name</span>			</li>
 					<li>
 				<span class="var-type">mixed</span>
 				<span class="var-name">$new_name</span><span class="var-description">: sfFilebasePluginFile | string $destination: The target file-name</span>			</li>
@@ -1035,7 +1035,7 @@
 				<span class="var-name">$deg</span>			</li>
 					<li>
 				<span class="var-type">$bgcolor:</span>
-				<span class="var-name">$bgcolor</span><span class="var-description">: The background color of the rotated image in html-hex                   notation, default #00000</span>			</li>
+				<span class="var-name">$bgcolor</span><span class="var-description">: The background color of the rotated image in html-hex  notation, default #00000</span>			</li>
 				</ul>
 		
 			
@@ -1161,7 +1161,7 @@
 
 
 	<p class="notes" id="credit">
-		Documentation generated on Mon, 11 May 2009 23:49:28 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Tue, 12 May 2009 08:07:24 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</div></body>
 </html>

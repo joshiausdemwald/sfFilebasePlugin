@@ -2,11 +2,87 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
   <html xmlns="http://www.w3.org/1999/xhtml">
 		<head>
-			<!-- template designed by Marco Von Ballmoos -->
+			<!-- template designed by Marco Von Ballmoos  -->
 			<title>Docs For Class sfFilebasePluginRecursiveIteratorIterator</title>
 			<link rel="stylesheet" href="../media/stylesheet.css" />
-			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
-		</head>
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
 		<body>
 			<div class="page-body">			
 <h2 class="class-name">Class sfFilebasePluginRecursiveIteratorIterator</h2>
@@ -31,7 +107,7 @@
 				<li><span class="field">see:</span> RecursiveDirectoryIterator</li>
 			</ul>
 		<p class="notes">
-			Located in <a class="field" href="_sfFilebasePluginRecursiveIteratorIterator.php.html">/sfFilebasePluginRecursiveIteratorIterator.php</a> (line <span class="field">18</span>)
+			Located in <a class="field" href="_lib---sfFilebasePluginRecursiveIteratorIterator.php.html">/lib/sfFilebasePluginRecursiveIteratorIterator.php</a> (line <span class="field">18</span>)
 		</p>
 		
 				
@@ -84,23 +160,25 @@
 		</div>
 		<div class="info-box-body">			
 			<div class="method-summary">
-																												
-												<div class="method-definition">
+																																						
+				<div class="method-definition">
 											<span class="method-result">sfFilebasePluginRecursiveIteratorIterator</span>
 										<a href="#__construct" title="details" class="method-name">__construct</a>
 											(<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginRecursiveDirectoryIterator.html">sfFilebasePluginRecursiveDirectoryIterator</a></span>&nbsp;<span class="var-name">$iterator</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$mode</span> = <span class="var-default">sfFilebasePluginRecursiveIteratorIterator::SELF_FIRST</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$flags</span> = <span class="var-default">0</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$tokenBegin</span> = <span class="var-default">&quot;&quot;</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$tokenEnd</span> = <span class="var-default">&quot;&quot;</span>])
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#beginChildren" title="details" class="method-name">beginChildren</a>
 										()
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#endChildren" title="details" class="method-name">endChildren</a>
 										()
 									</div>
-								</div>
+											</div>
 		</div>
 	</div>		
 
@@ -119,7 +197,8 @@
 							
 					</div>
 		<div class="info-box-body">
-			<a name="var$tokenBegin" id="$tokenBegin"><!-- --></A>
+			
+<a name="var$tokenBegin" id="$tokenBegin"><!-- --></A>
 <div class="oddrow">
 
 	<div class="var-header">
@@ -178,7 +257,6 @@
 		</div>
 		<div class="info-box-body">
 			<A NAME='method_detail'></A>
-
 <a name="method__construct" id="__construct"><!-- --></a>
 <div class="oddrow">
 	
@@ -348,7 +426,7 @@
 	</div>
 
 	<p class="notes" id="credit">
-		Documentation generated on Tue, 12 May 2009 08:07:26 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Tue, 12 May 2009 08:50:29 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</div></body>
 </html>

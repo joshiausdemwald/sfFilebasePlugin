@@ -16,7 +16,8 @@
 	<div class="info-box-title">Description</div>
 	<div class="nav-bar">
 					<span class="disabled">Description</span> |
-															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
 						
 											<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
 						
@@ -46,6 +47,9 @@
 		<div class="nav-bar">
 			<a href="#sec-description">Description</a> |
 						<span class="disabled">Constants</span> (<a href="#sec-consts">details</a>)
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
 										| 
 									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
 							
@@ -96,6 +100,47 @@
 		</div>
 	</div>
 
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																																<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$error" title="details" class="var-name">$error</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html">sfFilebasePlugin</a></span>
+					<a href="#$filebase" title="details" class="var-name">$filebase</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$name" title="details" class="var-name">$name</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$size" title="details" class="var-name">$size</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>
+					<a href="#$tmp_name" title="details" class="var-name">$tmp_name</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$type" title="details" class="var-name">$type</a>
+				</div>
+											</div>
+		</div>
+	</div>
 
 	<a name="sec-method-summary"></a>
 	<div class="info-box">
@@ -104,7 +149,10 @@
 			<a href="#sec-description">Description</a> |
 															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
 							
-									<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
 		</div>
 		<div class="info-box-body">			
 			<div class="method-summary">
@@ -163,13 +211,158 @@
 		</div>
 	</div>		
 
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$error" id="$error"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$error</span>
+						(line <span class="line-number">53</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$filebase" id="$filebase"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html">sfFilebasePlugin</a></span>
+			<span class="var-name">$filebase</span>
+						(line <span class="line-number">33</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$name" id="$name"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$name</span>
+						(line <span class="line-number">38</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$size" id="$size"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$size</span>
+						(line <span class="line-number">58</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$tmp_name" id="$tmp_name"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>
+			<span class="var-name">$tmp_name</span>
+						(line <span class="line-number">43</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$type" id="$type"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$type</span>
+						(line <span class="line-number">48</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
 	
 	<a name="sec-methods"></a>
 	<div class="info-box">
 		<div class="info-box-title">Methods</div>
 		<div class="nav-bar">
 			<a href="#sec-description">Description</a> |
-																		<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																			<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
 							
 										<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
 						
@@ -398,7 +591,7 @@
 	
 	<!-- ========== Info from phpDoc block ========= -->
 <p class="short-description">Moves the uploaded File to specified Destination.</p>
-<p class="description"><p>Inclusion and exclusion rules consist of regex-strings,  they are used to check the target filenames against them.  Exclusion:   Matched filenames throw exceptions.  Incluseion:  Matched filenames will be passed as valid filenames.</p><p>$destination can be a string (absolute or relative pathname) or an  instance of sfFilebasePluginFile, it is the directory, not the full pathName of  the new file. The file can be renamed by setting $file_name, otherwise  the original name will be taken as filename.</p></p>
+<p class="description"><p>Inclusion and exclusion rules consist of regex-strings,  they are used to check the target filenames against them.  Exclusion: Matched filenames throw exceptions.  Incluseion: Matched filenames will be passed as valid filenames.</p><p>$destination can be a string (absolute or relative pathname) or an  instance of sfFilebasePluginFile, it is the directory, not the full pathName of  the new file. The file can be renamed by setting $file_name, otherwise  the original name will be taken as filename.</p></p>
 	<ul class="tags">
 				<li><span class="field">see:</span> Filbase::moveUploadedFile()</li>
 				<li><span class="field">access:</span> public</li>
@@ -453,7 +646,7 @@
 	
 	<!-- ========== Info from phpDoc block ========= -->
 <p class="short-description">Moves an uploaded file into its final destination.</p>
-<p class="description"><p>Inclusion and exclusion rules consist of regex-strings,  they are used to check the target filenames against them.  Exclusion:   Matched filenames throw exceptions.  Inclusion:   Matched filenames will be passed as valid filenames.</p><p>$destination can be a string (absolute or relative (to sfFilebasePlugin) pathname) or an  instance of sfFilebasePluginFile.</p></p>
+<p class="description"><p>Inclusion and exclusion rules consist of regex-strings,  they are used to check the target filenames against them.  Exclusion: Matched filenames throw exceptions.  Inclusion: Matched filenames will be passed as valid filenames.</p><p>$destination can be a string (absolute or relative (to sfFilebasePlugin) pathname) or an  instance of sfFilebasePluginFile.</p></p>
 	<ul class="tags">
 				<li><span class="field">access:</span> public</li>
 			</ul>
@@ -513,7 +706,8 @@
 										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
 						
 			
-										| 
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														| 
 									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
 							
 					</div>
@@ -651,7 +845,7 @@
 	</div>
 
 	<p class="notes" id="credit">
-		Documentation generated on Mon, 11 May 2009 23:49:31 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Tue, 12 May 2009 08:07:27 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</div></body>
 </html>

@@ -2,11 +2,87 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
   <html xmlns="http://www.w3.org/1999/xhtml">
 		<head>
-			<!-- template designed by Marco Von Ballmoos -->
+			<!-- template designed by Marco Von Ballmoos  -->
 			<title>Docs For Class sfFilebasePluginStruct</title>
 			<link rel="stylesheet" href="../media/stylesheet.css" />
-			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
-		</head>
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
 		<body>
 			<div class="page-body">			
 <h2 class="class-name">Class sfFilebasePluginStruct</h2>
@@ -30,7 +106,7 @@
         		<!-- ========== Info from phpDoc block ========= -->
 <p class="short-description">To change this template, choose Tools | Templates  and open the template in the editor.</p>
 		<p class="notes">
-			Located in <a class="field" href="_sfFilebasePluginStruct.php.html">/sfFilebasePluginStruct.php</a> (line <span class="field">9</span>)
+			Located in <a class="field" href="_lib---sfFilebasePluginStruct.php.html">/lib/sfFilebasePluginStruct.php</a> (line <span class="field">9</span>)
 		</p>
 		
 				
@@ -104,83 +180,97 @@
 		</div>
 		<div class="info-box-body">			
 			<div class="method-summary">
-																																																																																																																												
-												<div class="method-definition">
+																																																																																																																																						
+				<div class="method-definition">
 											<span class="method-result">sfFilebasePluginStruct</span>
 										<a href="#__construct" title="details" class="method-name">__construct</a>
 											([<span class="var-type"></span>&nbsp;<span class="var-name">$stdval</span> = <span class="var-default">array()</span>])
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">mixed</span>
 										<a href="#getAttribute" title="details" class="method-name">getAttribute</a>
 											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$key</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">null</span>])
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">ArrayIterator</span>
 										<a href="#getIterator" title="details" class="method-name">getIterator</a>
 										()
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">string</span>
 										<a href="#getNameFromGetterSetter" title="details" class="method-name">getNameFromGetterSetter</a>
 											(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$namete</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">ArrayIterator</span>
 										<a href="#getStore" title="details" class="method-name">getStore</a>
 										()
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">boolean</span>
 										<a href="#offsetExists" title="details" class="method-name">offsetExists</a>
 											(<span class="var-type">string</span>&nbsp;<span class="var-name">$offset</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">mixed</span>
 										<a href="#offsetGet" title="details" class="method-name">offsetGet</a>
 											(<span class="var-type">string</span>&nbsp;<span class="var-name">$offset</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#offsetSet" title="details" class="method-name">offsetSet</a>
 											(<span class="var-type">string</span>&nbsp;<span class="var-name">$offset</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#offsetUnset" title="details" class="method-name">offsetUnset</a>
 											(<span class="var-type">string</span>&nbsp;<span class="var-name">$offset</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#setAttribute" title="details" class="method-name">setAttribute</a>
 											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#setStore" title="details" class="method-name">setStore</a>
 											(<span class="var-type"></span>&nbsp;<span class="var-name">$store</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#setStructClass" title="details" class="method-name">setStructClass</a>
 											([<span class="var-type">string</span>&nbsp;<span class="var-name">$class_name</span> = <span class="var-default">'sfFilebasePluginStruct'</span>])
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">mixed</span>
 										<a href="#__call" title="details" class="method-name">__call</a>
 											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$args</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">mixed</span>
 										<a href="#__get" title="details" class="method-name">__get</a>
 											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
 									</div>
-																<div class="method-definition">
+														
+				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#__set" title="details" class="method-name">__set</a>
 											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
 									</div>
-								</div>
+											</div>
 		</div>
 	</div>		
 
@@ -198,7 +288,8 @@
 							
 					</div>
 		<div class="info-box-body">
-			<a name="var$class_name" id="$class_name"><!-- --></A>
+			
+<a name="var$class_name" id="$class_name"><!-- --></A>
 <div class="evenrow">
 
 	<div class="var-header">
@@ -257,7 +348,6 @@
 		</div>
 		<div class="info-box-body">
 			<A NAME='method_detail'></A>
-
 <a name="method__construct" id="__construct"><!-- --></a>
 <div class="evenrow">
 	
@@ -739,7 +829,7 @@
 
 
 	<p class="notes" id="credit">
-		Documentation generated on Tue, 12 May 2009 08:07:26 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Tue, 12 May 2009 08:50:29 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</div></body>
 </html>
