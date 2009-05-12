@@ -482,4 +482,24 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
   {
     return sfFilebasePluginUtil::getIsImage($file);
   }
+
+  /**
+   * Returns a file that filename previously was
+   * encoded by getHash().
+   *
+   * Returns null if file does not exist.
+   *
+   * @return sfFilebasePluginFile $file
+   */
+  public function getFileByHash($hash)
+  {
+    foreach(new RecursiveIteratorIterator($this->getIterator(), RecursiveIteratorIterator::SELF_FIRST) AS $file)
+    {
+      if($file->getHash() === $hash)
+      {
+        return $file;
+      }
+    }
+    return null;
+  }
 }
