@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/18157/plugins/sfFilebasePlugin/doc/default
+END
+_apps---frontend---lib---myUser.class.php.html
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/!svn/ver/18157/plugins/sfFilebasePlugin/doc/default/_apps---frontend---lib---myUser.class.php.html
+END
+_test---unit---FilebaseTest.php.html
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/18157/plugins/sfFilebasePlugin/doc/default/_test---unit---FilebaseTest.php.html
+END
+_apps---frontend---config---frontendConfiguration.class.php.html
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/!svn/ver/18157/plugins/sfFilebasePlugin/doc/default/_apps---frontend---config---frontendConfiguration.class.php.html
+END
+_test---unit---splTest.php.html
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/18157/plugins/sfFilebasePlugin/doc/default/_test---unit---splTest.php.html
+END
+_apps---frontend---modules---start---templates---indexSuccess.php.html
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/!svn/ver/18157/plugins/sfFilebasePlugin/doc/default/_apps---frontend---modules---start---templates---indexSuccess.php.html
+END
+myUser.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/18157/plugins/sfFilebasePlugin/doc/default/myUser.html
+END
+frontendConfiguration.html
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/18157/plugins/sfFilebasePlugin/doc/default/frontendConfiguration.html
+END
+_apps---frontend---templates---layout.php.html
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/!svn/ver/18157/plugins/sfFilebasePlugin/doc/default/_apps---frontend---templates---layout.php.html
+END

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title></title>
+			<link rel="stylesheet" href="media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+						<h1 align="center">README</h1>
+<pre>
+sfFilebasePlugin
+================
+
+sfFilebasePlugin provides an unified API for filesystem related operations with
+focus on web based applications.
+
+It consists of a set of classes based on built in SPL classes (SplFileInfo/
+-Object, DirectoryIterator ...) written by Marcus Boerger.
+
+Documentation for these classes may be found in the
+[API-docs](http://www.php.net/~helly/php/ext/spl/).
+
+It extends the built in SPL-Classes by dissociating more and different files or
+types. Resulting in a collection of classes like &quot;sfFilebasePluginDirectory&quot;,
+&quot;sfFilebasePluginImage&quot;, &quot;sfFilebasePluginThumbnail&quot; ... planning
+sfFilebasePluginZIP or something like that. Additionally, the plugin provides an
+extension of SplFileObject named &quot;sfFilebasePluginFileObject&quot;.
+
+SfFilebasePlugin can help you if you want to
+
+*  upload files,
+
+*  search and retrieve files from filesystem,
+
+*  read/write/execute files,
+
+*  do architecture dependent filesystem operations like chmod, mkdir, touch.
+
+*  easily convert path names from absolute to relative, web root based or filebase
+   root based. Each file related plugin method has an overloaded signature, so
+   that it does not matter whether you pass an absolute, relative pathname or an
+   instance of sfFilebasePluginFile or one of its children.
+
+*  manipulate images, generating thumbnails (please help to implement much more
+   image-manipulation capabilities). Included is a hidden cache layer which
+   automatically stores generated binary data.
+
+Installation
+------------
+
+_(Install instructions taken from README in sfThumbnailPlugin, (c) Fabien Potencier)_
+
+To install the plugin for a symfony project, the usual process is to use the
+symfony command line.
+
+With symfony 1.0, use:
+
+    $ symfony plugin-install http://plugins.symfony-project.com/sfFilebasePlugin
+
+With symfony 1.1/1.2, use:
+
+    $ symfony plugin:install sfFilebasePlugin
+
+Alternatively, if you don't have PEAR installed, you can download the latest
+package attached to this plugin's wiki page and extract it under your project's
+`plugins/` directory.
+
+Clear the cache to enable the autoloading to find the new classes:
+
+    $ php symfony cc
+
+You're done.
+
+*Note*: If the [GD library](http://php.net/gd) is not activated, you might
+have to uncomment the related line in your `php.ini` and restart your web
+server to enable PHP image handling functions.
+
+*Note*: To use !ImageMagick, you'll need to install the pecl
+[imagick extension](http://php.net/imagick). On debian/ubuntu, do something
+like
+
+    sudo apt-get install php5-imagick
+
+On Windows, you'll probably have to activate the extension in your php.ini.
+
+Contents
+--------
+
+The plugin contains a set of classes, that are all instanciated by a file
+controller called sfFilebasePlugin. Please take a look at the phpdocs to see how
+it works. There is a static utility class named sfFilebasePluginUtil that
+provides general worker methods.
+
+Examples
+--------
+
+There is a sample project under version control:
+[http://svn.symfony-project.com/plugins/sfFilebasePlugin/apps/](http://svn.symfony-project.com/plugins/sfFilebasePlugin/apps/)
+Simple create a new symfony project, copy the apps-folder, thats it (i think).
+You'll see some forms, can upload files, create directories and see some image
+transformations in action. Perhaps it can be useful.
+
+Short code samples
+------------------
+
+Create a new sfFilebasePlugin:
+
+    $filebase = new sfFilebasePlugin('/var/www/my_filebase_dir');
+
+Create a new sfFilebasePlugin in sf_project/web/uploads:
+
+    $filebase = new sfFilebasePlugin()
+
+The sfFilebasePlugin &quot;root&quot;-directory must be writable by php. In standard php
+configurations with mod_php you usually have to chmod(777) it or change the
+ownership to wwwrun or something like that.
+
+Iterate over sub-directories:
+
+    foreach($filebase AS $file)
+    {
+       //lets create thumbnails for all images
+       $thumbnails = array();
+       if($file instanceof sfFilebasePluginImage)
+       {
+         $thumbnails[] = $file-&gt;getThumbnail(array('width'=&gt;120));
+       }
+
+       // Make a few stupid things to show up
+       $file-&gt;copy('my_new_filename.ext');
+       $file-&gt;copy('/path/to/folder/in/filebase/filename.ext');
+       $file-&gt;copy($filebase-&gt;getFilebaseFile('my_folder/file.ext'));
+    }
+    // do something with the thumbnails.
+
+File-Uploads:
+
+    $destination_directory = &quot;my_uploads&quot;;
+    $files = $filebase-&gt;getUploadedFiles();
+    $filebase-&gt;moveUploadedFile($files[0], $destination_directory);
+
+    // Or by handling all uploaded files:
+    $filebase-&gt;moveAllUploadedFiles($destination_directory);
+
+Error-Handling
+--------------
+The above code is incomplete because it does not show any error handling.
+SfFilebasePlugin handles errors by insanely throwing sfFilebasePluginException
+that can be caught for merely any operation. Please give me a hint if you think
+that there is an exception that makes no sense in the context or if you miss one
+in another part of the code or this particular runtime situation.
+
+Developement
+------------
+
+SfFilebasePlugin is in developement state. Standard methods to deal with files
+are meant to be stable, but there is space for a lot of improvements. Code
+contributions and -improvements, error reportings as bugfixes are very welcomed!
+
+Roadmap
+-------
+I'd love to see some file compression support in the sfFilebasePlugin - but i
+think at the moment it'd be better to work on improving stability and testing.
+
+This plugin is ideal if you want to have a solid &quot;virtual filesystem&quot; in a new
+project and you are also willing to improve and fix it while coding as well as
+optimizing the api for usability. That's what agile devopement is meant to
+be ;););).
+
+There are a few concrete features that i have in mind for the near future:
+
+* Improving unit and functional tests
+* Bug tracking and fixing
+* Better symfony-integration
+
+  * Integration in sfForms as an alternative to sfValidatorFile, or perhaps a
+    combination of both
+  * Image processing: There are two adapters, one for imagick extension (no 
+    system calls like in sfThumbnailPlugin, but i simply don't know what is the
+    better way doing it) and GD. This is redundant, because sfThumbnailPlugin 
+    also provides 2 adapters. Perhaps integrate it as a plugin-dependancy?
+  * More, More, More! Image processing capabilities (experimental rotation is
+    built in, perhaps a web2.0 mirror effect or something like this)
+
+Test
+----
+
+I began to write some unit-tests on it, but they do not fit in every aspect. So
+if you want to report a bug, i would appreciate if you'd pass unit or functional
+tests that reproduce the issue.
+
+Please note that sfFilebasePlugin was developed on a linux machine running
+ubuntu and php5.2.6 and symfony 1.2. It should run on similar platforms, too,
+but i did not test it.
+
+Tests should also consider other operating systems like (what was its name?
+ahhh, got it:) windows and rich man's MacOS.
+
+Ok, i hope that this plugin is useful, i'd love to receive your comments and
+critiques.
+
+Have fun ;)
+</pre>
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 12 May 2009 08:16:43 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+	</p>
+	</body>
+</html>
