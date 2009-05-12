@@ -20,5 +20,5 @@
  */
 function get_filebase($path_name = null, $cache_directory = null)
 {
-  return sfFilebasePlugin::instance($path_name, $cache_directory);
+  return sfFilebasePlugin::getInstance($path_name, $cache_directory);
 }
