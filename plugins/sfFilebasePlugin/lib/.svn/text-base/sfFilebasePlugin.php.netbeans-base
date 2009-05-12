@@ -346,9 +346,18 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
    *
    * @return array sfFilebasePluginUploadedFile $files
    */
-  public function getUploadedFiles()
+  public function getUploadedFiles($index = null, $default = null)
   {
-    return $this->uploadedFilesManager->getUploadedFiles();
+    $files = $this->uploadedFilesManager->getUploadedFiles();
+    if($index !== null)
+    {
+      if(is_array($files) && array_key_exists($index, $files))
+      {
+        return $files[$index];
+      }
+      return $default;
+    }
+    return $files;
   }
 
   /**

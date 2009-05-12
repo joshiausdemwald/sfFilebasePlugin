@@ -69,8 +69,22 @@ class sfFilebasePluginUploadedFile
    */
   function __construct($name, $tmp_name, $type, $error, $size, sfFilebasePlugin $filebase)
   {
-    $this->name     = $name;
+    if (!$name)
+      $name = '';
+    
+    if (!$error)
+      $error = self::UPLOAD_ERR_OK;
+    
     $this->tmp_name = $filebase->getFilebaseFile($tmp_name);
+
+    if (!$size)
+      $size = $this->tmp_name->getSize();
+      
+    if (!$type)
+      $type = $this->tmp_name->getMimeType() ? $this->tmp_name->getMimeType() : 'application/octet-stream';
+    
+    
+    $this->name     = $name;
     $this->type     = $type;
     $this->error    = $error;
     $this->size     = $size;
@@ -131,13 +145,25 @@ class sfFilebasePluginUploadedFile
   }
 
   /**
-   * Returns true if an upload
-   * error occured
+   * Returns true if there are file upload errors.
+   * If the argument $errcode is given, state is
+   * checked by this specific errcode.
+   * @example $file->isError()
+   * @example $file->isError(sfFilebaseUploadedFile::UPLOAD_ERR_NO_FILE)
    * @return boolean
    */
-  public function isError()
+  public function isError($errcode = null)
   {
-    return $this->error !== self::UPLOAD_ERR_OK;
+    if($errcode === null || $errcode === self::UPLOAD_ERR_OK)
+    {
+      return $this->hasError();
+    }
+    return $this->getError() === $errcode;
+  }
+
+  public function hasError()
+  {
+    return $this->getError() !== self::UPLOAD_ERR_OK;
   }
 
   /**

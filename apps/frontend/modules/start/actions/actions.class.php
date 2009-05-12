@@ -48,15 +48,12 @@ class startActions extends sfActions
             if($file instanceof sfFilebasePluginImage)
             {
               $file->rotate('20');
-              $this->getUser()->setFlash('message', 'Image uploaded and rotated a bit.');
             }
-            else
-            {
-              $this->getUser()->setFlash('message', 'File uploaded.');
-            }
-            $this->redirect('start/index');
           }
+          $this->getUser()->setFlash('message', 'Files uploaded. Images slightly rotated because it makes no sense.');
+          $this->redirect('start/index');
         }
+        exit;
       }
       if($create_directory_data !== null)
       {
@@ -74,7 +71,7 @@ class startActions extends sfActions
           else
           {
             $this->getUser()->setFlash('message', 'Directory created.');
-            $this->filebase->mkDir($dirname);
+            $this->filebase->mkDir($dirname, 0777);
             $this->redirect('start/index');
 
           }
