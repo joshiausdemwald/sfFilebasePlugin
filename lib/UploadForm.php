@@ -14,14 +14,23 @@ class UploadForm extends sfForm
         $directories[$dir->getRelativePathFromFilebaseDirectory()] = str_repeat('&nbsp;&nbsp;&nbsp;&nbsp;', $iter->getDepth()+1) . $dir->getFilename();
       }
     }
+    
+    $files = new sfWidgetFormSchema();
+    $validator_files = new sfValidatorSchema();
+    
+    $files['0'] = new sfWidgetFormInputFile();
+    $files['1'] = new sfWidgetFormInputFile();
+
+    $validator_files['0'] = new sfFilebasePluginValidatorFile(array('required'=>true));
+    $validator_files['1'] = new sfFilebasePluginValidatorFile(array('required'=>true));
 
     $this->setWidgets(array(
-      'upload' => new sfWidgetFormInputFile(),
+      'files' => $files,
       'directory' => new sfWidgetFormChoice(array('choices'=>$directories))
     ));
 
     $this->setValidators(array(
-      'upload' => new sfValidatorFile(array('required'=>true)),
+      'files' => $validator_files,
       'directory' => new sfValidatorChoice(array('choices'=>array_keys($directories), 'required' => false))
     ));
 

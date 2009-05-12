@@ -34,12 +34,15 @@ class startActions extends sfActions
       $create_directory_data = $request->getParameter('directory', null);
       if($upload_data !== null)
       {
-        $this->upload_form->bind($upload_data, $request->getFiles('upload'));
+        
+        $filebase = new sfFilebasePlugin();
+
+        $this->upload_form->bind($upload_data, $filebase->getUploadedFiles('upload'));
+        
         if($this->upload_form->isValid())
         {
-          $files = $this->filebase->getUploadedFiles();
-          $file = $files['upload']['upload'];
-          if(!$file->isError())
+          $files = $this->upload_form->getValue('files');
+          foreach($files AS $file)
           {
             $file = $file->moveUploadedFile($this->filebase->getFilebaseFile((string)$this->upload_form->getValue('directory')));
             if($file instanceof sfFilebasePluginImage)

@@ -11,9 +11,9 @@
     <legend>Fileupload</legend>
     <p>
       <?php echo $upload_form->renderHiddenFields()?>
-      <?php echo $upload_form['upload']->renderError()?>
-      <?php echo $upload_form['upload']->renderLabel('Select file:')?><br />
-      <?php echo $upload_form['upload']?>
+      <?php echo $upload_form['files']->renderError()?>
+      <?php echo $upload_form['files']->renderLabel('Select file:')?><br />
+      <?php echo $upload_form['files']?>
     </p>
     <p>
       <?php echo $upload_form['directory']->renderError()?>
