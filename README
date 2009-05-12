@@ -1,0 +1,10 @@
+This is a stub symfony project, the plugin can be found unter ./plugins/sfFilebasePlugin.
+
+Under ./apps you'll find a small sample application for demo/documentation purpose.
+
+To install the plugin via symfony task, refer to the README or browse [http://symfony-project.org/plugins/sfFilebasePlugin](the symfony plugin site).
+
+There is also an svn repos to be found at the symfony plugins site. This one is used by me. I'll try to setup both repositories up-to-date, but the bot
+is me ;)
+
+Have fun!
