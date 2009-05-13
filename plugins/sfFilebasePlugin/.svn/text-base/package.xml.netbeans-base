@@ -10,11 +10,10 @@
     <email>johannes.heinen@gmail.com</email>
     <active>yes</active>
   </lead>
-  <date>2009-05-12</date>
-  <time>23:59:59</time>
+  <date>2009-05-13</date>
   <version>
-    <release>0.5.2</release>
-    <api>0.5.2</api>
+    <release>0.5.3</release>
+    <api>0.5.3</api>
   </version>
   <stability>
     <release>stable</release>
@@ -74,6 +73,24 @@
   <phprelease>
   </phprelease>
   <changelog>
+    <release>
+      <version>
+        <release>0.5.3</release>
+        <api>0.5.3</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-05-13</date>
+      <notes>
+      * Improved directory deletion:
+        sfFilebasePluginDirectory::delete() now gets a parameter, that, if set
+        to TRUE, deletes the directory and its contents, recursively by internally
+        calling sfFilebasePluginDirectory::deleteRecursive()
+      </notes>
+    </release>
     <release>
       <version>
         <release>0.5.2</release>

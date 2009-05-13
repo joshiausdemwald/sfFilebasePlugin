@@ -12,7 +12,7 @@
   </lead>
   <date>2009-05-13</date>
   <version>
-    <release>0.5.3</release>
+    <release>0.5.4</release>
     <api>0.5.3</api>
   </version>
   <stability>
@@ -32,6 +32,9 @@
         <dir name="Validator">
           <file role="php" name="sfFilebasePluginValidatorFile.php" />
         </dir>
+        <dir name="helper">
+          <file role="php" name="sfFilebasePluginHelper.php" />
+        </dir>
         <file role="php" name="sfFilebasePlugin.php" />
         <file role="php" name="sfFilebasePluginDirectory.php" />
         <file role="php" name="sfFilebasePluginException.php" />
@@ -50,6 +53,7 @@
         <file role="php" name="sfFilebasePluginUploadedFile.php" />
         <file role="php" name="sfFilebasePluginUploadedFilesManager.php" />
         <file role="php" name="sfFilebasePluginUtil.php" />
+        <file role="php" name="sfFilebasePluginWebRequest.php" />
       </dir>
     </dir>
   </contents>
@@ -73,6 +77,21 @@
   <phprelease>
   </phprelease>
   <changelog>
+    <release>
+      <version>
+        <release>0.5.4</release>
+        <api>0.5.3</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-05-13</date>
+      <notes>
+      * New files are now included in package.xml
+      </notes>
+    </release>
     <release>
       <version>
         <release>0.5.3</release>
