@@ -12,7 +12,7 @@
   </lead>
   <date>2009-05-13</date>
   <version>
-    <release>0.5.4</release>
+    <release>0.5.5</release>
     <api>0.5.3</api>
   </version>
   <stability>
@@ -25,36 +25,28 @@
     <dir name="/">
       <file role="data" name="README" />
       <file role="data" name="LICENSE" />
-      <dir name="config">
-        <file role="php" name="config.php" />
-      </dir>
-      <dir name="lib">
-        <dir name="Validator">
-          <file role="php" name="sfFilebasePluginValidatorFile.php" />
-        </dir>
-        <dir name="helper">
-          <file role="php" name="sfFilebasePluginHelper.php" />
-        </dir>
-        <file role="php" name="sfFilebasePlugin.php" />
-        <file role="php" name="sfFilebasePluginDirectory.php" />
-        <file role="php" name="sfFilebasePluginException.php" />
-        <file role="php" name="sfFilebasePluginFile.php" />
-        <file role="php" name="sfFilebasePluginFileExif.php" />
-        <file role="php" name="sfFilebasePluginFileObject.php" />
-        <file role="php" name="sfFilebasePluginGfxEditor.php" />
-        <file role="php" name="sfFilebasePluginGfxEditorAdapterGD.php" />
-        <file role="php" name="sfFilebasePluginGfxEditorAdapterIMagick.php" />
-        <file role="php" name="sfFilebasePluginGfxEditorAdapterInterface.php" />
-        <file role="php" name="sfFilebasePluginImage.php" />
-        <file role="php" name="sfFilebasePluginRecursiveDirectoryIterator.php" />
-        <file role="php" name="sfFilebasePluginRecursiveIteratorIterator.php" />
-        <file role="php" name="sfFilebasePluginStruct.php" />
-        <file role="php" name="sfFilebasePluginThumbnail.php" />
-        <file role="php" name="sfFilebasePluginUploadedFile.php" />
-        <file role="php" name="sfFilebasePluginUploadedFilesManager.php" />
-        <file role="php" name="sfFilebasePluginUtil.php" />
-        <file role="php" name="sfFilebasePluginWebRequest.php" />
-      </dir>
+        <file role="data" name="config/config.php" />
+        <file role="data" name="lib/Validator/sfFilebasePluginValidatorFile.php" />
+        <file role="data" name="lib/helper/sfFilebasePluginHelper.php" />
+        <file role="data" name="lib/sfFilebasePlugin.php" />
+        <file role="data" name="lib/sfFilebasePluginDirectory.php" />
+        <file role="data" name="lib/sfFilebasePluginException.php" />
+        <file role="data" name="lib/sfFilebasePluginFile.php" />
+        <file role="data" name="lib/sfFilebasePluginFileExif.php" />
+        <file role="data" name="lib/sfFilebasePluginFileObject.php" />
+        <file role="data" name="lib/sfFilebasePluginGfxEditor.php" />
+        <file role="data" name="lib/sfFilebasePluginGfxEditorAdapterGD.php" />
+        <file role="data" name="lib/sfFilebasePluginGfxEditorAdapterIMagick.php" />
+        <file role="data" name="lib/sfFilebasePluginGfxEditorAdapterInterface.php" />
+        <file role="data" name="lib/sfFilebasePluginImage.php" />
+        <file role="data" name="lib/sfFilebasePluginRecursiveDirectoryIterator.php" />
+        <file role="data" name="lib/sfFilebasePluginRecursiveIteratorIterator.php" />
+        <file role="data" name="lib/sfFilebasePluginStruct.php" />
+        <file role="data" name="lib/sfFilebasePluginThumbnail.php" />
+        <file role="data" name="lib/sfFilebasePluginUploadedFile.php" />
+        <file role="data" name="lib/sfFilebasePluginUploadedFilesManager.php" />
+        <file role="data" name="lib/sfFilebasePluginUtil.php" />
+        <file role="data" name="lib/sfFilebasePluginWebRequest.php" />
     </dir>
   </contents>
   <dependencies>
@@ -77,6 +69,21 @@
   <phprelease>
   </phprelease>
   <changelog>
+     <release>
+      <version>
+        <release>0.5.5</release>
+        <api>0.5.3</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-05-13</date>
+      <notes>
+      * Fixed files in package.xml
+      </notes>
+    </release>
     <release>
       <version>
         <release>0.5.4</release>
