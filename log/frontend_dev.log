@@ -7512,3 +7512,515 @@ May 13 09:15:20 symfony [info] {sfWebDebugLogger} Action "start/index" 14.44 ms 
 May 13 09:15:20 symfony [info] {sfWebDebugLogger} View "Success" for "start/index" 25.14 ms (1)
 May 13 09:15:20 symfony [info] {sfWebResponse} Send content (76847 o)
 May 13 09:15:20 symfony [info] {myUser} Remove old flash messages ("message")
+May 13 10:42:53 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 13 10:42:53 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 13 10:42:53 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 13 10:42:53 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'start',  'action' => 'index',)
+May 13 10:42:53 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 13 10:42:53 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 13 10:42:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 13 10:42:53 symfony [info] {startActions} Call "startActions->executeIndex()"
+May 13 10:42:53 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/modules/start/templates/indexSuccess.php"
+May 13 10:42:53 symfony [info] {sfPHPView} Decorate content with "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 10:42:53 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 10:42:53 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 13 10:42:53 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 13 10:42:53 symfony [info] {sfWebDebugLogger} Configuration 5.65 ms (9)
+May 13 10:42:53 symfony [info] {sfWebDebugLogger} Action "start/index" 15.34 ms (1)
+May 13 10:42:53 symfony [info] {sfWebDebugLogger} View "Success" for "start/index" 16.45 ms (1)
+May 13 10:42:53 symfony [info] {sfWebResponse} Send content (73055 o)
+May 13 12:25:02 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 13 12:25:02 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 13 12:25:02 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 13 12:25:02 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'start',  'action' => 'index',)
+May 13 12:25:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 13 12:25:02 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 13 12:25:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 13 12:25:02 symfony [info] {startActions} Call "startActions->executeIndex()"
+May 13 12:25:02 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/modules/start/templates/indexSuccess.php"
+May 13 12:25:02 symfony [info] {sfPHPView} Decorate content with "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 12:25:02 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 12:25:02 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 13 12:25:02 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 13 12:25:02 symfony [info] {sfWebDebugLogger} Configuration 5.21 ms (9)
+May 13 12:25:02 symfony [info] {sfWebDebugLogger} Action "start/index" 20.27 ms (1)
+May 13 12:25:02 symfony [info] {sfWebDebugLogger} View "Success" for "start/index" 28.73 ms (1)
+May 13 12:25:02 symfony [info] {sfWebResponse} Send content (72730 o)
+May 13 12:25:04 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 13 12:25:04 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 13 12:25:04 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 13 12:25:04 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'start',  'action' => 'index',)
+May 13 12:25:04 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 13 12:25:04 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 13 12:25:04 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 13 12:25:04 symfony [info] {startActions} Call "startActions->executeIndex()"
+May 13 12:25:04 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/modules/start/templates/indexSuccess.php"
+May 13 12:25:04 symfony [info] {sfPHPView} Decorate content with "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 12:25:04 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 12:25:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 13 12:25:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 13 12:25:04 symfony [info] {sfWebDebugLogger} Configuration 5.79 ms (9)
+May 13 12:25:04 symfony [info] {sfWebDebugLogger} Action "start/index" 23.12 ms (1)
+May 13 12:25:04 symfony [info] {sfWebDebugLogger} View "Success" for "start/index" 25.76 ms (1)
+May 13 12:25:04 symfony [info] {sfWebResponse} Send content (73620 o)
+May 13 12:25:10 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 13 12:25:10 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 13 12:25:10 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 13 12:25:10 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'start',  'action' => 'index',)
+May 13 12:25:10 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 13 12:25:10 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 13 12:25:10 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 13 12:25:10 symfony [info] {startActions} Call "startActions->executeIndex()"
+May 13 12:25:10 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/modules/start/templates/indexSuccess.php"
+May 13 12:25:10 symfony [info] {sfPHPView} Decorate content with "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 12:25:10 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 12:25:10 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 13 12:25:10 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 13 12:25:10 symfony [info] {sfWebDebugLogger} Configuration 4.66 ms (9)
+May 13 12:25:10 symfony [info] {sfWebDebugLogger} Action "start/index" 9.83 ms (1)
+May 13 12:25:10 symfony [info] {sfWebDebugLogger} View "Success" for "start/index" 14.87 ms (1)
+May 13 12:25:10 symfony [info] {sfWebResponse} Send content (73411 o)
+May 13 12:25:13 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 13 12:25:13 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 13 12:25:13 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 13 12:25:13 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'start',  'action' => 'index',)
+May 13 12:25:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 13 12:25:13 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 13 12:25:13 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 13 12:25:13 symfony [info] {startActions} Call "startActions->executeIndex()"
+May 13 12:25:13 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/modules/start/templates/indexSuccess.php"
+May 13 12:25:13 symfony [info] {sfPHPView} Decorate content with "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 12:25:13 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 12:25:13 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 13 12:25:13 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 13 12:25:13 symfony [info] {sfWebDebugLogger} Configuration 5.68 ms (9)
+May 13 12:25:13 symfony [info] {sfWebDebugLogger} Action "start/index" 18.54 ms (1)
+May 13 12:25:13 symfony [info] {sfWebDebugLogger} View "Success" for "start/index" 25.57 ms (1)
+May 13 12:25:14 symfony [info] {sfWebResponse} Send content (73423 o)
+May 13 12:55:52 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 13 12:55:52 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 13 12:55:52 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 13 12:55:52 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'start',  'action' => 'index',)
+May 13 12:55:53 symfony [info] {myUser} Automatic user logout due to timeout
+May 13 12:55:53 symfony [info] {myUser} User is not authenticated
+May 13 12:55:53 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 13 12:55:53 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 13 12:55:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 13 12:55:53 symfony [info] {startActions} Call "startActions->executeIndex()"
+May 13 12:55:53 symfony [info] {sfFrontWebController} Redirect to "http://test/frontend_dev.php/"
+May 13 12:55:53 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+May 13 12:55:53 symfony [info] {sfWebResponse} Send header "Location: http://test/frontend_dev.php/"
+May 13 12:55:53 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 13 12:55:53 symfony [info] {sfWebDebugLogger} Configuration 5.14 ms (8)
+May 13 12:55:53 symfony [info] {sfWebDebugLogger} Action "start/index" 24.89 ms (1)
+May 13 12:55:53 symfony [info] {sfWebResponse} Send content (100 o)
+May 13 12:55:53 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 13 12:55:53 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 13 12:55:53 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 13 12:55:53 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'start',  'action' => 'index',)
+May 13 12:55:53 symfony [info] {myUser} Flag old flash messages ("message")
+May 13 12:55:53 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 13 12:55:53 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 13 12:55:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 13 12:55:53 symfony [info] {startActions} Call "startActions->executeIndex()"
+May 13 12:55:53 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/modules/start/templates/indexSuccess.php"
+May 13 12:55:53 symfony [info] {sfPHPView} Decorate content with "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 12:55:53 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 12:55:53 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 13 12:55:53 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 13 12:55:53 symfony [info] {sfWebDebugLogger} Configuration 3.35 ms (9)
+May 13 12:55:53 symfony [info] {sfWebDebugLogger} Action "start/index" 9.61 ms (1)
+May 13 12:55:53 symfony [info] {sfWebDebugLogger} View "Success" for "start/index" 19.92 ms (1)
+May 13 12:55:53 symfony [info] {sfWebResponse} Send content (77081 o)
+May 13 12:55:53 symfony [info] {myUser} Remove old flash messages ("message")
+May 13 12:55:55 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 13 12:55:55 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 13 12:55:55 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 13 12:55:55 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'start',  'action' => 'index',)
+May 13 12:55:55 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 13 12:55:55 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 13 12:55:55 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 13 12:55:55 symfony [info] {startActions} Call "startActions->executeIndex()"
+May 13 12:55:55 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/modules/start/templates/indexSuccess.php"
+May 13 12:55:55 symfony [info] {sfPHPView} Decorate content with "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 12:55:55 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 12:55:55 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 13 12:55:55 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 13 12:55:55 symfony [info] {sfWebDebugLogger} Configuration 5.63 ms (9)
+May 13 12:55:55 symfony [info] {sfWebDebugLogger} Action "start/index" 23.42 ms (1)
+May 13 12:55:55 symfony [info] {sfWebDebugLogger} View "Success" for "start/index" 20.24 ms (1)
+May 13 12:55:55 symfony [info] {sfWebResponse} Send content (74004 o)
+May 13 12:56:05 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 13 12:56:05 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 13 12:56:05 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 13 12:56:05 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'start',  'action' => 'index',)
+May 13 12:56:05 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 13 12:56:05 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 13 12:56:05 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 13 12:56:05 symfony [info] {startActions} Call "startActions->executeIndex()"
+May 13 12:56:05 symfony [info] {sfFrontWebController} Redirect to "http://test/frontend_dev.php/"
+May 13 12:56:05 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+May 13 12:56:05 symfony [info] {sfWebResponse} Send header "Location: http://test/frontend_dev.php/"
+May 13 12:56:05 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 13 12:56:05 symfony [info] {sfWebDebugLogger} Configuration 5.12 ms (8)
+May 13 12:56:05 symfony [info] {sfWebDebugLogger} Action "start/index" 23.94 ms (1)
+May 13 12:56:05 symfony [info] {sfWebResponse} Send content (100 o)
+May 13 12:56:05 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 13 12:56:05 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 13 12:56:05 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 13 12:56:05 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'start',  'action' => 'index',)
+May 13 12:56:05 symfony [info] {myUser} Flag old flash messages ("message")
+May 13 12:56:05 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 13 12:56:05 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 13 12:56:05 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 13 12:56:05 symfony [info] {startActions} Call "startActions->executeIndex()"
+May 13 12:56:05 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/modules/start/templates/indexSuccess.php"
+May 13 12:56:05 symfony [info] {sfPHPView} Decorate content with "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 12:56:05 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 12:56:05 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 13 12:56:05 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 13 12:56:05 symfony [info] {sfWebDebugLogger} Configuration 3.25 ms (9)
+May 13 12:56:05 symfony [info] {sfWebDebugLogger} Action "start/index" 10.66 ms (1)
+May 13 12:56:05 symfony [info] {sfWebDebugLogger} View "Success" for "start/index" 28.18 ms (1)
+May 13 12:56:05 symfony [info] {sfWebResponse} Send content (77674 o)
+May 13 12:56:05 symfony [info] {myUser} Remove old flash messages ("message")
+May 13 12:56:19 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 13 12:56:19 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 13 12:56:19 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 13 12:56:19 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'start',  'action' => 'index',)
+May 13 12:56:19 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 13 12:56:19 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 13 12:56:19 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 13 12:56:19 symfony [info] {startActions} Call "startActions->executeIndex()"
+May 13 12:56:35 symfony [info] {sfFrontWebController} Redirect to "http://test/frontend_dev.php/"
+May 13 12:56:35 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+May 13 12:56:35 symfony [info] {sfWebResponse} Send header "Location: http://test/frontend_dev.php/"
+May 13 12:56:35 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 13 12:56:35 symfony [info] {sfWebDebugLogger} Configuration 4.30 ms (8)
+May 13 12:56:35 symfony [info] {sfWebDebugLogger} Action "start/index" 15240.49 ms (1)
+May 13 12:56:35 symfony [info] {sfWebResponse} Send content (100 o)
+May 13 12:56:35 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 13 12:56:35 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 13 12:56:35 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 13 12:56:35 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'start',  'action' => 'index',)
+May 13 12:56:35 symfony [info] {myUser} Flag old flash messages ("message")
+May 13 12:56:35 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 13 12:56:35 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 13 12:56:35 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 13 12:56:35 symfony [info] {startActions} Call "startActions->executeIndex()"
+May 13 12:56:35 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/modules/start/templates/indexSuccess.php"
+May 13 12:56:37 symfony [info] {sfPHPView} Decorate content with "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 12:56:37 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 12:56:37 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 13 12:56:37 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 13 12:56:37 symfony [info] {sfWebDebugLogger} Configuration 3.64 ms (9)
+May 13 12:56:37 symfony [info] {sfWebDebugLogger} Action "start/index" 12.32 ms (1)
+May 13 12:56:37 symfony [info] {sfWebDebugLogger} View "Success" for "start/index" 1835.96 ms (1)
+May 13 12:56:37 symfony [info] {sfWebResponse} Send content (78745 o)
+May 13 12:56:37 symfony [info] {myUser} Remove old flash messages ("message")
+May 13 12:58:59 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 13 12:58:59 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 13 12:58:59 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 13 12:58:59 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'start',  'action' => 'index',)
+May 13 12:58:59 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 13 12:58:59 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 13 12:58:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 13 12:58:59 symfony [info] {startActions} Call "startActions->executeIndex()"
+May 13 12:58:59 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/modules/start/templates/indexSuccess.php"
+May 13 12:58:59 symfony [info] {sfPHPView} Decorate content with "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 12:58:59 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 12:58:59 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 13 12:58:59 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 13 12:58:59 symfony [info] {sfWebDebugLogger} Configuration 5.73 ms (9)
+May 13 12:58:59 symfony [info] {sfWebDebugLogger} Action "start/index" 24.30 ms (1)
+May 13 12:58:59 symfony [info] {sfWebDebugLogger} View "Success" for "start/index" 70.30 ms (1)
+May 13 12:58:59 symfony [info] {sfWebResponse} Send content (75328 o)
+May 13 13:13:05 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 13 13:13:05 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 13 13:13:05 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 13 13:13:05 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'start',  'action' => 'index',)
+May 13 13:13:05 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 13 13:13:05 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 13 13:13:05 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 13 13:13:05 symfony [info] {startActions} Call "startActions->executeIndex()"
+May 13 13:13:05 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/modules/start/templates/indexSuccess.php"
+May 13 13:13:05 symfony [info] {sfPHPView} Decorate content with "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 13:13:05 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 13:13:05 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 13 13:13:05 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 13 13:13:05 symfony [info] {sfWebDebugLogger} Configuration 5.67 ms (9)
+May 13 13:13:05 symfony [info] {sfWebDebugLogger} Action "start/index" 22.53 ms (1)
+May 13 13:13:05 symfony [info] {sfWebDebugLogger} View "Success" for "start/index" 53.64 ms (1)
+May 13 13:13:05 symfony [info] {sfWebResponse} Send content (75361 o)
+May 13 13:13:07 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 13 13:13:07 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 13 13:13:07 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 13 13:13:07 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /start/delete/f/398cbd610704624811dff2623ffec503 with parameters array (  'f' => '398cbd610704624811dff2623ffec503',  'module' => 'start',  'action' => 'delete',)
+May 13 13:13:07 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 13 13:13:07 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 13 13:13:07 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 13 13:13:07 symfony [info] {startActions} Call "startActions->executeDelete()"
+May 13 13:13:07 symfony [info] {sfFrontWebController} Redirect to "http://test/frontend_dev.php/"
+May 13 13:13:07 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+May 13 13:13:07 symfony [info] {sfWebResponse} Send header "Location: http://test/frontend_dev.php/"
+May 13 13:13:07 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 13 13:13:07 symfony [info] {sfWebDebugLogger} Configuration 5.07 ms (8)
+May 13 13:13:07 symfony [info] {sfWebDebugLogger} Action "start/delete" 11.51 ms (1)
+May 13 13:13:07 symfony [info] {sfWebResponse} Send content (100 o)
+May 13 13:13:07 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 13 13:13:07 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 13 13:13:07 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 13 13:13:07 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'start',  'action' => 'index',)
+May 13 13:13:07 symfony [info] {myUser} Flag old flash messages ("message")
+May 13 13:13:07 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 13 13:13:07 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 13 13:13:07 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 13 13:13:07 symfony [info] {startActions} Call "startActions->executeIndex()"
+May 13 13:13:07 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/modules/start/templates/indexSuccess.php"
+May 13 13:13:07 symfony [info] {sfPHPView} Decorate content with "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 13:13:07 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 13:13:07 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 13 13:13:07 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 13 13:13:07 symfony [info] {sfWebDebugLogger} Configuration 5.76 ms (9)
+May 13 13:13:07 symfony [info] {sfWebDebugLogger} Action "start/index" 20.34 ms (1)
+May 13 13:13:07 symfony [info] {sfWebDebugLogger} View "Success" for "start/index" 48.93 ms (1)
+May 13 13:13:07 symfony [info] {sfWebResponse} Send content (78992 o)
+May 13 13:13:07 symfony [info] {myUser} Remove old flash messages ("message")
+May 13 13:13:09 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 13 13:13:09 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 13 13:13:09 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 13 13:13:09 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /start/delete/f/b056660f1e7978b6c84271088445aa65 with parameters array (  'f' => 'b056660f1e7978b6c84271088445aa65',  'module' => 'start',  'action' => 'delete',)
+May 13 13:13:09 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 13 13:13:09 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 13 13:13:09 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 13 13:13:09 symfony [info] {startActions} Call "startActions->executeDelete()"
+May 13 13:13:09 symfony [info] {sfFrontWebController} Redirect to "http://test/frontend_dev.php/"
+May 13 13:13:09 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+May 13 13:13:09 symfony [info] {sfWebResponse} Send header "Location: http://test/frontend_dev.php/"
+May 13 13:13:09 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 13 13:13:09 symfony [info] {sfWebDebugLogger} Configuration 4.94 ms (8)
+May 13 13:13:09 symfony [info] {sfWebDebugLogger} Action "start/delete" 13.62 ms (1)
+May 13 13:13:09 symfony [info] {sfWebResponse} Send content (100 o)
+May 13 13:13:09 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 13 13:13:09 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 13 13:13:09 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 13 13:13:09 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'start',  'action' => 'index',)
+May 13 13:13:09 symfony [info] {myUser} Flag old flash messages ("message")
+May 13 13:13:09 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 13 13:13:09 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 13 13:13:09 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 13 13:13:09 symfony [info] {startActions} Call "startActions->executeIndex()"
+May 13 13:13:09 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/modules/start/templates/indexSuccess.php"
+May 13 13:13:09 symfony [info] {sfPHPView} Decorate content with "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 13:13:09 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 13:13:09 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 13 13:13:09 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 13 13:13:09 symfony [info] {sfWebDebugLogger} Configuration 5.53 ms (9)
+May 13 13:13:09 symfony [info] {sfWebDebugLogger} Action "start/index" 18.97 ms (1)
+May 13 13:13:09 symfony [info] {sfWebDebugLogger} View "Success" for "start/index" 59.85 ms (1)
+May 13 13:13:09 symfony [info] {sfWebResponse} Send content (78088 o)
+May 13 13:13:09 symfony [info] {myUser} Remove old flash messages ("message")
+May 13 13:13:11 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 13 13:13:11 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 13 13:13:11 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 13 13:13:11 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /start/delete/f/ec9fed76f235f0cd1af5c7248e8ea285 with parameters array (  'f' => 'ec9fed76f235f0cd1af5c7248e8ea285',  'module' => 'start',  'action' => 'delete',)
+May 13 13:13:11 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 13 13:13:11 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 13 13:13:11 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 13 13:13:11 symfony [info] {startActions} Call "startActions->executeDelete()"
+May 13 13:13:11 symfony [info] {sfFrontWebController} Redirect to "http://test/frontend_dev.php/"
+May 13 13:13:11 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+May 13 13:13:11 symfony [info] {sfWebResponse} Send header "Location: http://test/frontend_dev.php/"
+May 13 13:13:11 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 13 13:13:11 symfony [info] {sfWebDebugLogger} Configuration 4.82 ms (8)
+May 13 13:13:11 symfony [info] {sfWebDebugLogger} Action "start/delete" 12.38 ms (1)
+May 13 13:13:11 symfony [info] {sfWebResponse} Send content (100 o)
+May 13 13:13:11 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 13 13:13:11 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 13 13:13:11 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 13 13:13:11 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'start',  'action' => 'index',)
+May 13 13:13:11 symfony [info] {myUser} Flag old flash messages ("message")
+May 13 13:13:11 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 13 13:13:11 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 13 13:13:11 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 13 13:13:11 symfony [info] {startActions} Call "startActions->executeIndex()"
+May 13 13:13:11 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/modules/start/templates/indexSuccess.php"
+May 13 13:13:11 symfony [info] {sfPHPView} Decorate content with "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 13:13:11 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 13:13:11 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 13 13:13:11 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 13 13:13:11 symfony [info] {sfWebDebugLogger} Configuration 5.47 ms (9)
+May 13 13:13:11 symfony [info] {sfWebDebugLogger} Action "start/index" 17.89 ms (1)
+May 13 13:13:11 symfony [info] {sfWebDebugLogger} View "Success" for "start/index" 47.25 ms (1)
+May 13 13:13:11 symfony [info] {sfWebResponse} Send content (77845 o)
+May 13 13:13:11 symfony [info] {myUser} Remove old flash messages ("message")
+May 13 13:13:13 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 13 13:13:13 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 13 13:13:13 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 13 13:13:13 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /start/delete/f/36bc44c0e469d4e960e09dd8d9220057 with parameters array (  'f' => '36bc44c0e469d4e960e09dd8d9220057',  'module' => 'start',  'action' => 'delete',)
+May 13 13:13:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 13 13:13:13 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 13 13:13:13 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 13 13:13:13 symfony [info] {startActions} Call "startActions->executeDelete()"
+May 13 13:13:13 symfony [info] {sfFrontWebController} Redirect to "http://test/frontend_dev.php/"
+May 13 13:13:13 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+May 13 13:13:13 symfony [info] {sfWebResponse} Send header "Location: http://test/frontend_dev.php/"
+May 13 13:13:13 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 13 13:13:13 symfony [info] {sfWebDebugLogger} Configuration 4.88 ms (8)
+May 13 13:13:13 symfony [info] {sfWebDebugLogger} Action "start/delete" 13.98 ms (1)
+May 13 13:13:13 symfony [info] {sfWebResponse} Send content (100 o)
+May 13 13:13:13 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 13 13:13:13 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 13 13:13:13 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 13 13:13:13 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'start',  'action' => 'index',)
+May 13 13:13:13 symfony [info] {myUser} Flag old flash messages ("message")
+May 13 13:13:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 13 13:13:13 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 13 13:13:13 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 13 13:13:13 symfony [info] {startActions} Call "startActions->executeIndex()"
+May 13 13:13:13 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/modules/start/templates/indexSuccess.php"
+May 13 13:13:13 symfony [info] {sfPHPView} Decorate content with "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 13:13:13 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 13:13:13 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 13 13:13:13 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 13 13:13:13 symfony [info] {sfWebDebugLogger} Configuration 5.43 ms (9)
+May 13 13:13:13 symfony [info] {sfWebDebugLogger} Action "start/index" 17.06 ms (1)
+May 13 13:13:13 symfony [info] {sfWebDebugLogger} View "Success" for "start/index" 32.57 ms (1)
+May 13 13:13:13 symfony [info] {sfWebResponse} Send content (77311 o)
+May 13 13:13:13 symfony [info] {myUser} Remove old flash messages ("message")
+May 13 13:13:15 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 13 13:13:15 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 13 13:13:15 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 13 13:13:15 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /start/delete/f/9edf3d7bacafacae016a008e534679fc with parameters array (  'f' => '9edf3d7bacafacae016a008e534679fc',  'module' => 'start',  'action' => 'delete',)
+May 13 13:13:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 13 13:13:15 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 13 13:13:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 13 13:13:15 symfony [info] {startActions} Call "startActions->executeDelete()"
+May 13 13:13:15 symfony [info] {sfFrontWebController} Redirect to "http://test/frontend_dev.php/"
+May 13 13:13:15 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+May 13 13:13:15 symfony [info] {sfWebResponse} Send header "Location: http://test/frontend_dev.php/"
+May 13 13:13:15 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 13 13:13:15 symfony [info] {sfWebDebugLogger} Configuration 4.04 ms (8)
+May 13 13:13:15 symfony [info] {sfWebDebugLogger} Action "start/delete" 7.28 ms (1)
+May 13 13:13:15 symfony [info] {sfWebResponse} Send content (100 o)
+May 13 13:13:15 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 13 13:13:15 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 13 13:13:15 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 13 13:13:15 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'start',  'action' => 'index',)
+May 13 13:13:15 symfony [info] {myUser} Flag old flash messages ("message")
+May 13 13:13:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 13 13:13:15 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 13 13:13:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 13 13:13:15 symfony [info] {startActions} Call "startActions->executeIndex()"
+May 13 13:13:15 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/modules/start/templates/indexSuccess.php"
+May 13 13:13:15 symfony [info] {sfPHPView} Decorate content with "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 13:13:15 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 13:13:15 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 13 13:13:15 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 13 13:13:15 symfony [info] {sfWebDebugLogger} Configuration 3.37 ms (9)
+May 13 13:13:15 symfony [info] {sfWebDebugLogger} Action "start/index" 10.19 ms (1)
+May 13 13:13:15 symfony [info] {sfWebDebugLogger} View "Success" for "start/index" 20.05 ms (1)
+May 13 13:13:15 symfony [info] {sfWebResponse} Send content (77106 o)
+May 13 13:13:15 symfony [info] {myUser} Remove old flash messages ("message")
+May 13 13:13:18 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 13 13:13:18 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 13 13:13:18 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 13 13:13:18 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /start/delete/f/398cbd610704624811dff2623ffec503 with parameters array (  'f' => '398cbd610704624811dff2623ffec503',  'module' => 'start',  'action' => 'delete',)
+May 13 13:13:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 13 13:13:18 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 13 13:13:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 13 13:13:18 symfony [info] {startActions} Call "startActions->executeDelete()"
+May 13 13:13:18 symfony [info] {sfFrontWebController} Redirect to "http://test/frontend_dev.php/"
+May 13 13:13:18 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+May 13 13:13:18 symfony [info] {sfWebResponse} Send header "Location: http://test/frontend_dev.php/"
+May 13 13:13:18 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 13 13:13:18 symfony [info] {sfWebDebugLogger} Configuration 4.90 ms (8)
+May 13 13:13:18 symfony [info] {sfWebDebugLogger} Action "start/delete" 11.98 ms (1)
+May 13 13:13:18 symfony [info] {sfWebResponse} Send content (100 o)
+May 13 13:13:18 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 13 13:13:18 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 13 13:13:18 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 13 13:13:18 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'start',  'action' => 'index',)
+May 13 13:13:18 symfony [info] {myUser} Flag old flash messages ("message")
+May 13 13:13:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 13 13:13:18 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 13 13:13:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 13 13:13:18 symfony [info] {startActions} Call "startActions->executeIndex()"
+May 13 13:13:18 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/modules/start/templates/indexSuccess.php"
+May 13 13:13:18 symfony [info] {sfPHPView} Decorate content with "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 13:13:18 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 13:13:18 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 13 13:13:18 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 13 13:13:18 symfony [info] {sfWebDebugLogger} Configuration 5.61 ms (9)
+May 13 13:13:18 symfony [info] {sfWebDebugLogger} Action "start/index" 14.55 ms (1)
+May 13 13:13:18 symfony [info] {sfWebDebugLogger} View "Success" for "start/index" 26.00 ms (1)
+May 13 13:13:18 symfony [info] {sfWebResponse} Send content (76847 o)
+May 13 13:13:18 symfony [info] {myUser} Remove old flash messages ("message")
+May 13 13:15:26 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 13 13:15:26 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 13 13:15:26 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 13 13:15:26 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'start',  'action' => 'index',)
+May 13 13:15:26 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 13 13:15:26 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 13 13:15:26 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 13 13:15:26 symfony [info] {startActions} Call "startActions->executeIndex()"
+May 13 13:15:26 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/modules/start/templates/indexSuccess.php"
+May 13 13:15:26 symfony [info] {sfPHPView} Decorate content with "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 13:15:26 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 13:15:26 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 13 13:15:26 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 13 13:15:26 symfony [info] {sfWebDebugLogger} Configuration 5.66 ms (9)
+May 13 13:15:26 symfony [info] {sfWebDebugLogger} Action "start/index" 22.78 ms (1)
+May 13 13:15:26 symfony [info] {sfWebDebugLogger} View "Success" for "start/index" 26.31 ms (1)
+May 13 13:15:26 symfony [info] {sfWebResponse} Send content (73761 o)
+May 13 14:41:27 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 13 14:41:27 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 13 14:41:27 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 13 14:41:27 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'start',  'action' => 'index',)
+May 13 14:41:27 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 13 14:41:27 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 13 14:41:27 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 13 14:41:27 symfony [info] {startActions} Call "startActions->executeIndex()"
+May 13 14:41:27 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/modules/start/templates/indexSuccess.php"
+May 13 14:41:27 symfony [info] {sfPHPView} Decorate content with "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 14:41:27 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 14:41:27 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 13 14:41:27 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 13 14:41:27 symfony [info] {sfWebDebugLogger} Configuration 5.51 ms (9)
+May 13 14:41:27 symfony [info] {sfWebDebugLogger} Action "start/index" 22.57 ms (1)
+May 13 14:41:27 symfony [info] {sfWebDebugLogger} View "Success" for "start/index" 25.34 ms (1)
+May 13 14:41:27 symfony [info] {sfWebResponse} Send content (73326 o)
+May 13 14:44:41 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 13 14:44:41 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 13 14:44:41 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 13 14:44:41 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'start',  'action' => 'index',)
+May 13 14:44:41 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 13 14:44:41 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 13 14:44:41 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 13 14:44:41 symfony [info] {startActions} Call "startActions->executeIndex()"
+May 13 14:44:41 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/modules/start/templates/indexSuccess.php"
+May 13 14:44:41 symfony [info] {sfPHPView} Decorate content with "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 14:44:41 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 14:44:41 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 13 14:44:41 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 13 14:44:41 symfony [info] {sfWebDebugLogger} Configuration 5.50 ms (9)
+May 13 14:44:41 symfony [info] {sfWebDebugLogger} Action "start/index" 22.00 ms (1)
+May 13 14:44:41 symfony [info] {sfWebDebugLogger} View "Success" for "start/index" 25.24 ms (1)
+May 13 14:44:41 symfony [info] {sfWebResponse} Send content (73620 o)
+May 13 14:44:43 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+May 13 14:44:43 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+May 13 14:44:43 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+May 13 14:44:43 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'start',  'action' => 'index',)
+May 13 14:44:43 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 13 14:44:43 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+May 13 14:44:43 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 13 14:44:43 symfony [info] {startActions} Call "startActions->executeIndex()"
+May 13 14:44:43 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/modules/start/templates/indexSuccess.php"
+May 13 14:44:43 symfony [info] {sfPHPView} Decorate content with "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 14:44:43 symfony [info] {sfPHPView} Render "/home/joshi/www/test/apps/frontend/templates/layout.php"
+May 13 14:44:43 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 13 14:44:43 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 13 14:44:43 symfony [info] {sfWebDebugLogger} Configuration 5.63 ms (9)
+May 13 14:44:43 symfony [info] {sfWebDebugLogger} Action "start/index" 16.41 ms (1)
+May 13 14:44:43 symfony [info] {sfWebDebugLogger} View "Success" for "start/index" 25.23 ms (1)
+May 13 14:44:43 symfony [info] {sfWebResponse} Send content (73415 o)

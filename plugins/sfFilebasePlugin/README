@@ -1,74 +1,48 @@
 sfFilebasePlugin
 ================
 
-sfFilebasePlugin provides an unified API for filesystem related operations with
-focus on web based applications.
+*sfFilebasePlugin* provides an unified **api* for **filesystem related
+operations** with focus on web based applications (yes, really.)
 
-It consists of a set of classes based on built in SPL classes (SplFileInfo/
+It consists of a set of classes based on built in **SPL classes** (SplFileInfo/
 -Object, DirectoryIterator ...) written by Marcus Boerger.
 
 Documentation for these base classes may be found in the
 [API-docs](http://www.php.net/~helly/php/ext/spl/).
 
-The API Documentation for sfFilebasePlugin can be found in 
+The API Documentation for *sfFilebasePlugin* can be found in
 ./plugins/sfFilebasePlugin/doc. The API doc is not included in the pear-
 package, so you'll have had to browse the svn-repository
 [http://svn.symfony-project.com/plugins/sfFilebasePlugin/](http://svn.symfony-project.com/plugins/sfFilebasePlugin/)
 or my github-repository
 [http://github.com/joshiausdemwald/sfFilebasePlugin](http://github.com/joshiausdemwald/sfFilebasePlugin).
 
-The git repos also contains a sample symfony project which shows a few
-features.
+**The git repos also contains a sample symfony project which shows a few
+features.** It should also be used as additional an documentation.
 
-It extends the built in SPL-Classes by dissociating more and different files or
-types. Resulting in a collection of classes like "sfFilebasePluginDirectory",
-"sfFilebasePluginImage", "sfFilebasePluginThumbnail" ... planning
-sfFilebasePluginZIP or something like that. Additionally, the plugin provides an
-extension of SplFileObject named "sfFilebasePluginFileObject".
+*SfFilebasePlugin* extends the built in SPL-Classes by dissociating more and
+different files or types. Resulting in a collection of classes like
+"sfFilebasePluginDirectory", "sfFilebasePluginImage",
+"sfFilebasePluginThumbnail" ... planning sfFilebasePluginZIP or something like
+that. Additionally, the plugin provides an extension of SplFileObject named
+"sfFilebasePluginFileObject".
 
-SfFilebasePlugin can help you if you want to
+**SfFilebasePlugin can help woman if she wants to**
 
-*  upload files,
+*  **control file uploads**,
 
-*  search and retrieve files from filesystem,
+*  search and retrieve files from her servers' filesystem,
 
 *  read/write/execute files,
 
-*  do architecture dependent filesystem operations like chmod, mkdir, touch.
+*  do (eventually architecture dependent) filesystem operations like chmod, mkdir, touch.
 
-*  easily convert path names from absolute to relative, web root based or filebase
-   root based. Each file related plugin method has an overloaded signature, so
-   that it does not matter whether you pass an absolute, relative pathname or an
-   instance of sfFilebasePluginFile or one of its children.
+*  easily **convert path names** from absolute to relative, web root based or
+   filebase root based. Each file related plugin method has an overloaded signature, so that it does not matter whether you pass an absolute, relative pathname or an instance of sfFilebasePluginFile or one of its children.
 
-*  manipulate images, generating thumbnails (please help to implement much more
-   image-manipulation capabilities). Included is a hidden cache layer which
-   automatically stores generated binary data.
-
-Recent chances
---------------
-*V 0.5.1:*
-*  Worked on improved symfony integration:
-
-     * Implemented factory method sfFilebasePlugin::getInstance();
-     * Implemented sfFilebasePluginWebRequest, refer to README
-       to learn about how to use this class in factories.yml
-     * You now can specify the default filebase- and cache directory
-       in your apps/yourapp/config/app.yml. Refer to the README file
-       or look at the phpdoc of sfFilebasePlugin
-     * Added helper sfFilebasePluginHelper
-          get_filebase(): retrieves your filebase in a view
-
-*V 0.5.0:*
-*  Addes sfFilebasePluginValidatorFile. See sfValidatorFile, it uses nearly the
-   same API. The difference is,  that you'll have to use
-   sfFilebasePlugin::getUploadedFiles() instead of
-   sfWebRequest::getUploadedFileswhen you pass Files to sfForm:
-
-        sfForm::bind($my_params, $my_filebase->getUploadedFiles())
-
-   With sfFilebasePluginValidatorFile, you can easily move the uploaded files,
-   create thumbnail out of recently uploaded images and so on...
+*  manipulate images or **generate thumbnails** (you are humbly invited to help 
+   me by implementing much more image-manipulation capabilities). Included is a
+   hidden cache layer which automatically stores generated binary data.
 
 Installation
 ------------
@@ -96,11 +70,16 @@ Clear the cache to enable the autoloading to find the new classes:
 
 You're done.
 
-*Note*: If the [GD library](http://php.net/gd) is not activated, you might
+**Note**: SfFilebasePlugin has only been tested on Symfony 1.2. It probably
+works fine with 1.1/1.0, but i'm not sure about it. I'll run some tests, but has
+actually no priority to me. Please send me an email if you want to use
+sfFilebasePlugin on a lower Version than 1.2.
+
+**Note**: If the [GD library](http://php.net/gd) is not activated, you might
 have to uncomment the related line in your `php.ini` and restart your web
 server to enable PHP image handling functions.
 
-*Note*: To use !ImageMagick, you'll need to install the pecl
+**Note**: To use !ImageMagick, you'll need to install the pecl
 [imagick extension](http://php.net/imagick). On debian/ubuntu, do something
 like
 
@@ -112,9 +91,20 @@ Contents
 --------
 
 The plugin contains a set of classes, that are all instanciated by a file
-controller called sfFilebasePlugin. Please take a look at the phpdocs to see how
-it works. There is a static utility class named sfFilebasePluginUtil that
-provides general worker methods.
+controller called sfFilebasePlugin. Please take a look at the examples, the 
+sample project available at githup and the phpdocs to see how it works. There is
+a static utility class named sfFilebasePluginUtil that provides general worker
+methods.
+
+There are also a few classes that integrates *sfFilebasePlugin* into symfony.
+There is a helper file to use the filebase in your views, and there is also
+an **sfFilebasePluginWebRequest** class, that may replace the core symfony
+sfWebRequest class, but this is not a "must have". If you want to do so, the
+$request variable passed to your actions contains some additional
+methods to retrieve uploaded files (there is the original
+`sfWebRequest::getFiles()` which returns a cleaned up file array and - with
+`sfFilebasePluginWebRequest::getUploadedFiles()` a new way to retrieve uploaded
+files in an object oriented way as instances of sfFilebasePluginUploadedFile.
 
 Examples
 --------
@@ -122,7 +112,7 @@ Examples
 There is a sample project at github:
 [http://github.com/joshiausdemwald/sfFilebasePlugin](http://github.com/joshiausdemwald/sfFilebasePlugin)
 
-Simply use this project to test sfFilebasePlugin, or create a new project, copy the apps-folder, 
+Simply use this project to test sfFilebasePlugin, or create a new project, copy the apps-folder,
 thats it (i think).
 You'll see some forms, can upload files, create directories and see some image
 transformations in action. Perhaps it can be useful.
@@ -130,30 +120,77 @@ transformations in action. Perhaps it can be useful.
 Short code samples
 ------------------
 
-Create a new sfFilebasePlugin in sf_project/web/uploads:
+To use sfFilebasePluginWebRequest as an enhancement of sfWebRequest, write the
+following lines in your apps/myapp/factories.yml:
+
+    all:
+      request:
+        class: sfFilebasePluginWebRequest
+
+If you are done, you can retrieve uploaded files by calling in your action:
+
+    public function executeMyAction(sfWebRequest $request)
+    {
+      $files = $request->getUploadedFiles();
+    }
+
+Alternatively and if you don't want to user sfFilebasePluginWebRequest, call
+
+    public function executeMyAction(sfWebRequest $request)
+    {
+      $filebase = new sfFilebasePlugin();
+      $files = $filebase->getUploadedFiles();
+    }
+
+There is also a factory method that stores filebase instances:
+
+    $filebase = sfFilebasePlugin::getInstance()
+
+This way retrieving a filebase is somewhat "best practice", but the constructor
+remains public due to backwards compatiblilty.
+
+Create a new sfFilebasePlugin in sf_project/web/uploads (this folder is set
+by reading sfConfig::get('sf_upload_dir') internally per default)
 
     sfFilebasePlugin::getInstance()
 
-Change the default location of the filebase directory:
-In /apps/my_app/config/app.yml write:
+To change the default location of the filebase directory go to
+apps/my_app/config/app.yml and write for example:
 
     env:
       sf_filebase_plugin:
         path_name: /path/to/filebase
         cache_directory: /path/to/cache
 
-Create a new sfFilebasePlugin by a custom directory:
+With this, you can specify different directories for your environments. But
+be careful while synchronizing files with e.g. a database, here it can easily
+come to out of synch errors.
+
+It is a good practice to encapsulate file operations in transactions when
+you log them into a database.
+
+*You must consider for yourself if the filebase directory may be accessible via
+browser (then it must lie within your servers' document root) or not - perhaps
+due to security issues. It is really simple to passthru files by php and sync
+them e.g. with a database and a permission management by using transactions.*
+
+Creating a new filebase, using a custom directory, directly from your
+application:
 
     $filebase = sfFilebasePlugin::getInstance('/var/www/my_filebase_dir');
 
-The sfFilebasePlugin "root"-directory must be writable by php. In standard php
-configurations with mod_php you usually have to chmod(777) it or change the
-ownership to wwwrun or something like that.
+You can also specifiy the location of the cache directory:
 
-You must consider by yourself if the filebase dir is accessible via browser
-(i lies in web-root) or not - due to security issues. It is really simple
-to passthru files by php and sync them e.g. with a database and a permission
-management by using transactions.
+    $filebase = sfFilebasePlugin::getInstance(
+      '/var/www/my_filebase_dir',
+      '/temp'
+    );
+
+**Note**: The initial paths must be absolute from filesystem root.
+
+**Note**: The sfFilebasePlugin "root"-directory must be writable by php. In
+standard php configurations with mod_php you usually have to chmod(777) it or
+change the ownership to `wwwrun` or something like that.
 
 Iterate over sub-directories:
 
@@ -181,6 +218,32 @@ File-Uploads:
 
     // Or by handling all uploaded files:
     $filebase->moveAllUploadedFiles($destination_directory);
+
+Using the sfFilebasePluginValidatorFile is as simple as using the
+generic sfValidatorFile class. For example you could do the following:
+
+    $form = new myForm()
+    $this->upload_form->bind($request->getParameter('upload'),
+                             $request->getUploadedFiles('upload'));
+    if($this->upload_form->isValid())
+    {
+      // retrieve all files that have been uploaded
+      $files = $this->upload_form->getValue('files');
+
+      // Loop and save them in a folder that is located in
+      // /path/to/filebase/my_uploads.
+      // 'my_uploads' may also be an instance of sfFilebasePluginFile
+      // or an absolute path.
+      foreach($files AS $file)
+      {
+        $file = $file->moveUploadedFile('my_uploads');
+        if($file instanceof sfFilebasePluginImage)
+        {
+          $file->rotate('20');
+        }
+      }
+    }
+    ....
 
 Error-Handling
 --------------
@@ -215,9 +278,9 @@ There are a few concrete features that i have in mind for the near future:
 
   * Integration in sfForms as an alternative to sfValidatorFile, or perhaps a
     combination of both
-  * Image processing: There are two adapters, one for imagick extension (no 
+  * Image processing: There are two adapters, one for imagick extension (no
     system calls like in sfThumbnailPlugin, but i simply don't know what is the
-    better way doing it) and GD. This is redundant, because sfThumbnailPlugin 
+    better way doing it) and GD. This is redundant, because sfThumbnailPlugin
     also provides 2 adapters. Perhaps integrate it as a plugin-dependancy?
   * More, More, More! Image processing capabilities (experimental rotation is
     built in, perhaps a web2.0 mirror effect or something like this)

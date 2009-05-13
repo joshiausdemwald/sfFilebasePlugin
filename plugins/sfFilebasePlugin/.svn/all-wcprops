@@ -21,15 +21,21 @@ svn:wc:ra_dav:version-url
 V 67
 /!svn/ver/18216/plugins/sfFilebasePlugin/sfFilebasePlugin-0.5.5.tgz
 END
+sfFilebasePlugin-0.5.6.tgz
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/18226/plugins/sfFilebasePlugin/sfFilebasePlugin-0.5.6.tgz
+END
 package.xml
 K 25
 svn:wc:ra_dav:version-url
 V 52
-/!svn/ver/18216/plugins/sfFilebasePlugin/package.xml
+/!svn/ver/18225/plugins/sfFilebasePlugin/package.xml
 END
 README
 K 25
 svn:wc:ra_dav:version-url
 V 47
-/!svn/ver/18193/plugins/sfFilebasePlugin/README
+/!svn/ver/18225/plugins/sfFilebasePlugin/README
 END

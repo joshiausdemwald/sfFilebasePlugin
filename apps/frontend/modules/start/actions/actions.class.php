@@ -54,6 +54,7 @@ class startActions extends sfActions
           $this->redirect('start/index');
         }
       }
+      
       if($create_directory_data !== null)
       {
         $this->create_directory_form->bind($create_directory_data);
