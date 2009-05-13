@@ -101,12 +101,10 @@
         		<!-- ========== Info from phpDoc block ========= -->
 <p class="short-description">sfFilebasePluginFile represents each file that is not  handled in a special way.</p>
 	<ul class="tags">
-				<li><span class="field">author:</span> Johannes Heinen &lt;<a href="mailto:johannes.heinen@gmail.com">johannes.heinen@gmail.com</a>&gt;</li>
-				<li><span class="field">copyright:</span> Johannes Heinen &lt;johannes.heinen@gmail.com&gt;</li>
 				<li><span class="field">see:</span> splFileInfo</li>
 			</ul>
 		<p class="notes">
-			Located in <a class="field" href="_lib---sfFilebasePluginFile.php.html">/lib/sfFilebasePluginFile.php</a> (line <span class="field">18</span>)
+			Located in <a class="field" href="_lib---sfFilebasePluginFile.php.html">/lib/sfFilebasePluginFile.php</a> (line <span class="field">20</span>)
 		</p>
 		
 				
@@ -370,7 +368,7 @@
 		<span class="var-title">
 			<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html">sfFilebasePlugin</a></span>
 			<span class="var-name">$filebase</span>
-						(line <span class="line-number">25</span>)
+						(line <span class="line-number">27</span>)
 		</span>
 	</div>
 
@@ -392,7 +390,7 @@
 		<span class="var-title">
 			<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFileObject.html">sfFilebasePluginFileObject</a></span>
 			<span class="var-name">$filebaseFileObject</span>
-			 = <span class="var-default"> null</span>			(line <span class="line-number">34</span>)
+			 = <span class="var-default"> null</span>			(line <span class="line-number">36</span>)
 		</span>
 	</div>
 
@@ -427,7 +425,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">Constructor __construct</span> (line <span class="line-number">41</span>)
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">43</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -479,7 +477,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">chmod</span> (line <span class="line-number">255</span>)
+		<span class="method-title">chmod</span> (line <span class="line-number">257</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -509,7 +507,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">copy</span> (line <span class="line-number">281</span>)
+		<span class="method-title">copy</span> (line <span class="line-number">283</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -552,7 +550,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">delete</span> (line <span class="line-number">243</span>)
+		<span class="method-title">delete</span> (line <span class="line-number">245</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -585,7 +583,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">existsAndIsWritable</span> (line <span class="line-number">224</span>)
+		<span class="method-title">existsAndIsWritable</span> (line <span class="line-number">226</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -609,7 +607,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">fileExists</span> (line <span class="line-number">71</span>)
+		<span class="method-title">fileExists</span> (line <span class="line-number">73</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -633,7 +631,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getAbsolutePathFromWebroot</span> (line <span class="line-number">305</span>)
+		<span class="method-title">getAbsolutePathFromWebroot</span> (line <span class="line-number">307</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -658,7 +656,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">getATime</span> (line <span class="line-number">170</span>)
+		<span class="method-title">getATime</span> (line <span class="line-number">172</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -691,7 +689,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getContentType</span> (line <span class="line-number">183</span>)
+		<span class="method-title">getContentType</span> (line <span class="line-number">185</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -715,7 +713,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">getCTime</span> (line <span class="line-number">156</span>)
+		<span class="method-title">getCTime</span> (line <span class="line-number">158</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -748,7 +746,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getExtension</span> (line <span class="line-number">56</span>)
+		<span class="method-title">getExtension</span> (line <span class="line-number">58</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -773,7 +771,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">getFilebase</span> (line <span class="line-number">204</span>)
+		<span class="method-title">getFilebase</span> (line <span class="line-number">206</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -797,7 +795,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getFilebaseFile</span> (line <span class="line-number">348</span>)
+		<span class="method-title">getFilebaseFile</span> (line <span class="line-number">350</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -831,7 +829,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">getHash</span> (line <span class="line-number">233</span>)
+		<span class="method-title">getHash</span> (line <span class="line-number">235</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -855,7 +853,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getHumanReadableFileType</span> (line <span class="line-number">411</span>)
+		<span class="method-title">getHumanReadableFileType</span> (line <span class="line-number">413</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -888,7 +886,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">getMimeType</span> (line <span class="line-number">194</span>)
+		<span class="method-title">getMimeType</span> (line <span class="line-number">196</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -912,7 +910,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getMTime</span> (line <span class="line-number">163</span>)
+		<span class="method-title">getMTime</span> (line <span class="line-number">165</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -945,7 +943,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">getRelativePathFromFilebaseDirectory</span> (line <span class="line-number">293</span>)
+		<span class="method-title">getRelativePathFromFilebaseDirectory</span> (line <span class="line-number">295</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -970,7 +968,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getSize</span> (line <span class="line-number">144</span>)
+		<span class="method-title">getSize</span> (line <span class="line-number">146</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1013,7 +1011,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">isHidden</span> (line <span class="line-number">84</span>)
+		<span class="method-title">isHidden</span> (line <span class="line-number">86</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1039,7 +1037,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">isImage</span> (line <span class="line-number">123</span>)
+		<span class="method-title">isImage</span> (line <span class="line-number">125</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1066,7 +1064,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">isLink</span> (line <span class="line-number">109</span>)
+		<span class="method-title">isLink</span> (line <span class="line-number">111</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1095,7 +1093,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">isRWritable</span> (line <span class="line-number">214</span>)
+		<span class="method-title">isRWritable</span> (line <span class="line-number">216</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1119,7 +1117,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">openFile</span> (line <span class="line-number">398</span>)
+		<span class="method-title">openFile</span> (line <span class="line-number">400</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1167,7 +1165,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">rename</span> (line <span class="line-number">269</span>)
+		<span class="method-title">rename</span> (line <span class="line-number">271</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1214,7 +1212,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">__toString</span> (line <span class="line-number">133</span>)
+		<span class="method-title">__toString</span> (line <span class="line-number">135</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1279,7 +1277,7 @@
 
 
 	<p class="notes" id="credit">
-		Documentation generated on Wed, 13 May 2009 09:33:22 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Wed, 13 May 2009 18:03:42 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</div></body>
 </html>

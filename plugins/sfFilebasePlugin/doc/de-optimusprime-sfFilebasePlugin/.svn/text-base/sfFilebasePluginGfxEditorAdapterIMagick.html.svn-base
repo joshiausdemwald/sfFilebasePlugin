@@ -105,12 +105,10 @@
         		<!-- ========== Info from phpDoc block ========= -->
 <p class="short-description">Library for performing image transformations using image-magick  in combination with php's imagick extension</p>
 	<ul class="tags">
-				<li><span class="field">author:</span> Johannes Heinen &lt;<a href="mailto:johannes.heinen@gmail.com">johannes.heinen@gmail.com</a>&gt;</li>
-				<li><span class="field">copyright:</span> Johannes Heinen &lt;johannes.heinen@gmail.com&gt;</li>
 				<li><span class="field">todo:</span> Implement improved image editing capabilities.</li>
 			</ul>
 		<p class="notes">
-			Located in <a class="field" href="_lib---sfFilebasePluginGfxEditorAdapterIMagick.php.html">/lib/sfFilebasePluginGfxEditorAdapterIMagick.php</a> (line <span class="field">18</span>)
+			Located in <a class="field" href="_lib---sfFilebasePluginGfxEditorAdapterIMagick.php.html">/lib/sfFilebasePluginGfxEditorAdapterIMagick.php</a> (line <span class="field">20</span>)
 		</p>
 		
 				
@@ -256,7 +254,7 @@
 		<span class="var-title">
 			<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginImage.html">sfFilebasePluginImage</a></span>
 			<span class="var-name">$destination</span>
-						(line <span class="line-number">29</span>)
+						(line <span class="line-number">31</span>)
 		</span>
 	</div>
 
@@ -277,7 +275,7 @@
 		<span class="var-title">
 			<span class="var-type">integer</span>
 			<span class="var-name">$destinationQuality</span>
-			 = <span class="var-default"> 80</span>			(line <span class="line-number">51</span>)
+			 = <span class="var-default"> 80</span>			(line <span class="line-number">53</span>)
 		</span>
 	</div>
 
@@ -299,7 +297,7 @@
 		<span class="var-title">
 			<span class="var-type">Imagick</span>
 			<span class="var-name">$destination_resource</span>
-						(line <span class="line-number">39</span>)
+						(line <span class="line-number">41</span>)
 		</span>
 	</div>
 
@@ -320,7 +318,7 @@
 		<span class="var-title">
 			<span class="var-type">array</span>
 			<span class="var-name">$funcs</span>
-			 = <span class="var-default">array()</span>			(line <span class="line-number">58</span>)
+			 = <span class="var-default">array()</span>			(line <span class="line-number">60</span>)
 		</span>
 	</div>
 
@@ -342,7 +340,7 @@
 		<span class="var-title">
 			<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditor.html">sfFilebasePluginGfxEditor</a></span>
 			<span class="var-name">$gfxEditor</span>
-						(line <span class="line-number">46</span>)
+						(line <span class="line-number">48</span>)
 		</span>
 	</div>
 
@@ -364,7 +362,7 @@
 		<span class="var-title">
 			<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginImage.html">sfFilebasePluginImage</a></span>
 			<span class="var-name">$source</span>
-						(line <span class="line-number">23</span>)
+						(line <span class="line-number">25</span>)
 		</span>
 	</div>
 
@@ -385,7 +383,7 @@
 		<span class="var-title">
 			<span class="var-type">Imagick</span>
 			<span class="var-name">$source_resource</span>
-						(line <span class="line-number">34</span>)
+						(line <span class="line-number">36</span>)
 		</span>
 	</div>
 
@@ -418,7 +416,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">destroy</span> (line <span class="line-number">123</span>)
+		<span class="method-title">destroy</span> (line <span class="line-number">125</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -448,7 +446,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">initialize</span> (line <span class="line-number">63</span>)
+		<span class="method-title">initialize</span> (line <span class="line-number">65</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -485,7 +483,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">isSupported</span> (line <span class="line-number">72</span>)
+		<span class="method-title">isSupported</span> (line <span class="line-number">74</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -514,7 +512,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">resize</span> (line <span class="line-number">136</span>)
+		<span class="method-title">resize</span> (line <span class="line-number">138</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -552,7 +550,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">rotate</span> (line <span class="line-number">158</span>)
+		<span class="method-title">rotate</span> (line <span class="line-number">160</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -597,7 +595,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">save</span> (line <span class="line-number">112</span>)
+		<span class="method-title">save</span> (line <span class="line-number">114</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -632,7 +630,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">setDestination</span> (line <span class="line-number">100</span>)
+		<span class="method-title">setDestination</span> (line <span class="line-number">102</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -667,7 +665,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">setQuality</span> (line <span class="line-number">90</span>)
+		<span class="method-title">setQuality</span> (line <span class="line-number">92</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -696,7 +694,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">setSource</span> (line <span class="line-number">80</span>)
+		<span class="method-title">setSource</span> (line <span class="line-number">82</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -734,7 +732,7 @@
 
 
 	<p class="notes" id="credit">
-		Documentation generated on Wed, 13 May 2009 09:33:23 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Wed, 13 May 2009 18:03:43 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</div></body>
 </html>

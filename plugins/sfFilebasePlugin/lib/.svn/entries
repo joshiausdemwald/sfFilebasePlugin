@@ -1,14 +1,14 @@
 9
 
 dir
-18191
+18226
 http://svn.symfony-project.com/plugins/sfFilebasePlugin/lib
 http://svn.symfony-project.com
 
 
 
-2009-05-12T19:54:57.151612Z
-18191
+2009-05-12T22:44:58.546778Z
+18201
 joshiausdemwald
 
 
@@ -38,14 +38,14 @@ dir
 
 sfFilebasePluginWebRequest.php
 file
+18227
 
 
 
-
-2009-05-12T19:22:21.000000Z
-bc067bac36e16cf689c8f179ac4db3d8
-2009-05-12T19:54:57.151612Z
-18191
+2009-05-13T15:55:11.000000Z
+5200ede258dc1d1a5157763375435b36
+2009-05-13T16:04:25.955815Z
+18227
 joshiausdemwald
 
 
@@ -68,18 +68,18 @@ joshiausdemwald
 
 
 
-1175
+1435
 
 sfFilebasePluginRecursiveIteratorIterator.php
 file
+18227
 
 
 
-
-2009-05-12T18:08:37.000000Z
-764d18fd5287de2778fb76d1ce477afa
-2009-05-12T19:54:57.151612Z
-18191
+2009-05-13T15:56:37.000000Z
+84ee73852a20bea1543ffd988415de4b
+2009-05-13T16:04:25.955815Z
+18227
 joshiausdemwald
 has-props
 
@@ -102,18 +102,18 @@ has-props
 
 
 
-1093
+1134
 
 sfFilebasePluginFileExif.php
 file
+18227
 
 
 
-
-2009-05-10T14:29:59.000000Z
-df40114cd5a9821be3cc3d2a5837feab
-2009-05-10T14:31:02.996692Z
-18108
+2009-05-13T15:57:59.000000Z
+8ebd4eca7204f344f8a9cd262263ebe6
+2009-05-13T16:04:25.955815Z
+18227
 joshiausdemwald
 
 
@@ -136,18 +136,18 @@ joshiausdemwald
 
 
 
-1000
+1035
 
 sfFilebasePluginGfxEditor.php
 file
+18227
 
 
 
-
-2009-05-10T14:29:59.000000Z
-1f97361c9b600652494955a73915b45d
-2009-05-10T14:31:02.996692Z
-18108
+2009-05-13T15:57:39.000000Z
+cabe9fd9683bf5f2b4919ec7599ab34d
+2009-05-13T16:04:25.955815Z
+18227
 joshiausdemwald
 
 
@@ -170,21 +170,21 @@ joshiausdemwald
 
 
 
-10955
+10990
 
 Validator
 dir
 
 sfFilebasePluginUploadedFile.php
 file
+18227
 
 
 
-
-2009-05-12T14:28:18.000000Z
-140aab4e4497266273649b8d1dbf6bf0
-2009-05-12T14:49:10.687647Z
-18172
+2009-05-13T15:55:28.000000Z
+6dd119218f2d35d5f604b13da78cac21
+2009-05-13T16:04:25.955815Z
+18227
 joshiausdemwald
 
 
@@ -207,18 +207,18 @@ joshiausdemwald
 
 
 
-6413
+6448
 
 sfFilebasePluginException.php
 file
+18227
 
 
 
-
-2009-05-10T14:29:59.000000Z
-6fcf155c76cc02eb64ec279de77bcf97
-2009-05-10T14:31:02.996692Z
-18108
+2009-05-13T15:58:15.000000Z
+2bba4ce86d6a737f7d30b2d9b293e5fc
+2009-05-13T16:04:25.955815Z
+18227
 joshiausdemwald
 has-props
 
@@ -241,18 +241,18 @@ has-props
 
 
 
-528
+563
 
 sfFilebasePluginDirectory.php
 file
-18201
+18227
 
 
 
-2009-05-12T22:43:20.000000Z
-d098ebdb40ef8cb3053330fabd0e50f6
-2009-05-12T22:44:58.546778Z
-18201
+2009-05-13T15:58:20.000000Z
+f0d974e2b1ebcd2fc7e5b4535514659d
+2009-05-13T16:04:25.955815Z
+18227
 joshiausdemwald
 has-props
 
@@ -275,18 +275,18 @@ has-props
 
 
 
-6223
+6258
 
 sfFilebasePluginFileObject.php
 file
+18227
 
 
 
-
-2009-05-10T14:29:59.000000Z
-718948c41c7499056d39de951f5fc95f
-2009-05-10T14:31:02.996692Z
-18108
+2009-05-13T15:57:54.000000Z
+ccd822cfd1674fb3b711694732588c2d
+2009-05-13T16:04:25.955815Z
+18227
 joshiausdemwald
 
 
@@ -309,18 +309,18 @@ joshiausdemwald
 
 
 
-5798
+5833
 
 sfFilebasePluginRecursiveDirectoryIterator.php
 file
+18227
 
 
 
-
-2009-05-11T18:00:41.000000Z
-2b1ae725aada098baf0a24f46978fb5b
-2009-05-11T20:37:16.388919Z
-18151
+2009-05-13T15:56:44.000000Z
+e3d32a1aceea01ed60c11f583ca99b98
+2009-05-13T16:04:25.955815Z
+18227
 joshiausdemwald
 has-props
 
@@ -343,18 +343,18 @@ has-props
 
 
 
-2357
+2392
 
 sfFilebasePluginGfxEditorAdapterGD.php
 file
+18227
 
 
 
-
-2009-05-10T14:29:59.000000Z
-323498dfaae3533814a69b1ce6770742
-2009-05-10T14:31:02.996692Z
-18108
+2009-05-13T15:57:30.000000Z
+cff99f8dfcb5c994a738957e863b8c09
+2009-05-13T16:04:25.955815Z
+18227
 joshiausdemwald
 
 
@@ -377,18 +377,18 @@ joshiausdemwald
 
 
 
-6799
+6834
 
 sfFilebasePluginUploadedFilesManager.php
 file
+18227
 
 
 
-
-2009-05-10T14:29:59.000000Z
-0cf5846e774992ecf8560b68192755de
-2009-05-10T14:31:02.996692Z
-18108
+2009-05-13T15:55:34.000000Z
+ccc4912c47b702668ba25140f3bcb151
+2009-05-13T16:04:25.955815Z
+18227
 joshiausdemwald
 
 
@@ -411,18 +411,18 @@ joshiausdemwald
 
 
 
-9866
+9901
 
 sfFilebasePluginUtil.php
 file
+18227
 
 
 
-
-2009-05-11T19:50:28.000000Z
-f66f57ee76c513e7bdf0a3ee7b50cba0
-2009-05-11T20:37:16.388919Z
-18151
+2009-05-13T15:55:22.000000Z
+f0e4424ececeff6692b7b0cc71b83acf
+2009-05-13T16:04:25.955815Z
+18227
 joshiausdemwald
 
 
@@ -445,18 +445,18 @@ joshiausdemwald
 
 
 
-21627
+21721
 
 sfFilebasePluginGfxEditorAdapterInterface.php
 file
+18227
 
 
 
-
-2009-05-10T14:29:59.000000Z
-7be3a3953c527057f7106b3e53c815a2
-2009-05-10T14:31:02.996692Z
-18108
+2009-05-13T15:57:04.000000Z
+7eea401ed58b1ef89b4a2c4039dd1299
+2009-05-13T16:04:25.955815Z
+18227
 joshiausdemwald
 
 
@@ -479,18 +479,18 @@ joshiausdemwald
 
 
 
-1842
+1877
 
 sfFilebasePluginFile.php
 file
+18227
 
 
 
-
-2009-05-11T20:15:10.000000Z
-4cb600801deac922e322a5c09714e170
-2009-05-11T20:37:16.388919Z
-18151
+2009-05-13T15:58:09.000000Z
+5bad1c7726d212110f99eefa5c9fcc46
+2009-05-13T16:04:25.955815Z
+18227
 joshiausdemwald
 has-props
 
@@ -513,18 +513,18 @@ has-props
 
 
 
-11717
+11752
 
 sfFilebasePlugin.php
 file
+18227
 
 
 
-
-2009-05-12T19:35:47.000000Z
-65ec2679f63b5e3953f5a9968cddd354
-2009-05-12T19:54:57.151612Z
-18191
+2009-05-13T15:53:37.000000Z
+f3c1c858563107f7405e133dd6c1e565
+2009-05-13T16:04:25.955815Z
+18227
 joshiausdemwald
 
 
@@ -547,18 +547,18 @@ joshiausdemwald
 
 
 
-23066
+23101
 
 sfFilebasePluginGfxEditorAdapterIMagick.php
 file
+18227
 
 
 
-
-2009-05-10T14:29:59.000000Z
-3f37274a98245d0267928314014f3481
-2009-05-10T14:31:02.996692Z
-18108
+2009-05-13T15:57:20.000000Z
+58f58edf05ad1c5a255026ac4f9b66f5
+2009-05-13T16:04:25.955815Z
+18227
 joshiausdemwald
 
 
@@ -581,18 +581,18 @@ joshiausdemwald
 
 
 
-4278
+4313
 
 sfFilebasePluginImage.php
 file
+18227
 
 
 
-
-2009-05-10T14:29:59.000000Z
-e5d00dd300b72f7dbe890f12ce41cc08
-2009-05-10T14:31:02.996692Z
-18108
+2009-05-13T15:56:52.000000Z
+aeacc09b49dd2f71fb2eb511ab49c3da
+2009-05-13T16:04:25.955815Z
+18227
 joshiausdemwald
 
 
@@ -615,18 +615,18 @@ joshiausdemwald
 
 
 
-4004
+4039
 
 sfFilebasePluginThumbnail.php
 file
+18227
 
 
 
-
-2009-05-10T14:29:59.000000Z
-cc5cf13ed2ab772da817781202611e89
-2009-05-10T14:31:02.996692Z
-18108
+2009-05-13T15:55:44.000000Z
+717a1ebe490f37e6be9b7a352774c7d0
+2009-05-13T16:04:25.955815Z
+18227
 joshiausdemwald
 
 
@@ -649,18 +649,18 @@ joshiausdemwald
 
 
 
-1331
+1366
 
 sfFilebasePluginStruct.php
 file
+18227
 
 
 
-
-2009-05-10T14:29:59.000000Z
-b9b09753196708d06560dfe5fb79b67b
-2009-05-10T14:31:02.996692Z
-18108
+2009-05-13T15:56:19.000000Z
+7010d225071f670eed28488fba394d1e
+2009-05-13T16:04:25.955815Z
+18227
 joshiausdemwald
 
 
@@ -683,5 +683,5 @@ joshiausdemwald
 
 
 
-4840
+5171
 

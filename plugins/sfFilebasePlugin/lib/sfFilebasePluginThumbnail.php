@@ -1,20 +1,22 @@
 <?php
 /**
- * This file is part of the sfFilebase symfony plugin.
+ * This file is part of the sfFilebasePlugin package.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
+ *
+ * @package   de.optimusprime.sfFilebasePlugin
+ * @author    Johannes Heinen <johannes.heinen@gmail.com>
+ * @license   MIT license
+ * @copyright 2007-2009 Johannes Heinen <johannes.heinen@gmail.com>
  */
 
 /**
  * sfFilebasePluginThumbnail is a clone of a sfFilebasePluginImage that represents
  * a thumbnail
  * 
- * @package    de.optimusprime.sfFilebasePlugin
  * @see        SplFileInfo
  * @see        sfFilebasePluginImage
- * @author     Johannes Heinen <johannes.heinen@gmail.com>
- * @copyright  Johannes Heinen <johannes.heinen@gmail.com>
  */
 class sfFilebasePluginThumbnail extends sfFilebasePluginImage
 {

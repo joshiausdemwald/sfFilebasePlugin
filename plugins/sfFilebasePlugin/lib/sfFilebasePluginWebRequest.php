@@ -1,14 +1,23 @@
 <?php
 /**
+ * This file is part of the sfFilebasePlugin package.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @package   de.optimusprime.sfFilebasePlugin
+ * @author    Johannes Heinen <johannes.heinen@gmail.com>
+ * @license   MIT license
+ * @copyright 2007-2009 Johannes Heinen <johannes.heinen@gmail.com>
+ */
+
+/**
  * This class extends sfWebRequest to add a convinience
  * method for accessing uploaded files, converted by
  * sfFilebasePlugin into instances of sfFilebasePluginUploadedFile.
  *
  * @package de.optimusprime.sfFilebasePlugin
- * @author Johannes Heinen <johannes.heinen@gmail.com>
- * @license MIT
- * @copyright 2007-2009 Johannes Heinen <johannes.heinen@gmail.com>
- * @see sfWebRequest
+ * @see     sfWebRequest
  */
 class sfFilebasePluginWebRequest extends sfWebRequest
 {

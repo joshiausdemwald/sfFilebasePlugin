@@ -102,12 +102,10 @@
         		<!-- ========== Info from phpDoc block ========= -->
 <p class="short-description">sfFilebasePluginUploadedFile represents a uploaded File and provides methods  to handle one.</p>
 	<ul class="tags">
-				<li><span class="field">author:</span> Johannes Heinen &lt;<a href="mailto:johannes.heinen@gmail.com">johannes.heinen@gmail.com</a>&gt;</li>
-				<li><span class="field">copyright:</span> Johannes Heinen &lt;johannes.heinen@gmail.com&gt;</li>
 				<li><span class="field">see:</span> <a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></li>
 			</ul>
 		<p class="notes">
-			Located in <a class="field" href="_lib---sfFilebasePluginUploadedFile.php.html">/lib/sfFilebasePluginUploadedFile.php</a> (line <span class="field">18</span>)
+			Located in <a class="field" href="_lib---sfFilebasePluginUploadedFile.php.html">/lib/sfFilebasePluginUploadedFile.php</a> (line <span class="field">20</span>)
 		</p>
 		
 				
@@ -325,7 +323,7 @@
 		<span class="var-title">
 			<span class="var-type">string</span>
 			<span class="var-name">$error</span>
-						(line <span class="line-number">53</span>)
+						(line <span class="line-number">55</span>)
 		</span>
 	</div>
 
@@ -346,7 +344,7 @@
 		<span class="var-title">
 			<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html">sfFilebasePlugin</a></span>
 			<span class="var-name">$filebase</span>
-						(line <span class="line-number">33</span>)
+						(line <span class="line-number">35</span>)
 		</span>
 	</div>
 
@@ -367,7 +365,7 @@
 		<span class="var-title">
 			<span class="var-type">string</span>
 			<span class="var-name">$name</span>
-						(line <span class="line-number">38</span>)
+						(line <span class="line-number">40</span>)
 		</span>
 	</div>
 
@@ -388,7 +386,7 @@
 		<span class="var-title">
 			<span class="var-type">string</span>
 			<span class="var-name">$size</span>
-						(line <span class="line-number">58</span>)
+						(line <span class="line-number">60</span>)
 		</span>
 	</div>
 
@@ -409,7 +407,7 @@
 		<span class="var-title">
 			<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>
 			<span class="var-name">$tmp_name</span>
-						(line <span class="line-number">43</span>)
+						(line <span class="line-number">45</span>)
 		</span>
 	</div>
 
@@ -430,7 +428,7 @@
 		<span class="var-title">
 			<span class="var-type">string</span>
 			<span class="var-name">$type</span>
-						(line <span class="line-number">48</span>)
+						(line <span class="line-number">50</span>)
 		</span>
 	</div>
 
@@ -465,7 +463,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">Constructor __construct</span> (line <span class="line-number">70</span>)
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">72</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -506,7 +504,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getError</span> (line <span class="line-number">174</span>)
+		<span class="method-title">getError</span> (line <span class="line-number">176</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -531,7 +529,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">getExtension</span> (line <span class="line-number">132</span>)
+		<span class="method-title">getExtension</span> (line <span class="line-number">134</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -555,7 +553,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getName</span> (line <span class="line-number">195</span>)
+		<span class="method-title">getName</span> (line <span class="line-number">197</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -579,7 +577,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">getSize</span> (line <span class="line-number">142</span>)
+		<span class="method-title">getSize</span> (line <span class="line-number">144</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -604,7 +602,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getTmpName</span> (line <span class="line-number">185</span>)
+		<span class="method-title">getTmpName</span> (line <span class="line-number">187</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -628,7 +626,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">getType</span> (line <span class="line-number">121</span>)
+		<span class="method-title">getType</span> (line <span class="line-number">123</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -652,7 +650,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">hasError</span> (line <span class="line-number">164</span>)
+		<span class="method-title">hasError</span> (line <span class="line-number">166</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -675,7 +673,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">isError</span> (line <span class="line-number">155</span>)
+		<span class="method-title">isError</span> (line <span class="line-number">157</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -707,7 +705,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">move</span> (line <span class="line-number">221</span>)
+		<span class="method-title">move</span> (line <span class="line-number">223</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -762,7 +760,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">moveUploadedFile</span> (line <span class="line-number">110</span>)
+		<span class="method-title">moveUploadedFile</span> (line <span class="line-number">112</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -841,7 +839,7 @@
 		<span class="const-title">
 			<span class="const-name">UPLOAD_ERR_CANT_WRITE</span>
 			 = <span class="const-default"> UPLOAD_ERR_CANT_WRITE</span>
-			(line <span class="line-number">26</span>)
+			(line <span class="line-number">28</span>)
 		</span>
 	</div>
 
@@ -857,7 +855,7 @@
 		<span class="const-title">
 			<span class="const-name">UPLOAD_ERR_EXTENSION</span>
 			 = <span class="const-default"> UPLOAD_ERR_EXTENSION</span>
-			(line <span class="line-number">27</span>)
+			(line <span class="line-number">29</span>)
 		</span>
 	</div>
 
@@ -873,7 +871,7 @@
 		<span class="const-title">
 			<span class="const-name">UPLOAD_ERR_FORM_SIZE</span>
 			 = <span class="const-default"> UPLOAD_ERR_FORM_SIZE</span>
-			(line <span class="line-number">23</span>)
+			(line <span class="line-number">25</span>)
 		</span>
 	</div>
 
@@ -889,7 +887,7 @@
 		<span class="const-title">
 			<span class="const-name">UPLOAD_ERR_INI_SIZE</span>
 			 = <span class="const-default"> UPLOAD_ERR_INI_SIZE</span>
-			(line <span class="line-number">22</span>)
+			(line <span class="line-number">24</span>)
 		</span>
 	</div>
 
@@ -905,7 +903,7 @@
 		<span class="const-title">
 			<span class="const-name">UPLOAD_ERR_NO_FILE</span>
 			 = <span class="const-default"> UPLOAD_ERR_NO_FILE</span>
-			(line <span class="line-number">25</span>)
+			(line <span class="line-number">27</span>)
 		</span>
 	</div>
 
@@ -921,7 +919,7 @@
 		<span class="const-title">
 			<span class="const-name">UPLOAD_ERR_NO_TMP_DIR</span>
 			 = <span class="const-default"> UPLOAD_ERR_NO_TMP_DIR</span>
-			(line <span class="line-number">28</span>)
+			(line <span class="line-number">30</span>)
 		</span>
 	</div>
 
@@ -937,7 +935,7 @@
 		<span class="const-title">
 			<span class="const-name">UPLOAD_ERR_OK</span>
 			 = <span class="const-default"> UPLOAD_ERR_OK</span>
-			(line <span class="line-number">21</span>)
+			(line <span class="line-number">23</span>)
 		</span>
 	</div>
 
@@ -953,7 +951,7 @@
 		<span class="const-title">
 			<span class="const-name">UPLOAD_ERR_PARTIAL</span>
 			 = <span class="const-default"> UPLOAD_ERR_PARTIAL</span>
-			(line <span class="line-number">24</span>)
+			(line <span class="line-number">26</span>)
 		</span>
 	</div>
 
@@ -966,7 +964,7 @@
 	</div>
 
 	<p class="notes" id="credit">
-		Documentation generated on Wed, 13 May 2009 09:33:24 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Wed, 13 May 2009 18:03:44 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</div></body>
 </html>

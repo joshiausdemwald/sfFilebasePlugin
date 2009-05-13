@@ -100,12 +100,10 @@
         		<!-- ========== Info from phpDoc block ========= -->
 <p class="short-description">sfFilebasePluginGfxEditor edits images. Ärm. Ok, it can create thumbnails.</p>
 	<ul class="tags">
-				<li><span class="field">author:</span> Johannes Heinen &lt;<a href="mailto:johannes.heinen@gmail.com">johannes.heinen@gmail.com</a>&gt;</li>
-				<li><span class="field">copyright:</span> Johannes Heinen &lt;johannes.heinen@gmail.com&gt;</li>
 				<li><span class="field">todo:</span> Implement improved image editing capabilities.</li>
 			</ul>
 		<p class="notes">
-			Located in <a class="field" href="_lib---sfFilebasePluginGfxEditor.php.html">/lib/sfFilebasePluginGfxEditor.php</a> (line <span class="field">17</span>)
+			Located in <a class="field" href="_lib---sfFilebasePluginGfxEditor.php.html">/lib/sfFilebasePluginGfxEditor.php</a> (line <span class="field">19</span>)
 		</p>
 		
 				
@@ -228,7 +226,7 @@
 		<span class="var-title">
 			static <span class="var-type">array</span>
 			<span class="var-name">$available_adapters</span>
-			 = <span class="var-default">array()</span>			(line <span class="line-number">24</span>)
+			 = <span class="var-default">array()</span>			(line <span class="line-number">26</span>)
 		</span>
 	</div>
 
@@ -252,7 +250,7 @@
 		<span class="var-title">
 			<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditorAdapterInterface.html">sfFilebasePluginGfxEditorAdapterInterface</a></span>
 			<span class="var-name">$adapter</span>
-						(line <span class="line-number">37</span>)
+						(line <span class="line-number">39</span>)
 		</span>
 	</div>
 
@@ -274,7 +272,7 @@
 		<span class="var-title">
 			<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html">sfFilebasePlugin</a></span>
 			<span class="var-name">$filebase</span>
-						(line <span class="line-number">29</span>)
+						(line <span class="line-number">31</span>)
 		</span>
 	</div>
 
@@ -307,7 +305,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">static registerAdapter</span> (line <span class="line-number">87</span>)
+		<span class="method-title">static registerAdapter</span> (line <span class="line-number">89</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -340,7 +338,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">Constructor __construct</span> (line <span class="line-number">48</span>)
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">50</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -373,7 +371,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">createThumbnail</span> (line <span class="line-number">177</span>)
+		<span class="method-title">createThumbnail</span> (line <span class="line-number">179</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -411,7 +409,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">getFilebase</span> (line <span class="line-number">252</span>)
+		<span class="method-title">getFilebase</span> (line <span class="line-number">254</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -435,7 +433,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getScaledImageData</span> (line <span class="line-number">202</span>)
+		<span class="method-title">getScaledImageData</span> (line <span class="line-number">204</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -478,7 +476,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">getThumbnailFileinfo</span> (line <span class="line-number">240</span>)
+		<span class="method-title">getThumbnailFileinfo</span> (line <span class="line-number">242</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -516,7 +514,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">imageCopyResampled</span> (line <span class="line-number">112</span>)
+		<span class="method-title">imageCopyResampled</span> (line <span class="line-number">114</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -570,7 +568,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">imageRotate</span> (line <span class="line-number">160</span>)
+		<span class="method-title">imageRotate</span> (line <span class="line-number">162</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -617,7 +615,7 @@
 
 
 	<p class="notes" id="credit">
-		Documentation generated on Wed, 13 May 2009 09:33:23 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Wed, 13 May 2009 18:03:43 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</div></body>
 </html>

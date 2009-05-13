@@ -96,11 +96,12 @@
 														</div>
 	<div class="info-box-body">	
 		<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">sfFilebasePluginValidatorFile validates uploaded files, internally based  on sfFilebasePluginUploadedFile object, not on the raw file-array that you  can access through sfWebRequest::getFiles() or php internal $_FILES globals.</p>
+<p class="short-description">This file is part of the sfFilebasePlugin package.</p>
+<p class="description"><p>For the full copyright and license information, please view the LICENSE  file that was distributed with this source code.</p></p>
 	<ul class="tags">
-				<li><span class="field">author:</span> the original sfValidatorFile-Class: Fabien Potencier &lt;<a href="mailto:fabien.potencier@symfony-project.com">fabien.potencier@symfony-project.com</a>&gt;</li>
-				<li><span class="field">author:</span> joshi</li>
-				<li><span class="field">see:</span> sfValidatorFile</li>
+				<li><span class="field">author:</span> Johannes Heinen &lt;<a href="mailto:johannes.heinen@gmail.com">johannes.heinen@gmail.com</a>&gt;</li>
+				<li><span class="field">copyright:</span> 2007-2009 Johannes Heinen &lt;johannes.heinen@gmail.com&gt;</li>
+				<li><span class="field">license:</span> MIT</li>
 			</ul>
 		
 			</div>
@@ -136,7 +137,7 @@
 	
 	
 	<p class="notes" id="credit">
-		Documentation generated on Wed, 13 May 2009 09:33:24 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Wed, 13 May 2009 18:03:44 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</div></body>
 </html>

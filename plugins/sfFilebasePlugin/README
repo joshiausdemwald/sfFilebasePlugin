@@ -1,31 +1,33 @@
 sfFilebasePlugin
 ================
 
-*sfFilebasePlugin* provides an unified **api* for **filesystem related
+*sfFilebasePlugin* provides an unified **api** for **filesystem related
 operations** with focus on web based applications (yes, really.)
 
 It consists of a set of classes based on built in **SPL classes** (SplFileInfo/
 -Object, DirectoryIterator ...) written by Marcus Boerger.
 
-Documentation for these base classes may be found in the
-[API-docs](http://www.php.net/~helly/php/ext/spl/).
+The api-documentation for these base classes may be found in
+[http://www.php.net/~helly/php/ext/spl/](http://www.php.net/~helly/php/ext/spl/).
 
 The API Documentation for *sfFilebasePlugin* can be found in
 ./plugins/sfFilebasePlugin/doc. The API doc is not included in the pear-
 package, so you'll have had to browse the svn-repository
 [http://svn.symfony-project.com/plugins/sfFilebasePlugin/](http://svn.symfony-project.com/plugins/sfFilebasePlugin/)
 or my github-repository
-[http://github.com/joshiausdemwald/sfFilebasePlugin](http://github.com/joshiausdemwald/sfFilebasePlugin).
+[http://github.com/joshiausdemwald/sfFilebasePlugin](http://github.com/joshiausdemwald/sfFilebasePlugin
+which i use to store what i am working on.
 
 **The git repos also contains a sample symfony project which shows a few
-features.** It should also be used as additional an documentation.
+features.** It could also be used as additional documentation material.
 
 *SfFilebasePlugin* extends the built in SPL-Classes by dissociating more and
 different files or types. Resulting in a collection of classes like
-"sfFilebasePluginDirectory", "sfFilebasePluginImage",
-"sfFilebasePluginThumbnail" ... planning sfFilebasePluginZIP or something like
-that. Additionally, the plugin provides an extension of SplFileObject named
-"sfFilebasePluginFileObject".
+`sfFilebasePluginDirectory` or `sfFilebasePluginImage`,
+`sfFilebasePluginThumbnail`. I am planning `sfFilebasePluginZIP` or something
+like that - further enrichments that "fit" into sfFilebasePlugin. Additionally,
+the plugin provides an extension of `SplFileObject` named
+`sfFilebasePluginFileObject`.
 
 **SfFilebasePlugin can help woman if she wants to**
 
