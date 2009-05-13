@@ -189,13 +189,15 @@ class sfFilebasePluginFile extends SplFileInfo
 
   /**
    * Returns Mime-Type (Content-Type)
-   * of file.
+   * of file or default if mime type
+   * cannot be determined.
    *
+   * @param  string $default;
    * @return string $mime
    */
-  public function getMimeType()
+  public function getMimeType($default = 'application/octet-stream')
   {
-    return sfFilebasePluginUtil::getMimeByExtension($this->getExtension());
+    return sfFilebasePluginUtil::getMimeType($this, $default);
   }
 
   /**

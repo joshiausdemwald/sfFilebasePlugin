@@ -1,9 +1,14 @@
 <?php
-/* 
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * This file is part of the sfFilebasePlugin package.
  *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  *
+ * @package   de.optimusprime.sfFilebasePlugin
+ * @author    Johannes Heinen <johannes.heinen@gmail.com>
+ * @license   MIT license
+ * @copyright 2007-2009 Johannes Heinen <johannes.heinen@gmail.com>
  */
 
 /**
@@ -11,10 +16,10 @@
  * on sfFilebasePluginUploadedFile object, not on the raw file-array that you
  * can access through sfWebRequest::getFiles() or php internal $_FILES globals.
  *
- * @package de.optimusprime.sfFilebasePlugin
+ * This class is derived from the original sfValidatorFile, written by
+ * Fabien Potencier.
+ *
  * @see sfValidatorFile
- * @author the original sfValidatorFile-Class: Fabien Potencier <fabien.potencier@symfony-project.com>
- * @author joshi
  */
 class sfFilebasePluginValidatorFile extends sfValidatorBase
 {
