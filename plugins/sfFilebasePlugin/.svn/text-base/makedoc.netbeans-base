@@ -1,2 +1,0 @@
-cp ./README ./lib
-phpdoc -s -pp -o HTML:frames:DOM/phphtmllib -d ./config,./lib -t ./doc -ric README, LICENSE
