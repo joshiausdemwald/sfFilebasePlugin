@@ -21,7 +21,7 @@
  *
  * @see sfValidatorFile
  */
-class sfFilebasePluginValidatorFile extends sfValidatorBase
+class sfFilebasePluginValidatorFile extends sfValidatorFile
 {
    /**
    * Configures the current validator.
@@ -108,6 +108,7 @@ class sfFilebasePluginValidatorFile extends sfValidatorBase
           throw new sfValidatorError($this, 'required');
         }
 
+        // @todo: check if $value should be returned
         return $this->getEmptyValue();
       }
     }
@@ -125,25 +126,28 @@ class sfFilebasePluginValidatorFile extends sfValidatorBase
    */
   protected function doClean($value)
   {
-    switch ($value->getError())
+    if($value->hasError())
     {
-      case sfFilebasePluginUploadedFile::UPLOAD_ERR_INI_SIZE:
-        $max = ini_get('upload_max_filesize');
-        if ($this->getOption('max_size'))
-        {
-          $max = min($max, $this->getOption('max_size'));
-        }
-        throw new sfValidatorError($this, 'max_size', array('max_size' => $max, 'size' => (int) $value['size']));
-      case sfFilebasePluginUploadedFile::UPLOAD_ERR_FORM_SIZE:
-        throw new sfValidatorError($this, 'max_size', array('max_size' => 0, 'size' => (int) $value['size']));
-      case sfFilebasePluginUploadedFile::UPLOAD_ERR_PARTIAL:
-        throw new sfValidatorError($this, 'partial');
-      case sfFilebasePluginUploadedFile::UPLOAD_ERR_NO_TMP_DIR:
-        throw new sfValidatorError($this, 'no_tmp_dir');
-      case sfFilebasePluginUploadedFile::UPLOAD_ERR_CANT_WRITE:
-        throw new sfValidatorError($this, 'cant_write');
-      case sfFilebasePluginUploadedFile::UPLOAD_ERR_EXTENSION:
-        throw new sfValidatorError($this, 'extension');
+      switch ($value->getError())
+      {
+        case sfFilebasePluginUploadedFile::UPLOAD_ERR_INI_SIZE:
+          $max = sfFilebasePluginUtil::getMaxUploadFileSize();
+          if ($this->getOption('max_size'))
+          {
+            $max = min($max, $this->getOption('max_size'));
+          }
+          throw new sfValidatorError($this, 'max_size', array('max_size' => $max, 'size' => (int) $value['size']));
+        case sfFilebasePluginUploadedFile::UPLOAD_ERR_FORM_SIZE:
+          throw new sfValidatorError($this, 'max_size', array('max_size' => 0, 'size' => (int) $value['size']));
+        case sfFilebasePluginUploadedFile::UPLOAD_ERR_PARTIAL:
+          throw new sfValidatorError($this, 'partial');
+        case sfFilebasePluginUploadedFile::UPLOAD_ERR_NO_TMP_DIR:
+          throw new sfValidatorError($this, 'no_tmp_dir');
+        case sfFilebasePluginUploadedFile::UPLOAD_ERR_CANT_WRITE:
+          throw new sfValidatorError($this, 'cant_write');
+        case sfFilebasePluginUploadedFile::UPLOAD_ERR_EXTENSION:
+          throw new sfValidatorError($this, 'extension');
+      }
     }
 
     // check file size
@@ -152,6 +156,8 @@ class sfFilebasePluginValidatorFile extends sfValidatorBase
       throw new sfValidatorError($this, 'max_size', array('max_size' => $this->getOption('max_size'), 'size' => (int) $value->getSize()));
     }
 
+    // Raw type the browser provided
+    // @todo: Eventually check mime of tmp-file by Util as a fallback?
     $mimeType = $value->getType();
 
     // check mime type
@@ -164,5 +170,34 @@ class sfFilebasePluginValidatorFile extends sfValidatorBase
       }
     }
     return $value;
+  }
+
+  /**
+   * Returns the mime type of a file.
+   *
+   * This methods call each mime_type_guessers option callables to
+   * guess the mime type.
+   *
+   * Proxy for sfFilebasePluginFile::getMimeType()
+   * 
+   * @see sfFilebasePluginFile::getMimeType()
+   * @param  string $file      The absolute path of a file
+   * @param  string $fallback  The default mime type to return if not guessable
+   * @return string The mime type of the file (fallback is returned if not guessable)
+   */
+  protected function getMimeType($file, $fallback)
+  {
+    return sfFilebasePlugin::getInstance()->getFilebaseFile($file)->getMimeType($fallback);
+  }
+
+  /**
+   * @see sfValidatorBase
+   */
+  protected function isEmpty($value)
+  {
+    // empty if the value is not an array
+    // or if the value comes from PHP with an error of UPLOAD_ERR_NO_FILE
+    return
+      !$value instanceof sfFilebasePluginUploadedFile || $value->isError(sfFilebasePluginUploadedFile::UPLOAD_ERR_NO_FILE);
   }
 }

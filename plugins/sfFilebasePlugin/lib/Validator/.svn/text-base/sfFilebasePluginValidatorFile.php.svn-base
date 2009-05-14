@@ -66,13 +66,8 @@ class sfFilebasePluginValidatorFile extends sfValidatorFile
     $this->addOption('max_size');
     $this->addOption('mime_types');
     $this->addOption('mime_categories', array(
-      'web_images' => array(
-      'image/jpeg',
-      'image/pjpeg',
-      'image/png',
-      'image/x-png',
-      'image/gif',
-    )));
+      'web_images' => sfFilebasePluginUtil::$WEB_IMAGES)
+    );
     $this->addMessage('max_size', 'File is too large (maximum is %max_size% bytes).');
     $this->addMessage('mime_types', 'Invalid mime type (%mime_type%).');
     $this->addMessage('partial', 'The uploaded file was only partially uploaded.');

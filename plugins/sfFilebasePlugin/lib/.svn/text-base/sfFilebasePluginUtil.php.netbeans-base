@@ -624,4 +624,34 @@ class sfFilebasePluginUtil
   {
     return in_array(strtolower($file->getExtension()), array('jpg','jpeg','gif','png'));
   }
+
+  /**
+   * Trys to find the mime type of a file
+   * and returns it, otherwise a $default value will
+   * be returned (application/octet-stream per default)
+   *
+   * $file must be an instance of sfFilebasePluginFile
+   *
+   * @param   sfFilebasePluginFile  $absolute_path
+   * @param   string                $default
+   * @return  string               $mime_type
+   */
+  public function getMimeType(sfFilebasePluginFile $file, $default = 'application/octet-stream')
+  {
+    $mime = false;
+    if($file->fileExists())
+    {
+      if(!$file->isReadable()) throw new sfFilebasePluginException(sprintf('File %s is read protected.', $file->getPathname()));
+
+      // 1st step, check magic mimeinfo
+      if(class_exists('finfo'))
+      {
+        $finfo = new finfo(FILEINFO_MIME);
+        $mime = $finfo->file($file->getPathname());
+        if($mime)
+          return strtolower($mime);
+      }
+    }
+    return self::getMimeByExtension($file->getExtension(), $default);
+  }
 }

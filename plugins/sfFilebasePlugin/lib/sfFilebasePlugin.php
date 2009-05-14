@@ -520,17 +520,45 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
   }
 
    /**
-   * Returns true if sfFilebasePluginFile is a
-   * web image file. Used to factory
+   * Returns true if sfFilebasePluginFile is an
+   * image file. Used to factory
    * a sfFilebasePluginImage instance by sfFilebasePlugin::
    * getFilebaseFile()
    *
+   * @see sfFilebasePluginUtil::getIsImage()
    * @todo improved mime-type detection
    * @return boolean true if file is an image
    */
   public function getIsImage(sfFilebasePluginFile $file)
   {
     return sfFilebasePluginUtil::getIsImage($file);
+  }
+
+  /**
+   * Returns true if $file is a supported image, what means that it can
+   * be processed by either GD-lib or imagick extension
+   *
+   * @param sfFilebasePluginFile $file
+   * @return boolean $is_supported_image: True if $file is supported
+   */
+  public function getIsSupportedImage(sfFilebasePluginFile $file)
+  {
+    return sfFilebasePluginUtil::getIsSupportedImage($file);
+  }
+
+  /**
+   * Returns true if sfFilebasePluginFile is an
+   * <strong>web</strong> image file. Used to factory
+   * a sfFilebasePluginImage instance by sfFilebasePlugin::
+   * getFilebaseFile()
+   *
+   * @see sfFilebasePluginUtil::getIsWebImage()
+   * @param sfFilebaseUtilFile $file
+   * @return boolean true if file is an image.
+   */
+  public function getIsWebImage(sfFilebasePluginFile $file)
+  {
+    return sfFilebasePluginUtil::getIsWebImage($file);
   }
 
   /**

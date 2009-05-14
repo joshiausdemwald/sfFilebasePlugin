@@ -83,11 +83,10 @@ class sfFilebasePluginImage extends sfFilebasePluginFile
     if(!$this->fileExists()) throw new sfFilebasePluginException(sprintf('File %s does not exist.', $this->getPathname()));
     if(!$this->isReadable()) throw new sfFilebasePluginException(sprintf('File %s is read protected.', $this->getPathname()));
     if(!function_exists('getimagesize')) throw new sfFilebasePluginException('FilebaseFile::getDimensions() cannot be executed, function getimagesize does not exist.');
-    if($this->isImage())
-    {
-      $is = getimagesize($this);
-      return array(0 => $is[0], 1 => $is[1], 'width'=>$is[0], 'height'=>$is[1]);
-    }
+    if(!$this->isImage()) throw new sfFilebasePluginException(sprintf('File %s is not an image.', $this));
+    if(!$this->filebase->getIsSupportedImage($this)) throw new sfFilebasePluginException(sprintf('Image format of %s is unsupported.'));
+    $is = getimagesize($this);
+    return array(0 => $is[0], 1 => $is[1], 'width'=>$is[0], 'height'=>$is[1]);
   }
 
   /**

@@ -616,15 +616,15 @@
 						<span class="method-title">getExtension</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodgetExtension">sfFilebasePluginFile::getExtension()</a> in sfFilebasePluginFile.php</div>
-							<div class="index-item-description">Returns extension of file</div>
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginUploadedFile.html#methodgetExtension">sfFilebasePluginUploadedFile::getExtension()</a> in sfFilebasePluginUploadedFile.php</div>
+							<div class="index-item-description">Returns the file extension of the  file, if browser has provided a  mime-type.</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">getExtension</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginUploadedFile.html#methodgetExtension">sfFilebasePluginUploadedFile::getExtension()</a> in sfFilebasePluginUploadedFile.php</div>
-							<div class="index-item-description">Returns the file extension of the  file, if browser has provided a  mime-type.</div>
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodgetExtension">sfFilebasePluginFile::getExtension()</a> in sfFilebasePluginFile.php</div>
+							<div class="index-item-description">Returns extension of file</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">getExtensionByMime</span>
@@ -637,15 +637,15 @@
 						<span class="method-title">getFilebase</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodgetFilebase">sfFilebasePluginFile::getFilebase()</a> in sfFilebasePluginFile.php</div>
-							<div class="index-item-description">Returns a sfFilebasePlugin instance</div>
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditor.html#methodgetFilebase">sfFilebasePluginGfxEditor::getFilebase()</a> in sfFilebasePluginGfxEditor.php</div>
+							<div class="index-item-description">Returns current instance of sfFilebasePlugin.</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">getFilebase</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditor.html#methodgetFilebase">sfFilebasePluginGfxEditor::getFilebase()</a> in sfFilebasePluginGfxEditor.php</div>
-							<div class="index-item-description">Returns current instance of sfFilebasePlugin.</div>
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodgetFilebase">sfFilebasePluginFile::getFilebase()</a> in sfFilebasePluginFile.php</div>
+							<div class="index-item-description">Returns a sfFilebasePlugin instance</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">getFilebaseFile</span>
@@ -700,14 +700,14 @@
 						<span class="method-title">getHumanReadableFileType</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodgetHumanReadableFileType">sfFilebasePluginFile::getHumanReadableFileType()</a> in sfFilebasePluginFile.php</div>
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginDirectory.html#methodgetHumanReadableFileType">sfFilebasePluginDirectory::getHumanReadableFileType()</a> in sfFilebasePluginDirectory.php</div>
 							<div class="index-item-description">Returns a human readable string file type.</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">getHumanReadableFileType</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginDirectory.html#methodgetHumanReadableFileType">sfFilebasePluginDirectory::getHumanReadableFileType()</a> in sfFilebasePluginDirectory.php</div>
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodgetHumanReadableFileType">sfFilebasePluginFile::getHumanReadableFileType()</a> in sfFilebasePluginFile.php</div>
 							<div class="index-item-description">Returns a human readable string file type.</div>
 					</dd>
 			<dt class="field">
@@ -734,22 +734,43 @@
 						<span class="method-title">getIsImage</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html#methodgetIsImage">sfFilebasePlugin::getIsImage()</a> in sfFilebasePlugin.php</div>
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginUtil.html#methodgetIsImage">sfFilebasePluginUtil::getIsImage()</a> in sfFilebasePluginUtil.php</div>
 							<div class="index-item-description">Returns true if sfFilebasePluginFile is a</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">getIsImage</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginUtil.html#methodgetIsImage">sfFilebasePluginUtil::getIsImage()</a> in sfFilebasePluginUtil.php</div>
-							<div class="index-item-description">Returns true if sfFilebasePluginFile is a</div>
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html#methodgetIsImage">sfFilebasePlugin::getIsImage()</a> in sfFilebasePlugin.php</div>
+							<div class="index-item-description">Returns true if sfFilebasePluginFile is an</div>
 					</dd>
 			<dt class="field">
-						<span class="method-title">getIterator</span>
+						<span class="method-title">getIsSupportedImage</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginStruct.html#methodgetIterator">sfFilebasePluginStruct::getIterator()</a> in sfFilebasePluginStruct.php</div>
-							<div class="index-item-description">Returns Array Iterator over struct data</div>
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html#methodgetIsSupportedImage">sfFilebasePlugin::getIsSupportedImage()</a> in sfFilebasePlugin.php</div>
+							<div class="index-item-description">Returns true if $file is a supported image, what means that it can  be processed by either GD-lib or imagick extension</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">getIsSupportedImage</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginUtil.html#methodgetIsSupportedImage">sfFilebasePluginUtil::getIsSupportedImage()</a> in sfFilebasePluginUtil.php</div>
+							<div class="index-item-description">Returns true if $file is a supported image, what means that it can  be processed by either GD-lib or imagick extension</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">getIsWebImage</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html#methodgetIsWebImage">sfFilebasePlugin::getIsWebImage()</a> in sfFilebasePlugin.php</div>
+							<div class="index-item-description">Returns true if sfFilebasePluginFile is an</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">getIsWebImage</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginUtil.html#methodgetIsWebImage">sfFilebasePluginUtil::getIsWebImage()</a> in sfFilebasePluginUtil.php</div>
+							<div class="index-item-description">Returns true if the image file is a web image.</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">getIterator</span>
@@ -757,6 +778,13 @@
 		<dd class="index-item-body">
 			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginDirectory.html#methodgetIterator">sfFilebasePluginDirectory::getIterator()</a> in sfFilebasePluginDirectory.php</div>
 							<div class="index-item-description">Returns RecursiveDirectoryIterator of  sfFilebasePlugin Directory</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">getIterator</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginStruct.html#methodgetIterator">sfFilebasePluginStruct::getIterator()</a> in sfFilebasePluginStruct.php</div>
+							<div class="index-item-description">Returns Array Iterator over struct data</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">getMaxUploadFileSize</span>
@@ -782,8 +810,8 @@
 						<span class="method-title">getMimeType</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodgetMimeType">sfFilebasePluginFile::getMimeType()</a> in sfFilebasePluginFile.php</div>
-							<div class="index-item-description">Returns Mime-Type (Content-Type)  of file or default if mime type  cannot be determined.</div>
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginValidatorFile.html#methodgetMimeType">sfFilebasePluginValidatorFile::getMimeType()</a> in sfFilebasePluginValidatorFile.php</div>
+							<div class="index-item-description">Returns the mime type of a file.</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">getMimeType</span>
@@ -796,8 +824,8 @@
 						<span class="method-title">getMimeType</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginValidatorFile.html#methodgetMimeType">sfFilebasePluginValidatorFile::getMimeType()</a> in sfFilebasePluginValidatorFile.php</div>
-							<div class="index-item-description">Returns the mime type of a file.</div>
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodgetMimeType">sfFilebasePluginFile::getMimeType()</a> in sfFilebasePluginFile.php</div>
+							<div class="index-item-description">Returns Mime-Type (Content-Type)  of file or default if mime type  cannot be determined.</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">getMTime</span>
@@ -844,15 +872,15 @@
 						<span class="method-title">getSize</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodgetSize">sfFilebasePluginFile::getSize()</a> in sfFilebasePluginFile.php</div>
-							<div class="index-item-description">If Format is string, Size will be formatted (kb, mb ...)</div>
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginDirectory.html#methodgetSize">sfFilebasePluginDirectory::getSize()</a> in sfFilebasePluginDirectory.php</div>
+							<div class="index-item-description">Calculates size of the directory,  cumulating every sub-file and dir.</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">getSize</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginDirectory.html#methodgetSize">sfFilebasePluginDirectory::getSize()</a> in sfFilebasePluginDirectory.php</div>
-							<div class="index-item-description">Calculates size of the directory,  cumulating every sub-file and dir.</div>
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodgetSize">sfFilebasePluginFile::getSize()</a> in sfFilebasePluginFile.php</div>
+							<div class="index-item-description">If Format is string, Size will be formatted (kb, mb ...)</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">getSize</span>
@@ -990,14 +1018,14 @@
 						<span class="method-title">imageCopyResampled</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditor.html#methodimageCopyResampled">sfFilebasePluginGfxEditor::imageCopyResampled()</a> in sfFilebasePluginGfxEditor.php</div>
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html#methodimageCopyResampled">sfFilebasePlugin::imageCopyResampled()</a> in sfFilebasePlugin.php</div>
 							<div class="index-item-description">Resamples an image using php internal gd-functions. Used by thumbnail and resize  method.</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">imageCopyResampled</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html#methodimageCopyResampled">sfFilebasePlugin::imageCopyResampled()</a> in sfFilebasePlugin.php</div>
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditor.html#methodimageCopyResampled">sfFilebasePluginGfxEditor::imageCopyResampled()</a> in sfFilebasePluginGfxEditor.php</div>
 							<div class="index-item-description">Resamples an image using php internal gd-functions. Used by thumbnail and resize  method.</div>
 					</dd>
 			<dt class="field">
@@ -1044,14 +1072,14 @@
 						<span class="method-title">isEmpty</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginDirectory.html#methodisEmpty">sfFilebasePluginDirectory::isEmpty()</a> in sfFilebasePluginDirectory.php</div>
-							<div class="index-item-description">Returns true if file is a directory and empty</div>
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginValidatorFile.html#methodisEmpty">sfFilebasePluginValidatorFile::isEmpty()</a> in sfFilebasePluginValidatorFile.php</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">isEmpty</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginValidatorFile.html#methodisEmpty">sfFilebasePluginValidatorFile::isEmpty()</a> in sfFilebasePluginValidatorFile.php</div>
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginDirectory.html#methodisEmpty">sfFilebasePluginDirectory::isEmpty()</a> in sfFilebasePluginDirectory.php</div>
+							<div class="index-item-description">Returns true if file is a directory and empty</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">isError</span>
@@ -1072,7 +1100,7 @@
 					</dt>
 		<dd class="index-item-body">
 			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodisImage">sfFilebasePluginFile::isImage()</a> in sfFilebasePluginFile.php</div>
-							<div class="index-item-description">Returns true if sfFilebasePluginFile is a</div>
+							<div class="index-item-description">Returns true if sfFilebasePluginFile is an</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">isInFilebase</span>
@@ -1105,13 +1133,20 @@
 						<span class="method-title">isSupported</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditorAdapterIMagick.html#methodisSupported">sfFilebasePluginGfxEditorAdapterIMagick::isSupported()</a> in sfFilebasePluginGfxEditorAdapterIMagick.php</div>
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditorAdapterInterface.html#methodisSupported">sfFilebasePluginGfxEditorAdapterInterface::isSupported()</a> in sfFilebasePluginGfxEditorAdapterInterface.php</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">isSupported</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditorAdapterInterface.html#methodisSupported">sfFilebasePluginGfxEditorAdapterInterface::isSupported()</a> in sfFilebasePluginGfxEditorAdapterInterface.php</div>
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditorAdapterIMagick.html#methodisSupported">sfFilebasePluginGfxEditorAdapterIMagick::isSupported()</a> in sfFilebasePluginGfxEditorAdapterIMagick.php</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">isWebImage</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodisWebImage">sfFilebasePluginFile::isWebImage()</a> in sfFilebasePluginFile.php</div>
+							<div class="index-item-description">Returns true if sfFilebasePluginFile is a</div>
 					</dd>
 		</dl>
 	<a name="m"></a>
@@ -1941,6 +1976,13 @@
 		<div style="clear: both"></div>
 	</div>
 	<dl>
+			<dt class="field">
+						<span class="var-title">$WEB_IMAGES</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginUtil.html#var$WEB_IMAGES">sfFilebasePluginUtil::$WEB_IMAGES</a> in sfFilebasePluginUtil.php</div>
+							<div class="index-item-description">Mime types of web images, as possibly  provided by web-browsers.</div>
+					</dd>
 			<dt class="field">
 						<span class="method-title">write</span>
 					</dt>

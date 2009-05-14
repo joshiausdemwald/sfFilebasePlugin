@@ -441,6 +441,21 @@ class sfFilebasePluginUtil
   );
 
   /**
+   * Mime types of web images, as possibly 
+   * provided by web-browsers.
+   *
+   * @staticvar array $WEB_IMAGES
+   */
+  public static $WEB_IMAGES = array
+  (
+    'image/x-png',
+    'image/png',
+    'image/jpeg',
+    'image/pjpeg',
+    'image/gif'
+  );
+
+  /**
    * Returns an associative array
    * with mime-type as key and file-extension
    * as value.
@@ -622,7 +637,67 @@ class sfFilebasePluginUtil
    */
   public static function getIsImage(sfFilebasePluginFile $file)
   {
-    return in_array(strtolower($file->getExtension()), array('jpg','jpeg','gif','png'));
+    return (strpos(self::getMimeType($file), 'image') === 0);
+  }
+
+  /**
+   * Returns true if the image file is a web image.
+   * 
+   * @param sfFilebasePluginFile  $file
+   * @return boolean              $is_web_image: true if $file is a web image.
+   */
+  public static function getIsWebImage(sfFilebasePluginFile $file)
+  {
+    return in_array(self::getMimeType($file), self::$WEB_IMAGES);
+  }
+
+  /**
+   * Returns true if $file is a supported image, what means that it can
+   * be processed by either GD-lib or imagick extension
+   *
+   * @param sfFilebasePluginFile $file
+   * @return boolean $is_supported_image: True if $file is supported
+   */
+  public static function getIsSupportedImage(sfFilebasePluginFile $file)
+  {
+    $supported_mimes = array();
+    
+    // Check availabilty of gd library
+    if(function_exists('gd_info'))
+    {
+      $image_types = imagetypes();
+      $image_types & IMG_GIF && $supported_mimes[] = 'image/gif';
+      if($image_types & IMG_JPG)
+      {
+        $supported_mimes[] = 'image/jpeg';
+        $supported_mimes[] = 'image/pjpeg';
+      }
+      if($image_types & IMG_PNG)
+      {
+        $supported_mimes[] = 'image/png';
+        $supported_mimes[] = 'image/x-png';
+      }
+      if($image_types &  IMG_WBMP)
+      {
+        $supported_mimes[] = 'image/wbmp';
+        $supported_mimes[] = 'image/bmp';
+        $supported_mimes[] = 'image/x-bmp';
+      }
+      if($image_types & IMG_XPM)
+      {
+        $supported_mimes[] = 'image/x-bitmap';
+      }
+    }
+
+    // Assume imagick supports all image formats that have ever been
+    // invented.
+    // @todo Prove that false and implement better supported format check
+    if(class_exists('imagick'))
+    {
+      return self::getIsImage($file);
+    }
+
+    return self::getIsImage($file) && in_array(self::getMimeType($file), $supported_mimes);
   }
 
   /**
@@ -636,10 +711,15 @@ class sfFilebasePluginUtil
    * @param   string                $default
    * @return  string               $mime_type
    */
-  public function getMimeType(sfFilebasePluginFile $file, $default = 'application/octet-stream')
+  public static function getMimeType(sfFilebasePluginFile $file, $default = 'application/octet-stream')
   {
     $mime = false;
-    if($file->fileExists())
+
+    // Using file_exists() instead of sfFilebasePluginFile::fileExists()
+    // to avoid recursion issue. sfFilebasePluginFile::fileExists()
+    // calls sfFilebasePlugin::getFilebaseFile() calls
+    // sfFilebaseUtil::getMimeType()...
+    if(file_exists($file->getPathname()))
     {
       if(!$file->isReadable()) throw new sfFilebasePluginException(sprintf('File %s is read protected.', $file->getPathname()));
 
@@ -652,6 +732,15 @@ class sfFilebasePluginUtil
           return strtolower($mime);
       }
     }
+
+    // 2. try getimagesize
+    $info = getimagesize($file->getPathname());
+    if(is_array($info) && array_key_exists('mime', $info))
+    {
+      return $info['mime'];
+    }
+
+    // 3. check extension
     return self::getMimeByExtension($file->getExtension(), $default);
   }
 }

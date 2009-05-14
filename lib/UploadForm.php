@@ -21,7 +21,7 @@ class UploadForm extends sfForm
     $files['0'] = new sfWidgetFormInputFile();
     $files['1'] = new sfWidgetFormInputFile();
 
-    $validator_files['0'] = new sfFilebasePluginValidatorFile(array('required'=>true));
+    $validator_files['0'] = new sfFilebasePluginValidatorFile(array('mime_types'=>array('image/jpeg'), 'required'=>true));
     $validator_files['1'] = new sfFilebasePluginValidatorFile(array('required'=>true));
 
     $this->setWidgets(array(

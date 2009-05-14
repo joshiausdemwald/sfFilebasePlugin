@@ -114,17 +114,33 @@ class sfFilebasePluginFile extends SplFileInfo
   }
   
   /**
-   * Returns true if sfFilebasePluginFile is a
-   * web image file. Used to factory
+   * Returns true if sfFilebasePluginFile is an
+   * image file. Used to factory
    * a sfFilebasePluginImage instance by sfFilebasePlugin::
    * getFilebaseFile()
    *
+   * @see sfFilebaseUtil::getIsImage()
    * @todo improved mime-type detection
    * @return boolean true if file is an image
    */
   public function isImage()
   {
     return $this->filebase->getIsImage($this);
+  }
+
+  /**
+   * Returns true if sfFilebasePluginFile is a
+   * <strong>web</strong> image file. Used to factory
+   * a sfFilebasePluginImage instance by sfFilebasePlugin::
+   * getFilebaseFile()
+   *
+   * @see sfFilebasePlugin::getIsWebImage()
+   * @todo improved mime-type detection
+   * @return boolean true if file is an image
+   */
+  public function isWebImage()
+  {
+    return $this->filebase->getIsWebImage($this);
   }
 
   /**
@@ -383,7 +399,10 @@ class sfFilebasePluginFile extends SplFileInfo
       {
         $filename = new sfFilebasePluginDirectory($filename->getPathname(), $this->filebase);
       }
-      elseif($filename->isImage())
+
+      // Can image be processed by filebase, either throw GD or throug imagick?
+      // Then return instance of sfFilebasePluginImage...
+      elseif($this->filebase->getIsSupportedImage($filename))
       {
         $filename = new sfFilebasePluginImage($filename->getPathname(), $this->filebase);
       }

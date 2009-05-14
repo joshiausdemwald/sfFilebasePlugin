@@ -122,6 +122,7 @@ class sfFilebasePluginGfxEditor
     // Check source and target
     if(!$this->filebase->isInFilebase($src))                        throw new sfFilebasePluginException(sprintf('Source image %s does not belong to filebase %s, access restricted due to security issues.', $src, $this->filebase));
     if(!$src->isImage())                                            throw new sfFilebasePluginException(sprintf('Source file %s is not an image.', $src));
+    if(!$this->filebase->getIsSupportedImage($src))                 throw new sfFilebasePluginException(sprintf('Source image format %s is unsupported.', $src));
     if(!$src->fileExists())                                         throw new sfFilebasePluginException(sprintf('Source image %s does not exist.', $src));
     if(!$src->isReadable())                                         throw new sfFilebasePluginException(sprintf('Source image %s is read protected.', $src));
 
@@ -184,7 +185,7 @@ class sfFilebasePluginGfxEditor
     // Check if original file is writable...
     if(!$fileinfo->fileExists())        throw new sfFilebasePluginException(sprintf('File %s does not exist', $fileinfo->getPathname()));
     if(!$fileinfo->isReadable())        throw new sfFilebasePluginException(sprintf('File %s is write protected.', $fileinfo->getPathname()));
-    if(!$fileinfo->isImage())           throw new sfFilebasePluginException(sprintf('File %s is not an image.', $fileinfo));
+    if(!$this->filebase->getIsSupportedImage($fileinfo))           throw new sfFilebasePluginException(sprintf('File %s is not an image.', $fileinfo));if(!$fileinfo->isImage())           throw new sfFilebasePluginException(sprintf('Image format %s is unsupported.', $fileinfo));
     if(!$this->filebase->isInFilebase($fileinfo)) throw new sfFilebasePluginException(sprintf('FilebaseFile %s does not belong to Filebase %s, cannot be deleted due to security issues', $fileinfo->getPathname(), $this->filebase->getPathname()));
     $destination = $this->getThumbnailFileinfo($fileinfo, $dimensions, $mime);
     return new sfFilebasePluginThumbnail($this->imageCopyResampled($fileinfo, $destination, $dimensions, true), $this->filebase, $fileinfo);

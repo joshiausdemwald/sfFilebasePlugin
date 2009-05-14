@@ -170,7 +170,7 @@
 										<a href="#getInstance" title="details" class="method-name">getInstance</a>
 											([<span class="var-type">string</span>&nbsp;<span class="var-name">$path_name</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$cache_directory</span> = <span class="var-default">null</span>])
 									</div>
-																																																																																																																										
+																																																																																																																																										
 				<div class="method-definition">
 											<span class="method-result">sfFilebasePlugin</span>
 										<a href="#__construct" title="details" class="method-name">__construct</a>
@@ -234,6 +234,18 @@
 				<div class="method-definition">
 											<span class="method-result">boolean</span>
 										<a href="#getIsImage" title="details" class="method-name">getIsImage</a>
+											(<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>&nbsp;<span class="var-name">$file</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#getIsSupportedImage" title="details" class="method-name">getIsSupportedImage</a>
+											(<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>&nbsp;<span class="var-name">$file</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#getIsWebImage" title="details" class="method-name">getIsWebImage</a>
 											(<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>&nbsp;<span class="var-name">$file</span>)
 									</div>
 														
@@ -704,7 +716,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">getFileByHash</span> (line <span class="line-number">544</span>)
+		<span class="method-title">getFileByHash</span> (line <span class="line-number">572</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -792,14 +804,15 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getIsImage</span> (line <span class="line-number">531</span>)
+		<span class="method-title">getIsImage</span> (line <span class="line-number">532</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Returns true if sfFilebasePluginFile is a</p>
-<p class="description"><p>web image file. Used to factory  a sfFilebasePluginImage instance by sfFilebasePlugin::  getFilebaseFile()</p></p>
+<p class="short-description">Returns true if sfFilebasePluginFile is an</p>
+<p class="description"><p>image file. Used to factory  a sfFilebasePluginImage instance by sfFilebasePlugin::  getFilebaseFile()</p></p>
 	<ul class="tags">
 				<li><span class="field">return:</span> true if file is an image</li>
+				<li><span class="field">see:</span> <a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginUtil.html#methodgetIsImage">sfFilebasePluginUtil::getIsImage()</a></li>
 				<li><span class="field">todo:</span> improved mime-type detection</li>
 				<li><span class="field">access:</span> public</li>
 			</ul>
@@ -815,6 +828,68 @@
 			<ul class="parameters">
 					<li>
 				<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>
+				<span class="var-name">$file</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetIsSupportedImage" id="getIsSupportedImage"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getIsSupportedImage</span> (line <span class="line-number">544</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns true if $file is a supported image, what means that it can  be processed by either GD-lib or imagick extension</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if $file is supported</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			getIsSupportedImage
+		</span>
+					(<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>&nbsp;<span class="var-name">$file</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>
+				<span class="var-name">$file</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetIsWebImage" id="getIsWebImage"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getIsWebImage</span> (line <span class="line-number">559</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns true if sfFilebasePluginFile is an</p>
+<p class="description"><p>&lt;strong&gt;web&lt;/strong&gt; image file. Used to factory  a sfFilebasePluginImage instance by sfFilebasePlugin::  getFilebaseFile()</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> true if file is an image.</li>
+				<li><span class="field">see:</span> <a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginUtil.html#methodgetIsWebImage">sfFilebasePluginUtil::getIsWebImage()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			getIsWebImage
+		</span>
+					(<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>&nbsp;<span class="var-name">$file</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">sfFilebaseUtilFile</span>
 				<span class="var-name">$file</span>			</li>
 				</ul>
 		
@@ -1325,6 +1400,7 @@
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodisImage">sfFilebasePluginFile::isImage()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodisLink">sfFilebasePluginFile::isLink()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodisRWritable">sfFilebasePluginFile::isRWritable()</a></span><br>
+													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodisWebImage">sfFilebasePluginFile::isWebImage()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodopenFile">sfFilebasePluginFile::openFile()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodrename">sfFilebasePluginFile::rename()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#method__toString">sfFilebasePluginFile::__toString()</a></span><br>
@@ -1367,7 +1443,7 @@
 
 
 	<p class="notes" id="credit">
-		Documentation generated on Wed, 13 May 2009 22:43:11 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Thu, 14 May 2009 09:42:06 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</div></body>
 </html>
