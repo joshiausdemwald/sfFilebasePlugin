@@ -731,13 +731,13 @@ class sfFilebasePluginUtil
         if($mime)
           return strtolower($mime);
       }
-    }
-
-    // 2. try getimagesize
-    $info = getimagesize($file->getPathname());
-    if(is_array($info) && array_key_exists('mime', $info))
-    {
-      return $info['mime'];
+      
+      // 2. try getimagesize on all files, suppress errors.
+      $info = @getimagesize($file->getPathname());
+      if(is_array($info) && array_key_exists('mime', $info))
+      {
+        return $info['mime'];
+      }
     }
 
     // 3. check extension
