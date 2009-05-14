@@ -62,10 +62,11 @@
 <?php endif?>
 <?php endforeach?>
 </code>
-<h2>Image Gallery</h2>
+<h2>Image Gallery</h2
+<p>Note that transparency of gif images is preserved.</p>
 <?php foreach ($iter = new RecursiveIteratorIterator(get_filebase(), RecursiveIteratorIterator::SELF_FIRST) AS $file):?>
   <?php if($file instanceof sfFilebasePluginImage):?>
-    <div style="float:left; width: 130px; overflow: hidden">
+    <div style="background-color: #ccc; float:left; width: 130px; overflow: hidden">
       <span style="height: 30px; display: block; font-size:0.6em"><?php echo $file->getAbsolutePathFromWebroot()?>:</span>
       <img style="display:block" src="<?php echo $file->getThumbnail(array('120'))->getAbsolutePathFromWebroot()?>"/>
     </div>

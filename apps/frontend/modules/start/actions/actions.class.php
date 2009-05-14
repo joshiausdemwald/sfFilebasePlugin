@@ -47,7 +47,7 @@ class startActions extends sfActions
             $file = $file->moveUploadedFile($filebase->getFilebaseFile((string)$this->upload_form->getValue('directory')));
             if($file instanceof sfFilebasePluginImage)
             {
-              $file->rotate('20');
+              //$file->rotate('20');
             }
           }
           $this->getUser()->setFlash('message', 'Files uploaded. Images slightly rotated because it makes no sense.');

@@ -110,8 +110,11 @@ class sfFilebasePluginGfxEditor
    * @param integer $dimensions: The new dimensions array('width'=>optional, 'height'=>optional, 0=>width, 1=>height)
    * @param boolean $overwrite: source image may be overwritten if set to true
    * @param integer $quality The sample-quality in percent
+   * @param integer $preserve_transparency: If set to true, transparency of
+   *                png or gif images shall be preserved.
+   * @return sfFilebasePluginImage $image: The resampled image.
    */
-  public function imageCopyResampled($src, $dst, array $dimensions, $overwrite = false, $quality = 60)
+  public function imageCopyResampled($src, $dst, array $dimensions, $overwrite = false, $quality = 60, $preserve_transparency = true)
   {
     $quality = (int) $quality;
 
@@ -142,11 +145,12 @@ class sfFilebasePluginGfxEditor
     }
 
     if($quality < 0 || $quality > 100) throw new sfFilebasePluginException('Quality must be an intval out of 0 to 100');
-    
+
+    $this->adapter->setPreserveTransparency($preserve_transparency);
+    $this->adapter->setQuality($quality);
     $this->adapter->setSource($src);
     $this->adapter->setDestination($dst);
     $this->adapter->resize($dimensions);
-    $this->adapter->setQuality($quality);
     $img = $this->adapter->save();
     $this->adapter->destroy();
     return $img;
@@ -158,10 +162,14 @@ class sfFilebasePluginGfxEditor
    * @param  sfFilebasePluginImage $image: The image that shall be rotated.
    * @param  integer       $deg:   The amount in degree.
    * @param  string        $bgcolor: HTML-Hex-Color
+   * @param integer $preserve_transparency: If set to true, transparency of
+   *                png or gif images shall be preserved. The background color
+   *                then will be transparent also.
    * @return sfFilebasePluginImage $image: The rotated image.
    */
-  public function imageRotate(sfFilebasePluginImage $fileinfo, $deg, $bgcolor)
+  public function imageRotate(sfFilebasePluginImage $fileinfo, $deg, $bgcolor, $preserve_transparency)
   {
+    $this->adapter->setPreserveTransparency($preserve_transparency);
     $this->adapter->setSource($fileinfo);
     $this->adapter->setDestination($fileinfo);
     $this->adapter->rotate($deg, $bgcolor);
@@ -177,7 +185,7 @@ class sfFilebasePluginGfxEditor
    * @param mixed sfFilebasePluginImage $fileinfo
    * @param array $dimensions = array(width, height)
    */
-  public function createThumbnail(sfFilebasePluginImage $fileinfo, array $dimensions, $quality, $mime)
+  public function createThumbnail(sfFilebasePluginImage $fileinfo, array $dimensions, $quality, $mime, $preserve_transparency = true)
   {
     // Check cache directory
     if(!$this->filebase->getCacheDirectory()->fileExists()) throw new sfFilebasePluginException(sprintf('Cache directory %s does not exist.', $this->filebase->getCacheDirectory()->getPathname()));
@@ -188,7 +196,7 @@ class sfFilebasePluginGfxEditor
     if(!$this->filebase->getIsSupportedImage($fileinfo))           throw new sfFilebasePluginException(sprintf('File %s is not an image.', $fileinfo));if(!$fileinfo->isImage())           throw new sfFilebasePluginException(sprintf('Image format %s is unsupported.', $fileinfo));
     if(!$this->filebase->isInFilebase($fileinfo)) throw new sfFilebasePluginException(sprintf('FilebaseFile %s does not belong to Filebase %s, cannot be deleted due to security issues', $fileinfo->getPathname(), $this->filebase->getPathname()));
     $destination = $this->getThumbnailFileinfo($fileinfo, $dimensions, $mime);
-    return new sfFilebasePluginThumbnail($this->imageCopyResampled($fileinfo, $destination, $dimensions, true), $this->filebase, $fileinfo);
+    return new sfFilebasePluginThumbnail($this->imageCopyResampled($fileinfo, $destination, $dimensions, true, $preserve_transparency), $this->filebase, $fileinfo);
   }
 
   /**
@@ -229,7 +237,7 @@ class sfFilebasePluginGfxEditor
     {
       $new_width  = round($width * $new_height / $height);
     }
-    return array ('orig_width' => $width, 'orig_height' => $height, 'new_width' => $new_width, 'new_height' => $new_height, 'extension' => $extension, 'mime' => sfFilebasePluginUtil::getMimeByExtension($extension));
+    return array ('orig_width' => $width, 'orig_height' => $height, 'new_width' => $new_width, 'new_height' => $new_height, 'extension' => $extension, 'mime' => sfFilebasePluginUtil::getMimeType($image));
   }
 
   /**

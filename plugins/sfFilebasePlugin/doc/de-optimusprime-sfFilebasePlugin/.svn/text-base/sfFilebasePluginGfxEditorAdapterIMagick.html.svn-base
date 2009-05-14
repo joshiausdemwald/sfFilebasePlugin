@@ -131,7 +131,7 @@
 								</div>
 		<div class="info-box-body">
 			<div class="var-summary">
-																																																																								<div class="var-title">
+																																																																																<div class="var-title">
 					<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginImage.html">sfFilebasePluginImage</a></span>
 					<a href="#$destination" title="details" class="var-name">$destination</a>
 				</div>
@@ -150,6 +150,10 @@
 																<div class="var-title">
 					<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditor.html">sfFilebasePluginGfxEditor</a></span>
 					<a href="#$gfxEditor" title="details" class="var-name">$gfxEditor</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">boolean</span>
+					<a href="#$preserve_transparency" title="details" class="var-name">$preserve_transparency</a>
 				</div>
 																<div class="var-title">
 					<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginImage.html">sfFilebasePluginImage</a></span>
@@ -175,7 +179,7 @@
 		</div>
 		<div class="info-box-body">			
 			<div class="method-summary">
-																																																																																						
+																																																																																														
 				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#destroy" title="details" class="method-name">destroy</a>
@@ -195,9 +199,9 @@
 									</div>
 														
 				<div class="method-definition">
-											<span class="method-result">void</span>
+											<span class="method-result">true</span>
 										<a href="#resize" title="details" class="method-name">resize</a>
-											(<span class="var-type"></span>&nbsp;<span class="var-name">$dimensions</span>, <span class="var-type">true</span>&nbsp;<span class="var-name">$scale</span>)
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$dimensions</span>)
 									</div>
 														
 				<div class="method-definition">
@@ -216,6 +220,12 @@
 											<span class="method-result">void</span>
 										<a href="#setDestination" title="details" class="method-name">setDestination</a>
 											(<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginImage.html">sfFilebasePluginImage</a></span>&nbsp;<span class="var-name">$destination</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#setPreserveTransparency" title="details" class="method-name">setPreserveTransparency</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$preserve_transparency</span>)
 									</div>
 														
 				<div class="method-definition">
@@ -355,8 +365,30 @@
 		
 
 </div>
-<a name="var$source" id="$source"><!-- --></A>
+<a name="var$preserve_transparency" id="$preserve_transparency"><!-- --></A>
 <div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">boolean</span>
+			<span class="var-name">$preserve_transparency</span>
+						(line <span class="line-number">68</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">If set to true, transparent images will not loose their transparent  color definition during processing</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$source" id="$source"><!-- --></A>
+<div class="evenrow">
 
 	<div class="var-header">
 		<span class="var-title">
@@ -377,7 +409,7 @@
 
 </div>
 <a name="var$source_resource" id="$source_resource"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="var-header">
 		<span class="var-title">
@@ -413,10 +445,10 @@
 		<div class="info-box-body">
 			<A NAME='method_detail'></A>
 <a name="methoddestroy" id="destroy"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">destroy</span> (line <span class="line-number">125</span>)
+		<span class="method-title">destroy</span> (line <span class="line-number">133</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -443,10 +475,10 @@
 			
 	</div>
 <a name="methodinitialize" id="initialize"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">initialize</span> (line <span class="line-number">65</span>)
+		<span class="method-title">initialize</span> (line <span class="line-number">73</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -480,10 +512,10 @@
 			
 	</div>
 <a name="methodisSupported" id="isSupported"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">isSupported</span> (line <span class="line-number">74</span>)
+		<span class="method-title">isSupported</span> (line <span class="line-number">82</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -509,33 +541,31 @@
 			
 	</div>
 <a name="methodresize" id="resize"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">resize</span> (line <span class="line-number">138</span>)
+		<span class="method-title">resize</span> (line <span class="line-number">147</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
 <p class="short-description">Resizes the source image.</p>
 	<ul class="tags">
+				<li><span class="field">return:</span> if image resizing was successful</li>
 				<li><span class="field">access:</span> public</li>
 			</ul>
 	
 	<div class="method-signature">
-		<span class="method-result">void</span>
+		<span class="method-result">true</span>
 		<span class="method-name">
 			resize
 		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$dimensions</span>, <span class="var-type">true</span>&nbsp;<span class="var-name">$scale</span>)
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$dimensions</span>)
 			</div>
 	
 			<ul class="parameters">
 					<li>
 				<span class="var-type">array</span>
 				<span class="var-name">$dimensions</span>			</li>
-					<li>
-				<span class="var-type">true</span>
-				<span class="var-name">$scale</span>			</li>
 				</ul>
 		
 				<hr class="separator" />
@@ -547,10 +577,10 @@
 			
 	</div>
 <a name="methodrotate" id="rotate"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">rotate</span> (line <span class="line-number">160</span>)
+		<span class="method-title">rotate</span> (line <span class="line-number">169</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -592,10 +622,10 @@
 			
 	</div>
 <a name="methodsave" id="save"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">save</span> (line <span class="line-number">114</span>)
+		<span class="method-title">save</span> (line <span class="line-number">122</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -627,10 +657,10 @@
 			
 	</div>
 <a name="methodsetDestination" id="setDestination"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">setDestination</span> (line <span class="line-number">102</span>)
+		<span class="method-title">setDestination</span> (line <span class="line-number">110</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -661,11 +691,47 @@
 					</dl>
 			
 	</div>
+<a name="methodsetPreserveTransparency" id="setPreserveTransparency"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setPreserveTransparency</span> (line <span class="line-number">184</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the flag that determins if the processor should preserve transparency  during the image manipulation.</p>
+<p class="description"><p>This is not needed by imagick, perhapts later on for fine tuning.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setPreserveTransparency
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$preserve_transparency</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$preserve_transparency</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditorAdapterInterface.html#methodsetPreserveTransparency">sfFilebasePluginGfxEditorAdapterInterface::setPreserveTransparency()</a></dt>
+						<dd>Sets the flag that determins if the processor should preserve transparency  during the image manipulation.</dd>
+					</dl>
+			
+	</div>
 <a name="methodsetQuality" id="setQuality"><!-- --></a>
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">setQuality</span> (line <span class="line-number">92</span>)
+		<span class="method-title">setQuality</span> (line <span class="line-number">100</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -694,7 +760,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">setSource</span> (line <span class="line-number">82</span>)
+		<span class="method-title">setSource</span> (line <span class="line-number">90</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -732,7 +798,7 @@
 
 
 	<p class="notes" id="credit">
-		Documentation generated on Thu, 14 May 2009 09:42:08 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Thu, 14 May 2009 12:13:06 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</div></body>
 </html>

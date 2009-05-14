@@ -317,7 +317,7 @@
 		<div class="info-box-body">
 			
 <a name="var$error" id="$error"><!-- --></A>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div class="var-header">
 		<span class="var-title">
@@ -338,7 +338,7 @@
 
 </div>
 <a name="var$filebase" id="$filebase"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="var-header">
 		<span class="var-title">
@@ -359,7 +359,7 @@
 
 </div>
 <a name="var$name" id="$name"><!-- --></A>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div class="var-header">
 		<span class="var-title">
@@ -380,7 +380,7 @@
 
 </div>
 <a name="var$size" id="$size"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="var-header">
 		<span class="var-title">
@@ -401,7 +401,7 @@
 
 </div>
 <a name="var$tmp_name" id="$tmp_name"><!-- --></A>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div class="var-header">
 		<span class="var-title">
@@ -422,7 +422,7 @@
 
 </div>
 <a name="var$type" id="$type"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="var-header">
 		<span class="var-title">
@@ -460,7 +460,7 @@
 		<div class="info-box-body">
 			<A NAME='method_detail'></A>
 <a name="method__construct" id="__construct"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">Constructor __construct</span> (line <span class="line-number">72</span>)
@@ -501,7 +501,7 @@
 			
 	</div>
 <a name="methodgetError" id="getError"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">getError</span> (line <span class="line-number">176</span>)
@@ -526,7 +526,7 @@
 			
 	</div>
 <a name="methodgetExtension" id="getExtension"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">getExtension</span> (line <span class="line-number">134</span>)
@@ -550,7 +550,7 @@
 			
 	</div>
 <a name="methodgetName" id="getName"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">getName</span> (line <span class="line-number">197</span>)
@@ -574,7 +574,7 @@
 			
 	</div>
 <a name="methodgetSize" id="getSize"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">getSize</span> (line <span class="line-number">144</span>)
@@ -599,7 +599,7 @@
 			
 	</div>
 <a name="methodgetTmpName" id="getTmpName"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">getTmpName</span> (line <span class="line-number">187</span>)
@@ -623,7 +623,7 @@
 			
 	</div>
 <a name="methodgetType" id="getType"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">getType</span> (line <span class="line-number">123</span>)
@@ -647,7 +647,7 @@
 			
 	</div>
 <a name="methodhasError" id="hasError"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">hasError</span> (line <span class="line-number">166</span>)
@@ -670,7 +670,7 @@
 			
 	</div>
 <a name="methodisError" id="isError"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">isError</span> (line <span class="line-number">157</span>)
@@ -702,7 +702,7 @@
 			
 	</div>
 <a name="methodmove" id="move"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">move</span> (line <span class="line-number">223</span>)
@@ -757,7 +757,7 @@
 			
 	</div>
 <a name="methodmoveUploadedFile" id="moveUploadedFile"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">moveUploadedFile</span> (line <span class="line-number">112</span>)
@@ -832,7 +832,7 @@
 					</div>
 		<div class="info-box-body">
 			<a name="constUPLOAD_ERR_CANT_WRITE" id="UPLOAD_ERR_CANT_WRITE"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="const-header">
 		<img src="../media/images/Variable.png" />
@@ -848,7 +848,7 @@
 	
 </div>
 <a name="constUPLOAD_ERR_EXTENSION" id="UPLOAD_ERR_EXTENSION"><!-- --></A>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div class="const-header">
 		<img src="../media/images/Variable.png" />
@@ -864,7 +864,7 @@
 	
 </div>
 <a name="constUPLOAD_ERR_FORM_SIZE" id="UPLOAD_ERR_FORM_SIZE"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="const-header">
 		<img src="../media/images/Variable.png" />
@@ -880,7 +880,7 @@
 	
 </div>
 <a name="constUPLOAD_ERR_INI_SIZE" id="UPLOAD_ERR_INI_SIZE"><!-- --></A>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div class="const-header">
 		<img src="../media/images/Variable.png" />
@@ -896,7 +896,7 @@
 	
 </div>
 <a name="constUPLOAD_ERR_NO_FILE" id="UPLOAD_ERR_NO_FILE"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="const-header">
 		<img src="../media/images/Variable.png" />
@@ -912,7 +912,7 @@
 	
 </div>
 <a name="constUPLOAD_ERR_NO_TMP_DIR" id="UPLOAD_ERR_NO_TMP_DIR"><!-- --></A>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div class="const-header">
 		<img src="../media/images/Variable.png" />
@@ -928,7 +928,7 @@
 	
 </div>
 <a name="constUPLOAD_ERR_OK" id="UPLOAD_ERR_OK"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="const-header">
 		<img src="../media/images/Variable.png" />
@@ -944,7 +944,7 @@
 	
 </div>
 <a name="constUPLOAD_ERR_PARTIAL" id="UPLOAD_ERR_PARTIAL"><!-- --></A>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div class="const-header">
 		<img src="../media/images/Variable.png" />
@@ -964,7 +964,7 @@
 	</div>
 
 	<p class="notes" id="credit">
-		Documentation generated on Thu, 14 May 2009 09:42:09 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Thu, 14 May 2009 12:13:07 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</div></body>
 </html>

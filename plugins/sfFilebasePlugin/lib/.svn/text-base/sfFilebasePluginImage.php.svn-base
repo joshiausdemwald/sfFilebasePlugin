@@ -20,9 +20,18 @@
  */
 class sfFilebasePluginImage extends sfFilebasePluginFile
 {
-  public function resize(array $dimensions, $quality = 60)
+  /**
+   * Resizes an image and returns pointer to resized image.
+   * 
+   * @param array   $dimensions (indexed by 0,1 or width/height or both)
+   * @param integer $quality: In %
+   * @param boolean $preserve_transparency: true if transparecy should be
+   *                preserved
+   * @return sfFilebasePluginImage $image: The resized image
+   */
+  public function resize(array $dimensions, $quality = 60, $preserve_transparency = true)
   {
-    return $this->filebase->resizeImage($this, $dimensions, $quality);
+    return $this->filebase->resizeImage($this, $dimensions, $quality, $preserve_transparency);
   }
   
   /**
@@ -30,9 +39,12 @@ class sfFilebasePluginImage extends sfFilebasePluginFile
    *
    * @param mixed sfFilebasePluginFile | string $file
    * @param array $dimensions = array(width, height)
+   * @param integer $quality: in %
+   * @param boolean $preserve_transparency: True if transparency should be
+   *                                        preserved
    * @return sfFilebasePluginFile $file
    */
-  public function getThumbnail(array $dimensions, $quality = 60, $mime='image/png')
+  public function getThumbnail(array $dimensions, $quality = 60, $mime='image/png', $preserve_transparency = true)
   {
     return $this->filebase->getThumbnailForImage($this, $dimensions, $quality, $mime);
   }
@@ -114,10 +126,11 @@ class sfFilebasePluginImage extends sfFilebasePluginFile
    * @param float  $deg: The amount to rotate
    * @param string $bgcolor: The background color of the rotated image, #00000
    *                         as default, in html-hexadecimal notation.
+   * @param boolean $preserve_transparency: True if transparency should be preserved.
    * @return sfFilebasePluginImage $image: THe rotated image
    */
-  public function rotate($deg, $bgcolor = '#000000')
+  public function rotate($deg, $bgcolor = '#000000', $preserve_transparency = true)
   {
-    return $this->filebase->rotateImage($this, $deg, $bgcolor);
+    return $this->filebase->rotateImage($this, $deg, $bgcolor, $preserve_transparency);
   }
 }

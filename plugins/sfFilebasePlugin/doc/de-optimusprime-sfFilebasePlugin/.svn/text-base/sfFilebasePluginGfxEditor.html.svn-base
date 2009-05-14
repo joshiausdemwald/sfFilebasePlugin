@@ -170,7 +170,7 @@
 				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#createThumbnail" title="details" class="method-name">createThumbnail</a>
-											(<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginImage.html">sfFilebasePluginImage</a></span>&nbsp;<span class="var-name">$fileinfo</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$dimensions</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$quality</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$mime</span>)
+											(<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginImage.html">sfFilebasePluginImage</a></span>&nbsp;<span class="var-name">$fileinfo</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$dimensions</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$quality</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$mime</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$preserve_transparency</span> = <span class="var-default">true</span>])
 									</div>
 														
 				<div class="method-definition">
@@ -192,15 +192,15 @@
 									</div>
 														
 				<div class="method-definition">
-											<span class="method-result">void</span>
+											<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginImage.html">sfFilebasePluginImage</a></span>
 										<a href="#imageCopyResampled" title="details" class="method-name">imageCopyResampled</a>
-											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$src</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$dst</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$dimensions</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$overwrite</span> = <span class="var-default">false</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$quality</span> = <span class="var-default">60</span>], <span class="var-type">integer</span>&nbsp;<span class="var-name">$width:</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$height:</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$dimensions:</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$overwrite:</span>)
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$src</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$dst</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$dimensions</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$overwrite</span> = <span class="var-default">false</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$quality</span> = <span class="var-default">60</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$preserve_transparency</span> = <span class="var-default">true</span>], <span class="var-type">integer</span>&nbsp;<span class="var-name">$width:</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$height:</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$dimensions:</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$overwrite:</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$preserve_transparency:</span>)
 									</div>
 														
 				<div class="method-definition">
 											<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginImage.html">sfFilebasePluginImage</a></span>
 										<a href="#imageRotate" title="details" class="method-name">imageRotate</a>
-											(<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginImage.html">sfFilebasePluginImage</a></span>&nbsp;<span class="var-name">$fileinfo</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$deg</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$bgcolor</span>, <span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginImage.html">sfFilebasePluginImage</a></span>&nbsp;<span class="var-name">$image:</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$deg:</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$bgcolor:</span>)
+											(<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginImage.html">sfFilebasePluginImage</a></span>&nbsp;<span class="var-name">$fileinfo</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$deg</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$bgcolor</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$preserve_transparency</span>, <span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginImage.html">sfFilebasePluginImage</a></span>&nbsp;<span class="var-name">$image:</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$deg:</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$bgcolor:</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$preserve_transparency:</span>)
 									</div>
 																			</div>
 		</div>
@@ -371,7 +371,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">createThumbnail</span> (line <span class="line-number">180</span>)
+		<span class="method-title">createThumbnail</span> (line <span class="line-number">188</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -385,7 +385,7 @@
 		<span class="method-name">
 			createThumbnail
 		</span>
-					(<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginImage.html">sfFilebasePluginImage</a></span>&nbsp;<span class="var-name">$fileinfo</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$dimensions</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$quality</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$mime</span>)
+					(<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginImage.html">sfFilebasePluginImage</a></span>&nbsp;<span class="var-name">$fileinfo</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$dimensions</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$quality</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$mime</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$preserve_transparency</span> = <span class="var-default">true</span>])
 			</div>
 	
 			<ul class="parameters">
@@ -401,6 +401,9 @@
 					<li>
 				<span class="var-type"></span>
 				<span class="var-name">$mime</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$preserve_transparency</span>			</li>
 				</ul>
 		
 			
@@ -409,7 +412,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getFilebase</span> (line <span class="line-number">255</span>)
+		<span class="method-title">getFilebase</span> (line <span class="line-number">263</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -433,7 +436,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">getScaledImageData</span> (line <span class="line-number">205</span>)
+		<span class="method-title">getScaledImageData</span> (line <span class="line-number">213</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -476,7 +479,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getThumbnailFileinfo</span> (line <span class="line-number">243</span>)
+		<span class="method-title">getThumbnailFileinfo</span> (line <span class="line-number">251</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -514,22 +517,23 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">imageCopyResampled</span> (line <span class="line-number">114</span>)
+		<span class="method-title">imageCopyResampled</span> (line <span class="line-number">117</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
 <p class="short-description">Resamples an image using php internal gd-functions. Used by thumbnail and resize  method.</p>
 <p class="description"><p>Dimensions is a 2-dim array with height, width or both, the other sides size is  calculated. It can have string-keys (width/height) or integer (0=&gt;width,1=&gt;height)</p></p>
 	<ul class="tags">
+				<li><span class="field">return:</span> The resampled image.</li>
 				<li><span class="field">access:</span> public</li>
 			</ul>
 	
 	<div class="method-signature">
-		<span class="method-result">void</span>
+		<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginImage.html">sfFilebasePluginImage</a></span>
 		<span class="method-name">
 			imageCopyResampled
 		</span>
-					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$src</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$dst</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$dimensions</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$overwrite</span> = <span class="var-default">false</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$quality</span> = <span class="var-default">60</span>], <span class="var-type">integer</span>&nbsp;<span class="var-name">$width:</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$height:</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$dimensions:</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$overwrite:</span>)
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$src</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$dst</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$dimensions</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$overwrite</span> = <span class="var-default">false</span>], [<span class="var-type">integer</span>&nbsp;<span class="var-name">$quality</span> = <span class="var-default">60</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$preserve_transparency</span> = <span class="var-default">true</span>], <span class="var-type">integer</span>&nbsp;<span class="var-name">$width:</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$height:</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$dimensions:</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$overwrite:</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$preserve_transparency:</span>)
 			</div>
 	
 			<ul class="parameters">
@@ -549,6 +553,9 @@
 				<span class="var-type">integer</span>
 				<span class="var-name">$quality</span><span class="var-description">: The sample-quality in percent</span>			</li>
 					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$preserve_transparency:</span><span class="var-description">: If set to true, transparency of  png or gif images shall be preserved.</span>			</li>
+					<li>
 				<span class="var-type">mixed</span>
 				<span class="var-name">$src</span><span class="var-description">: sfFilebasePluginImage | string $src: The souce image</span>			</li>
 					<li>
@@ -560,6 +567,9 @@
 					<li>
 				<span class="var-type"></span>
 				<span class="var-name">$overwrite</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$preserve_transparency</span>			</li>
 				</ul>
 		
 			
@@ -568,7 +578,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">imageRotate</span> (line <span class="line-number">163</span>)
+		<span class="method-title">imageRotate</span> (line <span class="line-number">170</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -583,7 +593,7 @@
 		<span class="method-name">
 			imageRotate
 		</span>
-					(<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginImage.html">sfFilebasePluginImage</a></span>&nbsp;<span class="var-name">$fileinfo</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$deg</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$bgcolor</span>, <span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginImage.html">sfFilebasePluginImage</a></span>&nbsp;<span class="var-name">$image:</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$deg:</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$bgcolor:</span>)
+					(<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginImage.html">sfFilebasePluginImage</a></span>&nbsp;<span class="var-name">$fileinfo</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$deg</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$bgcolor</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$preserve_transparency</span>, <span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginImage.html">sfFilebasePluginImage</a></span>&nbsp;<span class="var-name">$image:</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$deg:</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$bgcolor:</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$preserve_transparency:</span>)
 			</div>
 	
 			<ul class="parameters">
@@ -597,6 +607,9 @@
 				<span class="var-type">string</span>
 				<span class="var-name">$bgcolor:</span><span class="var-description">: HTML-Hex-Color</span>			</li>
 					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$preserve_transparency:</span><span class="var-description">: If set to true, transparency of  png or gif images shall be preserved. The background color  then will be transparent also.</span>			</li>
+					<li>
 				<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginImage.html">sfFilebasePluginImage</a></span>
 				<span class="var-name">$fileinfo</span>			</li>
 					<li>
@@ -605,6 +618,9 @@
 					<li>
 				<span class="var-type"></span>
 				<span class="var-name">$bgcolor</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$preserve_transparency</span>			</li>
 				</ul>
 		
 			
@@ -615,7 +631,7 @@
 
 
 	<p class="notes" id="credit">
-		Documentation generated on Thu, 14 May 2009 09:42:08 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Thu, 14 May 2009 12:13:06 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</div></body>
 </html>

@@ -46,6 +46,20 @@ the plugin provides an extension of `SplFileObject` named
    me by implementing much more image-manipulation capabilities). Included is a
    hidden cache layer which automatically stores generated binary data.
 
+Image manipulation capabilities
+-------------------------------
+As of version 0.5.10, sfFilebasePlugin can manipulate images using both the
+GD lib and the pecl imagick extension.
+
+*  Rotate images with imagick and GD (for PHP precompiled gd version presumed)
+*  Resize images
+   *   **Preserve transparency** when resizing an gif/png image.
+   Automatically done by defining an transparent color or preserving alpha
+   channel if given.
+*  Create and cache Thumbnails
+*  Use adapter classes for easily implementing new image stuff based on both
+   libraries.
+
 Installation
 ------------
 

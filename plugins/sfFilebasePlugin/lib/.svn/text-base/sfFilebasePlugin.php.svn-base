@@ -459,11 +459,13 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
    * @param mixed sfFilebasePluginImage | string $image
    * @param array $dimensions: array(width, height) or array('width'=>x ,'height'=>y)
    * @param integer $quality
+   * @param boolean $preserve_transparency: True if transparency should be
+   *                                        preserved
    * @return sfFilebasePluginImage
    */
-  public function resizeImage($image, array $dimensions, $quality = 60)
+  public function resizeImage($image, array $dimensions, $quality = 60, $preserve_transparency = true)
   {
-    return $this->imageCopyResampled($image, $image, $dimensions, true);
+    return $this->imageCopyResampled($image, $image, $dimensions, true, $quality, $preserve_transparency);
   }
 
   /**
@@ -480,10 +482,13 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
    * @param integer $dimensions: The new dimensions array('width'=>optional, 'height'=>optional, 0=>width, 1=>height)
    * @param boolean $overwrite: source image may be overwritten if set to true
    * @param integer $quality The sample-quality in percent
+   * @param integer $preserve_transparency: If set to true, transparency of
+   *                                        png or gif images shall be preserved.
+   * 
    */
-  public function imageCopyResampled($src, $dst, array $dimensions, $overwrite = false, $quality = 60)
+  public function imageCopyResampled($src, $dst, array $dimensions, $overwrite = false, $quality = 60, $preserve_transparency = true)
   {
-    return $this->gfxEditor->imageCopyResampled($src, $dst, $dimensions, $overwrite, $quality);
+    return $this->gfxEditor->imageCopyResampled($src, $dst, $dimensions, $overwrite, $quality, $preserve_transparency);
   }
 
   /**
@@ -491,15 +496,17 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
    * @param mixed sfFilebasePluginImage | string $image
    * @param array $dimensions
    * @param integer $quality
+   * @param integer $preserve_transparency: If set to true, transparency of
+   *                                        png or gif images shall be preserved.
    * @return sfFilebasePluginImage $thumbnail
    */
-  public function getThumbnailForImage($image, array $dimensions, $quality = 60, $mime='image/png')
+  public function getThumbnailForImage($image, array $dimensions, $quality = 60, $mime='image/png', $preserve_transparency = true)
   { 
     $image = $this->getFilebaseFile($image);
     $cache_fileinfo = $this->gfxEditor->getThumbnailFileinfo($image,$dimensions, $mime);
     if(!$cache_fileinfo->fileExists())
     {
-      return $this->gfxEditor->createThumbnail($image, $dimensions, $quality, $mime);
+      return $this->gfxEditor->createThumbnail($image, $dimensions, $quality, $mime, $preserve_transparency);
     }
     return $cache_fileinfo;
   }
@@ -512,11 +519,13 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
    * @param float $deg
    * @param $bgcolor: The background color of the rotated image in html-hex
    *                  notation, default #00000
+   * @param integer $preserve_transparency: If set to true, transparency of
+   *                png or gif images shall be preserved.
    * @return sfFilebasePluginImage $img: the rotated image
    */
-  public function rotateImage (sfFilebasePluginImage $image, $deg, $bgcolor = '#000000')
+  public function rotateImage (sfFilebasePluginImage $image, $deg, $bgcolor = '#000000', $preserve_transparency = true)
   {
-    return $this->gfxEditor->imageRotate($image, $deg, $bgcolor);
+    return $this->gfxEditor->imageRotate($image, $deg, $bgcolor, $preserve_transparency);
   }
 
    /**

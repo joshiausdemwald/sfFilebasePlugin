@@ -12,8 +12,8 @@
   </lead>
   <date>2009-05-14</date>
   <version>
-    <release>0.5.9</release>
-    <api>0.5.3</api>
+    <release>0.5.10</release>
+    <api>0.5.4</api>
   </version>
   <stability>
     <release>stable</release>
@@ -69,6 +69,21 @@
   <phprelease>
   </phprelease>
   <changelog>
+    <release>
+      <version>
+        <release>0.5.10</release>
+        <api>0.5.4</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-05-13</date>
+      <notes>
+      * Added preserveTransparency for images created by GD adapter
+      </notes>
+    </release>
      <release>
       <version>
         <release>0.5.9</release>

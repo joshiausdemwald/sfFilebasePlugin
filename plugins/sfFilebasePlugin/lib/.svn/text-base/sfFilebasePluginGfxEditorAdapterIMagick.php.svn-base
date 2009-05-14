@@ -60,6 +60,14 @@ class sfFilebasePluginGfxEditorAdapterIMagick implements sfFilebasePluginGfxEdit
   protected $funcs = array();
 
   /**
+   * If set to true, transparent images will not loose their transparent
+   * color definition during processing
+   * 
+   * @var boolean $preserve_transparency
+   */
+  protected $preserve_transparency;
+
+  /**
    * @param sfFilebasePluginGfxEditor $editor
    */
   public function initialize(sfFilebasePluginGfxEditor $gfxEditor)
@@ -132,8 +140,9 @@ class sfFilebasePluginGfxEditorAdapterIMagick implements sfFilebasePluginGfxEdit
 
   /**
    * Resizes the source image.
+   * 
    * @param array $dimensions
-   * @param true    $scale
+   * @return true if image resizing was successful
    */
   public function resize(array $dimensions)
   {
@@ -162,5 +171,18 @@ class sfFilebasePluginGfxEditorAdapterIMagick implements sfFilebasePluginGfxEdit
      $ret_val = $this->destination_resource->rotateImage(new ImagickPixel($bgcolor), $deg);
      if($ret_val !== true) throw new sfFilebasePluginException(sprintf('Failed to rotate image %s.', $this->source));
      return $ret_val;
+  }
+
+  /**
+   * Sets the flag that determins if the processor should preserve transparency
+   * during the image manipulation.
+   *
+   * This is not needed by imagick, perhapts later on for fine tuning.
+   *
+   * @param boolean $preserve_transparency
+   */
+  public function setPreserveTransparency($preserve_transparency)
+  {
+    $this->preserve_transparency = $preserve_transparency;
   }
 }

@@ -66,6 +66,14 @@ interface sfFilebasePluginGfxEditorAdapterInterface
    * @return true if successfully saved
    */
   public function save($chmod = 0777);
+  
+  /**
+   * Sets the flag that determins if the processor should preserve transparency
+   * during the image manipulation.
+   * 
+   * @param boolean $preserve_transparency 
+   */
+  public function setPreserveTransparency($preserve_transparency);
 
   /**
    * Destroy the image and frees ram.

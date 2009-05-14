@@ -69,7 +69,7 @@
 <h1>sfFilebasePluginGfxEditorAdapterGD.php</h1>
 <h2>Warnings:</h2><br>
 <b>Warning on line 19</b> - no @package tag was used in a DocBlock for class sfFilebasePluginGfxEditorAdapterGD<br>
-<b>Warning on line 206</b> - Unknown tag "@experimental" used<br>
+<b>Warning on line 252</b> - Unknown tag "@experimental" used<br>
 <a name="sfFilebasePluginGfxEditorAdapterIMagick.php"></a>
 <h1>sfFilebasePluginGfxEditorAdapterIMagick.php</h1>
 <h2>Warnings:</h2><br>
@@ -116,7 +116,7 @@
 <h2>Warnings:</h2><br>
 <b>Warning on line 24</b> - no @package tag was used in a DocBlock for class sfFilebasePluginValidatorFile<br>
 	<p class="notes" id="credit">
-		Documentation generated on Thu, 14 May 2009 09:42:09 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Thu, 14 May 2009 12:13:08 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</body>
 </html>
