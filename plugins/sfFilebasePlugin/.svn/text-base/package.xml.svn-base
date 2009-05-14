@@ -12,7 +12,7 @@
   </lead>
   <date>2009-05-14</date>
   <version>
-    <release>0.5.8</release>
+    <release>0.5.9</release>
     <api>0.5.3</api>
   </version>
   <stability>
@@ -71,7 +71,7 @@
   <changelog>
      <release>
       <version>
-        <release>0.5.8</release>
+        <release>0.5.9</release>
         <api>0.5.3</api>
       </version>
       <stability>
@@ -85,6 +85,21 @@
       * sfFilebasePluginValidatorFile: added
         isEmpty() methods and changed mime detections to
         proxies for sfFilebasePluginUtil::getMimeType()
+      </notes>
+    </release>
+     <release>
+      <version>
+        <release>0.5.8</release>
+        <api>0.5.3</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-05-13</date>
+      <notes>
+      * Worked on sfFilebasePluginValidatorFile
       </notes>
     </release>
     <release>

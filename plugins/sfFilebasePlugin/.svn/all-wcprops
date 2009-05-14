@@ -31,7 +31,7 @@ package.xml
 K 25
 svn:wc:ra_dav:version-url
 V 52
-/!svn/ver/18254/plugins/sfFilebasePlugin/package.xml
+/!svn/ver/18259/plugins/sfFilebasePlugin/package.xml
 END
 sfFilebasePlugin-0.5.7.tgz
 K 25
@@ -44,6 +44,12 @@ K 25
 svn:wc:ra_dav:version-url
 V 67
 /!svn/ver/18255/plugins/sfFilebasePlugin/sfFilebasePlugin-0.5.8.tgz
+END
+sfFilebasePlugin-0.5.9.tgz
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/18259/plugins/sfFilebasePlugin/sfFilebasePlugin-0.5.9.tgz
 END
 README
 K 25
