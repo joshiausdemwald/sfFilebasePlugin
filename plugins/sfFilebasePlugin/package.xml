@@ -26,7 +26,7 @@
       <file role="data" name="README" />
       <file role="data" name="LICENSE" />
         <file role="data" name="config/config.php" />
-        <file role="data" name="lib/Validator/sfFilebasePluginValidatorFile.php" />
+        <file role="data" name="lib/validator/sfFilebasePluginValidatorFile.php" />
         <file role="data" name="lib/helper/sfFilebasePluginHelper.php" />
         <file role="data" name="lib/sfFilebasePlugin.php" />
         <file role="data" name="lib/sfFilebasePluginDirectory.php" />

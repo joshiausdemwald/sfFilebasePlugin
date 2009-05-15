@@ -41,6 +41,37 @@ class sfFilebasePluginUploadedFilesManager
   }
 
   /**
+   * Checks if a variable contains a valid array that represents
+   * an uploaded file.
+   *
+   * @return boolean true if file is valid
+   */
+  public static function isUploadedFile($file)
+  {
+    return
+        is_array($file) &&
+        array_key_exists('tmp_name', $file) &&
+        array_key_exists('name', $file) &&
+        array_key_exists('type', $file) &&
+        array_key_exists('error', $file) &&
+        array_key_exists('size', $file);
+  }
+
+  /**
+   * Creates and returns a new instance of
+   * sfFilebasePluginUploadedFile filled with the
+   * values from the $values array.
+   * 
+   * @param array $values
+   * @return sfFilebasePluginUploadedFile
+   */
+
+  public static function produceUploadedFile(array $values, sfFilebasePlugin $filebase)
+  {
+    return new sfFilebasePluginUploadedFile($values['name'], $values['tmp_name'], $values['type'], $values['error'], $values['size'], $filebase);
+  }
+
+  /**
    * Returns the data describing
    * uploaded files to handle by
    * move uploaded files.
@@ -55,24 +86,16 @@ class sfFilebasePluginUploadedFilesManager
       return $this->uploadedFiles;
     }
     
-    //print_r($_FILES);
     $files = array();
     foreach ($_FILES AS $i => $entry)
     {
-      if(
-        is_array($entry) &&
-        array_key_exists('tmp_name', $entry) &&
-        array_key_exists('name', $entry) &&
-        array_key_exists('type', $entry) &&
-        array_key_exists('error', $entry) &&
-        array_key_exists('size', $entry)
-      )
+      if(self::isUploadedFile($entry))
       {
-        $names = array();
-        $types = array();
-        $tmp_names = array();
-        $errors = array();
-        $sizes = array();
+        $names      = array();
+        $types      = array();
+        $tmp_names  = array();
+        $errors     = array();
+        $sizes      = array();
         // field, can be multi dimensional.
         if(is_array($entry['tmp_name']))
         {

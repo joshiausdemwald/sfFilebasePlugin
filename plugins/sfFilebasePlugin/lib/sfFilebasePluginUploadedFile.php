@@ -71,6 +71,7 @@ class sfFilebasePluginUploadedFile
    */
   function __construct($name, $tmp_name, $type, $error, $size, sfFilebasePlugin $filebase)
   {
+    // Fix it foxy.
     if (!$name)
       $name = '';
     
@@ -84,8 +85,7 @@ class sfFilebasePluginUploadedFile
       
     if (!$type)
       $type = $this->tmp_name->getMimeType() ? $this->tmp_name->getMimeType() : 'application/octet-stream';
-    
-    
+
     $this->name     = $name;
     $this->type     = $type;
     $this->error    = $error;

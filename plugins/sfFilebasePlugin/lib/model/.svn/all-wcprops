@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/18306/plugins/sfFilebasePlugin/lib/model
+END
+sfFilebaseFilePeer.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/18306/plugins/sfFilebasePlugin/lib/model/sfFilebaseFilePeer.php
+END
+sfFilebaseFile.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/18306/plugins/sfFilebasePlugin/lib/model/sfFilebaseFile.php
+END
+sfFilebaseDirectoryPeer.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/18306/plugins/sfFilebasePlugin/lib/model/sfFilebaseDirectoryPeer.php
+END
+sfFilebaseDirectory.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/18306/plugins/sfFilebasePlugin/lib/model/sfFilebaseDirectory.php
+END

@@ -13,9 +13,9 @@ all:
     class:        sfPropelDatabase
     param:
       classname:  PropelPDO
-      dsn:        mysql:dbname=test;host=localhost
+      dsn:        mysql:dbname=sf_filebase_plugin;host=localhost
       username:   root
-      password:   
+      password:   sonja81
       encoding:   utf8
       persistent: true
       pooling:    true

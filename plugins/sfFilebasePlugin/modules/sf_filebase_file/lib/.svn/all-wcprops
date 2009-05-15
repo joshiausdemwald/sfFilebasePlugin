@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/18306/plugins/sfFilebasePlugin/modules/sf_filebase_file/lib
+END
+sf_filebase_fileGeneratorHelper.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/!svn/ver/18306/plugins/sfFilebasePlugin/modules/sf_filebase_file/lib/sf_filebase_fileGeneratorHelper.class.php
+END
+sf_filebase_fileGeneratorConfiguration.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/!svn/ver/18306/plugins/sfFilebasePlugin/modules/sf_filebase_file/lib/sf_filebase_fileGeneratorConfiguration.class.php
+END

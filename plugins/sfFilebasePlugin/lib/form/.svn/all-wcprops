@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/18306/plugins/sfFilebasePlugin/lib/form
+END
+sfFilebaseFileForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/18306/plugins/sfFilebasePlugin/lib/form/sfFilebaseFileForm.class.php
+END
+sfFilebaseDirectoryForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/18306/plugins/sfFilebasePlugin/lib/form/sfFilebaseDirectoryForm.class.php
+END

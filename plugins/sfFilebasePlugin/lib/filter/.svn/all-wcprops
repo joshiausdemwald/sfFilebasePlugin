@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/18306/plugins/sfFilebasePlugin/lib/filter
+END
+sfFilebaseFileFormFilter.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/18306/plugins/sfFilebasePlugin/lib/filter/sfFilebaseFileFormFilter.class.php
+END
+sfFilebaseDirectoryFormFilter.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/18306/plugins/sfFilebasePlugin/lib/filter/sfFilebaseDirectoryFormFilter.class.php
+END
