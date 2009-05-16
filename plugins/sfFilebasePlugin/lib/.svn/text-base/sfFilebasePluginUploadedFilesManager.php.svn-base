@@ -83,7 +83,7 @@ class sfFilebasePluginUploadedFilesManager
   public function getUploadedFiles($index = null)
   {
     // Look for cached upload-info
-    if(is_array($this->uploadedFiles))
+    if(is_array(self::$UPLOADED_FILES))
     {
       return $index === null ? self::$UPLOADED_FILES : self::$UPLOADED_FILES[$index];
     }
@@ -195,14 +195,14 @@ class sfFilebasePluginUploadedFilesManager
    *
    * @param mixed $tmp_file
    * @param mixed $destination_directory: The directory the file will be moved in.
-   * @param boolean $override True if existing files should be overwritten
+   * @param boolean $allow_overwrite True if existing files should be overwritten
    * @param array $inclusion_rules
    * @param array $exclusion_rules
    * @param string $file_name: If given, file will be renamed when moving.
    * @throws sfFilebasePluginException
    * @return sfFilebasePluginFile $moved_file
    */
-  public function moveUploadedFile(sfFilebasePluginUploadedFile $tmp_file, $destination_directory, $override = true, $chmod=0777, array $inclusion_rules = array(), $exclusion_rules = array(), $file_name = null)
+  public function moveUploadedFile(sfFilebasePluginUploadedFile $tmp_file, $destination_directory, $allow_overwrite = true, $chmod=0777, array $inclusion_rules = array(), $exclusion_rules = array(), $file_name = null)
   {
     $destination_directory = $this->filebase->getFilebaseFile($destination_directory);
 
@@ -265,12 +265,12 @@ class sfFilebasePluginUploadedFilesManager
         $destination = $this->filebase->getFilebaseFile($destination_directory->getPathname() . '/' . $file_name);
       }
     }
-
+    
     if(!$this->filebase->isInFilebase($destination))                      throw new sfFilebasePluginException(sprintf('Destination %s does not lie within Filebase %s, access denied due to security reasons.', $destination->getPathname(), $this->filebase->getPathname()));
 
     if($destination->fileExists())
     {
-      if($override)
+      if($allow_overwrite)
       {
         if(!$destination->isWritable())   throw new sfFilebasePluginException(sprintf('File %s is write protected.', $destination->getPathname()));
       }
@@ -280,8 +280,7 @@ class sfFilebasePluginUploadedFilesManager
     {
       if(!$destination_directory->isWritable()) throw new sfFilebasePluginException(sprintf('Destination directory %s is write protected', $destination_directory->getPathname()));
     }
-
-    if(!@move_uploaded_file($tmp_file->getTempName()->getPathname(), $destination->getPathname()))  throw new sfFilebasePluginException (sprintf('Error while moving uploaded file %s', $tmp_file['tmp_name']));
+    if(!@move_uploaded_file($tmp_file->getTempName(), $destination->getPathname()))  throw new sfFilebasePluginException (sprintf('Error while moving uploaded file %s', $tmp_file->getOriginalName()));
     $destination->chmod($chmod);
     return $destination;
   }

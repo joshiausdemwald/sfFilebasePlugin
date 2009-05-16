@@ -33,6 +33,9 @@ ee427ae8-e902-0410-961c-c3ed070cd9f9
 
 0
 
+helper
+dir
+
 sfFilebasePluginWebRequest.php
 file
 
@@ -66,77 +69,6 @@ joshiausdemwald
 
 
 1435
-
-helper
-dir
-
-sfFilebasePluginGfxEditor.php
-file
-
-
-
-
-2009-05-14T10:08:02.000000Z
-4b45635f5ac40d6483df5b0067961912
-2009-05-14T10:13:34.135365Z
-18270
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-11943
-
-sfFilebasePluginFileExif.php
-file
-
-
-
-
-2009-05-13T15:57:59.000000Z
-8ebd4eca7204f344f8a9cd262263ebe6
-2009-05-13T16:04:25.955815Z
-18227
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1035
 
 sfFilebasePluginRecursiveIteratorIterator.php
 file
@@ -172,7 +104,75 @@ has-props
 
 1134
 
-Validator
+sfFilebasePluginFileExif.php
+file
+
+
+
+
+2009-05-13T15:57:59.000000Z
+8ebd4eca7204f344f8a9cd262263ebe6
+2009-05-13T16:04:25.955815Z
+18227
+joshiausdemwald
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1035
+
+sfFilebasePluginGfxEditor.php
+file
+
+
+
+
+2009-05-14T10:08:02.000000Z
+4b45635f5ac40d6483df5b0067961912
+2009-05-14T10:13:34.135365Z
+18270
+joshiausdemwald
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+11943
+
+filter
 dir
 
 validator
@@ -198,19 +198,19 @@ dir
 http://svn.symfony-project.com/plugins/sfFilebasePlugin/lib/Validator
 18226
 
-filter
+Validator
 dir
 
 sfFilebasePluginUploadedFile.php
 file
-18335
+18342
 
 
 
-2009-05-16T12:50:39.000000Z
-b7c567d236f6786a4f38da3d9ed82e66
-2009-05-16T12:56:31.606478Z
-18335
+2009-05-16T15:05:08.000000Z
+c31df9c61adeef12abe5f5e02b7beae8
+2009-05-16T15:28:17.233027Z
+18342
 joshiausdemwald
 
 
@@ -233,7 +233,7 @@ joshiausdemwald
 
 
 
-6283
+6583
 
 sfFilebasePluginException.php
 file
@@ -303,6 +303,40 @@ has-props
 
 6258
 
+sfFilebasePluginFileObject.php
+file
+
+
+
+
+2009-05-13T15:57:54.000000Z
+ccd822cfd1674fb3b711694732588c2d
+2009-05-13T16:04:25.955815Z
+18227
+joshiausdemwald
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5833
+
 sfFilebasePluginRecursiveDirectoryIterator.php
 file
 
@@ -337,39 +371,8 @@ has-props
 
 2392
 
-sfFilebasePluginFileObject.php
-file
-
-
-
-
-2009-05-13T15:57:54.000000Z
-ccd822cfd1674fb3b711694732588c2d
-2009-05-13T16:04:25.955815Z
-18227
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-5833
+model
+dir
 
 sfFilebasePluginGfxEditorAdapterGD.php
 file
@@ -405,22 +408,19 @@ joshiausdemwald
 
 8740
 
-model
-dir
-
 form
 dir
 
 sfFilebasePluginUploadedFilesManager.php
 file
-18335
+18342
 
 
 
-2009-05-16T11:40:32.000000Z
-12cecfa295b5b3556dde9c87d957d33c
-2009-05-16T12:56:31.606478Z
-18335
+2009-05-16T15:02:46.000000Z
+eb3a98f970f5b6ca6c3db58c8bbdac7d
+2009-05-16T15:28:17.233027Z
+18342
 joshiausdemwald
 
 
@@ -443,7 +443,7 @@ joshiausdemwald
 
 
 
-10809
+10826
 
 sfFilebasePluginGfxEditorAdapterInterface.php
 file

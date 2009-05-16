@@ -58,6 +58,10 @@ class sfFilebasePluginUploadedFile extends sfValidatedFile
     {
       $this->error    = self::UPLOAD_ERR_OK;
     }
+    else
+    {
+      $this->error = $error;
+    }
     
     if (empty($size) || empty($type))
     {
@@ -94,7 +98,23 @@ class sfFilebasePluginUploadedFile extends sfValidatedFile
   public function moveUploadedFile($destination_directory = null, $overwrite = true, $chmod=0777, array $inclusion_rules = array(), array $exclusion_rules = array(), $file_name = null)
   {
     $destination_directory = $destination_directory === null ? $this->getPath() : $destination_directory;
-    return sfFilebasePlugin::getInstance()->moveUploadedFile($this, $destination_directory, $overwrite, $chmod, $inclusion_rules, $exclusion_rules, $file_name);
+    try
+    {
+      $file = sfFilebasePlugin::getInstance()->moveUploadedFile($this, $destination_directory, $overwrite, $chmod, $inclusion_rules, $exclusion_rules, $file_name);
+      if($file_name === null)
+      {
+        $this->savedName = $this->getOriginalName();
+      }
+      else
+      {
+        $this->savedName = $file_name;
+      }
+      return $file;
+    }
+    catch (Exception $e)
+    {
+      throw $e;
+    }
   }
 
   /**
@@ -156,8 +176,8 @@ class sfFilebasePluginUploadedFile extends sfValidatedFile
     $file->chmod($fileMode);
 
     $this->savedName = $file->getPathname();
-
-    return $file->getPathname();
+    
+    return $file;
   }
 
   /**

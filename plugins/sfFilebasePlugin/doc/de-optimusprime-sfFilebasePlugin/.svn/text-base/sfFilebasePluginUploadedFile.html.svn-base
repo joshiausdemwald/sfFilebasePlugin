@@ -269,7 +269,7 @@
 		<div class="info-box-body">
 			
 <a name="var$error" id="$error"><!-- --></A>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div class="var-header">
 		<span class="var-title">
@@ -307,7 +307,7 @@
 		<div class="info-box-body">
 			<A NAME='method_detail'></A>
 <a name="method__construct" id="__construct"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">Constructor __construct</span> (line <span class="line-number">53</span>)
@@ -357,10 +357,10 @@
 			
 	</div>
 <a name="methodgetError" id="getError"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">getError</span> (line <span class="line-number">190</span>)
+		<span class="method-title">getError</span> (line <span class="line-number">210</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -382,10 +382,10 @@
 			
 	</div>
 <a name="methodhasError" id="hasError"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">hasError</span> (line <span class="line-number">180</span>)
+		<span class="method-title">hasError</span> (line <span class="line-number">200</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -405,10 +405,10 @@
 			
 	</div>
 <a name="methodisError" id="isError"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">isError</span> (line <span class="line-number">171</span>)
+		<span class="method-title">isError</span> (line <span class="line-number">191</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -437,10 +437,10 @@
 			
 	</div>
 <a name="methodmoveUploadedFile" id="moveUploadedFile"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">moveUploadedFile</span> (line <span class="line-number">94</span>)
+		<span class="method-title">moveUploadedFile</span> (line <span class="line-number">98</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -494,10 +494,10 @@
 			
 	</div>
 <a name="methodsave" id="save"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">save</span> (line <span class="line-number">117</span>)
+		<span class="method-title">save</span> (line <span class="line-number">137</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -553,7 +553,7 @@
 					</div>
 		<div class="info-box-body">
 			<a name="constUPLOAD_ERR_CANT_WRITE" id="UPLOAD_ERR_CANT_WRITE"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="const-header">
 		<img src="../media/images/Variable.png" />
@@ -569,7 +569,7 @@
 	
 </div>
 <a name="constUPLOAD_ERR_EXTENSION" id="UPLOAD_ERR_EXTENSION"><!-- --></A>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div class="const-header">
 		<img src="../media/images/Variable.png" />
@@ -585,7 +585,7 @@
 	
 </div>
 <a name="constUPLOAD_ERR_FORM_SIZE" id="UPLOAD_ERR_FORM_SIZE"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="const-header">
 		<img src="../media/images/Variable.png" />
@@ -601,7 +601,7 @@
 	
 </div>
 <a name="constUPLOAD_ERR_INI_SIZE" id="UPLOAD_ERR_INI_SIZE"><!-- --></A>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div class="const-header">
 		<img src="../media/images/Variable.png" />
@@ -617,7 +617,7 @@
 	
 </div>
 <a name="constUPLOAD_ERR_NO_FILE" id="UPLOAD_ERR_NO_FILE"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="const-header">
 		<img src="../media/images/Variable.png" />
@@ -633,7 +633,7 @@
 	
 </div>
 <a name="constUPLOAD_ERR_NO_TMP_DIR" id="UPLOAD_ERR_NO_TMP_DIR"><!-- --></A>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div class="const-header">
 		<img src="../media/images/Variable.png" />
@@ -649,7 +649,7 @@
 	
 </div>
 <a name="constUPLOAD_ERR_OK" id="UPLOAD_ERR_OK"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="const-header">
 		<img src="../media/images/Variable.png" />
@@ -665,7 +665,7 @@
 	
 </div>
 <a name="constUPLOAD_ERR_PARTIAL" id="UPLOAD_ERR_PARTIAL"><!-- --></A>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div class="const-header">
 		<img src="../media/images/Variable.png" />
@@ -685,7 +685,7 @@
 	</div>
 
 	<p class="notes" id="credit">
-		Documentation generated on Sat, 16 May 2009 14:56:10 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Sat, 16 May 2009 17:07:16 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</div></body>
 </html>

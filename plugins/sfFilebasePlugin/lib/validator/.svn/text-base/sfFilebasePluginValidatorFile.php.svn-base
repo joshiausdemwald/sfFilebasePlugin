@@ -48,7 +48,7 @@ class sfFilebasePluginValidatorFile extends sfValidatorFile
    *  * mime_categories:      An array of mime type categories (web_images is defined by default)
    *  * path:                 The path where to save the file - as used by the sfValidatedFile class (optional)
    *  * validated_file_class: Name of the class that manages the cleaned uploaded file (optional)
-   *  * allow_override:       If set to true, existing files will be overwritten. Otherwise, an form field error will rise (optional)
+   *  * allow_overwrite:       If set to true, existing files will be overwritten. Otherwise, an form field error will rise (optional)
    *                          This comes only in effect, if path is set (otherwise you'd to save the file manually)
    *  * filebase              Instance of filebase, needed if you want to save the file under another location than the
    *                          symfony default filebasePlugindDirectory (web/uploads) (optional)

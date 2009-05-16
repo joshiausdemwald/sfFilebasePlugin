@@ -3,7 +3,7 @@ propel:
 
   sf_filebase_files:
     _attributes:    { phpName: sfFilebaseFile }
-    id:
+    id:             ~
     pathname:       { type: varchar, size: 255, required: true, index: unique }
     hash:           { type: varchar, size: 255, required: true, index: unique }
 

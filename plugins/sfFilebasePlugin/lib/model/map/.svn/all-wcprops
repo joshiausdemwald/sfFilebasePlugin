@@ -7,11 +7,11 @@ sfFilebaseDirectoryMapBuilder.php
 K 25
 svn:wc:ra_dav:version-url
 V 88
-/!svn/ver/18306/plugins/sfFilebasePlugin/lib/model/map/sfFilebaseDirectoryMapBuilder.php
+/!svn/ver/18342/plugins/sfFilebasePlugin/lib/model/map/sfFilebaseDirectoryMapBuilder.php
 END
 sfFilebaseFileMapBuilder.php
 K 25
 svn:wc:ra_dav:version-url
 V 83
-/!svn/ver/18306/plugins/sfFilebasePlugin/lib/model/map/sfFilebaseFileMapBuilder.php
+/!svn/ver/18342/plugins/sfFilebasePlugin/lib/model/map/sfFilebaseFileMapBuilder.php
 END

@@ -7,23 +7,23 @@ BasesfFilebaseFilePeer.php
 K 25
 svn:wc:ra_dav:version-url
 V 80
-/!svn/ver/18306/plugins/sfFilebasePlugin/lib/model/om/BasesfFilebaseFilePeer.php
+/!svn/ver/18342/plugins/sfFilebasePlugin/lib/model/om/BasesfFilebaseFilePeer.php
 END
 BasesfFilebaseFile.php
 K 25
 svn:wc:ra_dav:version-url
 V 76
-/!svn/ver/18306/plugins/sfFilebasePlugin/lib/model/om/BasesfFilebaseFile.php
+/!svn/ver/18342/plugins/sfFilebasePlugin/lib/model/om/BasesfFilebaseFile.php
 END
 BasesfFilebaseDirectoryPeer.php
 K 25
 svn:wc:ra_dav:version-url
 V 85
-/!svn/ver/18306/plugins/sfFilebasePlugin/lib/model/om/BasesfFilebaseDirectoryPeer.php
+/!svn/ver/18342/plugins/sfFilebasePlugin/lib/model/om/BasesfFilebaseDirectoryPeer.php
 END
 BasesfFilebaseDirectory.php
 K 25
 svn:wc:ra_dav:version-url
 V 81
-/!svn/ver/18306/plugins/sfFilebasePlugin/lib/model/om/BasesfFilebaseDirectory.php
+/!svn/ver/18342/plugins/sfFilebasePlugin/lib/model/om/BasesfFilebaseDirectory.php
 END
