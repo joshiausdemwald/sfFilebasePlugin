@@ -3,14 +3,14 @@
   <html xmlns="http://www.w3.org/1999/xhtml">
 		<head>
 			<!-- template designed by Marco Von Ballmoos  -->
-			<title>Docs for page BaseFormFilterPropel.class.php</title>
-			<link rel="stylesheet" href="../../media/stylesheet.css" />
-						<script src="../../media/lib/classTree.js"></script>
+			<title>Docs for page sfFilebaseFileFormFilter.class.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+						<script src="../media/lib/classTree.js"></script>
 												<script language="javascript" type="text/javascript">
 				var imgPlus = new Image();
 				var imgMinus = new Image();
-				imgPlus.src = "../../media/images/plus.png";
-				imgMinus.src = "../../media/images/minus.png";
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
 				
 				function showNode(Node){
 							switch(navigator.family){
@@ -85,7 +85,7 @@
 					</head>
 		<body>
 			<div class="page-body">			
-<h2 class="file-name">/lib/filter/base/BaseFormFilterPropel.class.php</h2>
+<h2 class="file-name">/lib/filter/sfFilebaseFileFormFilter.class.php</h2>
 
 <a name="sec-description"></a>
 <div class="info-box">
@@ -115,10 +115,10 @@
 				</tr>
 								<tr>
 					<td style="padding-right: 2em; vertical-align: top">
-						<a href="../../test/filter/BaseFormFilterPropel.html">BaseFormFilterPropel</a>
+						<a href="../de-optimusprime-sfFilebasePlugin/sfFilebaseFileFormFilter.html">sfFilebaseFileFormFilter</a>
 					</td>
 					<td>
-											Project filter form base class.
+											This file is part of the sfFilebasePlugin package.
 										</td>
 				</tr>
 							</table>
@@ -130,7 +130,7 @@
 	
 	
 	<p class="notes" id="credit">
-		Documentation generated on Sat, 16 May 2009 18:02:59 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Sat, 16 May 2009 18:09:28 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</div></body>
 </html>

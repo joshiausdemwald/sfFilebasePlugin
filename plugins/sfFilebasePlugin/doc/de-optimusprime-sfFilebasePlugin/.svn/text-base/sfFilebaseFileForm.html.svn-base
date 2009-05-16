@@ -156,7 +156,7 @@
 		<div class="info-box-body">
 			<A NAME='method_detail'></A>
 <a name="methodconfigure" id="configure"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">configure</span> (line <span class="line-number">15</span>)
@@ -179,7 +179,7 @@
 			
 	</div>
 <a name="methodsaveFile" id="saveFile"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">saveFile</span> (line <span class="line-number">30</span>)
@@ -220,7 +220,7 @@
 
 
 	<p class="notes" id="credit">
-		Documentation generated on Sat, 16 May 2009 18:03:00 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Sat, 16 May 2009 18:09:28 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</div></body>
 </html>

@@ -3,14 +3,14 @@
   <html xmlns="http://www.w3.org/1999/xhtml">
 		<head>
 			<!-- template designed by Marco Von Ballmoos  -->
-			<title>Docs For Class sfFilebaseFileFormFilter</title>
-			<link rel="stylesheet" href="../../media/stylesheet.css" />
-						<script src="../../media/lib/classTree.js"></script>
+			<title>Docs For Class sfFilebaseDirectoryFormFilter</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+						<script src="../media/lib/classTree.js"></script>
 												<script language="javascript" type="text/javascript">
 				var imgPlus = new Image();
 				var imgMinus = new Image();
-				imgPlus.src = "../../media/images/plus.png";
-				imgMinus.src = "../../media/images/minus.png";
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
 				
 				function showNode(Node){
 							switch(navigator.family){
@@ -85,7 +85,7 @@
 					</head>
 		<body>
 			<div class="page-body">			
-<h2 class="class-name">Class sfFilebaseFileFormFilter</h2>
+<h2 class="class-name">Class sfFilebaseDirectoryFormFilter</h2>
 
 <a name="sec-description"></a>
 <div class="info-box">
@@ -97,23 +97,21 @@
 					</div>
 	<div class="info-box-body">
         		<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">sfFilebaseFile filter form.</p>
+<p class="short-description">This file is part of the sfFilebasePlugin package.</p>
+<p class="description"><p>For the full copyright and license information, please view the LICENSE  file that was distributed with this source code.</p></p>
 	<ul class="tags">
-				<li><span class="field">author:</span> ##AUTHOR_NAME##</li>
-				<li><span class="field">version:</span> SVN: $Id: sfPropelFormFilterTemplate.php 11675 2008-09-19 15:21:38Z fabien $</li>
+				<li><span class="field">author:</span> Johannes Heinen &lt;<a href="mailto:johannes.heinen@gmail.com">johannes.heinen@gmail.com</a>&gt;</li>
+				<li><span class="field">copyright:</span> 2007-2009 Johannes Heinen &lt;johannes.heinen@gmail.com&gt;</li>
+				<li><span class="field">license:</span> MIT</li>
 			</ul>
 		<p class="notes">
-			Located in <a class="field" href="_lib---filter---sfFilebaseFileFormFilter.class.php.html">/lib/filter/sfFilebaseFileFormFilter.class.php</a> (line <span class="field">11</span>)
+			Located in <a class="field" href="_lib---filter---sfFilebaseDirectoryFormFilter.class.php.html">/lib/filter/sfFilebaseDirectoryFormFilter.class.php</a> (line <span class="field">14</span>)
 		</p>
 		
 				
-		<pre>sfFormFilterPropel
+		<pre>BasesfFilebaseDirectoryFormFilter
    |
-   --<a href="../../test/filter/BaseFormFilterPropel.html">BaseFormFilterPropel</a>
-      |
-      --<a href="../../--PROJECT_NAME--/filter/BasesfFilebaseFileFormFilter.html">BasesfFilebaseFileFormFilter</a>
-         |
-         --sfFilebaseFileFormFilter</pre>
+   --sfFilebaseDirectoryFormFilter</pre>
 	
 			</div>
 </div>
@@ -155,7 +153,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">configure</span> (line <span class="line-number">13</span>)
+		<span class="method-title">configure</span> (line <span class="line-number">16</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -174,27 +172,13 @@
 		
 			
 	</div>
-							<h4>Inherited Methods</h4>
-				<a name='inherited_methods'><!-- --></a>	
-									<!-- =========== Summary =========== -->
-					<p>Inherited From <span class="classname"><a href="../../--PROJECT_NAME--/filter/BasesfFilebaseFileFormFilter.html">BasesfFilebaseFileFormFilter</a></span></p>
-					<blockquote>
-													<span class="method-name"><a href="../../--PROJECT_NAME--/filter/BasesfFilebaseFileFormFilter.html#methodgetFields">BasesfFilebaseFileFormFilter::getFields()</a></span><br>
-													<span class="method-name"><a href="../../--PROJECT_NAME--/filter/BasesfFilebaseFileFormFilter.html#methodgetModelName">BasesfFilebaseFileFormFilter::getModelName()</a></span><br>
-													<span class="method-name"><a href="../../--PROJECT_NAME--/filter/BasesfFilebaseFileFormFilter.html#methodsetup">BasesfFilebaseFileFormFilter::setup()</a></span><br>
-											</blockquote>
-									<!-- =========== Summary =========== -->
-					<p>Inherited From <span class="classname"><a href="../../test/filter/BaseFormFilterPropel.html">BaseFormFilterPropel</a></span></p>
-					<blockquote>
-													<span class="method-name"><a href="../../test/filter/BaseFormFilterPropel.html#methodsetup">BaseFormFilterPropel::setup()</a></span><br>
-											</blockquote>
-										
+						
 		</div>
 	</div>
 
 
 	<p class="notes" id="credit">
-		Documentation generated on Sat, 16 May 2009 18:03:00 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Sat, 16 May 2009 18:09:28 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</div></body>
 </html>

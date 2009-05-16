@@ -8,9 +8,6 @@
 											</head>
 		<body>
 						<a href="#Post-parsing">Post-parsing</a><br>
-<a href="#BasesfFilebaseDirectoryFormFilter.class.php">BasesfFilebaseDirectoryFormFilter.class.php</a><br>
-<a href="#BasesfFilebaseFileFormFilter.class.php">BasesfFilebaseFileFormFilter.class.php</a><br>
-<a href="#PluginSfFilebaseDirectory.php">PluginSfFilebaseDirectory.php</a><br>
 <a href="#PluginSfFilebaseDirectoryPeer.php">PluginSfFilebaseDirectoryPeer.php</a><br>
 <a href="#PluginSfFilebaseFile.php">PluginSfFilebaseFile.php</a><br>
 <a href="#PluginSfFilebaseFilePeer.php">PluginSfFilebaseFilePeer.php</a><br>
@@ -45,26 +42,15 @@
 <h2>Warnings:</h2><br>
 <b>Warning</b> - Class sfFilebaseFileForm parent BasesfFilebaseFileForm not found<br>
 <b>Warning</b> - Class sfFilebaseDirectoryForm parent BasesfFilebaseDirectoryForm not found<br>
-<b>Warning</b> - Class BaseFormFilterPropel parent sfFormFilterPropel not found<br>
+<b>Warning</b> - Class sfFilebaseFileFormFilter parent BasesfFilebaseFileFormFilter not found<br>
 <b>Warning</b> - Class sfFilebasePluginValidatorFile parent sfValidatorFile not found<br>
-<b>Warning</b> - Class PluginSfFilebaseFile parent BasesfFilebaseFile not found<br>
+<b>Warning</b> - Class PluginSfFilebaseFilePeer parent BasesfFilebaseFilePeer not found<br>
 <b>Warning</b> - Class PluginSfFilebaseDirectoryPeer parent BasesfFilebaseDirectoryPeer not found<br>
 <b>Warning</b> - Class PluginSfFilebaseDirectory parent BasesfFilebaseDirectory not found<br>
+<b>Warning</b> - Class PluginSfFilebaseFile parent BasesfFilebaseFile not found<br>
 <b>Warning</b> - Class sfFilebasePluginUploadedFile parent sfValidatedFile not found<br>
-<b>Warning</b> - Class PluginSfFilebaseFilePeer parent BasesfFilebaseFilePeer not found<br>
+<b>Warning</b> - Class sfFilebaseDirectoryFormFilter parent BasesfFilebaseDirectoryFormFilter not found<br>
 <b>Warning</b> - Class sfFilebasePluginWebRequest parent sfWebRequest not found<br>
-<a name="BaseFormFilterPropel.class.php"></a>
-<h1>BaseFormFilterPropel.class.php</h1>
-<h2>Warnings:</h2><br>
-<b>Warning on line 11</b> - DocBlock would be page-level, but precedes class "BaseFormFilterPropel", use another DocBlock to document the file<br>
-<a name="BasesfFilebaseDirectoryFormFilter.class.php"></a>
-<h1>BasesfFilebaseDirectoryFormFilter.class.php</h1>
-<h2>Warnings:</h2><br>
-<b>Warning on line 43</b> - File "/home/joshi/www/test/plugins/sfFilebasePlugin/lib/filter/base/BasesfFilebaseDirectoryFormFilter.class.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
-<a name="BasesfFilebaseFileFormFilter.class.php"></a>
-<h1>BasesfFilebaseFileFormFilter.class.php</h1>
-<h2>Warnings:</h2><br>
-<b>Warning on line 49</b> - File "/home/joshi/www/test/plugins/sfFilebasePlugin/lib/filter/base/BasesfFilebaseFileFormFilter.class.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
 <a name="PluginSfFilebaseDirectory.php"></a>
 <h1>PluginSfFilebaseDirectory.php</h1>
 <h2>Warnings:</h2><br>
@@ -92,7 +78,7 @@
 <a name="sfFilebaseDirectoryFormFilter.class.php"></a>
 <h1>sfFilebaseDirectoryFormFilter.class.php</h1>
 <h2>Warnings:</h2><br>
-<b>Warning on line 11</b> - DocBlock would be page-level, but precedes class "sfFilebaseDirectoryFormFilter", use another DocBlock to document the file<br>
+<b>Warning on line 14</b> - DocBlock would be page-level, but precedes class "sfFilebaseDirectoryFormFilter", use another DocBlock to document the file<br>
 <a name="sfFilebaseDirectoryPeer.php"></a>
 <h1>sfFilebaseDirectoryPeer.php</h1>
 <h2>Warnings:</h2><br>
@@ -108,7 +94,7 @@
 <a name="sfFilebaseFileFormFilter.class.php"></a>
 <h1>sfFilebaseFileFormFilter.class.php</h1>
 <h2>Warnings:</h2><br>
-<b>Warning on line 11</b> - DocBlock would be page-level, but precedes class "sfFilebaseFileFormFilter", use another DocBlock to document the file<br>
+<b>Warning on line 14</b> - DocBlock would be page-level, but precedes class "sfFilebaseFileFormFilter", use another DocBlock to document the file<br>
 <a name="sfFilebaseFilePeer.php"></a>
 <h1>sfFilebaseFilePeer.php</h1>
 <h2>Warnings:</h2><br>
@@ -133,8 +119,8 @@
           $new_file = $filebase->getFilebaseFile('path/to/new/file.txt');
           $filebase->touch($new_file);
           In Short: $filebase->touch('path/to/new/file.txt');" does not exist<br>
-<b>Warning on line 367</b> - example file "          if it exists in FS, or a sfFilebaseFile if not." does not exist<br>
 <b>Warning on line 367</b> - example file "          foreach ($filebase AS $file) ..." does not exist<br>
+<b>Warning on line 367</b> - example file "          if it exists in FS, or a sfFilebaseFile if not." does not exist<br>
 <a name="sfFilebasePluginFileExif.php"></a>
 <h1>sfFilebasePluginFileExif.php</h1>
 <h2>Warnings:</h2><br>
@@ -173,8 +159,8 @@
 <h1>sfFilebasePluginStruct.php</h1>
 <h2>Warnings:</h2><br>
 <b>Warning on line 18</b> - no @package tag was used in a DocBlock for class sfFilebasePluginStruct<br>
-<b>Warning on line 117</b> - example file "$this->getVarname() returns valueof "varname", error if not set" does not exist<br>
 <b>Warning on line 117</b> - example file "$this->setVarname(value) sets "varname" to "value"" does not exist<br>
+<b>Warning on line 117</b> - example file "$this->getVarname() returns valueof "varname", error if not set" does not exist<br>
 <b>Warning on line 117</b> - example file "$this->getVarname(std_value) returns value of "varname" or std_value if not set" does not exist<br>
 <a name="sfFilebasePluginThumbnail.php"></a>
 <h1>sfFilebasePluginThumbnail.php</h1>
@@ -184,8 +170,8 @@
 <h1>sfFilebasePluginUploadedFile.php</h1>
 <h2>Warnings:</h2><br>
 <b>Warning on line 20</b> - no @package tag was used in a DocBlock for class sfFilebasePluginUploadedFile<br>
-<b>Warning on line 190</b> - example file "$file->isError()" does not exist<br>
 <b>Warning on line 190</b> - example file "$file->isError(sfFilebaseUploadedFile::UPLOAD_ERR_NO_FILE)" does not exist<br>
+<b>Warning on line 190</b> - example file "$file->isError()" does not exist<br>
 <a name="sfFilebasePluginUploadedFilesManager.php"></a>
 <h1>sfFilebasePluginUploadedFilesManager.php</h1>
 <h2>Warnings:</h2><br>
@@ -199,7 +185,7 @@
 <h2>Warnings:</h2><br>
 <b>Warning on line 24</b> - no @package tag was used in a DocBlock for class sfFilebasePluginValidatorFile<br>
 	<p class="notes" id="credit">
-		Documentation generated on Sat, 16 May 2009 18:03:03 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Sat, 16 May 2009 18:09:31 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</body>
 </html>
