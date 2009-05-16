@@ -13,6 +13,6 @@ class sfFilebaseFileForm extends BasesfFilebaseFileForm
   public function configure()
   {
     $this->widgetSchema['pathname']     = new sfWidgetFormInputFile();
-    $this->validatorSchema['pathname']  = new sfFilebasePluginValidatorFile(array('required'=>true));
+    $this->validatorSchema['pathname']  = new sfFilebasePluginValidatorFile(array('allow_overwrite'=>'true', 'required'=>true));
   }
 }

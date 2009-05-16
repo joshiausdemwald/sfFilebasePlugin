@@ -34,10 +34,6 @@
 <li><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginFileExif.html">sfFilebasePluginFileExif</a></li></ul></li>
 </ul>
 
-<h2>Root class sfFilebasePluginUploadedFile</h2>
-<ul>
-<li><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginUploadedFile.html">sfFilebasePluginUploadedFile</a></li></ul>
-
 <h2>Root class sfFilebasePluginUploadedFilesManager</h2>
 <ul>
 <li><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginUploadedFilesManager.html">sfFilebasePluginUploadedFilesManager</a></li></ul>
@@ -57,6 +53,10 @@
 <h2>Root class RecursiveIteratorIterator</h2>
 <ul>
 <li><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginRecursiveIteratorIterator.html">sfFilebasePluginRecursiveIteratorIterator</a></li></ul>
+
+<h2>Root class sfValidatedFile</h2>
+<ul>
+<li><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginUploadedFile.html">sfFilebasePluginUploadedFile</a></li></ul>
 
 <h2>Root class sfValidatorFile</h2>
 <ul>
@@ -81,7 +81,7 @@
 <li><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginFileObject.html">sfFilebasePluginFileObject</a></li></ul>
 
 	<p class="notes" id="credit">
-		Documentation generated on Thu, 14 May 2009 12:13:04 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Sat, 16 May 2009 14:56:01 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</body>
 </html>

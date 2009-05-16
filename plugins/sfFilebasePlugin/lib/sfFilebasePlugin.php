@@ -69,10 +69,13 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
    *                                      specified. Consider that the default
    *                                      directory is accessible via browser.
    *                                      Default is sfConfig::get('sf_upload_dir')
+   * @param   boolean $create             True if the filebase should try to
+   *                                      create its base directory if it does
+   *                                      not exist.
    * @throws  sfFilebasePluginException
    * @param   string $mode
    */
-  function __construct($path_name = null, $cache_directory = null)
+  function __construct($path_name = null, $cache_directory = null, $create = true, $dir_chmod = 0777)
   {
     if($path_name === null)
     {
@@ -87,11 +90,25 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
 
     parent::__construct($path_name, $this);
 
-    if(!$this->fileExists())    throw new sfFilebasePluginException(sprintf('Filebase directory %s does not exist.', $this->getPathname()));
-    if(!$this->isDir())         throw new sfFilebasePluginException(sprintf('File %s is not a directory', $this->getPathname()));
-    if(!$this->isReadable())    throw new sfFilebasePluginException(sprintf('File %s is not readable', $this->getPathname()));
+    if(!$this->fileExists())
+    {
+      // Should filebase dir be created by default?
+      if($create)
+      {
+        $p = $this->getFilebaseFile($this->getPath());
+        if($p->isWritable())
+        {
+          if(!@mkdir($this->getPathname())) throw new sfFilebasePluginException(sprintf('Error creating filebase base directory %s: %', $this->getPathname(), implode("\n", error_get_last())));
+          if(!@chmod($this->getPathname(), $dir_chmod)) throw new sfFilebasePluginException(sprintf('Error changing directory permissions for filebase base directory %s: %', $this->getPathname(), implode("\n", error_get_last())));
+        }
+        else throw new sfFilebasePluginException(sprintf('Filebase base directory % cannot be created due to write protection of its parent directory.', $this->getPathname()));
+      }
+      else throw new sfFilebasePluginException(sprintf('Filebase base directory %s does not exist.', $this->getPathname()));
+    }
+    if(!$this->isDir())         throw new sfFilebasePluginException(sprintf('Filebase base directory %s is not a directory', $this->getPathname()));
+    if(!$this->isReadable())    throw new sfFilebasePluginException(sprintf('Filebase base directory %s is not readable', $this->getPathname()));
     // Filebase root must have read/write-access.
-    if(!$this->isWritable())   throw new sfFilebasePluginException(sprintf('File %s is read or write protected', $this->getPathname()));
+    if(!$this->isWritable())   throw new sfFilebasePluginException(sprintf('Filebase base directory %s is read or write protected', $this->getPathname()));
     
     // Initialize cache.
     $this->initCache($cache_directory);
@@ -106,8 +123,9 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
    * 
    * @param string $path_name
    * @param string $cache_directory
+   * @return sfFilebasePlugin $filebase
    */
-  public static function getInstance($path_name = null, $cache_directory = null)
+  public static function getInstance($path_name = null, $cache_directory = null, $create = true)
   {
     $hashcookie = md5($path_name.$cache_directory);
     if(!array_key_exists($hashcookie, self::$instances))
@@ -388,26 +406,38 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
       $p = new sfFilebasePluginDirectory($p->getPath(), $this->filebase); // parent dir
     }
   }
+  
+  /**
+   * Returns the upload file manager for this
+   * instance of filebase
+   *
+   * @return sfFilebasePluginUploadedFilesManager
+   */
+  public function getUploadedFilesManager()
+  {
+    return $this->uploadedFilesManager;
+  }
 
   /**
    * Returns the data describing
    * uploaded files to handle by
    * move uploaded files.
    *
+   * @throws FilebaseException
    * @return array sfFilebasePluginUploadedFile $files
    */
-  public function getUploadedFiles($index = null, $default = null)
+  public function getUploadedFiles($index = null)
   {
     $files = $this->uploadedFilesManager->getUploadedFiles();
-    if($index !== null)
+    if($index === null)
     {
-      if(is_array($files) && array_key_exists($index, $files))
-      {
-        return $files[$index];
-      }
-      return $default;
+      return $files;
     }
-    return $files;
+    if(is_array($files) && array_key_exists($index, $files))
+    {
+      return $files[$index];
+    }
+    throw new sfFilebasePluginException(sprintf('Uploaded file %s does not exist.', $index));
   }
 
   /**

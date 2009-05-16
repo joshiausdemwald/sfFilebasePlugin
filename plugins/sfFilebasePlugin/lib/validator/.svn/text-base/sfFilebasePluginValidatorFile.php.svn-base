@@ -75,9 +75,9 @@ class sfFilebasePluginValidatorFile extends sfValidatorFile
     $this->addOption('mime_categories', array(
       'web_images' => sfFilebasePluginUtil::$WEB_IMAGES)
     );
-    $this->addOption('allow_override', false);
+    $this->addOption('allow_overwrite', false);
     $this->addOption('filebase', sfFilebasePlugin::getInstance());
-    $this->setOption('validated_file_class', 'sfValidatedFile');
+    $this->setOption('validated_file_class', 'sfFilebasePluginUploadedFile');
 
     $this->addMessage('file_exists', 'Destinated file %file% already exists.');
 
@@ -101,7 +101,6 @@ class sfFilebasePluginValidatorFile extends sfValidatorFile
     {
       $this->setOption('path', $this->getOption('filebase')->getFilebaseFile($path)->getPathname());
     }
-
   }
 
   /**
@@ -123,7 +122,7 @@ class sfFilebasePluginValidatorFile extends sfValidatorFile
       {
         throw new sfValidatorError($this, 'invalid', array('value' => 'File array describes no valid uploaded file.'));
       }
-      $value = sfFilebasePluginUploadedFilesManager::produceUploadedFile($value, $this->getOption('filebase'));
+      $value = sfFilebasePluginUploadedFilesManager::produceUploadedFile($value, $this->getOption('path'));
     }
 
     
@@ -208,15 +207,14 @@ class sfFilebasePluginValidatorFile extends sfValidatorFile
     }
 
     $path = $this->getOption('filebase')->getFilebaseFile($this->getOption('path'));
-    $path_name = $this->getOption('filebase')->getFilebaseFile($path->getPathname() . '/' . $value->getName());
+    $path_name = $this->getOption('filebase')->getFilebaseFile($path->getPathname() . '/' . $value->getOriginalName());
     if($path_name->fileExists())
     {
-      if(!$this->getOption('allow_override'))
+      if(!$this->getOption('allow_overwrite'))
       {
         throw new sfValidatorError($this, 'file_exists', array('file'=>$path_name->getPathname()));
       }
     }
-
     $class_name = $this->getOption('validated_file_class');
     if(is_string($class_name))
     {
@@ -228,8 +226,8 @@ class sfFilebasePluginValidatorFile extends sfValidatorFile
     else
     {
       return array(
-        'name'      => $value->getName(),
-        'tmp_name'  => $value->getTmpName(),
+        'name'      => $value->getOriginalName(),
+        'tmp_name'  => $value->getTempName(),
         'type'      => $value->getType(),
         'error'     => $value->getError(),
         'extension' => $value->getExtension()

@@ -109,7 +109,9 @@
 		</p>
 		
 				
-		<pre></pre>
+		<pre>sfValidatedFile
+   |
+   --sfFilebasePluginUploadedFile</pre>
 	
 			</div>
 </div>
@@ -188,29 +190,9 @@
 					</div>
 		<div class="info-box-body">
 			<div class="var-summary">
-																																																																<div class="var-title">
+																								<div class="var-title">
 					<span class="var-type">string</span>
 					<a href="#$error" title="details" class="var-name">$error</a>
-				</div>
-																<div class="var-title">
-					<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html">sfFilebasePlugin</a></span>
-					<a href="#$filebase" title="details" class="var-name">$filebase</a>
-				</div>
-																<div class="var-title">
-					<span class="var-type">string</span>
-					<a href="#$name" title="details" class="var-name">$name</a>
-				</div>
-																<div class="var-title">
-					<span class="var-type">string</span>
-					<a href="#$size" title="details" class="var-name">$size</a>
-				</div>
-																<div class="var-title">
-					<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>
-					<a href="#$tmp_name" title="details" class="var-name">$tmp_name</a>
-				</div>
-																<div class="var-title">
-					<span class="var-type">string</span>
-					<a href="#$type" title="details" class="var-name">$type</a>
 				</div>
 											</div>
 		</div>
@@ -230,46 +212,16 @@
 		</div>
 		<div class="info-box-body">			
 			<div class="method-summary">
-																																																																																																						
+																																																														
 				<div class="method-definition">
 											<span class="method-result">sfFilebasePluginUploadedFile</span>
 										<a href="#__construct" title="details" class="method-name">__construct</a>
-											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$tmp_name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$error</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$size</span>, <span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html">sfFilebasePlugin</a></span>&nbsp;<span class="var-name">$filebase</span>)
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$originalName</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$tempName</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$size</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$error</span> = <span class="var-default">null</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$tmp_name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$path:</span>)
 									</div>
 														
 				<div class="method-definition">
 											<span class="method-result">integer</span>
 										<a href="#getError" title="details" class="method-name">getError</a>
-										()
-									</div>
-														
-				<div class="method-definition">
-											<span class="method-result">string</span>
-										<a href="#getExtension" title="details" class="method-name">getExtension</a>
-										()
-									</div>
-														
-				<div class="method-definition">
-											<span class="method-result">string</span>
-										<a href="#getName" title="details" class="method-name">getName</a>
-										()
-									</div>
-														
-				<div class="method-definition">
-											<span class="method-result">integer</span>
-										<a href="#getSize" title="details" class="method-name">getSize</a>
-										()
-									</div>
-														
-				<div class="method-definition">
-											<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>
-										<a href="#getTmpName" title="details" class="method-name">getTmpName</a>
-										()
-									</div>
-														
-				<div class="method-definition">
-											<span class="method-result">string</span>
-										<a href="#getType" title="details" class="method-name">getType</a>
 										()
 									</div>
 														
@@ -286,15 +238,15 @@
 									</div>
 														
 				<div class="method-definition">
-											<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>
-										<a href="#move" title="details" class="method-name">move</a>
-											(<span class="var-type"></span>&nbsp;<span class="var-name">$destination_directory</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$override</span> = <span class="var-default">true</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$chmod</span> = <span class="var-default">0777</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$inclusion_rules</span> = <span class="var-default">array()</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$exclusion_rules</span> = <span class="var-default">array()</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$file_name</span> = <span class="var-default">null</span>], <span class="var-type">mixed</span>&nbsp;<span class="var-name">$tmp_file</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$destination_directory:</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$file_name:</span>)
+											<span class="method-result">void</span>
+										<a href="#moveUploadedFile" title="details" class="method-name">moveUploadedFile</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$destination_directory</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$overwrite</span> = <span class="var-default">true</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$chmod</span> = <span class="var-default">0777</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$inclusion_rules</span> = <span class="var-default">array()</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$exclusion_rules</span> = <span class="var-default">array()</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$file_name</span> = <span class="var-default">null</span>], <span class="var-type">boolean</span>&nbsp;<span class="var-name">$overwrite:</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$inclusion_rules:</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$exclusion_rules:</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$file_name:</span>)
 									</div>
 														
 				<div class="method-definition">
-											<span class="method-result">void</span>
-										<a href="#moveUploadedFile" title="details" class="method-name">moveUploadedFile</a>
-											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$destination_directory</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$overwrite</span> = <span class="var-default">true</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$chmod</span> = <span class="var-default">0777</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$inclusion_rules</span> = <span class="var-default">array()</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$exclusion_rules</span> = <span class="var-default">array()</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$file_name</span> = <span class="var-default">null</span>], <span class="var-type">boolean</span>&nbsp;<span class="var-name">$overwrite:</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$inclusion_rules:</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$exclusion_rules:</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$file_name:</span>)
+											<span class="method-result">string</span>
+										<a href="#save" title="details" class="method-name">save</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span> = <span class="var-default">null</span>], [<span class="var-type">int</span>&nbsp;<span class="var-name">$fileMode</span> = <span class="var-default">0666</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$create</span> = <span class="var-default">true</span>], [<span class="var-type">int</span>&nbsp;<span class="var-name">$dirMode</span> = <span class="var-default">0777</span>])
 									</div>
 											</div>
 		</div>
@@ -317,124 +269,19 @@
 		<div class="info-box-body">
 			
 <a name="var$error" id="$error"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="var-header">
 		<span class="var-title">
 			<span class="var-type">string</span>
 			<span class="var-name">$error</span>
-						(line <span class="line-number">55</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">access:</span> private</li>
-			</ul>
-	
-	
-		
-		
-
-</div>
-<a name="var$filebase" id="$filebase"><!-- --></A>
-<div class="oddrow">
-
-	<div class="var-header">
-		<span class="var-title">
-			<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html">sfFilebasePlugin</a></span>
-			<span class="var-name">$filebase</span>
 						(line <span class="line-number">35</span>)
 		</span>
 	</div>
 
 	<!-- ========== Info from phpDoc block ========= -->
 	<ul class="tags">
-				<li><span class="field">access:</span> private</li>
-			</ul>
-	
-	
-		
-		
-
-</div>
-<a name="var$name" id="$name"><!-- --></A>
-<div class="evenrow">
-
-	<div class="var-header">
-		<span class="var-title">
-			<span class="var-type">string</span>
-			<span class="var-name">$name</span>
-						(line <span class="line-number">40</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">access:</span> private</li>
-			</ul>
-	
-	
-		
-		
-
-</div>
-<a name="var$size" id="$size"><!-- --></A>
-<div class="oddrow">
-
-	<div class="var-header">
-		<span class="var-title">
-			<span class="var-type">string</span>
-			<span class="var-name">$size</span>
-						(line <span class="line-number">60</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">access:</span> private</li>
-			</ul>
-	
-	
-		
-		
-
-</div>
-<a name="var$tmp_name" id="$tmp_name"><!-- --></A>
-<div class="evenrow">
-
-	<div class="var-header">
-		<span class="var-title">
-			<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>
-			<span class="var-name">$tmp_name</span>
-						(line <span class="line-number">45</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">access:</span> private</li>
-			</ul>
-	
-	
-		
-		
-
-</div>
-<a name="var$type" id="$type"><!-- --></A>
-<div class="oddrow">
-
-	<div class="var-header">
-		<span class="var-title">
-			<span class="var-type">string</span>
-			<span class="var-name">$type</span>
-						(line <span class="line-number">50</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">access:</span> private</li>
+				<li><span class="field">access:</span> protected</li>
 			</ul>
 	
 	
@@ -463,7 +310,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">Constructor __construct</span> (line <span class="line-number">72</span>)
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">53</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -474,7 +321,7 @@
 		<span class="method-name">
 			__construct
 		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$tmp_name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$error</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$size</span>, <span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html">sfFilebasePlugin</a></span>&nbsp;<span class="var-name">$filebase</span>)
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$originalName</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$tempName</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$size</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$error</span> = <span class="var-default">null</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$tmp_name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$path:</span>)
 			</div>
 	
 			<ul class="parameters">
@@ -494,8 +341,17 @@
 				<span class="var-type">string</span>
 				<span class="var-name">$size</span>			</li>
 					<li>
-				<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html">sfFilebasePlugin</a></span>
-				<span class="var-name">$filebase</span>			</li>
+				<span class="var-type">string</span>
+				<span class="var-name">$path:</span><span class="var-description">: The directory where the uploaded file will be saved.  Default is null. $path might be delegated through  a whole form validation process, where all  instances of sfFilebasePluginUploadedFiles be  generated by the validator and files moved by  the orm-form instance.</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$originalName</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tempName</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$path</span>			</li>
 				</ul>
 		
 			
@@ -504,7 +360,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getError</span> (line <span class="line-number">176</span>)
+		<span class="method-title">getError</span> (line <span class="line-number">190</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -525,132 +381,11 @@
 		
 			
 	</div>
-<a name="methodgetExtension" id="getExtension"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">getExtension</span> (line <span class="line-number">134</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Returns the file extension of the  file, if browser has provided a  mime-type.</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">string</span>
-		<span class="method-name">
-			getExtension
-		</span>
-				()
-			</div>
-	
-		
-			
-	</div>
-<a name="methodgetName" id="getName"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">getName</span> (line <span class="line-number">197</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Returns the original name of  the file.</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">string</span>
-		<span class="method-name">
-			getName
-		</span>
-				()
-			</div>
-	
-		
-			
-	</div>
-<a name="methodgetSize" id="getSize"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">getSize</span> (line <span class="line-number">144</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Returns the size of the uploaded file,  as provided by browser.</p>
-	<ul class="tags">
-				<li><span class="field">return:</span> in bytes</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">integer</span>
-		<span class="method-name">
-			getSize
-		</span>
-				()
-			</div>
-	
-		
-			
-	</div>
-<a name="methodgetTmpName" id="getTmpName"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">getTmpName</span> (line <span class="line-number">187</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Returns the temp-name of the uploaded  file as an instance of sfFilebasePluginFile</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>
-		<span class="method-name">
-			getTmpName
-		</span>
-				()
-			</div>
-	
-		
-			
-	</div>
-<a name="methodgetType" id="getType"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">getType</span> (line <span class="line-number">123</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Returns the mime type of the file,  if browser has provided one.</p>
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">string</span>
-		<span class="method-name">
-			getType
-		</span>
-				()
-			</div>
-	
-		
-			
-	</div>
 <a name="methodhasError" id="hasError"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">hasError</span> (line <span class="line-number">166</span>)
+		<span class="method-title">hasError</span> (line <span class="line-number">180</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -670,10 +405,10 @@
 			
 	</div>
 <a name="methodisError" id="isError"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">isError</span> (line <span class="line-number">157</span>)
+		<span class="method-title">isError</span> (line <span class="line-number">171</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -701,66 +436,11 @@
 		
 			
 	</div>
-<a name="methodmove" id="move"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<span class="method-title">move</span> (line <span class="line-number">223</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Moves the uploaded File to specified Destination.</p>
-<p class="description"><p>Inclusion and exclusion rules consist of regex-strings,  they are used to check the target filenames against them.  Exclusion: Matched filenames throw exceptions.  Incluseion: Matched filenames will be passed as valid filenames.</p><p>$destination can be a string (absolute or relative pathname) or an  instance of sfFilebasePluginFile, it is the directory, not the full pathName of  the new file. The file can be renamed by setting $file_name, otherwise  the original name will be taken as filename.</p></p>
-	<ul class="tags">
-				<li><span class="field">see:</span> Filbase::moveUploadedFile()</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>
-		<span class="method-name">
-			move
-		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$destination_directory</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$override</span> = <span class="var-default">true</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$chmod</span> = <span class="var-default">0777</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$inclusion_rules</span> = <span class="var-default">array()</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$exclusion_rules</span> = <span class="var-default">array()</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$file_name</span> = <span class="var-default">null</span>], <span class="var-type">mixed</span>&nbsp;<span class="var-name">$tmp_file</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$destination_directory:</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$file_name:</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">mixed</span>
-				<span class="var-name">$tmp_file</span>			</li>
-					<li>
-				<span class="var-type">mixed</span>
-				<span class="var-name">$destination_directory:</span><span class="var-description">: The directory the file will be moved in.</span>			</li>
-					<li>
-				<span class="var-type">boolean</span>
-				<span class="var-name">$override</span><span class="var-description">: True if existing files should be overwritten</span>			</li>
-					<li>
-				<span class="var-type">array</span>
-				<span class="var-name">$inclusion_rules</span>			</li>
-					<li>
-				<span class="var-type">array</span>
-				<span class="var-name">$exclusion_rules</span>			</li>
-					<li>
-				<span class="var-type">string</span>
-				<span class="var-name">$file_name:</span><span class="var-description">: If given, file will be renamed when moving.</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$destination_directory</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$chmod</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$file_name</span>			</li>
-				</ul>
-		
-			
-	</div>
 <a name="methodmoveUploadedFile" id="moveUploadedFile"><!-- --></a>
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">moveUploadedFile</span> (line <span class="line-number">112</span>)
+		<span class="method-title">moveUploadedFile</span> (line <span class="line-number">94</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -775,7 +455,7 @@
 		<span class="method-name">
 			moveUploadedFile
 		</span>
-					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$destination_directory</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$overwrite</span> = <span class="var-default">true</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$chmod</span> = <span class="var-default">0777</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$inclusion_rules</span> = <span class="var-default">array()</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$exclusion_rules</span> = <span class="var-default">array()</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$file_name</span> = <span class="var-default">null</span>], <span class="var-type">boolean</span>&nbsp;<span class="var-name">$overwrite:</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$inclusion_rules:</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$exclusion_rules:</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$file_name:</span>)
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$destination_directory</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$overwrite</span> = <span class="var-default">true</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$chmod</span> = <span class="var-default">0777</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$inclusion_rules</span> = <span class="var-default">array()</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$exclusion_rules</span> = <span class="var-default">array()</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$file_name</span> = <span class="var-default">null</span>], <span class="var-type">boolean</span>&nbsp;<span class="var-name">$overwrite:</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$inclusion_rules:</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$exclusion_rules:</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$file_name:</span>)
 			</div>
 	
 			<ul class="parameters">
@@ -813,6 +493,47 @@
 		
 			
 	</div>
+<a name="methodsave" id="save"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">save</span> (line <span class="line-number">117</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Saves the uploaded file.</p>
+<p class="description"><p>This method can throw exceptions if there is a problem when saving the file.</p><p>If you don't pass a file name, it will be generated by the generateFilename method.  This will only work if you have passed a path when initializing this instance.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The filename without the $this-&gt;path prefix</li>
+				<li><span class="field">throws:</span> Exception</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			save
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span> = <span class="var-default">null</span>], [<span class="var-type">int</span>&nbsp;<span class="var-name">$fileMode</span> = <span class="var-default">0666</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$create</span> = <span class="var-default">true</span>], [<span class="var-type">int</span>&nbsp;<span class="var-name">$dirMode</span> = <span class="var-default">0777</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$file</span><span class="var-description">: The file path to save the file</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$fileMode</span><span class="var-description">: The octal mode to use for the new file</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$create</span><span class="var-description">: Indicates that we should make the directory before moving the file</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$dirMode</span><span class="var-description">: The octal mode to use when creating the directory</span>			</li>
+				</ul>
+		
+			
+	</div>
 						
 		</div>
 	</div>
@@ -832,7 +553,7 @@
 					</div>
 		<div class="info-box-body">
 			<a name="constUPLOAD_ERR_CANT_WRITE" id="UPLOAD_ERR_CANT_WRITE"><!-- --></A>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div class="const-header">
 		<img src="../media/images/Variable.png" />
@@ -848,7 +569,7 @@
 	
 </div>
 <a name="constUPLOAD_ERR_EXTENSION" id="UPLOAD_ERR_EXTENSION"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="const-header">
 		<img src="../media/images/Variable.png" />
@@ -864,7 +585,7 @@
 	
 </div>
 <a name="constUPLOAD_ERR_FORM_SIZE" id="UPLOAD_ERR_FORM_SIZE"><!-- --></A>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div class="const-header">
 		<img src="../media/images/Variable.png" />
@@ -880,7 +601,7 @@
 	
 </div>
 <a name="constUPLOAD_ERR_INI_SIZE" id="UPLOAD_ERR_INI_SIZE"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="const-header">
 		<img src="../media/images/Variable.png" />
@@ -896,7 +617,7 @@
 	
 </div>
 <a name="constUPLOAD_ERR_NO_FILE" id="UPLOAD_ERR_NO_FILE"><!-- --></A>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div class="const-header">
 		<img src="../media/images/Variable.png" />
@@ -912,7 +633,7 @@
 	
 </div>
 <a name="constUPLOAD_ERR_NO_TMP_DIR" id="UPLOAD_ERR_NO_TMP_DIR"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="const-header">
 		<img src="../media/images/Variable.png" />
@@ -928,7 +649,7 @@
 	
 </div>
 <a name="constUPLOAD_ERR_OK" id="UPLOAD_ERR_OK"><!-- --></A>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div class="const-header">
 		<img src="../media/images/Variable.png" />
@@ -944,7 +665,7 @@
 	
 </div>
 <a name="constUPLOAD_ERR_PARTIAL" id="UPLOAD_ERR_PARTIAL"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="const-header">
 		<img src="../media/images/Variable.png" />
@@ -964,7 +685,7 @@
 	</div>
 
 	<p class="notes" id="credit">
-		Documentation generated on Thu, 14 May 2009 12:13:07 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Sat, 16 May 2009 14:56:10 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</div></body>
 </html>

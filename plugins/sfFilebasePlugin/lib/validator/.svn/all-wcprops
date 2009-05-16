@@ -3,3 +3,9 @@ svn:wc:ra_dav:version-url
 V 54
 /!svn/ver/18306/plugins/sfFilebasePlugin/lib/validator
 END
+sfFilebasePluginValidatorFile.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/18335/plugins/sfFilebasePlugin/lib/validator/sfFilebasePluginValidatorFile.php
+END

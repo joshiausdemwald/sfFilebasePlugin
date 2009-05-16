@@ -127,15 +127,15 @@
 								</div>
 		<div class="info-box-body">
 			<div class="var-summary">
-																																<div class="var-title">
+																				<div class="var-title">
+					static <span class="var-type">array</span>
+					<a href="#$UPLOADED_FILES" title="details" class="var-name">$UPLOADED_FILES</a>
+				</div>
+																				<div class="var-title">
 					<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html">sfFilebasePlugin</a></span>
 					<a href="#$filebase" title="details" class="var-name">$filebase</a>
 				</div>
-																<div class="var-title">
-					<span class="var-type">array</span>
-					<a href="#$uploadedFiles" title="details" class="var-name">$uploadedFiles</a>
-				</div>
-											</div>
+																			</div>
 		</div>
 	</div>
 
@@ -151,7 +151,19 @@
 		</div>
 		<div class="info-box-body">			
 			<div class="method-summary">
-																																																						
+																										
+				<div class="method-definition">
+					static 						<span class="method-result">boolean</span>
+										<a href="#isUploadedFile" title="details" class="method-name">isUploadedFile</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$file</span>)
+									</div>
+																														
+				<div class="method-definition">
+					static 						<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginUploadedFile.html">sfFilebasePluginUploadedFile</a></span>
+										<a href="#produceUploadedFile" title="details" class="method-name">produceUploadedFile</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$values</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">null</span>])
+									</div>
+																										
 				<div class="method-definition">
 											<span class="method-result">sfFilebasePluginUploadedFilesManager</span>
 										<a href="#__construct" title="details" class="method-name">__construct</a>
@@ -161,9 +173,9 @@
 				<div class="method-definition">
 											<span class="method-result">array</span>
 										<a href="#getUploadedFiles" title="details" class="method-name">getUploadedFiles</a>
-										()
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$index</span> = <span class="var-default">null</span>], <span class="var-type">mixed</span>&nbsp;<span class="var-name">$index:</span>)
 									</div>
-														
+																						
 				<div class="method-definition">
 											<span class="method-result">array</span>
 										<a href="#moveAllUploadedFiles" title="details" class="method-name">moveAllUploadedFiles</a>
@@ -175,7 +187,7 @@
 										<a href="#moveUploadedFile" title="details" class="method-name">moveUploadedFile</a>
 											(<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginUploadedFile.html">sfFilebasePluginUploadedFile</a></span>&nbsp;<span class="var-name">$tmp_file</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$destination_directory</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$override</span> = <span class="var-default">true</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$chmod</span> = <span class="var-default">0777</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$inclusion_rules</span> = <span class="var-default">array()</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$exclusion_rules</span> = <span class="var-default">array()</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$file_name</span> = <span class="var-default">null</span>], <span class="var-type">mixed</span>&nbsp;<span class="var-name">$destination_directory:</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$file_name:</span>)
 									</div>
-														
+																						
 				<div class="method-definition">
 											<span class="method-result">array</span>
 										<a href="#recurseFilesArray" title="details" class="method-name">recurseFilesArray</a>
@@ -198,15 +210,14 @@
 							
 					</div>
 		<div class="info-box-body">
-			
-<a name="var$filebase" id="$filebase"><!-- --></A>
-<div class="oddrow">
+			<a name="var$UPLOADED_FILES" id="$UPLOADED_FILES"><!-- --></A>
+<div class="evenrow">
 
 	<div class="var-header">
 		<span class="var-title">
-			<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html">sfFilebasePlugin</a></span>
-			<span class="var-name">$filebase</span>
-			 = <span class="var-default"> null</span>			(line <span class="line-number">31</span>)
+			static <span class="var-type">array</span>
+			<span class="var-name">$UPLOADED_FILES</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">26</span>)
 		</span>
 	</div>
 
@@ -220,14 +231,15 @@
 		
 
 </div>
-<a name="var$uploadedFiles" id="$uploadedFiles"><!-- --></A>
-<div class="evenrow">
+
+<a name="var$filebase" id="$filebase"><!-- --></A>
+<div class="oddrow">
 
 	<div class="var-header">
 		<span class="var-title">
-			<span class="var-type">array</span>
-			<span class="var-name">$uploadedFiles</span>
-			 = <span class="var-default"> null</span>			(line <span class="line-number">26</span>)
+			<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html">sfFilebasePlugin</a></span>
+			<span class="var-name">$filebase</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">31</span>)
 		</span>
 	</div>
 
@@ -256,8 +268,70 @@
 		</div>
 		<div class="info-box-body">
 			<A NAME='method_detail'></A>
-<a name="method__construct" id="__construct"><!-- --></a>
+<a name="methodisUploadedFile" id="isUploadedFile"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static isUploadedFile</span> (line <span class="line-number">49</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checks if a variable contains a valid array that represents  an uploaded file.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> true if file is valid</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">boolean</span>
+		<span class="method-name">
+			isUploadedFile
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$file</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$file</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodproduceUploadedFile" id="produceUploadedFile"><!-- --></a>
 <div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static produceUploadedFile</span> (line <span class="line-number">69</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates and returns a new instance of  sfFilebasePluginUploadedFile filled with the  values from the $values array.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginUploadedFile.html">sfFilebasePluginUploadedFile</a></span>
+		<span class="method-name">
+			produceUploadedFile
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$values</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$values</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$path</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">Constructor __construct</span> (line <span class="line-number">38</span>)
@@ -286,10 +360,10 @@
 			
 	</div>
 <a name="methodgetUploadedFiles" id="getUploadedFiles"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getUploadedFiles</span> (line <span class="line-number">50</span>)
+		<span class="method-title">getUploadedFiles</span> (line <span class="line-number">83</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -304,17 +378,25 @@
 		<span class="method-name">
 			getUploadedFiles
 		</span>
-				()
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$index</span> = <span class="var-default">null</span>], <span class="var-type">mixed</span>&nbsp;<span class="var-name">$index:</span>)
 			</div>
 	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$index:</span><span class="var-description">: The array index. If none given, the whole  transformed file will be returned.</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$index</span>			</li>
+				</ul>
 		
 			
 	</div>
 <a name="methodmoveAllUploadedFiles" id="moveAllUploadedFiles"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">moveAllUploadedFiles</span> (line <span class="line-number">143</span>)
+		<span class="method-title">moveAllUploadedFiles</span> (line <span class="line-number">168</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -354,10 +436,10 @@
 			
 	</div>
 <a name="methodmoveUploadedFile" id="moveUploadedFile"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">moveUploadedFile</span> (line <span class="line-number">180</span>)
+		<span class="method-title">moveUploadedFile</span> (line <span class="line-number">205</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -409,10 +491,10 @@
 			
 	</div>
 <a name="methodrecurseFilesArray" id="recurseFilesArray"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">recurseFilesArray</span> (line <span class="line-number">115</span>)
+		<span class="method-title">recurseFilesArray</span> (line <span class="line-number">140</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -458,7 +540,7 @@
 
 
 	<p class="notes" id="credit">
-		Documentation generated on Thu, 14 May 2009 12:13:07 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Sat, 16 May 2009 14:56:10 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</div></body>
 </html>

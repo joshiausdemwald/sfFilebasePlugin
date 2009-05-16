@@ -23,7 +23,7 @@
  */
 class sfFilebasePluginValidatorFile extends sfValidatorFile
 {
-   /**
+  /**
    * Configures the current validator.
    *
    * The api for sfFilebasePluginValidatorFile is derived from sfValidatorFile.
@@ -44,7 +44,14 @@ class sfFilebasePluginValidatorFile extends sfValidatorFile
    *
    *  * max_size:             The maximum file size
    *  * mime_types:           Allowed mime types array or category (available categories: web_images)
+   *  * mime_type_guessers:   An array of mime type guesser PHP callables (must return the mime type or null)
    *  * mime_categories:      An array of mime type categories (web_images is defined by default)
+   *  * path:                 The path where to save the file - as used by the sfValidatedFile class (optional)
+   *  * validated_file_class: Name of the class that manages the cleaned uploaded file (optional)
+   *  * allow_override:       If set to true, existing files will be overwritten. Otherwise, an form field error will rise (optional)
+   *                          This comes only in effect, if path is set (otherwise you'd to save the file manually)
+   *  * filebase              Instance of filebase, needed if you want to save the file under another location than the
+   *                          symfony default filebasePlugindDirectory (web/uploads) (optional)
    *
    * Available error codes:
    *
@@ -63,36 +70,63 @@ class sfFilebasePluginValidatorFile extends sfValidatorFile
    */
   protected function configure($options = array(), $messages = array())
   {
-    $this->addOption('max_size');
-    $this->addOption('mime_types');
+    parent::configure($options, $messages);
+    unset($this->options['mime_type_guessers']);
     $this->addOption('mime_categories', array(
-      'web_images' => array(
-      'image/jpeg',
-      'image/pjpeg',
-      'image/png',
-      'image/x-png',
-      'image/gif',
-    )));
-    $this->addMessage('max_size', 'File is too large (maximum is %max_size% bytes).');
-    $this->addMessage('mime_types', 'Invalid mime type (%mime_type%).');
-    $this->addMessage('partial', 'The uploaded file was only partially uploaded.');
-    $this->addMessage('no_tmp_dir', 'Missing a temporary folder.');
-    $this->addMessage('cant_write', 'Failed to write file to disk.');
-    $this->addMessage('extension', 'File upload stopped by extension.');
+      'web_images' => sfFilebasePluginUtil::$WEB_IMAGES)
+    );
+    $this->addOption('allow_override', false);
+    $this->addOption('filebase', sfFilebasePlugin::getInstance());
+    $this->setOption('validated_file_class', 'sfValidatedFile');
+
+    $this->addMessage('file_exists', 'Destinated file %file% already exists.');
+
+    // cleanup filebase option
+    $fb = $this->getOption('filebase');
+    if(is_string($fb))
+    {
+      $this->setOption('filebase', sfFilebasePlugin::getInstance($fb));
+    }
+    elseif(!$this->getOption('filebase') instanceof sfFilebasePlugin)
+    {
+      $this->setOption('filebase', sfFilebasePlugin::getInstance());
+    }
+
+    // Calculate target path
+    if(!$this->getOption('path'))
+    {
+      $this->setOption('path', $this->getOption('filebase')->getPathname());
+    }
+    else
+    {
+      $this->setOption('path', $this->getOption('filebase')->getFilebaseFile($path)->getPathname());
+    }
+
   }
 
-   /**
+  /**
    * Cleans the input value.
    *
    * This method is also responsible for trimming the input value
    * and checking the required option.
    *
    * @throws sfValidatorError
-   * @param  sfFilebasePluginUploadedFile $value  The input value
+   * @param  sfFilebasePluginUploadedFile || array $value The input value
    * @return sfFilebasePluginUploadedFile $uploaded_file
    */
   public function clean($value)
   {
+    // Workaround for Admin generator, you don't know if a raw array has been passed.
+    if(is_array($value))
+    {
+      if (!sfFilebasePluginUploadedFilesManager::isUploadedFile($value))
+      {
+        throw new sfValidatorError($this, 'invalid', array('value' => 'File array describes no valid uploaded file.'));
+      }
+      $value = sfFilebasePluginUploadedFilesManager::produceUploadedFile($value, $this->getOption('filebase'));
+    }
+
+    
     if(! $value instanceof sfFilebasePluginUploadedFile)
     {
       throw new sfValidatorError($this, 'invalid');
@@ -126,6 +160,9 @@ class sfFilebasePluginValidatorFile extends sfValidatorFile
    */
   protected function doClean($value)
   {
+    // Path name to save the file in
+    $path_name = null;
+    
     if($value->hasError())
     {
       switch ($value->getError())
@@ -169,7 +206,35 @@ class sfFilebasePluginValidatorFile extends sfValidatorFile
         throw new sfValidatorError($this, 'mime_types', array('mime_types' => $mimeTypes, 'mime_type' => $mimeType));
       }
     }
-    return $value;
+
+    $path = $this->getOption('filebase')->getFilebaseFile($this->getOption('path'));
+    $path_name = $this->getOption('filebase')->getFilebaseFile($path->getPathname() . '/' . $value->getName());
+    if($path_name->fileExists())
+    {
+      if(!$this->getOption('allow_override'))
+      {
+        throw new sfValidatorError($this, 'file_exists', array('file'=>$path_name->getPathname()));
+      }
+    }
+
+    $class_name = $this->getOption('validated_file_class');
+    if(is_string($class_name))
+    {
+      return ($class_name == 'sfFilebasePluginUploadedFile') ?
+        $value  :
+        // $originalName, $type, $tempName, $size, $path = null
+        new $class_name($path_name->getFilename(), $mimeType, $value->getTmpName()->getPathname(), $value->getSize(), $path_name->getPath());
+    }
+    else
+    {
+      return array(
+        'name'      => $value->getName(),
+        'tmp_name'  => $value->getTmpName(),
+        'type'      => $value->getType(),
+        'error'     => $value->getError(),
+        'extension' => $value->getExtension()
+      );
+    }
   }
 
   /**
@@ -187,7 +252,7 @@ class sfFilebasePluginValidatorFile extends sfValidatorFile
    */
   protected function getMimeType($file, $fallback)
   {
-    return sfFilebasePlugin::getInstance()->getFilebaseFile($file)->getMimeType($fallback);
+    return $this->getOption('filebase')->getFilebaseFile($file)->getMimeType($fallback);
   }
 
   /**
@@ -197,7 +262,13 @@ class sfFilebasePluginValidatorFile extends sfValidatorFile
   {
     // empty if the value is not an array
     // or if the value comes from PHP with an error of UPLOAD_ERR_NO_FILE
-    return
-      !$value instanceof sfFilebasePluginUploadedFile || $value->isError(sfFilebasePluginUploadedFile::UPLOAD_ERR_NO_FILE);
+    if($value instanceof sfFilebasePluginUploadedFile)
+    {
+      return $value->isError(sfFilebasePluginUploadedFile::UPLOAD_ERR_NO_FILE);
+    }
+    else
+    { 
+      return sfFilebasePluginUploadedFilesManager::isUploadedFile($value);
+    }
   }
 }

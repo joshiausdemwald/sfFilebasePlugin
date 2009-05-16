@@ -23,7 +23,7 @@ class sfFilebasePluginUploadedFilesManager
   /**
    * @var array
    */
-  protected $uploadedFiles = null;
+  protected static $UPLOADED_FILES = null;
   
   /**
    * @var sfFilebasePlugin $filebase
@@ -66,9 +66,9 @@ class sfFilebasePluginUploadedFilesManager
    * @return sfFilebasePluginUploadedFile
    */
 
-  public static function produceUploadedFile(array $values, sfFilebasePlugin $filebase)
+  public static function produceUploadedFile(array $values, $path = null)
   {
-    return new sfFilebasePluginUploadedFile($values['name'], $values['tmp_name'], $values['type'], $values['error'], $values['size'], $filebase);
+    return new sfFilebasePluginUploadedFile($values['name'], $values['type'], $values['tmp_name'], $values['size'], $path, $values['error']);
   }
 
   /**
@@ -76,14 +76,16 @@ class sfFilebasePluginUploadedFilesManager
    * uploaded files to handle by
    * move uploaded files.
    *
+   * @param  mixed $index: The array index. If none given, the whole
+   *                       transformed file will be returned.
    * @return array sfFilebasePluginUploadedFile $files
    */
-  public function getUploadedFiles()
+  public function getUploadedFiles($index = null)
   {
     // Look for cached upload-info
     if(is_array($this->uploadedFiles))
     {
-      return $this->uploadedFiles;
+      return $index === null ? self::$UPLOADED_FILES : self::$UPLOADED_FILES[$index];
     }
     
     $files = array();
@@ -118,8 +120,8 @@ class sfFilebasePluginUploadedFilesManager
         $files[$i] = $this->recurseFilesArray($names, $tmp_names, $types, $errors, $sizes);
       }
     }
-    $this->uploadedFiles = $files;
-    return $this->getUploadedFiles();
+    self::$UPLOADED_FILES = $files;
+    return $this->getUploadedFiles($index);
   }
 
   /**
@@ -146,7 +148,7 @@ class sfFilebasePluginUploadedFilesManager
       }
       else
       {
-        $files[$i] = new sfFilebasePluginUploadedFile($name, $tmp_names[$i], $types[$i], $errors[$i], $sizes[$i], $this->filebase);
+        $files[$i] = new sfFilebasePluginUploadedFile($name, $types[$i], $tmp_names[$i], $sizes[$i], null, $errors[$i]);
       }
     }
     return $files;
@@ -232,18 +234,18 @@ class sfFilebasePluginUploadedFilesManager
     // Validation, excuting inclusion rules
     foreach($inclusion_rules AS $rule)
     {
-      if(!preg_match($rule, $tmp_file->getName()))
+      if(!preg_match($rule, $tmp_file->getOriginalName()))
       {
-        throw new sfFilebasePluginException(sprintf('Inclusion-Validation failed while uploading file %s: Rule %s', $tmp_file->getName(), $rule));
+        throw new sfFilebasePluginException(sprintf('Inclusion-Validation failed while uploading file %s: Rule %s', $tmp_file->getOriginalName(), $rule));
       }
     }
 
     // Valdating using exclusion rules
     foreach($exclusion_rules AS $rule)
     {
-      if(preg_match($rule, $tmp_file->getName()))
+      if(preg_match($rule, $tmp_file->getOriginalName()))
       {
-        throw new sfFilebasePluginException(sprintf('Exclusion-Validation failed while uploading file %s: Rule %s', $tmp_file->getName(), $rule));
+        throw new sfFilebasePluginException(sprintf('Exclusion-Validation failed while uploading file %s: Rule %s', $tmp_file->getOriginalName(), $rule));
       }
     }
 
@@ -253,7 +255,7 @@ class sfFilebasePluginUploadedFilesManager
     // Filename given? Rename file...
     if($file_name === null)
     {
-      $destination = $this->filebase->getFilebaseFile($destination_directory->getPathname() . '/' . $tmp_file->getName());
+      $destination = $this->filebase->getFilebaseFile($destination_directory->getPathname() . '/' . $tmp_file->getOriginalName());
     }
     else
     {
@@ -279,7 +281,7 @@ class sfFilebasePluginUploadedFilesManager
       if(!$destination_directory->isWritable()) throw new sfFilebasePluginException(sprintf('Destination directory %s is write protected', $destination_directory->getPathname()));
     }
 
-    if(!@move_uploaded_file($tmp_file->getTmpName()->getPathname(), $destination->getPathname()))  throw new sfFilebasePluginException (sprintf('Error while moving uploaded file %s', $tmp_file['tmp_name']));
+    if(!@move_uploaded_file($tmp_file->getTempName()->getPathname(), $destination->getPathname()))  throw new sfFilebasePluginException (sprintf('Error while moving uploaded file %s', $tmp_file['tmp_name']));
     $destination->chmod($chmod);
     return $destination;
   }
