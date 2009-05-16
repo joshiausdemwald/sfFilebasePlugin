@@ -9,7 +9,7 @@
 # * @license   MIT license
 # * @copyright 2007-2009 Johannes Heinen <johannes.heinen@gmail.com>
 # */
- generator:
+generator:
   class: sfPropelGenerator
   param:
     model_class:           sfFilebaseDirectory

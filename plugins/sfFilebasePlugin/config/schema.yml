@@ -9,7 +9,7 @@
 # * @license   MIT license
 # * @copyright 2007-2009 Johannes Heinen <johannes.heinen@gmail.com>
 # */
- propel:
+propel:
   _attributes:      { package: plugins.sfFilebasePlugin.lib.model }
 
   sf_filebase_files:

@@ -7,7 +7,7 @@ schema.yml
 K 25
 svn:wc:ra_dav:version-url
 V 58
-/!svn/ver/18345/plugins/sfFilebasePlugin/config/schema.yml
+/!svn/ver/18353/plugins/sfFilebasePlugin/config/schema.yml
 END
 routing.yml
 K 25
