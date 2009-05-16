@@ -106,13 +106,33 @@ if (document.getElementById) {
 			
 		    		    			var tree_classe = new WebFXTreeItem('Interface(s)', '');
     			
-    			    			        			    			        			    			        			    			        			    			        			    			        			    			        			    			        			    			        			    			            				var classe = new WebFXTreeItem('sfFilebasePluginGfxEditorAdapterInterface', 'de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditorAdapterInterface.html');
+    			    			        			    			        			    			        			    			        			    			        			    			        			    			        			    			        			    			        			    			        			    			        			    			        			    			        			    			        			    			        			    			        			    			        			    			        			    			        			    			            				var classe = new WebFXTreeItem('sfFilebasePluginGfxEditorAdapterInterface', 'de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditorAdapterInterface.html');
         				tree_classe.add(classe);
         			    			    			        			    			        			    			        			    			        			    			        			    			        			    			        			    			        			    			        			    			        			
     			tree.add(tree_classe);
     						    		    			var tree_classe = new WebFXTreeItem('Class(es)', '');
     			
-    			    			            				var classe = new WebFXTreeItem('sfFilebasePlugin', 'de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html');
+    			    			            				var classe = new WebFXTreeItem('PluginSfFilebaseDirectory', 'de-optimusprime-sfFilebasePlugin/PluginSfFilebaseDirectory.html');
+        				tree_classe.add(classe);
+        			    			    			            				var classe = new WebFXTreeItem('PluginSfFilebaseDirectoryPeer', 'de-optimusprime-sfFilebasePlugin/PluginSfFilebaseDirectoryPeer.html');
+        				tree_classe.add(classe);
+        			    			    			            				var classe = new WebFXTreeItem('PluginSfFilebaseFile', 'de-optimusprime-sfFilebasePlugin/PluginSfFilebaseFile.html');
+        				tree_classe.add(classe);
+        			    			    			            				var classe = new WebFXTreeItem('PluginSfFilebaseFilePeer', 'de-optimusprime-sfFilebasePlugin/PluginSfFilebaseFilePeer.html');
+        				tree_classe.add(classe);
+        			    			    			            				var classe = new WebFXTreeItem('sfFilebaseDirectory', 'de-optimusprime-sfFilebasePlugin/sfFilebaseDirectory.html');
+        				tree_classe.add(classe);
+        			    			    			            				var classe = new WebFXTreeItem('sfFilebaseDirectoryForm', 'de-optimusprime-sfFilebasePlugin/sfFilebaseDirectoryForm.html');
+        				tree_classe.add(classe);
+        			    			    			            				var classe = new WebFXTreeItem('sfFilebaseDirectoryPeer', 'de-optimusprime-sfFilebasePlugin/sfFilebaseDirectoryPeer.html');
+        				tree_classe.add(classe);
+        			    			    			            				var classe = new WebFXTreeItem('sfFilebaseFile', 'de-optimusprime-sfFilebasePlugin/sfFilebaseFile.html');
+        				tree_classe.add(classe);
+        			    			    			            				var classe = new WebFXTreeItem('sfFilebaseFileForm', 'de-optimusprime-sfFilebasePlugin/sfFilebaseFileForm.html');
+        				tree_classe.add(classe);
+        			    			    			            				var classe = new WebFXTreeItem('sfFilebaseFilePeer', 'de-optimusprime-sfFilebasePlugin/sfFilebaseFilePeer.html');
+        				tree_classe.add(classe);
+        			    			    			            				var classe = new WebFXTreeItem('sfFilebasePlugin', 'de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html');
         				tree_classe.add(classe);
         			    			    			            				var classe = new WebFXTreeItem('sfFilebasePluginDirectory', 'de-optimusprime-sfFilebasePlugin/sfFilebasePluginDirectory.html');
         				tree_classe.add(classe);
@@ -163,6 +183,26 @@ if (document.getElementById) {
 					var tree_file = new WebFXTreeItem('File(s)', '');
 	
 							var file = new WebFXTreeItem('config.php', 'de-optimusprime-sfFilebasePlugin/_config---config.php.html');
+				tree_file.add(file);
+							var file = new WebFXTreeItem('PluginSfFilebaseDirectory.php', 'de-optimusprime-sfFilebasePlugin/_lib---model---plugin---PluginSfFilebaseDirectory.php.html');
+				tree_file.add(file);
+							var file = new WebFXTreeItem('PluginSfFilebaseDirectoryPeer.php', 'de-optimusprime-sfFilebasePlugin/_lib---model---plugin---PluginSfFilebaseDirectoryPeer.php.html');
+				tree_file.add(file);
+							var file = new WebFXTreeItem('PluginSfFilebaseFile.php', 'de-optimusprime-sfFilebasePlugin/_lib---model---plugin---PluginSfFilebaseFile.php.html');
+				tree_file.add(file);
+							var file = new WebFXTreeItem('PluginSfFilebaseFilePeer.php', 'de-optimusprime-sfFilebasePlugin/_lib---model---plugin---PluginSfFilebaseFilePeer.php.html');
+				tree_file.add(file);
+							var file = new WebFXTreeItem('sfFilebaseDirectory.php', 'de-optimusprime-sfFilebasePlugin/_lib---model---sfFilebaseDirectory.php.html');
+				tree_file.add(file);
+							var file = new WebFXTreeItem('sfFilebaseDirectoryForm.class.php', 'de-optimusprime-sfFilebasePlugin/_lib---form---sfFilebaseDirectoryForm.class.php.html');
+				tree_file.add(file);
+							var file = new WebFXTreeItem('sfFilebaseDirectoryPeer.php', 'de-optimusprime-sfFilebasePlugin/_lib---model---sfFilebaseDirectoryPeer.php.html');
+				tree_file.add(file);
+							var file = new WebFXTreeItem('sfFilebaseFile.php', 'de-optimusprime-sfFilebasePlugin/_lib---model---sfFilebaseFile.php.html');
+				tree_file.add(file);
+							var file = new WebFXTreeItem('sfFilebaseFileForm.class.php', 'de-optimusprime-sfFilebasePlugin/_lib---form---sfFilebaseFileForm.class.php.html');
+				tree_file.add(file);
+							var file = new WebFXTreeItem('sfFilebaseFilePeer.php', 'de-optimusprime-sfFilebasePlugin/_lib---model---sfFilebaseFilePeer.php.html');
 				tree_file.add(file);
 							var file = new WebFXTreeItem('sfFilebasePlugin.php', 'de-optimusprime-sfFilebasePlugin/_lib---sfFilebasePlugin.php.html');
 				tree_file.add(file);

@@ -142,41 +142,6 @@ if (document.getElementById) {
 			subpackagetree.add(subpackagetree_file);
 			
 	  tree.add(subpackagetree);
-							var subpackagetree = new WebFXTreeItem('<span class="sub-package">form</span>', '');
-		
-			
-		    		    			var subpackagetree_classe = new WebFXTreeItem('Interface(s)', '');
-    			
-    			    			        			    			        			    			        			    			        			
-    			subpackagetree.add(subpackagetree_classe);
-    						    		    			var subpackagetree_classe = new WebFXTreeItem('Class(es)', '');
-    			
-    			    			            				var classe = new WebFXTreeItem('BasesfFilebaseDirectoryForm', '--PROJECT_NAME--/form/BasesfFilebaseDirectoryForm.html');
-        				subpackagetree_classe.add(classe);
-        			    			    			            				var classe = new WebFXTreeItem('BasesfFilebaseFileForm', '--PROJECT_NAME--/form/BasesfFilebaseFileForm.html');
-        				subpackagetree_classe.add(classe);
-        			    			    			            				var classe = new WebFXTreeItem('sfFilebaseDirectoryForm', '--PROJECT_NAME--/form/sfFilebaseDirectoryForm.html');
-        				subpackagetree_classe.add(classe);
-        			    			    			            				var classe = new WebFXTreeItem('sfFilebaseFileForm', '--PROJECT_NAME--/form/sfFilebaseFileForm.html');
-        				subpackagetree_classe.add(classe);
-        			    			    	
-    			subpackagetree.add(subpackagetree_classe);
-    				
-				
-					var subpackagetree_file = new WebFXTreeItem('File(s)', '');
-			
-							var file = new WebFXTreeItem('BasesfFilebaseDirectoryForm.class.php', '--PROJECT_NAME--/form/_lib---form---base---BasesfFilebaseDirectoryForm.class.php.html');
-				subpackagetree_file.add(file);
-							var file = new WebFXTreeItem('BasesfFilebaseFileForm.class.php', '--PROJECT_NAME--/form/_lib---form---base---BasesfFilebaseFileForm.class.php.html');
-				subpackagetree_file.add(file);
-							var file = new WebFXTreeItem('sfFilebaseDirectoryForm.class.php', '--PROJECT_NAME--/form/_lib---form---sfFilebaseDirectoryForm.class.php.html');
-				subpackagetree_file.add(file);
-							var file = new WebFXTreeItem('sfFilebaseFileForm.class.php', '--PROJECT_NAME--/form/_lib---form---sfFilebaseFileForm.class.php.html');
-				subpackagetree_file.add(file);
-					
-			subpackagetree.add(subpackagetree_file);
-			
-	  tree.add(subpackagetree);
 	
 document.write(tree);
 }

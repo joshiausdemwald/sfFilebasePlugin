@@ -1,263 +1,377 @@
 K 25
 svn:wc:ra_dav:version-url
 V 77
-/!svn/ver/18270/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin
 END
 _lib---sfFilebasePluginWebRequest.php.html
 K 25
 svn:wc:ra_dav:version-url
 V 120
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---sfFilebasePluginWebRequest.php.html
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---sfFilebasePluginWebRequest.php.html
 END
 sfFilebasePluginUploadedFilesManager.html
 K 25
 svn:wc:ra_dav:version-url
 V 119
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebasePluginUploadedFilesManager.html
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebasePluginUploadedFilesManager.html
+END
+_lib---model---sfFilebaseDirectoryPeer.php.html
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---model---sfFilebaseDirectoryPeer.php.html
 END
 _lib---sfFilebasePluginRecursiveIteratorIterator.php.html
 K 25
 svn:wc:ra_dav:version-url
 V 135
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---sfFilebasePluginRecursiveIteratorIterator.php.html
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---sfFilebasePluginRecursiveIteratorIterator.php.html
 END
 _lib---sfFilebasePluginGfxEditor.php.html
 K 25
 svn:wc:ra_dav:version-url
 V 119
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---sfFilebasePluginGfxEditor.php.html
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---sfFilebasePluginGfxEditor.php.html
 END
 sfFilebasePlugin.html
 K 25
 svn:wc:ra_dav:version-url
 V 99
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html
 END
 sfFilebasePluginFile.html
 K 25
 svn:wc:ra_dav:version-url
 V 103
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html
+END
+PluginSfFilebaseDirectoryPeer.html
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/PluginSfFilebaseDirectoryPeer.html
+END
+_lib---model---plugin---PluginSfFilebaseFile.php.html
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---model---plugin---PluginSfFilebaseFile.php.html
+END
+_lib---model---plugin---PluginSfFilebaseDirectoryPeer.php.html
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---model---plugin---PluginSfFilebaseDirectoryPeer.php.html
 END
 sfFilebasePluginGfxEditorAdapterIMagick.html
 K 25
 svn:wc:ra_dav:version-url
 V 122
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditorAdapterIMagick.html
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditorAdapterIMagick.html
 END
 sfFilebasePluginThumbnail.html
 K 25
 svn:wc:ra_dav:version-url
 V 108
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebasePluginThumbnail.html
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebasePluginThumbnail.html
 END
 _config---config.php.html
 K 25
 svn:wc:ra_dav:version-url
 V 103
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_config---config.php.html
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_config---config.php.html
 END
-_lib---Validator---sfFilebasePluginValidatorFile.php.html
+sfFilebaseFileForm.html
 K 25
 svn:wc:ra_dav:version-url
-V 135
-/!svn/ver/18270/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---Validator---sfFilebasePluginValidatorFile.php.html
+V 101
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebaseFileForm.html
+END
+sfFilebaseDirectory.html
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebaseDirectory.html
 END
 sfFilebasePluginValidatorFile.html
 K 25
 svn:wc:ra_dav:version-url
 V 112
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebasePluginValidatorFile.html
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebasePluginValidatorFile.html
+END
+_lib---model---sfFilebaseFilePeer.php.html
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---model---sfFilebaseFilePeer.php.html
 END
 _lib---sfFilebasePluginRecursiveDirectoryIterator.php.html
 K 25
 svn:wc:ra_dav:version-url
 V 136
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---sfFilebasePluginRecursiveDirectoryIterator.php.html
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---sfFilebasePluginRecursiveDirectoryIterator.php.html
 END
 _lib---sfFilebasePluginFileObject.php.html
 K 25
 svn:wc:ra_dav:version-url
 V 120
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---sfFilebasePluginFileObject.php.html
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---sfFilebasePluginFileObject.php.html
 END
 _lib---sfFilebasePluginGfxEditorAdapterGD.php.html
 K 25
 svn:wc:ra_dav:version-url
 V 128
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---sfFilebasePluginGfxEditorAdapterGD.php.html
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---sfFilebasePluginGfxEditorAdapterGD.php.html
+END
+PluginSfFilebaseFilePeer.html
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/PluginSfFilebaseFilePeer.html
 END
 sfFilebasePluginFileExif.html
 K 25
 svn:wc:ra_dav:version-url
 V 107
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebasePluginFileExif.html
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebasePluginFileExif.html
 END
 sfFilebasePluginGfxEditor.html
 K 25
 svn:wc:ra_dav:version-url
 V 108
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditor.html
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditor.html
 END
 sfFilebasePluginRecursiveIteratorIterator.html
 K 25
 svn:wc:ra_dav:version-url
 V 124
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebasePluginRecursiveIteratorIterator.html
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebasePluginRecursiveIteratorIterator.html
 END
 sfFilebasePluginUploadedFile.html
 K 25
 svn:wc:ra_dav:version-url
 V 111
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebasePluginUploadedFile.html
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebasePluginUploadedFile.html
 END
 _lib---sfFilebasePluginUploadedFilesManager.php.html
 K 25
 svn:wc:ra_dav:version-url
 V 130
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---sfFilebasePluginUploadedFilesManager.php.html
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---sfFilebasePluginUploadedFilesManager.php.html
 END
 _lib---sfFilebasePluginGfxEditorAdapterInterface.php.html
 K 25
 svn:wc:ra_dav:version-url
 V 135
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---sfFilebasePluginGfxEditorAdapterInterface.php.html
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---sfFilebasePluginGfxEditorAdapterInterface.php.html
 END
-_lib---sfFilebasePlugin.php.html
+_lib---model---sfFilebaseDirectory.php.html
 K 25
 svn:wc:ra_dav:version-url
-V 110
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---sfFilebasePlugin.php.html
+V 121
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---model---sfFilebaseDirectory.php.html
 END
 _lib---sfFilebasePluginFile.php.html
 K 25
 svn:wc:ra_dav:version-url
 V 114
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---sfFilebasePluginFile.php.html
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---sfFilebasePluginFile.php.html
+END
+_lib---sfFilebasePlugin.php.html
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---sfFilebasePlugin.php.html
+END
+PluginSfFilebaseDirectory.html
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/PluginSfFilebaseDirectory.html
 END
 _lib---sfFilebasePluginImage.php.html
 K 25
 svn:wc:ra_dav:version-url
 V 115
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---sfFilebasePluginImage.php.html
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---sfFilebasePluginImage.php.html
+END
+_lib---model---plugin---PluginSfFilebaseDirectory.php.html
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---model---plugin---PluginSfFilebaseDirectory.php.html
+END
+_lib---form---sfFilebaseFileForm.class.php.html
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---form---sfFilebaseFileForm.class.php.html
 END
 _lib---helper---sfFilebasePluginHelper.php.html
 K 25
 svn:wc:ra_dav:version-url
 V 125
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---helper---sfFilebasePluginHelper.php.html
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---helper---sfFilebasePluginHelper.php.html
 END
-sfFilebasePluginUtil.html
+sfFilebaseDirectoryForm.html
 K 25
 svn:wc:ra_dav:version-url
-V 103
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebasePluginUtil.html
+V 106
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebaseDirectoryForm.html
+END
+_lib---model---sfFilebaseFile.php.html
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---model---sfFilebaseFile.php.html
+END
+sfFilebaseFilePeer.html
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebaseFilePeer.html
 END
 sfFilebasePluginGfxEditorAdapterInterface.html
 K 25
 svn:wc:ra_dav:version-url
 V 124
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditorAdapterInterface.html
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditorAdapterInterface.html
+END
+sfFilebasePluginUtil.html
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebasePluginUtil.html
 END
 _lib---sfFilebasePluginFileExif.php.html
 K 25
 svn:wc:ra_dav:version-url
 V 118
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---sfFilebasePluginFileExif.php.html
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---sfFilebasePluginFileExif.php.html
+END
+PluginSfFilebaseFile.html
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/PluginSfFilebaseFile.html
 END
 _lib---sfFilebasePluginUploadedFile.php.html
 K 25
 svn:wc:ra_dav:version-url
 V 122
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---sfFilebasePluginUploadedFile.php.html
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---sfFilebasePluginUploadedFile.php.html
 END
 _lib---sfFilebasePluginException.php.html
 K 25
 svn:wc:ra_dav:version-url
 V 119
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---sfFilebasePluginException.php.html
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---sfFilebasePluginException.php.html
 END
 sfFilebasePluginImage.html
 K 25
 svn:wc:ra_dav:version-url
 V 104
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebasePluginImage.html
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebasePluginImage.html
 END
 sfFilebasePluginStruct.html
 K 25
 svn:wc:ra_dav:version-url
 V 105
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebasePluginStruct.html
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebasePluginStruct.html
 END
 _lib---validator---sfFilebasePluginValidatorFile.php.html
 K 25
 svn:wc:ra_dav:version-url
 V 135
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---validator---sfFilebasePluginValidatorFile.php.html
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---validator---sfFilebasePluginValidatorFile.php.html
 END
 sfFilebasePluginWebRequest.html
 K 25
 svn:wc:ra_dav:version-url
 V 109
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebasePluginWebRequest.html
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebasePluginWebRequest.html
 END
 _lib---sfFilebasePluginDirectory.php.html
 K 25
 svn:wc:ra_dav:version-url
 V 119
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---sfFilebasePluginDirectory.php.html
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---sfFilebasePluginDirectory.php.html
+END
+_lib---form---sfFilebaseDirectoryForm.class.php.html
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---form---sfFilebaseDirectoryForm.class.php.html
+END
+_lib---model---plugin---PluginSfFilebaseFilePeer.php.html
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---model---plugin---PluginSfFilebaseFilePeer.php.html
 END
 sfFilebasePluginException.html
 K 25
 svn:wc:ra_dav:version-url
 V 108
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebasePluginException.html
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebasePluginException.html
 END
 _lib---sfFilebasePluginUtil.php.html
 K 25
 svn:wc:ra_dav:version-url
 V 114
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---sfFilebasePluginUtil.php.html
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---sfFilebasePluginUtil.php.html
+END
+sfFilebaseFile.html
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebaseFile.html
+END
+sfFilebaseDirectoryPeer.html
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebaseDirectoryPeer.html
 END
 _lib---sfFilebasePluginGfxEditorAdapterIMagick.php.html
 K 25
 svn:wc:ra_dav:version-url
 V 133
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---sfFilebasePluginGfxEditorAdapterIMagick.php.html
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---sfFilebasePluginGfxEditorAdapterIMagick.php.html
 END
 sfFilebasePluginDirectory.html
 K 25
 svn:wc:ra_dav:version-url
 V 108
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebasePluginDirectory.html
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebasePluginDirectory.html
 END
 _lib---sfFilebasePluginThumbnail.php.html
 K 25
 svn:wc:ra_dav:version-url
 V 119
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---sfFilebasePluginThumbnail.php.html
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---sfFilebasePluginThumbnail.php.html
 END
 sfFilebasePluginFileObject.html
 K 25
 svn:wc:ra_dav:version-url
 V 109
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebasePluginFileObject.html
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebasePluginFileObject.html
 END
 sfFilebasePluginRecursiveDirectoryIterator.html
 K 25
 svn:wc:ra_dav:version-url
 V 125
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebasePluginRecursiveDirectoryIterator.html
-END
-sfFilebasePluginGfxEditorAdapterGD.html
-K 25
-svn:wc:ra_dav:version-url
-V 117
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditorAdapterGD.html
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebasePluginRecursiveDirectoryIterator.html
 END
 _lib---sfFilebasePluginStruct.php.html
 K 25
 svn:wc:ra_dav:version-url
 V 116
-/!svn/ver/18342/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---sfFilebasePluginStruct.php.html
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/_lib---sfFilebasePluginStruct.php.html
+END
+sfFilebasePluginGfxEditorAdapterGD.html
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/!svn/ver/18346/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditorAdapterGD.html
 END

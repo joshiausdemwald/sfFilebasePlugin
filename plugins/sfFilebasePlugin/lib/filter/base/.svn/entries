@@ -1,14 +1,14 @@
 9
 
 dir
-18316
+18344
 http://svn.symfony-project.com/plugins/sfFilebasePlugin/lib/filter/base
 http://svn.symfony-project.com
 
 
 
-2009-05-15T13:33:14.190224Z
-18306
+2009-05-16T15:37:00.336683Z
+18343
 joshiausdemwald
 
 
@@ -33,16 +33,50 @@ svn:special svn:externals svn:needs-lock
 
 0
 
+BaseFormFilterPropel.class.php
+file
+
+
+
+
+2009-05-16T15:32:36.000000Z
+08369324ed6a31ca981e9410f76f814f
+2009-05-16T15:37:00.336683Z
+18343
+joshiausdemwald
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+322
+
 BasesfFilebaseFileFormFilter.class.php
 file
 
 
 
 
-2009-05-16T13:06:37.000000Z
+2009-05-16T15:35:43.000000Z
 21ecfcdd272273bcff1a9035ee45f098
-2009-05-15T13:33:14.190224Z
-18306
+2009-05-16T15:37:00.336683Z
+18343
 joshiausdemwald
 
 
@@ -73,10 +107,10 @@ file
 
 
 
-2009-05-16T13:06:37.000000Z
+2009-05-16T15:35:43.000000Z
 c99962489ff8ef07bbf986ada1f0119c
-2009-05-15T13:33:14.190224Z
-18306
+2009-05-16T15:37:00.336683Z
+18343
 joshiausdemwald
 
 

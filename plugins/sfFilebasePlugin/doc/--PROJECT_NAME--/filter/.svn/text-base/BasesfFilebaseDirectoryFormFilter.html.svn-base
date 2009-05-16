@@ -108,9 +108,11 @@
 		</p>
 		
 				
-		<pre>BaseFormFilterPropel
+		<pre>sfFormFilterPropel
    |
-   --BasesfFilebaseDirectoryFormFilter</pre>
+   --<a href="../../test/filter/BaseFormFilterPropel.html">BaseFormFilterPropel</a>
+      |
+      --BasesfFilebaseDirectoryFormFilter</pre>
 	
 			</div>
 </div>
@@ -187,7 +189,7 @@
 		<div class="info-box-body">
 			<A NAME='method_detail'></A>
 <a name="methodgetFields" id="getFields"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">getFields</span> (line <span class="line-number">37</span>)
@@ -210,7 +212,7 @@
 			
 	</div>
 <a name="methodgetModelName" id="getModelName"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">getModelName</span> (line <span class="line-number">32</span>)
@@ -233,7 +235,7 @@
 			
 	</div>
 <a name="methodsetup" id="setup"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">setup</span> (line <span class="line-number">15</span>)
@@ -253,15 +255,27 @@
 			</div>
 	
 		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../test/filter/BaseFormFilterPropel.html#methodsetup">BaseFormFilterPropel::setup()</a></dt>
+					</dl>
 			
 	</div>
-						
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../test/filter/BaseFormFilterPropel.html">BaseFormFilterPropel</a></span></p>
+					<blockquote>
+													<span class="method-name"><a href="../../test/filter/BaseFormFilterPropel.html#methodsetup">BaseFormFilterPropel::setup()</a></span><br>
+											</blockquote>
+										
 		</div>
 	</div>
 
 
 	<p class="notes" id="credit">
-		Documentation generated on Sat, 16 May 2009 17:07:08 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Sat, 16 May 2009 18:02:59 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</div></body>
 </html>

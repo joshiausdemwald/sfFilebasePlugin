@@ -107,11 +107,13 @@
 		</p>
 		
 				
-		<pre>BaseFormFilterPropel
+		<pre>sfFormFilterPropel
    |
-   --<a href="../../--PROJECT_NAME--/filter/BasesfFilebaseDirectoryFormFilter.html">BasesfFilebaseDirectoryFormFilter</a>
+   --<a href="../../test/filter/BaseFormFilterPropel.html">BaseFormFilterPropel</a>
       |
-      --sfFilebaseDirectoryFormFilter</pre>
+      --<a href="../../--PROJECT_NAME--/filter/BasesfFilebaseDirectoryFormFilter.html">BasesfFilebaseDirectoryFormFilter</a>
+         |
+         --sfFilebaseDirectoryFormFilter</pre>
 	
 			</div>
 </div>
@@ -150,7 +152,7 @@
 		<div class="info-box-body">
 			<A NAME='method_detail'></A>
 <a name="methodconfigure" id="configure"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">configure</span> (line <span class="line-number">13</span>)
@@ -181,13 +183,18 @@
 													<span class="method-name"><a href="../../--PROJECT_NAME--/filter/BasesfFilebaseDirectoryFormFilter.html#methodgetModelName">BasesfFilebaseDirectoryFormFilter::getModelName()</a></span><br>
 													<span class="method-name"><a href="../../--PROJECT_NAME--/filter/BasesfFilebaseDirectoryFormFilter.html#methodsetup">BasesfFilebaseDirectoryFormFilter::setup()</a></span><br>
 											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../test/filter/BaseFormFilterPropel.html">BaseFormFilterPropel</a></span></p>
+					<blockquote>
+													<span class="method-name"><a href="../../test/filter/BaseFormFilterPropel.html#methodsetup">BaseFormFilterPropel::setup()</a></span><br>
+											</blockquote>
 										
 		</div>
 	</div>
 
 
 	<p class="notes" id="credit">
-		Documentation generated on Sat, 16 May 2009 17:07:12 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Sat, 16 May 2009 18:03:00 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</div></body>
 </html>

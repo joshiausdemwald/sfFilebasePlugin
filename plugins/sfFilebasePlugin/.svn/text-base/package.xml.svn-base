@@ -10,10 +10,10 @@
     <email>johannes.heinen@gmail.com</email>
     <active>yes</active>
   </lead>
-  <date>2009-05-14</date>
+  <date>2009-05-16</date>
   <version>
-    <release>0.5.10</release>
-    <api>0.5.4</api>
+    <release>0.6.0</release>
+    <api>0.6.0</api>
   </version>
   <stability>
     <release>stable</release>
@@ -25,9 +25,31 @@
     <dir name="/">
       <file role="data" name="README" />
       <file role="data" name="LICENSE" />
+
         <file role="data" name="config/config.php" />
-        <file role="data" name="lib/validator/sfFilebasePluginValidatorFile.php" />
+        <file role="data" name="config/routing.yml" />
+        <file role="data" name="config/schema.yml" />
+
+        <file role="data" name="lib/filter/sfFilebaseDirectoryFormFilter.class.php" />
+        <file role="data" name="lib/filter/sfFilebaseFileFormFilter.class.php" />
+        
+        <file role="data" name="lib/form/sfFilebaseDirectoryForm.class.php" />
+        <file role="data" name="lib/form/sfFilebaseFileForm.class.php" />
+
         <file role="data" name="lib/helper/sfFilebasePluginHelper.php" />
+        
+        <file role="data" name="lib/model/plugin/PluginSfFilebaseDirectory.php" />
+        <file role="data" name="lib/model/plugin/PluginSfFilebaseDirectoryPeer.php" />
+        <file role="data" name="lib/model/plugin/PluginSfFilebaseFile.php" />
+        <file role="data" name="lib/model/plugin/PluginSfFilebaseFilePeer.php" />
+
+        <file role="data" name="lib/model/sfFilebaseDirectory.php" />
+        <file role="data" name="lib/model/sfFilebaseDirectoryPeer.php" />
+        <file role="data" name="lib/model/sfFilebaseFile.php" />
+        <file role="data" name="lib/model/sfFilebaseFilePeer.php" />
+
+        <file role="data" name="lib/validator/sfFilebasePluginValidatorFile.php" />
+
         <file role="data" name="lib/sfFilebasePlugin.php" />
         <file role="data" name="lib/sfFilebasePluginDirectory.php" />
         <file role="data" name="lib/sfFilebasePluginException.php" />
@@ -47,6 +69,16 @@
         <file role="data" name="lib/sfFilebasePluginUploadedFilesManager.php" />
         <file role="data" name="lib/sfFilebasePluginUtil.php" />
         <file role="data" name="lib/sfFilebasePluginWebRequest.php" />
+
+        <file role="data" name="modules/sf_filebase_directory/actions/actions.class.php" />
+        <file role="data" name="modules/sf_filebase_directory/config/generator.yml" />
+        <file role="data" name="modules/sf_filebase_directory/lib/sf_filebase_directoryGeneratorConfiguration.class.php" />
+        <file role="data" name="modules/sf_filebase_directory/lib/sf_filebase_directoryGeneratorHelper.class.php" />
+
+        <file role="data" name="modules/sf_filebase_file/actions/actions.class.php" />
+        <file role="data" name="modules/sf_filebase_file/config/generator.yml" />
+        <file role="data" name="modules/sf_filebase_file/lib/sf_filebase_fileGeneratorConfiguration.class.php" />
+        <file role="data" name="modules/sf_filebase_file/lib/sf_filebase_fileGeneratorHelper.class.php" />
     </dir>
   </contents>
   <dependencies>
@@ -69,6 +101,23 @@
   <phprelease>
   </phprelease>
   <changelog>
+    <release>
+      <version>
+        <release>0.6.0</release>
+        <api>0.6.0</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-05-16</date>
+      <notes>
+      * Added filemanager module
+      * Improved validation
+      * sfFilebasePluginFileValidator now works with admin generator
+      </notes>
+    </release>
     <release>
       <version>
         <release>0.5.10</release>
