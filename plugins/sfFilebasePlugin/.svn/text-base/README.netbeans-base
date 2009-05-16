@@ -209,7 +209,6 @@ standard php configurations with mod_php you usually have to chmod(777) it or
 change the ownership to `wwwrun` or something like that.
 
 Iterate over sub-directories:
------------------------------
 
     foreach($filebase AS $file)
     {
@@ -227,59 +226,7 @@ Iterate over sub-directories:
     }
     // do something with the thumbnails.
 
-Fetch some Files that exists in file system (the short way):
-------------------------------------------------------------
-
-    $file = $filebase['/myfile.txt'];
-
-    // open the file
-    $pointer = $file->openFile();
-
-    // read some content:
-    echo $pointer->fileGetContents();
-
-    // Retrieve a directory:
-    $dir = $filebase['path/to/mydir'];
-
-    // Retrieve an image from this directory:
-    $image = $dir['image.jpg'];
-
-    // Create a thumbnail:
-    $tn = $image->getThumbnail(array('width'=>100));
-
-    // .... and so on ;)
-
-Deal with "virtual" files, that does not exist in file system:
---------------------------------------------------------------
-
-    // Throws an error, so how to achieve this?
-    $file = $filebase['path/to/nonexistent/file.txt'];
-
-    // The correct way:
-    $file = $filebase->getFilebaseFile('path/to/file');
-
-    // Or:
-    $file = $filebase->getFilebaseFile('/absolute/path.txt');
-
-    // Or:
-    $file = $filebase->getFilebaseFile($another_instance_of_filebase_file);
-
-Note that despite you are awaiting an directory, a file, a link or an image,
-the system cant determin it's file type unless the file physicall exists in
-file system. So be aware of this!
-
-You can also create new files on the fly, using sfFilebasePlugin methods:
-
-    $new_dir = $filebase->mkDir('/path/to/dir');
-
-    $absolute_new_dir = $filebase->mkDir('/absolute/path/to/dir');
-
-    $new_dir_from_instance = $filebase->mkDir(
-      $filebase->getFilebaseFile('dirname');
-    );
-
 File-Uploads:
--------------
 
     $destination_directory = "my_uploads";
     $files = $filebase->getUploadedFiles();
@@ -313,18 +260,6 @@ generic sfValidatorFile class. For example you could do the following:
       }
     }
     ....
-
-If you are using sfFilebasePluginValidatorFile within the admin/crud generator,
-you probably have to implement some logic into your child-class of sfFormPropel
-or sfFormDoctrine.
-
-You won't have to specify a $path any more. Although you could do it, the as
-default path now the root dir is taken that you have had defined in your
-app.yml (see above).
-
-SfFilebasePluginValidatorFile now takes a new option, "allow_overwrite". If
-you set this option to false (default is true), then your form throws a new
-sfValidatorError when the uploaded file already exists in file system.
 
 Error-Handling
 --------------
