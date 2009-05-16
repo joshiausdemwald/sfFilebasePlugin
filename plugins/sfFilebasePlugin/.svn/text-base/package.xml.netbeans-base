@@ -12,7 +12,7 @@
   </lead>
   <date>2009-05-16</date>
   <version>
-    <release>0.6.0</release>
+    <release>0.6.1</release>
     <api>0.6.0</api>
   </version>
   <stability>
@@ -101,6 +101,24 @@
   <phprelease>
   </phprelease>
   <changelog>
+    <release>
+      <version>
+        <release>0.6.1</release>
+        <api>0.6.0</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-05-16</date>
+      <notes>
+      * Fixed indentation problem in schema.yml
+      * Added filemanager module
+      * Improved validation
+      * sfFilebasePluginFileValidator now works with admin generator
+      </notes>
+    </release>
     <release>
       <version>
         <release>0.6.0</release>

@@ -16,6 +16,7 @@ class BasesfFilebaseFileForm extends BaseFormPropel
       'id'                         => new sfWidgetFormInputHidden(),
       'pathname'                   => new sfWidgetFormInput(),
       'hash'                       => new sfWidgetFormInput(),
+      'comment'                    => new sfWidgetFormTextarea(),
       'sf_filebase_directories_id' => new sfWidgetFormPropelChoice(array('model' => 'sfFilebaseDirectory', 'add_empty' => true)),
     ));
 
@@ -23,6 +24,7 @@ class BasesfFilebaseFileForm extends BaseFormPropel
       'id'                         => new sfValidatorPropelChoice(array('model' => 'sfFilebaseFile', 'column' => 'id', 'required' => false)),
       'pathname'                   => new sfValidatorString(array('max_length' => 255)),
       'hash'                       => new sfValidatorString(array('max_length' => 255)),
+      'comment'                    => new sfValidatorString(array('required' => false)),
       'sf_filebase_directories_id' => new sfValidatorPropelChoice(array('model' => 'sfFilebaseDirectory', 'column' => 'id', 'required' => false)),
     ));
 

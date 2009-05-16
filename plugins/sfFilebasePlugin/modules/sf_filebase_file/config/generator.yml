@@ -28,8 +28,6 @@ generator:
           label: Tralllal
       list:    ~
       filter:  ~
-      form:
-        display:
-          NONE: [sf_filebase_directories_id, pathname]
+      form:    ~
       edit:    ~
       new:     ~

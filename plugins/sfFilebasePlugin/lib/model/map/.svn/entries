@@ -4,7 +4,7 @@ dir
 18353
 http://svn.symfony-project.com/plugins/sfFilebasePlugin/lib/model/map
 http://svn.symfony-project.com
-
+delete
 
 
 2009-05-16T17:13:15.883375Z
@@ -38,7 +38,7 @@ file
 
 
 
-
+delete
 2009-05-16T17:11:18.000000Z
 af4d82f589d2797372cc400b1c35fc8c
 2009-05-16T17:13:15.883375Z
@@ -72,7 +72,7 @@ file
 
 
 
-
+delete
 2009-05-16T17:11:18.000000Z
 2fbf5bf58415ab20f468ba541e34dd83
 2009-05-16T17:13:15.883375Z

@@ -12,4 +12,5 @@
  */
 class sfFilebaseFilePeer extends PluginSfFilebaseFilePeer
 {
+  
 }

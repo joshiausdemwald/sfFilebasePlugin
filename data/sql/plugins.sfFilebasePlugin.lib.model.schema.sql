@@ -15,6 +15,7 @@ CREATE TABLE `sf_filebase_files`
 	`id` INTEGER  NOT NULL AUTO_INCREMENT,
 	`pathname` VARCHAR(255)  NOT NULL,
 	`hash` VARCHAR(255)  NOT NULL,
+	`comment` TEXT,
 	`sf_filebase_directories_id` INTEGER,
 	PRIMARY KEY (`id`),
 	UNIQUE KEY `sf_filebase_files_U_1` (`pathname`),
@@ -34,13 +35,36 @@ DROP TABLE IF EXISTS `sf_filebase_directories`;
 
 CREATE TABLE `sf_filebase_directories`
 (
-	`sf_filebase_files_id` INTEGER,
+	`sf_filebase_files_id` INTEGER(11),
 	`id` INTEGER  NOT NULL AUTO_INCREMENT,
 	PRIMARY KEY (`id`),
 	INDEX `sf_filebase_directories_FI_1` (`sf_filebase_files_id`),
 	CONSTRAINT `sf_filebase_directories_FK_1`
 		FOREIGN KEY (`sf_filebase_files_id`)
 		REFERENCES `sf_filebase_files` (`id`)
+		ON UPDATE CASCADE
+		ON DELETE CASCADE
+)Type=InnoDB;
+
+#-----------------------------------------------------------------------------
+#-- sf_filebase_tags
+#-----------------------------------------------------------------------------
+
+DROP TABLE IF EXISTS `sf_filebase_tags`;
+
+
+CREATE TABLE `sf_filebase_tags`
+(
+	`id` INTEGER  NOT NULL AUTO_INCREMENT,
+	`sf_filebase_file_id` INTEGER(11),
+	`tag` VARCHAR(255)  NOT NULL,
+	PRIMARY KEY (`id`),
+	INDEX `sf_filebase_tags_FI_1` (`sf_filebase_file_id`),
+	CONSTRAINT `sf_filebase_tags_FK_1`
+		FOREIGN KEY (`sf_filebase_file_id`)
+		REFERENCES `sf_filebase_files` (`id`)
+		ON UPDATE CASCADE
+		ON DELETE CASCADE
 )Type=InnoDB;
 
 # This restores the fkey checks, after having unset them earlier

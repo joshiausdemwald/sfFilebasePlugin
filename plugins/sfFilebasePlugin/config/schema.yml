@@ -10,13 +10,15 @@
 # * @copyright 2007-2009 Johannes Heinen <johannes.heinen@gmail.com>
 # */
 propel:
-  _attributes:      { package: plugins.sfFilebasePlugin.lib.model }
+  _attributes:      { package: plugins.sfFilebasePlugin.lib.model, idMethod: native }
 
   sf_filebase_files:
     _attributes:    { phpName: sfFilebaseFile }
-    id:
+    id:             ~
     pathname:       { type: varchar, size: 255, required: true, index: unique }
     hash:           { type: varchar, size: 255, required: true, index: unique }
+
+    comment:        { type: longvarchar, required: false }
 
     # n:1 relationship
     sf_filebase_directories_id: ~
@@ -25,4 +27,10 @@ propel:
     _attributes: { phpName: sfFilebaseDirectory }
 
     # 1:1 relationship
-    sf_filebase_files_id: ~
+    sf_filebase_files_id: { type: integer, size: 11, foreignTable: sf_filebase_files, foreignReference: id, onDelete: cascade, onUpdate: cascade }
+
+  sf_filebase_tags:
+    _attributes: { phpName: sfFilebaseTag }
+    id:         ~
+    sf_filebase_file_id: { type: integer, size: 11, foreignTable: sf_filebase_files, foreignReference: id, onDelete: cascade, onUpdate: cascade }
+    tag:        { type: varchar, size: 255, required: true }
