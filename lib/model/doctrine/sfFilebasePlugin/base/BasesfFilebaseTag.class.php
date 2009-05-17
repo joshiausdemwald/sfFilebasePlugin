@@ -8,7 +8,7 @@ abstract class BasesfFilebaseTag extends sfDoctrineRecord
     public function setTableDefinition()
     {
         $this->setTableName('sf_filebase_tags');
-        $this->hasColumn('sf_filebase_files_id', 'integer', null, array('type' => 'integer', 'notnull' => true));
+        $this->hasColumn('sf_abstract_files_id', 'integer', null, array('type' => 'integer'));
         $this->hasColumn('tag', 'string', 255, array('type' => 'string', 'notnull' => true, 'length' => '255'));
 
 
@@ -17,9 +17,9 @@ abstract class BasesfFilebaseTag extends sfDoctrineRecord
 
     public function setUp()
     {
-        $this->hasOne('sfFilebaseFile', array('local' => 'sf_filebase_files_id',
-                                              'foreign' => 'id',
-                                              'onDelete' => 'cascade',
-                                              'onUpdate' => 'cascade'));
+        $this->hasOne('sfAbstractFile as File', array('local' => 'sf_abstract_files_id',
+                                                      'foreign' => 'id',
+                                                      'onDelete' => 'cascade',
+                                                      'onUpdate' => 'cascade'));
     }
 }

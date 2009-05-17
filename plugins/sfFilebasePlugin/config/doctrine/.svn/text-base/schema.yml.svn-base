@@ -9,47 +9,60 @@
 # * @license   MIT license
 # * @copyright 2007-2009 Johannes Heinen <johannes.heinen@gmail.com>
 # */
-detect_relations: true
-
-sfFilebaseFile:
-  tableName: sf_filebase_files
+sfAbstractFile:
+  tableName: sf_abstract_files
+  abstract: true
   columns:
-    pathname:                 { type: string(255), notnull: true }
-    hash:                     { type: string(255), notnull: true }
-    comment:                  { type: string, notnull: false }
-    sf_filebase_directory_id: { type: integer }
-
+    pathname:                   { type: string(255), notnull: true }
+    hash:                       { type: string(255), notnull: true }
+    comment:                    { type: string, notnull: false }
+    sf_filebase_directories_id: integer
   relations:
-    sfFilebaseDirectory:
-      local:        sf_filebase_directory_id
+    ParentDirectory:
+      class:        sfFilebaseDirectory
+      local:        sf_filebase_directories_id
       foreign:      id
-      onDelete: cascade
-      onUpdate: cascade
-
+      onDelete:     cascade
+      onUpdate:     cascade
+      foreignAlias: files
   indexes:
     u1: { type: unique, fields: [pathname] }
     u2: { type: unique, fields: [hash] }
 
-sfFilebaseDirectory:
-  tableName: sf_filebase_directories
+sfFilebaseFile:
+  tableName: sf_filebase_files
   inheritance:
-    extends:  sfFilebaseFile
+    extends:  sfAbstractFile
     type:     column_aggregation
     keyField: type
     keyValue: 1
 
+sfFilebaseDirectory:
+  tableName: sf_filebase_directories
+  inheritance:
+    extends:  sfAbstractFile
+    type:     column_aggregation
+    keyField: type
+    keyValue: 2
+  columns:
+    level: { type: integer }
+
 sfFilebaseTag:
   tableName: sf_filebase_tags
   columns:
-    sf_filebase_files_id: { type: integer, notnull: true }
-    tag:                  { type: string(255), notnull: true }
+    sf_abstract_files_id: integer
+    tag:
+      type: string(255)
+      notnull: true
 
   relations:
-    sfFilebaseFile:
-      local: sf_filebase_files_id
-      foreign: id
-      onDelete: cascade
-      onUpdate: cascade
+    File:
+      class:        sfAbstractFile
+      local:        sf_abstract_files_id
+      foreign:      id
+      onDelete:     cascade
+      onUpdate:     cascade
+      foreignAlias: tags
 
   indexes:
     i1: { fields: [tag] }

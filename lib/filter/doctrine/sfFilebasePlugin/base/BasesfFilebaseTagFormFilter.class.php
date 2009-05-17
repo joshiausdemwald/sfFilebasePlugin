@@ -14,12 +14,12 @@ class BasesfFilebaseTagFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'sf_filebase_files_id' => new sfWidgetFormDoctrineChoice(array('model' => 'sfFilebaseFile', 'add_empty' => true)),
+      'sf_abstract_files_id' => new sfWidgetFormDoctrineChoice(array('model' => 'sfAbstractFile', 'add_empty' => true)),
       'tag'                  => new sfWidgetFormFilterInput(),
     ));
 
     $this->setValidators(array(
-      'sf_filebase_files_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => 'sfFilebaseFile', 'column' => 'id')),
+      'sf_abstract_files_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => 'sfAbstractFile', 'column' => 'id')),
       'tag'                  => new sfValidatorPass(array('required' => false)),
     ));
 
@@ -39,7 +39,7 @@ class BasesfFilebaseTagFormFilter extends BaseFormFilterDoctrine
   {
     return array(
       'id'                   => 'Number',
-      'sf_filebase_files_id' => 'ForeignKey',
+      'sf_abstract_files_id' => 'ForeignKey',
       'tag'                  => 'Text',
     );
   }

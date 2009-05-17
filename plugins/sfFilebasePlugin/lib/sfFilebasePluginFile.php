@@ -435,4 +435,16 @@ class sfFilebasePluginFile extends SplFileInfo
   {
     return sfFilebasePluginUtil::getStringTypeByExtension($this->getExtension());
   }
+
+  /**
+   * Returns the nesting level of the file, relative to its base filebase
+   * directory.
+   *
+   * @return integer $nesting_level
+   */
+  public function getNestingLevel()
+  {
+    $rel_path = $this->getRelativePathFromFilebaseDirectory();
+    return count(split('/', $rel_path));
+  }
 }

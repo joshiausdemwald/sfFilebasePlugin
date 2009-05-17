@@ -12,9 +12,17 @@ generator:
 
     config:
       actions: ~
-      fields:  ~
-      list:    ~
-      filter:  ~
+      fields:
+        pathname:
+          label: Directory's pathname
+        sf_filebase_directories_id:
+          label: Parent directory
+        parent_directory_link:
+          label: Parent directory
+      list:
+        display: [pathname, comment]
+      filter:
+        display: [sf_filebase_directories_id, pathname, comment]
       form:    ~
       edit:    ~
       new:     ~

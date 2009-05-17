@@ -3,3 +3,15 @@ svn:wc:ra_dav:version-url
 V 74
 /!svn/ver/18372/plugins/sfFilebasePlugin/modules/sf_filebase_directory/lib
 END
+sf_filebase_directoryGeneratorConfiguration.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/!svn/ver/18392/plugins/sfFilebasePlugin/modules/sf_filebase_directory/lib/sf_filebase_directoryGeneratorConfiguration.class.php
+END
+sf_filebase_directoryGeneratorHelper.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/!svn/ver/18392/plugins/sfFilebasePlugin/modules/sf_filebase_directory/lib/sf_filebase_directoryGeneratorHelper.class.php
+END

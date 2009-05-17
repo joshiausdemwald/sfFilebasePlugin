@@ -30,13 +30,15 @@ abstract class PluginsfFilebaseFile extends BasesfFilebaseFile
     Doctrine_Query::create()->
       from('sfFilebaseTag t')->
       delete()->
-      where('t.tag IN ('.implode(',', $tags).')');
+      where('t.sf_filebase_files_id='.$this->getId())->
+      execute();
    
     foreach ($tags AS $tag)
     {
       $new_tag = new sfFilebaseTag();
       $new_tag->setTag($tag);
       $new_tag->setsfFilebaseFile($this);
+      $new_tag->save();
     }
   }
 

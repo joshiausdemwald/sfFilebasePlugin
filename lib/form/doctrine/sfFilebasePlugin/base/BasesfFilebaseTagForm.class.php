@@ -13,13 +13,13 @@ class BasesfFilebaseTagForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'id'                   => new sfWidgetFormInputHidden(),
-      'sf_filebase_files_id' => new sfWidgetFormDoctrineChoice(array('model' => 'sfFilebaseFile', 'add_empty' => false)),
+      'sf_abstract_files_id' => new sfWidgetFormDoctrineChoice(array('model' => 'sfAbstractFile', 'add_empty' => true)),
       'tag'                  => new sfWidgetFormInput(),
     ));
 
     $this->setValidators(array(
       'id'                   => new sfValidatorDoctrineChoice(array('model' => 'sfFilebaseTag', 'column' => 'id', 'required' => false)),
-      'sf_filebase_files_id' => new sfValidatorDoctrineChoice(array('model' => 'sfFilebaseFile')),
+      'sf_abstract_files_id' => new sfValidatorDoctrineChoice(array('model' => 'sfAbstractFile', 'required' => false)),
       'tag'                  => new sfValidatorString(array('max_length' => 255)),
     ));
 

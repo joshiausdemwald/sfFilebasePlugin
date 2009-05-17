@@ -205,7 +205,7 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
   {
     $file = $this->getFilebaseFile ($file);
     if(!$this->getFilebase()->isInFilebase($file)) throw new sfFilebasePluginException('FilebaseFile %s does not belong to filebase %s, access denied due to security issues.', $file->getPathname(), $this->getPathname());
-    return md5($file->getPathname());
+    return md5($file->getRelativePathFromFilebaseDirectory());
   }
 
   /**

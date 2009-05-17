@@ -3,6 +3,12 @@ svn:wc:ra_dav:version-url
 V 60
 /!svn/ver/18372/plugins/sfFilebasePlugin/lib/filter/doctrine
 END
+PluginsfAbstractFileFormFilter.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/!svn/ver/18392/plugins/sfFilebasePlugin/lib/filter/doctrine/PluginsfAbstractFileFormFilter.class.php
+END
 PluginsfFilebaseTagFormFilter.class.php
 K 25
 svn:wc:ra_dav:version-url

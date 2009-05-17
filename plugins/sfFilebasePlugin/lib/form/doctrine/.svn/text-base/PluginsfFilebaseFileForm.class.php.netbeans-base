@@ -17,9 +17,6 @@ abstract class PluginsfFilebaseFileForm extends BasesfFilebaseFileForm
     unset($this->validatorSchema['hash']);
     unset($this->validatorSchema['type']);
 
-    $this->widgetSchema['pathname']     = new sfWidgetFormInputFile();
-    $this->validatorSchema['pathname']  = new sfFilebasePluginValidatorFile(array('allow_overwrite'=> true, 'required'=>true));
-
     $this->validatorSchema['sf_filebase_directory_id']->setOption('required', false);
     $this->widgetSchema['tags'] = new sfWidgetFormInput();
 
@@ -28,18 +25,18 @@ abstract class PluginsfFilebaseFileForm extends BasesfFilebaseFileForm
       new sfValidatorRegex(array('pattern'=>'#^[^, ;]([^, ;]+[,; ] ?)*?[^, ;]+$#'))
     ), array('required'=>false));
 
-    if( ! $this->isNew())
+    if($this->isNew())
     {
+      $this->widgetSchema['pathname']     = new sfWidgetFormInputFile();
+      $this->validatorSchema['pathname']  = new sfFilebasePluginValidatorFile(array('allow_overwrite'=> true, 'required'=>true));
+    }
+    else
+    {
+      $this->widgetSchema['pathname']->setAttribute('readonly', 'readonly');
       $tag_string = $this->getObject()->getTagsAsString();
       $this->widgetSchema['tags']->setDefault($tag_string);
       $this->validatorSchema['pathname']->setOption('required',false);
     }
-  }
-
-  public function processValues($values = null)
-  {
-    //$values['type'] = null;
-    return parent::processValues($values);
   }
 
   /**

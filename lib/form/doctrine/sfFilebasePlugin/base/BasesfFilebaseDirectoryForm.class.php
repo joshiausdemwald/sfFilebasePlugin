@@ -12,21 +12,23 @@ class BasesfFilebaseDirectoryForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'id'                       => new sfWidgetFormInputHidden(),
-      'pathname'                 => new sfWidgetFormInput(),
-      'hash'                     => new sfWidgetFormInput(),
-      'comment'                  => new sfWidgetFormTextarea(),
-      'sf_filebase_directory_id' => new sfWidgetFormDoctrineChoice(array('model' => 'sfFilebaseDirectory', 'add_empty' => true)),
-      'type'                     => new sfWidgetFormInput(),
+      'id'                         => new sfWidgetFormInputHidden(),
+      'pathname'                   => new sfWidgetFormInput(),
+      'hash'                       => new sfWidgetFormInput(),
+      'comment'                    => new sfWidgetFormTextarea(),
+      'sf_filebase_directories_id' => new sfWidgetFormDoctrineChoice(array('model' => 'sfFilebaseDirectory', 'add_empty' => true)),
+      'type'                       => new sfWidgetFormInput(),
+      'level'                      => new sfWidgetFormInput(),
     ));
 
     $this->setValidators(array(
-      'id'                       => new sfValidatorDoctrineChoice(array('model' => 'sfFilebaseDirectory', 'column' => 'id', 'required' => false)),
-      'pathname'                 => new sfValidatorString(array('max_length' => 255)),
-      'hash'                     => new sfValidatorString(array('max_length' => 255)),
-      'comment'                  => new sfValidatorString(array('max_length' => 2147483647, 'required' => false)),
-      'sf_filebase_directory_id' => new sfValidatorDoctrineChoice(array('model' => 'sfFilebaseDirectory', 'required' => false)),
-      'type'                     => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'id'                         => new sfValidatorDoctrineChoice(array('model' => 'sfFilebaseDirectory', 'column' => 'id', 'required' => false)),
+      'pathname'                   => new sfValidatorString(array('max_length' => 255)),
+      'hash'                       => new sfValidatorString(array('max_length' => 255)),
+      'comment'                    => new sfValidatorString(array('max_length' => 2147483647, 'required' => false)),
+      'sf_filebase_directories_id' => new sfValidatorDoctrineChoice(array('model' => 'sfFilebaseDirectory', 'required' => false)),
+      'type'                       => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'level'                      => new sfValidatorInteger(array('required' => false)),
     ));
 
     $this->validatorSchema->setPostValidator(

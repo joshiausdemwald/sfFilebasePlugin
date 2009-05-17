@@ -1,4 +1,4 @@
-CREATE TABLE sf_filebase_files (id BIGINT AUTO_INCREMENT, pathname VARCHAR(255) NOT NULL, hash VARCHAR(255) NOT NULL, comment TEXT, sf_filebase_directory_id BIGINT, type VARCHAR(255), UNIQUE INDEX u1_idx (pathname), UNIQUE INDEX u2_idx (hash), INDEX sf_filebase_directory_id_idx (sf_filebase_directory_id), PRIMARY KEY(id)) ENGINE = INNODB;
-CREATE TABLE sf_filebase_tags (id BIGINT AUTO_INCREMENT, sf_filebase_files_id BIGINT NOT NULL, tag VARCHAR(255) NOT NULL, INDEX i1_idx (tag), INDEX sf_filebase_files_id_idx (sf_filebase_files_id), PRIMARY KEY(id)) ENGINE = INNODB;
-ALTER TABLE sf_filebase_files ADD FOREIGN KEY (sf_filebase_directory_id) REFERENCES sf_filebase_files(id) ON UPDATE CASCADE ON DELETE CASCADE;
-ALTER TABLE sf_filebase_tags ADD FOREIGN KEY (sf_filebase_files_id) REFERENCES sf_filebase_files(id) ON UPDATE CASCADE ON DELETE CASCADE;
+CREATE TABLE sf_abstract_files (id BIGINT AUTO_INCREMENT, pathname VARCHAR(255) NOT NULL, hash VARCHAR(255) NOT NULL, comment TEXT, sf_filebase_directories_id BIGINT, type VARCHAR(255), level BIGINT, UNIQUE INDEX u1_idx (pathname), UNIQUE INDEX u2_idx (hash), INDEX sf_filebase_directories_id_idx (sf_filebase_directories_id), PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE sf_filebase_tags (id BIGINT AUTO_INCREMENT, sf_abstract_files_id BIGINT, tag VARCHAR(255) NOT NULL, INDEX i1_idx (tag), INDEX sf_abstract_files_id_idx (sf_abstract_files_id), PRIMARY KEY(id)) ENGINE = INNODB;
+ALTER TABLE sf_abstract_files ADD FOREIGN KEY (sf_filebase_directories_id) REFERENCES sf_abstract_files(id) ON UPDATE CASCADE ON DELETE CASCADE;
+ALTER TABLE sf_filebase_tags ADD FOREIGN KEY (sf_abstract_files_id) REFERENCES sf_abstract_files(id) ON UPDATE CASCADE ON DELETE CASCADE;

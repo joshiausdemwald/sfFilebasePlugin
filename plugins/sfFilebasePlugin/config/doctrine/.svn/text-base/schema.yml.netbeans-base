@@ -17,7 +17,7 @@ sfFilebaseFile:
     pathname:                 { type: string(255), notnull: true }
     hash:                     { type: string(255), notnull: true }
     comment:                  { type: string, notnull: false }
-    sf_filebase_directory_id: { type: integer, notnull: true }
+    sf_filebase_directory_id: { type: integer }
 
   relations:
     sfFilebaseDirectory:

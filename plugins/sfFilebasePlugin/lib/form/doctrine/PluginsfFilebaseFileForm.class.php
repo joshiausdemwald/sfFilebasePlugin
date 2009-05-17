@@ -14,10 +14,13 @@ abstract class PluginsfFilebaseFileForm extends BasesfFilebaseFileForm
     parent::setup();
     unset($this->widgetSchema['hash']);
     unset($this->widgetSchema['type']);
+    unset($this->widgetSchema['level']);
     unset($this->validatorSchema['hash']);
     unset($this->validatorSchema['type']);
+    unset($this->validatorSchema['level']);
 
-    $this->validatorSchema['sf_filebase_directory_id']->setOption('required', false);
+
+    $this->validatorSchema['sf_filebase_directories_id']->setOption('required', false);
     $this->widgetSchema['tags'] = new sfWidgetFormInput();
 
     $this->validatorSchema['tags'] = new sfValidatorAnd(array(
@@ -32,10 +35,8 @@ abstract class PluginsfFilebaseFileForm extends BasesfFilebaseFileForm
     }
     else
     {
-      $this->widgetSchema['pathname']->setAttribute('readonly', 'readonly');
       $tag_string = $this->getObject()->getTagsAsString();
       $this->widgetSchema['tags']->setDefault($tag_string);
-      $this->validatorSchema['pathname']->setOption('required',false);
     }
   }
 
@@ -50,6 +51,14 @@ abstract class PluginsfFilebaseFileForm extends BasesfFilebaseFileForm
     $this->getObject()->setTags(sfFilebaseTagTable::splitTags($tags));
   }
 
+  public function processValues($values = null)
+  {
+    if(empty($values['sf_filebase_directory_id']))
+      $values['sf_filebase_directory_id'] = null;
+
+    return parent::processValues($values);
+  }
+
   /**
    * Saves the current file for the field.
    *
@@ -61,8 +70,31 @@ abstract class PluginsfFilebaseFileForm extends BasesfFilebaseFileForm
    */
   public function saveFile($field, $filename = null, sfValidatedFile $file = null)
   {
-    $file = parent::saveFile($field, $filename, $file);
-    $this->getObject()->setHash($file->getHash());
-    return $file->getPathname();
+    if (!$this->validatorSchema[$field] instanceof sfValidatorFile)
+    {
+      throw new LogicException(sprintf('You cannot save the current file for field "%s" as the field is not a file.', $field));
+    }
+    if (is_null($file))
+    {
+      $file = $this->getValue($field);
+    }
+    
+    $filebase = sfFilebasePlugin::getInstance();
+    $dir_id = $this->getValue('sf_filebase_directories_id');
+    $filename = sfFilebasePlugin::getInstance()->getFilebaseFile($file->getOriginalName());
+    if(!empty($dir_id))
+    {
+      $dir_object = Doctrine_Query::create()->
+        select('*')->
+        from('sfFilebaseDirectory d')->
+        where('d.id='.$dir_id)->
+        execute()->
+        get(0);
+      $file->setPath($filebase[$dir_object->getPathname()]->getPathname());
+      $filename = $filebase->getFilebaseFile($file->getPath() . '/' . $file->getOriginalName());
+    }
+    parent::saveFile($field, $filename, $file);
+    $this->getObject()->setHash($filename->getHash());
+    return $filename->getRelativePathFromFilebaseDirectory();
   }
 }

@@ -80,6 +80,15 @@ class sfFilebasePluginUploadedFile extends sfValidatedFile
   }
 
   /**
+   * Sets the path to the file where the uploaded data have to be stored.
+   * @param string $path: absolute pathname to directory.
+   */
+  public function setPath($path)
+  {
+    $this->path = $path;
+  }
+
+  /**
    * Moves an uploaded file into its final destination.
    * Inclusion and exclusion rules consist of regex-strings,
    * they are used to check the target filenames against them.
