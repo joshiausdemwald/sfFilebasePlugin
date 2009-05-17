@@ -17,12 +17,14 @@ class BasesfFilebaseFileFormFilter extends BaseFormFilterPropel
     $this->setWidgets(array(
       'pathname'                   => new sfWidgetFormFilterInput(),
       'hash'                       => new sfWidgetFormFilterInput(),
+      'comment'                    => new sfWidgetFormFilterInput(),
       'sf_filebase_directories_id' => new sfWidgetFormPropelChoice(array('model' => 'sfFilebaseDirectory', 'add_empty' => true)),
     ));
 
     $this->setValidators(array(
       'pathname'                   => new sfValidatorPass(array('required' => false)),
       'hash'                       => new sfValidatorPass(array('required' => false)),
+      'comment'                    => new sfValidatorPass(array('required' => false)),
       'sf_filebase_directories_id' => new sfValidatorPropelChoice(array('required' => false, 'model' => 'sfFilebaseDirectory', 'column' => 'id')),
     ));
 
@@ -44,6 +46,7 @@ class BasesfFilebaseFileFormFilter extends BaseFormFilterPropel
       'id'                         => 'Number',
       'pathname'                   => 'Text',
       'hash'                       => 'Text',
+      'comment'                    => 'Text',
       'sf_filebase_directories_id' => 'ForeignKey',
     );
   }

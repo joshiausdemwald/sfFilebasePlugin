@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/18374/plugins/sfFilebasePlugin/lib/form/doctrine
+END
+PluginsfFilebaseFileForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/18375/plugins/sfFilebasePlugin/lib/form/doctrine/PluginsfFilebaseFileForm.class.php
+END
+PluginsfFilebaseDirectoryForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/!svn/ver/18375/plugins/sfFilebasePlugin/lib/form/doctrine/PluginsfFilebaseDirectoryForm.class.php
+END
+PluginsfFilebaseTagForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/18372/plugins/sfFilebasePlugin/lib/form/doctrine/PluginsfFilebaseTagForm.class.php
+END
