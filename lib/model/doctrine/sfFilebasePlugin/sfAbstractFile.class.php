@@ -5,4 +5,5 @@
  */
 class sfAbstractFile extends PluginsfAbstractFile
 {
+  
 }

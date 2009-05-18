@@ -35,6 +35,15 @@ abstract class PluginsfFilebaseFileForm extends BasesfFilebaseFileForm
     }
     else
     {
+      unset($this->widgetSchema['pathname']);
+      unset($this->validatorSchema['pathname']);
+      $this->widgetSchema['new_name'] = new sfWidgetFormInput(array('default'=>sfFilebasePlugin::getInstance()->getFilebaseFile($this->getObject()->getPathname())->getFilename()));
+      $this->validatorSchema['new_name'] = new sfValidatorAnd(
+        array (
+          new sfValidatorString(),
+          new sfValidatorRegex(array('pattern'=>'#^[^\s\\\/]+$#i'))
+        )
+      );
       $tag_string = $this->getObject()->getTagsAsString();
       $this->widgetSchema['tags']->setDefault($tag_string);
     }
@@ -55,8 +64,33 @@ abstract class PluginsfFilebaseFileForm extends BasesfFilebaseFileForm
   {
     if(empty($values['sf_filebase_directory_id']))
       $values['sf_filebase_directory_id'] = null;
-
     return parent::processValues($values);
+  }
+
+  public function doSave($con = null)
+  {
+    $con === null && $con = Doctrine::getConnectionByTableName($this->getObject()->getTable()->getTableName());
+    try
+    {
+      $con->beginTransaction();
+      if(!$this->isNew())
+      {
+        $old_file = sfFilebasePlugin::getInstance()->getFilebaseFile($this->getObject()->getPathname());
+        $old_name = $old_file->getFilename();
+        $new_name = $this->getValue('new_name');
+        if($new_name != $old_name)
+        {
+          $this->getObject()->setPathname($old_file->getPath() . '/' . $new_name);
+        }
+      }
+      parent::doSave($con);
+      $con->commit();
+    }
+    catch (Exception $e)
+    {
+      $con->rollback();
+      throw $e;
+    }
   }
 
   /**
