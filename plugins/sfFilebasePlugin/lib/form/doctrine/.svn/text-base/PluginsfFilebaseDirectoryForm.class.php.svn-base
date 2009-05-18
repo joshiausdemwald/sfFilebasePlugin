@@ -12,9 +12,11 @@ abstract class PluginsfFilebaseDirectoryForm extends BasesfFilebaseDirectoryForm
   public function setup()
   {
     parent::setup();
+    unset($this->widgetSchema['path']);
     unset($this->widgetSchema['hash']);
     unset($this->widgetSchema['type']);
     unset($this->widgetSchema['level']);
+    unset($this->validatorSchema['path']);
     unset($this->validatorSchema['type']);
     unset($this->validatorSchema['hash']);
     unset($this->validatorSchema['level']);
@@ -25,7 +27,7 @@ abstract class PluginsfFilebaseDirectoryForm extends BasesfFilebaseDirectoryForm
       new sfValidatorRegex(array('pattern'=>'#^[^, ;]([^, ;]+[,; ] ?)*?[^, ;]+$#'))
     ), array('required'=>false));
 
-    $this->validatorSchema['pathname'] = new sfValidatorAnd(
+    $this->validatorSchema['filename'] = new sfValidatorAnd(
       array(
         new sfValidatorString(),
         new sfValidatorRegex(array('pattern'=>'#^[\w\-\.]+$#'))
@@ -33,18 +35,8 @@ abstract class PluginsfFilebaseDirectoryForm extends BasesfFilebaseDirectoryForm
       array('required'=>true)
     );
 
-    $dirs = Doctrine_Query::create()->
-                            select('*')->
-                            from('sfFilebaseDirectory d')->
-                            execute();
-
     if(!$this->isNew())
     {
-      unset($this->widgetSchema['sf_filebase_directories_id']);
-      unset($this->validatorSchema['sf_filebase_directories_id']);
-      unset($this->widgetSchema['pathname']);
-      unset($this->validatorSchema['pathname']);
-      
       $tag_string = $this->getObject()->getTagsAsString();
       $this->widgetSchema['tags']->setDefault($tag_string);
     }
@@ -59,32 +51,5 @@ abstract class PluginsfFilebaseDirectoryForm extends BasesfFilebaseDirectoryForm
   public function updateTagsColumn($tags)
   {
     $this->getObject()->setTags(sfFilebaseTagTable::splitTags($tags));
-  }
-
-  public function processValues($values = null)
-  {
-    if($this->isNew())
-    {
-      $filebase = sfFilebasePlugin::getInstance();
-      $name   = $values['pathname'];
-      $dir_id = $values['sf_filebase_directories_id'];
-      $path = null;
-      if($dir_id===null)
-      {
-        $path = $filebase;
-      }
-      else
-      {
-        $dir_object = Doctrine_Query::create()->select('*')->
-                      from('sfFilebaseDirectory d')->
-                      where('d.id='.$dir_id)->execute()->get(0);
-        $path = $filebase->getFilebaseFile($dir_object->getPathname());
-      }
-      $pathname = $filebase->mkDir($path . '/' . $name, 0777);
-      $values['pathname']  = $pathname->getRelativePathFromFilebaseDirectory();
-      $this->getObject()->setLevel($pathname->getNestingLevel());
-      $this->getObject()->setHash($pathname->getHash());
-    }
-    return parent::processValues($values);
   }
 }

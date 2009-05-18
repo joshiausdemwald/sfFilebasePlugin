@@ -5,79 +5,46 @@
  */
 abstract class PluginsfFilebaseFile extends BasesfFilebaseFile
 {
-  protected $original_filename = null;
-  protected $original_path     = null;
-  
-  public function set($fieldName, $value, $load = true)
+  public function preDelete($event)
   {
-    switch($fieldName)
-    {
-      case 'filename';
-        if($this->original_filename === null)
-        {
-          $this->original_filename = $this->getFilename();
-        }
-        break;
-      case 'path':
-        if($this->original_path === null)
-        {
-          $this->original_path = $this->getPath();
-        }
-    }
-    return parent::set($fieldName, $value, $load);
-  }
-  
-  public function delete(Doctrine_Connection $conn = null)
-  {
-    $conn === null && $conn = Doctrine::getConnectionByTableName($this->getTable()->getTableName());
-    
-    try 
-    {
-      $conn->beginTransaction();
-      $f = sfFilebasePlugin::getInstance();
-      $f[$this->getPathname()]->delete();
-      parent::delete($conn);
-      $conn->commit();
-    }
-    catch (Exception $e)
-    {
-      $conn->rollback();
-      throw $e;
-    }
+    $f = sfFilebasePlugin::getInstance();
+    $f[$this->getPathname()]->delete();
   }
 
-  public function save(Doctrine_Connection $conn = null)
+  public function preSave($event)
   {
-    $conn === null && $conn = Doctrine::getConnectionByTableName($this->getTable()->getTableName());
-    try
+    parent::preSave($event);
+    
+    if(!$this->isNew())
     {
-      $conn->beginTransaction();
-      if(!$this->isNew())
+      $f = sfFilebasePlugin::getInstance();
+
+      if($this->original_path !== false)
       {
-        if($this->original_path !== null)
-        {
-          $f = sfFilebasePlugin::getInstance();
-          $old_pathname = $f[$this->original_path . '/' . $this->getFilename()];
-          $new_pathname = $old_pathname->move($this->getPath());
-          $this->setHash($new_pathname->getHash());
-        }
-        if($this->original_filename !== null)
-        {
-          $f = sfFilebasePlugin::getInstance();
-          $old_pathname = $f[$this->getPath() . '/' . $this->original_filename];
-          $new_pathname = $old_pathname->rename($this->getFilename());
-          $this->setHash($new_pathname->getHash());
-        }
+        $dir_object = Doctrine_Query::create()->
+            select('*')->
+            from('sfFilebaseDirectory d')->
+            where('CONCAT(d.path, \'/\', d.filename)=?')->
+            execute(array($this->getPath()))->get(0);
+
+        $source_file_name = $this->original_filename === false ? $this->getFilename() : $this->original_filename;
+
+        $new_pathname = $f->moveFile(
+          $this->original_path . '/' . $source_file_name,
+          $this->getPath() . '/' . $source_file_name
+        );
+        $this->setParentDirectory($dir_object);
+        $this->setHash($new_pathname->getHash());
+        $this->original_path = false;
       }
-      parent::save($conn);
-      $this->original_filename = null;
-      $this->original_path     = null;
-      $conn->commit();
-    }
-    catch (Exception $e)
-    {
-      $conn->rollback();
-      throw $e;
+
+      if($this->original_filename !== false)
+      {
+        $old_pathname = $f[$this->getPath() . '/' . $this->original_filename];
+        $new_pathname = $old_pathname->rename($this->getFilename());
+        $this->setHash($new_pathname->getHash());
+        $this->original_filename = false;
+      }
     }
   }
 }

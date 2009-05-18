@@ -258,6 +258,7 @@ class sfFilebasePluginFile extends SplFileInfo
   /**
    * Trys to delete a file from fs.
    *
+   * @see sfFilebasePlugin::delete()
    * @throws sfFilebasePluginException
    */
   public function delete()
@@ -301,6 +302,19 @@ class sfFilebasePluginFile extends SplFileInfo
   public function copy($destination, $overwrite=false)
   {
     return $this->filebase->copyFile($this, $destination, $overwrite);
+  }
+
+
+  /**
+   * Moves a file to the given destination file or directory.
+   *
+   * @param mixed sfFilebasePluginFile | string destination
+   * @param boolean $allow_overwrite: Move and replace existing files
+   * @return sfFilebasePluginFile $moved_file
+   */
+  public function move($destination, $allow_overwrite = false)
+  {
+    return $this->filebase->moveFile($this, $destination, $allow_overwrite);
   }
 
   /**

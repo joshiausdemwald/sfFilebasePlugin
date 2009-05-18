@@ -23,6 +23,6 @@ generator:
       filter:  ~
       form:    ~
       edit:
-        display: [filename, sf_filebase_directories_id, comment]
+        display: [filename, path, sf_filebase_directories_id, comment, tags]
       new:
-        display: [filename, sf_filebase_directories_id, comment]
+        display: [filename, sf_filebase_directories_id, comment, tags]

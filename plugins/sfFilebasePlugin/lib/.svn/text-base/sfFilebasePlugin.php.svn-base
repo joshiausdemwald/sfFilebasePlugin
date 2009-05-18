@@ -244,7 +244,7 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
     {
       if(!$destination->isDir())               throw new sfFilebasePluginException(sprintf('Error copying file %s: Destination is not a directory.', $destination->getPathname()));
       if(!$destination->isWritable())          throw new sfFilebasePluginException(sprintf('Error copying file %s: Destination is write protected.', $destination->getPathname()));
-      if(!$this->isInFilebase($destination))   throw new sfFilebasePluginException('FilebaseFile %s does not belong to filebase %s, access denied due to security issues.', $destination->getPathname(), $this->getPathname());
+      if(!$this->isInFilebase($destination))   throw new sfFilebasePluginException(sprintf('FilebaseFile %s does not belong to filebase %s, access denied due to security issues.', $destination->getPathname(), $this->getPathname()));
       foreach(new RecursiveIteratorIterator($source, RecursiveIteratorIterator::SELF_FIRST) AS $file)
       {
         if($file instanceof sfFilebasePluginDirectory)
@@ -292,7 +292,7 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
         if(!$destination->isWritable())                                 throw new sfFilebasePluginException(sprintf('Destination file %s is write protected.', $destination->getPathname()));
         if($destination instanceof sfFilebasePluginDirectory)
         {
-          $destination = $this->getFilebaseFile($destination . '/' . $source->getFilename());
+          $destination = $this->getFilebaseFile($destination->getPathname() . '/' . $source->getFilename());
         }
         else
         {
@@ -302,13 +302,13 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
       else
       {
         $dest_path = $this->getFilebaseFile($destination->getPath());
-        if(!$dest_path->fileExists())                                   throw new sfFilebasePluginException('Destination path %s does not exist.', $dest_path->getPathname());
-        if(!$dest_path->isWritable())                                   throw new sfFilebasePluginException('Destination path %s is write protected.', $dest_path->getPathname());
+        if(!$dest_path->fileExists())                                   throw new sfFilebasePluginException(sprintf('Destination path %s does not exist.', $dest_path->getPathname()));
+        if(!$dest_path->isWritable())                                   throw new sfFilebasePluginException(sprintf('Destination path %s is write protected.', $dest_path->getPathname()));
       }
 
       // Only check target. Files may be copied from any location.
-      if(!$this->isInFilebase($destination))                            throw new sfFilebasePluginException('FilebaseFile %s does not belong to filebase %s, access denied due to security issues.', $destination->getPathname(), $this->getPathname());
-      if(!@copy($source->getPathname(), $destination->getPathname()))   throw new sfFilebasePluginException(sprintf('Error copying file %s to %s: %s', $source->getPathname(), $destination->getPathname(), implode("\n", error_get_last())));
+      if(!$this->isInFilebase($destination))                            throw new sfFilebasePluginException(sprintf('FilebaseFile %s does not belong to filebase %s, access denied due to security issues.', $destination->getPathname(), $this->getPathname()));
+      if(!@copy($source->getPathname(), $destination->getPathname()))   throw new sfFilebasePluginException(sprintf('Error copying file %s to %s.', $source->getPathname(), $destination->getPathname()));
     }
     return $destination;
   }
@@ -318,15 +318,21 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
    *
    * @param mixed sfFilebasePluginFile | string $source:      The source file-name
    * @param mixed sfFilebasePluginFile | string $destination: The target file-name
+   *              Target can be only a filename, than the path of the source file
+   *              name will be prepended. If it is a full path name or an instance of
+   *              sfFilebasePluginFile, the destinantions path will be ignored and also
+   *              the source paths filename will be prepended.
+   * @param boolean $override: true if existing destination shall be overwritten.
    * @throws sfFilebasePluginException
    * @return sfFilebasePluginFile $file
    */
-  public function renameFile($source, $new_name, $overwrite = true)
+  public function renameFile($source, $new_name, $overwrite = false)
   {
     $source       = $this->getFilebaseFile($source);
-    $destination  = $this->getFilebaseFile($source->getPath() . '/' . $new_name);
-    if(!$this->isInFilebase($source))         throw new sfFilebasePluginException('FilebaseFile %s does not belong to filebase %s, access denied due to security issues.', $source->getPathname(), $this->getFilebase()->getPathname());
-    if(!$this->isInFilebase($destination))    throw new sfFilebasePluginException('FilebaseFile %s does not belong to filebase %s, access denied due to security issues.', $destination->getPathname(), $this->getPathname());
+    $new_name     = $this->getFilebaseFile($new_name);
+    $destination  = $this->getFilebaseFile($source->getPath() . '/' . $new_name->getFilename());
+    if(!$this->isInFilebase($source))         throw new sfFilebasePluginException(sprintf('FilebaseFile %s does not belong to filebase %s, access denied due to security issues.', $source->getPathname(), $this->getFilebase()->getPathname()));
+    if(!$this->isInFilebase($destination))    throw new sfFilebasePluginException(sprintf('FilebaseFile %s does not belong to filebase %s, access denied due to security issues.', $destination->getPathname(), $this->getPathname()));
 
     if(!$source->fileExists())  throw new sfFilebasePluginException(sprintf('Error renaming file %s: File does not exist.', $source->getPathname()));
     if(!$source->isWritable())  throw new sfFilebasePluginException(sprintf('Error renaming file %s: Write protected.', $source->getPathname()));
@@ -703,5 +709,22 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
       }
     }
     return null;
+  }
+
+  /**
+   * Checks if this file is a child of the given filebase
+   * directory.
+   * @param mixed sfFilebaseDirectory | string $file
+   */
+  public function fileLiesWithin($needle, $haystack)
+  {
+    $needle   = $this->getFilebaseFile($needle);
+    $haystack = $this->getFilebaseFile($haystack);
+
+    if(strpos($needle->getPathname(), $haystack->getPathname()) === 0)
+    {
+      return true;
+    }
+    return false;
   }
 }

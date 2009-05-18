@@ -64,7 +64,7 @@ class sfFilebasePluginDirectory extends sfFilebasePluginFile implements Iterator
    * @param mixed sfFilebasePluginFile | string $path_name
    * @return sfFilebasePluginDirectory $dir
    */
-  public function rename($path_name, $overwrite = true)
+  public function rename($path_name, $overwrite = false)
   {
     return new sfFilebasePluginDirectory(parent::rename($path_name, $overwrite), $this->getFilebase());
   }

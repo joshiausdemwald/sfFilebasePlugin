@@ -5,5 +5,53 @@
  */
 abstract class PluginsfFilebaseDirectory extends BasesfFilebaseDirectory
 {
+  public function preSave($event)
+  {
+    parent::preSave($event);
+    $f = sfFilebasePlugin::getInstance();
+    if($this->isNew())
+    {
+      $p = $this->getParentDirectory();
+      $new_dir_path = $p->getPathname() ?
+        $p->getPathname() . '/' . $this->getFilename() :
+        $this->getFilename();
+      
+      $new_dir = $f->mkDir($new_dir_path);
+      $this->setPath($new_dir->getPath());
+      $this->setHash($new_dir->getHash());
+      $this->setLevel($new_dir->getNestingLevel());
+    }
+    else
+    {
+      if($this->original_path !== false)
+      {
+        $source_file_name = $this->original_filename === false ? $this->getFilename() : $this->original_filename;
 
+        $source = $f[$this->original_path . '/' . $source_file_name];
+        $destination = $f->getFilebaseFile($this->getPath() . '/' . $source_file_name);
+
+        if($destination->liesWithin($source))
+        {
+          exit;
+        } 
+        else
+        {
+          $new_file = $f->moveFile(
+            $source,
+            $destination
+          );
+          $this->setHash($new_file->getHash());
+          $this->setLevel($new_file->getNestingLevel());
+        }
+        $this->original_path = false;
+      }
+      
+      if($this->original_filename !== false)
+      {
+        $new_file = $f->renameFile($this->getPath() . '/' . $this->original_filename, $this->getPathname());
+        $this->setHash($new_file->getHash());
+        $this->original_filename = false;
+      }
+    }
+  }
 }

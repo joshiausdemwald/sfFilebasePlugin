@@ -82,7 +82,7 @@
 <h1>PluginsfAbstractFile.class.php</h1>
 <h2>Warnings:</h2><br>
 <b>Warning on line 6</b> - no @package tag was used in a DocBlock for class PluginsfAbstractFile<br>
-<b>Warning on line 64</b> - File "/home/joshi/www/test/plugins/sfFilebasePlugin/lib/model/doctrine/PluginsfAbstractFile.class.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<b>Warning on line 115</b> - File "/home/joshi/www/test/plugins/sfFilebasePlugin/lib/model/doctrine/PluginsfAbstractFile.class.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
 <a name="PluginsfAbstractFileForm.class.php"></a>
 <h1>PluginsfAbstractFileForm.class.php</h1>
 <h2>Warnings:</h2><br>
@@ -100,7 +100,7 @@
 <h1>PluginsfFilebaseDirectory.class.php</h1>
 <h2>Warnings:</h2><br>
 <b>Warning on line 6</b> - no @package tag was used in a DocBlock for class PluginsfFilebaseDirectory<br>
-<b>Warning on line 8</b> - File "/home/joshi/www/test/plugins/sfFilebasePlugin/lib/model/doctrine/PluginsfFilebaseDirectory.class.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<b>Warning on line 56</b> - File "/home/joshi/www/test/plugins/sfFilebasePlugin/lib/model/doctrine/PluginsfFilebaseDirectory.class.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
 <a name="PluginsfFilebaseDirectoryForm.class.php"></a>
 <h1>PluginsfFilebaseDirectoryForm.class.php</h1>
 <h2>Warnings:</h2><br>
@@ -118,7 +118,7 @@
 <h1>PluginsfFilebaseFile.class.php</h1>
 <h2>Warnings:</h2><br>
 <b>Warning on line 6</b> - no @package tag was used in a DocBlock for class PluginsfFilebaseFile<br>
-<b>Warning on line 82</b> - File "/home/joshi/www/test/plugins/sfFilebasePlugin/lib/model/doctrine/PluginsfFilebaseFile.class.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<b>Warning on line 49</b> - File "/home/joshi/www/test/plugins/sfFilebasePlugin/lib/model/doctrine/PluginsfFilebaseFile.class.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
 <a name="PluginsfFilebaseFileForm.class.php"></a>
 <h1>PluginsfFilebaseFileForm.class.php</h1>
 <h2>Warnings:</h2><br>
@@ -236,7 +236,7 @@
 <h2>Warnings:</h2><br>
 <b>Warning on line 24</b> - no @package tag was used in a DocBlock for class sfFilebasePluginValidatorFile<br>
 	<p class="notes" id="credit">
-		Documentation generated on Mon, 18 May 2009 14:29:47 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Mon, 18 May 2009 18:23:01 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</body>
 </html>

@@ -44,7 +44,7 @@ abstract class PluginsfAbstractFile extends BasesfAbstractFile
 
   public function __toString()
   {
-    return (string)$this->getPathname();
+    return (string)$this->getFilename();
   }
 
   /**
@@ -56,5 +56,10 @@ abstract class PluginsfAbstractFile extends BasesfAbstractFile
     $p = $this->getsfFilebaseDirectoriesId();
     return empty($p) ? '' :
             link_to($this->getParentDirectory()->getPathname(), 'sf_filebase_directory_edit', $this->getParentDirectory());
+  }
+
+  public function getPathname()
+  {
+    return $this->getPath() . '/' . $this->getFilename();
   }
 }

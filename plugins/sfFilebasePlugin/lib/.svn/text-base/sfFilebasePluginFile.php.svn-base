@@ -287,7 +287,7 @@ class sfFilebasePluginFile extends SplFileInfo
    * @throws sfFilebasePluginException
    * @return sfFilebasePluginFile $file
    */
-  public function rename($new_name, $overwrite = true)
+  public function rename($new_name, $overwrite = false)
   {
     return $this->filebase->renameFile($this, $new_name, $overwrite);
   }
@@ -460,5 +460,18 @@ class sfFilebasePluginFile extends SplFileInfo
   {
     $rel_path = $this->getRelativePathFromFilebaseDirectory();
     return count(split('/', $rel_path));
+  }
+
+  /**
+   * Checks if this file is a child of the given filebase
+   * directory.
+   *
+   * @see sfFilebasePlugin::fileLiesWithin
+   * @param mixed sfFilebaseDirectory | string $file
+   * @return boolean
+   */
+  public function liesWithin($file)
+  {
+    return $this->filebase->fileLiesWithin($this, $file);
   }
 }
