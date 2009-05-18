@@ -5,6 +5,28 @@
  */
 abstract class PluginsfFilebaseFile extends BasesfFilebaseFile
 {
+  protected $original_filename = null;
+  protected $original_path     = null;
+  
+  public function set($fieldName, $value, $load = true)
+  {
+    switch($fieldName)
+    {
+      case 'filename';
+        if($this->original_filename === null)
+        {
+          $this->original_filename = $this->getFilename();
+        }
+        break;
+      case 'path':
+        if($this->original_path === null)
+        {
+          $this->original_path = $this->getPath();
+        }
+    }
+    return parent::set($fieldName, $value, $load);
+  }
+  
   public function delete(Doctrine_Connection $conn = null)
   {
     $conn === null && $conn = Doctrine::getConnectionByTableName($this->getTable()->getTableName());
@@ -32,20 +54,24 @@ abstract class PluginsfFilebaseFile extends BasesfFilebaseFile
       $conn->beginTransaction();
       if(!$this->isNew())
       {
-        $fields = $this->getModified();
-        if(isset($fields['pathname']))
+        if($this->original_path !== null)
         {
-          $o = Doctrine_Query::create()->select('*')->from(get_class($this) . ' f')->
-                where('f.id='.$this->getId())->execute()->get(0);
-          
-          $old_pathname = $o->getPathname();
           $f = sfFilebasePlugin::getInstance();
-          $new_name = $f->getFilebaseFile($fields['pathname'])->getFilename();
-          $f[$old_pathname]->rename($new_name);
-          $this->setPathname($fields['pathname']);
+          $old_pathname = $f[$this->original_path . '/' . $this->getFilename()];
+          $new_pathname = $old_pathname->move($this->getPath());
+          $this->setHash($new_pathname->getHash());
+        }
+        if($this->original_filename !== null)
+        {
+          $f = sfFilebasePlugin::getInstance();
+          $old_pathname = $f[$this->getPath() . '/' . $this->original_filename];
+          $new_pathname = $old_pathname->rename($this->getFilename());
+          $this->setHash($new_pathname->getHash());
         }
       }
       parent::save($conn);
+      $this->original_filename = null;
+      $this->original_path     = null;
       $conn->commit();
     }
     catch (Exception $e)

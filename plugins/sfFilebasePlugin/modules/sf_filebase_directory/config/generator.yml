@@ -22,7 +22,7 @@ generator:
       list:
         display: [pathname, comment]
       filter:
-        display: [sf_filebase_directories_id, pathname, comment]
+        display: [sf_filebase_directories_id, filename, comment]
       form:    ~
       edit:    ~
       new:     ~

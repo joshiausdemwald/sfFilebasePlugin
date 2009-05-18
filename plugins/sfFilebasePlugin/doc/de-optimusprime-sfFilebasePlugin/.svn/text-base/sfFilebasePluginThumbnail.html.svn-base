@@ -330,6 +330,7 @@
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodgetHumanReadableFileType">sfFilebasePluginFile::getHumanReadableFileType()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodgetMimeType">sfFilebasePluginFile::getMimeType()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodgetMTime">sfFilebasePluginFile::getMTime()</a></span><br>
+													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodgetNestingLevel">sfFilebasePluginFile::getNestingLevel()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodgetRelativePathFromFilebaseDirectory">sfFilebasePluginFile::getRelativePathFromFilebaseDirectory()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodgetSize">sfFilebasePluginFile::getSize()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodisHidden">sfFilebasePluginFile::isHidden()</a></span><br>
@@ -337,6 +338,7 @@
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodisLink">sfFilebasePluginFile::isLink()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodisRWritable">sfFilebasePluginFile::isRWritable()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodisWebImage">sfFilebasePluginFile::isWebImage()</a></span><br>
+													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodmove">sfFilebasePluginFile::move()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodopenFile">sfFilebasePluginFile::openFile()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodrename">sfFilebasePluginFile::rename()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#method__toString">sfFilebasePluginFile::__toString()</a></span><br>
@@ -379,7 +381,7 @@
 
 
 	<p class="notes" id="credit">
-		Documentation generated on Sat, 16 May 2009 18:23:48 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Mon, 18 May 2009 14:29:46 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</div></body>
 </html>

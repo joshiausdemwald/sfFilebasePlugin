@@ -8,17 +8,24 @@
 											</head>
 		<body>
 						<a href="#Post-parsing">Post-parsing</a><br>
-<a href="#PluginSfFilebaseDirectoryPeer.php">PluginSfFilebaseDirectoryPeer.php</a><br>
-<a href="#PluginSfFilebaseFile.php">PluginSfFilebaseFile.php</a><br>
-<a href="#PluginSfFilebaseFilePeer.php">PluginSfFilebaseFilePeer.php</a><br>
-<a href="#sfFilebaseDirectory.php">sfFilebaseDirectory.php</a><br>
-<a href="#sfFilebaseDirectoryForm.class.php">sfFilebaseDirectoryForm.class.php</a><br>
-<a href="#sfFilebaseDirectoryFormFilter.class.php">sfFilebaseDirectoryFormFilter.class.php</a><br>
-<a href="#sfFilebaseDirectoryPeer.php">sfFilebaseDirectoryPeer.php</a><br>
-<a href="#sfFilebaseFile.php">sfFilebaseFile.php</a><br>
-<a href="#sfFilebaseFileForm.class.php">sfFilebaseFileForm.class.php</a><br>
-<a href="#sfFilebaseFileFormFilter.class.php">sfFilebaseFileFormFilter.class.php</a><br>
-<a href="#sfFilebaseFilePeer.php">sfFilebaseFilePeer.php</a><br>
+<a href="#BasesfFilebaseFileFormFilter.class.php">BasesfFilebaseFileFormFilter.class.php</a><br>
+<a href="#BasesfFilebaseTagFormFilter.class.php">BasesfFilebaseTagFormFilter.class.php</a><br>
+<a href="#PluginsfAbstractFile.class.php">PluginsfAbstractFile.class.php</a><br>
+<a href="#PluginsfAbstractFileForm.class.php">PluginsfAbstractFileForm.class.php</a><br>
+<a href="#PluginsfAbstractFileFormFilter.class.php">PluginsfAbstractFileFormFilter.class.php</a><br>
+<a href="#PluginsfAbstractFileTable.class.php">PluginsfAbstractFileTable.class.php</a><br>
+<a href="#PluginsfFilebaseDirectory.class.php">PluginsfFilebaseDirectory.class.php</a><br>
+<a href="#PluginsfFilebaseDirectoryForm.class.php">PluginsfFilebaseDirectoryForm.class.php</a><br>
+<a href="#PluginsfFilebaseDirectoryFormFilter.class.php">PluginsfFilebaseDirectoryFormFilter.class.php</a><br>
+<a href="#PluginsfFilebaseDirectoryTable.class.php">PluginsfFilebaseDirectoryTable.class.php</a><br>
+<a href="#PluginsfFilebaseFile.class.php">PluginsfFilebaseFile.class.php</a><br>
+<a href="#PluginsfFilebaseFileForm.class.php">PluginsfFilebaseFileForm.class.php</a><br>
+<a href="#PluginsfFilebaseFileFormFilter.class.php">PluginsfFilebaseFileFormFilter.class.php</a><br>
+<a href="#PluginsfFilebaseFileTable.class.php">PluginsfFilebaseFileTable.class.php</a><br>
+<a href="#PluginsfFilebaseTag.class.php">PluginsfFilebaseTag.class.php</a><br>
+<a href="#PluginsfFilebaseTagForm.class.php">PluginsfFilebaseTagForm.class.php</a><br>
+<a href="#PluginsfFilebaseTagFormFilter.class.php">PluginsfFilebaseTagFormFilter.class.php</a><br>
+<a href="#PluginsfFilebaseTagTable.class.php">PluginsfFilebaseTagTable.class.php</a><br>
 <a href="#sfFilebasePlugin.php">sfFilebasePlugin.php</a><br>
 <a href="#sfFilebasePluginDirectory.php">sfFilebasePluginDirectory.php</a><br>
 <a href="#sfFilebasePluginException.php">sfFilebasePluginException.php</a><br>
@@ -40,65 +47,109 @@
 <a name="Post-parsing"></a>
 <h1>Post-parsing</h1>
 <h2>Warnings:</h2><br>
-<b>Warning</b> - Class sfFilebaseFileForm parent BasesfFilebaseFileForm not found<br>
-<b>Warning</b> - Class sfFilebaseDirectoryForm parent BasesfFilebaseDirectoryForm not found<br>
-<b>Warning</b> - Class sfFilebaseFileFormFilter parent BasesfFilebaseFileFormFilter not found<br>
+<b>Warning</b> - Class PluginsfFilebaseTagForm parent BasesfFilebaseTagForm not found<br>
+<b>Warning</b> - Class PluginsfFilebaseFileForm parent BasesfFilebaseFileForm not found<br>
+<b>Warning</b> - Class PluginsfAbstractFileForm parent BasesfAbstractFileForm not found<br>
+<b>Warning</b> - Class PluginsfAbstractFileFormFilter parent BasesfAbstractFileFormFilter not found<br>
+<b>Warning</b> - Class BasesfFilebaseDirectoryFormFilter parent BaseFormFilterPropel not found<br>
+<b>Warning</b> - Class BasesfFilebaseTagFormFilter parent BaseFormFilterPropel not found<br>
+<b>Warning</b> - Class BasesfFilebaseFileFormFilter parent BaseFormFilterPropel not found<br>
 <b>Warning</b> - Class sfFilebasePluginValidatorFile parent sfValidatorFile not found<br>
-<b>Warning</b> - Class PluginSfFilebaseFilePeer parent BasesfFilebaseFilePeer not found<br>
-<b>Warning</b> - Class PluginSfFilebaseDirectoryPeer parent BasesfFilebaseDirectoryPeer not found<br>
-<b>Warning</b> - Class PluginSfFilebaseDirectory parent BasesfFilebaseDirectory not found<br>
-<b>Warning</b> - Class PluginSfFilebaseFile parent BasesfFilebaseFile not found<br>
+<b>Warning</b> - Class PluginsfAbstractFile parent BasesfAbstractFile not found<br>
+<b>Warning</b> - Class PluginsfFilebaseDirectoryTable parent Doctrine_Table not found<br>
+<b>Warning</b> - Class PluginsfFilebaseFile parent BasesfFilebaseFile not found<br>
+<b>Warning</b> - Class PluginsfFilebaseTagTable parent Doctrine_Table not found<br>
+<b>Warning</b> - Class PluginsfFilebaseFileTable parent Doctrine_Table not found<br>
+<b>Warning</b> - Class PluginsfAbstractFileTable parent Doctrine_Table not found<br>
+<b>Warning</b> - Class PluginsfFilebaseDirectory parent BasesfFilebaseDirectory not found<br>
+<b>Warning</b> - Class PluginsfFilebaseTag parent BasesfFilebaseTag not found<br>
 <b>Warning</b> - Class sfFilebasePluginUploadedFile parent sfValidatedFile not found<br>
-<b>Warning</b> - Class sfFilebaseDirectoryFormFilter parent BasesfFilebaseDirectoryFormFilter not found<br>
+<b>Warning</b> - Class PluginsfFilebaseDirectoryForm parent BasesfFilebaseDirectoryForm not found<br>
 <b>Warning</b> - Class sfFilebasePluginWebRequest parent sfWebRequest not found<br>
-<a name="PluginSfFilebaseDirectory.php"></a>
-<h1>PluginSfFilebaseDirectory.php</h1>
+<a name="BasesfFilebaseDirectoryFormFilter.class.php"></a>
+<h1>BasesfFilebaseDirectoryFormFilter.class.php</h1>
 <h2>Warnings:</h2><br>
-<b>Warning on line 13</b> - DocBlock would be page-level, but precedes class "PluginSfFilebaseDirectory", use another DocBlock to document the file<br>
-<a name="PluginSfFilebaseDirectoryPeer.php"></a>
-<h1>PluginSfFilebaseDirectoryPeer.php</h1>
+<b>Warning on line 52</b> - File "/home/joshi/www/test/plugins/sfFilebasePlugin/lib/filter/base/BasesfFilebaseDirectoryFormFilter.class.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="BasesfFilebaseFileFormFilter.class.php"></a>
+<h1>BasesfFilebaseFileFormFilter.class.php</h1>
 <h2>Warnings:</h2><br>
-<b>Warning on line 13</b> - DocBlock would be page-level, but precedes class "PluginSfFilebaseDirectoryPeer", use another DocBlock to document the file<br>
-<a name="PluginSfFilebaseFile.php"></a>
-<h1>PluginSfFilebaseFile.php</h1>
+<b>Warning on line 52</b> - File "/home/joshi/www/test/plugins/sfFilebasePlugin/lib/filter/base/BasesfFilebaseFileFormFilter.class.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="BasesfFilebaseTagFormFilter.class.php"></a>
+<h1>BasesfFilebaseTagFormFilter.class.php</h1>
 <h2>Warnings:</h2><br>
-<b>Warning on line 13</b> - DocBlock would be page-level, but precedes class "PluginSfFilebaseFile", use another DocBlock to document the file<br>
-<a name="PluginSfFilebaseFilePeer.php"></a>
-<h1>PluginSfFilebaseFilePeer.php</h1>
+<b>Warning on line 46</b> - File "/home/joshi/www/test/plugins/sfFilebasePlugin/lib/filter/base/BasesfFilebaseTagFormFilter.class.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="PluginsfAbstractFile.class.php"></a>
+<h1>PluginsfAbstractFile.class.php</h1>
 <h2>Warnings:</h2><br>
-<b>Warning on line 13</b> - DocBlock would be page-level, but precedes class "PluginSfFilebaseFilePeer", use another DocBlock to document the file<br>
-<a name="sfFilebaseDirectory.php"></a>
-<h1>sfFilebaseDirectory.php</h1>
+<b>Warning on line 6</b> - no @package tag was used in a DocBlock for class PluginsfAbstractFile<br>
+<b>Warning on line 64</b> - File "/home/joshi/www/test/plugins/sfFilebasePlugin/lib/model/doctrine/PluginsfAbstractFile.class.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="PluginsfAbstractFileForm.class.php"></a>
+<h1>PluginsfAbstractFileForm.class.php</h1>
 <h2>Warnings:</h2><br>
-<b>Warning on line 13</b> - DocBlock would be page-level, but precedes class "sfFilebaseDirectory", use another DocBlock to document the file<br>
-<a name="sfFilebaseDirectoryForm.class.php"></a>
-<h1>sfFilebaseDirectoryForm.class.php</h1>
+<b>Warning on line 10</b> - DocBlock would be page-level, but precedes class "PluginsfAbstractFileForm", use another DocBlock to document the file<br>
+<a name="PluginsfAbstractFileFormFilter.class.php"></a>
+<h1>PluginsfAbstractFileFormFilter.class.php</h1>
 <h2>Warnings:</h2><br>
-<b>Warning on line 13</b> - DocBlock would be page-level, but precedes class "sfFilebaseDirectoryForm", use another DocBlock to document the file<br>
-<a name="sfFilebaseDirectoryFormFilter.class.php"></a>
-<h1>sfFilebaseDirectoryFormFilter.class.php</h1>
+<b>Warning on line 10</b> - DocBlock would be page-level, but precedes class "PluginsfAbstractFileFormFilter", use another DocBlock to document the file<br>
+<a name="PluginsfAbstractFileTable.class.php"></a>
+<h1>PluginsfAbstractFileTable.class.php</h1>
 <h2>Warnings:</h2><br>
-<b>Warning on line 14</b> - DocBlock would be page-level, but precedes class "sfFilebaseDirectoryFormFilter", use another DocBlock to document the file<br>
-<a name="sfFilebaseDirectoryPeer.php"></a>
-<h1>sfFilebaseDirectoryPeer.php</h1>
+<b>Warning on line 5</b> - no @package tag was used in a DocBlock for class PluginsfAbstractFileTable<br>
+<b>Warning on line 7</b> - File "/home/joshi/www/test/plugins/sfFilebasePlugin/lib/model/doctrine/PluginsfAbstractFileTable.class.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="PluginsfFilebaseDirectory.class.php"></a>
+<h1>PluginsfFilebaseDirectory.class.php</h1>
 <h2>Warnings:</h2><br>
-<b>Warning on line 13</b> - DocBlock would be page-level, but precedes class "sfFilebaseDirectoryPeer", use another DocBlock to document the file<br>
-<a name="sfFilebaseFile.php"></a>
-<h1>sfFilebaseFile.php</h1>
+<b>Warning on line 6</b> - no @package tag was used in a DocBlock for class PluginsfFilebaseDirectory<br>
+<b>Warning on line 8</b> - File "/home/joshi/www/test/plugins/sfFilebasePlugin/lib/model/doctrine/PluginsfFilebaseDirectory.class.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="PluginsfFilebaseDirectoryForm.class.php"></a>
+<h1>PluginsfFilebaseDirectoryForm.class.php</h1>
 <h2>Warnings:</h2><br>
-<b>Warning on line 13</b> - DocBlock would be page-level, but precedes class "sfFilebaseFile", use another DocBlock to document the file<br>
-<a name="sfFilebaseFileForm.class.php"></a>
-<h1>sfFilebaseFileForm.class.php</h1>
+<b>Warning on line 10</b> - DocBlock would be page-level, but precedes class "PluginsfFilebaseDirectoryForm", use another DocBlock to document the file<br>
+<a name="PluginsfFilebaseDirectoryFormFilter.class.php"></a>
+<h1>PluginsfFilebaseDirectoryFormFilter.class.php</h1>
 <h2>Warnings:</h2><br>
-<b>Warning on line 13</b> - DocBlock would be page-level, but precedes class "sfFilebaseFileForm", use another DocBlock to document the file<br>
-<a name="sfFilebaseFileFormFilter.class.php"></a>
-<h1>sfFilebaseFileFormFilter.class.php</h1>
+<b>Warning on line 10</b> - DocBlock would be page-level, but precedes class "PluginsfFilebaseDirectoryFormFilter", use another DocBlock to document the file<br>
+<a name="PluginsfFilebaseDirectoryTable.class.php"></a>
+<h1>PluginsfFilebaseDirectoryTable.class.php</h1>
 <h2>Warnings:</h2><br>
-<b>Warning on line 14</b> - DocBlock would be page-level, but precedes class "sfFilebaseFileFormFilter", use another DocBlock to document the file<br>
-<a name="sfFilebaseFilePeer.php"></a>
-<h1>sfFilebaseFilePeer.php</h1>
+<b>Warning on line 5</b> - no @package tag was used in a DocBlock for class PluginsfFilebaseDirectoryTable<br>
+<b>Warning on line 7</b> - File "/home/joshi/www/test/plugins/sfFilebasePlugin/lib/model/doctrine/PluginsfFilebaseDirectoryTable.class.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="PluginsfFilebaseFile.class.php"></a>
+<h1>PluginsfFilebaseFile.class.php</h1>
 <h2>Warnings:</h2><br>
-<b>Warning on line 13</b> - DocBlock would be page-level, but precedes class "sfFilebaseFilePeer", use another DocBlock to document the file<br>
+<b>Warning on line 6</b> - no @package tag was used in a DocBlock for class PluginsfFilebaseFile<br>
+<b>Warning on line 82</b> - File "/home/joshi/www/test/plugins/sfFilebasePlugin/lib/model/doctrine/PluginsfFilebaseFile.class.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="PluginsfFilebaseFileForm.class.php"></a>
+<h1>PluginsfFilebaseFileForm.class.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 10</b> - DocBlock would be page-level, but precedes class "PluginsfFilebaseFileForm", use another DocBlock to document the file<br>
+<a name="PluginsfFilebaseFileFormFilter.class.php"></a>
+<h1>PluginsfFilebaseFileFormFilter.class.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 10</b> - DocBlock would be page-level, but precedes class "PluginsfFilebaseFileFormFilter", use another DocBlock to document the file<br>
+<a name="PluginsfFilebaseFileTable.class.php"></a>
+<h1>PluginsfFilebaseFileTable.class.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 5</b> - no @package tag was used in a DocBlock for class PluginsfFilebaseFileTable<br>
+<b>Warning on line 7</b> - File "/home/joshi/www/test/plugins/sfFilebasePlugin/lib/model/doctrine/PluginsfFilebaseFileTable.class.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="PluginsfFilebaseTag.class.php"></a>
+<h1>PluginsfFilebaseTag.class.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 6</b> - no @package tag was used in a DocBlock for class PluginsfFilebaseTag<br>
+<b>Warning on line 8</b> - File "/home/joshi/www/test/plugins/sfFilebasePlugin/lib/model/doctrine/PluginsfFilebaseTag.class.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="PluginsfFilebaseTagForm.class.php"></a>
+<h1>PluginsfFilebaseTagForm.class.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 10</b> - DocBlock would be page-level, but precedes class "PluginsfFilebaseTagForm", use another DocBlock to document the file<br>
+<a name="PluginsfFilebaseTagFormFilter.class.php"></a>
+<h1>PluginsfFilebaseTagFormFilter.class.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 10</b> - DocBlock would be page-level, but precedes class "PluginsfFilebaseTagFormFilter", use another DocBlock to document the file<br>
+<a name="PluginsfFilebaseTagTable.class.php"></a>
+<h1>PluginsfFilebaseTagTable.class.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 5</b> - no @package tag was used in a DocBlock for class PluginsfFilebaseTagTable<br>
+<b>Warning on line 18</b> - File "/home/joshi/www/test/plugins/sfFilebasePlugin/lib/model/doctrine/PluginsfFilebaseTagTable.class.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
 <a name="sfFilebasePlugin.php"></a>
 <h1>sfFilebasePlugin.php</h1>
 <h2>Warnings:</h2><br>
@@ -115,12 +166,12 @@
 <h1>sfFilebasePluginFile.php</h1>
 <h2>Warnings:</h2><br>
 <b>Warning on line 20</b> - no @package tag was used in a DocBlock for class sfFilebasePluginFile<br>
-<b>Warning on line 367</b> - example file "Creating a new file:
+<b>Warning on line 381</b> - example file "          foreach ($filebase AS $file) ..." does not exist<br>
+<b>Warning on line 381</b> - example file "          if it exists in FS, or a sfFilebaseFile if not." does not exist<br>
+<b>Warning on line 381</b> - example file "Creating a new file:
           $new_file = $filebase->getFilebaseFile('path/to/new/file.txt');
           $filebase->touch($new_file);
           In Short: $filebase->touch('path/to/new/file.txt');" does not exist<br>
-<b>Warning on line 367</b> - example file "          foreach ($filebase AS $file) ..." does not exist<br>
-<b>Warning on line 367</b> - example file "          if it exists in FS, or a sfFilebaseFile if not." does not exist<br>
 <a name="sfFilebasePluginFileExif.php"></a>
 <h1>sfFilebasePluginFileExif.php</h1>
 <h2>Warnings:</h2><br>
@@ -159,8 +210,8 @@
 <h1>sfFilebasePluginStruct.php</h1>
 <h2>Warnings:</h2><br>
 <b>Warning on line 18</b> - no @package tag was used in a DocBlock for class sfFilebasePluginStruct<br>
-<b>Warning on line 117</b> - example file "$this->setVarname(value) sets "varname" to "value"" does not exist<br>
 <b>Warning on line 117</b> - example file "$this->getVarname() returns valueof "varname", error if not set" does not exist<br>
+<b>Warning on line 117</b> - example file "$this->setVarname(value) sets "varname" to "value"" does not exist<br>
 <b>Warning on line 117</b> - example file "$this->getVarname(std_value) returns value of "varname" or std_value if not set" does not exist<br>
 <a name="sfFilebasePluginThumbnail.php"></a>
 <h1>sfFilebasePluginThumbnail.php</h1>
@@ -170,8 +221,8 @@
 <h1>sfFilebasePluginUploadedFile.php</h1>
 <h2>Warnings:</h2><br>
 <b>Warning on line 20</b> - no @package tag was used in a DocBlock for class sfFilebasePluginUploadedFile<br>
-<b>Warning on line 190</b> - example file "$file->isError(sfFilebaseUploadedFile::UPLOAD_ERR_NO_FILE)" does not exist<br>
-<b>Warning on line 190</b> - example file "$file->isError()" does not exist<br>
+<b>Warning on line 199</b> - example file "$file->isError(sfFilebaseUploadedFile::UPLOAD_ERR_NO_FILE)" does not exist<br>
+<b>Warning on line 199</b> - example file "$file->isError()" does not exist<br>
 <a name="sfFilebasePluginUploadedFilesManager.php"></a>
 <h1>sfFilebasePluginUploadedFilesManager.php</h1>
 <h2>Warnings:</h2><br>
@@ -185,7 +236,7 @@
 <h2>Warnings:</h2><br>
 <b>Warning on line 24</b> - no @package tag was used in a DocBlock for class sfFilebasePluginValidatorFile<br>
 	<p class="notes" id="credit">
-		Documentation generated on Sat, 16 May 2009 18:23:49 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Mon, 18 May 2009 14:29:47 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</body>
 </html>

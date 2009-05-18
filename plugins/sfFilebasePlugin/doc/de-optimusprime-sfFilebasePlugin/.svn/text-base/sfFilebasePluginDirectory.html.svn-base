@@ -163,7 +163,7 @@
 		</div>
 		<div class="info-box-body">			
 			<div class="method-summary">
-																																																																																																																																						
+																																																																																																																														
 				<div class="method-definition">
 											<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginDirectory.html">sfFilebasePluginDirectory</a></span>
 										<a href="#chmodRecursive" title="details" class="method-name">chmodRecursive</a>
@@ -173,7 +173,7 @@
 				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#copy" title="details" class="method-name">copy</a>
-											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$target</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$overwrite</span> = <span class="var-default">false</span>])
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$destination</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$allow_overwrite</span> = <span class="var-default">false</span>], <span class="var-type">mixed</span>&nbsp;<span class="var-name">$allow_overwrite:</span>)
 									</div>
 														
 				<div class="method-definition">
@@ -186,12 +186,6 @@
 											<span class="method-result">boolean</span>
 										<a href="#delete" title="details" class="method-name">delete</a>
 											([<span class="var-type"></span>&nbsp;<span class="var-name">$ignore_contents</span> = <span class="var-default">false</span>], <span class="var-type">boolean</span>&nbsp;<span class="var-name">$ignore_contents:</span>)
-									</div>
-														
-				<div class="method-definition">
-											<span class="method-result">boolean</span>
-										<a href="#deleteRecursive" title="details" class="method-name">deleteRecursive</a>
-										()
 									</div>
 														
 				<div class="method-definition">
@@ -300,10 +294,10 @@
 		<div class="info-box-body">
 			<A NAME='method_detail'></A>
 <a name="methodchmodRecursive" id="chmodRecursive"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">chmodRecursive</span> (line <span class="line-number">75</span>)
+		<span class="method-title">chmodRecursive</span> (line <span class="line-number">43</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -330,10 +324,10 @@
 			
 	</div>
 <a name="methodcopy" id="copy"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">copy</span> (line <span class="line-number">109</span>)
+		<span class="method-title">copy</span> (line <span class="line-number">79</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -347,16 +341,19 @@
 		<span class="method-name">
 			copy
 		</span>
-					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$target</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$overwrite</span> = <span class="var-default">false</span>])
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$destination</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$allow_overwrite</span> = <span class="var-default">false</span>], <span class="var-type">mixed</span>&nbsp;<span class="var-name">$allow_overwrite:</span>)
 			</div>
 	
 			<ul class="parameters">
 					<li>
 				<span class="var-type">mixed</span>
-				<span class="var-name">$target</span><span class="var-description">: sfFilebasePluginFile | string $target</span>			</li>
+				<span class="var-name">$allow_overwrite:</span><span class="var-description">: If true, existing destination files may be  overwritten.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$allow_overwrite</span><span class="var-description">: sfFilebasePluginFile | string $destination</span>			</li>
 					<li>
 				<span class="var-type"></span>
-				<span class="var-name">$overwrite</span>			</li>
+				<span class="var-name">$destination</span>			</li>
 				</ul>
 		
 			<hr class="separator" />
@@ -368,10 +365,10 @@
 			
 	</div>
 <a name="methodcount" id="count"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">count</span> (line <span class="line-number">225</span>)
+		<span class="method-title">count</span> (line <span class="line-number">195</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -403,16 +400,17 @@
 			
 	</div>
 <a name="methoddelete" id="delete"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">delete</span> (line <span class="line-number">55</span>)
+		<span class="method-title">delete</span> (line <span class="line-number">30</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
 <p class="short-description">Trys to delete the directory from fs.</p>
 	<ul class="tags">
 				<li><span class="field">return:</span> true if deletion was successful</li>
+				<li><span class="field">see:</span> <a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html#methoddeleteDirectory">sfFilebasePlugin::deleteDirectory()</a></li>
 				<li><span class="field">throws:</span> sfFilebasePluginException</li>
 				<li><span class="field">access:</span> public</li>
 			</ul>
@@ -442,36 +440,11 @@
 					</dl>
 			
 	</div>
-<a name="methoddeleteRecursive" id="deleteRecursive"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<span class="method-title">deleteRecursive</span> (line <span class="line-number">27</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Tries to delete the directory from fs,  also deletes all children.</p>
-	<ul class="tags">
-				<li><span class="field">return:</span> true if deletion was successful</li>
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">boolean</span>
-		<span class="method-name">
-			deleteRecursive
-		</span>
-				()
-			</div>
-	
-		
-			
-	</div>
 <a name="methodgetHumanReadableFileType" id="getHumanReadableFileType"><!-- --></a>
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getHumanReadableFileType</span> (line <span class="line-number">242</span>)
+		<span class="method-title">getHumanReadableFileType</span> (line <span class="line-number">212</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -502,7 +475,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">getIterator</span> (line <span class="line-number">136</span>)
+		<span class="method-title">getIterator</span> (line <span class="line-number">106</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -531,7 +504,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getSize</span> (line <span class="line-number">120</span>)
+		<span class="method-title">getSize</span> (line <span class="line-number">90</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -567,7 +540,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">isEmpty</span> (line <span class="line-number">253</span>)
+		<span class="method-title">isEmpty</span> (line <span class="line-number">223</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -593,7 +566,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">offsetExists</span> (line <span class="line-number">170</span>)
+		<span class="method-title">offsetExists</span> (line <span class="line-number">140</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -628,7 +601,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">offsetGet</span> (line <span class="line-number">182</span>)
+		<span class="method-title">offsetGet</span> (line <span class="line-number">152</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -664,7 +637,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">offsetSet</span> (line <span class="line-number">210</span>)
+		<span class="method-title">offsetSet</span> (line <span class="line-number">180</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -702,7 +675,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">offsetUnset</span> (line <span class="line-number">198</span>)
+		<span class="method-title">offsetUnset</span> (line <span class="line-number">168</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -737,7 +710,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">openFile</span> (line <span class="line-number">151</span>)
+		<span class="method-title">openFile</span> (line <span class="line-number">121</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -780,7 +753,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">rename</span> (line <span class="line-number">99</span>)
+		<span class="method-title">rename</span> (line <span class="line-number">67</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -836,6 +809,7 @@
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodgetHumanReadableFileType">sfFilebasePluginFile::getHumanReadableFileType()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodgetMimeType">sfFilebasePluginFile::getMimeType()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodgetMTime">sfFilebasePluginFile::getMTime()</a></span><br>
+													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodgetNestingLevel">sfFilebasePluginFile::getNestingLevel()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodgetRelativePathFromFilebaseDirectory">sfFilebasePluginFile::getRelativePathFromFilebaseDirectory()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodgetSize">sfFilebasePluginFile::getSize()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodisHidden">sfFilebasePluginFile::isHidden()</a></span><br>
@@ -843,6 +817,7 @@
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodisLink">sfFilebasePluginFile::isLink()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodisRWritable">sfFilebasePluginFile::isRWritable()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodisWebImage">sfFilebasePluginFile::isWebImage()</a></span><br>
+													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodmove">sfFilebasePluginFile::move()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodopenFile">sfFilebasePluginFile::openFile()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodrename">sfFilebasePluginFile::rename()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#method__toString">sfFilebasePluginFile::__toString()</a></span><br>
@@ -853,7 +828,7 @@
 
 
 	<p class="notes" id="credit">
-		Documentation generated on Sat, 16 May 2009 18:23:46 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Mon, 18 May 2009 14:29:44 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</div></body>
 </html>

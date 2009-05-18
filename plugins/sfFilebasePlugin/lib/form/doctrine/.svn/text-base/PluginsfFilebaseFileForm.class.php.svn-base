@@ -18,7 +18,8 @@ abstract class PluginsfFilebaseFileForm extends BasesfFilebaseFileForm
     unset($this->validatorSchema['hash']);
     unset($this->validatorSchema['type']);
     unset($this->validatorSchema['level']);
-
+    unset($this->widgetSchema['path']);
+    unset($this->validatorSchema['path']);
 
     $this->validatorSchema['sf_filebase_directories_id']->setOption('required', false);
     $this->widgetSchema['tags'] = new sfWidgetFormInput();
@@ -30,16 +31,13 @@ abstract class PluginsfFilebaseFileForm extends BasesfFilebaseFileForm
 
     if($this->isNew())
     {
-      $this->widgetSchema['pathname']     = new sfWidgetFormInputFile();
-      $this->validatorSchema['pathname']  = new sfFilebasePluginValidatorFile(array('allow_overwrite'=> true, 'required'=>true));
+      $this->widgetSchema['filename']     = new sfWidgetFormInputFile();
+      $this->validatorSchema['filename']  = new sfFilebasePluginValidatorFile(array('allow_overwrite'=> true, 'required'=>true));
     }
     else
     {
-      unset($this->widgetSchema['pathname']);
-      unset($this->validatorSchema['pathname']);
-      $this->widgetSchema['new_name'] = new sfWidgetFormInput(array('default'=>sfFilebasePlugin::getInstance()->getFilebaseFile($this->getObject()->getPathname())->getFilename()));
-      $this->validatorSchema['new_name'] = new sfValidatorAnd(
-        array (
+      $this->validatorSchema['filename'] = new sfValidatorAnd(
+      array (
           new sfValidatorString(),
           new sfValidatorRegex(array('pattern'=>'#^[^\s\\\/]+$#i'))
         )
@@ -67,32 +65,6 @@ abstract class PluginsfFilebaseFileForm extends BasesfFilebaseFileForm
     return parent::processValues($values);
   }
 
-  public function doSave($con = null)
-  {
-    $con === null && $con = Doctrine::getConnectionByTableName($this->getObject()->getTable()->getTableName());
-    try
-    {
-      $con->beginTransaction();
-      if(!$this->isNew())
-      {
-        $old_file = sfFilebasePlugin::getInstance()->getFilebaseFile($this->getObject()->getPathname());
-        $old_name = $old_file->getFilename();
-        $new_name = $this->getValue('new_name');
-        if($new_name != $old_name)
-        {
-          $this->getObject()->setPathname($old_file->getPath() . '/' . $new_name);
-        }
-      }
-      parent::doSave($con);
-      $con->commit();
-    }
-    catch (Exception $e)
-    {
-      $con->rollback();
-      throw $e;
-    }
-  }
-
   /**
    * Saves the current file for the field.
    *
@@ -108,27 +80,31 @@ abstract class PluginsfFilebaseFileForm extends BasesfFilebaseFileForm
     {
       throw new LogicException(sprintf('You cannot save the current file for field "%s" as the field is not a file.', $field));
     }
+    $uploaded_file = $file;
     if (is_null($file))
     {
-      $file = $this->getValue($field);
+      $uploaded_file = $this->getValue($field);
     }
     
     $filebase = sfFilebasePlugin::getInstance();
     $dir_id = $this->getValue('sf_filebase_directories_id');
-    $filename = sfFilebasePlugin::getInstance()->getFilebaseFile($file->getOriginalName());
+    $original_filename = sfFilebasePlugin::getInstance()->getFilebaseFile($uploaded_file->getOriginalName());
+    $save_path_name = $original_filename;
     if(!empty($dir_id))
     {
-      $dir_object = Doctrine_Query::create()->
+      /*$dir_object = Doctrine_Query::create()->
         select('*')->
         from('sfFilebaseDirectory d')->
         where('d.id='.$dir_id)->
         execute()->
-        get(0);
-      $file->setPath($filebase[$dir_object->getPathname()]->getPathname());
-      $filename = $filebase->getFilebaseFile($file->getPath() . '/' . $file->getOriginalName());
+        get(0);*/
+      $dir_object = $this->getObject()->getParentDirectory();
+      $uploaded_file->setPath($filebase[$dir_object->getPathname()]->getPathname());
+      $save_path_name = $filebase->getFilebaseFile($uploaded_file->getPath() . '/' . $file->getOriginalName());
     }
-    parent::saveFile($field, $filename, $file);
-    $this->getObject()->setHash($filename->getHash());
-    return $filename->getRelativePathFromFilebaseDirectory();
+    $saved_file = parent::saveFile($field, $save_path_name, $file);
+    $this->getObject()->setHash($saved_file->getHash());
+    $this->getObject()->setPath($saved_file->getPath());
+    return $saved_file->getFilename();
   }
 }

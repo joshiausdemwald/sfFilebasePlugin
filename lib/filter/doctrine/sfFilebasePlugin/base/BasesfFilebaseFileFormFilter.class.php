@@ -14,7 +14,8 @@ class BasesfFilebaseFileFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'pathname'                   => new sfWidgetFormFilterInput(),
+      'path'                       => new sfWidgetFormFilterInput(),
+      'filename'                   => new sfWidgetFormFilterInput(),
       'hash'                       => new sfWidgetFormFilterInput(),
       'comment'                    => new sfWidgetFormFilterInput(),
       'sf_filebase_directories_id' => new sfWidgetFormDoctrineChoice(array('model' => 'sfFilebaseDirectory', 'add_empty' => true)),
@@ -23,7 +24,8 @@ class BasesfFilebaseFileFormFilter extends BaseFormFilterDoctrine
     ));
 
     $this->setValidators(array(
-      'pathname'                   => new sfValidatorPass(array('required' => false)),
+      'path'                       => new sfValidatorPass(array('required' => false)),
+      'filename'                   => new sfValidatorPass(array('required' => false)),
       'hash'                       => new sfValidatorPass(array('required' => false)),
       'comment'                    => new sfValidatorPass(array('required' => false)),
       'sf_filebase_directories_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => 'sfFilebaseDirectory', 'column' => 'id')),
@@ -47,7 +49,8 @@ class BasesfFilebaseFileFormFilter extends BaseFormFilterDoctrine
   {
     return array(
       'id'                         => 'Number',
-      'pathname'                   => 'Text',
+      'path'                       => 'Text',
+      'filename'                   => 'Text',
       'hash'                       => 'Text',
       'comment'                    => 'Text',
       'sf_filebase_directories_id' => 'ForeignKey',

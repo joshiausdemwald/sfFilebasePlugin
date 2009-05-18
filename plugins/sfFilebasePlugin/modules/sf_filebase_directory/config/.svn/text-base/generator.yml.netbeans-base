@@ -1,0 +1,28 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           sfFilebaseDirectory
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          sf_filebase_directory
+    with_doctrine_route:     1
+
+    config:
+      actions: ~
+      fields:
+        pathname:
+          label: Directory's pathname
+        sf_filebase_directories_id:
+          label: Parent directory
+        parent_directory_link:
+          label: Parent directory
+      list:
+        display: [pathname, comment]
+      filter:
+        display: [sf_filebase_directories_id, pathname, comment]
+      form:    ~
+      edit:    ~
+      new:     ~

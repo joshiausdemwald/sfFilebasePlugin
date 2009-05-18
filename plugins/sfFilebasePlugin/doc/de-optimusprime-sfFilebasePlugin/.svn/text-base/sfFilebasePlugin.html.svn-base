@@ -164,13 +164,13 @@
 		</div>
 		<div class="info-box-body">			
 			<div class="method-summary">
-																																																																																										
+																																																																																																		
 				<div class="method-definition">
 					static 						<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html">sfFilebasePlugin</a></span>
 										<a href="#getInstance" title="details" class="method-name">getInstance</a>
 											([<span class="var-type">string</span>&nbsp;<span class="var-name">$path_name</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$cache_directory</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$create</span> = <span class="var-default">true</span>])
 									</div>
-																																																																																																																																																		
+																																																																																																																																																										
 				<div class="method-definition">
 											<span class="method-result">sfFilebasePlugin</span>
 										<a href="#__construct" title="details" class="method-name">__construct</a>
@@ -190,21 +190,27 @@
 									</div>
 														
 				<div class="method-definition">
+											<span class="method-result">sfFilebaseDirectory</span>
+										<a href="#copyDirectory" title="details" class="method-name">copyDirectory</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$source</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$destination</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$allow_overwrite</span> = <span class="var-default">true</span>], <span class="var-type">boolean</span>&nbsp;<span class="var-name">$allow_overwrite:</span>)
+									</div>
+														
+				<div class="method-definition">
 											<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>
 										<a href="#copyFile" title="details" class="method-name">copyFile</a>
-											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$source</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$destination</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$overwrite</span> = <span class="var-default">true</span>], <span class="var-type">boolean</span>&nbsp;<span class="var-name">$overwrite:</span>)
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$source</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$destination</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$allow_overwrite</span> = <span class="var-default">true</span>], <span class="var-type">boolean</span>&nbsp;<span class="var-name">$allow_overwrite:</span>)
 									</div>
 														
 				<div class="method-definition">
 											<span class="method-result">boolean</span>
 										<a href="#deleteDirectory" title="details" class="method-name">deleteDirectory</a>
-											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$directory</span>)
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$directory</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$allow_recursive</span> = <span class="var-default">false</span>])
 									</div>
 														
 				<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#deleteFile" title="details" class="method-name">deleteFile</a>
-											(<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>&nbsp;<span class="var-name">$file</span>)
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$file</span>, [<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>&nbsp;<span class="var-name">$allow_recursive</span> = <span class="var-default">false</span>])
 									</div>
 														
 				<div class="method-definition">
@@ -299,6 +305,12 @@
 														
 				<div class="method-definition">
 											<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>
+										<a href="#moveFile" title="details" class="method-name">moveFile</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$source</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$destination</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$allow_overwrite</span> = <span class="var-default">true</span>])
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>
 										<a href="#moveUploadedFile" title="details" class="method-name">moveUploadedFile</a>
 											(<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginUploadedFile.html">sfFilebasePluginUploadedFile</a></span>&nbsp;<span class="var-name">$tmp_file</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$destination_directory</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$override</span> = <span class="var-default">true</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$chmod</span> = <span class="var-default">0777</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$inclusion_rules</span> = <span class="var-default">array()</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$exclusion_rules</span> = <span class="var-default">array()</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$file_name</span> = <span class="var-default">null</span>], <span class="var-type">mixed</span>&nbsp;<span class="var-name">$destination_directory:</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$file_name:</span>)
 									</div>
@@ -344,7 +356,7 @@
 					</div>
 		<div class="info-box-body">
 			<a name="var$instances" id="$instances"><!-- --></A>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div class="var-header">
 		<span class="var-title">
@@ -369,7 +381,7 @@
 </div>
 
 <a name="var$cacheDirectory" id="$cacheDirectory"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="var-header">
 		<span class="var-title">
@@ -391,7 +403,7 @@
 
 </div>
 <a name="var$gfxEditor" id="$gfxEditor"><!-- --></A>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div class="var-header">
 		<span class="var-title">
@@ -412,7 +424,7 @@
 
 </div>
 <a name="var$uploadedFilesManager" id="$uploadedFilesManager"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="var-header">
 		<span class="var-title">
@@ -459,7 +471,7 @@
 		<div class="info-box-body">
 			<A NAME='method_detail'></A>
 <a name="methodgetInstance" id="getInstance"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">static getInstance</span> (line <span class="line-number">128</span>)
@@ -494,7 +506,7 @@
 			
 	</div>
 <a name="method__construct" id="__construct"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">Constructor __construct</span> (line <span class="line-number">78</span>)
@@ -548,10 +560,10 @@
 			
 	</div>
 <a name="methodchmodFile" id="chmodFile"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">chmodFile</span> (line <span class="line-number">333</span>)
+		<span class="method-title">chmodFile</span> (line <span class="line-number">418</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -581,7 +593,7 @@
 			
 	</div>
 <a name="methodclearCache" id="clearCache"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">clearCache</span> (line <span class="line-number">181</span>)
@@ -604,11 +616,50 @@
 		
 			
 	</div>
+<a name="methodcopyDirectory" id="copyDirectory"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">copyDirectory</span> (line <span class="line-number">235</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Copies a whole directory to a destination</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The copied $directory.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">sfFilebaseDirectory</span>
+		<span class="method-name">
+			copyDirectory
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$source</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$destination</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$allow_overwrite</span> = <span class="var-default">true</span>], <span class="var-type">boolean</span>&nbsp;<span class="var-name">$allow_overwrite:</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$allow_overwrite:</span><span class="var-description">: True if destination contents may be  overwritten.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$source</span><span class="var-description">: sfFilebasePluginDirectory | string $source</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$destination</span><span class="var-description">: sfFilebasePluginDirectory | string $destination</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$allow_overwrite</span>			</li>
+				</ul>
+		
+			
+	</div>
 <a name="methodcopyFile" id="copyFile"><!-- --></a>
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">copyFile</span> (line <span class="line-number">219</span>)
+		<span class="method-title">copyFile</span> (line <span class="line-number">276</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -622,13 +673,13 @@
 		<span class="method-name">
 			copyFile
 		</span>
-					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$source</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$destination</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$overwrite</span> = <span class="var-default">true</span>], <span class="var-type">boolean</span>&nbsp;<span class="var-name">$overwrite:</span>)
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$source</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$destination</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$allow_overwrite</span> = <span class="var-default">true</span>], <span class="var-type">boolean</span>&nbsp;<span class="var-name">$allow_overwrite:</span>)
 			</div>
 	
 			<ul class="parameters">
 					<li>
 				<span class="var-type">boolean</span>
-				<span class="var-name">$overwrite:</span><span class="var-description">: If true dest file will be overwritten</span>			</li>
+				<span class="var-name">$allow_overwrite:</span><span class="var-description">: If true dest file will be overwritten</span>			</li>
 					<li>
 				<span class="var-type">mixed</span>
 				<span class="var-name">$source</span><span class="var-description">: sfFilebasePluginFile | string $source: The source file</span>			</li>
@@ -637,7 +688,7 @@
 				<span class="var-name">$destination</span><span class="var-description">: sfFilebasePluginFile | string $destination: The destination file</span>			</li>
 					<li>
 				<span class="var-type"></span>
-				<span class="var-name">$overwrite</span>			</li>
+				<span class="var-name">$allow_overwrite</span>			</li>
 				</ul>
 		
 			
@@ -646,7 +697,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">deleteDirectory</span> (line <span class="line-number">309</span>)
+		<span class="method-title">deleteDirectory</span> (line <span class="line-number">385</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -662,10 +713,13 @@
 		<span class="method-name">
 			deleteDirectory
 		</span>
-					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$directory</span>)
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$directory</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$allow_recursive</span> = <span class="var-default">false</span>])
 			</div>
 	
 			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$allow_recursive</span><span class="var-description">: true if contents may be deleted true</span>			</li>
 					<li>
 				<span class="var-type">mixed</span>
 				<span class="var-name">$directory</span><span class="var-description">: sfFilebasePluginFile | string $dir</span>			</li>
@@ -677,12 +731,13 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">deleteFile</span> (line <span class="line-number">288</span>)
+		<span class="method-title">deleteFile</span> (line <span class="line-number">357</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Trys to delete a file from fs.</p>
+<p class="short-description">Trys to delete a file from fs. If file is a directory, deleteDirectory is  called.</p>
 	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html#methoddeleteDirectory">sfFilebasePlugin::deleteDirectory()</a></li>
 				<li><span class="field">throws:</span> sfFilebasePluginException</li>
 				<li><span class="field">access:</span> public</li>
 			</ul>
@@ -692,13 +747,16 @@
 		<span class="method-name">
 			deleteFile
 		</span>
-					(<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>&nbsp;<span class="var-name">$file</span>)
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$file</span>, [<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>&nbsp;<span class="var-name">$allow_recursive</span> = <span class="var-default">false</span>])
 			</div>
 	
 			<ul class="parameters">
 					<li>
 				<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>
-				<span class="var-name">$file</span><span class="var-description">: | string $file</span>			</li>
+				<span class="var-name">$allow_recursive</span><span class="var-description">: | string $file</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$file</span>			</li>
 				</ul>
 		
 			
@@ -731,7 +789,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getFileByHash</span> (line <span class="line-number">611</span>)
+		<span class="method-title">getFileByHash</span> (line <span class="line-number">696</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -819,7 +877,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">getIsImage</span> (line <span class="line-number">571</span>)
+		<span class="method-title">getIsImage</span> (line <span class="line-number">656</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -852,7 +910,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getIsSupportedImage</span> (line <span class="line-number">583</span>)
+		<span class="method-title">getIsSupportedImage</span> (line <span class="line-number">668</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -882,7 +940,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">getIsWebImage</span> (line <span class="line-number">598</span>)
+		<span class="method-title">getIsWebImage</span> (line <span class="line-number">683</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -914,7 +972,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getThumbnailForImage</span> (line <span class="line-number">533</span>)
+		<span class="method-title">getThumbnailForImage</span> (line <span class="line-number">618</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -957,7 +1015,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">getUploadedFiles</span> (line <span class="line-number">429</span>)
+		<span class="method-title">getUploadedFiles</span> (line <span class="line-number">514</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -988,7 +1046,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getUploadedFilesManager</span> (line <span class="line-number">416</span>)
+		<span class="method-title">getUploadedFilesManager</span> (line <span class="line-number">501</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1012,7 +1070,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">imageCopyResampled</span> (line <span class="line-number">519</span>)
+		<span class="method-title">imageCopyResampled</span> (line <span class="line-number">604</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1102,7 +1160,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">isInFilebase</span> (line <span class="line-number">395</span>)
+		<span class="method-title">isInFilebase</span> (line <span class="line-number">480</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1132,7 +1190,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">mkDir</span> (line <span class="line-number">350</span>)
+		<span class="method-title">mkDir</span> (line <span class="line-number">435</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1165,7 +1223,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">moveAllUploadedFiles</span> (line <span class="line-number">454</span>)
+		<span class="method-title">moveAllUploadedFiles</span> (line <span class="line-number">539</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1204,11 +1262,47 @@
 		
 			
 	</div>
-<a name="methodmoveUploadedFile" id="moveUploadedFile"><!-- --></a>
+<a name="methodmoveFile" id="moveFile"><!-- --></a>
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">moveUploadedFile</span> (line <span class="line-number">480</span>)
+		<span class="method-title">moveFile</span> (line <span class="line-number">219</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Moves a file to the given destination directory or pathname.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The moved file.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>
+		<span class="method-name">
+			moveFile
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$source</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$destination</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$allow_overwrite</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$allow_overwrite</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$source</span><span class="var-description">: sfFilebasePluginFile | string $source</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$destination</span><span class="var-description">: sfFilebasePluginFile | string $destination</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmoveUploadedFile" id="moveUploadedFile"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">moveUploadedFile</span> (line <span class="line-number">565</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1260,10 +1354,10 @@
 			
 	</div>
 <a name="methodrenameFile" id="renameFile"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">renameFile</span> (line <span class="line-number">258</span>)
+		<span class="method-title">renameFile</span> (line <span class="line-number">324</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1296,10 +1390,10 @@
 			
 	</div>
 <a name="methodresizeImage" id="resizeImage"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">resizeImage</span> (line <span class="line-number">496</span>)
+		<span class="method-title">resizeImage</span> (line <span class="line-number">581</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1340,10 +1434,10 @@
 			
 	</div>
 <a name="methodrotateImage" id="rotateImage"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">rotateImage</span> (line <span class="line-number">556</span>)
+		<span class="method-title">rotateImage</span> (line <span class="line-number">641</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1383,10 +1477,10 @@
 			
 	</div>
 <a name="methodtouch" id="touch"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">touch</span> (line <span class="line-number">373</span>)
+		<span class="method-title">touch</span> (line <span class="line-number">458</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1423,7 +1517,6 @@
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginDirectory.html#methodcopy">sfFilebasePluginDirectory::copy()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginDirectory.html#methodcount">sfFilebasePluginDirectory::count()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginDirectory.html#methoddelete">sfFilebasePluginDirectory::delete()</a></span><br>
-													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginDirectory.html#methoddeleteRecursive">sfFilebasePluginDirectory::deleteRecursive()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginDirectory.html#methodgetHumanReadableFileType">sfFilebasePluginDirectory::getHumanReadableFileType()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginDirectory.html#methodgetIterator">sfFilebasePluginDirectory::getIterator()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginDirectory.html#methodgetSize">sfFilebasePluginDirectory::getSize()</a></span><br>
@@ -1455,6 +1548,7 @@
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodgetHumanReadableFileType">sfFilebasePluginFile::getHumanReadableFileType()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodgetMimeType">sfFilebasePluginFile::getMimeType()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodgetMTime">sfFilebasePluginFile::getMTime()</a></span><br>
+													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodgetNestingLevel">sfFilebasePluginFile::getNestingLevel()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodgetRelativePathFromFilebaseDirectory">sfFilebasePluginFile::getRelativePathFromFilebaseDirectory()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodgetSize">sfFilebasePluginFile::getSize()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodisHidden">sfFilebasePluginFile::isHidden()</a></span><br>
@@ -1462,6 +1556,7 @@
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodisLink">sfFilebasePluginFile::isLink()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodisRWritable">sfFilebasePluginFile::isRWritable()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodisWebImage">sfFilebasePluginFile::isWebImage()</a></span><br>
+													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodmove">sfFilebasePluginFile::move()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodopenFile">sfFilebasePluginFile::openFile()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodrename">sfFilebasePluginFile::rename()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#method__toString">sfFilebasePluginFile::__toString()</a></span><br>
@@ -1504,7 +1599,7 @@
 
 
 	<p class="notes" id="credit">
-		Documentation generated on Sat, 16 May 2009 18:23:46 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Mon, 18 May 2009 14:29:43 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</div></body>
 </html>

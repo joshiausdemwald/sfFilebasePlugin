@@ -5,45 +5,53 @@
  */
 abstract class PluginsfFilebaseFile extends BasesfFilebaseFile
 {
-  /**
-   * Returns the tags as a string representation.
-   * @param string $separator
-   * @return string $tag_string
-   */
-  public function getTagsAsString($separator = ', ')
+  public function delete(Doctrine_Connection $conn = null)
   {
-    $tags = array();
-    foreach($this->getsfFilebaseTag() AS $tag)
+    $conn === null && $conn = Doctrine::getConnectionByTableName($this->getTable()->getTableName());
+    
+    try 
     {
-      $tags[] = $tag->getTag();
+      $conn->beginTransaction();
+      $f = sfFilebasePlugin::getInstance();
+      $f[$this->getPathname()]->delete();
+      parent::delete($conn);
+      $conn->commit();
     }
-    return implode($separator, $tags);
-  }
-  
-  /**
-   * Sets the tags for this file.
-   *
-   * @param array $tags
-   */
-  public function setTags(array $tags)
-  {
-    Doctrine_Query::create()->
-      from('sfFilebaseTag t')->
-      delete()->
-      where('t.sf_filebase_files_id='.$this->getId())->
-      execute();
-   
-    foreach ($tags AS $tag)
+    catch (Exception $e)
     {
-      $new_tag = new sfFilebaseTag();
-      $new_tag->setTag($tag);
-      $new_tag->setsfFilebaseFile($this);
-      $new_tag->save();
+      $conn->rollback();
+      throw $e;
     }
   }
 
-  public function __toString()
+  public function save(Doctrine_Connection $conn = null)
   {
-    return (string)$this->getPathname();
+    $conn === null && $conn = Doctrine::getConnectionByTableName($this->getTable()->getTableName());
+    try
+    {
+      $conn->beginTransaction();
+      if(!$this->isNew())
+      {
+        $fields = $this->getModified();
+        if(isset($fields['pathname']))
+        {
+          $o = Doctrine_Query::create()->select('*')->from(get_class($this) . ' f')->
+                where('f.id='.$this->getId())->execute()->get(0);
+          
+          $old_pathname = $o->getPathname();
+          $f = sfFilebasePlugin::getInstance();
+          $new_name = $f->getFilebaseFile($fields['pathname'])->getFilename();
+          $f[$old_pathname]->rename($new_name);
+          $this->setPathname($fields['pathname']);
+        }
+      }
+      parent::save($conn);
+      $conn->commit();
+    }
+    catch (Exception $e)
+    {
+      $conn->rollback();
+      throw $e;
+    }
   }
 }

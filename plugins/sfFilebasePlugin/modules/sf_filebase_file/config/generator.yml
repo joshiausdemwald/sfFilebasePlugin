@@ -12,9 +12,17 @@ generator:
 
     config:
       actions: ~
-      fields:  ~
+      fields:
+        pathname:
+          label: File
+        sf_filebase_directories_id:
+          label: Directory
+        new_name:
+          label: Rename file
       list:    ~
       filter:  ~
       form:    ~
-      edit:    ~
-      new:     ~
+      edit:
+        display: [filename, sf_filebase_directories_id, comment]
+      new:
+        display: [filename, sf_filebase_directories_id, comment]

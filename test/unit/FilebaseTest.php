@@ -5,7 +5,7 @@
  */
 include(dirname(__FILE__).'/../bootstrap/unit.php');
 
-$t = new lime_test(75, new lime_output_color());
+$t = new lime_test(81, new lime_output_color());
 $t->diag('Ok, let\'s take a look... These tests are as incomplete as tests can be.');
 $t->diag('Any exeptions thrown during testrun may cause in file-permission issues. After a test-run failed, please manually clean up the standard-filebase-directory unter sfConfig::get(sf_upload_dir) and run php ./symfony fix-perms task as a system administrator.');
 
@@ -131,6 +131,13 @@ foreach($f AS $file)
 $t->diag('Picking some file by ArrayAccess-Methods:');
 $t->isa_ok($f[$new_fs[3]], 'sfFilebasePluginFile', 'File with index 3 is a sfFilebasePluginFile named '.$f[$new_fs[3]]);
 
+$t->diag('Checking recursive movement');
+$t->isa_ok($otherdir = $f->mkDir('otherdir'), 'sfFilebasePluginDirectory', 'Otherdir created');
+$t->isa_ok($otherfile1 = $f->touch($otherdir . '/test.txt'), 'sfFilebasePluginFile', 'Touched file 1 in otherdir.');
+$t->isa_ok($otherfile2 = $f->touch($otherdir . '/test2.txt'), 'sfFilebasePluginFile', 'Touched file 2 in otherdir.');
+$t->isa_ok($otherdir = $otherdir->move($dir), 'sfFilebasePluginDirectory', 'Otherdirs contents successfully moved into dir');
+
+
 $t->diag('Cleanup...');
 
 foreach($new_fs AS $file)
@@ -138,6 +145,6 @@ foreach($new_fs AS $file)
   $t->is($file->delete(), true, 'Test file ' . $file .' successfully delete()ed.' );
 }
 
-$t->is ($new_file->delete(), true, 'The touch()ed file deleted by delete()');
-$t->is ($f->clearCache(), true, 'Cache was succesfully cleared, cacheClear() returns true.');
-$t->is($dir->deleteRecursive(), true, 'Folder successfully deleted throughout deleteRecursive()');
+$t->is($new_file->delete(), true, 'The touch()ed file deleted by delete()');
+$t->is($f->clearCache(), true, 'Cache was succesfully cleared, cacheClear() returns true.');
+$t->is($dir->delete(true), true, 'Folder successfully deleted throughout delete()');

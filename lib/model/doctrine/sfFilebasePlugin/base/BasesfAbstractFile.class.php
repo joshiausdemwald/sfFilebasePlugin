@@ -8,7 +8,8 @@ abstract class BasesfAbstractFile extends sfDoctrineRecord
     public function setTableDefinition()
     {
         $this->setTableName('sf_abstract_files');
-        $this->hasColumn('pathname', 'string', 255, array('type' => 'string', 'notnull' => true, 'length' => '255'));
+        $this->hasColumn('path', 'string', 255, array('type' => 'string', 'notnull' => true, 'length' => '255'));
+        $this->hasColumn('filename', 'string', 255, array('type' => 'string', 'length' => '255'));
         $this->hasColumn('hash', 'string', 255, array('type' => 'string', 'notnull' => true, 'length' => '255'));
         $this->hasColumn('comment', 'string', null, array('type' => 'string'));
         $this->hasColumn('sf_filebase_directories_id', 'integer', null, array('type' => 'integer'));
@@ -16,8 +17,7 @@ abstract class BasesfAbstractFile extends sfDoctrineRecord
         $this->hasColumn('level', 'integer', null, array('type' => 'integer'));
 
 
-        $this->index('u1', array('type' => 'unique', 'fields' => array(0 => 'pathname')));
-        $this->index('u2', array('type' => 'unique', 'fields' => array(0 => 'hash')));
+        $this->index('u1', array('type' => 'unique', 'fields' => array(0 => 'hash')));
         $this->setSubClasses(array('sfFilebaseFile' => array('type' => '1'), 'sfFilebaseDirectory' => array('type' => '2')));
     }
 

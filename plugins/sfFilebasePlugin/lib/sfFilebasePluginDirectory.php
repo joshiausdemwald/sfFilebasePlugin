@@ -19,49 +19,17 @@
 class sfFilebasePluginDirectory extends sfFilebasePluginFile implements IteratorAggregate, ArrayAccess, Countable
 {
   /**
-   * Tries to delete the directory from fs,
-   * also deletes all children.
-   *
-   * @return boolean true if deletion was successful
-   */
-  public function deleteRecursive()
-  {
-    if(!$this->isEmpty())
-    {
-      foreach($this AS $file)
-      {
-        // @todo check against class, not retval
-        if($file->isDir())
-        {
-          $file->deleteRecursive();
-        }
-        else
-        {
-          $file->delete();
-        }
-      }
-    }
-    return $this->delete();
-  }
-
-  /**
    * Trys to delete the directory from fs.
    *
    * @throws sfFilebasePluginException
+   * @see sfFilebasePlugin::deleteDirectory()
    * @param boolean $ignore_contents: If set to true, dir is deleted
    *                                  despite of its contents.
    * @return boolean true if deletion was successful
    */
   public function delete($ignore_contents = false)
   {
-    if($ignore_contents)
-    {
-      return $this->deleteRecursive();
-    }
-    else
-    {
-      return $this->filebase->deleteDirectory($this);
-    }
+    return $this->filebase->deleteDirectory($this, $ignore_contents);
   }
 
   /**
@@ -104,11 +72,13 @@ class sfFilebasePluginDirectory extends sfFilebasePluginFile implements Iterator
   /**
    * Copies this folder to target destination
    *
-   * @param mixed sfFilebasePluginFile | string $target
+   * @param mixed $allow_overwrite: If true, existing destination files may be
+   *                                overwritten.
+   * @param mixed sfFilebasePluginFile | string $destination
    */
-  public function copy($target, $overwrite=false)
+  public function copy($destination, $allow_overwrite=false)
   {
-    return new sfFilebasePluginDirectory(parent::copy($target, $overwrite));
+    return $this->filebase->copyDirectory($this, $destination, $allow_overwrite);
   }
 
   /**
