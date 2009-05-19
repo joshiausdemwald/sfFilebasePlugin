@@ -49,7 +49,7 @@ the plugin provides an extension of `SplFileObject` named
 Adminstration area install instructions  (optional)
 ---------------------------------------
 SfFilebasePlugin provides frontend modules for easy adminstration of your files
-and directories.
+and directories (in developement progress yet).
 
 These modules require doctrine 1.1 to be installed.
 

@@ -10,7 +10,7 @@
     <email>johannes.heinen@gmail.com</email>
     <active>yes</active>
   </lead>
-  <date>2009-05-16</date>
+  <date>2009-05-19</date>
   <version>
     <release>0.7.0</release>
     <api>0.7.0</api>
@@ -49,11 +49,6 @@
         <file role="data" name="lib/model/doctrine/PluginsfFilebaseFileTable.class.php" />
         <file role="data" name="lib/model/doctrine/PluginsfFilebaseTag.class.php" />
         <file role="data" name="lib/model/doctrine/PluginsfFilebaseTagTable.class.php" />
-
-        <file role="data" name="lib/model/sfFilebaseDirectory.php" />
-        <file role="data" name="lib/model/sfFilebaseDirectoryPeer.php" />
-        <file role="data" name="lib/model/sfFilebaseFile.php" />
-        <file role="data" name="lib/model/sfFilebaseFilePeer.php" />
 
         <file role="data" name="lib/validator/sfFilebasePluginValidatorFile.php" />
 
