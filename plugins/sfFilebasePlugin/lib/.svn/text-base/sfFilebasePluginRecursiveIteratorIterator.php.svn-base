@@ -15,7 +15,6 @@
  * Iterator for recursively traversing filesystem structure to render
  * tree views.
  *
- * @package    de.optimusprime.sfFilebasePlugin
  */
 class sfFilebasePluginRecursiveIteratorIterator extends RecursiveIteratorIterator
 {

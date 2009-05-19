@@ -1,29 +1,29 @@
 K 25
 svn:wc:ra_dav:version-url
 V 60
-/!svn/ver/18372/plugins/sfFilebasePlugin/lib/filter/doctrine
+/!svn/ver/18454/plugins/sfFilebasePlugin/lib/filter/doctrine
 END
 PluginsfAbstractFileFormFilter.class.php
 K 25
 svn:wc:ra_dav:version-url
 V 101
-/!svn/ver/18392/plugins/sfFilebasePlugin/lib/filter/doctrine/PluginsfAbstractFileFormFilter.class.php
+/!svn/ver/18454/plugins/sfFilebasePlugin/lib/filter/doctrine/PluginsfAbstractFileFormFilter.class.php
 END
 PluginsfFilebaseTagFormFilter.class.php
 K 25
 svn:wc:ra_dav:version-url
 V 100
-/!svn/ver/18372/plugins/sfFilebasePlugin/lib/filter/doctrine/PluginsfFilebaseTagFormFilter.class.php
+/!svn/ver/18454/plugins/sfFilebasePlugin/lib/filter/doctrine/PluginsfFilebaseTagFormFilter.class.php
 END
 PluginsfFilebaseFileFormFilter.class.php
 K 25
 svn:wc:ra_dav:version-url
 V 101
-/!svn/ver/18372/plugins/sfFilebasePlugin/lib/filter/doctrine/PluginsfFilebaseFileFormFilter.class.php
+/!svn/ver/18454/plugins/sfFilebasePlugin/lib/filter/doctrine/PluginsfFilebaseFileFormFilter.class.php
 END
 PluginsfFilebaseDirectoryFormFilter.class.php
 K 25
 svn:wc:ra_dav:version-url
 V 106
-/!svn/ver/18372/plugins/sfFilebasePlugin/lib/filter/doctrine/PluginsfFilebaseDirectoryFormFilter.class.php
+/!svn/ver/18454/plugins/sfFilebasePlugin/lib/filter/doctrine/PluginsfFilebaseDirectoryFormFilter.class.php
 END

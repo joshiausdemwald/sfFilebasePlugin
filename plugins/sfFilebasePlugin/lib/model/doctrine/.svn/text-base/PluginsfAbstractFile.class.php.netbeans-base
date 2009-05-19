@@ -5,6 +5,53 @@
  */
 abstract class PluginsfAbstractFile extends BasesfAbstractFile
 {
+  protected $original_filename            = false;
+  protected $original_path                = false;
+  protected $original_parent_directory_id = false;
+
+  public function preSave($event)
+  {
+    // Ensure the constraint between directory flag and
+    // path.
+    if($this->original_parent_directory_id !== false)
+    {
+      $path = $this->getParentDirectory()->getPathname() ?
+        $this->getParentDirectory()->getPathname() :
+        sfFilebasePlugin::getInstance()->getPathname();
+      $this->setPath($path);
+      $this->original_parent_directory_id = false;
+    }
+  }
+
+  public function set($fieldName, $value, $load = true)
+  {
+    if($this->$fieldName !== $value)
+    {
+      switch($fieldName)
+      {
+        case 'filename';
+          if($this->original_filename === false)
+          {
+            $this->original_filename = $this->getFilename();
+          }
+          break;
+        case 'path':
+          if($this->original_path === false)
+          {
+            $this->original_path = $this->getPath();
+          }
+          break;
+        case 'sf_filebase_directories_id':
+          if($this->original_parent_directory_id === false)
+          {
+            $this->original_parent_directory_id = $this->sf_filebase_directories_id;
+          }
+          break;
+      }
+    }
+    return parent::set($fieldName, $value, $load);
+  }
+  
   /**
    * Returns the tags as a string representation.
    * @param string $separator
@@ -60,6 +107,10 @@ abstract class PluginsfAbstractFile extends BasesfAbstractFile
 
   public function getPathname()
   {
-    return $this->getPath() . '/' . $this->getFilename();
+   if(!$this->getPath() || !$this->getFilename())
+   {
+     return null;
+   }
+   return   $this->getPath() . '/' . $this->getFilename() ;
   }
 }

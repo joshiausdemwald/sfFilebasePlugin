@@ -9,5 +9,6 @@ class ProjectConfiguration extends sfProjectConfiguration
   {
     // for compatibility / remove and enable only the plugins you want
     $this->enableAllPluginsExcept(array('sfPropelPlugin', 'sfCompat10Plugin'));
+    sfConfig::set('sfDoctrinePlugin_doctrine_lib_path', sfConfig::get('sf_lib_dir') . '/vendor/doctrine/Doctrine.php');
   }
 }

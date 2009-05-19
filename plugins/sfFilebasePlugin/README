@@ -46,6 +46,28 @@ the plugin provides an extension of `SplFileObject` named
    me by implementing much more image-manipulation capabilities). Included is a
    hidden cache layer which automatically stores generated binary data.
 
+Adminstration area install instructions  (optional)
+---------------------------------------
+SfFilebasePlugin provides frontend modules for easy adminstration of your files
+and directories.
+
+These modules require doctrine 1.1 to be installed.
+
+Doctrine 1.1 is not shipped with symfony 1.2, but it will be installed as a
+pear dependency when you install sfFilebasePlugin by typing
+
+    symfony plugin:install sfFilebasePlugin
+
+For getting doctrine 1.1 working instead of the native doctrine 1.0 version
+which is embedded within sfDoctrinePlugin, you have to add the following line
+to your /config/ProjectConfiguration.class.php:
+
+    sfConfig::set('sfDoctrinePlugin_doctrine_lib_path', sfConfig::get('sf_plugins_dir') . '/Doctrine/lib/Doctrine.php');
+
+Alternatively you can install doctrine 1.1 with your symfony 1.2 project by
+following the instructions behind this link: [http://www.symfony-project.org/blog/2009/01/12/call-the-expert-using-a-custom-version-of-doctrine](http://www.symfony-project.org/blog/2009/01/12/call-the-expert-using-a-custom-version-of-doctrine).
+
+
 Image manipulation capabilities
 -------------------------------
 As of version 0.5.10, sfFilebasePlugin can manipulate images using both the

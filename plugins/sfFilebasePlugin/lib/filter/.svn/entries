@@ -1,14 +1,14 @@
 9
 
 dir
-18374
+18452
 http://svn.symfony-project.com/plugins/sfFilebasePlugin/lib/filter
 http://svn.symfony-project.com
 
 
 
-2009-05-17T13:11:22.315659Z
-18372
+2009-05-19T10:52:38.774280Z
+18452
 joshiausdemwald
 
 
@@ -34,8 +34,5 @@ ee427ae8-e902-0410-961c-c3ed070cd9f9
 0
 
 doctrine
-dir
-
-base
 dir
 

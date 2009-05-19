@@ -1,11 +1,11 @@
 K 25
 svn:wc:ra_dav:version-url
 V 77
-/!svn/ver/18372/plugins/sfFilebasePlugin/modules/sf_filebase_directory/config
+/!svn/ver/18399/plugins/sfFilebasePlugin/modules/sf_filebase_directory/config
 END
 generator.yml
 K 25
 svn:wc:ra_dav:version-url
 V 91
-/!svn/ver/18399/plugins/sfFilebasePlugin/modules/sf_filebase_directory/config/generator.yml
+/!svn/ver/18453/plugins/sfFilebasePlugin/modules/sf_filebase_directory/config/generator.yml
 END

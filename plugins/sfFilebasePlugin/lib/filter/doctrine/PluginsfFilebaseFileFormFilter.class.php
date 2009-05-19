@@ -1,11 +1,14 @@
 <?php
-
 /**
- * PluginsfFilebaseFile form.
+ * This file is part of the sfFilebasePlugin package.
  *
- * @package    filters
- * @subpackage sfFilebaseFile *
- * @version    SVN: $Id: sfDoctrineFormTemplate.php 6174 2007-11-27 06:22:40Z fabien $
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @package   de.optimusprime.sfFilebasePlugin
+ * @author    Johannes Heinen <johannes.heinen@gmail.com>
+ * @license   MIT license
+ * @copyright 2007-2009 Johannes Heinen <johannes.heinen@gmail.com>
  */
 abstract class PluginsfFilebaseFileFormFilter extends BasesfFilebaseFileFormFilter
 {

@@ -1,47 +1,0 @@
-9
-
-dir
-18399
-http://svn.symfony-project.com/plugins/sfFilebasePlugin/doc/form
-http://svn.symfony-project.com
-
-
-
-2009-05-18T12:30:46.035091Z
-18399
-joshiausdemwald
-
-
-svn:special svn:externals svn:needs-lock
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-0
-
-sfFilebaseTag
-dir
-
-sfFilebaseFile
-dir
-
-sfFilebaseDirectory
-dir
-
-sfAbstractFile
-dir
-

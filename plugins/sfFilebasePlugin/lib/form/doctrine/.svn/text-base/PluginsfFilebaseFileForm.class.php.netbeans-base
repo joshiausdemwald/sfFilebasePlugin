@@ -58,13 +58,6 @@ abstract class PluginsfFilebaseFileForm extends BasesfFilebaseFileForm
     $this->getObject()->setTags(sfFilebaseTagTable::splitTags($tags));
   }
 
-  public function processValues($values = null)
-  {
-    if(empty($values['sf_filebase_directory_id']))
-      $values['sf_filebase_directory_id'] = null;
-    return parent::processValues($values);
-  }
-
   /**
    * Saves the current file for the field.
    *
@@ -85,22 +78,22 @@ abstract class PluginsfFilebaseFileForm extends BasesfFilebaseFileForm
     {
       $uploaded_file = $this->getValue($field);
     }
-    
+
     $filebase = sfFilebasePlugin::getInstance();
     $dir_id = $this->getValue('sf_filebase_directories_id');
     $original_filename = sfFilebasePlugin::getInstance()->getFilebaseFile($uploaded_file->getOriginalName());
     $save_path_name = $original_filename;
     if(!empty($dir_id))
     {
-      /*$dir_object = Doctrine_Query::create()->
+      $dir_object = Doctrine_Query::create()->
         select('*')->
         from('sfFilebaseDirectory d')->
         where('d.id='.$dir_id)->
         execute()->
-        get(0);*/
-      $dir_object = $this->getObject()->getParentDirectory();
+        get(0);
+      $this->getObject()->setParentDirectory($dir_object);
       $uploaded_file->setPath($filebase[$dir_object->getPathname()]->getPathname());
-      $save_path_name = $filebase->getFilebaseFile($uploaded_file->getPath() . '/' . $file->getOriginalName());
+      $save_path_name = $filebase->getFilebaseFile($uploaded_file->getPath() . '/' . $uploaded_file->getOriginalName());
     }
     $saved_file = parent::saveFile($field, $save_path_name, $file);
     $this->getObject()->setHash($saved_file->getHash());

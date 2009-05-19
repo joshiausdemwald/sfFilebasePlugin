@@ -10,10 +10,10 @@
     <email>johannes.heinen@gmail.com</email>
     <active>yes</active>
   </lead>
-  <date>2009-05-16</date>
+  <date>2009-05-19</date>
   <version>
-    <release>0.6.1</release>
-    <api>0.6.0</api>
+    <release>0.7.0</release>
+    <api>0.7.0</api>
   </version>
   <stability>
     <release>stable</release>
@@ -23,30 +23,32 @@
   <notes>This is the first release, completely namespaced by sfFilebasePlugin... Due to the half-automatically refactoring i do not guarantee that all files are reference properly, sorry. This will be checked intensively soon.</notes>
   <contents>
     <dir name="/">
-      <file role="data" name="README" />
-      <file role="data" name="LICENSE" />
+        <file role="data" name="config/doctrine/schema.yml" />
 
         <file role="data" name="config/config.php" />
         <file role="data" name="config/routing.yml" />
-        <file role="data" name="config/schema.yml" />
-
-        <file role="data" name="lib/filter/sfFilebaseDirectoryFormFilter.class.php" />
-        <file role="data" name="lib/filter/sfFilebaseFileFormFilter.class.php" />
         
-        <file role="data" name="lib/form/sfFilebaseDirectoryForm.class.php" />
-        <file role="data" name="lib/form/sfFilebaseFileForm.class.php" />
+
+        <file role="data" name="lib/filter/doctrine/PluginsfAbstractFileFormFilter.class.php" />
+        <file role="data" name="lib/filter/doctrine/PluginsfFilebaseDirectoryFormFilter.class.php" />
+        <file role="data" name="lib/filter/doctrine/PluginsfFilebaseFileFormFilter.class.php" />
+        <file role="data" name="lib/filter/doctrine/PluginsfFilebaseTagFormFilter.class.php" />
+        
+        <file role="data" name="lib/form/doctrine/PluginsfAbstractFileForm.class.php" />
+        <file role="data" name="lib/form/doctrine/PluginsfFilebaseDirectoryForm.class.php" />
+        <file role="data" name="lib/form/doctrine/PluginsfFilebaseFileForm.class.php" />
+        <file role="data" name="lib/form/doctrine/PluginsfFilebaseTagForm.class.php" />
 
         <file role="data" name="lib/helper/sfFilebasePluginHelper.php" />
-        
-        <file role="data" name="lib/model/plugin/PluginSfFilebaseDirectory.php" />
-        <file role="data" name="lib/model/plugin/PluginSfFilebaseDirectoryPeer.php" />
-        <file role="data" name="lib/model/plugin/PluginSfFilebaseFile.php" />
-        <file role="data" name="lib/model/plugin/PluginSfFilebaseFilePeer.php" />
 
-        <file role="data" name="lib/model/sfFilebaseDirectory.php" />
-        <file role="data" name="lib/model/sfFilebaseDirectoryPeer.php" />
-        <file role="data" name="lib/model/sfFilebaseFile.php" />
-        <file role="data" name="lib/model/sfFilebaseFilePeer.php" />
+        <file role="data" name="lib/model/doctrine/PluginsfAbstractFile.class.php" />
+        <file role="data" name="lib/model/doctrine/PluginsfAbstractFileTable.class.php" />
+        <file role="data" name="lib/model/doctrine/PluginsfFilebaseDirectory.class.php" />
+        <file role="data" name="lib/model/doctrine/PluginsfFilebaseDirectoryTable.class.php" />
+        <file role="data" name="lib/model/doctrine/PluginsfFilebaseFile.class.php" />
+        <file role="data" name="lib/model/doctrine/PluginsfFilebaseFileTable.class.php" />
+        <file role="data" name="lib/model/doctrine/PluginsfFilebaseTag.class.php" />
+        <file role="data" name="lib/model/doctrine/PluginsfFilebaseTagTable.class.php" />
 
         <file role="data" name="lib/validator/sfFilebasePluginValidatorFile.php" />
 
@@ -79,6 +81,9 @@
         <file role="data" name="modules/sf_filebase_file/config/generator.yml" />
         <file role="data" name="modules/sf_filebase_file/lib/sf_filebase_fileGeneratorConfiguration.class.php" />
         <file role="data" name="modules/sf_filebase_file/lib/sf_filebase_fileGeneratorHelper.class.php" />
+
+        <file role="data" name="README" />
+        <file role="data" name="LICENSE" />
     </dir>
   </contents>
   <dependencies>
@@ -96,11 +101,35 @@
         <max>1.3.0</max>
         <exclude>1.3.0</exclude>
       </package>
+      <package>
+        <name>Doctrine</name>
+        <channel>pear.phpdoctrine.org</channel>
+        <min>1.1.0</min>
+        <exclude>1.0.0</exclude>
+      </package>
     </required>
   </dependencies>
   <phprelease>
   </phprelease>
   <changelog>
+    <release>
+      <version>
+        <release>0.7.0</release>
+        <api>0.7.0</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-05-19</date>
+      <notes>
+      * Admin area improved
+      * Switched to doctrine ORM
+      * Small api improvements to sfFilebasePlugin
+      * Can now copy and move directories recursively
+      </notes>
+    </release>
     <release>
       <version>
         <release>0.6.1</release>
