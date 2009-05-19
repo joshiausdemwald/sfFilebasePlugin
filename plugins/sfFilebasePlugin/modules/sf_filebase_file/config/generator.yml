@@ -4,7 +4,7 @@
 # * For the full copyright and license information, please view the LICENSE
 # * file that was distributed with this source code.
 # *
-# * @package   de.optimusprime.sfFilebasePlugin
+# * @package   de.optimusprime.sfFilebasePlugin.adminArea
 # * @author    Johannes Heinen <johannes.heinen@gmail.com>
 # * @license   MIT license
 # * @copyright 2007-2009 Johannes Heinen <johannes.heinen@gmail.com>
@@ -28,12 +28,13 @@ generator:
           label: File
         sf_filebase_directories_id:
           label: Directory
-        new_name:
-          label: Rename file
-      list:    ~
+        retrieveFiles:
+          label: Properties
+      list:
+        display: [~retrieveFiles, filename, path]
       filter:  ~
       form:    ~
       edit:
-        display: [filename, path, sf_filebase_directories_id, comment, tags]
+        display: [~retrieveFiles, filename, path, sf_filebase_directories_id, comment, tags]
       new:
         display: [filename, sf_filebase_directories_id, comment, tags]

@@ -30,13 +30,13 @@ abstract class PluginsfFilebaseFile extends BasesfFilebaseFile
       {
         $source_file_name = array_key_exists('filename', $values) ? $values['filename']  : $this->getFilename();
         $new_pathname = $f->moveFile(
-          $values[$path] . '/' . $source_file_name,
+          $values['path'] . '/' . $source_file_name,
           $this->getPath() . '/' . $source_file_name
         );
         $this->setHash($new_pathname->getHash());
       }
 
-      if(array_key_exists('filename', $values['filename']))
+      if(array_key_exists('filename', $values))
       {
         $old_pathname = $f[$this->getPath() . '/' . $values['filename']];
         $new_pathname = $old_pathname->rename($this->getFilename());

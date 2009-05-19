@@ -1,3 +1,14 @@
+#/**
+# * This file is part of the sfFilebasePlugin package.
+# *
+# * For the full copyright and license information, please view the LICENSE
+# * file that was distributed with this source code.
+# *
+# * @package   de.optimusprime.sfFilebasePlugin
+# * @author    Johannes Heinen <johannes.heinen@gmail.com>
+# * @license   MIT license
+# * @copyright 2007-2009 Johannes Heinen <johannes.heinen@gmail.com>
+# */
 generator:
   class: sfDoctrineGenerator
   param:
@@ -20,7 +31,7 @@ generator:
         parent_directory_link:
           label: Parent directory
       list:
-        display: [pathname, comment]
+        display: [path, filename, comment]
       filter:
         display: [sf_filebase_directories_id, filename, comment]
       form:    ~

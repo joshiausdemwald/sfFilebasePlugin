@@ -3,3 +3,9 @@ svn:wc:ra_dav:version-url
 V 75
 /!svn/ver/18372/plugins/sfFilebasePlugin/modules/sf_filebase_file/templates
 END
+_retrieveFiles.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/18463/plugins/sfFilebasePlugin/modules/sf_filebase_file/templates/_retrieveFiles.php
+END

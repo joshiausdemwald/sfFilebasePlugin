@@ -12,7 +12,7 @@
   </lead>
   <date>2009-05-19</date>
   <version>
-    <release>0.7.1</release>
+    <release>0.7.2</release>
     <api>0.7.0</api>
   </version>
   <stability>
@@ -78,9 +78,16 @@
         <file role="data" name="modules/sf_filebase_directory/lib/sf_filebase_directoryGeneratorHelper.class.php" />
 
         <file role="data" name="modules/sf_filebase_file/actions/actions.class.php" />
+        <file role="data" name="modules/sf_filebase_file/actions/components.class.php" />
+        
         <file role="data" name="modules/sf_filebase_file/config/generator.yml" />
+
         <file role="data" name="modules/sf_filebase_file/lib/sf_filebase_fileGeneratorConfiguration.class.php" />
         <file role="data" name="modules/sf_filebase_file/lib/sf_filebase_fileGeneratorHelper.class.php" />
+
+        <file role="data" name="modules/sf_filebase_file/templates/_retrieveFiles.php" />
+
+        <file role="data" name="modules/sf_filebase_filedeliverer/actions/actions.class.php" />
 
         <file role="data" name="README" />
         <file role="data" name="LICENSE" />
@@ -112,6 +119,22 @@
   <phprelease>
   </phprelease>
   <changelog>
+    <release>
+      <version>
+        <release>0.7.2</release>
+        <api>0.7.0</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-05-19</date>
+      <notes>
+      * Admin area improved: Thumbnail images and download links in
+        admin generated forms.
+      </notes>
+    </release>
     <release>
       <version>
         <release>0.7.1</release>

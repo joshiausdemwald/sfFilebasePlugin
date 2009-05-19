@@ -1,14 +1,14 @@
 9
 
 dir
-18454
+18464
 http://svn.symfony-project.com/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin
 http://svn.symfony-project.com
 
 
 
-2009-05-19T11:04:00.191345Z
-18454
+2009-05-19T13:40:25.113660Z
+18464
 joshiausdemwald
 
 
@@ -39,10 +39,10 @@ file
 
 
 
-2009-05-19T11:01:45.000000Z
-ce97a68a52f2786962a297d678448267
-2009-05-19T11:04:00.191345Z
-18454
+2009-05-19T13:39:50.000000Z
+31081b572c3b5fdaf4a699e8125baac3
+2009-05-19T13:40:25.113660Z
+18464
 joshiausdemwald
 
 
@@ -67,1172 +67,16 @@ joshiausdemwald
 
 4857
 
-_lib---form---doctrine---PluginsfFilebaseDirectoryForm.class.php.html
-file
-
-
-
-
-2009-05-19T11:01:42.000000Z
-b226672a457d1963ed1b7007190f75f1
-2009-05-19T11:04:00.191345Z
-18454
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4199
-
-PluginsfFilebaseDirectoryTable.html
-file
-
-
-
-
-2009-05-19T11:01:42.000000Z
-50d633db309486cac6a4a949eca7002a
-2009-05-19T11:04:00.191345Z
-18454
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4191
-
-_lib---sfFilebasePluginRecursiveIteratorIterator.php.html
-file
-
-
-
-
-2009-05-19T11:01:44.000000Z
-6d37301b23659eb465a9898501aaf92e
-2009-05-19T11:04:00.191345Z
-18454
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4827
-
-_lib---sfFilebasePluginGfxEditor.php.html
-file
-
-
-
-
-2009-05-19T11:01:43.000000Z
-202736dd955f6fe6b9ff5530c7d35107
-2009-05-19T11:04:00.191345Z
-18454
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4759
-
-PluginsfFilebaseFile.html
-file
-
-
-
-
-2009-05-19T11:01:42.000000Z
-b5c7c32babaaf9176e468e2ee022b208
-2009-05-19T11:04:00.191345Z
-18454
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-7088
-
-sfFilebasePluginGfxEditorAdapterIMagick.html
-file
-
-
-
-
-2009-05-19T11:01:44.000000Z
-a839b9062cf2bf02f4ec106db4bf30a4
-2009-05-19T11:04:00.191345Z
-18454
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-28949
-
-PluginsfFilebaseTagTable.html
-file
-
-
-
-
-2009-05-19T11:01:42.000000Z
-80c7e10a863c55e821df9ad94cca8d29
-2009-05-19T11:04:00.191345Z
-18454
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-6208
-
-_config---config.php.html
-file
-
-
-
-
-2009-05-19T11:01:41.000000Z
-2f45919077cf923f5769b62b96b5b665
-2009-05-19T11:04:00.191345Z
-18454
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3834
-
-PluginsfFilebaseDirectoryForm.html
-file
-
-
-
-
-2009-05-19T11:01:42.000000Z
-50493764cebd6a5b0a3b4bea34b518cc
-2009-05-19T11:04:00.191345Z
-18454
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-8879
-
-_lib---sfFilebasePluginRecursiveDirectoryIterator.php.html
-file
-
-
-
-
-2009-05-19T11:01:44.000000Z
-04bcec1c95f3abe8e64cf699ba3f206c
-2009-05-19T11:04:00.191345Z
-18454
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4836
-
-sfFilebasePluginUploadedFile.html
-file
-
-
-
-
-2009-05-19T11:01:45.000000Z
-433e3ee394d82b9d556d1c965dc25888
-2009-05-19T11:04:00.191345Z
-18454
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-29647
-
-PluginsfFilebaseDirectoryFormFilter.html
-file
-
-
-
-
-2009-05-19T11:01:42.000000Z
-21018dde92a12a444f4587af5c0a61ac
-2009-05-19T11:04:00.191345Z
-18454
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4288
-
-_lib---sfFilebasePluginImage.php.html
-file
-
-
-
-
-2009-05-19T11:01:44.000000Z
-edb012b838b85badb3b9e8e60313ed86
-2009-05-19T11:04:00.191345Z
-18454
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4756
-
-_lib---filter---doctrine---PluginsfAbstractFileFormFilter.class.php.html
-file
-
-
-
-
-2009-05-19T11:01:41.000000Z
-64c6e8e186d858d6c45626c374ed4c94
-2009-05-19T11:04:00.191345Z
-18454
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4205
-
-_lib---model---doctrine---PluginsfFilebaseFileTable.class.php.html
-file
-
-
-
-
-2009-05-19T11:01:42.000000Z
-ede97899ce7df9e4a2aa9d7075666dc0
-2009-05-19T11:04:00.191345Z
-18454
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4184
-
-PluginsfFilebaseFileFormFilter.html
-file
-
-
-
-
-2009-05-19T11:01:42.000000Z
-a49721254b79115a6cb816c76943f3c2
-2009-05-19T11:04:00.191345Z
-18454
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4258
-
-_lib---helper---sfFilebasePluginHelper.php.html
-file
-
-
-
-
-2009-05-19T11:01:44.000000Z
-c654f4c1c5ea72849ce52e40bebef510
-2009-05-19T11:04:00.191345Z
-18454
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-5480
-
-_lib---filter---doctrine---PluginsfFilebaseFileFormFilter.class.php.html
-file
-
-
-
-
-2009-05-19T11:01:42.000000Z
-df882ac8644c7b54837a825699e6bcaa
-2009-05-19T11:04:00.191345Z
-18454
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4205
-
-sfFilebasePluginUtil.html
-file
-
-
-
-
-2009-05-19T11:01:45.000000Z
-cf3994b498c1fa3e62857215defaf0d1
-2009-05-19T11:04:00.191345Z
-18454
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-46106
-
-sfFilebasePluginGfxEditorAdapterInterface.html
-file
-
-
-
-
-2009-05-19T11:01:44.000000Z
-a2c374e47dd1fc2487d4d5c6322680d6
-2009-05-19T11:04:00.191345Z
-18454
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-17454
-
-_lib---form---doctrine---PluginsfFilebaseTagForm.class.php.html
-file
-
-
-
-
-2009-05-19T11:01:42.000000Z
-89adf74686d518ed385bea0116c64707
-2009-05-19T11:04:00.191345Z
-18454
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4175
-
-_lib---sfFilebasePluginUploadedFile.php.html
-file
-
-
-
-
-2009-05-19T11:01:45.000000Z
-5fa0324e69f599b2d144bb323492375d
-2009-05-19T11:04:00.191345Z
-18454
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4788
-
-_lib---form---doctrine---PluginsfFilebaseFileForm.class.php.html
-file
-
-
-
-
-2009-05-19T11:01:42.000000Z
-80ddb53bc6f9be5c63e50cd441f0dfc0
-2009-05-19T11:04:00.191345Z
-18454
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4179
-
-sfFilebasePluginWebRequest.html
-file
-
-
-
-
-2009-05-19T11:01:45.000000Z
-581ab3dd7d92276cd85b3b102372e8bd
-2009-05-19T11:04:00.191345Z
-18454
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-6771
-
-_lib---model---doctrine---PluginsfAbstractFile.class.php.html
-file
-
-
-
-
-2009-05-19T11:01:41.000000Z
-8f5e1159c2925ffdf3d8f992fd5f99bb
-2009-05-19T11:04:00.191345Z
-18454
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4164
-
-PluginsfFilebaseFileTable.html
-file
-
-
-
-
-2009-05-19T11:01:42.000000Z
-e53e192c32a4806b316595a31c3928c6
-2009-05-19T11:04:00.191345Z
-18454
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4166
-
-_lib---sfFilebasePluginDirectory.php.html
-file
-
-
-
-
-2009-05-19T11:01:43.000000Z
-f62df7daf6647f4ad2289fe67a3a547e
-2009-05-19T11:04:00.191345Z
-18454
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4733
-
-_lib---model---doctrine---PluginsfFilebaseDirectoryTable.class.php.html
-file
-
-
-
-
-2009-05-19T11:01:42.000000Z
-23ce0b6bb735b674a17c4ae0959d3f21
-2009-05-19T11:04:00.191345Z
-18454
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4204
-
-sfFilebasePluginException.html
-file
-
-
-
-
-2009-05-19T11:01:43.000000Z
-01dbbd2421441d5bad657551f9db13d1
-2009-05-19T11:04:00.191345Z
-18454
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-6311
-
-PluginsfFilebaseTagForm.html
-file
-
-
-
-
-2009-05-19T11:01:42.000000Z
-5d57199947712b9f6047b3b5d5a9ad45
-2009-05-19T11:04:00.191345Z
-18454
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4212
-
-_lib---sfFilebasePluginUtil.php.html
-file
-
-
-
-
-2009-05-19T11:01:45.000000Z
-d56008df5af1f52abcd28823010d0144
-2009-05-19T11:04:00.191345Z
-18454
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4757
-
-PluginsfFilebaseDirectory.html
-file
-
-
-
-
-2009-05-19T11:01:42.000000Z
-495e23608a05534a435ec1dcee78b663
-2009-05-19T11:04:00.191345Z
-18454
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-6115
-
-sfFilebasePluginRecursiveDirectoryIterator.html
-file
-
-
-
-
-2009-05-19T11:01:44.000000Z
-9cda46aa0a1b8d9225433acc6315029d
-2009-05-19T11:04:00.191345Z
-18454
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-17350
-
-_lib---sfFilebasePluginStruct.php.html
-file
-
-
-
-
-2009-05-19T11:01:44.000000Z
-35802b374fcc81e6582dc33a3c893434
-2009-05-19T11:04:00.191345Z
-18454
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4747
-
 sfFilebasePluginUploadedFilesManager.html
 file
 
 
 
 
-2009-05-19T11:01:45.000000Z
-4d84a5f4dc7532bc5d9974c091c64df5
-2009-05-19T11:04:00.191345Z
-18454
+2009-05-19T13:39:49.000000Z
+f9d2f651aabaffff80de9ccf59faafa2
+2009-05-19T13:40:25.113660Z
+18464
 joshiausdemwald
 
 
@@ -1257,16 +101,84 @@ joshiausdemwald
 
 24238
 
+_lib---sfFilebasePluginGfxEditor.php.html
+file
+
+
+
+
+2009-05-19T13:39:48.000000Z
+09ae2191e10a840b19b42a49b2dc6024
+2009-05-19T13:40:25.113660Z
+18464
+joshiausdemwald
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4759
+
+_lib---sfFilebasePluginRecursiveIteratorIterator.php.html
+file
+
+
+
+
+2009-05-19T13:39:49.000000Z
+0e6cfcda9243c9c006bfaf94907b467f
+2009-05-19T13:40:25.113660Z
+18464
+joshiausdemwald
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4827
+
 sfFilebasePlugin.html
 file
 
 
 
 
-2009-05-19T11:01:42.000000Z
-9321d9e213f3b8b5cd60ea67038dc101
-2009-05-19T11:04:00.191345Z
-18454
+2009-05-19T13:39:47.000000Z
+b4ad8130011e913a3f6274d81af76bf0
+2009-05-19T13:40:25.113660Z
+18464
 joshiausdemwald
 
 
@@ -1297,10 +209,10 @@ file
 
 
 
-2009-05-19T11:01:43.000000Z
-b71481a02968fc7c234c3b7b91927a40
-2009-05-19T11:04:00.191345Z
-18454
+2009-05-19T13:39:48.000000Z
+e358ad4b0c0c92cf9319ad5655ff8524
+2009-05-19T13:40:25.113660Z
+18464
 joshiausdemwald
 
 
@@ -1325,16 +237,16 @@ joshiausdemwald
 
 52984
 
-PluginsfAbstractFileTable.html
+sfFilebasePluginGfxEditorAdapterIMagick.html
 file
 
 
 
 
-2009-05-19T11:01:41.000000Z
-052f58befbdfcbc83c0f1238d9388134
-2009-05-19T11:04:00.191345Z
-18454
+2009-05-19T13:39:48.000000Z
+b706fb738123e43a3247793693eaab83
+2009-05-19T13:40:25.113660Z
+18464
 joshiausdemwald
 
 
@@ -1357,7 +269,7 @@ joshiausdemwald
 
 
 
-4166
+28949
 
 sfFilebasePluginThumbnail.html
 file
@@ -1365,10 +277,10 @@ file
 
 
 
-2009-05-19T11:01:44.000000Z
-5b8e9757e41638d8e77be752dbda462d
-2009-05-19T11:04:00.191345Z
-18454
+2009-05-19T13:39:49.000000Z
+adc54ad9568aa4060aa76359071a67c4
+2009-05-19T13:40:25.113660Z
+18464
 joshiausdemwald
 
 
@@ -1393,16 +305,50 @@ joshiausdemwald
 
 20968
 
+_config---config.php.html
+file
+
+
+
+
+2009-05-19T13:39:45.000000Z
+1a1419281d90e50516d0ab09aad9e808
+2009-05-19T13:40:25.113660Z
+18464
+joshiausdemwald
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3834
+
 sfFilebasePluginValidatorFile.html
 file
 
 
 
 
-2009-05-19T11:01:45.000000Z
-c342b036dac9bbdc45f18e46f2620e3b
-2009-05-19T11:04:00.191345Z
-18454
+2009-05-19T13:39:50.000000Z
+7440e196d7401d0a654c6deb539442d3
+2009-05-19T13:40:25.113660Z
+18464
 joshiausdemwald
 
 
@@ -1427,16 +373,50 @@ joshiausdemwald
 
 14980
 
+_lib---sfFilebasePluginRecursiveDirectoryIterator.php.html
+file
+
+
+
+
+2009-05-19T13:39:49.000000Z
+52cf97ac9fd1030183038815641cdd30
+2009-05-19T13:40:25.113660Z
+18464
+joshiausdemwald
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4836
+
 _lib---sfFilebasePluginFileObject.php.html
 file
 
 
 
 
-2009-05-19T11:01:43.000000Z
-88310d309c15117f0eaf933319c60574
-2009-05-19T11:04:00.191345Z
-18454
+2009-05-19T13:39:48.000000Z
+d2ce3c4f8c74e24f9e3284984afbb359
+2009-05-19T13:40:25.113660Z
+18464
 joshiausdemwald
 
 
@@ -1461,50 +441,16 @@ joshiausdemwald
 
 4737
 
-_lib---model---doctrine---PluginsfFilebaseTag.class.php.html
-file
-
-
-
-
-2009-05-19T11:01:42.000000Z
-4880ea73bac5ba1a72a7a488ee47f244
-2009-05-19T11:04:00.191345Z
-18454
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4160
-
 _lib---sfFilebasePluginGfxEditorAdapterGD.php.html
 file
 
 
 
 
-2009-05-19T11:01:44.000000Z
-b1247c3a65d4faf61c30f418881fdaa8
-2009-05-19T11:04:00.191345Z
-18454
+2009-05-19T13:39:48.000000Z
+b8b3a65e630cc66bb37409ee90635197
+2009-05-19T13:40:25.113660Z
+18464
 joshiausdemwald
 
 
@@ -1529,50 +475,16 @@ joshiausdemwald
 
 4775
 
-sfFilebasePluginFileExif.html
-file
-
-
-
-
-2009-05-19T11:01:43.000000Z
-2c9797fdca8b66133145e6dd4c0209db
-2009-05-19T11:04:00.191345Z
-18454
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-13342
-
 sfFilebasePluginGfxEditor.html
 file
 
 
 
 
-2009-05-19T11:01:43.000000Z
-52b35ec0ef8b24be269fbaaf67a42449
-2009-05-19T11:04:00.191345Z
-18454
+2009-05-19T13:39:48.000000Z
+117c390b368081fd2a1e9b2e2b67691d
+2009-05-19T13:40:25.113660Z
+18464
 joshiausdemwald
 
 
@@ -1603,10 +515,10 @@ file
 
 
 
-2009-05-19T11:01:44.000000Z
-c35182262de20c428d3fd8ea6522f260
-2009-05-19T11:04:00.191345Z
-18454
+2009-05-19T13:39:49.000000Z
+286a763da80b6d157d84a05927b6e4a8
+2009-05-19T13:40:25.113660Z
+18464
 joshiausdemwald
 
 
@@ -1631,16 +543,16 @@ joshiausdemwald
 
 15263
 
-PluginsfAbstractFileForm.html
+sfFilebasePluginFileExif.html
 file
 
 
 
 
-2009-05-19T11:01:41.000000Z
-53c9b5563b4050e94bae0460583c7056
-2009-05-19T11:04:00.191345Z
-18454
+2009-05-19T13:39:48.000000Z
+8b390fbe706e60ee520df21f1a541a78
+2009-05-19T13:40:25.113660Z
+18464
 joshiausdemwald
 
 
@@ -1663,7 +575,41 @@ joshiausdemwald
 
 
 
-4218
+13342
+
+sfFilebasePluginUploadedFile.html
+file
+
+
+
+
+2009-05-19T13:39:49.000000Z
+33141f3d8d54d6a3e02cb0fc34c68054
+2009-05-19T13:40:25.113660Z
+18464
+joshiausdemwald
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+29647
 
 _lib---sfFilebasePluginUploadedFilesManager.php.html
 file
@@ -1671,10 +617,10 @@ file
 
 
 
-2009-05-19T11:01:45.000000Z
-40bae038356ae33eda5b637b46e5bcd1
-2009-05-19T11:04:00.191345Z
-18454
+2009-05-19T13:39:49.000000Z
+e495f5e7e480cec48fde5b2bf658f2de
+2009-05-19T13:40:25.113660Z
+18464
 joshiausdemwald
 
 
@@ -1705,10 +651,10 @@ file
 
 
 
-2009-05-19T11:01:44.000000Z
-ddbdb0365a5db967247331d99dced082
-2009-05-19T11:04:00.191345Z
-18454
+2009-05-19T13:39:48.000000Z
+ab3d796839cf0d6c79851c591564bafb
+2009-05-19T13:40:25.113660Z
+18464
 joshiausdemwald
 
 
@@ -1733,50 +679,16 @@ joshiausdemwald
 
 4813
 
-PluginsfAbstractFileFormFilter.html
-file
-
-
-
-
-2009-05-19T11:01:41.000000Z
-b2d7766cb676f9f948341735189bf78f
-2009-05-19T11:04:00.191345Z
-18454
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4258
-
 _lib---sfFilebasePlugin.php.html
 file
 
 
 
 
-2009-05-19T11:01:42.000000Z
-0d685ca240a9c39a167a945abf46f2db
-2009-05-19T11:04:00.191345Z
-18454
+2009-05-19T13:39:47.000000Z
+31f8b108183ffd220ba5433e5a77ce20
+2009-05-19T13:40:25.113660Z
+18464
 joshiausdemwald
 
 
@@ -1807,10 +719,10 @@ file
 
 
 
-2009-05-19T11:01:43.000000Z
-86f309d7d40fb6b23c1b8506ce537a24
-2009-05-19T11:04:00.191345Z
-18454
+2009-05-19T13:39:48.000000Z
+c62d9b92faef370f2e53763d6c061cb4
+2009-05-19T13:40:25.113660Z
+18464
 joshiausdemwald
 
 
@@ -1835,16 +747,16 @@ joshiausdemwald
 
 4744
 
-PluginsfFilebaseFileForm.html
+_lib---sfFilebasePluginImage.php.html
 file
 
 
 
 
-2009-05-19T11:01:42.000000Z
-7c203a1cc0935ec9cd0eb47d4f9f2f92
-2009-05-19T11:04:00.191345Z
-18454
+2009-05-19T13:39:49.000000Z
+fc9a91edb7ac8de7bb2ac9efdd1dca6b
+2009-05-19T13:40:25.113660Z
+18464
 joshiausdemwald
 
 
@@ -1867,18 +779,18 @@ joshiausdemwald
 
 
 
-9365
+4756
 
-_lib---filter---doctrine---PluginsfFilebaseTagFormFilter.class.php.html
+_lib---helper---sfFilebasePluginHelper.php.html
 file
 
 
 
 
-2009-05-19T11:01:42.000000Z
-494ce95f44a116daf31f611c7a6b4490
-2009-05-19T11:04:00.191345Z
-18454
+2009-05-19T13:39:48.000000Z
+c99987ef361b8dc40f121553937ab311
+2009-05-19T13:40:25.113660Z
+18464
 joshiausdemwald
 
 
@@ -1901,18 +813,18 @@ joshiausdemwald
 
 
 
-4201
+5480
 
-PluginsfFilebaseTag.html
+sfFilebasePluginGfxEditorAdapterInterface.html
 file
 
 
 
 
-2009-05-19T11:01:42.000000Z
-7995eeb3c20f326626c475717b4f305d
-2009-05-19T11:04:00.191345Z
-18454
+2009-05-19T13:39:48.000000Z
+c9c884eba89147ba04ff9555d4494089
+2009-05-19T13:40:25.113660Z
+18464
 joshiausdemwald
 
 
@@ -1935,18 +847,18 @@ joshiausdemwald
 
 
 
-4190
+17454
 
-_lib---form---doctrine---PluginsfAbstractFileForm.class.php.html
+sfFilebasePluginUtil.html
 file
 
 
 
 
-2009-05-19T11:01:41.000000Z
-1e419d4d7927977d204b86ee57154239
-2009-05-19T11:04:00.191345Z
-18454
+2009-05-19T13:39:50.000000Z
+7c9c5a5fe75a6d23df4cb6136f6f7b80
+2009-05-19T13:40:25.113660Z
+18464
 joshiausdemwald
 
 
@@ -1969,7 +881,7 @@ joshiausdemwald
 
 
 
-4179
+46106
 
 _lib---sfFilebasePluginFileExif.php.html
 file
@@ -1977,10 +889,10 @@ file
 
 
 
-2009-05-19T11:01:43.000000Z
-c4970951a90b0e0cd1fe401ab1125f07
-2009-05-19T11:04:00.191345Z
-18454
+2009-05-19T13:39:48.000000Z
+48362738d6aa1a76bfa0aa24b23e0d98
+2009-05-19T13:40:25.113660Z
+18464
 joshiausdemwald
 
 
@@ -2005,16 +917,50 @@ joshiausdemwald
 
 4752
 
+_lib---sfFilebasePluginUploadedFile.php.html
+file
+
+
+
+
+2009-05-19T13:39:49.000000Z
+0c86d77105b3f5f68af0a7395728d06e
+2009-05-19T13:40:25.113660Z
+18464
+joshiausdemwald
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4788
+
 _lib---sfFilebasePluginException.php.html
 file
 
 
 
 
-2009-05-19T11:01:43.000000Z
-77aea8fa77bffb193322500df39eb775
-2009-05-19T11:04:00.191345Z
-18454
+2009-05-19T13:39:47.000000Z
+aca0bee1f3b3eafc9e39aedd3388a99a
+2009-05-19T13:40:25.113660Z
+18464
 joshiausdemwald
 
 
@@ -2045,10 +991,10 @@ file
 
 
 
-2009-05-19T11:01:44.000000Z
-f4c0cbcc9348baf6a5721992bcedea9f
-2009-05-19T11:04:00.191345Z
-18454
+2009-05-19T13:39:49.000000Z
+38cae64ca3e40382068114fe510d7eb2
+2009-05-19T13:40:25.113660Z
+18464
 joshiausdemwald
 
 
@@ -2073,50 +1019,16 @@ joshiausdemwald
 
 26597
 
-_lib---model---doctrine---PluginsfFilebaseDirectory.class.php.html
-file
-
-
-
-
-2009-05-19T11:01:42.000000Z
-09c9b487b0b561d1671df39d9661b891
-2009-05-19T11:04:00.191345Z
-18454
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4184
-
 sfFilebasePluginStruct.html
 file
 
 
 
 
-2009-05-19T11:01:44.000000Z
-c86b809d9950d0cd951fdb08a5075f74
-2009-05-19T11:04:00.191345Z
-18454
+2009-05-19T13:39:49.000000Z
+263601c20f972fcc7044c59df2c7a9b2
+2009-05-19T13:40:25.113660Z
+18464
 joshiausdemwald
 
 
@@ -2147,10 +1059,10 @@ file
 
 
 
-2009-05-19T11:01:45.000000Z
-8236d31bd35dd3f2242e02f9625b10af
-2009-05-19T11:04:00.191345Z
-18454
+2009-05-19T13:39:50.000000Z
+1df8b448f17913237f0fe7cf32a38342
+2009-05-19T13:40:25.113660Z
+18464
 joshiausdemwald
 
 
@@ -2175,16 +1087,16 @@ joshiausdemwald
 
 4936
 
-_lib---model---doctrine---PluginsfFilebaseFile.class.php.html
+sfFilebasePluginWebRequest.html
 file
 
 
 
 
-2009-05-19T11:01:42.000000Z
-279fb31343def9beb2c9d32e377e5c3e
-2009-05-19T11:04:00.191345Z
-18454
+2009-05-19T13:39:50.000000Z
+d87f6812d187d5deb16cd1e5e2231dfc
+2009-05-19T13:40:25.113660Z
+18464
 joshiausdemwald
 
 
@@ -2207,18 +1119,18 @@ joshiausdemwald
 
 
 
-4164
+6771
 
-_lib---model---doctrine---PluginsfAbstractFileTable.class.php.html
+_lib---sfFilebasePluginDirectory.php.html
 file
 
 
 
 
-2009-05-19T11:01:41.000000Z
-7ad1b60855eb7d42b1de3d6d71e63b79
-2009-05-19T11:04:00.191345Z
-18454
+2009-05-19T13:39:47.000000Z
+b1e2686917d3376c756f3195b8cb2e10
+2009-05-19T13:40:25.113660Z
+18464
 joshiausdemwald
 
 
@@ -2241,18 +1153,18 @@ joshiausdemwald
 
 
 
-4184
+4733
 
-_lib---model---doctrine---PluginsfFilebaseTagTable.class.php.html
+sfFilebasePluginException.html
 file
 
 
 
 
-2009-05-19T11:01:42.000000Z
-ff104c739a870db3fb17cfd63acc85fe
-2009-05-19T11:04:00.191345Z
-18454
+2009-05-19T13:39:47.000000Z
+459ef0bd200d33627aab6ece9f0c4d05
+2009-05-19T13:40:25.113660Z
+18464
 joshiausdemwald
 
 
@@ -2275,18 +1187,18 @@ joshiausdemwald
 
 
 
-4180
+6311
 
-_lib---filter---doctrine---PluginsfFilebaseDirectoryFormFilter.class.php.html
+_lib---sfFilebasePluginUtil.php.html
 file
 
 
 
 
-2009-05-19T11:01:42.000000Z
-4c950810e9b441d1efc9b76aaa50645b
-2009-05-19T11:04:00.191345Z
-18454
+2009-05-19T13:39:50.000000Z
+784af88bc88001f366e45f15ac4ce70c
+2009-05-19T13:40:25.113660Z
+18464
 joshiausdemwald
 
 
@@ -2309,7 +1221,7 @@ joshiausdemwald
 
 
 
-4225
+4757
 
 _lib---sfFilebasePluginGfxEditorAdapterIMagick.php.html
 file
@@ -2317,10 +1229,10 @@ file
 
 
 
-2009-05-19T11:01:44.000000Z
-0d03a7ae6f6c38db027b2071c1f7918f
-2009-05-19T11:04:00.191345Z
-18454
+2009-05-19T13:39:48.000000Z
+66e6430f8f064020b0519b06e9256b1e
+2009-05-19T13:40:25.113660Z
+18464
 joshiausdemwald
 
 
@@ -2351,10 +1263,10 @@ file
 
 
 
-2009-05-19T11:01:43.000000Z
-186487060b3049246dd4bbd748bdf40e
-2009-05-19T11:04:00.191345Z
-18454
+2009-05-19T13:39:47.000000Z
+ce8579ed0c26d2f56065b71666dd05d7
+2009-05-19T13:40:25.113660Z
+18464
 joshiausdemwald
 
 
@@ -2379,16 +1291,16 @@ joshiausdemwald
 
 35489
 
-PluginsfFilebaseTagFormFilter.html
+sfFilebasePluginRecursiveDirectoryIterator.html
 file
 
 
 
 
-2009-05-19T11:01:42.000000Z
-33c5460d97fc86831e85eaa9f7607669
-2009-05-19T11:04:00.191345Z
-18454
+2009-05-19T13:39:49.000000Z
+2c2016fd3ff69d69e39722e1023d1979
+2009-05-19T13:40:25.113660Z
+18464
 joshiausdemwald
 
 
@@ -2411,7 +1323,7 @@ joshiausdemwald
 
 
 
-4252
+17350
 
 sfFilebasePluginFileObject.html
 file
@@ -2419,10 +1331,10 @@ file
 
 
 
-2009-05-19T11:01:43.000000Z
-905e47654b281a0c7c494ccf09de7ac4
-2009-05-19T11:04:00.191345Z
-18454
+2009-05-19T13:39:48.000000Z
+6d8347721dbc28c5da9ee6ba2119ecdb
+2009-05-19T13:40:25.113660Z
+18464
 joshiausdemwald
 
 
@@ -2453,10 +1365,10 @@ file
 
 
 
-2009-05-19T11:01:44.000000Z
-5f5fe3f8fc3efa151736910a186dd33e
-2009-05-19T11:04:00.191345Z
-18454
+2009-05-19T13:39:49.000000Z
+57a6d7da446f37363a0a753482adea08
+2009-05-19T13:40:25.113660Z
+18464
 joshiausdemwald
 
 
@@ -2481,16 +1393,50 @@ joshiausdemwald
 
 4776
 
+_lib---sfFilebasePluginStruct.php.html
+file
+
+
+
+
+2009-05-19T13:39:49.000000Z
+5f4bc7c18d28c9bbc5e50419716fcef8
+2009-05-19T13:40:25.113660Z
+18464
+joshiausdemwald
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4747
+
 sfFilebasePluginGfxEditorAdapterGD.html
 file
 
 
 
 
-2009-05-19T11:01:44.000000Z
-feccbc7766232fadcf2147d704e33984
-2009-05-19T11:04:00.191345Z
-18454
+2009-05-19T13:39:48.000000Z
+1fca9035f88bd7239b9ab54aa8245592
+2009-05-19T13:40:25.113660Z
+18464
 joshiausdemwald
 
 
@@ -2514,38 +1460,4 @@ joshiausdemwald
 
 
 29287
-
-PluginsfAbstractFile.html
-file
-
-
-
-
-2009-05-19T11:01:41.000000Z
-107624b932a93f502aacf28a8b4d540c
-2009-05-19T11:04:00.191345Z
-18454
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-11692
 
