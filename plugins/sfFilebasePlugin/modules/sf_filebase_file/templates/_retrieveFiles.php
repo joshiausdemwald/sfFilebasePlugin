@@ -16,15 +16,15 @@
     <?php if($is_edit):?>
       <h3><?php echo $file_object->getFilename()?></h3>
     <?php endif?>
-    <ul>
+    <ul class="stats">
       <?php if($file instanceof sfFilebasePluginImage):?>
         <li>
           <a href="<?php echo url_for('sf_filebase_display_image', array('width'=>'600', 'file'=>$file_object->getId()))?>">
             <img src="<?php echo url_for('sf_filebase_display_image', array('height'=>120, 'file'=>$file_object->getId()))?>" alt="<?php echo $file_object->getFilename()?>" /></a></li>
       <?php endif?>
-        <li>Type: <?php echo $file->getMimeType()?></li>
+        <li><span><?php echo __('Type')?>:</span> <?php echo $file->getMimeType()?></li>
         <li>
-            <?php echo __('Download')?>: <br />
+            <span><?php echo __('Download')?>: </span>
             <?php echo link_to($file_object->getFilename(), 'sf_filebase_download_file', array('file'=>$file_object->getId()));?></li>
     </ul>
   <?php else:?>

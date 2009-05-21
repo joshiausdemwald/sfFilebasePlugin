@@ -294,7 +294,7 @@
 		<div class="info-box-body">
 			<A NAME='method_detail'></A>
 <a name="methodchmodRecursive" id="chmodRecursive"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">chmodRecursive</span> (line <span class="line-number">43</span>)
@@ -324,7 +324,7 @@
 			
 	</div>
 <a name="methodcopy" id="copy"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">copy</span> (line <span class="line-number">79</span>)
@@ -365,7 +365,7 @@
 			
 	</div>
 <a name="methodcount" id="count"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">count</span> (line <span class="line-number">195</span>)
@@ -400,7 +400,7 @@
 			
 	</div>
 <a name="methoddelete" id="delete"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">delete</span> (line <span class="line-number">30</span>)
@@ -441,7 +441,7 @@
 			
 	</div>
 <a name="methodgetHumanReadableFileType" id="getHumanReadableFileType"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">getHumanReadableFileType</span> (line <span class="line-number">212</span>)
@@ -472,7 +472,7 @@
 			
 	</div>
 <a name="methodgetIterator" id="getIterator"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">getIterator</span> (line <span class="line-number">106</span>)
@@ -501,7 +501,7 @@
 			
 	</div>
 <a name="methodgetSize" id="getSize"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">getSize</span> (line <span class="line-number">90</span>)
@@ -537,7 +537,7 @@
 			
 	</div>
 <a name="methodisEmpty" id="isEmpty"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">isEmpty</span> (line <span class="line-number">223</span>)
@@ -563,7 +563,7 @@
 			
 	</div>
 <a name="methodoffsetExists" id="offsetExists"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">offsetExists</span> (line <span class="line-number">140</span>)
@@ -598,7 +598,7 @@
 			
 	</div>
 <a name="methodoffsetGet" id="offsetGet"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">offsetGet</span> (line <span class="line-number">152</span>)
@@ -634,7 +634,7 @@
 			
 	</div>
 <a name="methodoffsetSet" id="offsetSet"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">offsetSet</span> (line <span class="line-number">180</span>)
@@ -672,7 +672,7 @@
 			
 	</div>
 <a name="methodoffsetUnset" id="offsetUnset"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">offsetUnset</span> (line <span class="line-number">168</span>)
@@ -707,7 +707,7 @@
 			
 	</div>
 <a name="methodopenFile" id="openFile"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">openFile</span> (line <span class="line-number">121</span>)
@@ -750,7 +750,7 @@
 			
 	</div>
 <a name="methodrename" id="rename"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">rename</span> (line <span class="line-number">67</span>)
@@ -829,7 +829,7 @@
 
 
 	<p class="notes" id="credit">
-		Documentation generated on Thu, 21 May 2009 18:44:42 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Fri, 22 May 2009 00:48:45 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</div></body>
 </html>

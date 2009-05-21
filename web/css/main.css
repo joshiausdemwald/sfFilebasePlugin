@@ -1,26 +1,28 @@
 html
 {
   font-size: 101%;
-  background: #fff;
+  background: #333 none;
 }
 
 body
 {
   font-family: arial, geneva, sans-serif, verdana;
   font-size: 13px;
-  
+  background: #333 none;
 }
 
-#Overwall_Wrapper
+#Overall_Wrapper
 {
-  background: #ccc none;
-  overflow: hidden;
+  width: 100%;
+  background: #fff none;
+  padding-bottom:50px;
 }
 
 #Header
 {
   background-color: #333;
   padding: 20px;
+  border-bottom: 1px #222 solid;
 }
 
 #Sidebar, #Content
@@ -37,8 +39,9 @@ body
 #Navigation
 {
   background: #333 none;
-  border-top: 1px solid #666;
+  border-top: 1px solid #444;
   padding: 10px 22px;
+  border-bottom: 1px #222 solid;
 }
 
 #Navigation,
@@ -63,6 +66,40 @@ body
 {
   width: 800px;
   padding: 38px 0 0 40px;
+}
+
+#Footer
+{
+  padding: 20px;
+  border-top: 1px solid #ccc;
+  background: #333 none;
+}
+
+#Footer *
+{
+  color: #00ffff;
+}
+
+#Footer a
+{
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#Footer a:hover
+{
+  background: #de3400 none;
+}
+
+#License
+{
+  padding-top: 10px;
+}
+
+#License *
+{
+  font-size: 0.8em;
+  color: #999;
 }
 
 #Header h1
@@ -166,15 +203,46 @@ tr,
   color: #fff;
 }
 
+#sf_admin_content form ul.stats
+{
+  padding: 0;
+  margin: 0;
+}
+
+#sf_admin_content form ul.stats li
+{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: .9em;
+}
+
+#sf_admin_content form ul.stats li a
+{
+  padding: 0;
+  margin: 0;
+  background: transparent none;
+}
+
+#sf_admin_content form ul.stats li span
+{
+  float: left;
+  display: block;
+  width: 120px;
+}
+
 #sf_admin_container div.notice,
 #sf_admin_container div.error
 {
   position: absolute;
-  top: 117px;
+  top: 119px;
   left: 0;
   color: #fff;
   border: 0;
-  border-top: 1px #666 solid;
+  border-top: 1px #444 solid;
+  border-bottom: 1px #222 solid;
+  background-position: 20px 4px;
+  padding-left:50px;
   width: 100%;
 }
 
@@ -197,12 +265,14 @@ tr,
 
 #sf_admin_container div.notice
 {
-  background-color: #333;
+  background-color: #3a3a3a;
 }
 
 #sf_admin_container div.error
 {
   background-color: #f11c00;
+  border-bottom-color: #bb0000;
+  border-top-color: #ff0000;
 }
 
 #sf_admin_container ul.error_list

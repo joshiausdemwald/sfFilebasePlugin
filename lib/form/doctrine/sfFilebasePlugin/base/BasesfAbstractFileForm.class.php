@@ -33,10 +33,6 @@ class BasesfAbstractFileForm extends BaseFormDoctrine
       'level'    => new sfValidatorInteger(array('required' => false)),
     ));
 
-    $this->validatorSchema->setPostValidator(
-      new sfValidatorDoctrineUnique(array('model' => 'sfAbstractFile', 'column' => array('filename', 'lft', 'rgt')))
-    );
-
     $this->widgetSchema->setNameFormat('sf_abstract_file[%s]');
 
     $this->errorSchema = new sfValidatorErrorSchema($this->validatorSchema);

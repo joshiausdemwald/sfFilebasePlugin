@@ -26,8 +26,6 @@ abstract class BasesfAbstractFile extends sfDoctrineRecord
         $this->hasColumn('comment', 'string', null, array('type' => 'string'));
         $this->hasColumn('type', 'string', 255, array('type' => 'string', 'length' => 255));
 
-
-        $this->index('u1', array('type' => 'unique', 'fields' => array(0 => 'filename', 1 => 'lft', 2 => 'rgt')));
         $this->setSubClasses(array('sfFilebaseFile' => array('type' => '1'), 'sfFilebaseDirectory' => array('type' => '2')));
     }
 

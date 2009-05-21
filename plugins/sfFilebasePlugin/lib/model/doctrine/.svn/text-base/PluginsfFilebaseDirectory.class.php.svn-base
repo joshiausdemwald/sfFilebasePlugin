@@ -14,7 +14,15 @@ abstract class PluginsfFilebaseDirectory extends BasesfFilebaseDirectory
 {
   public function preDelete($event)
   {
-    $directory = sfFilebasePlugin::getInstance()->getFilebaseFile($this->getHash());
-    $directory->delete(true);
+    if($this->getNode()->isRoot())
+      throw new sfFilebasePluginException(sprintf('Root directory %s cannot be deleted.', $this->getFilename()));
+
+    if($this->getNode()->hasChildren())
+    {
+      foreach($this->getNode()->getChildren() AS $entry)
+      {
+        $entry->delete();
+      }
+    }
   }
 }

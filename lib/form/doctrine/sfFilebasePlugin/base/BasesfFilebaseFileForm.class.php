@@ -33,10 +33,6 @@ class BasesfFilebaseFileForm extends BaseFormDoctrine
       'level'    => new sfValidatorInteger(array('required' => false)),
     ));
 
-    $this->validatorSchema->setPostValidator(
-      new sfValidatorDoctrineUnique(array('model' => 'sfFilebaseFile', 'column' => array('filename', 'lft', 'rgt')))
-    );
-
     $this->widgetSchema->setNameFormat('sf_filebase_file[%s]');
 
     $this->errorSchema = new sfValidatorErrorSchema($this->validatorSchema);

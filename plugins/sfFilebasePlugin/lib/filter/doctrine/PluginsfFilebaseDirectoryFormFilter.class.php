@@ -12,4 +12,10 @@
  */
 abstract class PluginsfFilebaseDirectoryFormFilter extends BasesfFilebaseDirectoryFormFilter
 {
+  public function buildQuery(array $values)
+  {
+    $query = parent::buildQuery($values);
+    $query->addWhere('lft != 1');
+    return $query;
+  }
 }

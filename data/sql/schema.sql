@@ -1,3 +1,3 @@
-CREATE TABLE sf_abstract_files (id BIGINT AUTO_INCREMENT, filename VARCHAR(255) NOT NULL, hash VARCHAR(255) NOT NULL, comment TEXT, type VARCHAR(255), lft INT, rgt INT, level SMALLINT, UNIQUE INDEX u1_idx (filename, lft, rgt), PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE sf_abstract_files (id BIGINT AUTO_INCREMENT, filename VARCHAR(255) NOT NULL, hash VARCHAR(255) NOT NULL, comment TEXT, type VARCHAR(255), lft INT, rgt INT, level SMALLINT, PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE sf_filebase_tags (id BIGINT AUTO_INCREMENT, sf_abstract_files_id BIGINT, tag VARCHAR(255) NOT NULL, INDEX i1_idx (tag), INDEX sf_abstract_files_id_idx (sf_abstract_files_id), PRIMARY KEY(id)) ENGINE = INNODB;
 ALTER TABLE sf_filebase_tags ADD CONSTRAINT sf_filebase_tags_sf_abstract_files_id_sf_abstract_files_id FOREIGN KEY (sf_abstract_files_id) REFERENCES sf_abstract_files(id) ON UPDATE CASCADE ON DELETE CASCADE;

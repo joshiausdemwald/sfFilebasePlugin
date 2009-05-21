@@ -33,10 +33,6 @@ class BasesfFilebaseDirectoryForm extends BaseFormDoctrine
       'level'    => new sfValidatorInteger(array('required' => false)),
     ));
 
-    $this->validatorSchema->setPostValidator(
-      new sfValidatorDoctrineUnique(array('model' => 'sfFilebaseDirectory', 'column' => array('filename', 'lft', 'rgt')))
-    );
-
     $this->widgetSchema->setNameFormat('sf_filebase_directory[%s]');
 
     $this->errorSchema = new sfValidatorErrorSchema($this->validatorSchema);

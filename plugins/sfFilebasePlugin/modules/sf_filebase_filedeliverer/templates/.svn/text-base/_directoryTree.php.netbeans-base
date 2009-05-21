@@ -88,7 +88,7 @@ var <?php echo $id?> = function()
             }
             else
             {
-              tree.getRootNode().reload();
+              //tree.getRootNode().reload();
               tree.enable();
             }
           },

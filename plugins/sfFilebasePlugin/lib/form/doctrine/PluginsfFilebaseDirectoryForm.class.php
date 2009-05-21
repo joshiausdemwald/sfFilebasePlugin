@@ -25,7 +25,7 @@ abstract class PluginsfFilebaseDirectoryForm extends BasesfFilebaseDirectoryForm
     unset($this->validatorSchema['type']);
     unset($this->validatorSchema['lft']);
     unset($this->validatorSchema['rgt']);
-    unset($this->validatorSchema['lvl']);
+    unset($this->validatorSchema['level']);
     
     $this->widgetSchema['tags'] = new sfWidgetFormInput();
     $this->validatorSchema['tags'] = new sfValidatorAnd(array(
@@ -50,8 +50,52 @@ abstract class PluginsfFilebaseDirectoryForm extends BasesfFilebaseDirectoryForm
       $tag_string = $this->getObject()->getTagsAsString();
       $this->widgetSchema['tags']->setDefault($tag_string);
 
-      $this->widgetSchema['directory']->setDefault($this->getObject()->getNode()->getParent()->getId());
+      $p = $this->getObject()->getNode()->getParent();
+      if($p)
+      {
+        $this->widgetSchema['directory']->setDefault($this->getObject()->getNode()->getParent()->getId());
+      }
     }
+
+    $this->validatorSchema->setPostValidator(
+      new sfValidatorCallback(array(
+        'callback' => array(
+          $this,
+          'checkUpload'
+        )
+      ))
+    );
+  }
+
+  public function checkUpload(sfValidatorCallback $validator, $values, $parameters = null)
+  {
+    $filename = $values['filename'];
+    $validator->addMessage('unique', 'A file with that name already exists in the destinated directory.');
+    $validator->addMessage('invalid', 'You are not allowed to move a directory into itself or one of its children.');
+    $parent = Doctrine::getTable('sfFilebaseDirectory')->find($values['directory']);
+    if($parent->getNode()->hasChildren())
+    {
+      foreach($parent->getNode()->getChildren() AS $file)
+      {
+        if($file !== $this->getObject() && $file->getFilename() == $filename)
+        {
+          throw new sfValidatorError($validator, 'unique');
+        }
+      }
+    }
+    while(true)
+    {
+      if($parent === $this->getObject())
+      {
+        throw new sfValidatorError($validator, 'invalid');
+      }
+      $parent = $parent->getNode()->getParent();
+      if(!$parent)
+      {
+        break;
+      }
+    }
+    return $values;
   }
 
   public function processValues($values = null)
@@ -66,9 +110,9 @@ abstract class PluginsfFilebaseDirectoryForm extends BasesfFilebaseDirectoryForm
   protected function doSave($con = null)
   {
     $con === null && $con = $this->getConnection();
-    
-    $this->updateObject();
-    
+
+    parent::updateObject($values);
+
     $destination_node = null;
     if($this->getValue('directory'))
     {
@@ -78,7 +122,14 @@ abstract class PluginsfFilebaseDirectoryForm extends BasesfFilebaseDirectoryForm
     {
       $destination_node = Doctrine::getTable('sfFilebaseDirectory')->getTree()->fetchRoot();
     }
-    $this->getObject()->getNode()->insertAsLastChildOf($destination_node);
+    if($this->isNew())
+    {
+      $this->getObject()->getNode()->insertAsLastChildOf($destination_node);
+    }
+    else
+    {
+      $this->getObject()->getNode()->moveAsLastChildOf($destination_node);
+    }
 
     // embedded forms
     $this->saveEmbeddedForms($con);

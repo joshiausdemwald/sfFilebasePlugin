@@ -31,11 +31,11 @@ generator:
         retrieveFiles:
           label: Properties
       list:
-        display: [~retrieveFiles, filename, path]
+        display: [~retrieveFiles, filename]
       filter:
-        display: [path, filename, sf_filebase_directories_id]
-      form:    ~
+        display: [filename]
+      form: ~
       edit:
-        display: [~retrieveFiles, filename, path, sf_filebase_directories_id, comment, tags]
+        display: [~retrieveFiles, filename, comment, tags]
       new:
-        display: [filename, sf_filebase_directories_id, comment, tags]
+        display: [~retrieveFiles, hash, comment, tags]

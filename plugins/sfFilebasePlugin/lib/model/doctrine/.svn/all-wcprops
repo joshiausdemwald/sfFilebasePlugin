@@ -13,7 +13,7 @@ PluginsfFilebaseDirectory.class.php
 K 25
 svn:wc:ra_dav:version-url
 V 95
-/!svn/ver/18511/plugins/sfFilebasePlugin/lib/model/doctrine/PluginsfFilebaseDirectory.class.php
+/!svn/ver/18526/plugins/sfFilebasePlugin/lib/model/doctrine/PluginsfFilebaseDirectory.class.php
 END
 PluginsfFilebaseFileTable.class.php
 K 25
@@ -37,7 +37,7 @@ PluginsfFilebaseDirectoryTable.class.php
 K 25
 svn:wc:ra_dav:version-url
 V 100
-/!svn/ver/18511/plugins/sfFilebasePlugin/lib/model/doctrine/PluginsfFilebaseDirectoryTable.class.php
+/!svn/ver/18526/plugins/sfFilebasePlugin/lib/model/doctrine/PluginsfFilebaseDirectoryTable.class.php
 END
 PluginsfFilebaseFile.class.php
 K 25

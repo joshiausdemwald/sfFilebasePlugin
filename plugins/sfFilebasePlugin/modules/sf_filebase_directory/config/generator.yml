@@ -30,8 +30,9 @@ generator:
           label: Parent directory
         parent_directory_link:
           label: Parent directory
-      list: ~
+      list:
+        display: [filename, comment, tagsAsString]
       filter: ~
-      form:    ~
+      form:   ~
       edit:    ~
       new:     ~

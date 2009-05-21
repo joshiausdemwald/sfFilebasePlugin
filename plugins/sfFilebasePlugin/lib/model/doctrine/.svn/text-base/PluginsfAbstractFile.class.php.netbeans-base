@@ -12,42 +12,6 @@
  */
 abstract class PluginsfAbstractFile extends BasesfAbstractFile
 {
-  public function preSave($event)
-  {
-    $values = $this->getModified(true);
-
-    if(array_key_exists('path', $values) && array_key_exists('sf_filebase_directories_id', $values))
-    {
-      if($this->getPath() != $this->getParentDirectory()->getPathname())
-        throw new LogicException(sprintf('Path %s differs from directory pathname %s.', $this->getPath(), $this->getParentDirectory()->getPathname()));
-    }
-    elseif(array_key_exists('path', $values))
-    {
-      $dir_object = $this->getParentDirectory();
-      if($dir_object->getPathname() != $this->getPath())
-      {
-        $dir_object = Doctrine_Query::create()->
-            select('*')->
-            from('sfFilebaseDirectory d')->
-            where('CONCAT(d.path, \'/\', d.filename)=?')->
-            execute(array($this->getPath()))->get(0);
-      }
-      $this->setParentDirectory($dir_object);
-    }
-    
-    // Ensure the constraint between directory flag and
-    // path.
-    elseif(array_key_exists('sf_filebase_directories_id', $values))
-    {
-      $f = sfFilebasePlugin::getInstance();
-      $path = $this->getParentDirectory() instanceof FilebaseDirectory && $this->getParentDirectory()->getPath() !== null ?
-        $this->getParentDirectory()->getPathname() :
-        $f->getPathname() ;
-      
-      $this->setPath($path);
-    }
-  }
-
   /**
    * Returns the tags as a string representation.
    * @param string $separator
@@ -91,26 +55,6 @@ abstract class PluginsfAbstractFile extends BasesfAbstractFile
   }
 
   /**
-   *
-   * @return string link to the parent directories edit page
-   */
-  public function getParentDirectoryLink()
-  {
-    $p = $this->getsfFilebaseDirectoriesId();
-    return empty($p) ? '' :
-            link_to($this->getParentDirectory()->getPathname(), 'sf_filebase_directory_edit', $this->getParentDirectory());
-  }
-
-  public function getPathname()
-  {
-   if(!$this->getPath() || !$this->getFilename())
-   {
-     return null;
-   }
-   return   $this->getPath() . '/' . $this->getFilename() ;
-  }
-
-  /**
    * This method is only for the displaying in sfDoctrine Form.
    * It renders an indent for each directory/file.
    *
@@ -119,6 +63,16 @@ abstract class PluginsfAbstractFile extends BasesfAbstractFile
   public function getFilenameIndent()
   {
     $f = sfFilebasePlugin::getInstance();
-    return str_repeat('&nbsp;', $f[$this->getPathname()]->getNestingLevel()) . $this->getFilename();
+    $file = $f->getFileByHash($this->getHash());
+    return str_repeat('&nbsp;', $file->getNestingLevel()) . $this->getFilename();
+  }
+
+  public function generatehashFilename($file = null)
+  {
+    if($file === null)
+    {
+      return md5(uniqid(rand(), true));
+    }
+    return md5(uniqid(rand(), true)) . $file->getExtension();
   }
 }
