@@ -5,7 +5,7 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @package   de.optimusprime.sfFilebasePlugin
+ * @package   de.optimusprime.sfFilebasePlugin.adminArea
  * @author    Johannes Heinen <johannes.heinen@gmail.com>
  * @license   MIT license
  * @copyright 2007-2009 Johannes Heinen <johannes.heinen@gmail.com>
@@ -19,7 +19,7 @@ abstract class PluginsfAbstractFile extends BasesfAbstractFile
     if(array_key_exists('path', $values) && array_key_exists('sf_filebase_directories_id', $values))
     {
       if($this->getPath() != $this->getParentDirectory()->getPathname())
-        throw new LogicException('Path %s differs from directory pathname %s.', $this->getPath(), $this->getParentDirectory()->getPathname());
+        throw new LogicException(sprintf('Path %s differs from directory pathname %s.', $this->getPath(), $this->getParentDirectory()->getPathname()));
     }
     elseif(array_key_exists('path', $values))
     {
@@ -40,9 +40,10 @@ abstract class PluginsfAbstractFile extends BasesfAbstractFile
     elseif(array_key_exists('sf_filebase_directories_id', $values))
     {
       $f = sfFilebasePlugin::getInstance();
-      $path = $this->getParentDirectory()->getPathname() === null ?
-        $f->getPathname() : 
-        $this->getParentDirectory()->getPathname();
+      $path = $this->getParentDirectory() instanceof FilebaseDirectory && $this->getParentDirectory()->getPath() !== null ?
+        $this->getParentDirectory()->getPathname() :
+        $f->getPathname() ;
+      
       $this->setPath($path);
     }
   }

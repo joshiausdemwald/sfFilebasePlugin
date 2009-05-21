@@ -1,0 +1,217 @@
+html
+{
+  font-size: 101%;
+  background: #fff;
+}
+
+body
+{
+  font-family: arial, geneva, sans-serif, verdana;
+  font-size: 13px;
+  
+}
+
+#Overwall_Wrapper
+{
+  background: #ccc none;
+  overflow: hidden;
+}
+
+#Header
+{
+  background-color: #333;
+  padding: 20px;
+}
+
+#Sidebar, #Content
+{
+  float: left;
+}
+
+#Sidebar
+{
+  padding: 38px 0 0 20px;
+  width: 190px;
+}
+
+#Navigation
+{
+  background: #333 none;
+  border-top: 1px solid #666;
+  padding: 10px 22px;
+}
+
+#Navigation,
+#Navigation a
+{
+  color: #00ffff;
+}
+
+#Navigation a
+{
+  text-decoration: none;
+  text-transform: lowercase;
+  font-weight: bold;
+}
+
+#Navigation a:hover
+{
+  background: #de3400;
+}
+
+#Content
+{
+  width: 800px;
+  padding: 38px 0 0 40px;
+}
+
+#Header h1
+{
+  font-size: 36px;
+  letter-spacing: -2px;
+  text-transform: lowercase;
+  color: #00ffff;
+  font-weight:bold;
+}
+
+h2
+{
+  font-weight: bold;
+  margin: 0 0 20px 0;
+  font-size: 24px;
+  color: #00ffff;
+}
+
+td,
+th,
+tr,
+#sf_admin_container fieldset,
+#sf_admin_container .sf_admin_form_row,
+#sf_admin_container th,
+#sf_admin_container td
+{
+  border: 0;
+}
+
+#sf_admin_container .sf_admin_form_row
+{
+  padding: 0px 3px 15px 3px;
+}
+
+#sf_admin_container label
+{
+  color: #333;
+}
+
+#sf_admin_container table,
+#sf_admin_container td,
+#sf_admin_container th,
+#sf_admin_container tr
+{
+  border: 0;
+  background: transparent none;
+  font-size: 12px;
+}
+
+#sf_admin_content table thead th
+{
+  background: #333;
+}
+
+#sf_admin_content table thead th,
+#sf_admin_content table thead a
+{
+  color: #fff;
+}
+
+#sf_admin_content table thead a
+{
+  font-weight: bold;
+}
+
+#sf_admin_content table thead a:hover
+{
+  background: #de3400 none;
+  color: #fff;
+  text-decoration: none;
+}
+
+#sf_admin_content tbody tr.even td,
+#sf_admin_content tbody tr.even th
+{
+  background: #eee none;
+}
+
+#sf_admin_content tbody tr.odd td,
+#sf_admin_content tbody tr.odd th
+{
+  background: #e1e1e1 none;
+}
+
+#sf_admin_content tbody tr ul
+{
+  padding: 0;
+  margin: 0;
+}
+
+#sf_admin_content tbody tr ul li
+{
+  list-style: none;
+}
+
+#sf_admin_content tfoot td,
+#sf_admin_content tfoot th
+{
+  background: #333;
+  color: #fff;
+}
+
+#sf_admin_container div.notice,
+#sf_admin_container div.error
+{
+  position: absolute;
+  top: 117px;
+  left: 0;
+  color: #fff;
+  border: 0;
+  border-top: 1px #666 solid;
+  width: 100%;
+}
+
+.sf_admin_filter table,
+.sf_admin_filter table tr,
+.sf_admin_filter table td,
+.sf_admin_filter table th
+{
+  border: 0;
+  background: transparent none;
+}
+
+.sf_admin_filter td,
+.sf_admin_filter th,
+.sf_admin_filter label
+{
+  font-size: 12px;
+  line-height: 19px;
+}
+
+#sf_admin_container div.notice
+{
+  background-color: #333;
+}
+
+#sf_admin_container div.error
+{
+  background-color: #f11c00;
+}
+
+#sf_admin_container ul.error_list
+{
+  background: none;
+  border: none;
+}
+
+#sf_admin_container ul.error_list li
+{
+  color: #f11c00;
+}

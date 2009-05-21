@@ -30,10 +30,8 @@ generator:
           label: Parent directory
         parent_directory_link:
           label: Parent directory
-      list:
-        display: [path, filename, comment]
-      filter:
-        display: [sf_filebase_directories_id, filename, comment]
+      list: ~
+      filter: ~
       form:    ~
       edit:    ~
       new:     ~

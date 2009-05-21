@@ -203,7 +203,7 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
    */
   public function getHashForFile($file)
   {
-    $file = $this->getFilebaseFile ($file);
+    $file = $this->getFilebaseFile($file);
     if(!$this->getFilebase()->isInFilebase($file)) throw new sfFilebasePluginException('FilebaseFile %s does not belong to filebase %s, access denied due to security issues.', $file->getPathname(), $this->getPathname());
     return md5($file->getRelativePathFromFilebaseDirectory());
   }
@@ -245,6 +245,7 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
       if(!$destination->isDir())               throw new sfFilebasePluginException(sprintf('Error copying file %s: Destination is not a directory.', $destination->getPathname()));
       if(!$destination->isWritable())          throw new sfFilebasePluginException(sprintf('Error copying file %s: Destination is write protected.', $destination->getPathname()));
       if(!$this->isInFilebase($destination))   throw new sfFilebasePluginException(sprintf('FilebaseFile %s does not belong to filebase %s, access denied due to security issues.', $destination->getPathname(), $this->getPathname()));
+      if($destination->liesWithin($source))                             throw new sfFilebasePluginException(sprintf('Error copying file: Destination directory %s lies within source directory %s.', $destination, $source));
       foreach(new RecursiveIteratorIterator($source, RecursiveIteratorIterator::SELF_FIRST) AS $file)
       {
         if($file instanceof sfFilebasePluginDirectory)
@@ -305,7 +306,7 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
         if(!$dest_path->fileExists())                                   throw new sfFilebasePluginException(sprintf('Destination path %s does not exist.', $dest_path->getPathname()));
         if(!$dest_path->isWritable())                                   throw new sfFilebasePluginException(sprintf('Destination path %s is write protected.', $dest_path->getPathname()));
       }
-
+      
       // Only check target. Files may be copied from any location.
       if(!$this->isInFilebase($destination))                            throw new sfFilebasePluginException(sprintf('FilebaseFile %s does not belong to filebase %s, access denied due to security issues.', $destination->getPathname(), $this->getPathname()));
       if(!@copy($source->getPathname(), $destination->getPathname()))   throw new sfFilebasePluginException(sprintf('Error copying file %s to %s.', $source->getPathname(), $destination->getPathname()));
@@ -697,10 +698,13 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
    *
    * Returns null if file does not exist.
    *
+   * @param string md5 hash of relativePathFromFilebaseDirectory
    * @return sfFilebasePluginFile $file
    */
   public function getFileByHash($hash)
   {
+    if($hash === $this->getHash())
+      return $this;
     foreach(new RecursiveIteratorIterator($this->getIterator(), RecursiveIteratorIterator::SELF_FIRST) AS $file)
     {
       if($file->getHash() === $hash)
@@ -716,12 +720,14 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
    * directory.
    * @param mixed sfFilebaseDirectory | string $file
    */
-  public function fileLiesWithin($needle, $haystack)
+  public function fileLiesWithin($file, $container)
   {
-    $needle   = $this->getFilebaseFile($needle);
-    $haystack = $this->getFilebaseFile($haystack);
-
-    if(strpos($needle->getPathname(), $haystack->getPathname()) === 0)
+    $file       = $this->getFilebaseFile($file);
+    $container  = $this->getFilebaseFile($container);
+    // file = /path/to/lalala/bumsdi
+    // container = /path/to
+    
+    if(strpos($file->getPathname(), $container->getPathname()) === 0)
     {
       return true;
     }

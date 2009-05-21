@@ -15,17 +15,18 @@ abstract class PluginsfFilebaseDirectoryForm extends BasesfFilebaseDirectoryForm
   public function setup()
   {
     parent::setup();
-    unset($this->widgetSchema['path']);
     unset($this->widgetSchema['hash']);
     unset($this->widgetSchema['type']);
+    unset($this->widgetSchema['lft']);
+    unset($this->widgetSchema['rgt']);
     unset($this->widgetSchema['level']);
-    unset($this->validatorSchema['path']);
-    unset($this->validatorSchema['type']);
+
     unset($this->validatorSchema['hash']);
-    unset($this->validatorSchema['level']);
-
-    $this->widgetSchema['sf_filebase_directories_id'] = new sfWidgetFormDoctrineChoice(array('model' => 'sfFilebaseDirectory', 'method'=>'getFilenameIndent', 'add_empty' => true));
-
+    unset($this->validatorSchema['type']);
+    unset($this->validatorSchema['lft']);
+    unset($this->validatorSchema['rgt']);
+    unset($this->validatorSchema['lvl']);
+    
     $this->widgetSchema['tags'] = new sfWidgetFormInput();
     $this->validatorSchema['tags'] = new sfValidatorAnd(array(
       new sfValidatorString(),
@@ -40,46 +41,48 @@ abstract class PluginsfFilebaseDirectoryForm extends BasesfFilebaseDirectoryForm
       array('required'=>true)
     );
 
+    $directory_choices = sfFilebaseDirectoryTable::getChoices();
+    $this->widgetSchema['directory']    = new sfWidgetFormChoice(array('choices'=>$directory_choices));
+    $this->validatorSchema['directory'] = new sfValidatorChoice(array('choices'=>array_keys($directory_choices)));
+
     if(!$this->isNew())
     {
       $tag_string = $this->getObject()->getTagsAsString();
       $this->widgetSchema['tags']->setDefault($tag_string);
-      
-      $this->validatorSchema['sf_filebase_directories_id'] = new sfValidatorAnd
-      (
-        array
-        (
-          new sfValidatorDoctrineChoice(array('model' => 'sfFilebaseDirectory', 'required' => false)),
-          new sfValidatorCallback(array('callback'=>array(
-            $this,
-            'validateDirectoryPath'
-          ), 'arguments'=>array(
-                'dir'=>$this->getObject()
-              )))
-        ),
-        array(
-          'required'=>false
-        )
-      );
+
+      $this->widgetSchema['directory']->setDefault($this->getObject()->getNode()->getParent()->getId());
     }
   }
 
-  public function validateDirectoryPath($validator, $value, $arguments)
+  public function processValues($values = null)
   {
-    $f = sfFilebasePlugin::getInstance();
-    $dest_p_dir_object        = Doctrine::getTable('sfFilebaseDirectory')->find($value);
-    $source_dir_object        = $arguments['dir'];
-    
-    $source_dir = $source_dir_object->getPathname() === null ? $f[$f->getPathname() . '/' . $source_dir_object->getFilename()]  : $f[$source_dir_object->getPathname()];
-    $dest_dir   = $dest_p_dir_object->getPathname() === null ? $f->getFilebaseFile($f . '/' . $source_dir_object->getFilename()) : $f->getFilebaseFile($dest_p_dir_object->getPathname() . '/' . $source_dir_object->getFilename());
-
-    if(!$dest_dir->liesWithin($source_dir))
+    if($this->isNew())
     {
-      return $value;
+      $values['hash'] = $this->getObject()->generatehashFilename();
     }
-    throw new sfValidatorError($validator, 'invalid');
+    return parent::processValues($values);
   }
 
+  protected function doSave($con = null)
+  {
+    $con === null && $con = $this->getConnection();
+    
+    $this->updateObject();
+    
+    $destination_node = null;
+    if($this->getValue('directory'))
+    {
+      $destination_node = Doctrine::getTable('sfFilebaseDirectory')->find($this->getValue('directory'));
+    }
+    else
+    {
+      $destination_node = Doctrine::getTable('sfFilebaseDirectory')->getTree()->fetchRoot();
+    }
+    $this->getObject()->getNode()->insertAsLastChildOf($destination_node);
+
+    // embedded forms
+    $this->saveEmbeddedForms($con);
+  }
 
   /**
    * Betray him in a very nasty way ...

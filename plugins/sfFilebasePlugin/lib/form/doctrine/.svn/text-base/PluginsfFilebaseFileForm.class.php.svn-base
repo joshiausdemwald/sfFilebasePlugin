@@ -15,30 +15,36 @@ abstract class PluginsfFilebaseFileForm extends BasesfFilebaseFileForm
   public function setup()
   {
     parent::setup();
-    unset($this->widgetSchema['hash']);
     unset($this->widgetSchema['type']);
+    unset($this->widgetSchema['lft']);
+    unset($this->widgetSchema['rgt']);
     unset($this->widgetSchema['level']);
-    unset($this->validatorSchema['hash']);
     unset($this->validatorSchema['type']);
+    unset($this->validatorSchema['lft']);
+    unset($this->validatorSchema['rgt']);
     unset($this->validatorSchema['level']);
-    unset($this->widgetSchema['path']);
-    unset($this->validatorSchema['path']);
 
-    $this->validatorSchema['sf_filebase_directories_id']->setOption('required', false);
     $this->widgetSchema['tags'] = new sfWidgetFormInput();
-
     $this->validatorSchema['tags'] = new sfValidatorAnd(array(
       new sfValidatorString(),
       new sfValidatorRegex(array('pattern'=>'#^[^, ;]([^, ;]+[,; ] ?)*?[^, ;]+$#'))
     ), array('required'=>false));
 
+    $directory_choices = sfFilebaseDirectoryTable::getChoices();
+    $this->widgetSchema['directory']    = new sfWidgetFormChoice(array('choices'=>$directory_choices));
+    $this->validatorSchema['directory'] = new sfValidatorChoice(array('choices'=>array_keys($directory_choices)));
+
     if($this->isNew())
     {
-      $this->widgetSchema['filename']     = new sfWidgetFormInputFile();
-      $this->validatorSchema['filename']  = new sfFilebasePluginValidatorFile(array('allow_overwrite'=> true, 'required'=>true));
+      unset($this->widgetSchema['filename']);
+      unset($this->validatorSchema['filename']);
+      $this->widgetSchema['hash']     = new sfWidgetFormInputFile();
+      $this->validatorSchema['hash']  = new sfFilebasePluginValidatorFile(array('path'=>sfFilebasePlugin::getInstance()->getPathname(),'allow_overwrite'=> true, 'required'=>true));
     }
     else
     {
+      unset($this->widgetSchema['hash']);
+      unset($this->validatorSchema['hash']);
       $this->validatorSchema['filename'] = new sfValidatorAnd(
       array (
           new sfValidatorString(),
@@ -47,6 +53,7 @@ abstract class PluginsfFilebaseFileForm extends BasesfFilebaseFileForm
       );
       $tag_string = $this->getObject()->getTagsAsString();
       $this->widgetSchema['tags']->setDefault($tag_string);
+      $this->widgetSchema['directory']->setDefault($this->getObject()->getNode()->getParent()->getId());
     }
   }
 
@@ -72,35 +79,36 @@ abstract class PluginsfFilebaseFileForm extends BasesfFilebaseFileForm
    */
   public function saveFile($field, $filename = null, sfValidatedFile $file = null)
   {
-    if (!$this->validatorSchema[$field] instanceof sfValidatorFile)
+    $file = $this->getValue($field);
+    $this->getObject()->setFilename($file->getOriginalName());
+    return parent::saveFile($field, $filename, $file)->getFilename();
+  }
+
+  protected function doSave($con = null)
+  {
+    $con === null && $this->getConnection();
+
+    $this->updateObject();
+
+    $destination_node = null;
+    if($this->getValue('directory'))
     {
-      throw new LogicException(sprintf('You cannot save the current file for field "%s" as the field is not a file.', $field));
+      $destination_node = Doctrine::getTable('sfFilebaseDirectory')->findById($this->getValue('directory'))->get(0);
     }
-    $uploaded_file = $file;
-    if (is_null($file))
+    else
     {
-      $uploaded_file = $this->getValue($field);
+      $destination_node = Doctrine::getTable('sfFilebaseDirectory')->getTree()->fetchRoot();
+    }
+    if($this->isNew())
+    {
+      $this->getObject()->getNode()->insertAsLastChildOf($destination_node);
+    }
+    else
+    {
+      $this->getObject()->getNode()->moveAsLastChildOf($destination_node);
     }
 
-    $filebase = sfFilebasePlugin::getInstance();
-    $dir_id = $this->getValue('sf_filebase_directories_id');
-    $original_filename = sfFilebasePlugin::getInstance()->getFilebaseFile($uploaded_file->getOriginalName());
-    $save_path_name = $original_filename;
-    if(!empty($dir_id))
-    {
-      $dir_object = Doctrine_Query::create()->
-        select('*')->
-        from('sfFilebaseDirectory d')->
-        where('d.id='.$dir_id)->
-        execute()->
-        get(0);
-      $this->getObject()->setParentDirectory($dir_object);
-      $uploaded_file->setPath($filebase[$dir_object->getPathname()]->getPathname());
-      $save_path_name = $filebase->getFilebaseFile($uploaded_file->getPath() . '/' . $uploaded_file->getOriginalName());
-    }
-    $saved_file = parent::saveFile($field, $save_path_name, $file);
-    $this->getObject()->setHash($saved_file->getHash());
-    $this->getObject()->setPath($saved_file->getPath());
-    return $saved_file->getFilename();
+    // embedded forms
+    $this->saveEmbeddedForms($con);
   }
 }

@@ -1,12 +1,14 @@
 <?php
-
 /**
- * filedeliverer actions.
+ * This file is part of the sfFilebasePlugin package.
  *
- * @package    test
- * @subpackage filedeliverer
- * @author     Your name here
- * @version    SVN: $Id: actions.class.php 12479 2008-10-31 10:54:40Z fabien $
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @package   de.optimusprime.sfFilebasePlugin.adminArea
+ * @author    Johannes Heinen <johannes.heinen@gmail.com>
+ * @license   MIT license
+ * @copyright 2007-2009 Johannes Heinen <johannes.heinen@gmail.com>
  */
 class sf_filebase_filedelivererActions extends sfActions
 {
@@ -22,10 +24,11 @@ class sf_filebase_filedelivererActions extends sfActions
 
   public function executeDownload(sfWebRequest $request)
   {
-    $hash = $request->getParameter('file', null);
-    $this->forward404If($hash === null);
+    $id = $request->getParameter('file', null);
+    $this->forward404If($id === null);
     $f = sfFilebasePlugin::getInstance();
-    $file = $f->getFileByHash($hash);
+    $file_object = Doctrine::getTable('sfFilebaseFile')->find($id);
+    $file = $f->getFileByHash($file_object->getHash());
     $this->forward404If($file === null);
 
     $this->setLayout(false);
@@ -39,10 +42,11 @@ class sf_filebase_filedelivererActions extends sfActions
 
   public function executeDisplay_image(sfWebRequest $request)
   {
-    $hash = $request->getParameter('file', null);
-    $this->forward404If($hash === null);
+    $id = $request->getParameter('file', null);
+    $this->forward404If($id === null);
     $f = sfFilebasePlugin::getInstance();
-    $file = $f->getFileByHash($hash)->getThumbnail(array($request->getParameter('width', null), $request->getParameter('height', null)));
+    $file_object = Doctrine::getTable('sfFilebaseFile')->find($id);
+    $file = $f->getFileByHash($file_object->getHash())->getThumbnail(array($request->getParameter('width', null), $request->getParameter('height', null)));
     $this->forward404If($file === null);
 
     $this->setLayout(false);
@@ -52,5 +56,57 @@ class sf_filebase_filedelivererActions extends sfActions
     //$this->getResponse()->setHttpHeader('Content-Disposition', 'attachment; filename=' . $file->getFilename() . ' size=' . $file->getSize());
     $this->getResponse()->setContent($file->openFile('r+')->fileGetContents());
     return sfView::NONE;
+  }
+
+  public function executeMoveFile(sfWebRequest $request)
+  {
+    $this->forward404Unless($request->isXmlHttpRequest());
+
+    $node_id      = $request->getParameter('node', null);
+    $parent_id    = $request->getParameter('parent', null);
+    $is_leaf      = $request->getParameter('leaf', null);
+    $this->forward404If($node_id === null || $is_leaf === null);
+    
+    $table_name = ((int)$is_leaf === 1 ? 'sfFilebaseFile' : 'sfFilebaseDirectory');
+    $node = Doctrine_Query::create()->select('*')->
+                                      from($table_name . ' f')->
+                                      where('f.id=?')->
+                                      execute(array($node_id))->get(0);
+
+
+    $parent = Doctrine::getTable('sfFilebaseDirectory')->find($parent_id);
+
+    ! $parent && $parent = null;
+
+    $this->forward404Unless($node instanceof sfAbstractFile && ($parent instanceof sfFilebaseDirectory || $parent === null));
+    
+    $node->setParentDirectory($parent);
+    $node->save();
+    $this->setLayout(false);
+    $this->response->setContent('1');
+    $this->response->setContentType('text/plain');
+    return sfView::NONE;
+  }
+
+  public function executeGetTree(sfWebRequest $request)
+  {
+    $this->forward404Unless($request->isXmlHttpRequest());
+    $id = $request->getParameter('node');
+    $f = sfFilebasePlugin::getInstance();
+    $this->root = array();
+    if(empty($id) || (int)$id === null)
+    {
+      $this->root = $f;
+    }
+    else
+    {
+      $root_object = Doctrine::getTable('sfFilebaseDirectory')->find($id);
+      $this->root = $f->getFileByHash($root_object->getHash());
+    }
+    $this->forward404Unless($this->root instanceof sfFilebasePluginDirectory);
+    $this->files        = Doctrine_Query::create()->from('sfFilebaseFile f INDEXBY f.hash')->execute();
+    $this->directories  = Doctrine_Query::create()->from('sfFilebaseDirectory d INDEXBY d.hash')->execute();
+    $this->setLayout(false);
+    $this->getResponse()->setContentType('text/x-json');
   }
 }

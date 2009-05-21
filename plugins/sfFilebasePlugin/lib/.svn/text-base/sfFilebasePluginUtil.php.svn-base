@@ -636,7 +636,7 @@ class sfFilebasePluginUtil
    * @return boolean true if file is an image
    */
   public static function getIsImage(sfFilebasePluginFile $file)
-  {
+  { 
     return (strpos(self::getMimeType($file), 'image') === 0);
   }
 
@@ -692,11 +692,10 @@ class sfFilebasePluginUtil
     // Assume imagick supports all image formats that have ever been
     // invented.
     // @todo Prove that false and implement better supported format check
-    if(class_exists('imagick'))
+    if(class_exists('imagick', false))
     {
       return self::getIsImage($file);
     }
-
     return self::getIsImage($file) && in_array(self::getMimeType($file), $supported_mimes);
   }
 
@@ -731,12 +730,11 @@ class sfFilebasePluginUtil
         if($mime)
           return strtolower($mime);
       }
-      
-      // 2. try getimagesize on all files, suppress errors.
-      $info = @getimagesize($file->getPathname());
-      if(is_array($info) && array_key_exists('mime', $info))
+      if(function_exists('mime_content_type'))
       {
-        return $info['mime'];
+        $mime = mime_content_type($file->getPathname());
+        if($mime)
+          return $mime;
       }
     }
 

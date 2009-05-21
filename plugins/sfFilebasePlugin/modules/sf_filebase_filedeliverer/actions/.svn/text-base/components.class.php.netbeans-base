@@ -1,0 +1,23 @@
+<?php
+/* 
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+class sf_filebase_filedelivererComponents extends sfComponents
+{
+  public static $module_counter = 0;
+  
+  public function executeDirectoryTree(sfWebRequest $request)
+  {
+    if($this->root === null)
+    {
+      $this->root = sfFilebasePlugin::getInstance();
+    }
+    if(! $this->root instanceof sfFilebasePluginDirectory)
+    {
+      return sfView::NONE;
+    }
+    $this->id = 'Sf_Filebase_Tree_' . self::$module_counter;
+    self::$module_counter ++;
+  }
+}

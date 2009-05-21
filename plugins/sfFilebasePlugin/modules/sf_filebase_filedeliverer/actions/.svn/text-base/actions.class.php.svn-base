@@ -24,10 +24,11 @@ class sf_filebase_filedelivererActions extends sfActions
 
   public function executeDownload(sfWebRequest $request)
   {
-    $hash = $request->getParameter('file', null);
-    $this->forward404If($hash === null);
+    $id = $request->getParameter('file', null);
+    $this->forward404If($id === null);
     $f = sfFilebasePlugin::getInstance();
-    $file = $f->getFileByHash($hash);
+    $file_object = Doctrine::getTable('sfFilebaseFile')->find($id);
+    $file = $f->getFilebaseFile($file_object->getHash());
     $this->forward404If($file === null);
 
     $this->setLayout(false);
@@ -41,10 +42,11 @@ class sf_filebase_filedelivererActions extends sfActions
 
   public function executeDisplay_image(sfWebRequest $request)
   {
-    $hash = $request->getParameter('file', null);
-    $this->forward404If($hash === null);
+    $id = $request->getParameter('file', null);
+    $this->forward404If($id === null);
     $f = sfFilebasePlugin::getInstance();
-    $file = $f->getFileByHash($hash)->getThumbnail(array($request->getParameter('width', null), $request->getParameter('height', null)));
+    $file_object = Doctrine::getTable('sfFilebaseFile')->find($id);
+    $file = $f->getFilebaseFile($file_object->getHash())->getThumbnail(array($request->getParameter('width', null), $request->getParameter('height', null)));
     $this->forward404If($file === null);
 
     $this->setLayout(false);
@@ -54,5 +56,45 @@ class sf_filebase_filedelivererActions extends sfActions
     //$this->getResponse()->setHttpHeader('Content-Disposition', 'attachment; filename=' . $file->getFilename() . ' size=' . $file->getSize());
     $this->getResponse()->setContent($file->openFile('r+')->fileGetContents());
     return sfView::NONE;
+  }
+
+  public function executeMoveFile(sfWebRequest $request)
+  {
+    $this->forward404Unless($request->isXmlHttpRequest());
+
+    $node_id        = $request->getParameter('node', null);
+    $parent_id      = $request->getParameter('parent', null);
+    $is_leaf        = $request->getParameter('leaf', null);
+    $this->forward404If($node_id === null || $parent_id === null || $is_leaf === null);
+
+    $node = null;
+    if($is_leaf)
+    {
+      $node   = Doctrine::getTable('sfFilebaseFile')->find($node_id);
+    }
+    else
+    {
+      $node   = Doctrine::getTable('sfFilebaseDirectory')->find($node_id);
+    }
+    $parent = Doctrine::getTable('sfFilebaseDirectory')->find($parent_id);
+
+    $this->forward404Unless($node instanceof sfAbstractFile && $parent instanceof sfFilebaseDirectory);
+    
+    $node->getNode()->moveAsLastChildOf($parent);
+    
+    $this->setLayout(false);
+    $this->response->setContent('1');
+    $this->response->setContentType('text/plain');
+    return sfView::NONE;
+  }
+
+  public function executeGetTree(sfWebRequest $request)
+  {
+    $this->forward404Unless($request->isXmlHttpRequest());
+    $id   = $request->getParameter('node');
+    $this->root = Doctrine::getTable('sfFilebaseDirectory')->find($id);
+    $this->forward404Unless($this->root instanceof sfFilebaseDirectory);
+    $this->setLayout(false);
+    $this->getResponse()->setContentType('text/x-json');
   }
 }

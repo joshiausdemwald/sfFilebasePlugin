@@ -3,9 +3,15 @@ svn:wc:ra_dav:version-url
 V 82
 /!svn/ver/18461/plugins/sfFilebasePlugin/modules/sf_filebase_filedeliverer/actions
 END
+components.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/!svn/ver/18510/plugins/sfFilebasePlugin/modules/sf_filebase_filedeliverer/actions/components.class.php
+END
 actions.class.php
 K 25
 svn:wc:ra_dav:version-url
 V 100
-/!svn/ver/18463/plugins/sfFilebasePlugin/modules/sf_filebase_filedeliverer/actions/actions.class.php
+/!svn/ver/18510/plugins/sfFilebasePlugin/modules/sf_filebase_filedeliverer/actions/actions.class.php
 END

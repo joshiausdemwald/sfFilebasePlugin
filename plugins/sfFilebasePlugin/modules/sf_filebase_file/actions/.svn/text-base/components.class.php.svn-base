@@ -19,14 +19,16 @@ class sf_filebase_fileComponents extends sfComponents
   {
     $f = sfFilebasePlugin::getInstance();
     $this->is_edit = false;
-    if($this->form)
+    if($this->form instanceof sfForm)
     {
       $this->is_edit = true;
-      $this->file = $f[$this->form->getObject()->getPathname()];
+      $this->file_object = $this->form->getObject();
+      $this->file = $this->file_object->getFile();
     }
-    elseif($this->sf_filebase_file)
+    elseif($this->sf_filebase_file instanceof sfAbstractFile)
     {
-      $this->file = $f[$this->sf_filebase_file->getPathname()];
+      $this->file_object = $this->sf_filebase_file;
+      $this->file = $this->file_object->getFile();
     }
     else
       return sfView::NONE;

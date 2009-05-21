@@ -12,29 +12,29 @@ class BasesfAbstractFileForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'id'                         => new sfWidgetFormInputHidden(),
-      'path'                       => new sfWidgetFormInput(),
-      'filename'                   => new sfWidgetFormInput(),
-      'hash'                       => new sfWidgetFormInput(),
-      'comment'                    => new sfWidgetFormTextarea(),
-      'sf_filebase_directories_id' => new sfWidgetFormDoctrineChoice(array('model' => 'sfFilebaseDirectory', 'add_empty' => true)),
-      'type'                       => new sfWidgetFormInput(),
-      'level'                      => new sfWidgetFormInput(),
+      'id'       => new sfWidgetFormInputHidden(),
+      'filename' => new sfWidgetFormInput(),
+      'hash'     => new sfWidgetFormInput(),
+      'comment'  => new sfWidgetFormTextarea(),
+      'type'     => new sfWidgetFormInput(),
+      'lft'      => new sfWidgetFormInput(),
+      'rgt'      => new sfWidgetFormInput(),
+      'level'    => new sfWidgetFormInput(),
     ));
 
     $this->setValidators(array(
-      'id'                         => new sfValidatorDoctrineChoice(array('model' => 'sfAbstractFile', 'column' => 'id', 'required' => false)),
-      'path'                       => new sfValidatorString(array('max_length' => 255)),
-      'filename'                   => new sfValidatorString(array('max_length' => 255, 'required' => false)),
-      'hash'                       => new sfValidatorString(array('max_length' => 255)),
-      'comment'                    => new sfValidatorString(array('max_length' => 2147483647, 'required' => false)),
-      'sf_filebase_directories_id' => new sfValidatorDoctrineChoice(array('model' => 'sfFilebaseDirectory', 'required' => false)),
-      'type'                       => new sfValidatorString(array('max_length' => 255, 'required' => false)),
-      'level'                      => new sfValidatorInteger(array('required' => false)),
+      'id'       => new sfValidatorDoctrineChoice(array('model' => 'sfAbstractFile', 'column' => 'id', 'required' => false)),
+      'filename' => new sfValidatorString(array('max_length' => 255)),
+      'hash'     => new sfValidatorString(array('max_length' => 255)),
+      'comment'  => new sfValidatorString(array('max_length' => 2147483647, 'required' => false)),
+      'type'     => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'lft'      => new sfValidatorInteger(array('required' => false)),
+      'rgt'      => new sfValidatorInteger(array('required' => false)),
+      'level'    => new sfValidatorInteger(array('required' => false)),
     ));
 
     $this->validatorSchema->setPostValidator(
-      new sfValidatorDoctrineUnique(array('model' => 'sfAbstractFile', 'column' => array('hash')))
+      new sfValidatorDoctrineUnique(array('model' => 'sfAbstractFile', 'column' => array('filename', 'lft', 'rgt')))
     );
 
     $this->widgetSchema->setNameFormat('sf_abstract_file[%s]');

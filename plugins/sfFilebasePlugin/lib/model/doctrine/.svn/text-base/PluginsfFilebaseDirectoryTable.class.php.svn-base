@@ -10,7 +10,25 @@
  * @license   MIT license
  * @copyright 2007-2009 Johannes Heinen <johannes.heinen@gmail.com>
  */
-class PluginsfFilebaseDirectoryTable extends Doctrine_Table
+class PluginsfFilebaseDirectoryTable extends sfAbstractFileTable
 {
-
+  public static function getChoices()
+  {
+    $tree_object = Doctrine::getTable('sfFilebaseDirectory')->getTree();
+    $tree = $tree_object->fetchTree();
+    if(!$tree)
+    {
+      $root = new sfFilebaseDirectory();
+      $root->setFilename(sfFilebasePlugin::getInstance()->getFilename());
+      $root->setHash(sfFilebasePlugin::getInstance()->getHash());
+      $root->save();
+      $tree_object->createRoot($root);
+      $tree = $tree_object->fetchTree();
+    }
+    foreach($tree AS $dir)
+    {
+      $directory_choices[$dir['id']] = str_repeat('&nbsp;&nbsp;', $dir['level']) . $dir['filename'];
+    }
+    return $directory_choices;
+  }
 }

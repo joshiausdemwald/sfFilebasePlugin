@@ -15,33 +15,12 @@ abstract class PluginsfFilebaseFile extends BasesfFilebaseFile
   public function preDelete($event)
   {
     $f = sfFilebasePlugin::getInstance();
-    $f[$this->getPathname()]->delete();
+    $f->getFilebaseFile($this->getHash())->delete();
   }
 
-  public function preSave($event)
+  public function getFile(sfFilebasePlugin $filebase = null)
   {
-    parent::preSave($event);
-    $values = $this->getModified(true);
-    if(!$this->isNew())
-    {
-      $f = sfFilebasePlugin::getInstance();
-
-      if(array_key_exists('path', $values))
-      {
-        $source_file_name = array_key_exists('filename', $values) ? $values['filename']  : $this->getFilename();
-        $new_pathname = $f->moveFile(
-          $values['path'] . '/' . $source_file_name,
-          $this->getPath() . '/' . $source_file_name
-        );
-        $this->setHash($new_pathname->getHash());
-      }
-
-      if(array_key_exists('filename', $values))
-      {
-        $old_pathname = $f[$this->getPath() . '/' . $values['filename']];
-        $new_pathname = $old_pathname->rename($this->getFilename());
-        $this->setHash($new_pathname->getHash());
-      }
-    }
+    $filebase === null && $filebase = sfFilebasePlugin::getInstance();
+    return $filebase[$this->getHash()];
   }
 }

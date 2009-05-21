@@ -1,4 +1,5 @@
 <?php use_helper('sfFilebasePlugin')?>
+
 <h1>Filebase Sample application</h1>
 <h2>Upload a file</h2>
 <?php if(isset($error)):?>

@@ -1,0 +1,31 @@
+<?php
+$rows = array();
+foreach ($root AS $entry)
+{
+  if($entry instanceof sfFilebasePluginDirectory)
+  {
+    $rows[] = array (
+      'id'            => $directories[$entry->getHash()]->getId(),
+      'text'          => $entry->getFilename(),
+      'allowChildren' => true,
+      'checked'       => false,
+      'leaf'          => false,
+      'node'          => true,
+      'children'      => array()
+    );
+  }
+  else
+  {
+    $rows[] = array (
+      'id'            => $files[$entry->getHash()]->getId(),
+      'text'          => $entry->getFilename(),
+      'leaf'          => true,
+      'allowChildren' => false,
+      'checked'       => false,
+      'isTarget'      => false,
+      'allowDrop'     => false,
+      'node'          => false
+    );
+  }
+}
+echo json_encode($rows);

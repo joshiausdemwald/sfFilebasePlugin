@@ -27,11 +27,18 @@ sf_filebase_file:
     column:               id
     with_wildcard_routes: true
 
+sf_filebase_move_file:
+  url: sf_filebase_move_file
+  param: { module:  sf_filebase_filedeliverer, action: moveFile }
+
+sf_filebase_get_tree:
+  url: sf_filebase_get_tree
+  param: { module: sf_filebase_filedeliverer, action: getTree }
+
 sf_filebase_download_file:
   url: sf_filebase_download/:file
   param: { module: sf_filebase_filedeliverer, action: download }
   
-
 sf_filebase_display_image:
   url: sf_filebase_download/:file/:width/:height
   param: { module: sf_filebase_filedeliverer, action: display_image, width: null, height: null }

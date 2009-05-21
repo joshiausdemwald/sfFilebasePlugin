@@ -25,5 +25,5 @@ PluginsfFilebaseDirectoryFormFilter.class.php
 K 25
 svn:wc:ra_dav:version-url
 V 106
-/!svn/ver/18463/plugins/sfFilebasePlugin/lib/filter/doctrine/PluginsfFilebaseDirectoryFormFilter.class.php
+/!svn/ver/18511/plugins/sfFilebasePlugin/lib/filter/doctrine/PluginsfFilebaseDirectoryFormFilter.class.php
 END
