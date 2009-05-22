@@ -4,8 +4,13 @@ sfFilebasePlugin
 *sfFilebasePlugin* provides an unified **api** for **filesystem related
 operations** with focus on web based applications (yes, really.)
 
-It consists of a set of classes based on built in **SPL classes** (SplFileInfo/
--Object, DirectoryIterator ...) written by Marcus Boerger.
+Additionally, there is a admin module and a simple to use component to render
+a **drag'n'drop** treeview based on ext js for most simply organizing your files
+in a directory structure, all maintained through a doctrine driven hierarchical
+database. (Still in developement, but at meantime rather stable)
+
+The core plugin consists of a set of classes based on built in **SPL classes**
+(SplFileInfo/ -Object, DirectoryIterator ...) written by Marcus Boerger.
 
 The api-documentation for these base classes may be found in
 [http://www.php.net/~helly/php/ext/spl/](http://www.php.net/~helly/php/ext/spl/).
@@ -47,9 +52,16 @@ the plugin provides an extension of `SplFileObject` named
    hidden cache layer which automatically stores generated binary data.
 
 Adminstration area install instructions  (optional)
----------------------------------------
+---------------------------------------------------
 SfFilebasePlugin provides frontend modules for easy adminstration of your files
 and directories (in developement progress yet).
+
+The administration area uses the ExtJs ([http://extjs.com/](extjs.com])) to render
+some fance widgets like a tree view of your directory/file structure. With this
+you are able to **drag and drop** files or whole directory structures within
+your filebase with just a click on your mouse button.
+
+This makes organizing your files and assets really easy.
 
 These modules require doctrine 1.1 to be installed.
 
@@ -406,3 +418,11 @@ Ok, i hope that this plugin is useful, i'd love to receive your comments and
 critiques.
 
 Have fun ;)
+
+Credits
+-------
+
+Thanks to Marcus Börger for initializing the gread SPL extension.
+And to the ext js team for creating the most powerul but simple to use tree view
+control.
+Thank you, i would not manage to do such things in months.
