@@ -140,10 +140,7 @@ abstract class PluginsfFilebaseFileForm extends BasesfFilebaseFileForm
     }
     else
     {
-      if($destination_node  !== $this->getObject()->getParent())
-      {
-        $this->getObject()->getNode()->moveAsLastChildOf($destination_node);
-      }
+      $this->getObject()->getNode()->moveAsLastChildOf($destination_node);
     }
 
     // embedded forms

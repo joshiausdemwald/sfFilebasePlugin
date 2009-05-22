@@ -55,6 +55,41 @@ abstract class PluginsfFilebaseFileForm extends BasesfFilebaseFileForm
       $this->widgetSchema['tags']->setDefault($tag_string);
       $this->widgetSchema['directory']->setDefault($this->getObject()->getNode()->getParent()->getId());
     }
+
+    $this->validatorSchema->setPostValidator(
+      new sfValidatorCallback(array(
+        'callback' => array(
+          $this,
+          'checkUpload'
+        )
+      ))
+    );
+  }
+
+  public function checkUpload(sfValidatorCallback $validator, $values, $parameters = null)
+  {
+    $filename = '';
+    if($this->isNew())
+    {
+      $filename = $values['hash']->getOriginalName();
+    }
+    else
+    {
+      $filename = $values['filename'];
+    }
+    $validator->addMessage('unique', 'A file with that name already exists in the destinated directory.');
+    $parent = Doctrine::getTable('sfFilebaseDirectory')->find($values['directory']);
+    if($parent->getNode()->hasChildren())
+    {
+      foreach($parent->getNode()->getChildren() AS $file)
+      {
+        if($file != $this->getObject() && $file->getFilename() == $filename)
+        {
+          throw new sfValidatorError($validator, 'unique');
+        }
+      }
+    }
+    return $values;
   }
 
   /**
@@ -105,7 +140,10 @@ abstract class PluginsfFilebaseFileForm extends BasesfFilebaseFileForm
     }
     else
     {
-      $this->getObject()->getNode()->moveAsLastChildOf($destination_node);
+      if($destination_node  !== $this->getObject()->getParent())
+      {
+        $this->getObject()->getNode()->moveAsLastChildOf($destination_node);
+      }
     }
 
     // embedded forms

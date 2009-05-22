@@ -3,6 +3,18 @@ svn:wc:ra_dav:version-url
 V 40
 /!svn/ver/18452/plugins/sfFilebasePlugin
 END
+files.txt
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/18532/plugins/sfFilebasePlugin/files.txt
+END
+package.php
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/18532/plugins/sfFilebasePlugin/package.php
+END
 LICENSE
 K 25
 svn:wc:ra_dav:version-url
@@ -45,6 +57,12 @@ svn:wc:ra_dav:version-url
 V 67
 /!svn/ver/18216/plugins/sfFilebasePlugin/sfFilebasePlugin-0.5.5.tgz
 END
+sfFilebasePlugin-0.7.3.tgz
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/18532/plugins/sfFilebasePlugin/sfFilebasePlugin-0.7.3.tgz
+END
 sfFilebasePlugin-0.5.6.tgz
 K 25
 svn:wc:ra_dav:version-url
@@ -55,7 +73,7 @@ package.xml
 K 25
 svn:wc:ra_dav:version-url
 V 52
-/!svn/ver/18529/plugins/sfFilebasePlugin/package.xml
+/!svn/ver/18531/plugins/sfFilebasePlugin/package.xml
 END
 sfFilebasePlugin-0.5.7.tgz
 K 25
