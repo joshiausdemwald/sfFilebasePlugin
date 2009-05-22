@@ -162,40 +162,6 @@ has-props
 
 41959
 
-sfFilebasePlugin-0.7.0.tgz
-file
-18458
-
-
-
-2009-05-19T11:39:22.000000Z
-fe318833e02db2fca5be1a49418f6ff0
-2009-05-19T12:02:40.146202Z
-18458
-joshiausdemwald
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-46128
-
 sfFilebasePlugin-0.6.1.tgz
 file
 
@@ -229,6 +195,40 @@ has-props
 
 
 41985
+
+sfFilebasePlugin-0.7.0.tgz
+file
+18458
+
+
+
+2009-05-19T11:39:22.000000Z
+fe318833e02db2fca5be1a49418f6ff0
+2009-05-19T12:02:40.146202Z
+18458
+joshiausdemwald
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+46128
 
 sfFilebasePlugin-0.7.1.tgz
 file
@@ -298,6 +298,40 @@ has-props
 
 574958
 
+sfFilebasePlugin-0.7.3.tgz
+file
+18532
+
+
+
+2009-05-22T00:00:44.000000Z
+3ffa50154c5525def48cbe05774810f3
+2009-05-22T00:01:29.932381Z
+18532
+joshiausdemwald
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+574944
+
 sfFilebasePlugin-0.5.5.tgz
 file
 
@@ -332,16 +366,16 @@ has-props
 
 33227
 
-sfFilebasePlugin-0.7.3.tgz
+sfFilebasePlugin-0.7.4.tgz
 file
-18532
+18535
 
 
 
-2009-05-22T00:00:44.000000Z
-3ffa50154c5525def48cbe05774810f3
-2009-05-22T00:01:29.932381Z
-18532
+2009-05-22T00:38:20.000000Z
+8d9de389b6dee71337a145a7a5e4315f
+2009-05-22T00:40:20.916295Z
+18535
 joshiausdemwald
 has-props
 
@@ -364,7 +398,7 @@ has-props
 
 
 
-574944
+575333
 
 sfFilebasePlugin-0.5.6.tgz
 file
@@ -400,74 +434,6 @@ has-props
 
 34237
 
-sfFilebasePlugin-0.7.4.tgz
-file
-18534
-
-
-
-2009-05-22T00:33:00.000000Z
-bb43d2981141dd3ba502484a99b225d2
-2009-05-22T00:33:10.743361Z
-18534
-joshiausdemwald
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-575323
-
-package.xml
-file
-18533
-
-
-
-2009-05-22T00:28:47.000000Z
-e67827ec47e90ca24c74528756695fb5
-2009-05-22T00:29:38.019853Z
-18533
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-55582
-
 sfFilebasePlugin-0.5.7.tgz
 file
 
@@ -501,6 +467,40 @@ has-props
 
 
 34755
+
+package.xml
+file
+18535
+
+
+
+2009-05-22T00:37:45.000000Z
+3b87cb58c30e3bc3ca83dcd69f9b2814
+2009-05-22T00:40:20.916295Z
+18535
+joshiausdemwald
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+55613
 
 sfFilebasePlugin-0.5.8.tgz
 file
