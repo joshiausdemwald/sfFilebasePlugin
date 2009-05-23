@@ -1,7 +1,11 @@
-<?php use_stylesheet('/sfFilebasePlugin/css/main.css');?>
+<?php use_helper('I18N')?>
+<?php use_helper('Text')?>
+<h2>sfFilebase gallery</h2>
 <ul id="Sf_Filebase_Overview">
-  <li>
-    <a href="#root" rel="root" class="toggle-row file-title file-title-directory"><?php echo $root->getFilename()?></a>
+  <li class="directory">
+    <div class="contents">
+      <a href="#root" rel="root" class="toggle-row file-title file-title-directory">»&nbsp;<?php echo $root->getFilename()?></a>
+    </div>
     <ul id="root" class="clearfix">
       <?php recurse($root)?>
     </ul>
@@ -15,22 +19,32 @@
         $id=md5(uniqid(rand(), true));
       ?>
       <li class="directory" style="clear:both">
-        <a rel="<?php echo $id?>" href="#<?php echo $id?>" class="toggle-row file-title file-title-directory">» <?php echo $node?></a>
+        <div class="contents">
+          <a rel="<?php echo $id?>" href="#<?php echo $id?>" class="toggle-row file-title file-title-directory">»&nbsp;<?php echo $node?></a>
+        </div>
         <ul id="<?php echo $id?>" class="clearfix">
           <?php recurse($node)?>
         </ul>
       </li>
     <?php else:?>
-      <li class="file">
+      <?php $file = sfFilebasePlugin::getInstance()->getFilebaseFile($node->getHash())?>
+      <li class="file<?php $file instanceof sfFilebaseImage && print ' file-image'?>">
         <div class="contents">
-          <?php $file = sfFilebasePlugin::getInstance()->getFilebaseFile($node->getHash())?>
           <?php if($file instanceof sfFilebasePluginImage):?>
-            <img src="<?php echo url_for('sf_filebase_display_image', array('file'=>$node->getId(), 'width'=>150, 'height'=>150))?>" alt="<?php echo $file->getFilename()?>"/>
-          <?php else:?>
-            <span class="file-title file-title-file">
-              <?php echo $node?>
-            </span>
+            <img src="<?php echo url_for('sf_filebase_display_image', array('file'=>$node->getId(), 'width'=>40, 'height'=>40))?>" alt="<?php echo $file->getFilename()?>"/>
           <?php endif?>
+          <div>
+            <p class="file-title file-title-file">
+              <strong><?php echo __('Title');?></strong>:
+              <?php echo truncate_text($node->getFilename(), 20)?>
+            </p>
+            <p class="file-comment"><strong><?php echo __('Comment');?></strong>: <?php echo truncate_text($node->getComment(), 100)?></p>
+            <p class="file-tags"><strong><?php echo __('Tags')?></strong>: <?php echo $node->getTagsAsString(' ')?></p>
+            <p class="file-controls">
+              <?php echo link_to('» edit','sf_filebase_file_edit', array('id'=>$node->getId()))?>
+              <?php echo link_to('&times; delete','sf_filebase_file_delete', array('id'=>$node->getId()), array('onclick'=>'return confirm("'.__('Do you really want to do this?').'")'))?>
+            </p>
+          </div>
         </div>
       </li>
     <?php endif?>

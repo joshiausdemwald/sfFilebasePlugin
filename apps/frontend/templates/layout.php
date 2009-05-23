@@ -13,9 +13,12 @@
       </div>
       <div id="Navigation">
         <p>
-          <?php echo link_to('overview', 'sf_filebase_overview/index')?> /
+          <?php echo link_to('gallery', 'sf_filebase_overview/index')?> /
           <?php echo link_to('filebase directories', 'sf_filebase_directory/index')?> /
-          <?php echo link_to('filebase files', 'sf_filebase_file/index')?>
+          <?php echo link_to('filebase files', 'sf_filebase_file/index')?> /
+          <?php echo link_to('upload file', 'sf_filebase_file/new')?> / 
+          <?php echo link_to('create directory', 'sf_filebase_directory/new')?>
+
         </p>
       </div>
       <div id="Sidebar">

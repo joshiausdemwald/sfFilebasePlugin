@@ -12,7 +12,7 @@
   </lead>
   <date>2009-05-23</date>
   <version>
-    <release>0.7.5</release>
+    <release>0.7.6</release>
     <api>0.7.0</api>
   </version>
   <stability>
@@ -66,6 +66,7 @@
         <file role="data" name="lib/sfFilebasePluginFile.php" />
         <file role="data" name="lib/sfFilebasePlugin.php" />
         <file role="data" name="lib/sfFilebasePluginGfxEditorAdapterIMagick.php" />
+        <file role="data" name="modules/sf_filebase_filedeliverer/config/view.yml" />
         <file role="data" name="modules/sf_filebase_filedeliverer/actions/components.class.php" />
         <file role="data" name="modules/sf_filebase_filedeliverer/actions/actions.class.php" />
         <file role="data" name="modules/sf_filebase_filedeliverer/templates/getTreeSuccess.php" />
@@ -73,15 +74,20 @@
         <file role="data" name="modules/sf_filebase_file/lib/sf_filebase_fileGeneratorHelper.class.php" />
         <file role="data" name="modules/sf_filebase_file/lib/sf_filebase_fileGeneratorConfiguration.class.php" />
         <file role="data" name="modules/sf_filebase_file/config/generator.yml" />
+        <file role="data" name="modules/sf_filebase_file/config/view.yml" />
         <file role="data" name="modules/sf_filebase_file/actions/components.class.php" />
         <file role="data" name="modules/sf_filebase_file/actions/actions.class.php" />
         <file role="data" name="modules/sf_filebase_file/templates/newSuccess.php" />
         <file role="data" name="modules/sf_filebase_file/templates/indexSuccess.php" />
         <file role="data" name="modules/sf_filebase_file/templates/editSuccess.php" />
         <file role="data" name="modules/sf_filebase_file/templates/_retrieveFiles.php" />
+        <file role="data" name="modules/sf_filebase_overview/config/view.yml" />
+        <file role="data" name="modules/sf_filebase_overview/actions/actions.class.php" />
+        <file role="data" name="modules/sf_filebase_overview/templates/indexSuccess.php" />
         <file role="data" name="modules/sf_filebase_directory/lib/sf_filebase_directoryGeneratorConfiguration.class.php" />
         <file role="data" name="modules/sf_filebase_directory/lib/sf_filebase_directoryGeneratorHelper.class.php" />
         <file role="data" name="modules/sf_filebase_directory/config/generator.yml" />
+        <file role="data" name="modules/sf_filebase_directory/config/view.yml" />
         <file role="data" name="modules/sf_filebase_directory/actions/actions.class.php" />
         <file role="data" name="modules/sf_filebase_directory/templates/newSuccess.php" />
         <file role="data" name="modules/sf_filebase_directory/templates/indexSuccess.php" />
@@ -460,6 +466,8 @@
         <file role="data" name="web/js/vendor/ext/resources/css/visual/button.css" />
         <file role="data" name="web/js/vendor/ext/resources/css/reset-min.css" />
         <file role="data" name="web/js/vendor/ext/resources/css/xtheme-blue.css" />
+        <file role="data" name="web/css/main.css" />
+
 
         <file role="data" name="README" />
         <file role="data" name="LICENSE" />
@@ -493,6 +501,23 @@
   <phprelease>
   </phprelease>
   <changelog>
+    <release>
+      <version>
+        <release>0.7.6</release>
+        <api>0.7.0</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-05-23</date>
+      <notes>
+      * Added overview page to admin area
+      * Fixed bug in thumbnail generation when both width &amp; height are set
+      * Added main.css to package for demonstration purposes
+      </notes>
+    </release>
     <release>
       <version>
         <release>0.7.5</release>

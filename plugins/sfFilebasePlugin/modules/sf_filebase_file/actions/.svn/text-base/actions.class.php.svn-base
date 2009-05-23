@@ -35,4 +35,9 @@ class sf_filebase_fileActions extends autoSf_filebase_fileActions
     ));
     return $query;
   }
+
+  public function executeShow()
+  {
+    $this->forward('sf_filebase_overview', 'index');
+  }
 }

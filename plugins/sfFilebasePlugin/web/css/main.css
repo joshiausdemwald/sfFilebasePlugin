@@ -65,7 +65,7 @@ body
 #Sidebar
 {
   padding: 38px 0 0 20px;
-  width: 190px;
+  width: 210px;
 }
 
 #Navigation
@@ -329,7 +329,6 @@ tr,
 {
   display: block;
   margin: 0;
-  padding: 10px 0px 0 10px;
 }
 
 #Sf_Filebase_Overview
@@ -339,7 +338,8 @@ tr,
 
 #Sf_Filebase_Overview ul
 {
-  
+  padding-left: 20px;
+  padding-bottom: 20px;
 }
 
 #Sf_Filebase_Overview li
@@ -355,11 +355,20 @@ tr,
   padding: 0 10px 10px 0;
 }
 
+#Sf_Filebase_Overview li.directory div.contents
+{
+  display: block;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px #eee solid;
+}
+
 #Sf_Filebase_Overview li.file div.contents
 {
   background: #eee;
-  width: 150px;
-  height: 150px;
+  width: 140px;
+  height: 140px;
+  padding-bottom: 0;
 }
 
 #Sf_Filebase_Overview li span.file-title-directory,
@@ -373,4 +382,39 @@ tr,
 #Sf_Filebase_Overview li a.file-title-directory:hover
 {
   background: #de3400 none;
+}
+
+#Sf_Filebase_Overview li.file div.contents
+{
+  padding: 3px;
+  position:relative;
+}
+
+#Sf_Filebase_Overview li.file div.contents div *
+{
+  font-size: 9px;
+}
+
+#Sf_Filebase_Overview li.file div.contents div * strong,
+#Sf_Filebase_Overview li.file div.contents div * a
+{
+  background: #333;
+  color: #00ffff;
+}
+
+#Sf_Filebase_Overview li.file div.contents div * a
+{
+  text-decoration: none;
+}
+
+#Sf_Filebase_Overview li.file div.contents div * a:hover
+{
+  background: #de3400 none;
+}
+
+#Sf_Filebase_Overview li div img
+{
+  position:absolute;
+  bottom: 0;
+  right: 0;
 }
