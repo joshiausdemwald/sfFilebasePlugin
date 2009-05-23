@@ -19,6 +19,7 @@
 	<a class="index-letter" href="elementindex_de-optimusprime-sfFilebasePlugin-adminArea.html#b">b</a>
 	<a class="index-letter" href="elementindex_de-optimusprime-sfFilebasePlugin-adminArea.html#c">c</a>
 	<a class="index-letter" href="elementindex_de-optimusprime-sfFilebasePlugin-adminArea.html#d">d</a>
+	<a class="index-letter" href="elementindex_de-optimusprime-sfFilebasePlugin-adminArea.html#e">e</a>
 	<a class="index-letter" href="elementindex_de-optimusprime-sfFilebasePlugin-adminArea.html#g">g</a>
 	<a class="index-letter" href="elementindex_de-optimusprime-sfFilebasePlugin-adminArea.html#p">p</a>
 	<a class="index-letter" href="elementindex_de-optimusprime-sfFilebasePlugin-adminArea.html#s">s</a>
@@ -65,13 +66,25 @@
 						<span class="method-title">checkUpload</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin-adminArea/PluginsfFilebaseFileForm.html#methodcheckUpload">PluginsfFilebaseFileForm::checkUpload()</a> in PluginsfFilebaseFileForm.class.php</div>
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin-adminArea/PluginsfFilebaseDirectoryForm.html#methodcheckUpload">PluginsfFilebaseDirectoryForm::checkUpload()</a> in PluginsfFilebaseDirectoryForm.class.php</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">checkUpload</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin-adminArea/PluginsfFilebaseDirectoryForm.html#methodcheckUpload">PluginsfFilebaseDirectoryForm::checkUpload()</a> in PluginsfFilebaseDirectoryForm.class.php</div>
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin-adminArea/PluginsfFilebaseFileForm.html#methodcheckUpload">PluginsfFilebaseFileForm::checkUpload()</a> in PluginsfFilebaseFileForm.class.php</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">configure</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin-adminArea/sfFilebaseSynchronizeTask.html#methodconfigure">sfFilebaseSynchronizeTask::configure()</a> in sfFilebaseSynchronizeTask.class.php</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">configure</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin-adminArea/sfFilebaseCreaterootTask.html#methodconfigure">sfFilebaseCreaterootTask::configure()</a> in sfFilebaseCreaterootTask.class.php</div>
 					</dd>
 		</dl>
 	<a name="d"></a>
@@ -92,6 +105,26 @@
 					</dt>
 		<dd class="index-item-body">
 			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin-adminArea/PluginsfFilebaseDirectoryForm.html#methoddoSave">PluginsfFilebaseDirectoryForm::doSave()</a> in PluginsfFilebaseDirectoryForm.class.php</div>
+					</dd>
+		</dl>
+	<a name="e"></a>
+	<div class="index-letter-section">
+		<div style="float: left" class="index-letter-title">e</div>
+		<div style="float: right"><a href="#top">top</a></div>
+		<div style="clear: both"></div>
+	</div>
+	<dl>
+			<dt class="field">
+						<span class="method-title">execute</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin-adminArea/sfFilebaseSynchronizeTask.html#methodexecute">sfFilebaseSynchronizeTask::execute()</a> in sfFilebaseSynchronizeTask.class.php</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">execute</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin-adminArea/sfFilebaseCreaterootTask.html#methodexecute">sfFilebaseCreaterootTask::execute()</a> in sfFilebaseCreaterootTask.class.php</div>
 					</dd>
 		</dl>
 	<a name="g"></a>
@@ -125,6 +158,13 @@
 		<dd class="index-item-body">
 			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin-adminArea/PluginsfAbstractFile.html#methodgetFilenameIndent">PluginsfAbstractFile::getFilenameIndent()</a> in PluginsfAbstractFile.class.php</div>
 							<div class="index-item-description">This method is only for the displaying in sfDoctrine Form.</div>
+					</dd>
+			<dt class="field">
+						<span class="method-title">getRootNode</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin-adminArea/PluginsfFilebaseDirectoryTable.html#methodgetRootNode">PluginsfFilebaseDirectoryTable::getRootNode()</a> in PluginsfFilebaseDirectoryTable.class.php</div>
+							<div class="index-item-description">Retrieves the root node of the doctrine  filebase tree by application and  environment parameters</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">getTagsAsString</span>
@@ -376,6 +416,18 @@
 	</div>
 	<dl>
 			<dt class="field">
+						<span class="include-title">sfFilebaseCreaterootTask.class.php</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin-adminArea/_lib---task---sfFilebaseCreaterootTask.class.php.html">sfFilebaseCreaterootTask.class.php</a> in sfFilebaseCreaterootTask.class.php</div>
+					</dd>
+			<dt class="field">
+						<span class="include-title">sfFilebaseSynchronizeTask.class.php</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin-adminArea/_lib---task---sfFilebaseSynchronizeTask.class.php.html">sfFilebaseSynchronizeTask.class.php</a> in sfFilebaseSynchronizeTask.class.php</div>
+					</dd>
+			<dt class="field">
 						<span class="method-title">saveFile</span>
 					</dt>
 		<dd class="index-item-body">
@@ -393,13 +445,27 @@
 						<span class="method-title">setup</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin-adminArea/PluginsfFilebaseDirectoryForm.html#methodsetup">PluginsfFilebaseDirectoryForm::setup()</a> in PluginsfFilebaseDirectoryForm.class.php</div>
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin-adminArea/PluginsfFilebaseFileForm.html#methodsetup">PluginsfFilebaseFileForm::setup()</a> in PluginsfFilebaseFileForm.class.php</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">setup</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin-adminArea/PluginsfFilebaseFileForm.html#methodsetup">PluginsfFilebaseFileForm::setup()</a> in PluginsfFilebaseFileForm.class.php</div>
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin-adminArea/PluginsfFilebaseDirectoryForm.html#methodsetup">PluginsfFilebaseDirectoryForm::setup()</a> in PluginsfFilebaseDirectoryForm.class.php</div>
+					</dd>
+			<dt class="field">
+						sfFilebaseCreaterootTask
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin-adminArea/sfFilebaseCreaterootTask.html">sfFilebaseCreaterootTask</a> in sfFilebaseCreaterootTask.class.php</div>
+							<div class="index-item-description">This file is part of the sfFilebasePlugin package.</div>
+					</dd>
+			<dt class="field">
+						sfFilebaseSynchronizeTask
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin-adminArea/sfFilebaseSynchronizeTask.html">sfFilebaseSynchronizeTask</a> in sfFilebaseSynchronizeTask.class.php</div>
+							<div class="index-item-description">This file is part of the sfFilebasePlugin package.</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">splitTags</span>
@@ -436,6 +502,7 @@
 	<a class="index-letter" href="elementindex_de-optimusprime-sfFilebasePlugin-adminArea.html#b">b</a>
 	<a class="index-letter" href="elementindex_de-optimusprime-sfFilebasePlugin-adminArea.html#c">c</a>
 	<a class="index-letter" href="elementindex_de-optimusprime-sfFilebasePlugin-adminArea.html#d">d</a>
+	<a class="index-letter" href="elementindex_de-optimusprime-sfFilebasePlugin-adminArea.html#e">e</a>
 	<a class="index-letter" href="elementindex_de-optimusprime-sfFilebasePlugin-adminArea.html#g">g</a>
 	<a class="index-letter" href="elementindex_de-optimusprime-sfFilebasePlugin-adminArea.html#p">p</a>
 	<a class="index-letter" href="elementindex_de-optimusprime-sfFilebasePlugin-adminArea.html#s">s</a>

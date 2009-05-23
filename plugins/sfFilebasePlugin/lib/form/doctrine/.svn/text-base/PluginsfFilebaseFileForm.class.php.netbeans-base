@@ -71,7 +71,10 @@ abstract class PluginsfFilebaseFileForm extends BasesfFilebaseFileForm
     $filename = '';
     if($this->isNew())
     {
-      $filename = $values['hash']->getOriginalName();
+      if($values['hash'] instanceof sfValidatedFile)
+      {
+        $filename = $values['hash']->getOriginalName();
+      }
     }
     else
     {
@@ -140,10 +143,7 @@ abstract class PluginsfFilebaseFileForm extends BasesfFilebaseFileForm
     }
     else
     {
-      if($destination_node  !== $this->getObject()->getParent())
-      {
-        $this->getObject()->getNode()->moveAsLastChildOf($destination_node);
-      }
+      $this->getObject()->getNode()->moveAsLastChildOf($destination_node);
     }
 
     // embedded forms

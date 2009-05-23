@@ -149,11 +149,36 @@
 		
 	
 </div>
+<a name="functionurl_for_asset" id="functionurl_for_asset"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">url_for_asset</span> (line <span class="line-number">30</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			url_for_asset
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$path_name</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$path_name</span>			</li>
+				</ul>
+		
+	
+</div>
 		</div>
 	</div>
 	
 	<p class="notes" id="credit">
-		Documentation generated on Fri, 22 May 2009 00:48:46 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Sat, 23 May 2009 17:36:18 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</div></body>
 </html>

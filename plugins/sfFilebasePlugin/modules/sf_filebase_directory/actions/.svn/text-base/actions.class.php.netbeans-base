@@ -24,4 +24,10 @@ require_once dirname(__FILE__).'/../lib/sf_filebase_directoryGeneratorHelper.cla
  */
 class sf_filebase_directoryActions extends autoSf_filebase_directoryActions
 {
+  public function executeEdit(sfWebRequest $request)
+  {
+    $this->sf_filebase_directory = $this->getRoute()->getObject();
+    $this->forward404if($this->sf_filebase_directory->getNode()->isRoot());
+    $this->form = $this->configuration->getForm($this->sf_filebase_directory);
+  }
 }

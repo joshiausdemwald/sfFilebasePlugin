@@ -38,4 +38,23 @@ class PluginsfFilebaseDirectoryTable extends sfAbstractFileTable
     }
     return $directory_choices;
   }
+
+  /**
+   * Retrieves the root node of the doctrine
+   * filebase tree by application and 
+   * environment parameters
+   *
+   * @param Doctrine_Connection $conn
+   * @return sfFilebaseDirectory $d
+   */
+  public function getRootNode($environment = null, $application = null, $conn = null)
+  {
+    $app = $application === null ? sfConfig::get('sf_app') : $application;
+    $env = $environment === null ? sfConfig::get('sf_environment') : $environment;
+    return Doctrine_Query::create($conn)->
+           select('*')->
+           from('sfFilebaseDirectory d')->
+           where('d.environment=? AND d.application = ? AND d.lft=1')->
+           execute(array($env, $app))->get(0);
+  }
 }

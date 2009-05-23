@@ -24,4 +24,15 @@ require_once dirname(__FILE__).'/../lib/sf_filebase_fileGeneratorHelper.class.ph
  */
 class sf_filebase_fileActions extends autoSf_filebase_fileActions
 {
+  public function buildQuery()
+  {
+    $query = parent::buildQuery();
+    
+    $query->leftJoin('r.rootNode d');
+    $query->addWhere('d.environment=? AND d.application=?', array(
+      sfConfig::get('sf_environment'),
+      sfConfig::get('sf_app')
+    ));
+    return $query;
+  }
 }

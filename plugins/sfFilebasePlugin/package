@@ -27,7 +27,7 @@ function iterate($dir)
     }
     elseif($file->isFile())
     {
-      $fname = str_replace(dirname(__FILE__), '', $file->getPathname());
+      $fname = ltrim(str_replace(dirname(__FILE__), '', $file->getPathname()),'/');
       fwrite(STDOUT, $fname . "\n");
       fwrite($log, '<file role="data" name="' . $fname . '" />' . "\n");
     }

@@ -71,7 +71,10 @@ abstract class PluginsfFilebaseFileForm extends BasesfFilebaseFileForm
     $filename = '';
     if($this->isNew())
     {
-      $filename = $values['hash']->getOriginalName();
+      if($values['hash'] instanceof sfValidatedFile)
+      {
+        $filename = $values['hash']->getOriginalName();
+      }
     }
     else
     {

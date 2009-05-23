@@ -1,14 +1,14 @@
 9
 
 dir
-18452
+18588
 http://svn.symfony-project.com/plugins/sfFilebasePlugin/lib
 http://svn.symfony-project.com
 
 
 
-2009-05-19T10:52:38.774280Z
-18452
+2009-05-23T00:28:54.340722Z
+18578
 joshiausdemwald
 
 
@@ -140,7 +140,7 @@ joshiausdemwald
 
 sfFilebasePluginRecursiveIteratorIterator.php
 file
-18453
+
 
 
 
@@ -268,14 +268,14 @@ has-props
 
 sfFilebasePluginDirectory.php
 file
+18589
 
 
 
-
-2009-05-18T15:01:22.000000Z
-b934899a86a39da443cca37d877dde3d
-2009-05-18T16:24:41.497393Z
-18407
+2009-05-23T13:14:34.000000Z
+3ca2bf20722966d60103fe04b940fd83
+2009-05-23T15:35:12.463790Z
+18589
 joshiausdemwald
 has-props
 
@@ -298,7 +298,7 @@ has-props
 
 
 
-5878
+6087
 
 sfFilebasePluginRecursiveDirectoryIterator.php
 file
@@ -405,6 +405,9 @@ joshiausdemwald
 model
 dir
 
+task
+dir
+
 form
 dir
 
@@ -478,7 +481,7 @@ joshiausdemwald
 
 sfFilebasePluginUtil.php
 file
-18510
+
 
 
 
@@ -512,7 +515,7 @@ joshiausdemwald
 
 sfFilebasePluginFile.php
 file
-18510
+
 
 
 
@@ -546,14 +549,14 @@ has-props
 
 sfFilebasePlugin.php
 file
-18510
+18589
 
 
 
-2009-05-21T12:53:16.000000Z
-b7ff4c3348cf024b287155c2f9cdfd95
-2009-05-21T16:44:10.817203Z
-18510
+2009-05-23T13:13:07.000000Z
+cee0e92d54bbfc3ac0c667cb44670d0a
+2009-05-23T15:35:12.463790Z
+18589
 joshiausdemwald
 
 
@@ -576,7 +579,7 @@ joshiausdemwald
 
 
 
-32116
+33654
 
 sfFilebasePluginGfxEditorAdapterIMagick.php
 file

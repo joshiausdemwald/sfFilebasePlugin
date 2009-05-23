@@ -1,7 +1,7 @@
 9
 
 dir
-18490
+18588
 http://svn.symfony-project.com/plugins/sfFilebasePlugin/web/js/vendor/ext/resources/images/default
 http://svn.symfony-project.com
 
@@ -76,9 +76,6 @@ dir
 editor
 dir
 
-dd
-dir
-
 gradient-bg.gif
 file
 
@@ -112,6 +109,12 @@ has-props
 
 
 1472
+
+dd
+dir
+
+box
+dir
 
 shadow-c.png
 file
@@ -147,19 +150,16 @@ has-props
 
 118
 
-box
-dir
-
 tabs
 dir
 
 sizer
 dir
 
-tree
+panel
 dir
 
-panel
+tree
 dir
 
 toolbar

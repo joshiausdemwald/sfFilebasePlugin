@@ -204,8 +204,8 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
   public function getHashForFile($file)
   {
     $file = $this->getFilebaseFile($file);
-    if(!$this->getFilebase()->isInFilebase($file)) throw new sfFilebasePluginException('FilebaseFile %s does not belong to filebase %s, access denied due to security issues.', $file->getPathname(), $this->getPathname());
-    return md5($file->getRelativePathFromFilebaseDirectory());
+    if(!$this->isInFilebase($file)) throw new sfFilebasePluginException('FilebaseFile %s does not belong to filebase %s, access denied due to security issues.', $file->getPathname(), $this->getPathname());
+    return sha1($file->getRelativePathFromFilebaseDirectory());
   }
   
   /**
@@ -218,9 +218,43 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
    */
   public function moveFile($source, $destination, $allow_overwrite = true)
   {
-    $moved_file = $this->copyFile($source, $destination, $allow_overwrite);
-    $this->deleteFile($source, true);
-    return $moved_file;
+    $source       = $this->getFilebaseFile($source);
+    $destination  = $this->getFilebaseFile($destination);
+
+    if(!$source->fileExists()) throw new sfFilebasePluginException(sprintf('Source file %s does not exist.', $source));
+    if(!$source->isReadable()) throw new sfFilebasePluginException(sprintf('Source file %s is read protected.', $source));
+
+    if(!$this->isInFilebase($destination))  throw new sfFilebasePluginException('FilebaseFile %s does not belong to filebase %s, access denied due to security issues.', $destination->getPathname(), $this->getPathname());
+    if(!$this->isInFilebase($source))       throw new sfFilebasePluginException('FilebaseFile %s does not belong to filebase %s, access denied due to security issues.', $source->getPathname(), $this->getPathname());
+
+    if($destination->fileExists())
+    {
+      if($destination instanceof sfFilebasePluginDirectory)
+      {
+        if(!$destination->isWritable()) throw new sfFilebasePluginException(sprintf('Destination directory %s is write protected.', $destination));
+
+        // If source is file and dest = dir, transform dest to dest-path/source-filename
+        if(!$source instanceof sfFilebasePluginDirectory)
+        {
+          $destination = $destination->getFilebaseFile($source->getFilename());
+        }
+      }
+      else
+      {
+        if($allow_overwrite)
+        {
+          if(!$destination->isWritable()) throw new sfFilebasePluginException(sprintf('Destination file %s is write protected.', $destination));
+        }
+        else throw new sfFilebasePluginException(sprintf('Destination file %s already exists.', $destination));
+      }
+    }
+    else
+    {
+      $destination_path = $this[$destination->getPath()];
+      if(!$destination_path->isWritable()) throw new sfFilebasePluginException(sprintf('Destination directory % is write protected.', $destination_path));
+    }
+    if(!@rename($source->getPathname(), $destination->getPathname())) throw new sfFilebasePluginException(sprintf('Error renaming %s to %s.', $source, $destination));
+    return $destination;
   }
 
   /**
@@ -245,7 +279,7 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
       if(!$destination->isDir())               throw new sfFilebasePluginException(sprintf('Error copying file %s: Destination is not a directory.', $destination->getPathname()));
       if(!$destination->isWritable())          throw new sfFilebasePluginException(sprintf('Error copying file %s: Destination is write protected.', $destination->getPathname()));
       if(!$this->isInFilebase($destination))   throw new sfFilebasePluginException(sprintf('FilebaseFile %s does not belong to filebase %s, access denied due to security issues.', $destination->getPathname(), $this->getPathname()));
-      if($destination->liesWithin($source))                             throw new sfFilebasePluginException(sprintf('Error copying file: Destination directory %s lies within source directory %s.', $destination, $source));
+      if($destination->liesWithin($source))    throw new sfFilebasePluginException(sprintf('Error copying file: Destination directory %s lies within source directory %s.', $destination, $source));
       foreach(new RecursiveIteratorIterator($source, RecursiveIteratorIterator::SELF_FIRST) AS $file)
       {
         if($file instanceof sfFilebasePluginDirectory)
@@ -317,6 +351,7 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
   /**
    * Renames a file.
    *
+   * @see sfFilebasePlugin::moveFile()
    * @param mixed sfFilebasePluginFile | string $source:      The source file-name
    * @param mixed sfFilebasePluginFile | string $destination: The target file-name
    *              Target can be only a filename, than the path of the source file
@@ -329,27 +364,8 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
    */
   public function renameFile($source, $new_name, $overwrite = false)
   {
-    $source       = $this->getFilebaseFile($source);
-    $new_name     = $this->getFilebaseFile($new_name);
-    $destination  = $this->getFilebaseFile($source->getPath() . '/' . $new_name->getFilename());
-    if(!$this->isInFilebase($source))         throw new sfFilebasePluginException(sprintf('FilebaseFile %s does not belong to filebase %s, access denied due to security issues.', $source->getPathname(), $this->getFilebase()->getPathname()));
-    if(!$this->isInFilebase($destination))    throw new sfFilebasePluginException(sprintf('FilebaseFile %s does not belong to filebase %s, access denied due to security issues.', $destination->getPathname(), $this->getPathname()));
-
-    if(!$source->fileExists())  throw new sfFilebasePluginException(sprintf('Error renaming file %s: File does not exist.', $source->getPathname()));
-    if(!$source->isWritable())  throw new sfFilebasePluginException(sprintf('Error renaming file %s: Write protected.', $source->getPathname()));
-    if($destination->fileExists())
-    {
-      if($overwrite)
-      {
-        if(!$destination->isWritable()) throw new sfFilebasePluginException(sprintf('Destination file %s exists but is write protected.', $destination->getPathname()));
-      }
-      else throw new sfFilebasePluginException(sprintf('Error renaming file %s into %s: Target already exists.', $source->getPathname(), $destination->getPathname()));
-    }
-    if(!@rename($source->getPathname(), $destination->getPathname()))
-    {
-      throw new sfFilebasePluginException(sprintf('Error renaming file %s to %s: %s', $source->getPathname(), $destination->getPathname(), implode("\n", error_get_last())));
-    }
-    return $destination;
+    $new_name = $this->getFilebaseFile($new_name);
+    return $this->moveFile($source, $source->getPath() . '/' . $new_name->getFilename(), $overwrite);
   }
 
   /**

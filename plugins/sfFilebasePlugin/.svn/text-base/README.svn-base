@@ -51,37 +51,9 @@ the plugin provides an extension of `SplFileObject` named
    me by implementing much more image-manipulation capabilities). Included is a
    hidden cache layer which automatically stores generated binary data.
 
-Adminstration area install instructions  (optional)
----------------------------------------------------
-SfFilebasePlugin provides frontend modules for easy adminstration of your files
-and directories (in developement progress yet).
-
-The administration area uses the ExtJs ([http://extjs.com/](extjs.com])) to render
-some fance widgets like a tree view of your directory/file structure. With this
-you are able to **drag and drop** files or whole directory structures within
-your filebase with just a click on your mouse button.
-
-This makes organizing your files and assets really easy.
-
-These modules require doctrine 1.1 to be installed.
-
-Doctrine 1.1 is not shipped with symfony 1.2, but it will be installed as a
-pear dependency when you install sfFilebasePlugin by typing
-
-    symfony plugin:install sfFilebasePlugin
-
-For getting doctrine 1.1 working instead of the native doctrine 1.0 version
-which is embedded within sfDoctrinePlugin, you have to add the following line
-to your /config/ProjectConfiguration.class.php:
-
-    sfConfig::set('sfDoctrinePlugin_doctrine_lib_path', sfConfig::get('sf_plugins_dir') . '/Doctrine/lib/Doctrine.php');
-
-Alternatively you can install doctrine 1.1 with your symfony 1.2 project by
-following the instructions behind this link: [http://www.symfony-project.org/blog/2009/01/12/call-the-expert-using-a-custom-version-of-doctrine](http://www.symfony-project.org/blog/2009/01/12/call-the-expert-using-a-custom-version-of-doctrine).
-
-
 Image manipulation capabilities
 -------------------------------
+
 As of version 0.5.10, sfFilebasePlugin can manipulate images using both the
 GD lib and the pecl imagick extension.
 
@@ -95,7 +67,7 @@ GD lib and the pecl imagick extension.
    libraries.
 
 Installation
-------------
+============
 
 _(Install instructions taken from README in sfThumbnailPlugin, (c) Fabien Potencier)_
 
@@ -137,8 +109,76 @@ like
 
 On Windows, you'll probably have to activate the extension in your php.ini.
 
+Adminstration area install instructions  (optional)
+===================================================
+
+SfFilebasePlugin provides frontend modules for easy adminstration of your files
+and directories (in developement progress yet).
+
+The administration area uses the ExtJs ([http://extjs.com/](extjs.com])) to render
+some fance widgets like a tree view of your directory/file structure. With this
+you are able to **drag and drop** files or whole directory structures within
+your filebase with just a click on your mouse button.
+
+This makes organizing your files and assets really easy.
+
+These modules require doctrine 1.1 to be installed.
+
+Doctrine 1.1 is not shipped with symfony 1.2, but it will be installed as a
+pear dependency when you install sfFilebasePlugin by typing
+
+    symfony plugin:install sfFilebasePlugin
+
+For getting doctrine 1.1 working instead of the native doctrine 1.0 version
+which is embedded within sfDoctrinePlugin, you have to add the following line
+to your /config/ProjectConfiguration.class.php:
+
+    sfConfig::set('sfDoctrinePlugin_doctrine_lib_path', sfConfig::get('sf_plugins_dir') . '/Doctrine/lib/Doctrine.php');
+
+Alternatively you can install doctrine 1.1 with your symfony 1.2 project by
+following the instructions behind this link: [http://www.symfony-project.org/blog/2009/01/12/call-the-expert-using-a-custom-version-of-doctrine](http://www.symfony-project.org/blog/2009/01/12/call-the-expert-using-a-custom-version-of-doctrine).
+
+Setting up your application
+---------------------------
+
+The adminstration modules of sfFilebasePlugin can handle files and directories,
+even your database tables dependent of your application and environment settings.
+
+The following part presumes that you have had already setup your database properly.
+
+To init the administration module, first create an empty application:
+
+    symfony generate::app frontend
+
+After that, enable the sfFilebasePlugin modules in your /apps/frontend/config/settings.yml:
+
+    enabled_modules:        [default, sf_filebase_directory, sf_filebase_file, sf_filebase_filedeliverer]
+
+Now set up the directory the files should be stored (optional, per default the
+/web/upload directory is taken).
+In /apps/frontend/config/app.yml, write:
+
+    all:
+      sf_filebase_plugin:
+        path_name: /home/joshi/www/test/web/uploads/assets
+
+Now switch to your shell window and type:
+
+    symfony sfFilebase:create-root frontend
+
+If you want to initially import some files into your sfFilebase, optinally type
+the following line:
+
+    symfony sfFilebase:synchronize frontend /path/to/your/files
+
+That's it. You can now browse to your filebase by typing:
+
+    http://yourhost/frontend_dev.php/sf_filebase_file
+
+Have fun ;)
+
 Contents
---------
+========
 
 The plugin contains a set of classes, that are all instanciated by a file
 controller called sfFilebasePlugin. Please take a look at the examples, the 
@@ -157,7 +197,7 @@ methods to retrieve uploaded files (there is the original
 files in an object oriented way as instances of sfFilebasePluginUploadedFile.
 
 Examples
---------
+========
 
 There is a sample project at github:
 [http://github.com/joshiausdemwald/sfFilebasePlugin](http://github.com/joshiausdemwald/sfFilebasePlugin)
@@ -361,7 +401,8 @@ you set this option to false (default is true), then your form throws a new
 sfValidatorError when the uploaded file already exists in file system.
 
 Error-Handling
---------------
+==============
+
 The above code is incomplete because it does not show any error handling.
 SfFilebasePlugin handles errors by insanely throwing sfFilebasePluginException
 that can be caught for merely any operation. Please give me a hint if you think
@@ -369,14 +410,15 @@ that there is an exception that makes no sense in the context or if you miss one
 in another part of the code or this particular runtime situation.
 
 Developement
-------------
+============
 
 SfFilebasePlugin is in developement state. Standard methods to deal with files
 are meant to be stable, but there is space for a lot of improvements. Code
 contributions and -improvements, error reportings as bugfixes are very welcomed!
 
 Roadmap
--------
+=======
+
 I'd love to see some file compression support in the sfFilebasePlugin - but i
 think at the moment it'd be better to work on improving stability and testing.
 
@@ -401,7 +443,7 @@ There are a few concrete features that i have in mind for the near future:
     built in, perhaps a web2.0 mirror effect or something like this)
 
 Test
-----
+====
 
 I began to write some unit-tests on it, but they do not fit in every aspect. So
 if you want to report a bug, i would appreciate if you'd pass unit or functional
@@ -420,7 +462,7 @@ critiques.
 Have fun ;)
 
 Credits
--------
+=======
 
 Thanks to Marcus Börger for initializing the gread SPL extension.
 And to the ext js team for creating the most powerul but simple to use tree view

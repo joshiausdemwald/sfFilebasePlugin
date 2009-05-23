@@ -18,7 +18,7 @@ class sf_filebase_filedelivererComponents extends sfComponents
   {
     if($this->root === null)
     {
-      $this->root = Doctrine::getTable('sfFilebaseDirectory')->getTree()->fetchRoot();
+      $this->root = Doctrine::getTable('sfFilebaseDirectory')->getRootNode();
     }
     if(! $this->root instanceof sfFilebaseDirectory)
     {

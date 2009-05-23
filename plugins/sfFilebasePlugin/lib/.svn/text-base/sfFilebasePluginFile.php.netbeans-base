@@ -383,7 +383,7 @@ class sfFilebasePluginFile extends SplFileInfo
   {
     if(is_string($filename))
     {
-      $filename = sfFilebasePluginUtil::unifySlashes($filename);
+      //$filename = sfFilebasePluginUtil::unifySlashes($filename);
       if(strlen($filename)>0)
       {
         if(sfFilebasePluginUtil::isAbsolutePathname($filename))
@@ -392,7 +392,7 @@ class sfFilebasePluginFile extends SplFileInfo
         }
         else
         {
-          $filename = new sfFilebasePluginFile($this->getPathname().DIRECTORY_SEPARATOR.$filename, $this->filebase);
+          $filename = new sfFilebasePluginFile($this->getPathname().'/'.$filename, $this->filebase);
         }
       }
       else
@@ -413,7 +413,7 @@ class sfFilebasePluginFile extends SplFileInfo
       {
         $filename = new sfFilebasePluginDirectory($filename->getPathname(), $this->filebase);
       }
-
+      
       // Can image be processed by filebase, either throw GD or throug imagick?
       // Then return instance of sfFilebasePluginImage...
       elseif($this->filebase->getIsSupportedImage($filename))

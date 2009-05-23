@@ -224,8 +224,8 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
     if(!$source->fileExists()) throw new sfFilebasePluginException(sprintf('Source file %s does not exist.', $source));
     if(!$source->isReadable()) throw new sfFilebasePluginException(sprintf('Source file %s is read protected.', $source));
 
-    if(!$this->isInFilebase($destination))  throw new sfFilebasePluginException('FilebaseFile %s does not belong to filebase %s, access denied due to security issues.', $destination->getPathname(), $this->getPathname());
-    if(!$this->isInFilebase($source))       throw new sfFilebasePluginException('FilebaseFile %s does not belong to filebase %s, access denied due to security issues.', $source->getPathname(), $this->getPathname());
+    if(!$this->isInFilebase($destination))  throw new sfFilebasePluginException(sprintf('FilebaseFile %s does not belong to filebase %s, access denied due to security issues.', $destination->getPathname(), $this->getPathname()));
+    if(!$this->isInFilebase($source))       throw new sfFilebasePluginException(sprintf('FilebaseFile %s does not belong to filebase %s, access denied due to security issues.', $source->getPathname(), $this->getPathname()));
 
     if($destination->fileExists())
     {
@@ -258,7 +258,10 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
   }
 
   /**
-   * Copies a whole directory to a destination
+   * Copies a whole directory to a destination directory.
+   * The name of the new directory is the name of the copied source
+   * directory. If allow_overwrite isset, existing files and directories
+   * containing files with names of copied files will be overwritten.
    *
    * @param mixed sfFilebasePluginDirectory | string $source
    * @param mixed sfFilebasePluginDirectory | string $destination
@@ -268,35 +271,71 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
    */
   public function copyDirectory($source, $destination, $allow_overwrite = true)
   {
-    $source       = $this->getFilebaseFile($source);
-    $destination  = $this->getFilebaseFile($destination);
-
-    if(!$source->fileExists())                 throw new sfFilebasePluginException(sprintf('Error copying file %s: File does not exist.', $source->getPathname()));
-    if(!$source->isReadable())                 throw new sfFilebasePluginException(sprintf('Error copying file %s: Source is read protected.', $source->getPathname()));
+    $source                 = $this->getFilebaseFile($source);
+    $destination_directory  = $this->getFilebaseFile($destination);
+    $destination            = $this->getFilebaseFile($destination_directory . '/' . $source->getFilename());
     
+    if(!$source->fileExists())                        throw new sfFilebasePluginException(sprintf('Error copying file %s: File does not exist.', $source->getPathname()));
+    if(!$source->isReadable())                        throw new sfFilebasePluginException(sprintf('Error copying file %s: Source is read protected.', $source->getPathname()));
+    if(!$source instanceof sfFilebasePluginDirectory) throw new sfFilebasePluginException(sprintf('Source file %s is not a directory.', $source->getPathname()));
+
+    // Destination directory does not exist, so create it.
+    // Example: copy /hans/wurst to /otherdir/newdir/newname
+    // With this man can change the target directory filename
+    if(!$destination_directory->fileExists())
+    {
+      // create it
+      $p = $this->getFilebaseFile($destination_directory->getPath());
+      $destination_directory = $this->mkDir($destination_directory, $p->getPerms());
+      return $this->copyDirectory($source, $destination_directory);
+    }
+    
+    if(!$destination_directory->isWritable())         throw new sfFilebasePluginException(sprintf('Destination directory %s is write protected.', $destination_directory->getPathname()));
+
+    if(!$this->isInFilebase($destination))   throw new sfFilebasePluginException(sprintf('FilebaseFile %s does not belong to filebase %s, access denied due to security issues.', $destination->getPathname(), $this->getPathname()));
+    if($destination->liesWithin($source))      throw new sfFilebasePluginException(sprintf('Error copying file: Destination directory %s lies within source directory %s.', $destination, $source));
+
+    // Destination dir already exists.
+    // Check if it's a dir or a file.
     if($destination->fileExists())
     {
-      if(!$destination->isDir())               throw new sfFilebasePluginException(sprintf('Error copying file %s: Destination is not a directory.', $destination->getPathname()));
-      if(!$destination->isWritable())          throw new sfFilebasePluginException(sprintf('Error copying file %s: Destination is write protected.', $destination->getPathname()));
-      if(!$this->isInFilebase($destination))   throw new sfFilebasePluginException(sprintf('FilebaseFile %s does not belong to filebase %s, access denied due to security issues.', $destination->getPathname(), $this->getPathname()));
-      if($destination->liesWithin($source))    throw new sfFilebasePluginException(sprintf('Error copying file: Destination directory %s lies within source directory %s.', $destination, $source));
-      foreach(new RecursiveIteratorIterator($source, RecursiveIteratorIterator::SELF_FIRST) AS $file)
+      // Destination is directory, so copy it into 
+      if($destination instanceof sfFilebasePluginDirectory)
       {
-        if($file instanceof sfFilebasePluginDirectory)
+        if(!$destination->isWritable()) throw new sfFilebasePluginException(sprintf('Error copying file %s: Destination is write protected.', $destination->getPathname()));
+      }
+
+      // Destination is a file, so try to replace it.
+      else
+      {
+        if($allow_overwrite)
         {
-          $this->copyDirectory($file, $destination . '/' . $file->getFilename(), $allow_overwrite);
+          if(!$destination->isWritable()) throw new sfFilebasePluginException(sprintf('Error copying file %s: Destination is write protected.', $destination->getPathname()));
+          $destination->delete();
+          $this->copyDirectory($source, $destination_directory);
         }
-        else
-        {
-          $this->copyFile($file, $destination . '/' . $file->getFilename(), $allow_overwrite);
-        }
+        else throw new sfFilebasePluginException(sprintf('File %s does already exist.', $destination));
       }
     }
+
+    // Directory does not exist, create it!
     else
     {
       $this->mkDir($destination, $source->getPerms());
-      $this->copyDirectory($source, $destination, $allow_overwrite);
     }
+      
+    foreach(new RecursiveIteratorIterator($source, RecursiveIteratorIterator::SELF_FIRST) AS $file)
+    {
+      if($file instanceof sfFilebasePluginDirectory)
+      {
+        $this->copyDirectory($file, $destination . '/' . $file->getFilename(), $allow_overwrite);
+      }
+      else
+      {
+        $this->copyFile($file, $destination . '/' . $file->getFilename(), $allow_overwrite);
+      }
+    }
+    
     return $destination;
   }
 
@@ -304,41 +343,43 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
    * Copies a file to the given destination.
    *
    * @param mixed sfFilebasePluginFile | string $source: The source file
-   * @param mixed sfFilebasePluginFile | string $destination: The destination file
+   * @param mixed sfFilebasePluginFile | string $destination: The destination
+   *              directory
    * @param boolean $allow_overwrite: If true dest file will be overwritten
    * @return sfFilebasePluginFile $copied_file
    */
   public function copyFile($source, $destination, $allow_overwrite = true)
   {
-    $source           = $this->getFilebaseFile($source);
-    $destination      = $this->getFilebaseFile($destination);
-
+    $source                 = $this->getFilebaseFile($source);
+    $destination_directory  = $this->getFilebaseFile($destination);
+    $destination            = $this->getFilebaseFile($destination_directory->getPathname() . '/' . $source->getFilename());
+    
     if(!$source->fileExists()) throw new sfFilebasePluginException(sprintf('Error copying file %s: File does not exist.', $source->getPathname()));
     if(!$source->isReadable()) throw new sfFilebasePluginException(sprintf('Error copying file %s: Source is read protected.', $source->getPathname()));
-
+    
     if($source instanceof sfFilebasePluginDirectory)
     {
-      $this->copyDirectory($source, $destination, $allow_overwrite);
+      $this->copyDirectory($source, $destination_directory, $allow_overwrite);
     }
     else
     {
+
+      if(!$destination_directory->fileExists())
+      {
+        $p = $this->getFilebaseFile($destination_directory->getPath());
+        $this->mkDir($destination_directory, $p->getPerms());
+        return $this->copyFile($source, $destination_directory);
+      }
+
+      if(!$destination_directory->isWritable())                                   throw new sfFilebasePluginException(sprintf('Destination path %s is write protected.', $destination_directory->getPathname()));
+
       if($destination->fileExists())
       {
-        if(!$destination->isWritable())                                 throw new sfFilebasePluginException(sprintf('Destination file %s is write protected.', $destination->getPathname()));
-        if($destination instanceof sfFilebasePluginDirectory)
+        if($allow_overwrite)
         {
-          $destination = $this->getFilebaseFile($destination->getPathname() . '/' . $source->getFilename());
+          $destination->delete();
         }
-        else
-        {
-          if(!$allow_overwrite)                                         throw new sfFilebasePluginException(sprintf('Error copying file %s into %s: Target already exists.', $source->getPathname(), $destination->getPathname()));
-        }
-      }
-      else
-      {
-        $dest_path = $this->getFilebaseFile($destination->getPath());
-        if(!$dest_path->fileExists())                                   throw new sfFilebasePluginException(sprintf('Destination path %s does not exist.', $dest_path->getPathname()));
-        if(!$dest_path->isWritable())                                   throw new sfFilebasePluginException(sprintf('Destination path %s is write protected.', $dest_path->getPathname()));
+        else throw new sfFilebasePluginException(sprintf('Error copying file %s into %s: Target already exists.', $source->getPathname(), $destination->getPathname()));
       }
       
       // Only check target. Files may be copied from any location.
@@ -442,8 +483,8 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
   {
     if(!$destination->fileExists())         throw new sfFilebasePluginException(sprintf('FilebaseFile %s does not exist.', $destination->getPathname()));
     if(!$this->isInFilebase($destination))  throw new sfFilebasePluginException(sprintf('FilebaseFile %s does not belong to filebase %s, access denied due to security issues.', $destination->getPathname(), $this->getPathname()));
-    if(!$destination->isWritable())         throw new sfFilebasePluginException(sprintf('FilebaseFile %s is write protected.', $destination->getPathname()));
-    if(!@chmod($destination, $perms))       throw new sfFilebasePluginException(sprintf('Error chmod-ing directory %s: %s', $destination->getPathname(), implode("\n", error_get_last())));
+    if(!$destination->isWritable())                         throw new sfFilebasePluginException(sprintf('FilebaseFile %s is write protected.', $destination->getPathname()));
+    if(!@chmod($destination->getPathname(), $perms))        throw new sfFilebasePluginException(sprintf('Error chmod-ing directory %s: %s', $destination->getPathname(), implode("\n", error_get_last())));
     return $destination;
   }
 

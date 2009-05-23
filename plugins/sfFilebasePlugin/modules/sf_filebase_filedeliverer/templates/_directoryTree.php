@@ -11,7 +11,6 @@
  * @copyright 2007-2009 Johannes Heinen <johannes.heinen@gmail.com>
  */
 ?>
-
 <?php use_stylesheet('/sfFilebasePlugin/js/vendor/ext/resources/css/ext-all.css','first')?>
 <?php use_stylesheet('/sfFilebasePlugin/js/vendor/ext/resources/css/xtheme-blue.css','first')?>
 <?php use_javascript('/sfFilebasePlugin/js/vendor/ext/adapter/ext/ext-base.js');?>

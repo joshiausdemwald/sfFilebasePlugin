@@ -134,7 +134,13 @@
 										<a href="#getChoices" title="details" class="method-name">getChoices</a>
 										()
 									</div>
-																							</div>
+																																		
+				<div class="method-definition">
+											<span class="method-result">sfFilebaseDirectory</span>
+										<a href="#getRootNode" title="details" class="method-name">getRootNode</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$environment</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$application</span> = <span class="var-default">null</span>], [<span class="var-type">Doctrine_Connection</span>&nbsp;<span class="var-name">$conn</span> = <span class="var-default">null</span>])
+									</div>
+											</div>
 		</div>
 	</div>		
 
@@ -172,13 +178,48 @@
 		
 			
 	</div>
+<a name="methodgetRootNode" id="getRootNode"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getRootNode</span> (line <span class="line-number">50</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieves the root node of the doctrine  filebase tree by application and  environment parameters</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">sfFilebaseDirectory</span>
+		<span class="method-name">
+			getRootNode
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$environment</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$application</span> = <span class="var-default">null</span>], [<span class="var-type">Doctrine_Connection</span>&nbsp;<span class="var-name">$conn</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Doctrine_Connection</span>
+				<span class="var-name">$conn</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$environment</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$application</span>			</li>
+				</ul>
+		
+			
+	</div>
 						
 		</div>
 	</div>
 
 
 	<p class="notes" id="credit">
-		Documentation generated on Fri, 22 May 2009 00:48:44 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Sat, 23 May 2009 17:36:16 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</div></body>
 </html>

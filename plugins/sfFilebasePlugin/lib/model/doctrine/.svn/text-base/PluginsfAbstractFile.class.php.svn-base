@@ -62,9 +62,7 @@ abstract class PluginsfAbstractFile extends BasesfAbstractFile
    */
   public function getFilenameIndent()
   {
-    $f = sfFilebasePlugin::getInstance();
-    $file = $f->getFileByHash($this->getHash());
-    return str_repeat('&nbsp;', $file->getNestingLevel()) . $this->getFilename();
+    return str_repeat('&nbsp;', $this->getLevel()) . $this->getFilename();
   }
 
   public function generatehashFilename($file = null)

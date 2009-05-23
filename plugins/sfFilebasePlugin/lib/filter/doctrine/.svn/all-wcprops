@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 60
-/!svn/ver/18454/plugins/sfFilebasePlugin/lib/filter/doctrine
+/!svn/ver/18526/plugins/sfFilebasePlugin/lib/filter/doctrine
 END
 PluginsfAbstractFileFormFilter.class.php
 K 25
@@ -19,7 +19,7 @@ PluginsfFilebaseFileFormFilter.class.php
 K 25
 svn:wc:ra_dav:version-url
 V 101
-/!svn/ver/18463/plugins/sfFilebasePlugin/lib/filter/doctrine/PluginsfFilebaseFileFormFilter.class.php
+/!svn/ver/18589/plugins/sfFilebasePlugin/lib/filter/doctrine/PluginsfFilebaseFileFormFilter.class.php
 END
 PluginsfFilebaseDirectoryFormFilter.class.php
 K 25

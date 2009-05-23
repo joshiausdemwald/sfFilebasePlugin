@@ -26,3 +26,8 @@ function get_filebase($path_name = null, $cache_directory = null)
 {
   return sfFilebasePlugin::getInstance($path_name, $cache_directory);
 }
+
+function url_for_asset($path_name)
+{
+  $f = sfFilebasePlugin::getInstance();
+}

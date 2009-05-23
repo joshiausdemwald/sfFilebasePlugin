@@ -150,6 +150,12 @@ tr,
   font-size: 12px;
 }
 
+#sf_admin_container table td,
+#sf_admin_container table th
+{
+  padding: 4px;
+}
+
 #sf_admin_content table thead th
 {
   background: #333;

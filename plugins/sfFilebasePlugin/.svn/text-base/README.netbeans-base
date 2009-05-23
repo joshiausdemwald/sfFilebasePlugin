@@ -4,8 +4,13 @@ sfFilebasePlugin
 *sfFilebasePlugin* provides an unified **api** for **filesystem related
 operations** with focus on web based applications (yes, really.)
 
-It consists of a set of classes based on built in **SPL classes** (SplFileInfo/
--Object, DirectoryIterator ...) written by Marcus Boerger.
+Additionally, there is a admin module and a simple to use component to render
+a **drag'n'drop** treeview based on ext js for most simply organizing your files
+in a directory structure, all maintained through a doctrine driven hierarchical
+database. (Still in developement, but at meantime rather stable)
+
+The core plugin consists of a set of classes based on built in **SPL classes**
+(SplFileInfo/ -Object, DirectoryIterator ...) written by Marcus Boerger.
 
 The api-documentation for these base classes may be found in
 [http://www.php.net/~helly/php/ext/spl/](http://www.php.net/~helly/php/ext/spl/).

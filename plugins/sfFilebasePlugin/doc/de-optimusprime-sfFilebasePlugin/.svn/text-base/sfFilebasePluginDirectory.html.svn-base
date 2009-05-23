@@ -163,7 +163,13 @@
 		</div>
 		<div class="info-box-body">			
 			<div class="method-summary">
-																																																																																																																														
+																																																																																																																																						
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#chmod" title="details" class="method-name">chmod</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$perms</span> = <span class="var-default">0755</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$recursive</span> = <span class="var-default">true</span>])
+									</div>
+														
 				<div class="method-definition">
 											<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginDirectory.html">sfFilebasePluginDirectory</a></span>
 										<a href="#chmodRecursive" title="details" class="method-name">chmodRecursive</a>
@@ -293,6 +299,43 @@
 		</div>
 		<div class="info-box-body">
 			<A NAME='method_detail'></A>
+<a name="methodchmod" id="chmod"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">chmod</span> (line <span class="line-number">59</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			chmod
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$perms</span> = <span class="var-default">0755</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$recursive</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$perms</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$recursive</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodchmod">sfFilebasePluginFile::chmod()</a></dt>
+						<dd>Changes the access permissions of a sfFilebasePluginFile</dd>
+					</dl>
+			
+	</div>
 <a name="methodchmodRecursive" id="chmodRecursive"><!-- --></a>
 <div class="oddrow">
 	
@@ -327,7 +370,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">copy</span> (line <span class="line-number">79</span>)
+		<span class="method-title">copy</span> (line <span class="line-number">91</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -368,7 +411,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">count</span> (line <span class="line-number">195</span>)
+		<span class="method-title">count</span> (line <span class="line-number">207</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -444,7 +487,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getHumanReadableFileType</span> (line <span class="line-number">212</span>)
+		<span class="method-title">getHumanReadableFileType</span> (line <span class="line-number">224</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -475,7 +518,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">getIterator</span> (line <span class="line-number">106</span>)
+		<span class="method-title">getIterator</span> (line <span class="line-number">118</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -504,7 +547,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getSize</span> (line <span class="line-number">90</span>)
+		<span class="method-title">getSize</span> (line <span class="line-number">102</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -540,7 +583,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">isEmpty</span> (line <span class="line-number">223</span>)
+		<span class="method-title">isEmpty</span> (line <span class="line-number">235</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -566,7 +609,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">offsetExists</span> (line <span class="line-number">140</span>)
+		<span class="method-title">offsetExists</span> (line <span class="line-number">152</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -601,7 +644,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">offsetGet</span> (line <span class="line-number">152</span>)
+		<span class="method-title">offsetGet</span> (line <span class="line-number">164</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -637,7 +680,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">offsetSet</span> (line <span class="line-number">180</span>)
+		<span class="method-title">offsetSet</span> (line <span class="line-number">192</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -675,7 +718,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">offsetUnset</span> (line <span class="line-number">168</span>)
+		<span class="method-title">offsetUnset</span> (line <span class="line-number">180</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -710,7 +753,7 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">openFile</span> (line <span class="line-number">121</span>)
+		<span class="method-title">openFile</span> (line <span class="line-number">133</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -753,7 +796,7 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">rename</span> (line <span class="line-number">67</span>)
+		<span class="method-title">rename</span> (line <span class="line-number">79</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -829,7 +872,7 @@
 
 
 	<p class="notes" id="credit">
-		Documentation generated on Fri, 22 May 2009 00:48:45 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Sat, 23 May 2009 17:36:17 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</div></body>
 </html>

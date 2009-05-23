@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 44
-/!svn/ver/18452/plugins/sfFilebasePlugin/lib
+/!svn/ver/18578/plugins/sfFilebasePlugin/lib
 END
 sfFilebasePluginWebRequest.php
 K 25
@@ -43,7 +43,7 @@ sfFilebasePluginDirectory.php
 K 25
 svn:wc:ra_dav:version-url
 V 74
-/!svn/ver/18407/plugins/sfFilebasePlugin/lib/sfFilebasePluginDirectory.php
+/!svn/ver/18589/plugins/sfFilebasePlugin/lib/sfFilebasePluginDirectory.php
 END
 sfFilebasePluginFileObject.php
 K 25
@@ -85,7 +85,7 @@ sfFilebasePlugin.php
 K 25
 svn:wc:ra_dav:version-url
 V 65
-/!svn/ver/18510/plugins/sfFilebasePlugin/lib/sfFilebasePlugin.php
+/!svn/ver/18589/plugins/sfFilebasePlugin/lib/sfFilebasePlugin.php
 END
 sfFilebasePluginFile.php
 K 25

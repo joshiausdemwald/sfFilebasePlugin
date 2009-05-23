@@ -32,7 +32,9 @@ generator:
           label: Parent directory
       list:
         display: [filename, comment, tagsAsString]
-      filter: ~
-      form:   ~
+      filter:
+        display: [filename, comment]
+      form:
+        display: [filename, comment, tags, directory]
       edit:    ~
       new:     ~

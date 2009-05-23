@@ -12,4 +12,25 @@
  */
 abstract class PluginsfFilebaseFileFormFilter extends BasesfFilebaseFileFormFilter
 {
+  /*public function setup()
+  {
+    parent::setup();
+    $this->widgetSchema['tags'] = new sfWidgetFormInput();
+    $this->validatorSchema['tags'] = new sfValidatorString(array('required'=>false));
+  }
+
+  public function buildQuery(array $values)
+  {
+    $query = parent::buildQuery($values);
+    if(isset($values['tags'])&&!empty($values['tags']))
+    {
+      $tags = sfFilebaseTagTable::splitTags($values['tags']);
+      $query->leftJoin('sfFilebaseTag t ON t.sf_abstract_files_id = r.id');
+      echo $query;
+      
+      //$query->addWhere('t.sf_abstract_files_id = r.id');
+      //$query->addWhere('t.tag IN (\'' . implode("','", $tags) . '\')');
+    }
+    return $query;
+  }*/
 }

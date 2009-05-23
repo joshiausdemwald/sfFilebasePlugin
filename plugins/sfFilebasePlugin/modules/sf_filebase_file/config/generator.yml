@@ -33,7 +33,7 @@ generator:
       list:
         display: [~retrieveFiles, filename, comment, tagsAsString]
       filter:
-        display: [filename]
+        display: [filename, comment]
       form: ~
       edit:
         display: [~retrieveFiles, filename, directory, comment, tags]
