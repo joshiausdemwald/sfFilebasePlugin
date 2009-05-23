@@ -9,3 +9,9 @@ svn:wc:ra_dav:version-url
 V 91
 /!svn/ver/18589/plugins/sfFilebasePlugin/modules/sf_filebase_directory/config/generator.yml
 END
+view.yml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/18594/plugins/sfFilebasePlugin/modules/sf_filebase_directory/config/view.yml
+END

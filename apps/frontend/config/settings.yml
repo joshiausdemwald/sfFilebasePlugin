@@ -31,7 +31,7 @@ all:
     # Cache settings
     lazy_cache_key:         on        # Delays creation of a cache key until after checking whether an action or partial is cacheable
 
-    enabled_modules:        [default, sf_filebase_directory, sf_filebase_file, sf_filebase_filedeliverer]
+    enabled_modules:        [default, sf_filebase_directory, sf_filebase_file, sf_filebase_filedeliverer, sf_filebase_overview]
 
 #all:
 #  .actions:

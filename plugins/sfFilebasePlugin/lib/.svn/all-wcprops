@@ -9,23 +9,23 @@ svn:wc:ra_dav:version-url
 V 75
 /!svn/ver/18227/plugins/sfFilebasePlugin/lib/sfFilebasePluginWebRequest.php
 END
-sfFilebasePluginFileExif.php
-K 25
-svn:wc:ra_dav:version-url
-V 73
-/!svn/ver/18227/plugins/sfFilebasePlugin/lib/sfFilebasePluginFileExif.php
-END
-sfFilebasePluginGfxEditor.php
-K 25
-svn:wc:ra_dav:version-url
-V 74
-/!svn/ver/18270/plugins/sfFilebasePlugin/lib/sfFilebasePluginGfxEditor.php
-END
 sfFilebasePluginRecursiveIteratorIterator.php
 K 25
 svn:wc:ra_dav:version-url
 V 90
 /!svn/ver/18453/plugins/sfFilebasePlugin/lib/sfFilebasePluginRecursiveIteratorIterator.php
+END
+sfFilebasePluginGfxEditor.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/18594/plugins/sfFilebasePlugin/lib/sfFilebasePluginGfxEditor.php
+END
+sfFilebasePluginFileExif.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/18227/plugins/sfFilebasePlugin/lib/sfFilebasePluginFileExif.php
 END
 sfFilebasePluginUploadedFile.php
 K 25
@@ -45,17 +45,17 @@ svn:wc:ra_dav:version-url
 V 74
 /!svn/ver/18589/plugins/sfFilebasePlugin/lib/sfFilebasePluginDirectory.php
 END
-sfFilebasePluginFileObject.php
-K 25
-svn:wc:ra_dav:version-url
-V 75
-/!svn/ver/18227/plugins/sfFilebasePlugin/lib/sfFilebasePluginFileObject.php
-END
 sfFilebasePluginRecursiveDirectoryIterator.php
 K 25
 svn:wc:ra_dav:version-url
 V 91
 /!svn/ver/18227/plugins/sfFilebasePlugin/lib/sfFilebasePluginRecursiveDirectoryIterator.php
+END
+sfFilebasePluginFileObject.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/18227/plugins/sfFilebasePlugin/lib/sfFilebasePluginFileObject.php
 END
 sfFilebasePluginGfxEditorAdapterGD.php
 K 25
@@ -69,29 +69,29 @@ svn:wc:ra_dav:version-url
 V 85
 /!svn/ver/18342/plugins/sfFilebasePlugin/lib/sfFilebasePluginUploadedFilesManager.php
 END
-sfFilebasePluginUtil.php
-K 25
-svn:wc:ra_dav:version-url
-V 69
-/!svn/ver/18510/plugins/sfFilebasePlugin/lib/sfFilebasePluginUtil.php
-END
 sfFilebasePluginGfxEditorAdapterInterface.php
 K 25
 svn:wc:ra_dav:version-url
 V 90
 /!svn/ver/18270/plugins/sfFilebasePlugin/lib/sfFilebasePluginGfxEditorAdapterInterface.php
 END
-sfFilebasePlugin.php
+sfFilebasePluginUtil.php
 K 25
 svn:wc:ra_dav:version-url
-V 65
-/!svn/ver/18589/plugins/sfFilebasePlugin/lib/sfFilebasePlugin.php
+V 69
+/!svn/ver/18510/plugins/sfFilebasePlugin/lib/sfFilebasePluginUtil.php
 END
 sfFilebasePluginFile.php
 K 25
 svn:wc:ra_dav:version-url
 V 69
 /!svn/ver/18510/plugins/sfFilebasePlugin/lib/sfFilebasePluginFile.php
+END
+sfFilebasePlugin.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/18594/plugins/sfFilebasePlugin/lib/sfFilebasePlugin.php
 END
 sfFilebasePluginGfxEditorAdapterIMagick.php
 K 25

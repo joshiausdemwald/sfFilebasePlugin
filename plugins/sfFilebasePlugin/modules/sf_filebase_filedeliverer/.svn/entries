@@ -36,6 +36,9 @@ ee427ae8-e902-0410-961c-c3ed070cd9f9
 actions
 dir
 
+config
+dir
+
 templates
 dir
 

@@ -111,7 +111,7 @@ abstract class PluginsfFilebaseDirectoryForm extends BasesfFilebaseDirectoryForm
   {
     $con === null && $con = $this->getConnection();
 
-    parent::updateObject($values);
+    parent::updateObject();
 
     $destination_node = null;
     if($this->getValue('directory'))

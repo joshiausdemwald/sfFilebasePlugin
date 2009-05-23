@@ -683,6 +683,7 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
   { 
     $image = $this->getFilebaseFile($image);
     $cache_fileinfo = $this->gfxEditor->getThumbnailFileinfo($image,$dimensions, $mime);
+
     if(!$cache_fileinfo->fileExists())
     {
       return $this->gfxEditor->createThumbnail($image, $dimensions, $quality, $mime, $preserve_transparency);

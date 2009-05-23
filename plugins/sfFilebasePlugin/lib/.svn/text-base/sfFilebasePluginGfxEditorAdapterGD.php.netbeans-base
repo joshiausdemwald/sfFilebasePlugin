@@ -59,6 +59,14 @@ class sfFilebasePluginGfxEditorAdapterGD implements sfFilebasePluginGfxEditorAda
   protected $funcs = array();
 
   /**
+   * If set to true, transparent images will not loose their transparent
+   * color definition during processing
+   *
+   * @var boolean $preserve_transparency
+   */
+  protected $preserve_transparency;
+
+  /**
    * @param sfFilebasePluginGfxEditor $editor
    */
   public function initialize(sfFilebasePluginGfxEditor $gfxEditor)
@@ -89,12 +97,14 @@ class sfFilebasePluginGfxEditorAdapterGD implements sfFilebasePluginGfxEditorAda
     $this->source = $source;
     switch($source->getMimeType())
     {
+      case 'image/pjpeg':
       case 'image/jpeg':
         $this->source_resource = imagecreatefromjpeg($this->source->getPathname());
         return;
       case 'image/gif':
         $this->source_resource = imagecreatefromgif($this->source->getPathname());
         return;
+      case 'image/x-png':
       case 'image/png':
         $this->source_resource = imagecreatefrompng($this->source->getPathname());
         return;
@@ -131,14 +141,16 @@ class sfFilebasePluginGfxEditorAdapterGD implements sfFilebasePluginGfxEditorAda
     if(!is_resource($this->destination_resource)) throw new sfFilebasePluginException('Nothing to save.');
     switch($this->destination->getMimeType())
     {
+      case 'image/pjpeg':
       case 'image/jpeg':
         imagejpeg($this->destination_resource, $this->destination->getPathname(), $this->destinationQuality);
         break;
       case 'image/gif':
         imagegif($this->destination_resource, $this->destination->getPathname());
         break;
+      case 'image/x-png':
       case 'image/png':
-        imagepng($this->destination_resource, $this->destination->getPathname(), round($this->destinationQuality/10));
+        imagepng($this->destination_resource, $this->destination->getPathname(), round($this->destinationQuality/10), PNG_ALL_FILTERS);
         break;
     }
     $this->destination->chmod($chmod);
@@ -161,8 +173,13 @@ class sfFilebasePluginGfxEditorAdapterGD implements sfFilebasePluginGfxEditorAda
 
   /**
    * Resizes the source image.
+   *
+   * Uses some ideas from Adrian Mummey
+   * <http://www.mummey.org/2008/11/transparent-gifs-with-php-and-gd/comment-page-1/#comment-264>
+   * to preserve transparent color on gifs images.
+   *
    * @param array $dimensions
-   * @param true    $scale
+   * @return boolean true if image resizing was successful
    */
   public function resize(array $dimensions)
   {
@@ -175,21 +192,50 @@ class sfFilebasePluginGfxEditorAdapterGD implements sfFilebasePluginGfxEditorAda
     $new_width            = $image_data['new_width'];
     $new_height           = $image_data['new_height'];
     $mime                 = $image_data['mime'];
-   
-    switch ($mime)
+
+    $this->destination_resource = imagecreatetruecolor($new_width, $new_height);
+
+    if($this->preserve_transparency && ($mime == 'image/gif' || $mime == 'image/png' || $mime == 'image/x-png'))
     {
-      case  'image/jpeg':
-        $this->destination_resource = imagecreatetruecolor($new_width, $new_height);
-        $this->funcs['imagecopyresampled']($this->destination_resource, $this->source_resource, 0, 0, 0, 0, $new_width, $new_height, $width, $height);
-        break;
-      case 'image/png':
-        $this->destination_resource = imagecreatetruecolor($new_width, $new_height);
-        $this->funcs['imagecopyresampled']($this->destination_resource, $this->source_resource, 0, 0, 0, 0, $new_width, $new_height, $width, $height);
-        break;
-      case 'image/gif':
-        $this->destination_resource = imagecreate($new_width, $new_height);
-        $this->funcs['imagecopyresampled']($this->destination_resource, $this->source_resource, 0, 0, 0, 0, $new_width, $new_height, $width, $height);
-        break;
+      if($mime == 'image/gif')
+      {
+        imagealphablending($this->destination_resource, false);
+        $transparent1 = imagecolorallocatealpha($this->destination_resource, 255, 255, 255, 127);
+        imagefilledrectangle($this->destination_resource, 0, 0, $new_width, $new_height, $transparent1);
+        imagecolortransparent($this->destination_resource, $transparent1);
+      }
+      else
+      {
+        imagealphablending($this->destination_resource, false);
+      }
+      imagesavealpha($this->destination_resource, true);
+      switch ($mime)
+      {
+        case 'image/png':
+        case 'image/x-png':
+          $this->funcs['imagecopyresampled']($this->destination_resource, $this->source_resource, 0, 0, 0, 0, $new_width, $new_height, $width, $height);
+          break;
+        case 'image/gif':
+          imagecopyresized($this->destination_resource, $this->source_resource, 0, 0, 0, 0, $new_width, $new_height, $width, $height);
+          break;
+      }
+    }
+    else
+    {
+      switch ($mime)
+      {
+        case  'image/jpeg':
+        case  'image/pjpeg':
+          $this->funcs['imagecopyresampled']($this->destination_resource, $this->source_resource, 0, 0, 0, 0, $new_width, $new_height, $width, $height);
+          break;
+        case 'image/x-png':
+        case 'image/png':
+          $this->funcs['imagecopyresampled']($this->destination_resource, $this->source_resource, 0, 0, 0, 0, $new_width, $new_height, $width, $height);
+          break;
+        case 'image/gif':
+          $this->funcs['imagecopyresampled']($this->destination_resource, $this->source_resource, 0, 0, 0, 0, $new_width, $new_height, $width, $height);
+          break;
+      }
     }
     return true;
   }
@@ -212,5 +258,16 @@ class sfFilebasePluginGfxEditorAdapterGD implements sfFilebasePluginGfxEditorAda
     $this->destination_resource = imagerotate($this->source_resource, $deg, sfFilebasePluginUtil::parseHTMLColor($bgcolor), true);
     if(!is_resource($this->destination_resource)) throw new sfFilebasePluginException(sprintf('Failed to rotate image %s.', $this->source));
     return true;
+  }
+
+  /**
+   * Sets the flag that determins if the processor should preserve transparency
+   * during the image manipulation.
+   *
+   * @param boolean $preserve_transparency
+   */
+  public function setPreserveTransparency($preserve_transparency)
+  {
+    $this->preserve_transparency = $preserve_transparency;
   }
 }

@@ -13,7 +13,7 @@ PluginsfFilebaseDirectoryForm.class.php
 K 25
 svn:wc:ra_dav:version-url
 V 98
-/!svn/ver/18526/plugins/sfFilebasePlugin/lib/form/doctrine/PluginsfFilebaseDirectoryForm.class.php
+/!svn/ver/18594/plugins/sfFilebasePlugin/lib/form/doctrine/PluginsfFilebaseDirectoryForm.class.php
 END
 PluginsfAbstractFileForm.class.php
 K 25

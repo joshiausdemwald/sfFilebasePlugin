@@ -5,30 +5,6 @@
     <?php include_metas() ?>
     <?php include_title() ?>
     <link rel="shortcut icon" href="/favicon.ico" />
-    <style type="text/css">
-      /*<![CDATA[*/
-      .clearfix:after
-      {
-        content: ".";
-        display: block;
-        height: 0;
-        clear: both;
-        visibility: hidden;
-      }
-      .clearfix {display: inline-block;}  /* for IE/Mac */
-      /*]]>*/
-    </style><!-- main stylesheet ends, CC with new stylesheet below... -->
-    <!--[if IE]>
-      <style type="text/css">
-         .clearfix
-         {
-          zoom: 1;     /* triggers hasLayout */
-          display: block;     /* resets display for IE/Win */
-         }  /* Only IE can see inside the conditional comment
-          and read this CSS rule. Don't ever use a normal HTML
-          comment inside the CC or it will close prematurely. */
-      </style>
-    <![endif]-->
   </head>
   <body>
     <div id="Overall_Wrapper" class="clearfix">
@@ -37,6 +13,7 @@
       </div>
       <div id="Navigation">
         <p>
+          <?php echo link_to('overview', 'sf_filebase_overview/index')?> /
           <?php echo link_to('filebase directories', 'sf_filebase_directory/index')?> /
           <?php echo link_to('filebase files', 'sf_filebase_file/index')?>
         </p>

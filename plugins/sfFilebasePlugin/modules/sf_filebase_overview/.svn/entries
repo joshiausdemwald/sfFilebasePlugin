@@ -1,0 +1,44 @@
+9
+
+dir
+18594
+http://svn.symfony-project.com/plugins/sfFilebasePlugin/modules/sf_filebase_overview
+http://svn.symfony-project.com
+
+
+
+2009-05-23T18:53:39.341669Z
+18594
+joshiausdemwald
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+0
+
+actions
+dir
+
+config
+dir
+
+templates
+dir
+

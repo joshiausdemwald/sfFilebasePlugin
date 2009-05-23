@@ -512,6 +512,8 @@
       * Fixed sfFilebasePlugin::copyDirectory() and added improved file type
         recognition
       * Removed old sample files
+      * Worked on install instructions for admin area
+      * Did some minor bugfixes and improvements.
       </notes>
     </release>
     <release>
