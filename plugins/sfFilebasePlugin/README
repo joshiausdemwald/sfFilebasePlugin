@@ -152,7 +152,7 @@ To init the administration module, first create an empty application:
 
 After that, enable the sfFilebasePlugin modules in your /apps/frontend/config/settings.yml:
 
-    enabled_modules:        [default, sf_filebase_directory, sf_filebase_file, sf_filebase_filedeliverer]
+    enabled_modules:        [default, sf_filebase_directory, sf_filebase_file, sf_filebase_filedeliverer, sf_filebase_overview]
 
 Now set up the directory the files should be stored (optional, per default the
 /web/upload directory is taken).
@@ -169,7 +169,12 @@ Now switch to your shell window and type:
 If you want to initially import some files into your sfFilebase, optinally type
 the following line:
 
-    symfony sfFilebase:synchronize frontend /path/to/your/files
+    symfony sfFilebase:import application /path/to/your/files --env="prod"
+    
+    symfony sfFilebase:import frontend /path/to/your/files --env="your_env"
+
+    // Default environment is "dev"
+    symfony sfFilebase:import frontend /path/to/your/files
 
 That's it. You can now browse to your filebase by typing:
 

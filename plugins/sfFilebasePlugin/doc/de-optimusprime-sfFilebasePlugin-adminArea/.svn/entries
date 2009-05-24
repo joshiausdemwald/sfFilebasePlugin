@@ -1,14 +1,14 @@
 9
 
 dir
-18590
+18609
 http://svn.symfony-project.com/plugins/sfFilebasePlugin/doc/de-optimusprime-sfFilebasePlugin-adminArea
 http://svn.symfony-project.com
 
 
 
-2009-05-23T15:40:17.136064Z
-18590
+2009-05-24T20:56:55.374122Z
+18609
 joshiausdemwald
 
 
@@ -39,10 +39,10 @@ file
 
 
 
-2009-05-23T15:36:16.000000Z
-e198bd3930040528a44a2b3f7b09d85d
-2009-05-23T15:40:17.136064Z
-18590
+2009-05-24T20:56:33.000000Z
+d6b09f131c3e0753b422158ad6f22515
+2009-05-24T20:56:55.374122Z
+18609
 joshiausdemwald
 
 
@@ -73,10 +73,10 @@ file
 
 
 
-2009-05-23T15:36:16.000000Z
-d2fdffb0db28293e23380a9ca009e0d6
-2009-05-23T15:40:17.136064Z
-18590
+2009-05-24T20:56:33.000000Z
+ba71dab717e37f652ca310151c0c8557
+2009-05-24T20:56:55.374122Z
+18609
 joshiausdemwald
 
 
@@ -107,10 +107,10 @@ file
 
 
 
-2009-05-23T15:36:16.000000Z
-26a238e644ef79b0620b2df3c6851ff4
-2009-05-23T15:40:17.136064Z
-18590
+2009-05-24T20:56:33.000000Z
+2ea9b3ad95ade67477d2ff74c6c4764e
+2009-05-24T20:56:55.374122Z
+18609
 joshiausdemwald
 
 
@@ -133,7 +133,41 @@ joshiausdemwald
 
 
 
-7849
+8180
+
+sfFilebaseImportTask.html
+file
+
+
+
+
+2009-05-24T20:56:33.000000Z
+04f256d6a2b2f59be6bb1c7b0a9ff0df
+2009-05-24T20:56:55.374122Z
+18609
+joshiausdemwald
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7176
 
 PluginsfFilebaseFile.html
 file
@@ -141,10 +175,10 @@ file
 
 
 
-2009-05-23T15:36:16.000000Z
-ace1625f545b3c90fb4ff5e1c6641d57
-2009-05-23T15:40:17.136064Z
-18590
+2009-05-24T20:56:33.000000Z
+38b8f7866f780d2e8ee892e37626861b
+2009-05-24T20:56:55.374122Z
+18609
 joshiausdemwald
 
 
@@ -175,10 +209,10 @@ file
 
 
 
-2009-05-23T15:36:15.000000Z
-db4a7842982a531e593c4cd5da3b1e41
-2009-05-23T15:40:17.136064Z
-18590
+2009-05-24T20:56:33.000000Z
+4fec9e7286756b737ba130ef63edda42
+2009-05-24T20:56:55.374122Z
+18609
 joshiausdemwald
 
 
@@ -203,50 +237,16 @@ joshiausdemwald
 
 4166
 
-PluginsfFilebaseTagTable.html
-file
-
-
-
-
-2009-05-23T15:36:16.000000Z
-fd77f01e3c52995912cc3054a9228aed
-2009-05-23T15:40:17.136064Z
-18590
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-6207
-
 PluginsfFilebaseDirectoryForm.html
 file
 
 
 
 
-2009-05-23T15:36:16.000000Z
-0a571216f5254062681ef254f04b7bce
-2009-05-23T15:40:17.136064Z
-18590
+2009-05-24T20:56:33.000000Z
+5c968ceb68820c30e15a99e89d4f6a36
+2009-05-24T20:56:55.374122Z
+18609
 joshiausdemwald
 
 
@@ -269,41 +269,7 @@ joshiausdemwald
 
 
 
-11110
-
-_lib---model---doctrine---PluginsfFilebaseTag.class.php.html
-file
-
-
-
-
-2009-05-23T15:36:16.000000Z
-6788b1fb5446cd2437724d63c5575931
-2009-05-23T15:40:17.136064Z
-18590
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4170
+9660
 
 PluginsfAbstractFileForm.html
 file
@@ -311,10 +277,10 @@ file
 
 
 
-2009-05-23T15:36:15.000000Z
-00c4d8aff1b82bd0b1687a5869831a4b
-2009-05-23T15:40:17.136064Z
-18590
+2009-05-24T20:56:32.000000Z
+8702ea6113e1b85e483fc0122f7cb0e5
+2009-05-24T20:56:55.374122Z
+18609
 joshiausdemwald
 
 
@@ -345,10 +311,10 @@ file
 
 
 
-2009-05-23T15:36:16.000000Z
-9b2681246f71f664746dc43692fb1f27
-2009-05-23T15:40:17.136064Z
-18590
+2009-05-24T20:56:33.000000Z
+1ea369d98df352fc3e0b433a6c95a8d4
+2009-05-24T20:56:55.374122Z
+18609
 joshiausdemwald
 
 
@@ -371,7 +337,7 @@ joshiausdemwald
 
 
 
-6203
+6204
 
 PluginsfAbstractFileFormFilter.html
 file
@@ -379,10 +345,10 @@ file
 
 
 
-2009-05-23T15:36:15.000000Z
-b1c2b093d57da653fc4909d413777f40
-2009-05-23T15:40:17.136064Z
-18590
+2009-05-24T20:56:32.000000Z
+afc8411a1c072f7b1d2bfac29c10339e
+2009-05-24T20:56:55.374122Z
+18609
 joshiausdemwald
 
 
@@ -413,10 +379,10 @@ file
 
 
 
-2009-05-23T15:36:16.000000Z
-eadfe0cf12be9d71a37735166b8098d7
-2009-05-23T15:40:17.136064Z
-18590
+2009-05-24T20:56:33.000000Z
+36b3a94c762c6126421c8ca75829f5b5
+2009-05-24T20:56:55.374122Z
+18609
 joshiausdemwald
 
 
@@ -439,7 +405,7 @@ joshiausdemwald
 
 
 
-12066
+11730
 
 _lib---filter---doctrine---PluginsfAbstractFileFormFilter.class.php.html
 file
@@ -447,10 +413,10 @@ file
 
 
 
-2009-05-23T15:36:15.000000Z
-3205fb3d6e0cee4b373cd19dc058268f
-2009-05-23T15:40:17.136064Z
-18590
+2009-05-24T20:56:32.000000Z
+d432c4789f0eab59547cd32400394660
+2009-05-24T20:56:55.374122Z
+18609
 joshiausdemwald
 
 
@@ -481,10 +447,10 @@ file
 
 
 
-2009-05-23T15:36:16.000000Z
-d2f3de13b5877a5d80f217db975c460f
-2009-05-23T15:40:17.136064Z
-18590
+2009-05-24T20:56:33.000000Z
+9213b926122ac5205416e023fbdf1ec1
+2009-05-24T20:56:55.374122Z
+18609
 joshiausdemwald
 
 
@@ -509,50 +475,16 @@ joshiausdemwald
 
 4194
 
-_lib---filter---doctrine---PluginsfFilebaseTagFormFilter.class.php.html
-file
-
-
-
-
-2009-05-23T15:36:16.000000Z
-0e349893d6325e0cdff7bb87460fdef2
-2009-05-23T15:40:17.136064Z
-18590
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4211
-
 PluginsfFilebaseFileFormFilter.html
 file
 
 
 
 
-2009-05-23T15:36:16.000000Z
-2218cd10095d8abb69f150dd1bbf59f9
-2009-05-23T15:40:17.136064Z
-18590
+2009-05-24T20:56:33.000000Z
+54d0350b5397ab6a014d6a86c043190d
+2009-05-24T20:56:55.374122Z
+18609
 joshiausdemwald
 
 
@@ -577,50 +509,16 @@ joshiausdemwald
 
 4258
 
-PluginsfFilebaseTag.html
-file
-
-
-
-
-2009-05-23T15:36:16.000000Z
-185917871924ceaa65fc548c83170683
-2009-05-23T15:40:17.136064Z
-18590
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4190
-
 _lib---filter---doctrine---PluginsfFilebaseFileFormFilter.class.php.html
 file
 
 
 
 
-2009-05-23T15:36:16.000000Z
-5c8750efeaa7fb99dfe7d8b52de1211c
-2009-05-23T15:40:17.136064Z
-18590
+2009-05-24T20:56:33.000000Z
+afd398e695130466cba67cbfd6ecc610
+2009-05-24T20:56:55.374122Z
+18609
 joshiausdemwald
 
 
@@ -651,10 +549,10 @@ file
 
 
 
-2009-05-23T15:36:15.000000Z
-73ffae43a155ac89e278a5e2f51ea216
-2009-05-23T15:40:17.136064Z
-18590
+2009-05-24T20:56:32.000000Z
+8a08bdc1ca561656dfd962b044a9b5e1
+2009-05-24T20:56:55.374122Z
+18609
 joshiausdemwald
 
 
@@ -679,84 +577,16 @@ joshiausdemwald
 
 4189
 
-sfFilebaseSynchronizeTask.html
-file
-
-
-
-
-2009-05-23T15:36:19.000000Z
-d1bb11b8238bf481978d1c5825258775
-2009-05-23T15:40:17.136064Z
-18590
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-7201
-
-_lib---form---doctrine---PluginsfFilebaseTagForm.class.php.html
-file
-
-
-
-
-2009-05-23T15:36:16.000000Z
-0a86eab0cabbc9f8777609ddf8125079
-2009-05-23T15:40:17.136064Z
-18590
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4185
-
 _lib---model---doctrine---PluginsfFilebaseDirectory.class.php.html
 file
 
 
 
 
-2009-05-23T15:36:16.000000Z
-4f05a7e357143f90cf590bfc447e939f
-2009-05-23T15:40:17.136064Z
-18590
+2009-05-24T20:56:33.000000Z
+39a3dc26fb7614a4bc55de8da41741e4
+2009-05-24T20:56:55.374122Z
+18609
 joshiausdemwald
 
 
@@ -787,10 +617,10 @@ file
 
 
 
-2009-05-23T15:36:16.000000Z
-c41cb0a8ae735ee5bc6fbb1d4e283e61
-2009-05-23T15:40:17.136064Z
-18590
+2009-05-24T20:56:33.000000Z
+aa0d605dd2eb3e0cb3107d2c9e0df0c9
+2009-05-24T20:56:55.374122Z
+18609
 joshiausdemwald
 
 
@@ -821,10 +651,10 @@ file
 
 
 
-2009-05-23T15:36:15.000000Z
-33a4af22432f2b576d6c311b0d5f65ff
-2009-05-23T15:40:17.136064Z
-18590
+2009-05-24T20:56:32.000000Z
+af3f01bd48eee78d04354c32ff256c17
+2009-05-24T20:56:55.374122Z
+18609
 joshiausdemwald
 
 
@@ -855,10 +685,10 @@ file
 
 
 
-2009-05-23T15:36:16.000000Z
-3780d3195409cc2ba3e942ea6fe98db8
-2009-05-23T15:40:17.136064Z
-18590
+2009-05-24T20:56:33.000000Z
+4eb93a7a5fb8706b4bc9a52d3f838c86
+2009-05-24T20:56:55.374122Z
+18609
 joshiausdemwald
 
 
@@ -889,10 +719,10 @@ file
 
 
 
-2009-05-23T15:36:16.000000Z
-0091e389bfffa060737e6797d4f5aac2
-2009-05-23T15:40:17.136064Z
-18590
+2009-05-24T20:56:33.000000Z
+9a87e8c590111a9df5d355141a586adf
+2009-05-24T20:56:55.374122Z
+18609
 joshiausdemwald
 
 
@@ -923,10 +753,10 @@ file
 
 
 
-2009-05-23T15:36:16.000000Z
-fe7442379758fae60d6e81d3ba78a874
-2009-05-23T15:40:17.136064Z
-18590
+2009-05-24T20:56:33.000000Z
+ab4101c1f77cd8b92ead53a53f444b7b
+2009-05-24T20:56:55.374122Z
+18609
 joshiausdemwald
 
 
@@ -957,10 +787,10 @@ file
 
 
 
-2009-05-23T15:36:16.000000Z
-2d8f43dd03ca2a574bd8aeade4851049
-2009-05-23T15:40:17.136064Z
-18590
+2009-05-24T20:56:33.000000Z
+233e49a1f643501be00675cded14b7e2
+2009-05-24T20:56:55.374122Z
+18609
 joshiausdemwald
 
 
@@ -991,10 +821,10 @@ file
 
 
 
-2009-05-23T15:36:15.000000Z
-4263f549491cca5aa4cbec57e93ec184
-2009-05-23T15:40:17.136064Z
-18590
+2009-05-24T20:56:33.000000Z
+57433f9539d2f87c7082fb0f21f0f277
+2009-05-24T20:56:55.374122Z
+18609
 joshiausdemwald
 
 
@@ -1019,16 +849,16 @@ joshiausdemwald
 
 4194
 
-PluginsfFilebaseTagForm.html
+_lib---task---sfFilebaseImportTask.class.php.html
 file
 
 
 
 
-2009-05-23T15:36:16.000000Z
-2b74c6be8a83b00eaf66cc48c81c12e1
-2009-05-23T15:40:17.136064Z
-18590
+2009-05-24T20:56:33.000000Z
+2933909b529da78b6b8d05ac71b25061
+2009-05-24T20:56:55.374122Z
+18609
 joshiausdemwald
 
 
@@ -1051,75 +881,7 @@ joshiausdemwald
 
 
 
-4212
-
-_lib---task---sfFilebaseSynchronizeTask.class.php.html
-file
-
-
-
-
-2009-05-23T15:36:19.000000Z
-6b1724fb89094a178ff1771f32a01c4b
-2009-05-23T15:40:17.136064Z
-18590
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4184
-
-_lib---model---doctrine---PluginsfFilebaseTagTable.class.php.html
-file
-
-
-
-
-2009-05-23T15:36:16.000000Z
-d41cca5914acceb80798ccb4bccf4561
-2009-05-23T15:40:17.136064Z
-18590
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4190
+4164
 
 _lib---filter---doctrine---PluginsfFilebaseDirectoryFormFilter.class.php.html
 file
@@ -1127,10 +889,10 @@ file
 
 
 
-2009-05-23T15:36:16.000000Z
-77d0591df3bf5ea1f8dbc9ee6864bbdb
-2009-05-23T15:40:17.136064Z
-18590
+2009-05-24T20:56:33.000000Z
+532900611cfacda2dc10e63e2c70d40b
+2009-05-24T20:56:55.374122Z
+18609
 joshiausdemwald
 
 
@@ -1161,10 +923,10 @@ file
 
 
 
-2009-05-23T15:36:16.000000Z
-bc29ad78b9f8a9c337b1cead4a5f2809
-2009-05-23T15:40:17.136064Z
-18590
+2009-05-24T20:56:33.000000Z
+828ca94f17cf98939d2e5c4744516d03
+2009-05-24T20:56:55.374122Z
+18609
 joshiausdemwald
 
 
@@ -1189,50 +951,16 @@ joshiausdemwald
 
 6127
 
-PluginsfFilebaseTagFormFilter.html
-file
-
-
-
-
-2009-05-23T15:36:16.000000Z
-c234d622c4a94c765768b99906477cf6
-2009-05-23T15:40:17.136064Z
-18590
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4252
-
 PluginsfAbstractFile.html
 file
 
 
 
 
-2009-05-23T15:36:15.000000Z
-bd5528cf1f3c6e1038ffb96095c50b15
-2009-05-23T15:40:17.136064Z
-18590
+2009-05-24T20:56:32.000000Z
+5e410746b5c5d7cdbc4ff4f295328a5b
+2009-05-24T20:56:55.374122Z
+18609
 joshiausdemwald
 
 
@@ -1255,5 +983,5 @@ joshiausdemwald
 
 
 
-10215
+10027
 

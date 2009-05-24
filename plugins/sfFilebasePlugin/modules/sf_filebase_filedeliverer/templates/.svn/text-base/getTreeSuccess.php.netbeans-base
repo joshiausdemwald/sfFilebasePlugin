@@ -20,7 +20,8 @@ foreach ($root->getNode()->getChildren() AS $entry)
       'id'            => $entry->getId(),
       'text'          => $entry->getFilename(),
       'allowChildren' => true,
-      'checked'       => false
+      //'checked'       => false,
+      'href'          => url_for('sf_filebase_directory_edit', array('id'=>$entry->getId()))
     );
   }
   else
@@ -30,9 +31,10 @@ foreach ($root->getNode()->getChildren() AS $entry)
       'text'          => $entry->getFilename(),
       'leaf'          => true,
       'allowChildren' => false,
-      'checked'       => false,
+      //'checked'       => false,
       'isTarget'      => false,
-      'allowDrop'     => false
+      'allowDrop'     => false,
+      'href'          => url_for('sf_filebase_file_edit', array('id'=>$entry->getId()))
     );
   }
 }

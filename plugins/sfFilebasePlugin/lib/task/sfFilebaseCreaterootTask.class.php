@@ -71,7 +71,7 @@ EOF;
     $databaseManager = new sfDatabaseManager($this->configuration);
     $connection = $databaseManager->getDatabase($options['connection'] ? $options['connection'] : null)->getConnection();
 
-    $root = Doctrine::getTable('sfFilebaseDirectory')->getRootNode($options['env'], $arguments['application']);
+    $root = Doctrine::getTable('sfFilebaseDirectory')->getRootNode($options['env'], $arguments['application'], null, true);
     $tree_object = Doctrine::getTable('sfFilebaseDirectory')->getTree();
    
     if($root->getRootId())

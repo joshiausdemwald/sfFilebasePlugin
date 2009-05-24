@@ -24,7 +24,6 @@ abstract class PluginsfFilebaseFileForm extends BasesfFilebaseFileForm
     unset($this->validatorSchema['rgt']);
     unset($this->validatorSchema['level']);
 
-    $this->widgetSchema['tags'] = new sfWidgetFormInput();
     $this->validatorSchema['tags'] = new sfValidatorAnd(array(
       new sfValidatorString(),
       new sfValidatorRegex(array('pattern'=>'#^[^, ;]([^, ;]+[,; ] ?)*?[^, ;]+$#'))
@@ -51,9 +50,11 @@ abstract class PluginsfFilebaseFileForm extends BasesfFilebaseFileForm
           new sfValidatorRegex(array('pattern'=>'#^[^\s\\\/]+$#i'))
         )
       );
-      $tag_string = $this->getObject()->getTagsAsString();
-      $this->widgetSchema['tags']->setDefault($tag_string);
-      $this->widgetSchema['directory']->setDefault($this->getObject()->getNode()->getParent()->getId());
+      
+      $p = $this->getObject()->getNode()->getParent();
+      $parent_id = $p instanceof sfFilebaseDirectory ? $p->getId() : 0;
+
+      $this->widgetSchema['directory']->setDefault($parent_id);
     }
 
     $this->validatorSchema->setPostValidator(
@@ -95,15 +96,14 @@ abstract class PluginsfFilebaseFileForm extends BasesfFilebaseFileForm
     return $values;
   }
 
-  /**
-   * Betray him in a very nasty way ...
-   * This is not a real column, but who cares...
-   *
-   * @param array $values
-   */
-  public function updateTagsColumn($tags)
+  public function processValues($values = null)
   {
-    $this->getObject()->setTags(sfFilebaseTagTable::splitTags($tags));
+    $values = parent::processValues($values);
+    if(isset($values['tags']))
+    {
+      $values['tags'] = $this->getObject()->cleanupTags($values['tags']);
+    }
+    return $values;
   }
 
   /**
@@ -126,8 +126,9 @@ abstract class PluginsfFilebaseFileForm extends BasesfFilebaseFileForm
   {
     $con === null && $this->getConnection();
 
-    $this->updateObject();
-
+    $object = $this->updateObject();
+    $object->save($con);
+    
     $destination_node = null;
     if($this->getValue('directory'))
     {

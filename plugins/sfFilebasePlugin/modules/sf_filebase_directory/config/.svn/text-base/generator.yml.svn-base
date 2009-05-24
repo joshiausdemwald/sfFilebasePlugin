@@ -31,10 +31,10 @@ generator:
         parent_directory_link:
           label: Parent directory
       list:
-        display: [filename, comment, tagsAsString]
+        display: [filename, title, comment, tagsFormatted]
       filter:
-        display: [filename, comment]
+        display: [filename, title, comment, tags]
       form:
-        display: [filename, comment, tags, directory]
+        display: [filename, directory, title, comment, tags]
       edit:    ~
       new:     ~

@@ -10,45 +10,19 @@
  * @license   MIT license
  * @copyright 2007-2009 Johannes Heinen <johannes.heinen@gmail.com>
  */
-abstract class PluginsfAbstractFile extends BasesfAbstractFile
+class PluginsfAbstractFile extends BasesfAbstractFile
 {
-  /**
-   * Returns the tags as a string representation.
-   * @param string $separator
-   * @return string $tag_string
-   */
-  public function getTagsAsString($separator = ', ')
+  public function cleanupTags($tags)
   {
-    $tags = array();
-    foreach($this->getTags() AS $tag)
-    {
-      $tags[] = $tag->getTag();
-    }
-    return implode($separator, $tags);
+    $tags_array = preg_split('#[,; ] ?#', $tags, null, PREG_SPLIT_NO_EMPTY);
+    return implode(' ', $tags_array);
   }
 
-  /**
-   * Sets the tags for this file.
-   *
-   * @param array $tags
-   */
-  public function setTags(array $tags)
+  public function getTagsFormatted($separator=', ')
   {
-    Doctrine_Query::create()->
-      from('sfFilebaseTag t')->
-      delete()->
-      where('t.sf_abstract_files_id='.$this->getId())->
-      execute();
-
-    foreach ($tags AS $tag)
-    {
-      $new_tag = new sfFilebaseTag();
-      $new_tag->setTag($tag);
-      $new_tag->setFile($this);
-      $this->tags[] = $new_tag;
-    }
+    return str_replace(' ', $separator, $this->getTags());
   }
-
+  
   public function __toString()
   {
     return (string)$this->getFilename();

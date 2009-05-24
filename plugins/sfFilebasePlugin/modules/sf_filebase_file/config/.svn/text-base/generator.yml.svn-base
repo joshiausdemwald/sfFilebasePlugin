@@ -31,11 +31,11 @@ generator:
         retrieveFiles:
           label: Properties
       list:
-        display: [~retrieveFiles, filename, comment, tagsAsString]
+        display: [~retrieveFiles, title, author, copyright, tagsFormatted]
       filter:
-        display: [filename, comment]
+        display: [filename, title, comment, author, copyright]
       form: ~
       edit:
-        display: [~retrieveFiles, filename, directory, comment, tags]
+        display: [~retrieveFiles, filename, directory, title, comment, author, copyright, tags]
       new:
-        display: [hash, directory, comment, tags]
+        display: [hash, directory, title, comment, author, copyright, tags]

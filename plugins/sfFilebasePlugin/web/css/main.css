@@ -327,94 +327,119 @@ tr,
 #Sf_Filebase_Overview,
 #Sf_Filebase_Overview ul
 {
-  display: block;
-  margin: 0;
-}
-
-#Sf_Filebase_Overview
-{
-  
-}
-
-#Sf_Filebase_Overview ul
-{
-  padding-left: 20px;
-  padding-bottom: 20px;
-}
-
-#Sf_Filebase_Overview li
-{
+  display: inline;
   margin: 0;
   padding: 0;
 }
 
 #Sf_Filebase_Overview li.file
 {
+  position: relative;
   float: left;
-  overflow: hidden;
-  padding: 0 10px 10px 0;
-}
-
-#Sf_Filebase_Overview li.directory div.contents
-{
-  display: block;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-  border-bottom: 1px #eee solid;
-}
-
-#Sf_Filebase_Overview li.file div.contents
-{
+  width: 64px;
+  height: 100px;
   background: #eee;
-  width: 140px;
-  height: 140px;
-  padding-bottom: 0;
+  border-right: 5px #fff solid;
+  border-bottom: 5px #fff solid;
 }
 
-#Sf_Filebase_Overview li span.file-title-directory,
-#Sf_Filebase_Overview li a.file-title-directory
+#Sf_Filebase_Overview li.file-parent
 {
-  font-size:16px;
-  color: #00ffff;
-  text-decoration: none;
+  float: none;
+  height: 64px;
 }
 
-#Sf_Filebase_Overview li a.file-title-directory:hover
+#Sf_Filebase_Overview li.file a
 {
-  background: #de3400 none;
+  width: 64px;
+  height: 100px;
+  display: block;
+}
+
+#Sf_Filebase_Overview li.file-parent a
+{
+  height: 64px;
+}
+
+#Sf_Filebase_Overview li.file a:hover
+{
+  background-color: #00ffff;
+}
+
+#Sf_Filebase_Overview li.file-parent a
+{
+  background: transparent url("../images/up.png") top left no-repeat;
+}
+
+#Sf_Filebase_Overview li.file-directory a
+{
+  background: transparent url("../images/folder.png") top left no-repeat;
+}
+
+#Sf_Filebase_Overview li.file-parent a span
+{
+  position: absolute;
+  left: -999px;
+  top: -999px;
+  height: 0;
+  line-height: 1px;
+  font-size: 0;
 }
 
 #Sf_Filebase_Overview li.file div.contents
 {
-  padding: 3px;
-  position:relative;
+  font-size: 10px;
 }
 
-#Sf_Filebase_Overview li.file div.contents div *
+#Sf_Filebase_Overview li.file div.contents a
 {
-  font-size: 9px;
+  text-decoration: none;
+  color: #333;
 }
 
-#Sf_Filebase_Overview li.file div.contents div * strong,
-#Sf_Filebase_Overview li.file div.contents div * a
+#Sf_Filebase_Overview li.file div.contents a span
+{
+  position: absolute;
+  bottom: 0px;
+  display: block;
+  padding: 5px;
+  overflow: hidden;
+  width: 54px;
+  z-index:100;
+}
+
+#Sf_Filebase_Overview li.file div.contents a:hover span
+{
+  background: #00ffff none;
+  width: auto;
+  z-index: 1000;
+}
+
+#Sf_Filebase_Overview li.file div.contents strong
 {
   background: #333;
   color: #00ffff;
 }
 
-#Sf_Filebase_Overview li.file div.contents div * a
+.filebase-breadcrumb
 {
+  padding: 0 0 20px 0;
+}
+
+.filebase-breadcrumb,
+.filebase-breadcrumb a
+{
+  font-size: 16px;
+  color: #00ffff;
   text-decoration: none;
 }
 
-#Sf_Filebase_Overview li.file div.contents div * a:hover
+.filebase-breadcrumb a
 {
-  background: #de3400 none;
+  font-weight: bold;
 }
 
-#Sf_Filebase_Overview li div img
+.filebase-breadcrumb a:hover
 {
-  position:absolute;
-  bottom: 0;
-  right: 0;
+  background: #de3400;
 }

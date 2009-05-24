@@ -12,5 +12,4 @@
  */
 class PluginsfAbstractFileTable extends Doctrine_Table
 {
-
 }

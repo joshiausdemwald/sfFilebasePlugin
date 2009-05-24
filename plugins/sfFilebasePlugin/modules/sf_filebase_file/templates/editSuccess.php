@@ -14,6 +14,8 @@
 <?php use_helper('I18N', 'Date') ?>
 <?php include_partial('sf_filebase_file/assets') ?>
 
+<?php include_component('sf_filebase_overview', 'breadcrumb', array('node'=>$sf_filebase_file));?>
+
 <div id="sf_admin_container">
   <h2><?php echo __('Edit Sf filebase file', array(), 'messages') ?></h2>
 

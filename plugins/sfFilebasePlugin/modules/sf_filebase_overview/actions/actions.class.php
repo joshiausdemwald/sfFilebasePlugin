@@ -18,9 +18,17 @@ class sf_filebase_overviewActions extends sfActions
   public function executeIndex(sfWebRequest $request)
   {
     $table = Doctrine::getTable('sfFilebaseDirectory');
-    $root = $table->getRootNode();
-    $tree_object = $table->getTree();
-    $this->tree = $tree_object->fetchTree(array('root_id'=>$root->getId()));
-    $this->root = $root;
+    $id = $request->getParameter('id', null);
+    $root = null;
+    if($id)
+    {
+      $root = $table->find($id);
+    }
+    else
+    {
+      $root = $table->getRootNode();
+    }
+    $this->forward404Unless($root instanceof sfFilebaseDirectory);
+    $this->parent = $root;
   }
 }

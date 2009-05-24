@@ -8,11 +8,14 @@
  * @property string $filename
  * @property string $hash
  * @property string $comment
+ * @property string $title
  * @property string $environment
  * @property string $application
+ * @property string $tags
  * @property string $type
+ * @property string $author
+ * @property string $copyright
  * @property sfFilebaseDirectory $rootNode
- * @property Doctrine_Collection $tags
  * 
  * @package    ##PACKAGE##
  * @subpackage ##SUBPACKAGE##
@@ -27,9 +30,13 @@ abstract class BasesfAbstractFile extends sfDoctrineRecord
         $this->hasColumn('filename', 'string', 255, array('type' => 'string', 'notnull' => true, 'length' => '255'));
         $this->hasColumn('hash', 'string', 255, array('type' => 'string', 'notnull' => true, 'length' => '255'));
         $this->hasColumn('comment', 'string', null, array('type' => 'string'));
+        $this->hasColumn('title', 'string', 255, array('type' => 'string', 'length' => '255'));
         $this->hasColumn('environment', 'string', 255, array('type' => 'string', 'length' => '255'));
         $this->hasColumn('application', 'string', 255, array('type' => 'string', 'length' => '255'));
+        $this->hasColumn('tags', 'string', 255, array('type' => 'string', 'length' => '255'));
         $this->hasColumn('type', 'string', 255, array('type' => 'string', 'length' => 255));
+        $this->hasColumn('author', 'string', 255, array('type' => 'string', 'length' => '255'));
+        $this->hasColumn('copyright', 'string', 255, array('type' => 'string', 'length' => '255'));
 
         $this->setSubClasses(array('sfFilebaseFile' => array('type' => '1'), 'sfFilebaseDirectory' => array('type' => '2')));
     }
@@ -40,9 +47,6 @@ abstract class BasesfAbstractFile extends sfDoctrineRecord
                                                                'foreign' => 'id',
                                                                'onDelete' => 'cascade',
                                                                'onUpdate' => 'cascade'));
-
-        $this->hasMany('sfFilebaseTag as tags', array('local' => 'id',
-                                                      'foreign' => 'sf_abstract_files_id'));
 
         $nestedset0 = new Doctrine_Template_NestedSet(array('hasManyRoots' => 'true,', 'rootColumnName' => 'root_id'));
         $this->actAs($nestedset0);

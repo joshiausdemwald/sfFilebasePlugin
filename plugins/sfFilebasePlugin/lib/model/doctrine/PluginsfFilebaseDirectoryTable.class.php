@@ -49,14 +49,17 @@ class PluginsfFilebaseDirectoryTable extends sfAbstractFileTable
    * @param Doctrine_Connection $conn
    * @return sfFilebaseDirectory $d
    */
-  public function getRootNode($environment = null, $application = null, $conn = null)
+  public function getRootNode($environment = null, $application = null, $conn = null, $silent=false)
   {
     $app = $application === null ? sfConfig::get('sf_app') : $application;
     $env = $environment === null ? sfConfig::get('sf_environment') : $environment;
-    return Doctrine_Query::create($conn)->
+    $root  = Doctrine_Query::create($conn)->
            select('*')->
            from('sfFilebaseDirectory d')->
            where('d.environment=? AND d.application = ? AND d.lft=1')->
            execute(array($env, $app))->get(0);
+    if($root->isNew() && !$silent)
+      throw new Exception('Filebase was not initialized yet. Use symfony sfFilebase:create-root task for doing so.');
+    return $root;
   }
 }

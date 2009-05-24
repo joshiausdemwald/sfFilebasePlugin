@@ -27,6 +27,10 @@ sf_filebase_file:
     column:               id
     with_wildcard_routes: true
 
+sf_filebase_overview:
+  url: sf_filebase_overview/:id
+  param: { module: sf_filebase_overview, action: index, id: null }
+
 sf_filebase_move_file:
   url: sf_filebase_move_file
   param: { module:  sf_filebase_filedeliverer, action: moveFile }

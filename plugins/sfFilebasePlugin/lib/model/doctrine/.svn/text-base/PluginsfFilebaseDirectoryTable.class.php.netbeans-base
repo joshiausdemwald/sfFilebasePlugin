@@ -14,8 +14,10 @@ class PluginsfFilebaseDirectoryTable extends sfAbstractFileTable
 {
   public static function getChoices()
   {
+    $table = Doctrine::getTable('sfFilebaseDirectory');
+    $root = $table->getRootNode();
     $tree_object = Doctrine::getTable('sfFilebaseDirectory')->getTree();
-    $tree = $tree_object->fetchTree();
+    $tree = $tree_object->fetchTree(array('root_id'=>$root->getId()));
     if(!$tree)
     {
       $root = new sfFilebaseDirectory();

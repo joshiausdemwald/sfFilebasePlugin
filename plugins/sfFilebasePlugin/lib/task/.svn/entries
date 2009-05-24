@@ -35,14 +35,14 @@ svn:special svn:externals svn:needs-lock
 
 sfFilebaseCreaterootTask.class.php
 file
+18608
 
 
 
-
-2009-05-23T15:35:44.000000Z
-c8ae18387c5d4a7387e00e6d4575a89f
-2009-05-23T15:40:17.136064Z
-18590
+2009-05-24T16:10:04.000000Z
+9ffb7b6ee14b205f9f52afc9891a4801
+2009-05-24T20:55:56.962697Z
+18608
 joshiausdemwald
 
 
@@ -65,19 +65,45 @@ joshiausdemwald
 
 
 
-3814
+3826
+
+sfFilebaseImportTask.class.php
+file
+18608
+
+
+
+2009-05-24T16:13:31.000000Z
+74999d2e773ba1f87ebbcd02d3d73739
+2009-05-24T20:55:56.962697Z
+18608
+joshiausdemwald
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5497
 
 sfFilebaseSynchronizeTask.class.php
 file
-
-
-
-
-2009-05-23T15:35:48.000000Z
-3691d947ba115b08a1b3c6b76bf6c460
-2009-05-23T15:40:17.136064Z
-18590
-joshiausdemwald
+18608
 
 
 
@@ -97,7 +123,5 @@ joshiausdemwald
 
 
 
-
-
-5524
+deleted
 

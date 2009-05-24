@@ -48,21 +48,9 @@
 <ul>
 <li><a href="de-optimusprime-sfFilebasePlugin-adminArea/PluginsfFilebaseFileFormFilter.html">PluginsfFilebaseFileFormFilter</a></li></ul>
 
-<h2>Root class BasesfFilebaseTag</h2>
-<ul>
-<li><a href="de-optimusprime-sfFilebasePlugin-adminArea/PluginsfFilebaseTag.html">PluginsfFilebaseTag</a></li></ul>
-
-<h2>Root class BasesfFilebaseTagForm</h2>
-<ul>
-<li><a href="de-optimusprime-sfFilebasePlugin-adminArea/PluginsfFilebaseTagForm.html">PluginsfFilebaseTagForm</a></li></ul>
-
-<h2>Root class BasesfFilebaseTagFormFilter</h2>
-<ul>
-<li><a href="de-optimusprime-sfFilebasePlugin-adminArea/PluginsfFilebaseTagFormFilter.html">PluginsfFilebaseTagFormFilter</a></li></ul>
-
 <h2>Root class Doctrine_Table</h2>
 <ul>
-<li><a href="de-optimusprime-sfFilebasePlugin-adminArea/PluginsfAbstractFileTable.html">PluginsfAbstractFileTable</a></li><li><a href="de-optimusprime-sfFilebasePlugin-adminArea/PluginsfFilebaseFileTable.html">PluginsfFilebaseFileTable</a></li><li><a href="de-optimusprime-sfFilebasePlugin-adminArea/PluginsfFilebaseTagTable.html">PluginsfFilebaseTagTable</a></li></ul>
+<li><a href="de-optimusprime-sfFilebasePlugin-adminArea/PluginsfAbstractFileTable.html">PluginsfAbstractFileTable</a></li><li><a href="de-optimusprime-sfFilebasePlugin-adminArea/PluginsfFilebaseFileTable.html">PluginsfFilebaseFileTable</a></li></ul>
 
 <h2>Root class sfAbstractFileTable</h2>
 <ul>
@@ -70,10 +58,10 @@
 
 <h2>Root class sfBaseTask</h2>
 <ul>
-<li><a href="de-optimusprime-sfFilebasePlugin-adminArea/sfFilebaseCreaterootTask.html">sfFilebaseCreaterootTask</a></li><li><a href="de-optimusprime-sfFilebasePlugin-adminArea/sfFilebaseSynchronizeTask.html">sfFilebaseSynchronizeTask</a></li></ul>
+<li><a href="de-optimusprime-sfFilebasePlugin-adminArea/sfFilebaseCreaterootTask.html">sfFilebaseCreaterootTask</a></li><li><a href="de-optimusprime-sfFilebasePlugin-adminArea/sfFilebaseImportTask.html">sfFilebaseImportTask</a></li></ul>
 
 	<p class="notes" id="credit">
-		Documentation generated on Sat, 23 May 2009 17:36:15 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Sun, 24 May 2009 22:56:32 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</body>
 </html>

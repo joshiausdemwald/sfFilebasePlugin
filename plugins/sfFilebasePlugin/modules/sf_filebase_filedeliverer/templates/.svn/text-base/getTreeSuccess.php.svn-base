@@ -21,7 +21,7 @@ foreach ($root->getNode()->getChildren() AS $entry)
       'text'          => $entry->getFilename(),
       'allowChildren' => true,
       //'checked'       => false,
-      'href'          => url_for('sf_filebase_directory_edit', array('id'=>$entry->getId()))
+      'href'          => url_for('sf_filebase_overview', array('id'=>$entry->getId()))
     );
   }
   else

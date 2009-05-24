@@ -1,0 +1,21 @@
+dev:
+  doctrine:
+    param:
+      classname:  DebugPDO
+
+test:
+  doctrine:
+    param:
+      classname:  DebugPDO
+
+all:
+  doctrine:
+    class:        sfDoctrineDatabase
+    param:
+      classname:  PropelPDO
+      dsn:        mysql:dbname=sf_filebase_plugin;host=localhost
+      username:   filebase
+      password:   
+      encoding:   utf8
+      persistent: true
+      pooling:    true

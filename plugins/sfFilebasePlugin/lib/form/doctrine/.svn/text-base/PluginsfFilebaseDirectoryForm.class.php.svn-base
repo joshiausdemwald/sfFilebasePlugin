@@ -27,7 +27,6 @@ abstract class PluginsfFilebaseDirectoryForm extends BasesfFilebaseDirectoryForm
     unset($this->validatorSchema['rgt']);
     unset($this->validatorSchema['level']);
     
-    $this->widgetSchema['tags'] = new sfWidgetFormInput();
     $this->validatorSchema['tags'] = new sfValidatorAnd(array(
       new sfValidatorString(),
       new sfValidatorRegex(array('pattern'=>'#^[^, ;]([^, ;]+[,; ] ?)*?[^, ;]+$#'))
@@ -47,9 +46,6 @@ abstract class PluginsfFilebaseDirectoryForm extends BasesfFilebaseDirectoryForm
 
     if(!$this->isNew())
     {
-      $tag_string = $this->getObject()->getTagsAsString();
-      $this->widgetSchema['tags']->setDefault($tag_string);
-
       $p = $this->getObject()->getNode()->getParent();
       if($p)
       {
@@ -100,11 +96,14 @@ abstract class PluginsfFilebaseDirectoryForm extends BasesfFilebaseDirectoryForm
 
   public function processValues($values = null)
   {
+    $values = parent::processValues($values);
+
+    $values['tags'] = $this->getObject()->cleanupTags($values['tags']);
     if($this->isNew())
     {
       $values['hash'] = $this->getObject()->generatehashFilename();
     }
-    return parent::processValues($values);
+    return $values;
   }
 
   protected function doSave($con = null)
@@ -133,16 +132,5 @@ abstract class PluginsfFilebaseDirectoryForm extends BasesfFilebaseDirectoryForm
 
     // embedded forms
     $this->saveEmbeddedForms($con);
-  }
-
-  /**
-   * Betray him in a very nasty way ...
-   * This is not a real column, but who cares...
-   *
-   * @param array $values
-   */
-  public function updateTagsColumn($tags)
-  {
-    $this->getObject()->setTags(sfFilebaseTagTable::splitTags($tags));
   }
 }

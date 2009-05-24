@@ -13,7 +13,9 @@
 ?>
 <?php use_helper('I18N', 'Date') ?>
 <?php include_partial('sf_filebase_directory/assets') ?>
+<?php include_component('sf_filebase_overview', 'breadcrumb', array('node'=>$sf_filebase_directory));?>
 <div id="sf_admin_container">
+  
   <h2><?php echo __('Edit Sf filebase directory', array(), 'messages') ?></h2>
 
   <?php include_partial('sf_filebase_directory/flashes') ?>

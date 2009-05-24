@@ -3,12 +3,6 @@ svn:wc:ra_dav:version-url
 V 59
 /!svn/ver/18526/plugins/sfFilebasePlugin/lib/model/doctrine
 END
-PluginsfFilebaseTagTable.class.php
-K 25
-svn:wc:ra_dav:version-url
-V 94
-/!svn/ver/18463/plugins/sfFilebasePlugin/lib/model/doctrine/PluginsfFilebaseTagTable.class.php
-END
 PluginsfFilebaseDirectory.class.php
 K 25
 svn:wc:ra_dav:version-url
@@ -25,19 +19,13 @@ PluginsfAbstractFile.class.php
 K 25
 svn:wc:ra_dav:version-url
 V 90
-/!svn/ver/18589/plugins/sfFilebasePlugin/lib/model/doctrine/PluginsfAbstractFile.class.php
-END
-PluginsfFilebaseTag.class.php
-K 25
-svn:wc:ra_dav:version-url
-V 89
-/!svn/ver/18463/plugins/sfFilebasePlugin/lib/model/doctrine/PluginsfFilebaseTag.class.php
+/!svn/ver/18608/plugins/sfFilebasePlugin/lib/model/doctrine/PluginsfAbstractFile.class.php
 END
 PluginsfFilebaseDirectoryTable.class.php
 K 25
 svn:wc:ra_dav:version-url
 V 100
-/!svn/ver/18594/plugins/sfFilebasePlugin/lib/model/doctrine/PluginsfFilebaseDirectoryTable.class.php
+/!svn/ver/18608/plugins/sfFilebasePlugin/lib/model/doctrine/PluginsfFilebaseDirectoryTable.class.php
 END
 PluginsfFilebaseFile.class.php
 K 25
