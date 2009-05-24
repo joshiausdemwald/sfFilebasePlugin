@@ -33,9 +33,6 @@ ee427ae8-e902-0410-961c-c3ed070cd9f9
 
 0
 
-helper
-dir
-
 sfFilebasePluginWebRequest.php
 file
 
@@ -70,73 +67,8 @@ joshiausdemwald
 
 1435
 
-sfFilebasePluginRecursiveIteratorIterator.php
-file
-
-
-
-
-2009-05-19T10:47:57.000000Z
-95cb237387f1d1785f63eaa7d9bf016e
-2009-05-19T11:01:14.377410Z
-18453
-joshiausdemwald
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1086
-
-sfFilebasePluginFileExif.php
-file
-
-
-
-
-2009-05-13T15:57:59.000000Z
-8ebd4eca7204f344f8a9cd262263ebe6
-2009-05-13T16:04:25.955815Z
-18227
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1035
+helper
+dir
 
 sfFilebasePluginGfxEditor.php
 file
@@ -172,8 +104,73 @@ joshiausdemwald
 
 11968
 
-filter
-dir
+sfFilebasePluginFileExif.php
+file
+
+
+
+
+2009-05-13T15:57:59.000000Z
+8ebd4eca7204f344f8a9cd262263ebe6
+2009-05-13T16:04:25.955815Z
+18227
+joshiausdemwald
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1035
+
+sfFilebasePluginRecursiveIteratorIterator.php
+file
+
+
+
+
+2009-05-19T10:47:57.000000Z
+95cb237387f1d1785f63eaa7d9bf016e
+2009-05-19T11:01:14.377410Z
+18453
+joshiausdemwald
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1086
 
 validator
 dir
@@ -198,16 +195,19 @@ dir
 http://svn.symfony-project.com/plugins/sfFilebasePlugin/lib/Validator
 18226
 
+filter
+dir
+
 sfFilebasePluginUploadedFile.php
 file
+18617
 
 
 
-
-2009-05-17T17:29:13.000000Z
-1f47687cf8d23792c7c4a6bdf074ddcd
-2009-05-17T18:01:38.834107Z
-18392
+2009-05-24T22:39:49.000000Z
+270363b0b52881e4b2c9333e82f8e472
+2009-05-24T23:44:56.704860Z
+18617
 joshiausdemwald
 
 
@@ -230,7 +230,7 @@ joshiausdemwald
 
 
 
-6794
+6809
 
 sfFilebasePluginException.php
 file
@@ -268,14 +268,14 @@ has-props
 
 sfFilebasePluginDirectory.php
 file
-18589
+18617
 
 
 
-2009-05-23T13:14:34.000000Z
-3ca2bf20722966d60103fe04b940fd83
-2009-05-23T15:35:12.463790Z
-18589
+2009-05-24T23:30:16.000000Z
+a4374a4d2d3df7bae30df5b7e1bc6e0f
+2009-05-24T23:44:56.704860Z
+18617
 joshiausdemwald
 has-props
 
@@ -298,41 +298,7 @@ has-props
 
 
 
-6087
-
-sfFilebasePluginFileObject.php
-file
-
-
-
-
-2009-05-13T15:57:54.000000Z
-ccd822cfd1674fb3b711694732588c2d
-2009-05-13T16:04:25.955815Z
-18227
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-5833
+5612
 
 sfFilebasePluginRecursiveDirectoryIterator.php
 file
@@ -368,8 +334,39 @@ has-props
 
 2392
 
-model
-dir
+sfFilebasePluginFileObject.php
+file
+
+
+
+
+2009-05-13T15:57:54.000000Z
+ccd822cfd1674fb3b711694732588c2d
+2009-05-13T16:04:25.955815Z
+18227
+joshiausdemwald
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5833
 
 sfFilebasePluginGfxEditorAdapterGD.php
 file
@@ -404,6 +401,9 @@ joshiausdemwald
 
 
 8740
+
+model
+dir
 
 task
 dir
@@ -549,14 +549,14 @@ has-props
 
 sfFilebasePlugin.php
 file
-18594
+18617
 
 
 
-2009-05-23T18:41:41.000000Z
-26abfb2a4157a6a0e9a1ae81184f4dc7
-2009-05-23T18:53:39.341669Z
-18594
+2009-05-24T23:32:07.000000Z
+0f04a043fa4dfabd4c224b8726624c4e
+2009-05-24T23:44:56.704860Z
+18617
 joshiausdemwald
 
 
@@ -579,7 +579,7 @@ joshiausdemwald
 
 
 
-33655
+31808
 
 sfFilebasePluginGfxEditorAdapterIMagick.php
 file

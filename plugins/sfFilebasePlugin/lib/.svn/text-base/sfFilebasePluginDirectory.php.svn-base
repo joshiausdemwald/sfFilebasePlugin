@@ -32,33 +32,9 @@ class sfFilebasePluginDirectory extends sfFilebasePluginFile implements Iterator
     return $this->filebase->deleteDirectory($this, $ignore_contents);
   }
 
-  /**
-   * Changes the access permissions of a sfFilebasePluginDirectory,
-   * including all sub-files and directories.
-   *
-   * @param integer
-   * @throws sfFilebasePluginException
-   * @return sfFilebasePluginDirectory $file
-   */
-  public function chmodRecursive($perms = 0755)
-  {
-    foreach($this AS $file)
-    {
-      if($file->isDir())
-      {
-        $file->chmodRecursive($perms);
-      }
-      else
-      {
-        $file->chmod($perms);
-      }
-    }
-    return parent::chmod($perms);
-  }
-
   public function chmod($perms = 0755, $recursive = true)
   {
-    parent::chmod($perms);
+    $chmod = parent::chmod($perms);
     if($recursive)
     {
       foreach($this AS $child)
@@ -66,6 +42,7 @@ class sfFilebasePluginDirectory extends sfFilebasePluginFile implements Iterator
         $child->chmod($perms, true);
       }
     }
+    return $chmod;
   }
 
   /**

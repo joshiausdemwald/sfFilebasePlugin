@@ -56,6 +56,18 @@ class sfFilebasePluginDirectory extends sfFilebasePluginFile implements Iterator
     return parent::chmod($perms);
   }
 
+  public function chmod($perms = 0755, $recursive = true)
+  {
+    parent::chmod($perms);
+    if($recursive)
+    {
+      foreach($this AS $child)
+      {
+        $child->chmod($perms, true);
+      }
+    }
+  }
+
   /**
    * Wraps a sfFilebasePluginDirectory around the return
    * value of sfFilebasePluginFile::rename() to handle

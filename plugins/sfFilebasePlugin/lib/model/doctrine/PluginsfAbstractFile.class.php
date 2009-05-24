@@ -39,12 +39,12 @@ class PluginsfAbstractFile extends BasesfAbstractFile
     return str_repeat('&nbsp;', $this->getLevel()) . $this->getFilename();
   }
 
-  public function generatehashFilename($file = null)
+  public function generateHashFilename($file = null)
   {
     if($file === null)
     {
       return md5(uniqid(rand(), true));
     }
-    return md5(uniqid(rand(), true)) . $file->getExtension();
+    return md5(uniqid(rand(), true)) . strtolower($file->getExtension());
   }
 }

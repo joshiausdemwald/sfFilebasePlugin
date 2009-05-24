@@ -44,12 +44,8 @@ abstract class PluginsfFilebaseFileForm extends BasesfFilebaseFileForm
     {
       unset($this->widgetSchema['hash']);
       unset($this->validatorSchema['hash']);
-      $this->validatorSchema['filename'] = new sfValidatorAnd(
-      array (
-          new sfValidatorString(),
-          new sfValidatorRegex(array('pattern'=>'#^[^\s\\\/]+$#i'))
-        )
-      );
+      $this->validatorSchema['filename'] = new sfValidatorString();
+        
       
       $p = $this->getObject()->getNode()->getParent();
       $parent_id = $p instanceof sfFilebaseDirectory ? $p->getId() : 0;
@@ -127,7 +123,6 @@ abstract class PluginsfFilebaseFileForm extends BasesfFilebaseFileForm
     $con === null && $this->getConnection();
 
     $object = $this->updateObject();
-    $object->save($con);
     
     $destination_node = null;
     if($this->getValue('directory'))

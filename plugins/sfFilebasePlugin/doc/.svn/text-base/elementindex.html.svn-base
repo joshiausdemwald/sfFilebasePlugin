@@ -133,13 +133,6 @@
 							<div class="index-item-description">Changes the access permissions of a sfFilebasePluginFile</div>
 					</dd>
 			<dt class="field">
-						<span class="method-title">chmodRecursive</span>
-					</dt>
-		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginDirectory.html#methodchmodRecursive">sfFilebasePluginDirectory::chmodRecursive()</a> in sfFilebasePluginDirectory.php</div>
-							<div class="index-item-description">Changes the access permissions of a sfFilebasePluginDirectory,  including all sub-files and directories.</div>
-					</dd>
-			<dt class="field">
 						<span class="method-title">clean</span>
 					</dt>
 		<dd class="index-item-body">
@@ -506,10 +499,10 @@
 							<div class="index-item-description">Reference to editor.</div>
 					</dd>
 			<dt class="field">
-						<span class="method-title">generatehashFilename</span>
+						<span class="method-title">generateHashFilename</span>
 					</dt>
 		<dd class="index-item-body">
-			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin-adminArea/PluginsfAbstractFile.html#methodgeneratehashFilename">PluginsfAbstractFile::generatehashFilename()</a> in PluginsfAbstractFile.class.php</div>
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin-adminArea/PluginsfAbstractFile.html#methodgenerateHashFilename">PluginsfAbstractFile::generateHashFilename()</a> in PluginsfAbstractFile.class.php</div>
 					</dd>
 			<dt class="field">
 						<span class="method-title">getAbsolutePathFromWebroot</span>

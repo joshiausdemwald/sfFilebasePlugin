@@ -10,7 +10,7 @@
     <email>johannes.heinen@gmail.com</email>
     <active>yes</active>
   </lead>
-  <date>2009-05-24</date>
+  <date>2009-05-25</date>
   <version>
     <release>0.7.7</release>
     <api>0.7.0</api>
@@ -510,8 +510,16 @@
         <api>stable</api>
       </stability>
       <license>MIT license</license>
-      <date>2009-05-24</date>
+      <date>2009-05-25</date>
       <notes>
+      * Fixed  **various** bugs in core filebase. So:
+          * Directories and files can now be moved correctly be analyzing
+            move/copy destination
+          * chmod on directory now returns instance of sfFilebaseDirectory
+          * Uploaded files are now saved under the correct filename given
+      * minor improvements
+          * files can now be stored under varous file names with spaces and
+            special chars
       * PluginsfAbstractFile not longer declared abstract, this behaviour
         throws an exception in the symfony model generator.
       * Tags are now stored in the same relation for more easy filtering.
