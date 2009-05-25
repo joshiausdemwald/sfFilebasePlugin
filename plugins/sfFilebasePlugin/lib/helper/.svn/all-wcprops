@@ -9,3 +9,9 @@ svn:wc:ra_dav:version-url
 V 78
 /!svn/ver/18578/plugins/sfFilebasePlugin/lib/helper/sfFilebasePluginHelper.php
 END
+tagcloudHelper.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/18625/plugins/sfFilebasePlugin/lib/helper/tagcloudHelper.php
+END

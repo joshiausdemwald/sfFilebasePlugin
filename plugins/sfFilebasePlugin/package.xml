@@ -12,7 +12,7 @@
   </lead>
   <date>2009-05-25</date>
   <version>
-    <release>0.7.7</release>
+    <release>0.7.8</release>
     <api>0.7.0</api>
   </version>
   <stability>
@@ -48,6 +48,7 @@
       <file role="data" name="lib/form/doctrine/PluginsfFilebaseFileForm.class.php" />
       <file role="data" name="lib/sfFilebasePluginGfxEditorAdapterGD.php" />
       <file role="data" name="lib/sfFilebasePluginException.php" />
+      <file role="data" name="lib/helper/tagcloudHelper.php" />
       <file role="data" name="lib/helper/sfFilebasePluginHelper.php" />
       <file role="data" name="lib/task/sfFilebaseCreaterootTask.class.php" />
       <file role="data" name="lib/task/sfFilebaseImportTask.class.php" />
@@ -82,6 +83,7 @@
       <file role="data" name="modules/sf_filebase_overview/actions/actions.class.php" />
       <file role="data" name="modules/sf_filebase_overview/templates/indexSuccess.php" />
       <file role="data" name="modules/sf_filebase_overview/templates/_breadcrumb.php" />
+      <file role="data" name="modules/sf_filebase_overview/templates/_tagcloud.php" />
       <file role="data" name="modules/sf_filebase_directory/lib/sf_filebase_directoryGeneratorConfiguration.class.php" />
       <file role="data" name="modules/sf_filebase_directory/lib/sf_filebase_directoryGeneratorHelper.class.php" />
       <file role="data" name="modules/sf_filebase_directory/config/generator.yml" />
@@ -467,6 +469,8 @@
       <file role="data" name="web/js/vendor/ext/resources/css/reset-min.css" />
       <file role="data" name="web/js/vendor/ext/resources/css/xtheme-blue.css" />
       <file role="data" name="web/css/main.css" />
+      <file role="data" name="web/css/cloud.css" />
+
 
       <file role="data" name="README" />
       <file role="data" name="LICENSE" />
@@ -500,6 +504,21 @@
   <phprelease>
   </phprelease>
   <changelog>
+    <release>
+      <version>
+        <release>0.7.8</release>
+        <api>0.7.0</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-05-25</date>
+      <notes>
+      * Added tag cloud support to admin area
+      </notes>
+    </release>
     <release>
       <version>
         <release>0.7.7</release>

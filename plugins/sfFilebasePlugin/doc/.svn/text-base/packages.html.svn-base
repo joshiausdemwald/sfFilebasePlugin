@@ -22,6 +22,7 @@
 																			<span class="field">Packages</span> 
 										<select class="package-selector" onchange="window.parent.left_bottom.location=this[selectedIndex].value">
 																					<option value="li_de-optimusprime-sfFilebasePlugin.html">de-optimusprime-sfFilebasePlugin</option>
+																					<option value="li_de-optimusprime-sfFilebaseplugin-adminArea.html">de-optimusprime-sfFilebaseplugin-adminArea</option>
 																					<option value="li_de-optimusprime-sfFilebasePlugin-adminArea.html">de-optimusprime-sfFilebasePlugin-adminArea</option>
 																				</select>
 																	</td>

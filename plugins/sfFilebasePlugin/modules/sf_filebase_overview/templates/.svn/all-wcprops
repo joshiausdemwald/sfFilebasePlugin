@@ -1,17 +1,23 @@
 K 25
 svn:wc:ra_dav:version-url
 V 79
-/!svn/ver/18594/plugins/sfFilebasePlugin/modules/sf_filebase_overview/templates
+/!svn/ver/18608/plugins/sfFilebasePlugin/modules/sf_filebase_overview/templates
 END
 indexSuccess.php
 K 25
 svn:wc:ra_dav:version-url
 V 96
-/!svn/ver/18608/plugins/sfFilebasePlugin/modules/sf_filebase_overview/templates/indexSuccess.php
+/!svn/ver/18625/plugins/sfFilebasePlugin/modules/sf_filebase_overview/templates/indexSuccess.php
+END
+_tagcloud.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/18625/plugins/sfFilebasePlugin/modules/sf_filebase_overview/templates/_tagcloud.php
 END
 _breadcrumb.php
 K 25
 svn:wc:ra_dav:version-url
 V 95
-/!svn/ver/18608/plugins/sfFilebasePlugin/modules/sf_filebase_overview/templates/_breadcrumb.php
+/!svn/ver/18625/plugins/sfFilebasePlugin/modules/sf_filebase_overview/templates/_breadcrumb.php
 END

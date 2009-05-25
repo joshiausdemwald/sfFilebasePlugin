@@ -386,7 +386,7 @@
 		<div class="info-box-body">
 			
 <a name="var$filebase" id="$filebase"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="var-header">
 		<span class="var-title">
@@ -408,7 +408,7 @@
 
 </div>
 <a name="var$filebaseFileObject" id="$filebaseFileObject"><!-- --></A>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div class="var-header">
 		<span class="var-title">
@@ -446,7 +446,7 @@
 		<div class="info-box-body">
 			<A NAME='method_detail'></A>
 <a name="method__construct" id="__construct"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">Constructor __construct</span> (line <span class="line-number">43</span>)
@@ -498,7 +498,7 @@
 				</ul>
 	</div>
 <a name="methodchmod" id="chmod"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">chmod</span> (line <span class="line-number">276</span>)
@@ -535,7 +535,7 @@
 				</ul>
 	</div>
 <a name="methodcopy" id="copy"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">copy</span> (line <span class="line-number">302</span>)
@@ -578,7 +578,7 @@
 				</ul>
 	</div>
 <a name="methoddelete" id="delete"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">delete</span> (line <span class="line-number">264</span>)
@@ -612,7 +612,7 @@
 				</ul>
 	</div>
 <a name="methodexistsAndIsWritable" id="existsAndIsWritable"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">existsAndIsWritable</span> (line <span class="line-number">244</span>)
@@ -636,7 +636,7 @@
 			
 	</div>
 <a name="methodfileExists" id="fileExists"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">fileExists</span> (line <span class="line-number">73</span>)
@@ -660,7 +660,7 @@
 			
 	</div>
 <a name="methodgetAbsolutePathFromWebroot" id="getAbsolutePathFromWebroot"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">getAbsolutePathFromWebroot</span> (line <span class="line-number">339</span>)
@@ -685,7 +685,7 @@
 			
 	</div>
 <a name="methodgetATime" id="getATime"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">getATime</span> (line <span class="line-number">188</span>)
@@ -718,7 +718,7 @@
 			
 	</div>
 <a name="methodgetContentType" id="getContentType"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">getContentType</span> (line <span class="line-number">201</span>)
@@ -742,7 +742,7 @@
 			
 	</div>
 <a name="methodgetCTime" id="getCTime"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">getCTime</span> (line <span class="line-number">174</span>)
@@ -775,7 +775,7 @@
 			
 	</div>
 <a name="methodgetExtension" id="getExtension"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">getExtension</span> (line <span class="line-number">58</span>)
@@ -800,7 +800,7 @@
 			
 	</div>
 <a name="methodgetFilebase" id="getFilebase"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">getFilebase</span> (line <span class="line-number">224</span>)
@@ -824,7 +824,7 @@
 			
 	</div>
 <a name="methodgetFilebaseFile" id="getFilebaseFile"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">getFilebaseFile</span> (line <span class="line-number">382</span>)
@@ -858,7 +858,7 @@
 			
 	</div>
 <a name="methodgetHash" id="getHash"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">getHash</span> (line <span class="line-number">253</span>)
@@ -882,7 +882,7 @@
 			
 	</div>
 <a name="methodgetHumanReadableFileType" id="getHumanReadableFileType"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">getHumanReadableFileType</span> (line <span class="line-number">448</span>)
@@ -915,7 +915,7 @@
 				</ul>
 	</div>
 <a name="methodgetMimeType" id="getMimeType"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">getMimeType</span> (line <span class="line-number">214</span>)
@@ -947,7 +947,7 @@
 			
 	</div>
 <a name="methodgetMTime" id="getMTime"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">getMTime</span> (line <span class="line-number">181</span>)
@@ -980,7 +980,7 @@
 			
 	</div>
 <a name="methodgetNestingLevel" id="getNestingLevel"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">getNestingLevel</span> (line <span class="line-number">459</span>)
@@ -1004,7 +1004,7 @@
 			
 	</div>
 <a name="methodgetRelativePathFromFilebaseDirectory" id="getRelativePathFromFilebaseDirectory"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">getRelativePathFromFilebaseDirectory</span> (line <span class="line-number">327</span>)
@@ -1029,7 +1029,7 @@
 			
 	</div>
 <a name="methodgetSize" id="getSize"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">getSize</span> (line <span class="line-number">162</span>)
@@ -1072,7 +1072,7 @@
 				</ul>
 	</div>
 <a name="methodisHidden" id="isHidden"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">isHidden</span> (line <span class="line-number">86</span>)
@@ -1098,7 +1098,7 @@
 			
 	</div>
 <a name="methodisImage" id="isImage"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">isImage</span> (line <span class="line-number">126</span>)
@@ -1126,7 +1126,7 @@
 			
 	</div>
 <a name="methodisLink" id="isLink"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">isLink</span> (line <span class="line-number">111</span>)
@@ -1155,7 +1155,7 @@
 			
 	</div>
 <a name="methodisRWritable" id="isRWritable"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">isRWritable</span> (line <span class="line-number">234</span>)
@@ -1179,7 +1179,7 @@
 			
 	</div>
 <a name="methodisWebImage" id="isWebImage"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">isWebImage</span> (line <span class="line-number">141</span>)
@@ -1207,7 +1207,7 @@
 			
 	</div>
 <a name="methodliesWithin" id="liesWithin"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">liesWithin</span> (line <span class="line-number">473</span>)
@@ -1237,7 +1237,7 @@
 			
 	</div>
 <a name="methodmove" id="move"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">move</span> (line <span class="line-number">315</span>)
@@ -1272,7 +1272,7 @@
 			
 	</div>
 <a name="methodopenFile" id="openFile"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">openFile</span> (line <span class="line-number">435</span>)
@@ -1320,7 +1320,7 @@
 				</ul>
 	</div>
 <a name="methodrename" id="rename"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">rename</span> (line <span class="line-number">290</span>)
@@ -1367,7 +1367,7 @@
 				</ul>
 	</div>
 <a name="method__toString" id="__toString"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">__toString</span> (line <span class="line-number">151</span>)
@@ -1435,7 +1435,7 @@
 
 
 	<p class="notes" id="credit">
-		Documentation generated on Mon, 25 May 2009 01:35:14 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Mon, 25 May 2009 15:21:37 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</div></body>
 </html>

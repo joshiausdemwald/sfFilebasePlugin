@@ -362,7 +362,7 @@
 					</div>
 		<div class="info-box-body">
 			<a name="var$instances" id="$instances"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="var-header">
 		<span class="var-title">
@@ -387,7 +387,7 @@
 </div>
 
 <a name="var$cacheDirectory" id="$cacheDirectory"><!-- --></A>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div class="var-header">
 		<span class="var-title">
@@ -409,7 +409,7 @@
 
 </div>
 <a name="var$gfxEditor" id="$gfxEditor"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="var-header">
 		<span class="var-title">
@@ -430,7 +430,7 @@
 
 </div>
 <a name="var$uploadedFilesManager" id="$uploadedFilesManager"><!-- --></A>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div class="var-header">
 		<span class="var-title">
@@ -477,7 +477,7 @@
 		<div class="info-box-body">
 			<A NAME='method_detail'></A>
 <a name="methodgetInstance" id="getInstance"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">static getInstance</span> (line <span class="line-number">128</span>)
@@ -512,7 +512,7 @@
 			
 	</div>
 <a name="method__construct" id="__construct"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">Constructor __construct</span> (line <span class="line-number">78</span>)
@@ -566,7 +566,7 @@
 			
 	</div>
 <a name="methodchmodFile" id="chmodFile"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">chmodFile</span> (line <span class="line-number">456</span>)
@@ -599,7 +599,7 @@
 			
 	</div>
 <a name="methodclearCache" id="clearCache"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">clearCache</span> (line <span class="line-number">181</span>)
@@ -623,7 +623,7 @@
 			
 	</div>
 <a name="methodcopyDirectory" id="copyDirectory"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">copyDirectory</span> (line <span class="line-number">267</span>)
@@ -663,7 +663,7 @@
 			
 	</div>
 <a name="methodcopyFile" id="copyFile"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">copyFile</span> (line <span class="line-number">319</span>)
@@ -701,7 +701,7 @@
 			
 	</div>
 <a name="methoddeleteDirectory" id="deleteDirectory"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">deleteDirectory</span> (line <span class="line-number">423</span>)
@@ -735,7 +735,7 @@
 			
 	</div>
 <a name="methoddeleteFile" id="deleteFile"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">deleteFile</span> (line <span class="line-number">395</span>)
@@ -769,7 +769,7 @@
 			
 	</div>
 <a name="methodfileLiesWithin" id="fileLiesWithin"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">fileLiesWithin</span> (line <span class="line-number">755</span>)
@@ -801,7 +801,7 @@
 			
 	</div>
 <a name="methodgetCacheDirectory" id="getCacheDirectory"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">getCacheDirectory</span> (line <span class="line-number">172</span>)
@@ -825,7 +825,7 @@
 			
 	</div>
 <a name="methodgetFileByHash" id="getFileByHash"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">getFileByHash</span> (line <span class="line-number">736</span>)
@@ -855,7 +855,7 @@
 			
 	</div>
 <a name="methodgetFileExists" id="getFileExists"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">getFileExists</span> (line <span class="line-number">143</span>)
@@ -884,7 +884,7 @@
 			
 	</div>
 <a name="methodgetHashForFile" id="getHashForFile"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">getHashForFile</span> (line <span class="line-number">204</span>)
@@ -913,7 +913,7 @@
 			
 	</div>
 <a name="methodgetIsImage" id="getIsImage"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">getIsImage</span> (line <span class="line-number">695</span>)
@@ -946,7 +946,7 @@
 			
 	</div>
 <a name="methodgetIsSupportedImage" id="getIsSupportedImage"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">getIsSupportedImage</span> (line <span class="line-number">707</span>)
@@ -976,7 +976,7 @@
 			
 	</div>
 <a name="methodgetIsWebImage" id="getIsWebImage"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">getIsWebImage</span> (line <span class="line-number">722</span>)
@@ -1008,7 +1008,7 @@
 			
 	</div>
 <a name="methodgetThumbnailForImage" id="getThumbnailForImage"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">getThumbnailForImage</span> (line <span class="line-number">656</span>)
@@ -1051,7 +1051,7 @@
 			
 	</div>
 <a name="methodgetUploadedFiles" id="getUploadedFiles"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">getUploadedFiles</span> (line <span class="line-number">552</span>)
@@ -1082,7 +1082,7 @@
 			
 	</div>
 <a name="methodgetUploadedFilesManager" id="getUploadedFilesManager"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">getUploadedFilesManager</span> (line <span class="line-number">539</span>)
@@ -1106,7 +1106,7 @@
 			
 	</div>
 <a name="methodimageCopyResampled" id="imageCopyResampled"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">imageCopyResampled</span> (line <span class="line-number">642</span>)
@@ -1166,7 +1166,7 @@
 			
 	</div>
 <a name="methodinitCache" id="initCache"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">initCache</span> (line <span class="line-number">156</span>)
@@ -1196,7 +1196,7 @@
 			
 	</div>
 <a name="methodisInFilebase" id="isInFilebase"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">isInFilebase</span> (line <span class="line-number">518</span>)
@@ -1226,7 +1226,7 @@
 			
 	</div>
 <a name="methodmkDir" id="mkDir"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">mkDir</span> (line <span class="line-number">473</span>)
@@ -1259,7 +1259,7 @@
 			
 	</div>
 <a name="methodmoveAllUploadedFiles" id="moveAllUploadedFiles"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">moveAllUploadedFiles</span> (line <span class="line-number">577</span>)
@@ -1302,7 +1302,7 @@
 			
 	</div>
 <a name="methodmoveFile" id="moveFile"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">moveFile</span> (line <span class="line-number">219</span>)
@@ -1338,7 +1338,7 @@
 			
 	</div>
 <a name="methodmoveUploadedFile" id="moveUploadedFile"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">moveUploadedFile</span> (line <span class="line-number">603</span>)
@@ -1393,7 +1393,7 @@
 			
 	</div>
 <a name="methodrenameFile" id="renameFile"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">renameFile</span> (line <span class="line-number">380</span>)
@@ -1433,7 +1433,7 @@
 			
 	</div>
 <a name="methodresizeImage" id="resizeImage"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">resizeImage</span> (line <span class="line-number">619</span>)
@@ -1477,7 +1477,7 @@
 			
 	</div>
 <a name="methodrotateImage" id="rotateImage"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<span class="method-title">rotateImage</span> (line <span class="line-number">680</span>)
@@ -1520,7 +1520,7 @@
 			
 	</div>
 <a name="methodtouch" id="touch"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<span class="method-title">touch</span> (line <span class="line-number">496</span>)
@@ -1643,7 +1643,7 @@
 
 
 	<p class="notes" id="credit">
-		Documentation generated on Mon, 25 May 2009 01:35:13 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Mon, 25 May 2009 15:21:36 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
 	</p>
 	</div></body>
 </html>

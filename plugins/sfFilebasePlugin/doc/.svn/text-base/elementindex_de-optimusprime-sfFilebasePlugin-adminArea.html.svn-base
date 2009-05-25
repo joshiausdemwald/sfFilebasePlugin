@@ -12,7 +12,8 @@
 	<h3>Package indexes</h3>
 	<ul>
 				<li><a href="elementindex_de-optimusprime-sfFilebasePlugin.html">de-optimusprime-sfFilebasePlugin</a></li>
-					</ul>
+							<li><a href="elementindex_de-optimusprime-sfFilebaseplugin-adminArea.html">de-optimusprime-sfFilebaseplugin-adminArea</a></li>
+			</ul>
 <a href="elementindex.html">All elements</a>
 <br />
 <div class="index-letter-menu">
@@ -21,6 +22,7 @@
 	<a class="index-letter" href="elementindex_de-optimusprime-sfFilebasePlugin-adminArea.html#d">d</a>
 	<a class="index-letter" href="elementindex_de-optimusprime-sfFilebasePlugin-adminArea.html#e">e</a>
 	<a class="index-letter" href="elementindex_de-optimusprime-sfFilebasePlugin-adminArea.html#g">g</a>
+	<a class="index-letter" href="elementindex_de-optimusprime-sfFilebasePlugin-adminArea.html#h">h</a>
 	<a class="index-letter" href="elementindex_de-optimusprime-sfFilebasePlugin-adminArea.html#p">p</a>
 	<a class="index-letter" href="elementindex_de-optimusprime-sfFilebasePlugin-adminArea.html#s">s</a>
 	<a class="index-letter" href="elementindex_de-optimusprime-sfFilebasePlugin-adminArea.html#_">_</a>
@@ -176,6 +178,20 @@
 					</dt>
 		<dd class="index-item-body">
 			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin-adminArea/PluginsfAbstractFile.html#methodgetTagsFormatted">PluginsfAbstractFile::getTagsFormatted()</a> in PluginsfAbstractFile.class.php</div>
+					</dd>
+		</dl>
+	<a name="h"></a>
+	<div class="index-letter-section">
+		<div style="float: left" class="index-letter-title">h</div>
+		<div style="float: right"><a href="#top">top</a></div>
+		<div style="clear: both"></div>
+	</div>
+	<dl>
+			<dt class="field">
+						<span class="method-title">hasTag</span>
+					</dt>
+		<dd class="index-item-body">
+			<div class="index-item-details"><a href="de-optimusprime-sfFilebasePlugin-adminArea/PluginsfAbstractFile.html#methodhasTag">PluginsfAbstractFile::hasTag()</a> in PluginsfAbstractFile.class.php</div>
 					</dd>
 		</dl>
 	<a name="p"></a>
@@ -426,6 +442,7 @@
 	<a class="index-letter" href="elementindex_de-optimusprime-sfFilebasePlugin-adminArea.html#d">d</a>
 	<a class="index-letter" href="elementindex_de-optimusprime-sfFilebasePlugin-adminArea.html#e">e</a>
 	<a class="index-letter" href="elementindex_de-optimusprime-sfFilebasePlugin-adminArea.html#g">g</a>
+	<a class="index-letter" href="elementindex_de-optimusprime-sfFilebasePlugin-adminArea.html#h">h</a>
 	<a class="index-letter" href="elementindex_de-optimusprime-sfFilebasePlugin-adminArea.html#p">p</a>
 	<a class="index-letter" href="elementindex_de-optimusprime-sfFilebasePlugin-adminArea.html#s">s</a>
 	<a class="index-letter" href="elementindex_de-optimusprime-sfFilebasePlugin-adminArea.html#_">_</a>

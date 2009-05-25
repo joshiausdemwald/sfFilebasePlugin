@@ -47,4 +47,9 @@ class PluginsfAbstractFile extends BasesfAbstractFile
     }
     return md5(uniqid(rand(), true)) . strtolower($file->getExtension());
   }
+
+  public function hasTag($tag)
+  {
+    return strpos($this->getTags(), $tag) !== false;
+  }
 }
