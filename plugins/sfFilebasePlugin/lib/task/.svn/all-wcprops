@@ -1,17 +1,17 @@
 K 25
 svn:wc:ra_dav:version-url
 V 49
-/!svn/ver/18608/plugins/sfFilebasePlugin/lib/task
+/!svn/ver/18679/plugins/sfFilebasePlugin/lib/task
 END
 sfFilebaseCreaterootTask.class.php
 K 25
 svn:wc:ra_dav:version-url
 V 84
-/!svn/ver/18608/plugins/sfFilebasePlugin/lib/task/sfFilebaseCreaterootTask.class.php
+/!svn/ver/18679/plugins/sfFilebasePlugin/lib/task/sfFilebaseCreaterootTask.class.php
 END
 sfFilebaseImportTask.class.php
 K 25
 svn:wc:ra_dav:version-url
 V 80
-/!svn/ver/18608/plugins/sfFilebasePlugin/lib/task/sfFilebaseImportTask.class.php
+/!svn/ver/18679/plugins/sfFilebasePlugin/lib/task/sfFilebaseImportTask.class.php
 END

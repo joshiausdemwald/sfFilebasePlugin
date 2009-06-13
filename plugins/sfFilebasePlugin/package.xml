@@ -10,9 +10,9 @@
     <email>johannes.heinen@gmail.com</email>
     <active>yes</active>
   </lead>
-  <date>2009-05-25</date>
+  <date>2009-06-13</date>
   <version>
-    <release>0.7.8</release>
+    <release>0.7.10</release>
     <api>0.7.0</api>
   </version>
   <stability>
@@ -77,6 +77,7 @@
       <file role="data" name="modules/sf_filebase_file/templates/newSuccess.php" />
       <file role="data" name="modules/sf_filebase_file/templates/indexSuccess.php" />
       <file role="data" name="modules/sf_filebase_file/templates/editSuccess.php" />
+      <file role="data" name="modules/sf_filebase_file/templates/swfuploadSuccess.php" />
       <file role="data" name="modules/sf_filebase_file/templates/_retrieveFiles.php" />
       <file role="data" name="modules/sf_filebase_overview/config/view.yml" />
       <file role="data" name="modules/sf_filebase_overview/actions/components.class.php" />
@@ -471,7 +472,6 @@
       <file role="data" name="web/css/main.css" />
       <file role="data" name="web/css/cloud.css" />
 
-
       <file role="data" name="README" />
       <file role="data" name="LICENSE" />
     </dir>
@@ -491,6 +491,11 @@
         <max>1.3.0</max>
         <exclude>1.3.0</exclude>
       </package>
+      <!--package>
+        <name>sfWidgetFormInputSWFUploadPlugin</name>
+        <channel>pear.symfony-project.com</channel>
+        <min>0.9.0</min>
+      </package-->
     </required>
     <optional>
       <package>
@@ -504,6 +509,39 @@
   <phprelease>
   </phprelease>
   <changelog>
+    <release>
+      <version>
+        <release>0.7.10</release>
+        <api>0.7.0</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-06-13</date>
+      <notes>
+      * Fixed a bug that prevents sfFilebasePluginUploadedFile from extending
+        sfValidatedFile when sfFilebasePluginValidatorFile was not previously
+        included.
+      </notes>
+    </release>
+    <release>
+      <version>
+        <release>0.7.9</release>
+        <api>0.7.0</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-05-25</date>
+      <notes>
+      * Fixed a bug in sfFilebaseTask * tasks preventing accessing sfContext
+        in a multi application environment.
+      </notes>
+    </release>
     <release>
       <version>
         <release>0.7.8</release>

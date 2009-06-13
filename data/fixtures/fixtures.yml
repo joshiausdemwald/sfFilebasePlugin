@@ -15,3 +15,116 @@
 #     password: changeme
 #     name:     Kris Wallsmith
 #     email:    kris.wallsmith@symfony-project.com
+sfGuardUser:
+  joshi:
+    username: joshi
+    password: joshi
+    is_super_admin: 1
+    is_active: 1
+    
+  editor:
+    username: editor
+    password: 12345
+    is_super_admin: 0
+    is_active: 1
+
+sfGuardPermission:
+  create_posts:
+    name: create_posts
+    description: Allows an user to create posts
+  edit_posts:
+    name: edit_posts
+    description: Allows an user to edit posts
+  delete_posts:
+    name: delete_posts
+    description: Allows an user to delete posts
+  list_posts:
+    name: list_posts
+    description: Allows an user to list posts
+  post_administrator:
+    name: post_administrator
+    description: May perform all operations on posts
+
+  create_blogs:
+    name: create_blogs
+    description: Allows an user to create blogs
+  edit_blogs:
+    name: edit_blogs
+    description: Allows an user to edit blogs
+  delete_blogs:
+    name: delete_blogs
+    description: Allows an user to delete blogs
+  list_blogs:
+    name: list_blogs
+    description: Allows an user to list blogs
+
+  create_categories:
+    name: create_categories
+    description: Allows an user to create categories
+  edit_categories:
+    name: Edit categories
+    description: Allows an user to edit categories
+  delete_categories:
+    name: delete_categories
+    description: Allows an user to delete categories
+  list_categories:
+    name: list_categories
+    description: Allows an user to list categories
+  category_administrator:
+    name: category_administrator
+    description: May perform all operations on categories
+
+  create_users:
+    name: create_users
+    description: Allows an user to create users
+  edit_users:
+    name: edit_users
+    description: Allows an user to edit users
+  delete_users:
+    name: delete_users
+    description: Allows an user to delete users
+  list_users:
+    name: list_users
+    description: Allows an user to list Users
+  user_administrator:
+    name: user_administrator
+    description: Allows an user to perform all operations on users.
+
+  list_groups:
+    name: list_groups
+    description: Allows an user to list groups
+  create_groups:
+    name: create_groups
+    description: Allows an user to create groups
+  edit_groups:
+    name: edit_groups
+    description: Allows an user to edit groups
+  delete_groups:
+    name: delete_groups
+    description: Allows an user to delete groups
+
+sfGuardUserGroup:
+  editor_be_editor:
+    sfGuardUser:  editor
+    sfGuardGroup: be_editor
+
+sfGuardGroup:
+  fe_user:
+    name: Frontend user
+    description: Group for all logged in frontend users
+    permissions: [list_posts, create_posts]
+
+  be_editor:
+    name: Editor
+    description: Editors may manage blog posts.
+    permissions: [list_posts, create_posts, edit_posts, delete_posts, create_users, edit_users, list_users, delete_users]
+
+  be_senior_editor:
+    name: Adminstrator
+    description: Administrator may manage categories and users and administer blog posts.
+    permissions: [post_administrator, list_categories, edit_categories, create_categories, delete_categories, list_users, create_users, delete_users, edit_users]
+
+  be_blog_manager:
+    name: Blog manager
+    description: A blog manager may administer categories, blog posts, users and user groups.
+    permissions: [category_administrator, post_administrator, list_users, create_users, delete_users, edit_users, list_groups, create_groups, delete_groups, edit_groups]

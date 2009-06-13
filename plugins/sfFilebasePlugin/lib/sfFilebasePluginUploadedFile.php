@@ -12,6 +12,12 @@
  */
 
 /**
+ * @todo: remove me. this is a workaround for the problem that
+ *        sfValidatedFile does not have its own class file.
+ */
+class ____dummy extends sfValidatorFile{};
+
+/**
  * sfFilebasePluginUploadedFile represents a uploaded File and provides methods
  * to handle one.
  *

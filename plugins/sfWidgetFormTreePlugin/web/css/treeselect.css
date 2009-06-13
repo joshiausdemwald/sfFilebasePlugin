@@ -1,0 +1,76 @@
+/**
+ * This file is part of the sfWidgetFormTreePlugin package.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @package   de.optimusprime.sfWidgetFormTreeSelectPlugin
+ * @author    Johannes Heinen <johannes.heinen@gmail.com>
+ * @license   MIT license
+ * @copyright 2007-2009 Johannes Heinen <johannes.heinen@gmail.com>
+ */
+
+div.sf_admin_form_row:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+div.sf_admin_form_row {
+	display: inline-block;
+}
+
+html[xmlns] div.sf_admin_form_row {
+	display: block;
+}
+
+* html div.sf_admin_form_row {
+	height: 1%;
+}
+
+ul.checkbox_tree,
+ul.radio_tree
+{
+  display: block;
+  border: 1px #eee solid;
+  padding:2px 5px 2px 2px;
+  margin: 0;
+  float: left;
+  height: 100px;
+  overflow-y: scroll;
+  max-height: 100px;
+}
+
+ul.checkbox_tree ul,
+ul.radio_tree ul
+{
+  padding:  0 0 0 18px;
+  border: 0;
+  margin: 0;
+  float: none;
+  height: auto;
+  max-height: none;
+  overflow-y: hidden;
+}
+
+ul.checkbox_tree li,
+ul.radio_tree li
+{
+  list-style: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+  line-height: 18px;
+  vertical-align: middle;
+}
+
+ul.checkbox_tree li label,
+ul.radio_tree li label
+{
+  margin: 0 !important;
+  padding: 0 !important;
+  display: inline !important;
+}

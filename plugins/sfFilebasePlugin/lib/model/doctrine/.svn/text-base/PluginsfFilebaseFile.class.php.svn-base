@@ -23,4 +23,25 @@ abstract class PluginsfFilebaseFile extends BasesfFilebaseFile
     $filebase === null && $filebase = sfFilebasePlugin::getInstance();
     return $filebase[$this->getHash()];
   }
+
+  public function postDelete($event)
+  {
+    sfContext::getInstance()->getEventDispatcher()->notify(new sfEvent(
+        $this, 'sfFilebasePlugin.filebase.file_deleted'
+    ));
+  }
+
+  public function postInsert($event)
+  {
+    sfContext::getInstance()->getEventDispatcher()->notify(new sfEvent(
+        $this, 'sfFilebasePlugin.filebase.file_inserted'
+    ));
+  }
+
+  public function postUpdate($event)
+  {
+    sfContext::getInstance()->getEventDispatcher()->notify(new sfEvent(
+        $this, 'sfFilebasePlugin.filebase.file_updated'
+    ));
+  }
 }

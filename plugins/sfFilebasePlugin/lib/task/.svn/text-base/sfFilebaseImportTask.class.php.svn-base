@@ -72,7 +72,8 @@ EOF;
     }
     
     // initialize the database connection
-    $databaseManager = new sfDatabaseManager($this->configuration);
+    sfContext::createInstance($this->configuration);
+    $databaseManager = sfContext::getInstance()->getDatabaseManager();
     $connection = $databaseManager->getDatabase($options['connection'] ? $options['connection'] : null)->getConnection();
 
     $root = Doctrine::getTable('sfFilebaseDirectory')->getRootNode($options['env'], $arguments['application']);

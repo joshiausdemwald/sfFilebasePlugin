@@ -38,6 +38,7 @@ EOF;
   protected function execute($arguments = array(), $options = array())
   {
     $root_directory_path = sfConfig::get('app_sf_filebase_plugin_path_name');
+    
     if($root_directory_path)
     {
       fwrite(STDOUT, "\n    Will use output directory specified in app.yml: $root_directory_path\n");
@@ -66,9 +67,10 @@ EOF;
     {
       throw new Exception(sprintf('Filebase root directory %s does not exist or is write protected. Ensure that the directory exists in file system and that it is writable by the running php processes/apache users.', $filebase->getPathname()));
     }
-    
+
     // initialize the database connection
-    $databaseManager = new sfDatabaseManager($this->configuration);
+    sfContext::createInstance($this->configuration);
+    $databaseManager = sfContext::getInstance()->getDatabaseManager();
     $connection = $databaseManager->getDatabase($options['connection'] ? $options['connection'] : null)->getConnection();
 
     $root = Doctrine::getTable('sfFilebaseDirectory')->getRootNode($options['env'], $arguments['application'], null, true);

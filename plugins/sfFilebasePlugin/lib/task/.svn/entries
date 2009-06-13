@@ -1,14 +1,14 @@
 9
 
 dir
-18623
+19219
 http://svn.symfony-project.com/plugins/sfFilebasePlugin/lib/task
 http://svn.symfony-project.com
 
 
 
-2009-05-24T20:55:56.962697Z
-18608
+2009-05-27T06:26:58.676959Z
+18679
 joshiausdemwald
 
 
@@ -39,10 +39,10 @@ file
 
 
 
-2009-05-24T16:10:04.000000Z
-9ffb7b6ee14b205f9f52afc9891a4801
-2009-05-24T20:55:56.962697Z
-18608
+2009-05-26T19:06:26.000000Z
+6025218c13e80599a9df87528e16b016
+2009-05-27T06:26:58.676959Z
+18679
 joshiausdemwald
 
 
@@ -65,7 +65,7 @@ joshiausdemwald
 
 
 
-3826
+3883
 
 sfFilebaseImportTask.class.php
 file
@@ -73,10 +73,10 @@ file
 
 
 
-2009-05-24T16:13:31.000000Z
-74999d2e773ba1f87ebbcd02d3d73739
-2009-05-24T20:55:56.962697Z
-18608
+2009-05-26T19:07:24.000000Z
+768a649172f4e1f8044af4fe26f97d25
+2009-05-27T06:26:58.676959Z
+18679
 joshiausdemwald
 has-props
 
@@ -99,5 +99,5 @@ has-props
 
 
 
-5497
+5553
 

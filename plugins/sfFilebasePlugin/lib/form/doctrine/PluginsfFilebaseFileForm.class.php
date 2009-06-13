@@ -37,6 +37,11 @@ abstract class PluginsfFilebaseFileForm extends BasesfFilebaseFileForm
     {
       unset($this->widgetSchema['filename']);
       unset($this->validatorSchema['filename']);
+      /*$this->widgetSchema['hash']     = new sfWidgetFormInputSWFUpload(array(
+        'require_yui'=> true,
+         'swfupload_post_params' => '"sf_filebase_file[directory]" : document.getElementById("sf_filebase_file_directory").options[document.getElementById("sf_filebase_file_directory").selectedIndex].value'
+        )
+      );*/
       $this->widgetSchema['hash']     = new sfWidgetFormInputFile();
       $this->validatorSchema['hash']  = new sfFilebasePluginValidatorFile(array('path'=>sfFilebasePlugin::getInstance()->getPathname(),'allow_overwrite'=> true, 'required'=>true));
     }

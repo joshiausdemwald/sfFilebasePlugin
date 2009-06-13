@@ -23,6 +23,7 @@
       <file role="data" name="lib/form/doctrine/PluginsfFilebaseFileForm.class.php" />
       <file role="data" name="lib/sfFilebasePluginGfxEditorAdapterGD.php" />
       <file role="data" name="lib/sfFilebasePluginException.php" />
+      <file role="data" name="lib/helper/tagcloudHelper.php" />
       <file role="data" name="lib/helper/sfFilebasePluginHelper.php" />
       <file role="data" name="lib/task/sfFilebaseCreaterootTask.class.php" />
       <file role="data" name="lib/task/sfFilebaseImportTask.class.php" />
@@ -57,6 +58,7 @@
       <file role="data" name="modules/sf_filebase_overview/actions/actions.class.php" />
       <file role="data" name="modules/sf_filebase_overview/templates/indexSuccess.php" />
       <file role="data" name="modules/sf_filebase_overview/templates/_breadcrumb.php" />
+      <file role="data" name="modules/sf_filebase_overview/templates/_tagcloud.php" />
       <file role="data" name="modules/sf_filebase_directory/lib/sf_filebase_directoryGeneratorConfiguration.class.php" />
       <file role="data" name="modules/sf_filebase_directory/lib/sf_filebase_directoryGeneratorHelper.class.php" />
       <file role="data" name="modules/sf_filebase_directory/config/generator.yml" />
@@ -442,3 +444,4 @@
       <file role="data" name="web/js/vendor/ext/resources/css/reset-min.css" />
       <file role="data" name="web/js/vendor/ext/resources/css/xtheme-blue.css" />
       <file role="data" name="web/css/main.css" />
+      <file role="data" name="web/css/cloud.css" />

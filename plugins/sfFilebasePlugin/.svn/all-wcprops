@@ -1,13 +1,13 @@
 K 25
 svn:wc:ra_dav:version-url
 V 40
-/!svn/ver/18617/plugins/sfFilebasePlugin
+/!svn/ver/19182/plugins/sfFilebasePlugin
 END
 files.txt
 K 25
 svn:wc:ra_dav:version-url
 V 50
-/!svn/ver/18625/plugins/sfFilebasePlugin/files.txt
+/!svn/ver/19223/plugins/sfFilebasePlugin/files.txt
 END
 LICENSE
 K 25
@@ -21,17 +21,17 @@ svn:wc:ra_dav:version-url
 V 67
 /!svn/ver/18351/plugins/sfFilebasePlugin/sfFilebasePlugin-0.6.0.tgz
 END
-sfFilebasePlugin-0.7.0.tgz
-K 25
-svn:wc:ra_dav:version-url
-V 67
-/!svn/ver/18458/plugins/sfFilebasePlugin/sfFilebasePlugin-0.7.0.tgz
-END
 sfFilebasePlugin-0.6.1.tgz
 K 25
 svn:wc:ra_dav:version-url
 V 67
 /!svn/ver/18354/plugins/sfFilebasePlugin/sfFilebasePlugin-0.6.1.tgz
+END
+sfFilebasePlugin-0.7.0.tgz
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/18458/plugins/sfFilebasePlugin/sfFilebasePlugin-0.7.0.tgz
 END
 sfFilebasePlugin-0.7.1.tgz
 K 25
@@ -45,23 +45,17 @@ svn:wc:ra_dav:version-url
 V 67
 /!svn/ver/18529/plugins/sfFilebasePlugin/sfFilebasePlugin-0.7.2.tgz
 END
-sfFilebasePlugin-0.7.3.tgz
-K 25
-svn:wc:ra_dav:version-url
-V 67
-/!svn/ver/18532/plugins/sfFilebasePlugin/sfFilebasePlugin-0.7.3.tgz
-END
 sfFilebasePlugin-0.5.5.tgz
 K 25
 svn:wc:ra_dav:version-url
 V 67
 /!svn/ver/18216/plugins/sfFilebasePlugin/sfFilebasePlugin-0.5.5.tgz
 END
-sfFilebasePlugin-0.5.6.tgz
+sfFilebasePlugin-0.7.3.tgz
 K 25
 svn:wc:ra_dav:version-url
 V 67
-/!svn/ver/18226/plugins/sfFilebasePlugin/sfFilebasePlugin-0.5.6.tgz
+/!svn/ver/18532/plugins/sfFilebasePlugin/sfFilebasePlugin-0.7.3.tgz
 END
 sfFilebasePlugin-0.7.4.tgz
 K 25
@@ -69,11 +63,17 @@ svn:wc:ra_dav:version-url
 V 67
 /!svn/ver/18578/plugins/sfFilebasePlugin/sfFilebasePlugin-0.7.4.tgz
 END
-sfFilebasePlugin-0.7.5.tgz
+sfFilebasePlugin-0.5.6.tgz
 K 25
 svn:wc:ra_dav:version-url
 V 67
-/!svn/ver/18592/plugins/sfFilebasePlugin/sfFilebasePlugin-0.7.5.tgz
+/!svn/ver/18226/plugins/sfFilebasePlugin/sfFilebasePlugin-0.5.6.tgz
+END
+package.xml
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/19224/plugins/sfFilebasePlugin/package.xml
 END
 sfFilebasePlugin-0.5.7.tgz
 K 25
@@ -81,11 +81,11 @@ svn:wc:ra_dav:version-url
 V 67
 /!svn/ver/18234/plugins/sfFilebasePlugin/sfFilebasePlugin-0.5.7.tgz
 END
-package.xml
+sfFilebasePlugin-0.7.5.tgz
 K 25
 svn:wc:ra_dav:version-url
-V 52
-/!svn/ver/18625/plugins/sfFilebasePlugin/package.xml
+V 67
+/!svn/ver/18592/plugins/sfFilebasePlugin/sfFilebasePlugin-0.7.5.tgz
 END
 sfFilebasePlugin-0.5.8.tgz
 K 25
@@ -129,6 +129,12 @@ svn:wc:ra_dav:version-url
 V 67
 /!svn/ver/18625/plugins/sfFilebasePlugin/sfFilebasePlugin-0.7.8.tgz
 END
+sfFilebasePlugin-0.7.9.tgz
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/18960/plugins/sfFilebasePlugin/sfFilebasePlugin-0.7.9.tgz
+END
 makedoc
 K 25
 svn:wc:ra_dav:version-url
@@ -140,4 +146,10 @@ K 25
 svn:wc:ra_dav:version-url
 V 68
 /!svn/ver/18345/plugins/sfFilebasePlugin/sfFilebasePlugin-0.5.10.tgz
+END
+sfFilebasePlugin-0.7.10.tgz
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/19224/plugins/sfFilebasePlugin/sfFilebasePlugin-0.7.10.tgz
 END

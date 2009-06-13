@@ -25,4 +25,25 @@ abstract class PluginsfFilebaseDirectory extends BasesfFilebaseDirectory
       }
     }
   }
+
+  public function postDelete($event)
+  {
+    sfContext::getInstance()->getEventDispatcher()->notify(new sfEvent(
+        $this, 'sfFilebasePlugin.filebase.directory_deleted'
+    ));
+  }
+
+  public function postInsert($event)
+  {
+    sfContext::getInstance()->getEventDispatcher()->notify(new sfEvent(
+        $this, 'sfFilebasePlugin.filebase.directory_inserted'
+    ));
+  }
+
+  public function postUpdate($event)
+  {
+    sfContext::getInstance()->getEventDispatcher()->notify(new sfEvent(
+        $this, 'sfFilebasePlugin.filebase.directory_updated'
+    ));
+  }
 }

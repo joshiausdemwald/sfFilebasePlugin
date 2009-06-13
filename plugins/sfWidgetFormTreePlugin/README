@@ -1,0 +1,111 @@
+sfWidgetFormTreePlugin
+======================
+
+sfWidgetFormTreePlugin creates - similar to sfWidgetFormChoice/ChoiceMultiple -
+a tree structure widget consisting of radio buttons or checkboxes. So you can
+maintain hierarchical data whithin your symfony forms.
+
+It has the same functionality as the wordpress "assign blog article to
+categories x, y and z", to enlighten what this plugin may do for you.
+
+The plugin widgets have a few validators that also can check simple constraints
+(e.g. "self drops/movements" of nodes).
+
+There is a screenshot to experience the look and feel of the widget.
+No javascript required or included.
+
+Instructions:
+=============
+
+sfWidgetFormTree provides a widget to render a structured group of checkboxes
+or radiobuttons that represent nodes in a tree.
+
+They are configured like all select/multiselect-widgets by giving a mandatory
+array of choices.
+
+Due the fact that a hierarchy is displayed, this array must have information
+about that.
+
+It is possible to pass 2 types of arrays:
+
+Multi-Dim (with childnodes):
+----------------------------
+
+      $choices = array(
+        1=> array('label'=>'test', 'children'=>array(
+          2=> array('label'=>'test2', 'children'=> array(
+            3=> array('label'=>'test3'),
+            4=> array('label'=>'hans')
+          )),
+          5=> array('label'=>'wurst')
+        )),
+        6=>array('label'=>'letzter')
+      );
+
+Single-DIM (with level/depth):
+------------------------------
+
+    $choices = array(
+      1=>array('level'=>0, 'label'=>"+++1"),
+      2=>array('level'=>0, 'label'=>"+++2"),
+      3=>array('level'=>1, 'label'=>"+++3"),
+      4=>array('level'=>2, 'label'=>"+++4"),
+      8=>array('level'=>3, 'label'=>"+++8"),
+      9=>array('level'=>3, 'label'=>"+++9"),
+      10=>array('level'=>3, 'label'=>"+++10"),
+      11=>array('level'=>4, 'label'=>"+++11"),
+      12=>array('level'=>4, 'label'=>"+++12"),
+      13=>array('level'=>3, 'label'=>"+++13"),
+      5=>array('level'=>2, 'label'=>"+++5"),
+      6=>array('level'=>1, 'label'=>"+++6"),
+      7=>array('level'=>0, 'label'=>"+++7"),
+    );
+
+There is also a tree validator which allows to check against a given id (or
+a collection of ids), so that it is not allowed to select a node within the tree
+that is child of a given parent:
+
+    $this->validatorSchema['category_ids'] = new sfValidatorTreeMany(array(
+      'choices'=>$choices,
+      'restrict_select_below'=>array(10,6), 
+      'required'=>false
+    ));
+
+This could be useful if you deal e.g. with a taxonomy system and want to move
+nodes with your admin form. In this case it is not allowed to move a category
+as a child of it's own. With the option
+
+    'restrict_select_below'=>array(parent_node_1, ..., parent_node-n);
+
+you can define the nodes that are not allowed to select (including its child
+nodes).
+
+Installation
+============
+
+_(Install instructions taken from README in sfThumbnailPlugin, (c) Fabien Potencier)_
+
+To install the plugin for a symfony project, the usual process is to use the
+symfony command line.
+
+With symfony 1.1/1.2, use:
+
+    $ symfony plugin:install sfwidgetFormTreePlugin
+
+Alternatively, if you don't have PEAR installed, you can download the latest
+package attached to this plugin's wiki page and extract it under your project's
+`plugins/` directory.
+
+Clear the cache to enable the autoloading to find the new classes:
+
+    $ php symfony cc
+
+You're done.
+
+
+Credits
+=======
+
+Thanks to the symfony team for this great framework. The few classes used within
+this plugin are derived from the sfWidgetFormChoice class and -validator.
+So it is merly an addon on existing, great functionality.
