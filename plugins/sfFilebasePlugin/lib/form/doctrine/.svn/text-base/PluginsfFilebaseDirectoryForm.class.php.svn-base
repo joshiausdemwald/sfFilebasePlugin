@@ -40,9 +40,11 @@ abstract class PluginsfFilebaseDirectoryForm extends BasesfFilebaseDirectoryForm
       array('required'=>true)
     );
 
+    $restrict_select_below = $this->isNew() ? false : $this->getObject()->getId();
+
     $directory_choices = sfFilebaseDirectoryTable::getChoices();
-    $this->widgetSchema['directory']    = new sfWidgetFormChoice(array('choices'=>$directory_choices));
-    $this->validatorSchema['directory'] = new sfValidatorChoice(array('choices'=>array_keys($directory_choices)));
+    $this->widgetSchema['directory']    = new sfWidgetFormTree(array('value_key'=>'id', 'label_key'=>'filename', 'choices'=>$directory_choices));
+    $this->validatorSchema['directory'] = new sfValidatorTree(array('value_key'=>'id', 'label_key'=>'filename', 'choices'=>$directory_choices, 'restrict_select_below' => $restrict_select_below));
 
     if(!$this->isNew())
     {
@@ -68,7 +70,11 @@ abstract class PluginsfFilebaseDirectoryForm extends BasesfFilebaseDirectoryForm
     $filename = $values['filename'];
     $validator->addMessage('unique', 'A file with that name already exists in the destinated directory.');
     $validator->addMessage('invalid', 'You are not allowed to move a directory into itself or one of its children.');
+   
+    if($values['directory'] === null)
+      return $values;
     $parent = Doctrine::getTable('sfFilebaseDirectory')->find($values['directory']);
+    
     if($parent->getNode()->hasChildren())
     {
       foreach($parent->getNode()->getChildren() AS $file)

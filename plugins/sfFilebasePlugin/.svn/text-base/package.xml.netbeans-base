@@ -12,7 +12,7 @@
   </lead>
   <date>2009-06-13</date>
   <version>
-    <release>0.7.10</release>
+    <release>0.8.0</release>
     <api>0.7.0</api>
   </version>
   <stability>
@@ -493,8 +493,13 @@
       </package>
       <package>
         <name>sfWidgetFormInputSWFUploadPlugin</name>
-        <channel>pear.symfony-project.com</channel>
-        <min>0.9.0</min>
+        <channel>plugins.symfony-project.org</channel>
+        <min>0.9.1</min>
+      </package>
+      <package>
+        <name>sfWidgetFormTreePlugin</name>
+        <channel>plugins.symfony-project.org</channel>
+        <min>1.0.3</min>
       </package>
     </required>
     <optional>
@@ -509,6 +514,22 @@
   <phprelease>
   </phprelease>
   <changelog>
+    <release>
+      <version>
+        <release>0.8.0</release>
+        <api>0.7.0</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-06-13</date>
+      <notes>
+      * Added SWFUpload support based on sfWidgetFormInputSWFUploadPlugin
+      * Added Tree editing support through sfWidgetFormTreePlugin
+      </notes>
+    </release>
     <release>
       <version>
         <release>0.7.10</release>

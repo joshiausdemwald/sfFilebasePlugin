@@ -162,6 +162,40 @@ has-props
 
 46775
 
+sfFilebasePlugin-0.8.0.tgz
+file
+19232
+
+
+
+2009-06-13T15:06:29.000000Z
+ac5b24143a2b982bd6a299dbd5e25877
+2009-06-13T15:07:22.888568Z
+19232
+joshiausdemwald
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+597091
+
 sfFilebasePlugin-0.7.2.tgz
 file
 
@@ -195,6 +229,40 @@ has-props
 
 
 574958
+
+sfFilebasePlugin-0.8.1.tgz
+file
+19238
+
+
+
+2009-06-13T16:24:53.000000Z
+c654967b5d9c24eb5f99212ffbdb2240
+2009-06-13T16:25:22.056001Z
+19238
+joshiausdemwald
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+597693
 
 sfFilebasePlugin-0.5.5.tgz
 file
@@ -334,14 +402,14 @@ has-props
 
 package.xml
 file
-19224
+19238
 
 
 
-2009-06-13T10:57:51.000000Z
-4011fe3f34d55cb93dc907714bdc9657
-2009-06-13T10:58:12.571239Z
-19224
+2009-06-13T16:24:41.000000Z
+61303c83bbc1d24250d90a1e84f8e294
+2009-06-13T16:25:22.056001Z
+19238
 joshiausdemwald
 
 
@@ -364,7 +432,7 @@ joshiausdemwald
 
 
 
-58905
+60037
 
 sfFilebasePlugin-0.5.7.tgz
 file
@@ -434,40 +502,6 @@ has-props
 
 578335
 
-sfFilebasePlugin-0.7.6.tgz
-file
-
-
-
-
-2009-05-23T21:53:59.000000Z
-a2a9f289f393fee74ad7a6f4c14dfa65
-2009-05-23T21:54:08.797894Z
-18596
-joshiausdemwald
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-580853
-
 sfFilebasePlugin-0.5.8.tgz
 file
 
@@ -502,16 +536,16 @@ has-props
 
 35697
 
-sfFilebasePlugin-0.7.7.tgz
+sfFilebasePlugin-0.7.6.tgz
 file
 
 
 
 
-2009-05-24T23:44:27.000000Z
-a2f0f8c0270fe4168dfa9b70ca6e8949
-2009-05-24T23:44:56.704860Z
-18617
+2009-05-23T21:53:59.000000Z
+a2a9f289f393fee74ad7a6f4c14dfa65
+2009-05-23T21:54:08.797894Z
+18596
 joshiausdemwald
 has-props
 
@@ -534,7 +568,7 @@ has-props
 
 
 
-594016
+580853
 
 sfFilebasePlugin-0.5.9.tgz
 file
@@ -569,6 +603,40 @@ has-props
 
 
 35726
+
+sfFilebasePlugin-0.7.7.tgz
+file
+
+
+
+
+2009-05-24T23:44:27.000000Z
+a2f0f8c0270fe4168dfa9b70ca6e8949
+2009-05-24T23:44:56.704860Z
+18617
+joshiausdemwald
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+594016
 
 sfFilebasePlugin-0.7.8.tgz
 file
@@ -655,14 +723,14 @@ dir
 
 files.txt
 file
-19223
+19238
 
 
 
-2009-06-13T10:56:44.000000Z
-19df8a29f82e47c416596dfa7851c1e9
-2009-06-13T10:57:24.098540Z
-19223
+2009-06-13T16:23:43.000000Z
+ea87d71f737257a640cb7307ccfe3469
+2009-06-13T16:25:22.056001Z
+19238
 joshiausdemwald
 
 
@@ -685,7 +753,7 @@ joshiausdemwald
 
 
 
-40809
+39147
 
 LICENSE
 file

@@ -27,18 +27,7 @@ class PluginsfFilebaseDirectoryTable extends sfAbstractFileTable
       $tree_object->createRoot($root);
       $tree = $tree_object->fetchTree();
     }
-    foreach($tree AS $dir)
-    {
-      if($dir->getNode()->isRoot())
-      {
-        $directory_choices[$dir['id']] = str_repeat('&nbsp;&nbsp;', $dir['level']) . '/';
-      }
-      else
-      {
-        $directory_choices[$dir['id']] = str_repeat('&nbsp;&nbsp;', $dir['level']) . $dir['filename'];
-      }
-    }
-    return $directory_choices;
+    return $tree;
   }
 
   /**

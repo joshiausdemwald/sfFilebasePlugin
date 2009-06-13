@@ -53,7 +53,7 @@ class sfValidatorTree extends sfValidatorBase
   protected function doClean($value)
   {
     $choices = sfWidgetFormTree::normalizeChoices($this->getOption('choices'), $this->getOption('label_key'), $this->getOption('value_key'), $this->getOption('level_key'), $this->getOption('children_key'));
-
+    
     $restrict_select_below = $this->getOption('restrict_select_below');
     if($restrict_select_below instanceof sfCallable)
     {

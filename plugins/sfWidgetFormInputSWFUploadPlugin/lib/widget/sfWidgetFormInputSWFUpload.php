@@ -50,6 +50,12 @@ class sfWidgetFormInputSWFUpload extends sfWidgetFormInputFile
   {
     parent::configure($options, $attributes);
 
+    $this->addOption('custom_javascripts', array());
+
+    $this->addOption('prevent_form_submit', true);
+
+    $this->addOption('collapse_queue_on_init', true);
+
     $this->addOption('send_serialized_values', true);
     $this->addOption('require_yui', false);
 
@@ -132,7 +138,7 @@ class sfWidgetFormInputSWFUpload extends sfWidgetFormInputFile
     );
     if($this->getOption('require_yui'))
       $js[] = "http://yui.yahooapis.com/combo?2.7.0/build/yahoo-dom-event/yahoo-dom-event.js&2.7.0/build/animation/animation-min.js";
-    return $js;
+    return array_merge($js, $this->getOption('custom_javascripts'));
   }
 
   public function render($name, $value = null, $attributes = array(), $errors = array())
@@ -155,6 +161,10 @@ class sfWidgetFormInputSWFUpload extends sfWidgetFormInputFile
     $swfupload_post_name = $this->getOption('swfupload_post_name') === null ? $name : $this->getOption('swfupload_post_name');
 
     $send_serialized_values = $this->getOption('send_serialized_values') ? 'true' : 'false';
+
+    $collapse_queue_on_init = $this->getOption('collapse_queue_on_init') ? 'true' : 'false';
+
+    $prevent_form_submit = $this->getOption('prevent_form_submit') ? 'true' : 'false';
 
     $output .= <<<EOF
       <div class="swfupload-buttontarget" id="{$button_id}">
@@ -179,7 +189,9 @@ class sfWidgetFormInputSWFUpload extends sfWidgetFormInputFile
             custom_settings :
             {
               widget_id: "{$widget_id}",
-              send_serialized_values: $send_serialized_values
+              send_serialized_values: $send_serialized_values,
+              collapse_queue_on_init: $collapse_queue_on_init,
+              prevent_form_submit: $prevent_form_submit
             },
             use_query_string : false,
             requeue_on_error : false,

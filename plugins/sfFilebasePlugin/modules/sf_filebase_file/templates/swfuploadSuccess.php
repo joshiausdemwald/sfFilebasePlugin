@@ -1,1 +1,1 @@
-Scheiße oder toll, wer weiß sdas schon?
+<?php echo $json;?>

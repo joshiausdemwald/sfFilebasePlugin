@@ -50,6 +50,9 @@ class sfWidgetFormInputSWFUpload extends sfWidgetFormInputFile
   {
     parent::configure($options, $attributes);
 
+    $this->addOption('collapse_queue_on_init', true);
+
+    $this->addOption('send_serialized_values', true);
     $this->addOption('require_yui', false);
 
     $this->addOption('swfupload_upload_url', $_SERVER['REQUEST_URI']);
@@ -153,6 +156,10 @@ class sfWidgetFormInputSWFUpload extends sfWidgetFormInputFile
 
     $swfupload_post_name = $this->getOption('swfupload_post_name') === null ? $name : $this->getOption('swfupload_post_name');
 
+    $send_serialized_values = $this->getOption('send_serialized_values') ? 'true' : 'false';
+
+    $collapse_queue_on_init = $this->getOption('collapse_queue_on_init') ? 'true' : 'false';
+
     $output .= <<<EOF
       <div class="swfupload-buttontarget" id="{$button_id}">
         <noscript>
@@ -175,7 +182,9 @@ class sfWidgetFormInputSWFUpload extends sfWidgetFormInputFile
             },
             custom_settings :
             {
-              widget_id: "{$widget_id}"
+              widget_id: "{$widget_id}",
+              send_serialized_values: $send_serialized_values,
+              collapse_queue_on_init: $collapse_queue_on_init
             },
             use_query_string : false,
             requeue_on_error : false,

@@ -10,6 +10,8 @@ Instructions:
 Use the widget like an ordinary file upload widget and configure it by
 passing custom options to its options array.
 
+This plugin is now an required dependancy of sfFilebasePlugin
+
 Installation
 ============
 

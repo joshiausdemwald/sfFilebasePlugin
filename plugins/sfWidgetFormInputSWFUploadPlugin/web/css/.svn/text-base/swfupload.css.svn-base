@@ -112,7 +112,7 @@ div.swfupload-queue .swfupload-progressbar
 div.swfupload-queue .swfupload-queue-togglequeuelink
 {
   position: absolute;
-  bottom: 3px;
+  top: 3px;
   right: -19px;
   padding: 0;
   outline: none;

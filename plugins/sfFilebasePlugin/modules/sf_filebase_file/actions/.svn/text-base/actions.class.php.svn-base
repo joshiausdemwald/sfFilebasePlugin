@@ -49,8 +49,21 @@ class sf_filebase_fileActions extends autoSf_filebase_fileActions
     if($request->hasParameter('swfupload_filesource'))
     {
       sfConfig::set('sf_web_debug', false);
+      $this->getResponse()->setContentType('text/x-json');
       $this->setLayout(false);
       $this->setTemplate('swfupload');
+      $json = array();
+      if($ret)
+      {
+        $json['isError'] = false;
+        $json['message'] = 'File uploaded';
+      }
+      else
+      {
+        $json['isError'] = true;
+        $json['message'] = 'The file could not be uploaded, a file with that name already exists';
+      }
+      $this->json = json_encode($json);
     }
     else
     {

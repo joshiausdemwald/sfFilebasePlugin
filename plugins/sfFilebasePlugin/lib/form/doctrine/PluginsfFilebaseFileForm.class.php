@@ -10,6 +10,9 @@
  * @license   MIT license
  * @copyright 2007-2009 Johannes Heinen <johannes.heinen@gmail.com>
  */
+
+sfLoader::loadHelpers(array('Url'));
+
 abstract class PluginsfFilebaseFileForm extends BasesfFilebaseFileForm
 {
   public function setup()
@@ -30,20 +33,24 @@ abstract class PluginsfFilebaseFileForm extends BasesfFilebaseFileForm
     ), array('required'=>false));
 
     $directory_choices = sfFilebaseDirectoryTable::getChoices();
-    $this->widgetSchema['directory']    = new sfWidgetFormChoice(array('choices'=>$directory_choices));
-    $this->validatorSchema['directory'] = new sfValidatorChoice(array('choices'=>array_keys($directory_choices)));
+    $this->widgetSchema['directory']    = new sfWidgetFormTree(array('value_key'=>'id', 'choices'=>$directory_choices, 'label_key'=>'filename'));
+    $this->validatorSchema['directory'] = new sfValidatorTree(array('value_key'=>'id', 'label_key'=>'filename', 'choices'=>$directory_choices));
 
     if($this->isNew())
     {
       unset($this->widgetSchema['filename']);
       unset($this->validatorSchema['filename']);
-      /*$this->widgetSchema['hash']     = new sfWidgetFormInputSWFUpload(array(
-        'require_yui'=> true,
-         'swfupload_post_params' => '"sf_filebase_file[directory]" : document.getElementById("sf_filebase_file_directory").options[document.getElementById("sf_filebase_file_directory").selectedIndex].value'
+      $this->widgetSchema['hash']     = new sfWidgetFormInputSWFUpload(array(
+          'require_yui'=> true,
+          'custom_javascripts'=> array(
+            public_path('/sfFilebasePlugin/js/fileupload.js')
+          )
         )
-      );*/
-      $this->widgetSchema['hash']     = new sfWidgetFormInputFile();
+      );
+      //$this->widgetSchema['hash']     = new sfWidgetFormInputFile();
       $this->validatorSchema['hash']  = new sfFilebasePluginValidatorFile(array('path'=>sfFilebasePlugin::getInstance()->getPathname(),'allow_overwrite'=> true, 'required'=>true));
+
+      $this->widgetSchema['directory']->setDefault($directory_choices[0]['id']);
     }
     else
     {
@@ -51,7 +58,6 @@ abstract class PluginsfFilebaseFileForm extends BasesfFilebaseFileForm
       unset($this->validatorSchema['hash']);
       $this->validatorSchema['filename'] = new sfValidatorString();
         
-      
       $p = $this->getObject()->getNode()->getParent();
       $parent_id = $p instanceof sfFilebaseDirectory ? $p->getId() : 0;
 
@@ -83,6 +89,8 @@ abstract class PluginsfFilebaseFileForm extends BasesfFilebaseFileForm
       $filename = $values['filename'];
     }
     $validator->addMessage('unique', 'A file with that name already exists in the destinated directory.');
+    if($values['directory']===null)
+      return $values;
     $parent = Doctrine::getTable('sfFilebaseDirectory')->find($values['directory']);
     if($parent->getNode()->hasChildren())
     {
