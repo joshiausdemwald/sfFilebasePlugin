@@ -35,7 +35,7 @@ class sf_filebase_filedelivererActions extends sfActions
     $this->getResponse()->setContentType($file->getMimeType('application/octet-stream'));
     $this->getResponse()->setHttpHeader('Content-Tranfer-Encoding', 'binary');
     $this->getResponse()->setHttpHeader('Content-Length', $file->getSize());
-    $this->getResponse()->setHttpHeader('Content-Disposition', 'attachment; filename=' . $file->getFilename() . ' size=' . $file->getSize());
+    $this->getResponse()->setHttpHeader('Content-Disposition', 'attachment; filename=' . $file_object->filename . ' size=' . $file->getSize());
     $this->getResponse()->setContent($file->openFile('r+')->fileGetContents());
     return sfView::NONE;
   }

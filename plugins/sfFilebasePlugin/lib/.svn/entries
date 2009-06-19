@@ -1,14 +1,14 @@
 9
 
 dir
-19219
+19387
 http://svn.symfony-project.com/plugins/sfFilebasePlugin/lib
 http://svn.symfony-project.com
 
 
 
-2009-06-11T13:32:22.852272Z
-19166
+2009-06-13T16:18:47.468110Z
+19235
 joshiausdemwald
 
 
@@ -69,30 +69,6 @@ joshiausdemwald
 
 
 1435
-
-widget
-dir
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
 
 sfFilebasePluginRecursiveIteratorIterator.php
 file
@@ -224,7 +200,7 @@ http://svn.symfony-project.com/plugins/sfFilebasePlugin/lib/Validator
 
 sfFilebasePluginUploadedFile.php
 file
-19220
+
 
 
 
@@ -509,7 +485,7 @@ file
 
 
 
-2009-05-21T11:18:51.000000Z
+2009-06-19T13:48:21.000000Z
 45414a0c3715059a6e41a7bc329916ad
 2009-05-21T16:44:10.817203Z
 18510

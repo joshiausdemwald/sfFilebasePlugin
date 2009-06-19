@@ -43,6 +43,6 @@ sf_filebase_display_image:
   url: sf_filebase_download/:file/:width/:height
   param: { module: sf_filebase_filedeliverer, action: display_image, width: null, height: null }
 
-sf_filebase_overview:
-  url: sf_filebase_overview/:id/:tag
-  param: { module: sf_filebase_overview, action: index, id: null, tag: null }
+sf_filebase_gallery:
+  url: sf_filebase_gallery/:id/:tag
+  param: { module: sf_filebase_gallery, action: index, id: null, tag: null }

@@ -22,7 +22,6 @@ generator:
     with_doctrine_route:     1
 
     config:
-      actions: ~
       fields:
         pathname:
           label: File

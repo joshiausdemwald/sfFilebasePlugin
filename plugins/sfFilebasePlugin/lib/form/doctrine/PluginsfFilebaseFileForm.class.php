@@ -74,9 +74,23 @@ abstract class PluginsfFilebaseFileForm extends BasesfFilebaseFileForm
     );
   }
 
+  /**
+   *
+   * @param integer $pid
+   */
+  public function setDirectoryPid($pid)
+  {
+    $this->widgetSchema['directory']->setDefault($pid);
+    $this->resetFormFields();
+  }
+
   public function checkUpload(sfValidatorCallback $validator, $values, $parameters = null)
   {
+    // disabled temporarily, perhaps this feature will be implemented in a better way
+    return $values;
+
     $filename = '';
+    $validator->addMessage('unique', 'A file with that name already exists in the destinated directory.');
     if($this->isNew())
     {
       if($values['hash'] instanceof sfValidatedFile)
@@ -88,7 +102,6 @@ abstract class PluginsfFilebaseFileForm extends BasesfFilebaseFileForm
     {
       $filename = $values['filename'];
     }
-    $validator->addMessage('unique', 'A file with that name already exists in the destinated directory.');
     if($values['directory']===null)
       return $values;
     $parent = Doctrine::getTable('sfFilebaseDirectory')->find($values['directory']);

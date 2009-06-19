@@ -65,6 +65,16 @@ abstract class PluginsfFilebaseDirectoryForm extends BasesfFilebaseDirectoryForm
     );
   }
 
+  /**
+   *
+   * @param integer $pid
+   */
+  public function setDirectoryPid($pid)
+  {
+    $this->widgetSchema['directory']->setDefault($pid);
+    $this->resetFormFields();
+  }
+
   public function checkUpload(sfValidatorCallback $validator, $values, $parameters = null)
   {
     $filename = $values['filename'];

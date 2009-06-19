@@ -31,6 +31,15 @@ class sf_filebase_directoryActions extends autoSf_filebase_directoryActions
     $this->form = $this->configuration->getForm($this->sf_filebase_directory);
   }
 
+  public function executeNew(sfWebRequest $request)
+  {
+    parent::executeNew($request);
+    if(($pid = $request->getParameter('pid', null)) !== null)
+    {
+      $this->form->setDirectoryPid($pid);
+    }
+  }
+
   public function buildQuery()
   {
     $query = parent::buildQuery();

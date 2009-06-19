@@ -1,14 +1,14 @@
 9
 
 dir
-19219
+19387
 http://svn.symfony-project.com/plugins/sfFilebasePlugin
 http://svn.symfony-project.com
 
 
 
-2009-06-11T19:48:57.265473Z
-19182
+2009-06-18T13:32:13.826883Z
+19387
 joshiausdemwald
 
 
@@ -164,7 +164,7 @@ has-props
 
 sfFilebasePlugin-0.8.0.tgz
 file
-19232
+
 
 
 
@@ -232,7 +232,7 @@ has-props
 
 sfFilebasePlugin-0.8.1.tgz
 file
-19238
+
 
 
 
@@ -332,6 +332,40 @@ has-props
 
 574944
 
+sfFilebasePlugin-0.8.2.tgz
+file
+19388
+
+
+
+2009-06-18T13:41:10.000000Z
+bd5d7f0ddf387f82044cf1b62a93f43e
+2009-06-18T13:41:37.881563Z
+19388
+joshiausdemwald
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+596593
+
 sfFilebasePlugin-0.5.6.tgz
 file
 
@@ -402,14 +436,14 @@ has-props
 
 package.xml
 file
-19238
+19388
 
 
 
-2009-06-13T16:24:41.000000Z
-61303c83bbc1d24250d90a1e84f8e294
-2009-06-13T16:25:22.056001Z
-19238
+2009-06-18T13:41:00.000000Z
+c2976bf4d9d34c51426961ae5ba77931
+2009-06-18T13:41:37.881563Z
+19388
 joshiausdemwald
 
 
@@ -432,7 +466,7 @@ joshiausdemwald
 
 
 
-60037
+60384
 
 sfFilebasePlugin-0.5.7.tgz
 file
@@ -502,40 +536,6 @@ has-props
 
 578335
 
-sfFilebasePlugin-0.5.8.tgz
-file
-
-
-
-
-2009-05-14T07:51:35.000000Z
-d2f31b2b1b623fc590839ea4503f9599
-2009-05-14T07:52:04.293830Z
-18255
-joshiausdemwald
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-35697
-
 sfFilebasePlugin-0.7.6.tgz
 file
 
@@ -570,16 +570,16 @@ has-props
 
 580853
 
-sfFilebasePlugin-0.5.9.tgz
+sfFilebasePlugin-0.5.8.tgz
 file
 
 
 
 
-2009-05-14T08:01:35.000000Z
-6a221fd8c651df548033cd4a68dec624
-2009-05-14T08:01:54.401864Z
-18259
+2009-05-14T07:51:35.000000Z
+d2f31b2b1b623fc590839ea4503f9599
+2009-05-14T07:52:04.293830Z
+18255
 joshiausdemwald
 has-props
 
@@ -602,7 +602,7 @@ has-props
 
 
 
-35726
+35697
 
 sfFilebasePlugin-0.7.7.tgz
 file
@@ -637,6 +637,40 @@ has-props
 
 
 594016
+
+sfFilebasePlugin-0.5.9.tgz
+file
+
+
+
+
+2009-05-14T08:01:35.000000Z
+6a221fd8c651df548033cd4a68dec624
+2009-05-14T08:01:54.401864Z
+18259
+joshiausdemwald
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+35726
 
 sfFilebasePlugin-0.7.8.tgz
 file
@@ -723,14 +757,14 @@ dir
 
 files.txt
 file
-19238
+19388
 
 
 
-2009-06-13T16:23:43.000000Z
-ea87d71f737257a640cb7307ccfe3469
-2009-06-13T16:25:22.056001Z
-19238
+2009-06-18T13:41:02.000000Z
+f8be4c143aeeefef3bb5194937b76e6b
+2009-06-18T13:41:37.881563Z
+19388
 joshiausdemwald
 
 
@@ -753,7 +787,7 @@ joshiausdemwald
 
 
 
-39147
+41841
 
 LICENSE
 file
@@ -930,7 +964,7 @@ dir
 
 sfFilebasePlugin-0.7.10.tgz
 file
-19224
+
 
 
 

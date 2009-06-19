@@ -1,14 +1,14 @@
 9
 
 dir
-19219
+19387
 http://svn.symfony-project.com/plugins/sfFilebasePlugin/web/js/vendor
 http://svn.symfony-project.com
 
 
 
-2009-06-05T13:27:41.499216Z
-18960
+2009-06-13T10:52:16.686410Z
+19221
 joshiausdemwald
 
 
@@ -35,28 +35,4 @@ ee427ae8-e902-0410-961c-c3ed070cd9f9
 
 ext
 dir
-
-swfupload
-dir
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-deleted
 

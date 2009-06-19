@@ -10,9 +10,9 @@
     <email>johannes.heinen@gmail.com</email>
     <active>yes</active>
   </lead>
-  <date>2009-06-13</date>
+  <date>2009-06-18</date>
   <version>
-    <release>0.8.1</release>
+    <release>0.8.2</release>
     <api>0.7.0</api>
   </version>
   <stability>
@@ -23,10 +23,6 @@
   <notes>This is the first release candidate shipped with an administrative gui, build on top of DOCTRINE 1.1.</notes>
   <contents>
     <dir name="/">
-      <file role="data" name="config/config.php" />
-      <file role="data" name="config/doctrine/schema.yml" />
-      <file role="data" name="config/routing.yml" />
-      <file role="data" name="config/core_compile.yml" />
       <file role="data" name="lib/sfFilebasePluginGfxEditorAdapterInterface.php" />
       <file role="data" name="lib/sfFilebasePluginImage.php" />
       <file role="data" name="lib/model/doctrine/PluginsfFilebaseFile.class.php" />
@@ -63,11 +59,21 @@
       <file role="data" name="lib/sfFilebasePluginFile.php" />
       <file role="data" name="lib/sfFilebasePlugin.php" />
       <file role="data" name="lib/sfFilebasePluginGfxEditorAdapterIMagick.php" />
+      <file role="data" name="config/config.php" />
+      <file role="data" name="config/doctrine/schema.yml" />
+      <file role="data" name="config/routing.yml" />
+      <file role="data" name="config/core_compile.yml" />
       <file role="data" name="modules/sf_filebase_filedeliverer/config/view.yml" />
       <file role="data" name="modules/sf_filebase_filedeliverer/actions/components.class.php" />
       <file role="data" name="modules/sf_filebase_filedeliverer/actions/actions.class.php" />
       <file role="data" name="modules/sf_filebase_filedeliverer/templates/getTreeSuccess.php" />
       <file role="data" name="modules/sf_filebase_filedeliverer/templates/_directoryTree.php" />
+      <file role="data" name="modules/sf_filebase_gallery/config/view.yml" />
+      <file role="data" name="modules/sf_filebase_gallery/actions/components.class.php" />
+      <file role="data" name="modules/sf_filebase_gallery/actions/actions.class.php" />
+      <file role="data" name="modules/sf_filebase_gallery/templates/indexSuccess.php" />
+      <file role="data" name="modules/sf_filebase_gallery/templates/_breadcrumb.php" />
+      <file role="data" name="modules/sf_filebase_gallery/templates/_tagcloud.php" />
       <file role="data" name="modules/sf_filebase_file/lib/sf_filebase_fileGeneratorHelper.class.php" />
       <file role="data" name="modules/sf_filebase_file/lib/sf_filebase_fileGeneratorConfiguration.class.php" />
       <file role="data" name="modules/sf_filebase_file/config/generator.yml" />
@@ -80,12 +86,6 @@
       <file role="data" name="modules/sf_filebase_file/templates/editSuccess.php" />
       <file role="data" name="modules/sf_filebase_file/templates/swfuploadSuccess.php" />
       <file role="data" name="modules/sf_filebase_file/templates/_retrieveFiles.php" />
-      <file role="data" name="modules/sf_filebase_overview/config/view.yml" />
-      <file role="data" name="modules/sf_filebase_overview/actions/components.class.php" />
-      <file role="data" name="modules/sf_filebase_overview/actions/actions.class.php" />
-      <file role="data" name="modules/sf_filebase_overview/templates/indexSuccess.php" />
-      <file role="data" name="modules/sf_filebase_overview/templates/_breadcrumb.php" />
-      <file role="data" name="modules/sf_filebase_overview/templates/_tagcloud.php" />
       <file role="data" name="modules/sf_filebase_directory/lib/sf_filebase_directoryGeneratorConfiguration.class.php" />
       <file role="data" name="modules/sf_filebase_directory/lib/sf_filebase_directoryGeneratorHelper.class.php" />
       <file role="data" name="modules/sf_filebase_directory/config/generator.yml" />
@@ -516,6 +516,21 @@
   <phprelease>
   </phprelease>
   <changelog>
+    <release>
+      <version>
+        <release>0.8.2</release>
+        <api>0.7.0</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-06-18</date>
+      <notes>
+      * Cleaned up CSS in admin modules
+      </notes>
+    </release>
     <release>
       <version>
         <release>0.8.1</release>

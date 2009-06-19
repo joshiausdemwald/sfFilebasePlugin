@@ -38,7 +38,22 @@ class sf_filebase_fileActions extends autoSf_filebase_fileActions
 
   public function executeShow()
   {
-    $this->forward('sf_filebase_overview', 'index');
+    $this->forward('sf_filebase_gallery', 'index');
+  }
+
+  public function executeIndex(sfWebRequest $request)
+  {
+    $this->forward('sf_filebase_gallery', 'index');
+  }
+
+  public function executeNew(sfWebRequest $request)
+  {
+    parent::executeNew($request);
+    $pid = $request->getParameter('pid', null);
+    if($pid!==null)
+    {
+      $this->form->setDirectoryPid($pid);
+    }
   }
 
   public function executeCreate(sfWebRequest $request)

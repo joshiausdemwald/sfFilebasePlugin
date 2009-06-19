@@ -6,45 +6,9 @@
  * @copyright Stefan Koopmanschap
  * @package de.optimusprime.sfFilebaseplugin.adminArea
  */
-
-p.tagfilter, p.tagfilter *
-{
-  font-size: 12px;
-}
-
-p.tagfilter
-{
-  padding: 0 0 15px 0;
-}
-
-p.tagfilter a
-{
-  text-decoration: none;
-  font-weight: bold;
-  color: #00ffff;
-}
-
 p.tagfilter a:hover
 {
   background: #333;
-}
-
-.tagcloud
-{
-  width: 200px;
-  height: auto;
-  float:right;
-}
-
-.tagcloud a
-{
-  color: #00ffff;
-  text-decoration: none;
-}
-
-.tagcloud a:hover
-{
-  background: #333 none;
 }
 
 .cloud_xsmall {

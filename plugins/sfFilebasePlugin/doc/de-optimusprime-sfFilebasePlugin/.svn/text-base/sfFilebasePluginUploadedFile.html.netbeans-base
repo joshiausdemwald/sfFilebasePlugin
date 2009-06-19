@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class sfFilebasePluginUploadedFile</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class sfFilebasePluginUploadedFile</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+											<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+						
+			</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">sfFilebasePluginUploadedFile represents a uploaded File and provides methods  to handle one.</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_lib---sfFilebasePluginUploadedFile.php.html">/lib/sfFilebasePluginUploadedFile.php</a> (line <span class="field">20</span>)
+		</p>
+		
+				
+		<pre>sfValidatedFile
+   |
+   --sfFilebasePluginUploadedFile</pre>
+	
+			</div>
+</div>
+
+
+	<a name="sec-const-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constant Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Constants</span> (<a href="#sec-consts">details</a>)
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="const-summary">
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#UPLOAD_ERR_CANT_WRITE" title="details" class="const-name">UPLOAD_ERR_CANT_WRITE</a> = 					<span class="var-type"> UPLOAD_ERR_CANT_WRITE</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#UPLOAD_ERR_EXTENSION" title="details" class="const-name">UPLOAD_ERR_EXTENSION</a> = 					<span class="var-type"> UPLOAD_ERR_EXTENSION</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#UPLOAD_ERR_FORM_SIZE" title="details" class="const-name">UPLOAD_ERR_FORM_SIZE</a> = 					<span class="var-type"> UPLOAD_ERR_FORM_SIZE</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#UPLOAD_ERR_INI_SIZE" title="details" class="const-name">UPLOAD_ERR_INI_SIZE</a> = 					<span class="var-type"> UPLOAD_ERR_INI_SIZE</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#UPLOAD_ERR_NO_FILE" title="details" class="const-name">UPLOAD_ERR_NO_FILE</a> = 					<span class="var-type"> UPLOAD_ERR_NO_FILE</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#UPLOAD_ERR_NO_TMP_DIR" title="details" class="const-name">UPLOAD_ERR_NO_TMP_DIR</a> = 					<span class="var-type"> UPLOAD_ERR_NO_TMP_DIR</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#UPLOAD_ERR_OK" title="details" class="const-name">UPLOAD_ERR_OK</a> = 					<span class="var-type"> UPLOAD_ERR_OK</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#UPLOAD_ERR_PARTIAL" title="details" class="const-name">UPLOAD_ERR_PARTIAL</a> = 					<span class="var-type"> UPLOAD_ERR_PARTIAL</span>
+
+				</div>
+							</div>
+		</div>
+	</div>
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																								<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$error" title="details" class="var-name">$error</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																						
+				<div class="method-definition">
+											<span class="method-result">sfFilebasePluginUploadedFile</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$originalName</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$tempName</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$size</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$error</span> = <span class="var-default">null</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$tmp_name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$path:</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">integer</span>
+										<a href="#getError" title="details" class="method-name">getError</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#hasError" title="details" class="method-name">hasError</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#isError" title="details" class="method-name">isError</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$errcode</span> = <span class="var-default">null</span>])
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#moveUploadedFile" title="details" class="method-name">moveUploadedFile</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$destination_directory</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$overwrite</span> = <span class="var-default">true</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$chmod</span> = <span class="var-default">0777</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$inclusion_rules</span> = <span class="var-default">array()</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$exclusion_rules</span> = <span class="var-default">array()</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$file_name</span> = <span class="var-default">null</span>], <span class="var-type">boolean</span>&nbsp;<span class="var-name">$overwrite:</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$inclusion_rules:</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$exclusion_rules:</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$file_name:</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#save" title="details" class="method-name">save</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span> = <span class="var-default">null</span>], [<span class="var-type">int</span>&nbsp;<span class="var-name">$fileMode</span> = <span class="var-default">0666</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$create</span> = <span class="var-default">true</span>], [<span class="var-type">int</span>&nbsp;<span class="var-name">$dirMode</span> = <span class="var-default">0777</span>])
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#setPath" title="details" class="method-name">setPath</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$path</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$path:</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$error" id="$error"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$error</span>
+						(line <span class="line-number">35</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																			<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">53</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor</p>
+	
+	<div class="method-signature">
+		<span class="method-result">sfFilebasePluginUploadedFile</span>
+		<span class="method-name">
+			__construct
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$originalName</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$tempName</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$size</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$path</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$error</span> = <span class="var-default">null</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$tmp_name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$path:</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$tmp_name</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$error</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$size</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$path:</span><span class="var-description">: The directory where the uploaded file will be saved.  Default is null. $path might be delegated through  a whole form validation process, where all  instances of sfFilebasePluginUploadedFiles be  generated by the validator and files moved by  the orm-form instance.</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$originalName</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tempName</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$path</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetError" id="getError"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getError</span> (line <span class="line-number">218</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the error code of</p>
+<p class="description"><p>the uploaded file</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			getError
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodhasError" id="hasError"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">hasError</span> (line <span class="line-number">208</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			hasError
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodisError" id="isError"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">isError</span> (line <span class="line-number">199</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns true if there are file upload errors.</p>
+<p class="description"><p>If the argument $errcode is given, state is  checked by this specific errcode.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+				<li><span class="field">example:</span> example not found</li>
+				<li><span class="field">example:</span> example not found</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			isError
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$errcode</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$errcode</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmoveUploadedFile" id="moveUploadedFile"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">moveUploadedFile</span> (line <span class="line-number">107</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Moves an uploaded file into its final destination.</p>
+<p class="description"><p>Inclusion and exclusion rules consist of regex-strings,  they are used to check the target filenames against them.  Exclusion: Matched filenames throw exceptions.  Inclusion: Matched filenames will be passed as valid filenames.</p><p>$destination can be a string (absolute or relative (to sfFilebasePlugin) pathname) or an  instance of sfFilebasePluginFile.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			moveUploadedFile
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$destination_directory</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$overwrite</span> = <span class="var-default">true</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$chmod</span> = <span class="var-default">0777</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$inclusion_rules</span> = <span class="var-default">array()</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$exclusion_rules</span> = <span class="var-default">array()</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$file_name</span> = <span class="var-default">null</span>], <span class="var-type">boolean</span>&nbsp;<span class="var-name">$overwrite:</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$inclusion_rules:</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$exclusion_rules:</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$file_name:</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$overwrite:</span><span class="var-description">: True if existing files should be overwritten</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$inclusion_rules:</span><span class="var-description">: Rules defining files to be explicetly allowed</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$exclusion_rules:</span><span class="var-description">: Rules defining files to be not allowed</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$file_name:</span><span class="var-description">: If given, uploaded file will be renamed after moving.</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$destination_directory</span><span class="var-description">: sfFilebasePluginFile | string $destination_directory: Target directory to save the uploaded file</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$overwrite</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$chmod</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$inclusion_rules</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$exclusion_rules</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$file_name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsave" id="save"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">save</span> (line <span class="line-number">146</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Saves the uploaded file.</p>
+<p class="description"><p>This method can throw exceptions if there is a problem when saving the file.</p><p>If you don't pass a file name, it will be generated by the generateFilename method.  This will only work if you have passed a path when initializing this instance.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The filename without the $this-&gt;path prefix</li>
+				<li><span class="field">throws:</span> Exception</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			save
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span> = <span class="var-default">null</span>], [<span class="var-type">int</span>&nbsp;<span class="var-name">$fileMode</span> = <span class="var-default">0666</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$create</span> = <span class="var-default">true</span>], [<span class="var-type">int</span>&nbsp;<span class="var-name">$dirMode</span> = <span class="var-default">0777</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$file</span><span class="var-description">: The file path to save the file</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$fileMode</span><span class="var-description">: The octal mode to use for the new file</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$create</span><span class="var-description">: Indicates that we should make the directory before moving the file</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$dirMode</span><span class="var-description">: The octal mode to use when creating the directory</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetPath" id="setPath"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setPath</span> (line <span class="line-number">86</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the path to the file where the uploaded data have to be stored.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setPath
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$path</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$path:</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$path:</span><span class="var-description">: absolute pathname to directory.</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$path</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	<a name="sec-consts"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="constUPLOAD_ERR_CANT_WRITE" id="UPLOAD_ERR_CANT_WRITE"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">UPLOAD_ERR_CANT_WRITE</span>
+			 = <span class="const-default"> UPLOAD_ERR_CANT_WRITE</span>
+			(line <span class="line-number">28</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constUPLOAD_ERR_EXTENSION" id="UPLOAD_ERR_EXTENSION"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">UPLOAD_ERR_EXTENSION</span>
+			 = <span class="const-default"> UPLOAD_ERR_EXTENSION</span>
+			(line <span class="line-number">29</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constUPLOAD_ERR_FORM_SIZE" id="UPLOAD_ERR_FORM_SIZE"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">UPLOAD_ERR_FORM_SIZE</span>
+			 = <span class="const-default"> UPLOAD_ERR_FORM_SIZE</span>
+			(line <span class="line-number">25</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constUPLOAD_ERR_INI_SIZE" id="UPLOAD_ERR_INI_SIZE"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">UPLOAD_ERR_INI_SIZE</span>
+			 = <span class="const-default"> UPLOAD_ERR_INI_SIZE</span>
+			(line <span class="line-number">24</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constUPLOAD_ERR_NO_FILE" id="UPLOAD_ERR_NO_FILE"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">UPLOAD_ERR_NO_FILE</span>
+			 = <span class="const-default"> UPLOAD_ERR_NO_FILE</span>
+			(line <span class="line-number">27</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constUPLOAD_ERR_NO_TMP_DIR" id="UPLOAD_ERR_NO_TMP_DIR"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">UPLOAD_ERR_NO_TMP_DIR</span>
+			 = <span class="const-default"> UPLOAD_ERR_NO_TMP_DIR</span>
+			(line <span class="line-number">30</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constUPLOAD_ERR_OK" id="UPLOAD_ERR_OK"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">UPLOAD_ERR_OK</span>
+			 = <span class="const-default"> UPLOAD_ERR_OK</span>
+			(line <span class="line-number">23</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constUPLOAD_ERR_PARTIAL" id="UPLOAD_ERR_PARTIAL"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">UPLOAD_ERR_PARTIAL</span>
+			 = <span class="const-default"> UPLOAD_ERR_PARTIAL</span>
+			(line <span class="line-number">26</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+						
+		</div>
+	</div>
+
+	<p class="notes" id="credit">
+		Documentation generated on Mon, 25 May 2009 15:21:38 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+	</p>
+	</div></body>
+</html>

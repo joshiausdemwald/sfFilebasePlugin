@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 84
-/!svn/ver/18608/plugins/sfFilebasePlugin/modules/sf_filebase_filedeliverer/templates
+/!svn/ver/19387/plugins/sfFilebasePlugin/modules/sf_filebase_filedeliverer/templates
 END
 _directoryTree.php
 K 25
@@ -13,5 +13,5 @@ getTreeSuccess.php
 K 25
 svn:wc:ra_dav:version-url
 V 103
-/!svn/ver/18608/plugins/sfFilebasePlugin/modules/sf_filebase_filedeliverer/templates/getTreeSuccess.php
+/!svn/ver/19387/plugins/sfFilebasePlugin/modules/sf_filebase_filedeliverer/templates/getTreeSuccess.php
 END
