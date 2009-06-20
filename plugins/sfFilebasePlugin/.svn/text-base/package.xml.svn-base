@@ -10,9 +10,9 @@
     <email>johannes.heinen@gmail.com</email>
     <active>yes</active>
   </lead>
-  <date>2009-06-18</date>
+  <date>2009-06-20</date>
   <version>
-    <release>0.8.2</release>
+    <release>0.8.3</release>
     <api>0.7.0</api>
   </version>
   <stability>
@@ -23,77 +23,10 @@
   <notes>This is the first release candidate shipped with an administrative gui, build on top of DOCTRINE 1.1.</notes>
   <contents>
     <dir name="/">
-      <file role="data" name="lib/sfFilebasePluginGfxEditorAdapterInterface.php" />
-      <file role="data" name="lib/sfFilebasePluginImage.php" />
-      <file role="data" name="lib/model/doctrine/PluginsfFilebaseFile.class.php" />
-      <file role="data" name="lib/model/doctrine/PluginsfFilebaseDirectoryTable.class.php" />
-      <file role="data" name="lib/model/doctrine/PluginsfFilebaseFileTable.class.php" />
-      <file role="data" name="lib/model/doctrine/PluginsfAbstractFileTable.class.php" />
-      <file role="data" name="lib/model/doctrine/PluginsfFilebaseDirectory.class.php" />
-      <file role="data" name="lib/model/doctrine/PluginsfAbstractFile.class.php" />
-      <file role="data" name="lib/sfFilebasePluginFileObject.php" />
-      <file role="data" name="lib/sfFilebasePluginUploadedFilesManager.php" />
-      <file role="data" name="lib/sfFilebasePluginRecursiveDirectoryIterator.php" />
-      <file role="data" name="lib/sfFilebasePluginRecursiveIteratorIterator.php" />
-      <file role="data" name="lib/sfFilebasePluginUtil.php" />
-      <file role="data" name="lib/sfFilebasePluginStruct.php" />
-      <file role="data" name="lib/sfFilebasePluginDirectory.php" />
-      <file role="data" name="lib/validator/sfFilebasePluginValidatorFile.php" />
-      <file role="data" name="lib/form/doctrine/PluginsfFilebaseDirectoryForm.class.php" />
-      <file role="data" name="lib/form/doctrine/PluginsfAbstractFileForm.class.php" />
-      <file role="data" name="lib/form/doctrine/PluginsfFilebaseFileForm.class.php" />
-      <file role="data" name="lib/sfFilebasePluginGfxEditorAdapterGD.php" />
-      <file role="data" name="lib/sfFilebasePluginException.php" />
-      <file role="data" name="lib/helper/tagcloudHelper.php" />
-      <file role="data" name="lib/helper/sfFilebasePluginHelper.php" />
-      <file role="data" name="lib/task/sfFilebaseCreaterootTask.class.php" />
-      <file role="data" name="lib/task/sfFilebaseImportTask.class.php" />
-      <file role="data" name="lib/sfFilebasePluginFileExif.php" />
-      <file role="data" name="lib/filter/doctrine/PluginsfAbstractFileFormFilter.class.php" />
-      <file role="data" name="lib/filter/doctrine/PluginsfFilebaseFileFormFilter.class.php" />
-      <file role="data" name="lib/filter/doctrine/PluginsfFilebaseDirectoryFormFilter.class.php" />
-      <file role="data" name="lib/sfFilebasePluginGfxEditor.php" />
-      <file role="data" name="lib/sfFilebasePluginThumbnail.php" />
-      <file role="data" name="lib/sfFilebasePluginUploadedFile.php" />
-      <file role="data" name="lib/sfFilebasePluginWebRequest.php" />
-      <file role="data" name="lib/sfFilebasePluginFile.php" />
-      <file role="data" name="lib/sfFilebasePlugin.php" />
-      <file role="data" name="lib/sfFilebasePluginGfxEditorAdapterIMagick.php" />
       <file role="data" name="config/config.php" />
       <file role="data" name="config/doctrine/schema.yml" />
       <file role="data" name="config/routing.yml" />
       <file role="data" name="config/core_compile.yml" />
-      <file role="data" name="modules/sf_filebase_filedeliverer/config/view.yml" />
-      <file role="data" name="modules/sf_filebase_filedeliverer/actions/components.class.php" />
-      <file role="data" name="modules/sf_filebase_filedeliverer/actions/actions.class.php" />
-      <file role="data" name="modules/sf_filebase_filedeliverer/templates/getTreeSuccess.php" />
-      <file role="data" name="modules/sf_filebase_filedeliverer/templates/_directoryTree.php" />
-      <file role="data" name="modules/sf_filebase_gallery/config/view.yml" />
-      <file role="data" name="modules/sf_filebase_gallery/actions/components.class.php" />
-      <file role="data" name="modules/sf_filebase_gallery/actions/actions.class.php" />
-      <file role="data" name="modules/sf_filebase_gallery/templates/indexSuccess.php" />
-      <file role="data" name="modules/sf_filebase_gallery/templates/_breadcrumb.php" />
-      <file role="data" name="modules/sf_filebase_gallery/templates/_tagcloud.php" />
-      <file role="data" name="modules/sf_filebase_file/lib/sf_filebase_fileGeneratorHelper.class.php" />
-      <file role="data" name="modules/sf_filebase_file/lib/sf_filebase_fileGeneratorConfiguration.class.php" />
-      <file role="data" name="modules/sf_filebase_file/config/generator.yml" />
-      <file role="data" name="modules/sf_filebase_file/config/view.yml" />
-      <file role="data" name="modules/sf_filebase_file/actions/components.class.php" />
-      <file role="data" name="modules/sf_filebase_file/actions/actions.class.php" />
-      <file role="data" name="modules/sf_filebase_file/templates/_form_actions.php" />
-      <file role="data" name="modules/sf_filebase_file/templates/newSuccess.php" />
-      <file role="data" name="modules/sf_filebase_file/templates/indexSuccess.php" />
-      <file role="data" name="modules/sf_filebase_file/templates/editSuccess.php" />
-      <file role="data" name="modules/sf_filebase_file/templates/swfuploadSuccess.php" />
-      <file role="data" name="modules/sf_filebase_file/templates/_retrieveFiles.php" />
-      <file role="data" name="modules/sf_filebase_directory/lib/sf_filebase_directoryGeneratorConfiguration.class.php" />
-      <file role="data" name="modules/sf_filebase_directory/lib/sf_filebase_directoryGeneratorHelper.class.php" />
-      <file role="data" name="modules/sf_filebase_directory/config/generator.yml" />
-      <file role="data" name="modules/sf_filebase_directory/config/view.yml" />
-      <file role="data" name="modules/sf_filebase_directory/actions/actions.class.php" />
-      <file role="data" name="modules/sf_filebase_directory/templates/newSuccess.php" />
-      <file role="data" name="modules/sf_filebase_directory/templates/indexSuccess.php" />
-      <file role="data" name="modules/sf_filebase_directory/templates/editSuccess.php" />
       <file role="data" name="web/images/up.png" />
       <file role="data" name="web/images/folder.png" />
       <file role="data" name="web/js/fileupload.js" />
@@ -473,6 +406,72 @@
       <file role="data" name="web/js/vendor/ext/resources/css/xtheme-blue.css" />
       <file role="data" name="web/css/main.css" />
       <file role="data" name="web/css/cloud.css" />
+      <file role="data" name="modules/sf_filebase_filedeliverer/config/view.yml" />
+      <file role="data" name="modules/sf_filebase_filedeliverer/actions/components.class.php" />
+      <file role="data" name="modules/sf_filebase_filedeliverer/actions/actions.class.php" />
+      <file role="data" name="modules/sf_filebase_filedeliverer/templates/getTreeSuccess.php" />
+      <file role="data" name="modules/sf_filebase_filedeliverer/templates/_directoryTree.php" />
+      <file role="data" name="modules/sf_filebase_gallery/config/view.yml" />
+      <file role="data" name="modules/sf_filebase_gallery/actions/components.class.php" />
+      <file role="data" name="modules/sf_filebase_gallery/actions/actions.class.php" />
+      <file role="data" name="modules/sf_filebase_gallery/templates/indexSuccess.php" />
+      <file role="data" name="modules/sf_filebase_gallery/templates/_breadcrumb.php" />
+      <file role="data" name="modules/sf_filebase_gallery/templates/_tagcloud.php" />
+      <file role="data" name="modules/sf_filebase_file/lib/sf_filebase_fileGeneratorHelper.class.php" />
+      <file role="data" name="modules/sf_filebase_file/lib/sf_filebase_fileGeneratorConfiguration.class.php" />
+      <file role="data" name="modules/sf_filebase_file/config/generator.yml" />
+      <file role="data" name="modules/sf_filebase_file/config/view.yml" />
+      <file role="data" name="modules/sf_filebase_file/actions/components.class.php" />
+      <file role="data" name="modules/sf_filebase_file/actions/actions.class.php" />
+      <file role="data" name="modules/sf_filebase_file/templates/_form_actions.php" />
+      <file role="data" name="modules/sf_filebase_file/templates/newSuccess.php" />
+      <file role="data" name="modules/sf_filebase_file/templates/indexSuccess.php" />
+      <file role="data" name="modules/sf_filebase_file/templates/swfuploadSuccess.php" />
+      <file role="data" name="modules/sf_filebase_file/templates/_retrieveFiles.php" />
+      <file role="data" name="modules/sf_filebase_directory/lib/sf_filebase_directoryGeneratorConfiguration.class.php" />
+      <file role="data" name="modules/sf_filebase_directory/lib/sf_filebase_directoryGeneratorHelper.class.php" />
+      <file role="data" name="modules/sf_filebase_directory/config/generator.yml" />
+      <file role="data" name="modules/sf_filebase_directory/config/view.yml" />
+      <file role="data" name="modules/sf_filebase_directory/actions/actions.class.php" />
+      <file role="data" name="modules/sf_filebase_directory/templates/newSuccess.php" />
+      <file role="data" name="modules/sf_filebase_directory/templates/indexSuccess.php" />
+      <file role="data" name="modules/sf_filebase_directory/templates/editSuccess.php" />
+      <file role="data" name="lib/sfFilebasePluginGfxEditorAdapterInterface.php" />
+      <file role="data" name="lib/sfFilebasePluginImage.php" />
+      <file role="data" name="lib/model/doctrine/PluginsfFilebaseFile.class.php" />
+      <file role="data" name="lib/model/doctrine/PluginsfFilebaseDirectoryTable.class.php" />
+      <file role="data" name="lib/model/doctrine/PluginsfFilebaseFileTable.class.php" />
+      <file role="data" name="lib/model/doctrine/PluginsfAbstractFileTable.class.php" />
+      <file role="data" name="lib/model/doctrine/PluginsfFilebaseDirectory.class.php" />
+      <file role="data" name="lib/model/doctrine/PluginsfAbstractFile.class.php" />
+      <file role="data" name="lib/sfFilebasePluginFileObject.php" />
+      <file role="data" name="lib/sfFilebasePluginUploadedFilesManager.php" />
+      <file role="data" name="lib/sfFilebasePluginRecursiveDirectoryIterator.php" />
+      <file role="data" name="lib/sfFilebasePluginRecursiveIteratorIterator.php" />
+      <file role="data" name="lib/sfFilebasePluginUtil.php" />
+      <file role="data" name="lib/sfFilebasePluginStruct.php" />
+      <file role="data" name="lib/sfFilebasePluginDirectory.php" />
+      <file role="data" name="lib/validator/sfFilebasePluginValidatorFile.php" />
+      <file role="data" name="lib/form/doctrine/PluginsfFilebaseDirectoryForm.class.php" />
+      <file role="data" name="lib/form/doctrine/PluginsfAbstractFileForm.class.php" />
+      <file role="data" name="lib/form/doctrine/PluginsfFilebaseFileForm.class.php" />
+      <file role="data" name="lib/sfFilebasePluginGfxEditorAdapterGD.php" />
+      <file role="data" name="lib/sfFilebasePluginException.php" />
+      <file role="data" name="lib/helper/tagcloudHelper.php" />
+      <file role="data" name="lib/helper/sfFilebasePluginHelper.php" />
+      <file role="data" name="lib/task/sfFilebaseCreaterootTask.class.php" />
+      <file role="data" name="lib/task/sfFilebaseImportTask.class.php" />
+      <file role="data" name="lib/sfFilebasePluginFileExif.php" />
+      <file role="data" name="lib/filter/doctrine/PluginsfAbstractFileFormFilter.class.php" />
+      <file role="data" name="lib/filter/doctrine/PluginsfFilebaseFileFormFilter.class.php" />
+      <file role="data" name="lib/filter/doctrine/PluginsfFilebaseDirectoryFormFilter.class.php" />
+      <file role="data" name="lib/sfFilebasePluginGfxEditor.php" />
+      <file role="data" name="lib/sfFilebasePluginThumbnail.php" />
+      <file role="data" name="lib/sfFilebasePluginUploadedFile.php" />
+      <file role="data" name="lib/sfFilebasePluginWebRequest.php" />
+      <file role="data" name="lib/sfFilebasePluginFile.php" />
+      <file role="data" name="lib/sfFilebasePlugin.php" />
+      <file role="data" name="lib/sfFilebasePluginGfxEditorAdapterIMagick.php" />
 
       <file role="data" name="README" />
       <file role="data" name="LICENSE" />
@@ -516,6 +515,22 @@
   <phprelease>
   </phprelease>
   <changelog>
+    <release>
+      <version>
+        <release>0.8.3</release>
+        <api>0.7.0</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-06-20</date>
+      <notes>
+      * Fixed bug that nested sets tree was not updated when an item was deleted by admin generated modules.
+      * Improved mime type detection by recursive dependancy list, todo: maintain this list or steal one  ;)
+      </notes>
+    </release>
     <release>
       <version>
         <release>0.8.2</release>

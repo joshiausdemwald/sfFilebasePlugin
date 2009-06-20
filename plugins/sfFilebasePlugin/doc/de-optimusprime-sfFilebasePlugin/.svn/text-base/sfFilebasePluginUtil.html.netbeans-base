@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class sfFilebasePluginUtil</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class sfFilebasePluginUtil</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">sfFilebasePlugin Util is a static class that provides useful  methods for dealing with files.</p>
+	<ul class="tags">
+				<li><span class="field">copyright:</span> Johannes Heinen &lt;johannes.heinen@gmail.com&gt;</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_lib---sfFilebasePluginUtil.php.html">/lib/sfFilebasePluginUtil.php</a> (line <span class="field">20</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+												<div class="var-title">
+					static <span class="var-type">array</span>
+					<a href="#$extensions" title="details" class="var-name">$extensions</a>
+				</div>
+																<div class="var-title">
+					static <span class="var-type">mixed</span>
+					<a href="#$WEB_IMAGES" title="details" class="var-name">$WEB_IMAGES</a>
+				</div>
+																															</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+										
+				<div class="method-definition">
+					static 						<span class="method-result">string</span>
+										<a href="#getExtensionByMime" title="details" class="method-name">getExtensionByMime</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$mime</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">null</span>])
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">boolean</span>
+										<a href="#getIsImage" title="details" class="method-name">getIsImage</a>
+											(<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>&nbsp;<span class="var-name">$file</span>)
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">boolean</span>
+										<a href="#getIsSupportedImage" title="details" class="method-name">getIsSupportedImage</a>
+											(<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>&nbsp;<span class="var-name">$file</span>)
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">boolean</span>
+										<a href="#getIsWebImage" title="details" class="method-name">getIsWebImage</a>
+											(<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>&nbsp;<span class="var-name">$file</span>)
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">int</span>
+										<a href="#getMaxUploadFileSize" title="details" class="method-name">getMaxUploadFileSize</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$default_size</span> = <span class="var-default">null</span>])
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">string</span>
+										<a href="#getMimeByExtension" title="details" class="method-name">getMimeByExtension</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$extension</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">null</span>])
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">array</span>
+										<a href="#getMimeExtensions" title="details" class="method-name">getMimeExtensions</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">string</span>
+										<a href="#getMimeType" title="details" class="method-name">getMimeType</a>
+											(<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>&nbsp;<span class="var-name">$file</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">'application/octet-stream'</span>], <span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>&nbsp;<span class="var-name">$absolute_path</span>)
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">string</span>
+										<a href="#getStringFilesize" title="details" class="method-name">getStringFilesize</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$size</span>)
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">string</span>
+										<a href="#getStringTypeByExtension" title="details" class="method-name">getStringTypeByExtension</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$ext</span>)
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">boolean</span>
+										<a href="#isAbsolutePathname" title="details" class="method-name">isAbsolutePathname</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$pathname</span>)
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#parseHTMLColor" title="details" class="method-name">parseHTMLColor</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$color</span>)
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">string</span>
+										<a href="#unifySlashes" title="details" class="method-name">unifySlashes</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>)
+									</div>
+																																																																																																																							</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$extensions" id="$extensions"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			static <span class="var-type">array</span>
+			<span class="var-name">$extensions</span>
+			 = <span class="var-default">array(<br />    'application/andrew-inset' =&gt; 'ez',<br />    'application/appledouble' =&gt; 'base64',<br />    'application/applefile' =&gt; 'base64',<br />    'application/commonground' =&gt; 'dp',<br />    'application/cprplayer' =&gt; 'pqi',<br />    'application/dsptype' =&gt; 'tsp',<br />    'application/excel' =&gt; 'xls',<br />    'application/font-tdpfr' =&gt; 'pfr',<br />    'application/futuresplash' =&gt; 'spl',<br />    'application/hstu' =&gt; 'stk',<br />    'application/hyperstudio' =&gt; 'stk',<br />    'application/javascript' =&gt; 'js',<br />    'application/mac-binhex40' =&gt; 'hqx',<br />    'application/mac-compactpro' =&gt; 'cpt',<br />    'application/mbed' =&gt; 'mbd',<br />    'application/mirage' =&gt; 'mfp',<br />    'application/msword' =&gt; 'doc',<br />    'application/ocsp-request' =&gt; 'orq',<br />    'application/ocsp-response' =&gt; 'ors',<br />    'application/octet-stream' =&gt; 'bin',<br />    'application/oda' =&gt; 'oda',<br />    'application/ogg' =&gt; 'ogg',<br />    'application/pdf' =&gt; 'pdf',<br />    'application/x-pdf' =&gt; 'pdf',<br />    'application/pgp-encrypted' =&gt; '7bit',<br />    'application/pgp-keys' =&gt; '7bit',<br />    'application/pgp-signature' =&gt; 'sig',<br />    'application/pkcs10' =&gt; 'p10',<br />    'application/pkcs7-mime' =&gt; 'p7m',<br />    'application/pkcs7-signature' =&gt; 'p7s',<br />    'application/pkix-cert' =&gt; 'cer',<br />    'application/pkix-crl' =&gt; 'crl',<br />    'application/pkix-pkipath' =&gt; 'pkipath',<br />    'application/pkixcmp' =&gt; 'pki',<br />    'application/postscript' =&gt; 'ps',<br />    'application/presentations' =&gt; 'shw',<br />    'application/prs.cww' =&gt; 'cw',<br />    'application/prs.nprend' =&gt; 'rnd',<br />    'application/quest' =&gt; 'qrt',<br />    'application/rtf' =&gt; 'rtf',<br />    'application/sgml-open-catalog' =&gt; 'soc',<br />    'application/sieve' =&gt; 'siv',<br />    'application/smil' =&gt; 'smi',<br />    'application/toolbook' =&gt; 'tbk',<br />    'application/vnd.3gpp.pic-bw-large' =&gt; 'plb',<br />    'application/vnd.3gpp.pic-bw-small' =&gt; 'psb',<br />    'application/vnd.3gpp.pic-bw-var' =&gt; 'pvb',<br />    'application/vnd.3gpp.sms' =&gt; 'sms',<br />    'application/vnd.acucorp' =&gt; 'atc',<br />    'application/vnd.adobe.xfdf' =&gt; 'xfdf',<br />    'application/vnd.amiga.amu' =&gt; 'ami',<br />    'application/vnd.blueice.multipass' =&gt; 'mpm',<br />    'application/vnd.cinderella' =&gt; 'cdy',<br />    'application/vnd.cosmocaller' =&gt; 'cmc',<br />    'application/vnd.criticaltools.wbs+xml' =&gt; 'wbs',<br />    'application/vnd.curl' =&gt; 'curl',<br />    'application/vnd.data-vision.rdz' =&gt; 'rdz',<br />    'application/vnd.dreamfactory' =&gt; 'dfac',<br />    'application/vnd.fsc.weblauch' =&gt; 'fsc',<br />    'application/vnd.genomatix.tuxedo' =&gt; 'txd',<br />    'application/vnd.hbci' =&gt; 'hbci',<br />    'application/vnd.hhe.lesson-player' =&gt; 'les',<br />    'application/vnd.hp-hpgl' =&gt; 'plt',<br />    'application/vnd.ibm.electronic-media' =&gt; 'emm',<br />    'application/vnd.ibm.rights-management' =&gt; 'irm',<br />    'application/vnd.ibm.secure-container' =&gt; 'sc',<br />    'application/vnd.ipunplugged.rcprofile' =&gt; 'rcprofile',<br />    'application/vnd.irepository.package+xml' =&gt; 'irp',<br />    'application/vnd.jisp' =&gt; 'jisp',<br />    'application/vnd.kde.karbon' =&gt; 'karbon',<br />    'application/vnd.kde.kchart' =&gt; 'chrt',<br />    'application/vnd.kde.kformula' =&gt; 'kfo',<br />    'application/vnd.kde.kivio' =&gt; 'flw',<br />    'application/vnd.kde.kontour' =&gt; 'kon',<br />    'application/vnd.kde.kpresenter' =&gt; 'kpr',<br />    'application/vnd.kde.kspread' =&gt; 'ksp',<br />    'application/vnd.kde.kword' =&gt; 'kwd',<br />    'application/vnd.kenameapp' =&gt; 'htke',<br />    'application/vnd.kidspiration' =&gt; 'kia',<br />    'application/vnd.kinar' =&gt; 'kne',<br />    'application/vnd.llamagraphics.life-balance.desktop' =&gt; 'lbd',<br />    'application/vnd.llamagraphics.life-balance.exchange+xml' =&gt; 'lbe',<br />    'application/vnd.lotus-1-2-3' =&gt; 'wks',<br />    'application/vnd.mcd' =&gt; 'mcd',<br />    'application/vnd.mfmp' =&gt; 'mfm',<br />    'application/vnd.micrografx.flo' =&gt; 'flo',<br />    'application/vnd.micrografx.igx' =&gt; 'igx',<br />    'application/vnd.mif' =&gt; 'mif',<br />    'application/vnd.mophun.application' =&gt; 'mpn',<br />    'application/vnd.mophun.certificate' =&gt; 'mpc',<br />    'application/vnd.mozilla.xul+xml' =&gt; 'xul',<br />    'application/vnd.ms-artgalry' =&gt; 'cil',<br />    'application/vnd.ms-asf' =&gt; 'asf',<br />    'application/vnd.ms-excel' =&gt; 'xls',<br />    'application/vnd.ms-lrm' =&gt; 'lrm',<br />    'application/vnd.ms-powerpoint' =&gt; 'ppt',<br />    'application/vnd.ms-project' =&gt; 'mpp',<br />    'application/vnd.ms-tnef' =&gt; 'base64',<br />    'application/vnd.ms-works' =&gt; 'base64',<br />    'application/vnd.ms-wpl' =&gt; 'wpl',<br />    'application/vnd.mseq' =&gt; 'mseq',<br />    'application/vnd.nervana' =&gt; 'ent',<br />    'application/vnd.nokia.radio-preset' =&gt; 'rpst',<br />    'application/vnd.nokia.radio-presets' =&gt; 'rpss',<br />    'application/vnd.oasis.opendocument.text' =&gt; 'odt',<br />    'application/vnd.oasis.opendocument.text-template' =&gt; 'ott',<br />    'application/vnd.oasis.opendocument.text-web' =&gt; 'oth',<br />    'application/vnd.oasis.opendocument.text-master' =&gt; 'odm',<br />    'application/vnd.oasis.opendocument.graphics' =&gt; 'odg',<br />    'application/vnd.oasis.opendocument.graphics-template' =&gt; 'otg',<br />    'application/vnd.oasis.opendocument.presentation' =&gt; 'odp',<br />    'application/vnd.oasis.opendocument.presentation-template' =&gt; 'otp',<br />    'application/vnd.oasis.opendocument.spreadsheet' =&gt; 'ods',<br />    'application/vnd.oasis.opendocument.spreadsheet-template' =&gt; 'ots',<br />    'application/vnd.oasis.opendocument.chart' =&gt; 'odc',<br />    'application/vnd.oasis.opendocument.formula' =&gt; 'odf',<br />    'application/vnd.oasis.opendocument.database' =&gt; 'odb',<br />    'application/vnd.oasis.opendocument.image' =&gt; 'odi',<br />    'application/vnd.palm' =&gt; 'prc',<br />    'application/vnd.picsel' =&gt; 'efif',<br />    'application/vnd.pvi.ptid1' =&gt; 'pti',<br />    'application/vnd.quark.quarkxpress' =&gt; 'qxd',<br />    'application/vnd.sealed.doc' =&gt; 'sdoc',<br />    'application/vnd.sealed.eml' =&gt; 'seml',<br />    'application/vnd.sealed.mht' =&gt; 'smht',<br />    'application/vnd.sealed.ppt' =&gt; 'sppt',<br />    'application/vnd.sealed.xls' =&gt; 'sxls',<br />    'application/vnd.sealedmedia.softseal.html' =&gt; 'stml',<br />    'application/vnd.sealedmedia.softseal.pdf' =&gt; 'spdf',<br />    'application/vnd.seemail' =&gt; 'see',<br />    'application/vnd.smaf' =&gt; 'mmf',<br />    'application/vnd.sun.xml.calc' =&gt; 'sxc',<br />    'application/vnd.sun.xml.calc.template' =&gt; 'stc',<br />    'application/vnd.sun.xml.draw' =&gt; 'sxd',<br />    'application/vnd.sun.xml.draw.template' =&gt; 'std',<br />    'application/vnd.sun.xml.impress' =&gt; 'sxi',<br />    'application/vnd.sun.xml.impress.template' =&gt; 'sti',<br />    'application/vnd.sun.xml.math' =&gt; 'sxm',<br />    'application/vnd.sun.xml.writer' =&gt; 'sxw',<br />    'application/vnd.sun.xml.writer.global' =&gt; 'sxg',<br />    'application/vnd.sun.xml.writer.template' =&gt; 'stw',<br />    'application/vnd.sus-calendar' =&gt; 'sus',<br />    'application/vnd.vidsoft.vidconference' =&gt; 'vsc',<br />    'application/vnd.visio' =&gt; 'vsd',<br />    'application/vnd.visionary' =&gt; 'vis',<br />    'application/vnd.wap.sic' =&gt; 'sic',<br />    'application/vnd.wap.slc' =&gt; 'slc',<br />    'application/vnd.wap.wbxml' =&gt; 'wbxml',<br />    'application/vnd.wap.wmlc' =&gt; 'wmlc',<br />    'application/vnd.wap.wmlscriptc' =&gt; 'wmlsc',<br />    'application/vnd.webturbo' =&gt; 'wtb',<br />    'application/vnd.wordperfect' =&gt; 'wpd',<br />    'application/vnd.wqd' =&gt; 'wqd',<br />    'application/vnd.wv.csp+wbxml' =&gt; 'wv',<br />    'application/vnd.wv.csp+xml' =&gt; '8bit',<br />    'application/vnd.wv.ssp+xml' =&gt; '8bit',<br />    'application/vnd.yamaha.hv-dic' =&gt; 'hvd',<br />    'application/vnd.yamaha.hv-script' =&gt; 'hvs',<br />    'application/vnd.yamaha.hv-voice' =&gt; 'hvp',<br />    'application/vnd.yamaha.smaf-audio' =&gt; 'saf',<br />    'application/vnd.yamaha.smaf-phrase' =&gt; 'spf',<br />    'application/vocaltec-media-desc' =&gt; 'vmd',<br />    'application/vocaltec-media-file' =&gt; 'vmf',<br />    'application/vocaltec-talker' =&gt; 'vtk',<br />    'application/watcherinfo+xml' =&gt; 'wif',<br />    'application/wordperfect5.1' =&gt; 'wp5',<br />    'application/x-123' =&gt; 'wk',<br />    'application/x-7th_level_event' =&gt; '7ls',<br />    'application/x-authorware-bin' =&gt; 'aab',<br />    'application/x-authorware-map' =&gt; 'aam',<br />    'application/x-authorware-seg' =&gt; 'aas',<br />    'application/x-bcpio' =&gt; 'bcpio',<br />    'application/x-bleeper' =&gt; 'bleep',<br />    'application/x-bzip2' =&gt; 'bz2',<br />    'application/x-cdlink' =&gt; 'vcd',<br />    'application/x-chat' =&gt; 'chat',<br />    'application/x-chess-pgn' =&gt; 'pgn',<br />    'application/x-compress' =&gt; 'z',<br />    'application/x-cpio' =&gt; 'cpio',<br />    'application/x-cprplayer' =&gt; 'pqf',<br />    'application/x-csh' =&gt; 'csh',<br />    'application/x-cu-seeme' =&gt; 'csm',<br />    'application/x-cult3d-object' =&gt; 'co',<br />    'application/x-debian-package' =&gt; 'deb',<br />    'application/x-director' =&gt; 'dcr',<br />    'application/x-dvi' =&gt; 'dvi',<br />    'application/x-envoy' =&gt; 'evy',<br />    'application/x-futuresplash' =&gt; 'spl',<br />    'application/x-gtar' =&gt; 'gtar',<br />    'application/x-gzip' =&gt; 'gz',<br />    'application/x-hdf' =&gt; 'hdf',<br />    'application/x-hep' =&gt; 'hep',<br />    'application/x-html+ruby' =&gt; 'rhtml',<br />    'application/x-httpd-miva' =&gt; 'mv',<br />    'application/x-httpd-php' =&gt; 'phtml',<br />    'application/x-ica' =&gt; 'ica',<br />    'application/x-imagemap' =&gt; 'imagemap',<br />    'application/x-ipix' =&gt; 'ipx',<br />    'application/x-ipscript' =&gt; 'ips',<br />    'application/x-java-archive' =&gt; 'jar',<br />    'application/x-java-jnlp-file' =&gt; 'jnlp',<br />    'application/x-java-serialized-object' =&gt; 'ser',<br />    'application/x-java-vm' =&gt; 'class',<br />    'application/x-javascript' =&gt; 'js',<br />    'application/x-koan' =&gt; 'skp',<br />    'application/x-latex' =&gt; 'latex',<br />    'application/x-mac-compactpro' =&gt; 'cpt',<br />    'application/x-maker' =&gt; 'frm',<br />    'application/x-mathcad' =&gt; 'mcd',<br />    'application/x-midi' =&gt; 'mid',<br />    'application/x-mif' =&gt; 'mif',<br />    'application/x-msaccess' =&gt; 'mda',<br />    'application/x-msdos-program' =&gt; 'com',<br />    'application/x-msdownload' =&gt; 'base64',<br />    'application/x-msexcel' =&gt; 'xls',<br />    'application/x-msword' =&gt; 'doc',<br />    'application/x-netcdf' =&gt; 'nc',<br />    'application/x-ns-proxy-autoconfig' =&gt; 'pac',<br />    'application/x-pagemaker' =&gt; 'pm5',<br />    'application/x-perl' =&gt; 'pl',<br />    'application/x-pn-realmedia' =&gt; 'rp',<br />    'application/x-python' =&gt; 'py',<br />    'application/x-quicktimeplayer' =&gt; 'qtl',<br />    'application/x-rar-compressed' =&gt; 'rar',<br />    'application/x-ruby' =&gt; 'rb',<br />    'application/x-sh' =&gt; 'sh',<br />    'application/x-shar' =&gt; 'shar',<br />    'application/x-shockwave-flash' =&gt; 'swf',<br />    'application/x-sprite' =&gt; 'spr',<br />    'application/x-spss' =&gt; 'sav',<br />    'application/x-spt' =&gt; 'spt',<br />    'application/x-stuffit' =&gt; 'sit',<br />    'application/x-sv4cpio' =&gt; 'sv4cpio',<br />    'application/x-sv4crc' =&gt; 'sv4crc',<br />    'application/x-tar' =&gt; 'tar',<br />    'application/x-tcl' =&gt; 'tcl',<br />    'application/x-tex' =&gt; 'tex',<br />    'application/x-texinfo' =&gt; 'texinfo',<br />    'application/x-troff' =&gt; 't',<br />    'application/x-troff-man' =&gt; 'man',<br />    'application/x-troff-me' =&gt; 'me',<br />    'application/x-troff-ms' =&gt; 'ms',<br />    'application/x-twinvq' =&gt; 'vqf',<br />    'application/x-twinvq-plugin' =&gt; 'vqe',<br />    'application/x-ustar' =&gt; 'ustar',<br />    'application/x-vmsbackup' =&gt; 'bck',<br />    'application/x-wais-source' =&gt; 'src',<br />    'application/x-wingz' =&gt; 'wz',<br />    'application/x-word' =&gt; 'base64',<br />    'application/x-wordperfect6.1' =&gt; 'wp6',<br />    'application/x-x509-ca-cert' =&gt; 'crt',<br />    'application/x-zip' =&gt; 'zip',<br />    'application/x-zip-compressed' =&gt; 'zip',<br />    'application/xhtml+xml' =&gt; 'xhtml',<br />    'application/zip' =&gt; 'zip',<br />    'audio/3gpp' =&gt; '3gpp',<br />    'audio/amr' =&gt; 'amr',<br />    'audio/amr-wb' =&gt; 'awb',<br />    'audio/basic' =&gt; 'au',<br />    'audio/evrc' =&gt; 'evc',<br />    'audio/l16' =&gt; 'l16',<br />    'audio/midi' =&gt; 'mid',<br />    'audio/mpeg' =&gt; 'mp3',<br />    'audio/prs.sid' =&gt; 'sid',<br />    'audio/qcelp' =&gt; 'qcp',<br />    'audio/smv' =&gt; 'smv',<br />    'audio/vnd.audiokoz' =&gt; 'koz',<br />    'audio/vnd.digital-winds' =&gt; 'eol',<br />    'audio/vnd.everad.plj' =&gt; 'plj',<br />    'audio/vnd.lucent.voice' =&gt; 'lvp',<br />    'audio/vnd.nokia.mobile-xmf' =&gt; 'mxmf',<br />    'audio/vnd.nortel.vbk' =&gt; 'vbk',<br />    'audio/vnd.nuera.ecelp4800' =&gt; 'ecelp4800',<br />    'audio/vnd.nuera.ecelp7470' =&gt; 'ecelp7470',<br />    'audio/vnd.nuera.ecelp9600' =&gt; 'ecelp9600',<br />    'audio/vnd.sealedmedia.softseal.mpeg' =&gt; 'smp3',<br />    'audio/voxware' =&gt; 'vox',<br />    'audio/x-aiff' =&gt; 'aif',<br />    'audio/x-mid' =&gt; 'mid',<br />    'audio/x-midi' =&gt; 'mid',<br />    'audio/x-mpeg' =&gt; 'mp2',<br />    'audio/x-mpegurl' =&gt; 'mpu',<br />    'audio/x-pn-realaudio' =&gt; 'rm',<br />    'audio/x-pn-realaudio-plugin' =&gt; 'rpm',<br />    'audio/x-realaudio' =&gt; 'ra',<br />    'audio/x-wav' =&gt; 'wav',<br />    'chemical/x-csml' =&gt; 'csm',<br />    'chemical/x-embl-dl-nucleotide' =&gt; 'emb',<br />    'chemical/x-gaussian-cube' =&gt; 'cube',<br />    'chemical/x-gaussian-input' =&gt; 'gau',<br />    'chemical/x-jcamp-dx' =&gt; 'jdx',<br />    'chemical/x-mdl-molfile' =&gt; 'mol',<br />    'chemical/x-mdl-rxnfile' =&gt; 'rxn',<br />    'chemical/x-mdl-tgf' =&gt; 'tgf',<br />    'chemical/x-mopac-input' =&gt; 'mop',<br />    'chemical/x-pdb' =&gt; 'pdb',<br />    'chemical/x-rasmol' =&gt; 'scr',<br />    'chemical/x-xyz' =&gt; 'xyz',<br />    'drawing/dwf' =&gt; 'dwf',<br />    'drawing/x-dwf' =&gt; 'dwf',<br />    'i-world/i-vrml' =&gt; 'ivr',<br />    'image/bmp' =&gt; 'bmp',<br />    'image/cewavelet' =&gt; 'wif',<br />    'image/cis-cod' =&gt; 'cod',<br />    'image/fif' =&gt; 'fif',<br />    'image/gif' =&gt; 'gif',<br />    'image/ief' =&gt; 'ief',<br />    'image/jp2' =&gt; 'jp2',<br />    'image/jpeg' =&gt; 'jpg',<br />    'image/jpm' =&gt; 'jpm',<br />    'image/jpx' =&gt; 'jpf',<br />    'image/pict' =&gt; 'pic',<br />    'image/pjpeg' =&gt; 'jpg',<br />    'image/png' =&gt; 'png',<br />    'image/targa' =&gt; 'tga',<br />    'image/tiff' =&gt; 'tif',<br />    'image/vn-svf' =&gt; 'svf',<br />    'image/vnd.dgn' =&gt; 'dgn',<br />    'image/vnd.djvu' =&gt; 'djvu',<br />    'image/vnd.dwg' =&gt; 'dwg',<br />    'image/vnd.glocalgraphics.pgb' =&gt; 'pgb',<br />    'image/vnd.microsoft.icon' =&gt; 'ico',<br />    'image/vnd.ms-modi' =&gt; 'mdi',<br />    'image/vnd.sealed.png' =&gt; 'spng',<br />    'image/vnd.sealedmedia.softseal.gif' =&gt; 'sgif',<br />    'image/vnd.sealedmedia.softseal.jpg' =&gt; 'sjpg',<br />    'image/vnd.wap.wbmp' =&gt; 'wbmp',<br />    'image/x-bmp' =&gt; 'bmp',<br />    'image/x-cmu-raster' =&gt; 'ras',<br />    'image/x-freehand' =&gt; 'fh4',<br />    'image/x-png' =&gt; 'png',<br />    'image/x-portable-anymap' =&gt; 'pnm',<br />    'image/x-portable-bitmap' =&gt; 'pbm',<br />    'image/x-portable-graymap' =&gt; 'pgm',<br />    'image/x-portable-pixmap' =&gt; 'ppm',<br />    'image/x-rgb' =&gt; 'rgb',<br />    'image/x-xbitmap' =&gt; 'xbm',<br />    'image/x-xpixmap' =&gt; 'xpm',<br />    'image/x-xwindowdump' =&gt; 'xwd',<br />    'message/external-body' =&gt; '8bit',<br />    'message/news' =&gt; '8bit',<br />    'message/partial' =&gt; '8bit',<br />    'message/rfc822' =&gt; '8bit',<br />    'model/iges' =&gt; 'igs',<br />    'model/mesh' =&gt; 'msh',<br />    'model/vnd.parasolid.transmit.binary' =&gt; 'x_b',<br />    'model/vnd.parasolid.transmit.text' =&gt; 'x_t',<br />    'model/vrml' =&gt; 'wrl',<br />    'multipart/alternative' =&gt; '8bit',<br />    'multipart/appledouble' =&gt; '8bit',<br />    'multipart/digest' =&gt; '8bit',<br />    'multipart/mixed' =&gt; '8bit',<br />    'multipart/parallel' =&gt; '8bit',<br />    'text/comma-separated-values' =&gt; 'csv',<br />    'text/css' =&gt; 'css',<br />    'text/html' =&gt; 'html',<br />    'text/plain' =&gt; 'txt',<br />    'text/prs.fallenstein.rst' =&gt; 'rst',<br />    'text/richtext' =&gt; 'rtx',<br />    'text/rtf' =&gt; 'rtf',<br />    'text/sgml' =&gt; 'sgml',<br />    'text/tab-separated-values' =&gt; 'tsv',<br />    'text/vnd.net2phone.commcenter.command' =&gt; 'ccc',<br />    'text/vnd.sun.j2me.app-descriptor' =&gt; 'jad',<br />    'text/vnd.wap.si' =&gt; 'si',<br />    'text/vnd.wap.sl' =&gt; 'sl',<br />    'text/vnd.wap.wml' =&gt; 'wml',<br />    'text/vnd.wap.wmlscript' =&gt; 'wmls',<br />    'text/x-hdml' =&gt; 'hdml',<br />    'text/x-setext' =&gt; 'etx',<br />    'text/x-sgml' =&gt; 'sgml',<br />    'text/x-speech' =&gt; 'talk',<br />    'text/x-vcalendar' =&gt; 'vcs',<br />    'text/x-vcard' =&gt; 'vcf',<br />    'text/xml' =&gt; 'xml',<br />    'ulead/vrml' =&gt; 'uvr',<br />    'video/3gpp' =&gt; '3gp',<br />    'video/dl' =&gt; 'dl',<br />    'video/gl' =&gt; 'gl',<br />    'video/mj2' =&gt; 'mj2',<br />    'video/mpeg' =&gt; 'mpeg',<br />    'video/quicktime' =&gt; 'mov',<br />    'video/vdo' =&gt; 'vdo',<br />    'video/vivo' =&gt; 'viv',<br />    'video/vnd.fvt' =&gt; 'fvt',<br />    'video/vnd.mpegurl' =&gt; 'mxu',<br />    'video/vnd.nokia.interleaved-multimedia' =&gt; 'nim',<br />    'video/vnd.objectvideo' =&gt; 'mp4',<br />    'video/vnd.sealed.mpeg1' =&gt; 's11',<br />    'video/vnd.sealed.mpeg4' =&gt; 'smpg',<br />    'video/vnd.sealed.swf' =&gt; 'sswf',<br />    'video/vnd.sealedmedia.softseal.mov' =&gt; 'smov',<br />    'video/vnd.vivo' =&gt; 'vivo',<br />    'video/x-fli' =&gt; 'fli',<br />    'video/x-ms-asf' =&gt; 'asf',<br />    'video/x-ms-wmv' =&gt; 'wmv',<br />    'video/x-msvideo' =&gt; 'avi',<br />    'video/x-sgi-movie' =&gt; 'movie',<br />    'x-chemical/x-pdb' =&gt; 'pdb',<br />    'x-chemical/x-xyz' =&gt; 'xyz',<br />    'x-conference/x-cooltalk' =&gt; 'ice',<br />    'x-drawing/dwf' =&gt; 'dwf',<br />    'x-world/x-d96' =&gt; 'd',<br />    'x-world/x-svr' =&gt; 'svr',<br />    'x-world/x-vream' =&gt; 'vrw',<br />    'x-world/x-vrml' =&gt; 'wrl'<br />  )</span>			(line <span class="line-number">34</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Holds an associative array  with mime-type as key and file-extension  as value.</p>
+<p class="description"><p>Taken from symfony-core-validator  sfValidatorFile.</p></p>
+	<ul class="tags">
+				<li><span class="field">staticvar:</span> array $extensions: </li>
+				<li><span class="field">author:</span> Fabien Potencier &lt;<a href="mailto:fabien.potencier@symfony-project.com">fabien.potencier@symfony-project.com</a>&gt;</li>
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$WEB_IMAGES" id="$WEB_IMAGES"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			static <span class="var-type">mixed</span>
+			<span class="var-name">$WEB_IMAGES</span>
+			 = <span class="var-default">array<br />  (<br />    'image/x-png',<br />    'image/png',<br />    'image/jpeg',<br />    'image/pjpeg',<br />    'image/gif'<br />  )</span>			(line <span class="line-number">449</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Mime types of web images, as possibly  provided by web-browsers.</p>
+	<ul class="tags">
+				<li><span class="field">staticvar:</span> array $WEB_IMAGES: </li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodgetExtensionByMime" id="getExtensionByMime"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static getExtensionByMime</span> (line <span class="line-number">491</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns an corresponding file-extension  to given mime-type or $default if that  extension was not found.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			getExtensionByMime
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$mime</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$mime</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$default</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetIsImage" id="getIsImage"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static getIsImage</span> (line <span class="line-number">638</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns true if sfFilebasePluginFile is a</p>
+<p class="description"><p>web image file. Used to factory  a sfFilebasePluginImage instance by sfFilebasePlugin::  getFilebaseFile()</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> true if file is an image</li>
+				<li><span class="field">todo:</span> improved mime-type detection</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">boolean</span>
+		<span class="method-name">
+			getIsImage
+		</span>
+					(<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>&nbsp;<span class="var-name">$file</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>
+				<span class="var-name">$file</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetIsSupportedImage" id="getIsSupportedImage"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static getIsSupportedImage</span> (line <span class="line-number">661</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns true if $file is a supported image, what means that it can  be processed by either GD-lib or imagick extension</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if $file is supported</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">boolean</span>
+		<span class="method-name">
+			getIsSupportedImage
+		</span>
+					(<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>&nbsp;<span class="var-name">$file</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>
+				<span class="var-name">$file</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetIsWebImage" id="getIsWebImage"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static getIsWebImage</span> (line <span class="line-number">649</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns true if the image file is a web image.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> true if $file is a web image.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">boolean</span>
+		<span class="method-name">
+			getIsWebImage
+		</span>
+					(<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>&nbsp;<span class="var-name">$file</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>
+				<span class="var-name">$file</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetMaxUploadFileSize" id="getMaxUploadFileSize"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static getMaxUploadFileSize</span> (line <span class="line-number">538</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Parses .ini-Property maxUploadFileSize and returns it as  a byte-value</p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> sfFilebasePluginException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">int</span>
+		<span class="method-name">
+			getMaxUploadFileSize
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$default_size</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$default_size</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetMimeByExtension" id="getMimeByExtension"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static getMimeByExtension</span> (line <span class="line-number">476</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">return:</span> mime-type</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			getMimeByExtension
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$extension</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$extension</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$default</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetMimeExtensions" id="getMimeExtensions"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static getMimeExtensions</span> (line <span class="line-number">465</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns an associative array  with mime-type as key and file-extension  as value.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			getMimeExtensions
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetMimeType" id="getMimeType"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static getMimeType</span> (line <span class="line-number">713</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Trys to find the mime type of a file  and returns it, otherwise a $default value will  be returned (application/octet-stream per default)</p>
+<p class="description"><p>$file must be an instance of sfFilebasePluginFile</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			getMimeType
+		</span>
+					(<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>&nbsp;<span class="var-name">$file</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">'application/octet-stream'</span>], <span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>&nbsp;<span class="var-name">$absolute_path</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>
+				<span class="var-name">$absolute_path</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$default</span>			</li>
+					<li>
+				<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>
+				<span class="var-name">$file</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetStringFilesize" id="getStringFilesize"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static getStringFilesize</span> (line <span class="line-number">517</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns string representation of byte size.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			getStringFilesize
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$size</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$size</span><span class="var-description">: in bytes</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetStringTypeByExtension" id="getStringTypeByExtension"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static getStringTypeByExtension</span> (line <span class="line-number">573</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieves the type of a file as a human readable  string by its extension.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			getStringTypeByExtension
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$ext</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$ext</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodisAbsolutePathname" id="isAbsolutePathname"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static isAbsolutePathname</span> (line <span class="line-number">610</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checks if a pathname is absolute.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if $pathname is absolute.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">boolean</span>
+		<span class="method-name">
+			isAbsolutePathname
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$pathname</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$pathname</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodparseHTMLColor" id="parseHTMLColor"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static parseHTMLColor</span> (line <span class="line-number">624</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Parses a css color notation into  a hexadecimal value.</p>
+<p class="description"><p>rgb(0,0,0); cmyl(0,0,0,0), #123456 ...</p></p>
+	<ul class="tags">
+				<li><span class="field">todo:</span> implement ;)</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			parseHTMLColor
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$color</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$color</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodunifySlashes" id="unifySlashes"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static unifySlashes</span> (line <span class="line-number">505</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Replaces Backslashes and removes  trainling slash</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> unified</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			unifySlashes
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$path</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$path</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Mon, 25 May 2009 15:21:39 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+	</p>
+	</div></body>
+</html>

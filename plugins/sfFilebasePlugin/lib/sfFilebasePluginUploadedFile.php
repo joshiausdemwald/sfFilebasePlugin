@@ -151,6 +151,7 @@ class sfFilebasePluginUploadedFile extends sfValidatedFile
    */
   public function save($file = null, $fileMode = 0666, $create = true, $dirMode = 0777)
   {
+    //sfContext::getInstance()->getLogger()->log($file, 'message');
     $filebase = null;
     if ($file === null)
     {
@@ -183,9 +184,10 @@ class sfFilebasePluginUploadedFile extends sfValidatedFile
       }
     }
     $file = $filebase->getFilebaseFile($file);
+    
     // copy the temp file to the destination file
     $f = $filebase->copyFile($this->getTempName(), $file->getPathname());
-    
+
     // chmod our file
     $file->chmod($fileMode);
 

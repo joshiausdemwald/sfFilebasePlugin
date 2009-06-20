@@ -1,7 +1,7 @@
 # default rules
 homepage:
   url:   /
-  param: { module: sf_filebase_overview, action: index }
+  param: { module: sf_filebase_gallery, action: index }
 
 default_index:
   url:   /:module

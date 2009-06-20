@@ -441,6 +441,29 @@ class sfFilebasePluginUtil
   );
 
   /**
+   * This array describes recursive dependancies
+   * of mime types
+   *
+   * @staticvar array
+   * @var array
+   */
+  public static $mime_dependencies = array(
+    'application/zip'=>array(
+      'odt'
+    )
+  );
+
+  /**
+   * This array describes recursive dependancies
+   * of extensions to check the mime type after
+   *
+   * @staticvar array
+   * @var array
+   */
+  public static $extension_dependencies = array(
+  );
+
+  /**
    * Mime types of web images, as possibly 
    * provided by web-browsers.
    *
@@ -714,6 +737,8 @@ class sfFilebasePluginUtil
   {
     $mime = false;
 
+    $ext = $file->getExtension();
+    
     // Using file_exists() instead of sfFilebasePluginFile::fileExists()
     // to avoid recursion issue. sfFilebasePluginFile::fileExists()
     // calls sfFilebasePlugin::getFilebaseFile() calls
@@ -727,17 +752,25 @@ class sfFilebasePluginUtil
       {
         $finfo = new finfo(FILEINFO_MIME);
         $mime = $finfo->file($file->getPathname());
-        if($mime)
-          return strtolower($mime);
       }
-      if(function_exists('mime_content_type'))
+      elseif(function_exists('mime_content_type'))
       {
         $mime = mime_content_type($file->getPathname());
-        if($mime)
-          return $mime;
       }
     }
 
+    if($mime)
+    {
+      if($ext)
+      {
+        if(array_key_exists($mime, self::$mime_dependencies)  && in_array($ext, self::$mime_dependencies[$mime]))
+        {
+          return self::getMimeByExtension($ext, $mime);
+        }
+      }
+      return $mime;
+    }
+    
     // 3. check extension
     return self::getMimeByExtension($file->getExtension(), $default);
   }

@@ -51,4 +51,17 @@ class sf_filebase_directoryActions extends autoSf_filebase_directoryActions
     ));
     return $query;
   }
+
+  public function executeDelete(sfWebRequest $request)
+  {
+    $request->checkCSRFProtection();
+
+    $this->dispatcher->notify(new sfEvent($this, 'admin.delete_object', array('object' => $this->getRoute()->getObject())));
+
+    $this->getRoute()->getObject()->getNode()->delete();
+
+    $this->getUser()->setFlash('notice', 'The item was deleted successfully.');
+
+    $this->redirect('@sf_filebase_directory');
+  }
 }
