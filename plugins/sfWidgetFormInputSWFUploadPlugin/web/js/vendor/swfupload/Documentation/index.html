@@ -77,7 +77,7 @@
 </style>
 
 <body>
-	<h1>SWFUpload v2.2.0.1 Documentation</h1>
+	<h1>SWFUpload v2.2.1 Documentation</h1>
 	<h2>TOC</h2>
 	<ol>
 		<li><a href="#swfupload">SWFUpload</a></li>
@@ -117,6 +117,7 @@
 						<li><a href="#startUpload">startUpload</a></li>
 						<li><a href="#cancelUpload">cancelUpload</a></li>
 						<li><a href="#stopUpload">stopUpload</a></li>
+						<li><a href="#requeueUpload">requeueUpload</a></li>
 						<li><a href="#getStats">getStats</a></li>
 						<li><a href="#setStats">setStats</a></li>
 						<li><a href="#getFile">getFile</a></li>
@@ -147,6 +148,7 @@
 					<ol>
 						<li><a href="#flashReady">flashReady</a></li>
 						<li><a href="#swfUploadLoaded">swfUploadLoaded</a></li>
+						<li><a href="#buttonAction">buttonAction</a></li>
 						<li><a href="#fileDialogStart">fileDialogStart</a></li>
 						<li><a href="#fileQueued">fileQueued</a></li>
 						<li><a href="#fileQueueError">fileQueueError</a></li>
@@ -430,7 +432,8 @@ var swfu = new SWFUpload({
 	<ul style="padding-left: 15px;">
 		<li>SELECT_FILE - when the Flash button is clicked the file dialog will only allow a single file to be selected.</li>
 		<li>SELECT_FILES - when the Flash button is clicked the file dialog allows multiple files to be selected.</li>
-		<li>START_UPLOAD - while the Flash button is clicked the first queued file will be uploaded.</li>
+		<li>START_UPLOAD - when the Flash button is clicked the first queued file will be uploaded.</li>
+		<li>JAVASCRIPT - when the Flash button is clicked the buttonAction event will be fired.</li>
 	</ul>
 
 	<h4><a name="button_cursor"></a>SWFUpload.CURSOR</h4>
@@ -547,6 +550,15 @@ function uploadSuccess(file, serverData, receivedResponse) {
 	<p>stopUpload stops and re-queues the file currently being uploaded.</p>
 	<p>After the uploading file is stopped the uploadError event is fired. If no file is being uploaded then nothing happens and no event is fired.</p>
 	
+	<h4><a name="requeueUpload"></a>bool requeueUpload(<span class="parameter">file_id or index</span>)</h4>
+
+	<p>requeueUpload requeues any previously queued file.</p>
+	<p>If the file cannot be found or is currently uploading false is returned.</p>
+	<p>
+		Requeued files are not checked against the file size, queue size, file upload limit or any other settings but are simply added to the queue if a valid
+		reference to a file exists.
+	</p>
+	
 	<h4><a name="getStats"></a>object getStats()</h4>
 	<p>Retrieves the stats object.</p>
 	
@@ -659,22 +671,31 @@ function uploadSuccess(file, serverData, receivedResponse) {
 	
 	<h4><a name="swfUploadLoaded"></a><span class="function">swfUploadLoaded()</span></h4>
 	<p>The swfUploadLoaded event is fired by flashReady.  It is settable.  swfUploadLoaded is called to let you know that it is safe to call SWFUpload methods.</p>
+	<p>Set using the swfupload_loaded_handler setting.</p>
+	
+	<h4><a name="buttonAction"></a><span class="function">buttonAction()</span></h4>
+	<p>buttonAction is fired when the button_action setting is set to SWFUpload.BUTTON_ACTION.JAVASCRIPT and the button is clicked. Analogous to a button's onClick event.  This event is not fired for other button_action settings.</p>
+	<p>Set using the button_action_handler setting.</p>
 	
 	<h4><a name="fileDialogStart"></a><span class="function">fileDialogStart(<span class="parameter"></span>)</span></h4>
 	<p>fileDialogStart is fired after selectFile for selectFiles is called. This event is fired immediately before the File Selection Dialog
 	window is displayed. However, the event may not execute until after the Dialog window is closed.</p>
+	<p>Set using the file_dialog_start_handler setting.</p>
 	
 	<h4><a name="fileQueued"></a><span class="function">fileQueued(<span class="parameter">file object</span>)</span></h4>
 	<p>The fileQueued event is fired for each file that is queued after the File Selection Dialog window is closed.</p>
+	<p>Set using the file_queued_handler setting.</p>
 	
 	<h4><a name="fileQueueError"></a><span class="function">fileQueueError(<span class="parameter">file object</span>, <span class="parameter">error code</span>, <span class="parameter">message</span>)</span></h4>
 	<p>The fileQueueError event is fired for each file that was not queued after the File Selection Dialog window is closed.  A file may not be queued
 	for several reasons such as, the file exceeds the file size, the file is empty or a file or queue limit has been exceeded.</p>
-	<p>The reason for the queue error is specified by the error code parameter.  The error code corresponds to a SWFUpload.QUEUE_ERROR constant.</p>
+	<p>The cause of the queue error is specified by the error code parameter.  The error code corresponds to a SWFUpload.QUEUE_ERROR constant.</p>
+	<p>Set using the file_queue_error_handler setting.</p>
 	
 	<h4><a name="fileDialogComplete"></a><span class="function">fileDialogComplete(<span class="parameter">number of files selected</span>, <span class="parameter">number of files queued</span>, <span class="parameter">total number of files in the queued</span>)</span></h4>
 	<p>The fileDialogComplete event fires after the File Selection Dialog window has been closed and all the selected files have been processed.  The 'number of files queued' argument indicates the number of files that were queued from the dialog selection (as opposed to the number of files in the queue).</p>
 	<p>If you want file uploading to begin automatically this is a good place to call 'this.startUpload()'</p>
+	<p>Set using the file_dialog_complete_handler setting.</p>
 	
 	<h4><a name="uploadStart"></a><span class="function">uploadStart(<span class="parameter">file object</span>)</span></h4>
 	<p>uploadStart is called immediately before the file is uploaded.  This event provides an opportunity to perform any last minute validation, add post
@@ -682,17 +703,21 @@ function uploadSuccess(file, serverData, receivedResponse) {
 	
 	<p>The upload can be cancelled by returning 'false' from uploadStart.  If you return 'true' or do not return any value then the upload proceeds.  Returning
 	'false' will cause an uploadError event to fired.</p>
+
+	<p>Set using the upload_start_handler setting.</p>
 	
 	<h4><a name="uploadProgress"></a><span class="function">uploadProgress(<span class="parameter">file object</span>, <span class="parameter">bytes complete</span>, <span class="parameter">total bytes</span>)</span></h4>
 	<p>The uploadProgress event is fired periodically by the Flash Control.  This event is useful for providing UI updates on the page.</p>
 	<p><strong>Note:</strong> The Linux Flash Player fires a single uploadProgress event after the entire file has been uploaded.  This is a bug in
 	the Linux Flash Player that we cannot work around.</p>
+	<p>Set using the upload_progress_handler setting.</p>
 	
 	<h4><a name="uploadError"></a><span class="function">uploadError(<span class="parameter">file object</span>, <span class="parameter">error code</span>, <span class="parameter">message</span>)</span></h4>
 	<p>The uploadError event is fired any time an upload is interrupted or does not complete successfully.  The error code parameter indicates the type of error
 	that occurred. The error code parameter specifies a constant in SWFUpload.UPLOAD_ERROR.</p>
 	<p>Stopping, Cancelling or returning 'false' from uploadStart will cause uploadError to fire.  Upload error will not fire for files that are cancelled
 	but still waiting in the queue.</p>
+	<p>Set using the upload_error_handler setting.</p>
 	
 	<h4><a name="uploadSuccess"></a><span class="function">uploadSuccess(<span class="parameter">file object</span>, <span class="parameter">server data</span>, <span class="parameter">received response</span>)</span></h4>
 	<p>uploadSuccess is fired when the entire upload has been transmitted and the server returns a HTTP 200 status code.  Any data outputted by the server is available
@@ -708,16 +733,20 @@ function uploadSuccess(file, serverData, receivedResponse) {
 	</p>
 	
 	<p>At this point the upload is not yet complete.  Another upload cannot be started from uploadSuccess.</p>
+
+	<p>Set using the upload_success_handler setting.</p>
 	
 	<h4><a name="uploadComplete"></a><span class="function">uploadComplete(<span class="parameter">file object</span>)</span></h4>
 	<p>uploadComplete is always fired at the end of an upload cycle (after uploadError or uploadSuccess).  At this point the upload is complete and
 	another upload can be started.</p>
 	<p>If you want the next upload to start automatically this is a good place to call this.uploadStart().  Use caution when calling uploadStart inside
 	the uploadComplete event if you also have code that cancels all the uploads in a queue.</p>
+	<p>Set using the upload_complete_handler setting.</p>
 	
 	<h4><a name="debug"></a><span class="function">debug(<span class="parameter">message</span>)</span></h4>
 	<p>The debug event is called by the SWFUpload library and the Flash Control when the debug setting is set to 'true'.  If the debug
 	event is not overridden then SWFUpload writes debug messages to the SWFUpload console (a text box dynamically added to the end of the page body).</p>
+	<p>Set using the debug_handler setting.</p>
 	
 	<h3><a name="utility"></a>SWFUpload Utility Objects</h3>
 	<h4><a name="settingsobject"></a>Settings object</h4>
@@ -763,6 +792,7 @@ function uploadSuccess(file, serverData, receivedResponse) {
 	button_window_mode : SWFUpload.WINDOW_MODE.TRANSPARENT,
 	
 	swfupload_loaded_handler : swfupload_loaded_function,
+	button_action_handler : button_action_function,
 	file_dialog_start_handler : file_dialog_start_function,
 	file_queued_handler : file_queued_function,
 	file_queue_error_handler : file_queue_error_function,
@@ -1084,6 +1114,9 @@ swfu.customSetting["a_dom_setting"].style.visibility = "hidden";</code>
 	<p>The Flash Player may not properly use proxies.  It does not handle authenticating proxies well (if at all) and will some-times crash.</p>
 	<p>Some anti-virus software uses a proxy to scan uploads and cause SWFUpload to believe the entire file has been uploaded.  SWFUpload will fire uploadProgress events very quickly
 	until it reaches 100% and will then seem to pause until the proxy completes uploading the file to the server.</p>
+	<p><strong>Kaspersky Anti-Virus:</strong> Kaspersky (and other) Anti-Virus suites implement a client-side proxy that intercepts and scans outgoing data.  SWFUpload
+	cannot detect the presence of proxy servers. These types of proxy servers accept the entire upload very quickly and they wait while the data is scanned and transmitted
+	to the original destination.  The Flash Player times out the connection (because of appearent inactivity) and returns a #2038 error. SWFUpload fires an uploadError event.</p>
 	
 	<h3>Apache mod_security</h3>
 	<p>Apache's mod_security validates POST to the server.  Flash Player has implemented an edge case (there is argument as to whether it is invalid or note)
@@ -1144,13 +1177,15 @@ swfu.customSetting["a_dom_setting"].style.visibility = "hidden";</code>
 	
 	<p>This behavior can adversely affect the SWFObject plugin.  No SWFUpload events will be fire and the button image will not be
 	loaded until the control becomes visible.</p>
+	
+	<p>On some systems (Linux is affected) when the WMODE is transparent Flash opens the File Dialog window behind the browser window.</p>
 
 	<h3>Memory Leaks</h3>
 	<p>Some browsers (especially IE) cannot recover memory used by the Flash Player when JavaScript communication via the ExternalInterface classes is used (like in SWFUpload). 
 	Creating many SWFUpload instances and/or reloading the page several times will cause the browser to consume more and more memory until it crashes or otherwise harms the
 	system.</p>
 	
-	<p>In v2.2.0 SWFUpload we gave implemented some preventative measures.  Some of these measures are pro-active but it is still recommended that you
+	<p>In v2.2.0 SWFUpload we have implemented some preventative measures.  Some of these measures are pro-active but it is still recommended that you
 	call the destroy method when the page unloads.  If you are using hundreds of SWFUpload instances on a page you should use caution and test
 	carefully for memory leaks.</p>
 	
@@ -1174,6 +1209,9 @@ swfu.customSetting["a_dom_setting"].style.visibility = "hidden";</code>
 		<li>
 			Users have reported that the Flash Player for Mac adds the PORT to the HTTP_HOST server variable (e.g., http://www.example.com:80). If you are
 			checking this variable in your server-side script be aware of the possible issue.
+		</li>
+		<li>
+			Files that contain only a resource fork are treated as zero byte file by the Flash Player and cannot be uploaded.	
 		</li>
 	</ul>
 	

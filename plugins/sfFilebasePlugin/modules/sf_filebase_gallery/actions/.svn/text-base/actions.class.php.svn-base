@@ -51,6 +51,7 @@ class sf_filebase_galleryActions extends sfActions
       $root = $table->getRootNode();
     }
     $this->forward404Unless($root instanceof sfFilebaseDirectory);
+    $this->getUser()->setAttribute('source_node', $root, 'sf_filebase_plugin');
     $this->parent = $root;
   }
 }

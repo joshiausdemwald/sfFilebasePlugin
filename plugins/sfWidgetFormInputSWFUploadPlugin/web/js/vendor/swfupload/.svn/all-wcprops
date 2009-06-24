@@ -1,23 +1,23 @@
 K 25
 svn:wc:ra_dav:version-url
-V 64
-/!svn/ver/18960/plugins/sfFilebasePlugin/web/js/vendor/swfupload
+V 80
+/!svn/ver/19502/plugins/sfWidgetFormInputSWFUploadPlugin/web/js/vendor/swfupload
 END
 swfupload.js
 K 25
 svn:wc:ra_dav:version-url
-V 77
-/!svn/ver/18960/plugins/sfFilebasePlugin/web/js/vendor/swfupload/swfupload.js
+V 93
+/!svn/ver/19503/plugins/sfWidgetFormInputSWFUploadPlugin/web/js/vendor/swfupload/swfupload.js
 END
 swfupload license.txt
 K 25
 svn:wc:ra_dav:version-url
-V 88
-/!svn/ver/18960/plugins/sfFilebasePlugin/web/js/vendor/swfupload/swfupload%20license.txt
+V 104
+/!svn/ver/19502/plugins/sfWidgetFormInputSWFUploadPlugin/web/js/vendor/swfupload/swfupload%20license.txt
 END
 Core Changelog.txt
 K 25
 svn:wc:ra_dav:version-url
-V 85
-/!svn/ver/18960/plugins/sfFilebasePlugin/web/js/vendor/swfupload/Core%20Changelog.txt
+V 101
+/!svn/ver/19502/plugins/sfWidgetFormInputSWFUploadPlugin/web/js/vendor/swfupload/Core%20Changelog.txt
 END

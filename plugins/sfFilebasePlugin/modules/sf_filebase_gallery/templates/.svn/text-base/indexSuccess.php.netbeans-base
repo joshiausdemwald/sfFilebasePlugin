@@ -52,14 +52,10 @@
     <?php if($parent->getNode()->hasChildren()):?>
       <?php foreach($parent->getNode()->getChildren() AS $node):?>
         <?php if($node instanceof sfFilebaseDirectory):?>
-          <?php
-            $id=md5(uniqid(rand(), true));
-          ?>
           <li class="file file-directory">
             <div class="contents">
-              <p>
-                <a href="<?php echo url_for('sf_filebase_gallery', array('id'=>$node->getId()))?>" class="toggle-row file-title file-title-directory"><span><?php echo $node->getFilename()?></span></a>
-              </p>
+              <a href="<?php echo url_for('sf_filebase_gallery', array('id'=>$node->getId()))?>" class="toggle-row file-title file-title-directory"><span><?php echo $node->getFilename()?></span></a>
+              <?php echo link_to('<span>'.__('edit').'</span>', 'sf_filebase_directory_edit', array('id'=>$node->getId()), array('class'=>'directory-edit-link') )?>
             </div>
           </li>
         <?php else:?>

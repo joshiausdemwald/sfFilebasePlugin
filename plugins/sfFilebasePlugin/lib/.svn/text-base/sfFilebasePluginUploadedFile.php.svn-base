@@ -86,6 +86,36 @@ class sfFilebasePluginUploadedFile extends sfValidatedFile
   }
 
   /**
+   * Returns the file extension, based on the content type of the file.
+   *
+   * @param  string $default  The default extension to return if none was given
+   *
+   * @return string The extension (with the dot)
+   */
+  public function getExtension($default = '')
+  {
+    $f = sfFilebasePlugin::getInstance()->getFilebaseFile($this->getTempName());
+    return
+      ($mime = sfFilebasePluginUtil::getMimeType($f, null, ltrim($this->getOriginalExtension(), '.'))) === null ?
+      $default :
+      '.' . sfFilebasePluginUtil::getExtensionByMime($mime, $default);
+  }
+
+  /**
+   * Returns the original uploaded file name extension.
+   *
+   * @param  string $default  The default extension to return if none was given
+   *
+   * @return string The extension of the uploaded name (with the dot)
+   */
+  public function getOriginalExtension($default = '')
+  {
+    $f = sfFilebasePlugin::getInstance()->getFilebaseFile($this->getOriginalName());
+    $ext = $f->getExtension();
+    return $ext ? '.'.$ext : $default;
+  }
+
+  /**
    * Sets the path to the file where the uploaded data have to be stored.
    * @param string $path: absolute pathname to directory.
    */
@@ -151,7 +181,6 @@ class sfFilebasePluginUploadedFile extends sfValidatedFile
    */
   public function save($file = null, $fileMode = 0666, $create = true, $dirMode = 0777)
   {
-    //sfContext::getInstance()->getLogger()->log($file, 'message');
     $filebase = null;
     if ($file === null)
     {

@@ -37,7 +37,7 @@ package {
 			var SWFUpload:SWFUpload = new SWFUpload();
 		}
 		
-		private const build_number:String = "SWFUPLOAD 2.2.0";
+		private const build_number:String = "SWFUPLOAD 2.2.1";
 		
 		// State tracking variables
 		private var fileBrowserMany:FileReferenceList = new FileReferenceList();
@@ -79,6 +79,7 @@ package {
 		private var debug_Callback:String;
 		private var testExternalInterface_Callback:String;
 		private var cleanUp_Callback:String;
+		private var buttonAction_Callback:String;
 		
 		// Values passed in from the HTML
 		private var movieName:String;
@@ -141,6 +142,7 @@ package {
 		private var BUTTON_ACTION_SELECT_FILE:Number                = -100;
 		private var BUTTON_ACTION_SELECT_FILES:Number               = -110;
 		private var BUTTON_ACTION_START_UPLOAD:Number               = -120;
+		private var BUTTON_ACTION_JAVASCRIPT:Number					= -130;
 		
 		private var BUTTON_CURSOR_ARROW:Number						= -1;
 		private var BUTTON_CURSOR_HAND:Number						= -2;
@@ -250,12 +252,13 @@ package {
 			this.uploadError_Callback        = "SWFUpload.instances[\"" + this.movieName + "\"].uploadError";
 			this.uploadSuccess_Callback      = "SWFUpload.instances[\"" + this.movieName + "\"].uploadSuccess";
 
-			this.uploadComplete_Callback       = "SWFUpload.instances[\"" + this.movieName + "\"].uploadComplete";
+			this.uploadComplete_Callback     = "SWFUpload.instances[\"" + this.movieName + "\"].uploadComplete";
 
 			this.debug_Callback              = "SWFUpload.instances[\"" + this.movieName + "\"].debug";
 
 			this.testExternalInterface_Callback = "SWFUpload.instances[\"" + this.movieName + "\"].testExternalInterface";
-			this.cleanUp_Callback              = "SWFUpload.instances[\"" + this.movieName + "\"].cleanUp";
+			this.cleanUp_Callback            = "SWFUpload.instances[\"" + this.movieName + "\"].cleanUp";
+			this.buttonAction_Callback       = "SWFUpload.instances[\"" + this.movieName + "\"].buttonAction";
 			
 			// Get the Flash Vars
 			this.uploadURL = root.loaderInfo.parameters.uploadURL;
@@ -411,6 +414,13 @@ package {
 			}
 		}
 		
+		private function StopExternalInterfaceCheck():void {
+			if (this.restoreExtIntTimer) {
+				this.restoreExtIntTimer.start();
+				this.restoreExtIntTimer = null;
+			}
+		}
+		
 		// Called by JS to see if it can access the external interface
 		private function TestExternalInterface():Boolean {
 			return true;
@@ -457,6 +467,7 @@ package {
 				ExternalInterface.addCallback("SetButtonCursor", this.SetButtonCursor);
 
 				ExternalInterface.addCallback("TestExternalInterface", this.TestExternalInterface);
+				ExternalInterface.addCallback("StopExternalInterfaceCheck", this.StopExternalInterfaceCheck);
 				
 			} catch (ex:Error) {
 				this.Debug("Callbacks where not set: " + ex.message);
@@ -666,25 +677,29 @@ package {
 							ExternalCall.FileQueued(this.fileQueued_Callback, file_item.ToJavaScriptObject());
 						}
 						else if (!is_valid_filetype) {
-							file_item.file_reference = null; 	// Cleanup the object
+							//file_item.file_reference = null; 	// Cleanup the object
+							file_item.file_status = FileItem.FILE_STATUS_ERROR;
 							this.queue_errors++;
 							this.Debug("Event: fileQueueError : File not of a valid type.");
 							ExternalCall.FileQueueError(this.fileQueueError_Callback, this.ERROR_CODE_INVALID_FILETYPE, file_item.ToJavaScriptObject(), "File is not an allowed file type.");
 						}
 						else if (size_result == this.SIZE_TOO_BIG) {
-							file_item.file_reference = null; 	// Cleanup the object
+							//file_item.file_reference = null; 	// Cleanup the object
+							file_item.file_status = FileItem.FILE_STATUS_ERROR;
 							this.queue_errors++;
 							this.Debug("Event: fileQueueError : File exceeds size limit.");
 							ExternalCall.FileQueueError(this.fileQueueError_Callback, this.ERROR_CODE_FILE_EXCEEDS_SIZE_LIMIT, file_item.ToJavaScriptObject(), "File size exceeds allowed limit.");
 						}
 						else if (size_result == this.SIZE_ZERO_BYTE) {
 							file_item.file_reference = null; 	// Cleanup the object
+							file_item.file_status = FileItem.FILE_STATUS_ERROR;
 							this.queue_errors++;
 							this.Debug("Event: fileQueueError : File is zero bytes.");
 							ExternalCall.FileQueueError(this.fileQueueError_Callback, this.ERROR_CODE_ZERO_BYTE_FILE, file_item.ToJavaScriptObject(), "File is zero bytes and cannot be uploaded.");
 						}
 					} else {
 						file_item.file_reference = null; 	// Cleanup the object
+						file_item.file_status = FileItem.FILE_STATUS_ERROR;
 						this.queue_errors++;
 						this.Debug("Event: fileQueueError : File is zero bytes or FileReference is invalid.");
 						ExternalCall.FileQueueError(this.fileQueueError_Callback, this.ERROR_CODE_ZERO_BYTE_FILE, file_item.ToJavaScriptObject(), "File is zero bytes or cannot be accessed and cannot be uploaded.");
@@ -803,7 +818,7 @@ package {
 						// Cancel the file (just for good measure) and make the callback
 						file_item.file_reference.cancel();
 						this.removeFileReferenceEventListeners(file_item);
-						file_item.file_reference = null;
+						//file_item.file_reference = null;
 						
 						if (triggerErrorEvent) {
 							this.Debug("Event: uploadError : " + file_item.id + ". Cancelled queued upload");
@@ -835,7 +850,7 @@ package {
 					// Cancel the file (just for good measure) and make the callback
 					file_item.file_reference.cancel();
 					this.removeFileReferenceEventListeners(file_item);
-					file_item.file_reference = null;
+					//file_item.file_reference = null;
 
 					if (triggerErrorEvent) {
 						this.Debug("Event: uploadError : " + file_item.id + ". Cancelled queued upload");
@@ -868,7 +883,7 @@ package {
 				return false;
 			}
 			
-			if (file !== null) {
+			if (file !== null && file.file_reference !== null) {
 				if (file.file_status === FileItem.FILE_STATUS_IN_PROGRESS || file.file_status === FileItem.FILE_STATUS_NEW) {
 					return false;
 				} else if (file.file_status !== FileItem.FILE_STATUS_QUEUED) {
@@ -1091,6 +1106,9 @@ package {
 				else if (this.buttonAction === this.BUTTON_ACTION_START_UPLOAD) {
 					this.StartUpload();
 				}
+				else if (this.buttonAction === this.BUTTON_ACTION_JAVASCRIPT) {
+					ExternalCall.Simple(this.buttonAction_Callback);
+				}
 				else {
 					this.SelectFiles();
 				}
@@ -1301,7 +1319,7 @@ package {
 			this.removeFileReferenceEventListeners(this.current_file_item);
 
 			if (!eligible_for_requeue || this.requeueOnError == false) {
-				this.current_file_item.file_reference = null;
+				//this.current_file_item.file_reference = null;
 				this.queued_uploads--;
 			} else if (this.requeueOnError == true) {
 				this.current_file_item.file_status = FileItem.FILE_STATUS_QUEUED;

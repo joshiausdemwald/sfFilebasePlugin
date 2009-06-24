@@ -1,41 +1,41 @@
 K 25
 svn:wc:ra_dav:version-url
-V 70
-/!svn/ver/18960/plugins/sfFilebasePlugin/web/js/vendor/swfupload/Flash
+V 86
+/!svn/ver/19502/plugins/sfWidgetFormInputSWFUploadPlugin/web/js/vendor/swfupload/Flash
 END
 ExternalCall.as
 K 25
 svn:wc:ra_dav:version-url
-V 86
-/!svn/ver/18960/plugins/sfFilebasePlugin/web/js/vendor/swfupload/Flash/ExternalCall.as
+V 102
+/!svn/ver/19502/plugins/sfWidgetFormInputSWFUploadPlugin/web/js/vendor/swfupload/Flash/ExternalCall.as
 END
 FileItem.as
 K 25
 svn:wc:ra_dav:version-url
-V 82
-/!svn/ver/18960/plugins/sfFilebasePlugin/web/js/vendor/swfupload/Flash/FileItem.as
+V 98
+/!svn/ver/19502/plugins/sfWidgetFormInputSWFUploadPlugin/web/js/vendor/swfupload/Flash/FileItem.as
 END
 deploy.bat
 K 25
 svn:wc:ra_dav:version-url
-V 81
-/!svn/ver/18960/plugins/sfFilebasePlugin/web/js/vendor/swfupload/Flash/deploy.bat
+V 97
+/!svn/ver/19502/plugins/sfWidgetFormInputSWFUploadPlugin/web/js/vendor/swfupload/Flash/deploy.bat
 END
 swfupload.swf
 K 25
 svn:wc:ra_dav:version-url
-V 84
-/!svn/ver/18960/plugins/sfFilebasePlugin/web/js/vendor/swfupload/Flash/swfupload.swf
+V 100
+/!svn/ver/19502/plugins/sfWidgetFormInputSWFUploadPlugin/web/js/vendor/swfupload/Flash/swfupload.swf
 END
 SWFUpload.as
 K 25
 svn:wc:ra_dav:version-url
-V 83
-/!svn/ver/18960/plugins/sfFilebasePlugin/web/js/vendor/swfupload/Flash/SWFUpload.as
+V 99
+/!svn/ver/19502/plugins/sfWidgetFormInputSWFUploadPlugin/web/js/vendor/swfupload/Flash/SWFUpload.as
 END
 SWFUpload v2.as3proj
 K 25
 svn:wc:ra_dav:version-url
-V 93
-/!svn/ver/18960/plugins/sfFilebasePlugin/web/js/vendor/swfupload/Flash/SWFUpload%20v2.as3proj
+V 109
+/!svn/ver/19502/plugins/sfWidgetFormInputSWFUploadPlugin/web/js/vendor/swfupload/Flash/SWFUpload%20v2.as3proj
 END

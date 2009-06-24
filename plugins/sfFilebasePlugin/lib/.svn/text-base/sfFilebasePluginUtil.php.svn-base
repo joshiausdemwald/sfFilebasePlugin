@@ -733,11 +733,11 @@ class sfFilebasePluginUtil
    * @param   string                $default
    * @return  string               $mime_type
    */
-  public static function getMimeType(sfFilebasePluginFile $file, $default = 'application/octet-stream')
+  public static function getMimeType(sfFilebasePluginFile $file, $default = 'application/octet-stream', $extension = null)
   {
-    $mime = false;
+    $mime_type = false;
 
-    $ext = $file->getExtension();
+    $ext = $extension === null ? $file->getExtension() : $extension;
     
     // Using file_exists() instead of sfFilebasePluginFile::fileExists()
     // to avoid recursion issue. sfFilebasePluginFile::fileExists()
@@ -751,27 +751,28 @@ class sfFilebasePluginUtil
       if(class_exists('finfo'))
       {
         $finfo = new finfo(FILEINFO_MIME);
-        $mime = $finfo->file($file->getPathname());
+        $mime_type = $finfo->file($file->getPathname());
       }
       elseif(function_exists('mime_content_type'))
       {
-        $mime = mime_content_type($file->getPathname());
+        $mime_type = mime_content_type($file->getPathname());
       }
     }
 
-    if($mime)
+    if($mime_type)
     {
-      if($ext)
+      if(!empty($ext))
       {
-        if(array_key_exists($mime, self::$mime_dependencies)  && in_array($ext, self::$mime_dependencies[$mime]))
+        $ext_mime_type = self::getMimeByExtension($ext, null);
+        if($ext_mime_type != $mime_type && array_key_exists($mime_type, self::$mime_dependencies) && in_array($ext, self::$mime_dependencies[$mime_type]))
         {
-          return self::getMimeByExtension($ext, $mime);
+          return $ext_mime_type;
         }
       }
-      return $mime;
+      return $mime_type;
     }
     
     // 3. check extension
-    return self::getMimeByExtension($file->getExtension(), $default);
+    return self::getMimeByExtension($ext, $default);
   }
 }

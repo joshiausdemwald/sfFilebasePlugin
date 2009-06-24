@@ -644,10 +644,12 @@ swfu_widget.SWFUploadProgress.prototype.addObservers = function()
     //this.setMessage('Upload in progress...');
     //this.getView().disableBrowseButton();
     //this.setIsInProgress(true);
+    this._prev_bytes_complete=0;
   }, this);
   swfu_widget.addObserver(swfu_widget.handlers, 'upload_progress', function(event)
   {
-    this._bytesLoaded += event.total_bytes - event.bytes_complete;
+    this._bytesLoaded += event.bytes_complete - this._prev_bytes_complete;
+    this._prev_bytes_complete = event.bytes_complete;
     this.getProgressBar().setBytesLoaded(this._bytesLoaded);
   }, this);
   swfu_widget.addObserver(swfu_widget.handlers, 'upload_error', function(event)
@@ -904,11 +906,18 @@ swfu_widget.SWFUploadProgressView.prototype.renderHTML = function()
   this.disableStartButton();
 
   var self = this;
-  window.setTimeout(function() {
+  window.setTimeout(function()
+  {
     flash_object.style.height = self._html.browseFilesLink.offsetHeight + "px";
     flash_object.style.width  = self._html.browseFilesLink.offsetWidth + "px";
     flash_object.style.left    = self._html.browseFilesLink.offsetLeft + "px";
     flash_object.style.top      = self._html.browseFilesLink.offsetTop + "px";
+    flash_object.setAttribute('height', self._html.browseFilesLink.offsetHeight);
+    flash_object.setAttribute('width', self._html.browseFilesLink.offsetWidth);
+    try
+    {
+      self.getController().getSWFUpload().setButtonDimensions(self._html.browseFilesLink.offsetWidth, self._html.browseFilesLink.offsetHeight);
+    } catch (e){;}
   },0);
 
   // Hide queue on init if set

@@ -57,13 +57,13 @@ if (typeof(SWFUpload) === "function") {
 	});
 	
 	SWFUpload.prototype.initSettings = (function (oldInitSettings) {
-		return function () {
+		return function (userSettings) {
 			if (typeof(oldInitSettings) === "function") {
-				oldInitSettings.call(this);
+				oldInitSettings.call(this, userSettings);
 			}
 
 			this.ensureDefault = function (settingName, defaultValue) {
-				this.settings[settingName] = (this.settings[settingName] == undefined) ? defaultValue : this.settings[settingName];
+				this.settings[settingName] = (userSettings[settingName] == undefined) ? defaultValue : userSettings[settingName];
 			};
 
 			this.ensureDefault("minimum_flash_version", "9.0.28");

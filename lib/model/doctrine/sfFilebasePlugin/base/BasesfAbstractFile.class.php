@@ -20,35 +20,86 @@
  * @package    ##PACKAGE##
  * @subpackage ##SUBPACKAGE##
  * @author     ##NAME## <##EMAIL##>
- * @version    SVN: $Id: Builder.php 5441 2009-01-30 22:58:43Z jwage $
+ * @version    SVN: $Id: Builder.php 5845 2009-06-09 07:36:57Z jwage $
  */
 abstract class BasesfAbstractFile extends sfDoctrineRecord
 {
     public function setTableDefinition()
     {
         $this->setTableName('sf_abstract_files');
-        $this->hasColumn('filename', 'string', 255, array('type' => 'string', 'notnull' => true, 'length' => '255'));
-        $this->hasColumn('hash', 'string', 255, array('type' => 'string', 'notnull' => true, 'length' => '255'));
-        $this->hasColumn('comment', 'string', null, array('type' => 'string'));
-        $this->hasColumn('title', 'string', 255, array('type' => 'string', 'length' => '255'));
-        $this->hasColumn('environment', 'string', 255, array('type' => 'string', 'length' => '255'));
-        $this->hasColumn('application', 'string', 255, array('type' => 'string', 'length' => '255'));
-        $this->hasColumn('tags', 'string', 255, array('type' => 'string', 'length' => '255'));
-        $this->hasColumn('type', 'string', 255, array('type' => 'string', 'length' => 255));
-        $this->hasColumn('author', 'string', 255, array('type' => 'string', 'length' => '255'));
-        $this->hasColumn('copyright', 'string', 255, array('type' => 'string', 'length' => '255'));
+        $this->hasColumn('filename', 'string', 255, array(
+             'type' => 'string',
+             'notnull' => true,
+             'length' => '255',
+             ));
+        $this->hasColumn('hash', 'string', 255, array(
+             'type' => 'string',
+             'notnull' => true,
+             'length' => '255',
+             ));
+        $this->hasColumn('comment', 'string', null, array(
+             'type' => 'string',
+             'notnull' => false,
+             ));
+        $this->hasColumn('title', 'string', 255, array(
+             'type' => 'string',
+             'notnull' => false,
+             'length' => '255',
+             ));
+        $this->hasColumn('environment', 'string', 255, array(
+             'type' => 'string',
+             'notnull' => false,
+             'length' => '255',
+             ));
+        $this->hasColumn('application', 'string', 255, array(
+             'type' => 'string',
+             'notnull' => false,
+             'length' => '255',
+             ));
+        $this->hasColumn('tags', 'string', 255, array(
+             'type' => 'string',
+             'notnull' => false,
+             'length' => '255',
+             ));
+        $this->hasColumn('type', 'string', 255, array(
+             'type' => 'string',
+             'length' => 255,
+             ));
+        $this->hasColumn('author', 'string', 255, array(
+             'type' => 'string',
+             'notnull' => false,
+             'length' => '255',
+             ));
+        $this->hasColumn('copyright', 'string', 255, array(
+             'type' => 'string',
+             'notnull' => false,
+             'length' => '255',
+             ));
 
-        $this->setSubClasses(array('sfFilebaseFile' => array('type' => '1'), 'sfFilebaseDirectory' => array('type' => '2')));
+        $this->setSubClasses(array(
+             'sfFilebaseFile' => 
+             array(
+              'type' => '1',
+             ),
+             'sfFilebaseDirectory' => 
+             array(
+              'type' => '2',
+             ),
+             ));
     }
 
     public function setUp()
     {
-        $this->hasOne('sfFilebaseDirectory as rootNode', array('local' => 'root_id',
-                                                               'foreign' => 'id',
-                                                               'onDelete' => 'cascade',
-                                                               'onUpdate' => 'cascade'));
+        $this->hasOne('sfFilebaseDirectory as rootNode', array(
+             'local' => 'root_id',
+             'foreign' => 'id',
+             'onDelete' => 'cascade',
+             'onUpdate' => 'cascade'));
 
-        $nestedset0 = new Doctrine_Template_NestedSet(array('hasManyRoots' => 'true,', 'rootColumnName' => 'root_id'));
+        $nestedset0 = new Doctrine_Template_NestedSet(array(
+             'hasManyRoots' => 'true,',
+             'rootColumnName' => 'root_id',
+             ));
         $this->actAs($nestedset0);
     }
 }

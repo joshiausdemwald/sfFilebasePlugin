@@ -1,35 +1,35 @@
 K 25
 svn:wc:ra_dav:version-url
-V 72
-/!svn/ver/18960/plugins/sfFilebasePlugin/web/js/vendor/swfupload/plugins
+V 88
+/!svn/ver/19502/plugins/sfWidgetFormInputSWFUploadPlugin/web/js/vendor/swfupload/plugins
 END
 swfupload.queue.js
 K 25
 svn:wc:ra_dav:version-url
-V 91
-/!svn/ver/18960/plugins/sfFilebasePlugin/web/js/vendor/swfupload/plugins/swfupload.queue.js
+V 107
+/!svn/ver/19502/plugins/sfWidgetFormInputSWFUploadPlugin/web/js/vendor/swfupload/plugins/swfupload.queue.js
 END
 swfupload.swfobject.js
 K 25
 svn:wc:ra_dav:version-url
-V 95
-/!svn/ver/18960/plugins/sfFilebasePlugin/web/js/vendor/swfupload/plugins/swfupload.swfobject.js
+V 111
+/!svn/ver/19502/plugins/sfWidgetFormInputSWFUploadPlugin/web/js/vendor/swfupload/plugins/swfupload.swfobject.js
 END
 SWFObject License.txt
 K 25
 svn:wc:ra_dav:version-url
-V 96
-/!svn/ver/18960/plugins/sfFilebasePlugin/web/js/vendor/swfupload/plugins/SWFObject%20License.txt
+V 112
+/!svn/ver/19502/plugins/sfWidgetFormInputSWFUploadPlugin/web/js/vendor/swfupload/plugins/SWFObject%20License.txt
 END
 swfupload.cookies.js
 K 25
 svn:wc:ra_dav:version-url
-V 93
-/!svn/ver/18960/plugins/sfFilebasePlugin/web/js/vendor/swfupload/plugins/swfupload.cookies.js
+V 109
+/!svn/ver/19502/plugins/sfWidgetFormInputSWFUploadPlugin/web/js/vendor/swfupload/plugins/swfupload.cookies.js
 END
 swfupload.speed.js
 K 25
 svn:wc:ra_dav:version-url
-V 91
-/!svn/ver/18960/plugins/sfFilebasePlugin/web/js/vendor/swfupload/plugins/swfupload.speed.js
+V 107
+/!svn/ver/19502/plugins/sfWidgetFormInputSWFUploadPlugin/web/js/vendor/swfupload/plugins/swfupload.speed.js
 END

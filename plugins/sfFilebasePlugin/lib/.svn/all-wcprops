@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 44
-/!svn/ver/19235/plugins/sfFilebasePlugin/lib
+/!svn/ver/19428/plugins/sfFilebasePlugin/lib
 END
 sfFilebasePluginWebRequest.php
 K 25
@@ -31,7 +31,7 @@ sfFilebasePluginUploadedFile.php
 K 25
 svn:wc:ra_dav:version-url
 V 77
-/!svn/ver/19415/plugins/sfFilebasePlugin/lib/sfFilebasePluginUploadedFile.php
+/!svn/ver/19428/plugins/sfFilebasePlugin/lib/sfFilebasePluginUploadedFile.php
 END
 sfFilebasePluginException.php
 K 25
@@ -67,7 +67,7 @@ sfFilebasePluginUploadedFilesManager.php
 K 25
 svn:wc:ra_dav:version-url
 V 85
-/!svn/ver/18342/plugins/sfFilebasePlugin/lib/sfFilebasePluginUploadedFilesManager.php
+/!svn/ver/19428/plugins/sfFilebasePlugin/lib/sfFilebasePluginUploadedFilesManager.php
 END
 sfFilebasePluginGfxEditorAdapterInterface.php
 K 25
@@ -79,7 +79,7 @@ sfFilebasePluginUtil.php
 K 25
 svn:wc:ra_dav:version-url
 V 69
-/!svn/ver/19415/plugins/sfFilebasePlugin/lib/sfFilebasePluginUtil.php
+/!svn/ver/19428/plugins/sfFilebasePlugin/lib/sfFilebasePluginUtil.php
 END
 sfFilebasePluginFile.php
 K 25

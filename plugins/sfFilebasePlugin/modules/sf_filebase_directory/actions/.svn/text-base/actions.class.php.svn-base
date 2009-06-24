@@ -34,9 +34,9 @@ class sf_filebase_directoryActions extends autoSf_filebase_directoryActions
   public function executeNew(sfWebRequest $request)
   {
     parent::executeNew($request);
-    if(($pid = $request->getParameter('pid', null)) !== null)
+    if(($source = $this->getUser()->getAttribute('source_node', null, 'sf_filebase_plugin')) !== null)
     {
-      $this->form->setDirectoryPid($pid);
+      $this->form->setDirectoryPid($source->getId());
     }
   }
 
@@ -52,16 +52,23 @@ class sf_filebase_directoryActions extends autoSf_filebase_directoryActions
     return $query;
   }
 
+  public function executeIndex(sfWebRequest $request)
+  {
+    $this->forward('sf_filebase_gallery', 'index');
+  }
+
   public function executeDelete(sfWebRequest $request)
   {
     $request->checkCSRFProtection();
 
     $this->dispatcher->notify(new sfEvent($this, 'admin.delete_object', array('object' => $this->getRoute()->getObject())));
 
+    $parent = $this->getRoute()->getObject()->getNode()->getParent();
+
     $this->getRoute()->getObject()->getNode()->delete();
 
     $this->getUser()->setFlash('notice', 'The item was deleted successfully.');
 
-    $this->redirect('@sf_filebase_directory');
+    $this->redirect('@sf_filebase_directory?id='.$parent->getId());
   }
 }

@@ -4,3 +4,32 @@
 all:
   sf_filebase_plugin:
     path_name: /home/joshi/www/test/web/uploads/assets
+
+  all:
+    swDoctrineAssetsLibrary:
+      upload_dir: uploads
+      check_type:       false                                        # Set to true if you want to restrict the type of assets
+      types:            ['image', txt, archive, pdf, xls, doc, ppt]  # Accepted asset types if check_type is true
+      thumbnail_dir:    thumbnail                                    # Where the image thumbnails are stored
+      use_ImageMagick:  true                                         # Set to true if you have the convert command
+      thumbnails:                                                    # Name and size (in pixels) of the thumbnails created at upload
+        small:                                                       # Displayed in the list page
+          width: 84
+          height: 84
+          shave: true                                                # Cut strips to constraint the image size
+        large:                                                       # Displayed in the details page
+          width: 194
+          height: 152
+
+        gallery_index:
+          width: 200
+          height: 150
+          shave: shave_bottom
+
+        gallery_view:
+          width: 600
+          height: 480
+
+      search_pager_size: 20                    # Number of resuts per page
+      mass_upload_size:  5                     # Number of file upload controls displayed in the mass upload form
+      routes_register: false

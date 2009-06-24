@@ -1,0 +1,51 @@
+9
+
+dir
+0
+http://swfupload.googlecode.com/svn/swfupload/trunk/core/.fr-eMZqse/SWFUpload%20v2.2.0.1%20Core/plugins
+http://swfupload.googlecode.com/svn
+add
+
+
+
+
+
+
+
+svn:special svn:externals svn:needs-lock
+
+swfupload.queue.js
+file
+
+
+
+add
+
+swfupload.swfobject.js
+file
+
+
+
+add
+
+SWFObject License.txt
+file
+
+
+
+add
+
+swfupload.cookies.js
+file
+
+
+
+add
+
+swfupload.speed.js
+file
+
+
+
+add
+

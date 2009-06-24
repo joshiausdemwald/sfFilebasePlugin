@@ -186,7 +186,12 @@ class sfFilebasePluginUploadedFilesManager
    * Inclusion and exclusion rules consist of regex-strings,
    * they are used to check the target filenames against them.
    * Exclusion:   Matched filenames throw exceptions.
-   * Incluseion:  Matched filenames will be passed as valid filenames.
+   * Inclusion:  Matched filenames will be passed as valid filenames.
+   *
+   * You should wrap this method into a try-catch block because many
+   * things can go wrong during or after the upload, so if you upload
+   * many files and did not validate them before, this would be a good
+   * starting point do to some "low level" validation.
    *
    * $destination can be a string (absolute or relative pathname) or an
    * instance of sfFilebasePluginFile, it is the directory, not the full pathName of

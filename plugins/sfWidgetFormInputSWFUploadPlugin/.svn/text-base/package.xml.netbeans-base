@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.4.6" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
+  <name>sfWidgetFormInputSWFUploadPlugin</name>
+  <channel>plugins.symfony-project.org</channel>
+  <summary>Plugin for decorating a file input widget with SWFUpload javascript.</summary>
+  <description>SWFUpload is a small JavaScript/Flash library to get the best of both worlds. It features the great upload capabilities of Flash and the accessibility and ease of HTML/CSS. http://www.swfupload.org</description>
+  <lead>
+    <name>Johannes Heinen</name>
+    <user>joshiausdemwald</user>
+    <email>johannes.heinen@gmail.com</email>
+    <active>yes</active>
+  </lead>
+  <date>2009-06-13</date>
+  <version>
+    <release>0.9.2</release>
+    <api>0.9.0</api>
+  </version>
+  <stability>
+    <release>stable</release>
+    <api>stable</api>
+  </stability>
+  <license uri="http://www.symfony-project.org/license">MIT license</license>
+  <notes>Initial release</notes>
+  <contents>
+    <dir name="/">
+
+      <file role="data" name="lib/widget/sfWidgetFormInputSWFUpload.php" />
+      <file role="data" name="web/images/swfupload-toggle-queue.png" />
+      <file role="data" name="web/images/swfupload-select-button.png" />
+      <file role="data" name="web/images/swfupload-loader-background.png" />
+      <file role="data" name="web/images/swfupload-cancel-hover.png" />
+      <file role="data" name="web/images/swfupload-toggle-queue-expanded-hover.png" />
+      <file role="data" name="web/images/swfupload-toggle-queue-expanded.png" />
+      <file role="data" name="web/images/swfupload-loader.png" />
+      <file role="data" name="web/images/swfupload-cancel.png" />
+      <file role="data" name="web/images/swfupload-toggle-queue-hover.png" />
+      <file role="data" name="web/js/swfupload-widget-handler.js" />
+      <file role="data" name="web/js/vendor/swfupload/Core Changelog.txt" />
+      <file role="data" name="web/js/vendor/swfupload/swfupload license.txt" />
+      <file role="data" name="web/js/vendor/swfupload/Flash/ExternalCall.as" />
+      <file role="data" name="web/js/vendor/swfupload/Flash/SWFUpload v2.as3proj" />
+      <file role="data" name="web/js/vendor/swfupload/Flash/SWFUpload.as" />
+      <file role="data" name="web/js/vendor/swfupload/Flash/swfupload.swf" />
+      <file role="data" name="web/js/vendor/swfupload/Flash/obj/SWFUpload-v2Config.old" />
+      <file role="data" name="web/js/vendor/swfupload/Flash/obj/SWFUpload-v2Config.xml" />
+      <file role="data" name="web/js/vendor/swfupload/Flash/deploy.bat" />
+      <file role="data" name="web/js/vendor/swfupload/Flash/FileItem.as" />
+      <file role="data" name="web/js/vendor/swfupload/Documentation/index.html" />
+      <file role="data" name="web/js/vendor/swfupload/swfupload.js" />
+      <file role="data" name="web/js/vendor/swfupload/plugins/swfupload.swfobject.js" />
+      <file role="data" name="web/js/vendor/swfupload/plugins/swfupload.queue.js" />
+      <file role="data" name="web/js/vendor/swfupload/plugins/swfupload.speed.js" />
+      <file role="data" name="web/js/vendor/swfupload/plugins/swfupload.cookies.js" />
+      <file role="data" name="web/js/vendor/swfupload/plugins/SWFObject License.txt" />
+      <file role="data" name="web/css/swfupload.css" />
+
+      <file role="data" name="README" />
+      <file role="data" name="LICENSE" />
+    </dir>
+  </contents>
+  <dependencies>
+    <required>
+      <php>
+        <min>5.1.7</min>
+      </php>
+      <pearinstaller>
+        <min>1.4.1</min>
+      </pearinstaller>
+      <package>
+        <name>symfony</name>
+        <channel>pear.symfony-project.com</channel>
+        <min>1.1.0</min>
+        <max>1.3.0</max>
+        <exclude>1.3.0</exclude>
+      </package>
+    </required>
+  </dependencies>
+  <phprelease>
+  </phprelease>
+  <changelog>
+    <release>
+      <version>
+        <release>0.9.2</release>
+        <api>0.9.0</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-06-13</date>
+      <notes>
+      * Added support for additional user defined javascripts
+      </notes>
+    </release>
+    <release>
+      <version>
+        <release>0.9.1</release>
+        <api>0.9.0</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-06-13</date>
+      <notes>
+      * CSS improvements, added optional JSON support
+      </notes>
+    </release>
+  </changelog>
+</package>

@@ -1,7 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/19405/plugins/sfFilebasePlugin/modules/sf_filebase_gallery/actions
 END
 actions.class.php
 K 25
 svn:wc:ra_dav:version-url
 V 94
-/!svn/ver/19405/plugins/sfFilebasePlugin/modules/sf_filebase_gallery/actions/actions.class.php
+/!svn/ver/19487/plugins/sfFilebasePlugin/modules/sf_filebase_gallery/actions/actions.class.php
 END

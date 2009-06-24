@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 75
-/!svn/ver/19387/plugins/sfFilebasePlugin/modules/sf_filebase_file/templates
+/!svn/ver/19405/plugins/sfFilebasePlugin/modules/sf_filebase_file/templates
 END
 swfuploadSuccess.php
 K 25
@@ -20,12 +20,6 @@ K 25
 svn:wc:ra_dav:version-url
 V 90
 /!svn/ver/18510/plugins/sfFilebasePlugin/modules/sf_filebase_file/templates/newSuccess.php
-END
-_form_actions.php
-K 25
-svn:wc:ra_dav:version-url
-V 93
-/!svn/ver/19405/plugins/sfFilebasePlugin/modules/sf_filebase_file/templates/_form_actions.php
 END
 _retrieveFiles.php
 K 25

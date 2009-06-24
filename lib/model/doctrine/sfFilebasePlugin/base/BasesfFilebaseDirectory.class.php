@@ -10,14 +10,15 @@
  * @package    ##PACKAGE##
  * @subpackage ##SUBPACKAGE##
  * @author     ##NAME## <##EMAIL##>
- * @version    SVN: $Id: Builder.php 5441 2009-01-30 22:58:43Z jwage $
+ * @version    SVN: $Id: Builder.php 5845 2009-06-09 07:36:57Z jwage $
  */
 abstract class BasesfFilebaseDirectory extends sfAbstractFile
 {
     public function setUp()
     {
         parent::setUp();
-    $this->hasMany('sfAbstractFile as descendants', array('local' => 'id',
-                                                              'foreign' => 'root_id'));
+    $this->hasMany('sfAbstractFile as descendants', array(
+             'local' => 'id',
+             'foreign' => 'root_id'));
     }
 }

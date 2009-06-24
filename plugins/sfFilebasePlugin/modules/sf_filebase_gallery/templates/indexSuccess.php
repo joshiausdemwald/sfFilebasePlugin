@@ -27,8 +27,8 @@
   <?php include_component('sf_filebase_gallery', 'tagcloud', array('url' => url_for('sf_filebase_gallery', array('id' => $parent->getId(), 'tag' => '%tag%'))));?>
 
   <ul id="Sf_Filebase_Navi">
-    <li><?php echo link_to(__('Upload new Files'), 'sf_filebase_file_new', array('pid'=>$parent->getId()))?></li>
-    <li><?php echo link_to(__('Create a new directory'), 'sf_filebase_directory_new', array('pid'=>$parent->getId()))?></li>
+    <li><?php echo link_to(__('Upload new Files'), 'sf_filebase_file_new')?></li>
+    <li><?php echo link_to(__('Create a new directory'), 'sf_filebase_directory_new')?></li>
   </ul>
 
   <!--form method="post" accept-charset="utf-8" enctype="x-www/urlencoded" action="<?php echo $_SERVER['REQUEST_URI']?>">
@@ -52,14 +52,13 @@
     <?php if($parent->getNode()->hasChildren()):?>
       <?php foreach($parent->getNode()->getChildren() AS $node):?>
         <?php if($node instanceof sfFilebaseDirectory):?>
-          <?php
-            $id=md5(uniqid(rand(), true));
-          ?>
           <li class="file file-directory">
             <div class="contents">
-              <p>
-                <a href="<?php echo url_for('sf_filebase_gallery', array('id'=>$node->getId()))?>" class="toggle-row file-title file-title-directory"><span><?php echo $node->getFilename()?></span></a>
-              </p>
+              <a href="<?php echo url_for('sf_filebase_gallery', array('id'=>$node->getId()))?>" class="toggle-row file-title file-title-directory"><span><?php echo $node->getFilename()?></span></a>
+              <span class="file-directory-controls">
+                <?php echo link_to('<span>'.__('Edit').'</span>', 'sf_filebase_directory_edit', array('id'=>$node->getId()), array('class'=>'directory-edit-link') )?>
+                <?php echo link_to('<span>'.__('Delete').'</span>', '@sf_filebase_directory_delete?id='.$node->getId(), array('class'=>'directory-delete-link', 'method'=>'delete', 'confirm'=>__('Do you really want to delete the whole directory and its contents?')))?>
+              </span>
             </div>
           </li>
         <?php else:?>
@@ -67,7 +66,12 @@
             <?php $file = sfFilebasePlugin::getInstance()->getFilebaseFile($node->getHash())?>
             <li class="file<?php $file instanceof sfFilebaseImage && print ' file-image'?>">
               <div class="contents">
-                <a href="<?php echo url_for('sf_filebase_file_edit', array('id'=>$node->getId()))?>">
+                <?php #if($file->isImage()):?>
+                  <?php #$url = url_for('@sf_filebase_display_image?width=580&file='.$node->getId())?>
+                <?php #else:?>
+                  <?php $url = url_for('@sf_filebase_download_file?file='.$node->getId())?>
+                <?php #endif?>
+                <a href="<?php echo $url?>">
                   <?php if($file instanceof sfFilebasePluginImage):?>
                     <img src="<?php echo url_for('sf_filebase_display_image', array('file'=>$node->getId(), 'width'=>100, 'height'=>100))?>" alt="<?php echo $file->getFilename()?>"/>
                   <?php endif?>
@@ -77,6 +81,10 @@
                     </span>
                   </div>
                 </a>
+                <span class="file-controls">
+                  <?php echo link_to('<span>'.__('Edit').'</span>', 'sf_filebase_file_edit', array('id'=>$node->getId()), array('class'=>'file-edit-link') )?>
+                  <?php echo link_to('<span>'.__('Delete').'</span>', '@sf_filebase_file_delete?id='.$node->getId(), array('class'=>'file-delete-link', 'method'=>'delete', 'confirm'=>__('Do you really want to delete this file?')))?>
+                </span>
               </div>
             </li>
           <?php endif?>

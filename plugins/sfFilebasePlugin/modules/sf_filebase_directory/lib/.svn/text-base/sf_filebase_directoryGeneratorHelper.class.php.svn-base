@@ -21,4 +21,10 @@
  */
 class sf_filebase_directoryGeneratorHelper extends BaseSf_filebase_directoryGeneratorHelper
 {
+  public function linkToList($params)
+  {
+    $parent = sfContext::getInstance()->getUser()->getAttribute('source_node', null, 'sf_filebase_plugin');
+    $arguments = $parent === null ? '' : '?id='.$parent->getId();
+    return '<li class="sf_admin_action_list">'.link_to(__($params['label'], array(), 'sf_admin'), '@sf_filebase_gallery' . $arguments).'</li>';
+  }
 }

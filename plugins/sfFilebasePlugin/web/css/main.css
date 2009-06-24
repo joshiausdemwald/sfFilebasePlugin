@@ -79,7 +79,7 @@ html[xmlns] .clearfix {
 
 #Sf_Filebase_Gallery li.file a:hover
 {
-  background-color: #ccc;
+  background-color: #e8e8e8;
 }
 
 #Sf_Filebase_Gallery li.file-parent a
@@ -122,6 +122,59 @@ html[xmlns] .clearfix {
   overflow: hidden;
   width: 90px;
   z-index:100;
+}
+
+#Sf_Filebase_Gallery li span.file-directory-controls,
+#Sf_Filebase_Gallery li span.file-controls
+{
+  display: block;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+#Sf_Filebase_Gallery li span.file-directory-controls a,
+#Sf_Filebase_Gallery li span.file-controls a
+{
+  float:    left;
+  display:  block;
+  height:   16px;
+  width:    16px;
+  outline:  none;
+}
+
+#Sf_Filebase_Gallery li span.file-directory-controls span,
+#Sf_Filebase_Gallery li span.file-controls span
+{
+  position: absolute;
+  left: -999px;
+  top: -999px;
+  height: 0;
+  width: 0;
+  line-height: 1px;
+  font-size: 1px;
+  color: #fff;
+  background: transparent none;
+  display: block;
+}
+
+#Sf_Filebase_Gallery li a.directory-edit-link,
+#Sf_Filebase_Gallery li a.file-edit-link
+{
+  background: transparent url("../images/edit.png") bottom left no-repeat;
+}
+
+#Sf_Filebase_Gallery li a.directory-delete-link,
+#Sf_Filebase_Gallery li a.file-delete-link
+{
+  background: transparent url("../images/delete.png") bottom left no-repeat;
+}
+
+#Sf_Filebase_Gallery li span.file-directory-controls a:hover,
+#Sf_Filebase_Gallery li span.file-controls a:hover
+{
+  height: 18px;
+  background-color: transparent;
 }
 
 #Sf_Filebase_Tagcloud
