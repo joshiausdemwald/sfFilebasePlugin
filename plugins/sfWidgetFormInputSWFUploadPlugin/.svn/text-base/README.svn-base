@@ -4,13 +4,33 @@ sfWidgetFormInputSWFUploadPlugin
 sfWidgetFormInputSWFUploadPlugin decorates a file input widget with queued
 uploading capabilities, provided by SWFUpload (www.swfupload.org).
 
+This plugin is now an required dependancy of sfFilebasePlugin. See at its
+sample project to see it in action.
+
 Instructions:
 =============
 
 Use the widget like an ordinary file upload widget and configure it by
 passing custom options to its options array.
 
-This plugin is now an required dependancy of sfFilebasePlugin
+In custom form you'd to probably manually include the widgets assets (javascripts
+and stylesheets). Do so by using $myform->getJavascripts() and
+$myform->getStylesheets().
+
+Example:
+
+    <form method="post" enctype="multipart/form-data" accept-charset="utf-8">
+      <?php foreach($form->getJavascripts() AS $javascript):?>
+        <?php use_javascript($javascript)?>
+      <?php endforeach?>
+      <?php foreach($form->getStylesheets() AS $link => $media):?>
+      <?php use_stylesheet($link)?>
+      <?php endforeach?>
+      <?php echo $form->render()?>
+    </form>
+
+Feel free to override the css to fit your own
+applications look and feel.
 
 Installation
 ============

@@ -70,7 +70,7 @@ class sfWidgetFormInputSWFUpload extends sfWidgetFormInputFile
     $this->addOption('swfupload_file_upload_limit', 0);
     $this->addOption('swfupload_file_queue_limit', 0);
     
-    $this->addOption('swfupload_flash_url',     '/sfWidgetFormInputSWFUploadPlugin/js/vendor/swfupload/Flash/swfupload.swf');
+    $this->addOption('swfupload_flash_url',     public_path('/sfWidgetFormInputSWFUploadPlugin/js/vendor/swfupload/Flash/swfupload.swf'));
 
     $this->addOption('swfupload_css_path',      '/sfWidgetFormInputSWFUploadPlugin/css/swfupload.css');
     $this->addOption('swfupload_js_path',       '/sfWidgetFormInputSWFUploadPlugin/js/vendor/swfupload/swfupload.js');
@@ -78,8 +78,8 @@ class sfWidgetFormInputSWFUpload extends sfWidgetFormInputFile
     $this->addOption('swfupload_plugins_dir',   '/sfWidgetFormInputSWFUploadPlugin/js/vendor/swfupload/plugins');
     $this->addOption('swfupload_button_image_url', null);
 
-    $this->addOption('swfupload_button_width', 1);
-    $this->addOption('swfupload_button_height', 1);
+    $this->addOption('swfupload_button_width', 100);
+    $this->addOption('swfupload_button_height', 18);
     $this->addOption('swfupload_button_text', '');
     $this->addOption('swfupload_button_text_style', '');
     $this->addOption('swfupload_button_text_left_padding', 0);

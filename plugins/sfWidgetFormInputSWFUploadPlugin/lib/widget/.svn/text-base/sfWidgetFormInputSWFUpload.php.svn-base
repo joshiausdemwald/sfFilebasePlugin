@@ -1,9 +1,9 @@
 <?php
-/* 
+/*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
+sfApplicationConfiguration::getActive()->loadHelpers('Url');
 /**
  * Description of sfWidgetFormInputSWFUpload
  *
@@ -69,13 +69,13 @@ class sfWidgetFormInputSWFUpload extends sfWidgetFormInputFile
     $this->addOption('swfupload_file_size_limit', ini_get('upload_max_filesize'));
     $this->addOption('swfupload_file_upload_limit', 0);
     $this->addOption('swfupload_file_queue_limit', 0);
-    
+
     $this->addOption('swfupload_flash_url',     public_path('/sfWidgetFormInputSWFUploadPlugin/js/vendor/swfupload/Flash/swfupload.swf'));
 
-    $this->addOption('swfupload_css_path',      '/sfWidgetFormInputSWFUploadPlugin/css/swfupload.css');
-    $this->addOption('swfupload_js_path',       '/sfWidgetFormInputSWFUploadPlugin/js/vendor/swfupload/swfupload.js');
-    $this->addOption('swfupload_handler_path',  '/sfWidgetFormInputSWFUploadPlugin/js/swfupload-widget-handler.js');
-    $this->addOption('swfupload_plugins_dir',   '/sfWidgetFormInputSWFUploadPlugin/js/vendor/swfupload/plugins');
+    $this->addOption('swfupload_css_path',      public_path('/sfWidgetFormInputSWFUploadPlugin/css/swfupload.css'));
+    $this->addOption('swfupload_js_path',       public_path('/sfWidgetFormInputSWFUploadPlugin/js/vendor/swfupload/swfupload.js'));
+    $this->addOption('swfupload_handler_path',  public_path('/sfWidgetFormInputSWFUploadPlugin/js/swfupload-widget-handler.js'));
+    $this->addOption('swfupload_plugins_dir',   public_path('/sfWidgetFormInputSWFUploadPlugin/js/vendor/swfupload/plugins'));
     $this->addOption('swfupload_button_image_url', null);
 
     $this->addOption('swfupload_button_width', 100);
@@ -204,7 +204,7 @@ class sfWidgetFormInputSWFUpload extends sfWidgetFormInputFile
             debug : false,
             prevent_swf_caching : true,
             preserve_relative_urls : false,
-           
+
             button_image_url : "{$swfupload_button_image_url}",
             button_width : {$this->getOption('swfupload_button_width')},
             button_height : {$this->getOption('swfupload_button_height')},
@@ -216,7 +216,7 @@ class sfWidgetFormInputSWFUpload extends sfWidgetFormInputFile
             button_cursor : {$this->getOption('swfupload_button_cursor')},
             button_window_mode : {$this->getOption('swfupload_button_window_mode')},
             button_action : {$this->getOption('swfupload_button_action')},
-            
+
             swfupload_loaded_handler : {$this->getOption('swfupload_swfupload_loaded_handler')},
             file_dialog_start_handler : {$this->getOption('swfupload_file_dialog_start_handler')},
             file_queued_handler : {$this->getOption('swfupload_file_queued_handler')},

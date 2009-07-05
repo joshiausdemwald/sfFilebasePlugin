@@ -425,11 +425,14 @@ var swfu_widget =
     this._collapseQueueOnInit = this._swfupload.customSettings.collapse_queue_on_init;
     this._preventFormSubmit   = this._swfupload.customSettings.prevent_form_submit;
 
+    var self = this;
     if(this._preventFormSubmit && typeof this._form.submit !== 'undefined')
     {
       swfu_widget.addEventListener(this._form, 'submit', function(ev)
       {
         swfu_widget.Event.preventDefault(ev);
+        if(self._sendSerializedValues)
+          self.startUpload();
       });
     }
 
@@ -771,6 +774,22 @@ swfu_widget.SWFUploadProgress.prototype.setMessage = function(message)
   this.getView().updateUI();
 }
 
+swfu_widget.SWFUploadProgress.prototype.startUpload = function()
+{
+  if(this.getIsInProgress() || ! this.getSWFUpload().getStats().files_queued) return;
+  
+  swfu_widget.fire(this, 'begin_upload');
+
+  if(swfu_widget.OS == OS_FLAGS.LINUX || swfu_widget.OS == OS_FLAGS.UNIX)
+  {
+    if(!confirm('SWFUpload is known to have issues on Linux flash players due to a flash player bug. Do you really want to start the upload? Your browser may freeze during upload progress.'))
+      return false;
+  }
+  this.getProgressBar().show();
+  this.getProgressBar().setTotalBytes(this.getTotalBytes());
+  this.getSWFUpload().startUpload();
+}
+
 swfu_widget.SWFUploadProgress.prototype.getMessage = function()
 {
   return this._message;
@@ -1016,6 +1035,13 @@ swfu_widget.SWFUploadProgressView.prototype.addObservers = function()
   var upload_progress = this.getController();
   var self = this;
 
+  swfu_widget.addObserver(upload_progress, 'begin_upload', function(ev)
+  {
+    swfu_widget.removeClassName(this._html.containerNode, 'swfupload-queue-error');
+    this.disableStartButton();
+    this.enableCancelButton();
+  }, this);
+
   swfu_widget.addEventListener(this._html.toggleQueueLink, 'click', function(ev)
   {
     self.toggleQueueDisplay();
@@ -1034,23 +1060,8 @@ swfu_widget.SWFUploadProgressView.prototype.addObservers = function()
   
   swfu_widget.addEventListener(this._html.startUploadLink, 'click', function(ev)
   {
-    if(self.getController().getIsInProgress() || ! self.getController().getSWFUpload().getStats().files_queued) return;
-    
-    swfu_widget.fire(self.getController(), 'begin_upload');
-
-    swfu_widget.removeClassName(self._html.containerNode, 'swfupload-queue-error');
-
-    if(swfu_widget.OS == OS_FLAGS.LINUX || swfu_widget.OS == OS_FLAGS.UNIX)
-    {
-      if(!confirm('SWFUpload is known to have issues on Linux flash players due to a flash player bug. Do you really want to start the upload? Your browser may freeze during upload progress.'))
-        return false;
-    }
+    self.getController().startUpload();
     swfu_widget.Event.preventDefault(ev);
-    upload_progress.getProgressBar().show();
-    upload_progress.getProgressBar().setTotalBytes(upload_progress.getTotalBytes());
-    upload_progress.getSWFUpload().startUpload();
-    self.disableStartButton();
-    self.enableCancelButton();
   });
 
   swfu_widget.addEventListener(this._html.cancelUploadLink, 'click', function(ev)

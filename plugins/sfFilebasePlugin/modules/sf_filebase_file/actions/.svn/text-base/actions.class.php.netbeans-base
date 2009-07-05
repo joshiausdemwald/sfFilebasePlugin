@@ -44,10 +44,10 @@ class sf_filebase_fileActions extends autoSf_filebase_fileActions
   public function executeNew(sfWebRequest $request)
   {
     parent::executeNew($request);
-    $pid = $request->getParameter('pid', null);
-    if($pid!==null)
+    $source = $this->getUser()->getAttribute('source_node', null, 'sf_filebase_plugin');
+    if($source!==null)
     {
-      $this->form->setDirectoryPid($pid);
+      $this->form->setDirectoryPid($source->getId());
     }
   }
 

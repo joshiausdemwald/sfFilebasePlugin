@@ -10,9 +10,9 @@
     <email>johannes.heinen@gmail.com</email>
     <active>yes</active>
   </lead>
-  <date>2009-06-24</date>
+  <date>2009-06-29</date>
   <version>
-    <release>0.9.3</release>
+    <release>0.9.5</release>
     <api>0.9.0</api>
   </version>
   <stability>
@@ -24,7 +24,6 @@
   <contents>
     <dir name="/">
 
-      <file role="data" name="lib/widget/sfWidgetFormInputSWFUpload.php" />
       <file role="data" name="web/images/swfupload-toggle-queue.png" />
       <file role="data" name="web/images/swfupload-select-button.png" />
       <file role="data" name="web/images/swfupload-loader-background.png" />
@@ -51,6 +50,8 @@
       <file role="data" name="web/js/vendor/swfupload/plugins/swfupload.cookies.js" />
       <file role="data" name="web/js/vendor/swfupload/plugins/SWFObject License.txt" />
       <file role="data" name="web/css/swfupload.css" />
+      <file role="data" name="lib/widget/sfWidgetFormInputSWFUpload.php" />
+
 
       <file role="data" name="README" />
       <file role="data" name="LICENSE" />
@@ -76,6 +77,22 @@
   <phprelease>
   </phprelease>
   <changelog>
+    <release>
+      <version>
+        <release>0.9.5</release>
+        <api>0.9.0</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-06-29</date>
+      <notes>
+      * Fixed bug with assets path on non web-root projects
+      * Fixed bug where URL helper must had been manually included
+      </notes>
+    </release>
     <release>
       <version>
         <release>0.9.3</release>

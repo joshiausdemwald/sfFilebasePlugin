@@ -39,7 +39,7 @@ html[xmlns] .clearfix {
 
 #Sf_Filebase_Gallery_Container
 {
-  margin: 0 300px;
+  padding: 0 300px 0 300px;
 }
 
 #Sf_Filebase_Gallery ul
