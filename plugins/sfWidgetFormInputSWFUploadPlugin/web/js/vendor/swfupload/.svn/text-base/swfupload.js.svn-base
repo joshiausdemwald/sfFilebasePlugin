@@ -675,7 +675,8 @@ SWFUpload.prototype.setButtonImageURL = function (buttonImageURL) {
 };
 
 // Public: setButtonDimensions resizes the Flash Movie and button
-SWFUpload.prototype.setButtonDimensions = function (width, height) {
+SWFUpload.prototype.setButtonDimensions = function (width, height)
+{
 	this.settings.button_width = width;
 	this.settings.button_height = height;
 	

@@ -18,25 +18,29 @@ class sfWidgetFormInputSWFUpload extends sfWidgetFormInputFile
    */
   protected static $INSTANCE_COUNT = 0;
 
-  protected function iniSize2Int($ini_size)
+  protected function iniSize2Bytes($ini_size)
   {
-    preg_match('#^([0-9]+?)([gmk])$#i', $ini_size, $tokens);
-    $unit=null; $size_val=null;
-    isset($tokens[1])&&$size_val  = $tokens[1];
-    isset($tokens[2])&&$unit      = $tokens[2];
-    if($size_val && $unit)
+    if (preg_match('#^([0-9]+?)([gmk])$#i', $ini_size, $tokens))
     {
-      switch(strtolower($unit))
+      $unit=null; $size_val=null;
+      isset($tokens[1])&&$size_val  = $tokens[1];
+      isset($tokens[2])&&$unit      = $tokens[2];
+      if($size_val && $unit)
       {
-        case 'k':
-          return $size_val* 1000;
-        case 'm':
-          return $size_val* 1000000;
-        case 'g':
-          return $size_val* 1000000000;
-        default:
-          return $size_val;
+        switch(strtolower($unit))
+        {
+          case 'k':
+            return $size_val * 1024 . 'B';
+          case 'm':
+            return $size_val * 1024 * 1024 . 'B';
+          case 'g':
+            return $size_val * 1024 * 1024 * 1024 . 'B';
+        }
       }
+    }
+    else
+    {
+      return $ini_size . 'B';
     }
   }
 
@@ -156,7 +160,7 @@ class sfWidgetFormInputSWFUpload extends sfWidgetFormInputFile
 
     $swfupload_button_image_url = $this->getOption('swfupload_button_image_url') === null ? '' : public_path($this->getOption('swfupload_button_image_url'));
 
-    $max_size = $this->iniSize2Int($this->getOption('swfupload_file_size_limit'));
+    $max_size = $this->iniSize2Bytes($this->getOption('swfupload_file_size_limit'));
 
     $swfupload_post_name = $this->getOption('swfupload_post_name') === null ? $name : $this->getOption('swfupload_post_name');
 
@@ -176,7 +180,7 @@ class sfWidgetFormInputSWFUpload extends sfWidgetFormInputFile
         //<![CDATA[
         SWFUpload.onload = function()
         {
-          new SWFUpload
+          var swfu = new SWFUpload
           ({
             upload_url : "{$this->getOption('swfupload_upload_url')}",
             flash_url : "{$this->getOption('swfupload_flash_url')}",
@@ -216,7 +220,7 @@ class sfWidgetFormInputSWFUpload extends sfWidgetFormInputFile
             button_cursor : {$this->getOption('swfupload_button_cursor')},
             button_window_mode : {$this->getOption('swfupload_button_window_mode')},
             button_action : {$this->getOption('swfupload_button_action')},
-
+            
             swfupload_loaded_handler : {$this->getOption('swfupload_swfupload_loaded_handler')},
             file_dialog_start_handler : {$this->getOption('swfupload_file_dialog_start_handler')},
             file_queued_handler : {$this->getOption('swfupload_file_queued_handler')},

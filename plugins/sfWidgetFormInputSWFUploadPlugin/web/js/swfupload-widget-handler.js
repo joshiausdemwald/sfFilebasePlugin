@@ -247,9 +247,12 @@ var swfu_widget =
   
   handlers:
   {
+    // Called on every DOM Manipulation and on Flash load,
+    // So beeing careful with dom stuff triggering endless
+    // loops is essential.
     onLoad: function()
     {
-      
+      swfu_widget.fire(swfu_widget.handlers, 'swfobject_loaded',{});
     },
     onFileDialogStart: function()
     {
@@ -407,18 +410,12 @@ var swfu_widget =
   {
     this._files = {};
     this._swfupload = swfupload_instance;
-
-    this._postParams = typeof this._swfupload.settings.post_params === 'object' ? this._swfupload.settings.post_params : {};
     
-    var el = this._swfupload.movieElement;
-    this._form = {};
-    while(el = el.parentNode)
-    {
-      if(el.tagName.toLowerCase() === 'form')
-      {
-        this._form = el;break;
-      }
-    }
+    this._postParams = typeof this._swfupload.settings.post_params === 'object' ? 
+      this._swfupload.settings.post_params :
+      {};
+    
+    
     this._sendSerializedValues = this._swfupload.customSettings.send_serialized_values;
 
     this._widget = document.getElementById(this._swfupload.customSettings.widget_id);
@@ -426,15 +423,6 @@ var swfu_widget =
     this._preventFormSubmit   = this._swfupload.customSettings.prevent_form_submit;
 
     var self = this;
-    if(this._preventFormSubmit && typeof this._form.submit !== 'undefined')
-    {
-      swfu_widget.addEventListener(this._form, 'submit', function(ev)
-      {
-        swfu_widget.Event.preventDefault(ev);
-        if(self._sendSerializedValues)
-          self.startUpload();
-      });
-    }
 
     this._message = '&nbsp;';
     this._bytesLoaded = 0;
@@ -573,10 +561,38 @@ swfu_widget.FormSerializer.prototype.serialize = function()
 }
 
 
-// SWFUploadProgress
+swfu_widget.SWFUploadProgress.prototype.getForm = function()
+{
+  var el = this._swfupload.movieElement;
+  while(el = el.parentNode)
+  {
+    if(el.tagName.toLowerCase() === 'form')
+    {
+      return el;
+    }
+  }
+  return null;
+}
 
+// SWFUploadProgress
 swfu_widget.SWFUploadProgress.prototype.addObservers = function()
 {
+  swfu_widget.addObserver(swfu_widget.handlers, 'swfobject_loaded', function(ev)
+  {
+    var form = this.getForm();
+    var self = this;
+    // Connect form to onSubmit event
+    if(this._preventFormSubmit && typeof form.submit !== 'undefined')
+    {
+      swfu_widget.addEventListener(form, 'submit', function(ev)
+      {
+        swfu_widget.Event.preventDefault(ev);
+        if(self._sendSerializedValues)
+          self.startUpload();
+      });
+    }
+  }, this);
+  
   swfu_widget.addObserver(this.getView(), 'queue_cancelled', function(ev)
   {
     if(!this.getIsInProgress())return;
@@ -631,8 +647,9 @@ swfu_widget.SWFUploadProgress.prototype.addObservers = function()
     // serialize form values
     if(this._sendSerializedValues)
     {
-      var f = new swfu_widget.FormSerializer(this._form);
-      this.getSWFUpload().setUploadURL(this._form.action);
+      var form = this.getForm();
+      var f = new swfu_widget.FormSerializer(form);
+      this.getSWFUpload().setUploadURL(form.action);
       this.getSWFUpload().setPostParams(swfu_widget.mixin(this._postParams, f.serialize()));
       this.getSWFUpload().addPostParam('swfupload_filesource', 'swf_upload');
     }
@@ -841,10 +858,35 @@ swfu_widget.SWFUploadProgressView.prototype.getProgressContainer = function()
   return this._html.progressContainerNode;
 }
 
-swfu_widget.SWFUploadProgressView.prototype.renderHTML = function()
+swfu_widget.SWFUploadProgressView.prototype._insertDom =  function()
+{
+  var flash_object = this.getController().getSWFUpload().movieElement;
+  flash_object.parentNode.insertBefore(this._html.swfuploadWrapper, flash_object);
+  flash_object.style.zIndex   = 1000;
+  flash_object.style.outline  = 'none';
+  this.getController()._widget.parentNode.removeChild(this.getController()._widget);
+  this._flashObjectLoaded = true;
+}
+
+swfu_widget.SWFUploadProgressView.prototype.calculatePosition = function()
 {
   var flash_object  = this.getController().getSWFUpload().movieElement;
+  flash_object.style.height   = this._html.browseFilesLink.offsetHeight + "px";
+  flash_object.style.width    = this._html.browseFilesLink.offsetWidth + "px";
+  flash_object.style.left     = this._html.browseFilesLink.offsetLeft + "px";
+  flash_object.style.top      = this._html.browseFilesLink.offsetTop + "px";
+
+  flash_object.setAttribute('height', this._html.browseFilesLink.offsetHeight);
+  flash_object.setAttribute('width', this._html.browseFilesLink.offsetWidth);
+  try
+  {
+    this.getController().getSWFUpload().setButtonDimensions(this._html.browseFilesLink.offsetWidth, this._html.browseFilesLink.offsetHeight);
+  } catch (e){;}
   
+}
+
+swfu_widget.SWFUploadProgressView.prototype.renderHTML = function()
+{
   this._html.swfuploadWrapper       = document.createElement('div');
 
   this._html.containerNode          = document.createElement('div');
@@ -881,7 +923,7 @@ swfu_widget.SWFUploadProgressView.prototype.renderHTML = function()
   this._html.browseFilesLink.className          = 'swfupload-queue-browsefileslink';
 
   this._html.toggleQueueLink.className          = 'swfupload-queue-togglequeuelink swfupload-queue-togglequeuelink-expanded';
-
+  
   // Content
   this._html.cancelUploadLinkInner.innerHTML = 'Cancel upload';
   this._html.cancelUploadLink.appendChild(this._html.cancelUploadLinkInner);
@@ -913,31 +955,11 @@ swfu_widget.SWFUploadProgressView.prototype.renderHTML = function()
   this._html.containerNode.appendChild(this._html.toggleQueueLink);
   this._html.containerNode.appendChild(this._html.fileContainerNode);
 
-  flash_object.parentNode.insertBefore(this._html.swfuploadWrapper, flash_object);
-
   this._html.swfuploadWrapper.appendChild(this._html.controlsContainerNode);
   this._html.swfuploadWrapper.appendChild(this._html.containerNode);
-  this._html.controlsContainerNode.appendChild(flash_object.parentNode.removeChild(flash_object));
-  
-  this.getController()._widget.parentNode.removeChild(this.getController()._widget);
 
   this.disableCancelButton();
   this.disableStartButton();
-
-  var self = this;
-  window.setTimeout(function()
-  {
-    flash_object.style.height = self._html.browseFilesLink.offsetHeight + "px";
-    flash_object.style.width  = self._html.browseFilesLink.offsetWidth + "px";
-    flash_object.style.left    = self._html.browseFilesLink.offsetLeft + "px";
-    flash_object.style.top      = self._html.browseFilesLink.offsetTop + "px";
-    flash_object.setAttribute('height', self._html.browseFilesLink.offsetHeight);
-    flash_object.setAttribute('width', self._html.browseFilesLink.offsetWidth);
-    try
-    {
-      self.getController().getSWFUpload().setButtonDimensions(self._html.browseFilesLink.offsetWidth, self._html.browseFilesLink.offsetHeight);
-    } catch (e){;}
-  },0);
 
   // Hide queue on init if set
   if(this.getController()._collapseQueueOnInit)
@@ -1035,6 +1057,23 @@ swfu_widget.SWFUploadProgressView.prototype.addObservers = function()
   var upload_progress = this.getController();
   var self = this;
 
+  swfu_widget.addObserver(swfu_widget.handlers, 'swfobject_loaded', function(ev)
+  {
+    // should be only called once.
+    // be careful not to trigger swfobject_loaded more than once.
+    this._insertDom();
+    this.calculatePosition();
+    swfu_widget.addEventListener(this.getController().getSWFUpload().movieElement, 'mouseover', function(ev)
+    {
+      swfu_widget.addClassName(self._html.browseFilesLink, 'mouseover');
+    });
+
+    swfu_widget.addEventListener(this.getController().getSWFUpload().movieElement, 'mouseout', function(ev)
+    {
+      swfu_widget.removeClassName(self._html.browseFilesLink, 'mouseover');
+    });
+  }, this);
+
   swfu_widget.addObserver(upload_progress, 'begin_upload', function(ev)
   {
     swfu_widget.removeClassName(this._html.containerNode, 'swfupload-queue-error');
@@ -1048,16 +1087,6 @@ swfu_widget.SWFUploadProgressView.prototype.addObservers = function()
     swfu_widget.Event.preventDefault(ev);
   });
 
-  swfu_widget.addEventListener(this.getController().getSWFUpload().movieElement, 'mouseover', function(ev)
-  {
-    swfu_widget.addClassName(self._html.browseFilesLink, 'mouseover');
-  });
-
-  swfu_widget.addEventListener(this.getController().getSWFUpload().movieElement, 'mouseout', function(ev)
-  {
-    swfu_widget.removeClassName(self._html.browseFilesLink, 'mouseover');
-  });
-  
   swfu_widget.addEventListener(this._html.startUploadLink, 'click', function(ev)
   {
     self.getController().startUpload();
@@ -1072,6 +1101,7 @@ swfu_widget.SWFUploadProgressView.prototype.addObservers = function()
     self.disableCancelButton();
     self.enableBrowseButton();
   });
+  
 }
 
 swfu_widget.SWFUploadProgressView.prototype.showControls = function()

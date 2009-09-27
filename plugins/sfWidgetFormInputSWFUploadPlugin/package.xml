@@ -10,9 +10,9 @@
     <email>johannes.heinen@gmail.com</email>
     <active>yes</active>
   </lead>
-  <date>2009-06-29</date>
+  <date>2009-09-06</date>
   <version>
-    <release>0.9.5</release>
+    <release>0.9.7</release>
     <api>0.9.0</api>
   </version>
   <stability>
@@ -24,33 +24,34 @@
   <contents>
     <dir name="/">
 
-      <file role="data" name="web/images/swfupload-toggle-queue.png" />
-      <file role="data" name="web/images/swfupload-select-button.png" />
-      <file role="data" name="web/images/swfupload-loader-background.png" />
-      <file role="data" name="web/images/swfupload-cancel-hover.png" />
-      <file role="data" name="web/images/swfupload-toggle-queue-expanded-hover.png" />
-      <file role="data" name="web/images/swfupload-toggle-queue-expanded.png" />
-      <file role="data" name="web/images/swfupload-loader.png" />
-      <file role="data" name="web/images/swfupload-cancel.png" />
-      <file role="data" name="web/images/swfupload-toggle-queue-hover.png" />
-      <file role="data" name="web/js/swfupload-widget-handler.js" />
-      <file role="data" name="web/js/vendor/swfupload/Core Changelog.txt" />
-      <file role="data" name="web/js/vendor/swfupload/swfupload license.txt" />
-      <file role="data" name="web/js/vendor/swfupload/Flash/ExternalCall.as" />
-      <file role="data" name="web/js/vendor/swfupload/Flash/SWFUpload v2.as3proj" />
-      <file role="data" name="web/js/vendor/swfupload/Flash/SWFUpload.as" />
-      <file role="data" name="web/js/vendor/swfupload/Flash/swfupload.swf" />
-      <file role="data" name="web/js/vendor/swfupload/Flash/deploy.bat" />
-      <file role="data" name="web/js/vendor/swfupload/Flash/FileItem.as" />
-      <file role="data" name="web/js/vendor/swfupload/Documentation/index.html" />
-      <file role="data" name="web/js/vendor/swfupload/swfupload.js" />
-      <file role="data" name="web/js/vendor/swfupload/plugins/swfupload.swfobject.js" />
-      <file role="data" name="web/js/vendor/swfupload/plugins/swfupload.queue.js" />
-      <file role="data" name="web/js/vendor/swfupload/plugins/swfupload.speed.js" />
-      <file role="data" name="web/js/vendor/swfupload/plugins/swfupload.cookies.js" />
-      <file role="data" name="web/js/vendor/swfupload/plugins/SWFObject License.txt" />
-      <file role="data" name="web/css/swfupload.css" />
       <file role="data" name="lib/widget/sfWidgetFormInputSWFUpload.php" />
+<file role="data" name="web/images/swfupload-toggle-queue.png" />
+<file role="data" name="web/images/swfupload-select-button.png" />
+<file role="data" name="web/images/swfupload-loader-background.png" />
+<file role="data" name="web/images/swfupload-cancel-hover.png" />
+<file role="data" name="web/images/swfupload-toggle-queue-expanded-hover.png" />
+<file role="data" name="web/images/swfupload-toggle-queue-expanded.png" />
+<file role="data" name="web/images/swfupload-loader.png" />
+<file role="data" name="web/images/swfupload-cancel.png" />
+<file role="data" name="web/images/swfupload-toggle-queue-hover.png" />
+<file role="data" name="web/js/swfupload-widget-handler.js" />
+<file role="data" name="web/js/vendor/swfupload/Core Changelog.txt" />
+<file role="data" name="web/js/vendor/swfupload/swfupload license.txt" />
+<file role="data" name="web/js/vendor/swfupload/Flash/ExternalCall.as" />
+<file role="data" name="web/js/vendor/swfupload/Flash/SWFUpload v2.as3proj" />
+<file role="data" name="web/js/vendor/swfupload/Flash/SWFUpload.as" />
+<file role="data" name="web/js/vendor/swfupload/Flash/swfupload.swf" />
+<file role="data" name="web/js/vendor/swfupload/Flash/deploy.bat" />
+<file role="data" name="web/js/vendor/swfupload/Flash/FileItem.as" />
+<file role="data" name="web/js/vendor/swfupload/Documentation/index.html" />
+<file role="data" name="web/js/vendor/swfupload/swfupload.js" />
+<file role="data" name="web/js/vendor/swfupload/plugins/swfupload.swfobject.js" />
+<file role="data" name="web/js/vendor/swfupload/plugins/swfupload.queue.js" />
+<file role="data" name="web/js/vendor/swfupload/plugins/swfupload.speed.js" />
+<file role="data" name="web/js/vendor/swfupload/plugins/swfupload.cookies.js" />
+<file role="data" name="web/js/vendor/swfupload/plugins/SWFObject License.txt" />
+<file role="data" name="web/css/swfupload.css" />
+
 
 
       <file role="data" name="README" />
@@ -77,6 +78,37 @@
   <phprelease>
   </phprelease>
   <changelog>
+    <release>
+      <version>
+        <release>0.9.7</release>
+        <api>0.9.0</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-09-06</date>
+      <notes>
+      * Fixed bug in onLoad-Event in Safari that has bound other listeners to itself
+        even if swfobject was not already loaded.
+      </notes>
+    </release>
+    <release>
+      <version>
+        <release>0.9.6</release>
+        <api>0.9.0</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-08-10</date>
+      <notes>
+      * Fixed bug that delivered a wrong calculated max_upload_size from php.ini when using different units. 
+      </notes>
+    </release>
     <release>
       <version>
         <release>0.9.5</release>

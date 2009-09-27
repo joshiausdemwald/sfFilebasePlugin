@@ -431,7 +431,8 @@ var swfu_widget =
       swfu_widget.addEventListener(this._form, 'submit', function(ev)
       {
         swfu_widget.Event.preventDefault(ev);
-        self.startUpload();
+        if(self._sendSerializedValues)
+          self.startUpload();
       });
     }
 

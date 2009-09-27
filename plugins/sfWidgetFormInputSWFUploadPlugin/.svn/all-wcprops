@@ -1,13 +1,25 @@
 K 25
 svn:wc:ra_dav:version-url
 V 56
-/!svn/ver/19183/plugins/sfWidgetFormInputSWFUploadPlugin
+/!svn/ver/20984/plugins/sfWidgetFormInputSWFUploadPlugin
+END
+sfWidgetFormInputSWFUploadPlugin-0.9.6.tgz
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/!svn/ver/20984/plugins/sfWidgetFormInputSWFUploadPlugin/sfWidgetFormInputSWFUploadPlugin-0.9.6.tgz
 END
 files.txt
 K 25
 svn:wc:ra_dav:version-url
 V 66
 /!svn/ver/19661/plugins/sfWidgetFormInputSWFUploadPlugin/files.txt
+END
+sfWidgetFormInputSWFUploadPlugin-0.9.7.tgz
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/!svn/ver/21715/plugins/sfWidgetFormInputSWFUploadPlugin/sfWidgetFormInputSWFUploadPlugin-0.9.7.tgz
 END
 LICENSE
 K 25
@@ -25,7 +37,7 @@ package.xml
 K 25
 svn:wc:ra_dav:version-url
 V 68
-/!svn/ver/19661/plugins/sfWidgetFormInputSWFUploadPlugin/package.xml
+/!svn/ver/21715/plugins/sfWidgetFormInputSWFUploadPlugin/package.xml
 END
 sfWidgetFormInputSWFUploadPlugin-0.9.1.tgz
 K 25

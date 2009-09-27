@@ -1,13 +1,13 @@
 K 25
 svn:wc:ra_dav:version-url
 V 80
-/!svn/ver/19502/plugins/sfWidgetFormInputSWFUploadPlugin/web/js/vendor/swfupload
+/!svn/ver/19503/plugins/sfWidgetFormInputSWFUploadPlugin/web/js/vendor/swfupload
 END
 swfupload.js
 K 25
 svn:wc:ra_dav:version-url
 V 93
-/!svn/ver/19503/plugins/sfWidgetFormInputSWFUploadPlugin/web/js/vendor/swfupload/swfupload.js
+/!svn/ver/21715/plugins/sfWidgetFormInputSWFUploadPlugin/web/js/vendor/swfupload/swfupload.js
 END
 swfupload license.txt
 K 25

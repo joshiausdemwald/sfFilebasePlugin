@@ -1,3 +1,8 @@
+object.swfupload
+{
+  position: absolute;
+}
+
 .swfupload-wrapper
 {
   float: left;
@@ -6,7 +11,6 @@
 .swfupload-queue,
 .swfupload-queue-controlscontainer
 {
-  position: relative;
   padding: 5px;
   margin-bottom: 5px;
   background: #f3f3f3 none;
@@ -16,14 +20,9 @@
   border-top-color: #f4f4f4;
 }
 
-.swfupload-queue-controlscontainer object
+.swfupload-queue
 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  outline: 0;
-  display: block;
+  position: relative;
 }
 
 .swfupload-queue-controlscontainer a
