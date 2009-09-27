@@ -632,7 +632,7 @@ class sfFilebasePluginUtil
    */
   public static function isAbsolutePathname($pathname)
   {
-    return strpos($pathname, '/') === 0 || preg_match('#^[a-z]:/|\\\#i',$pathname);
+    return (strpos($pathname, '/') === 0 || preg_match('#^[a-z]:\\\#i',$pathname));
   }
 
   /**

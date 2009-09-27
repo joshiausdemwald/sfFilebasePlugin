@@ -1,15 +1,15 @@
 9
 
 dir
-19428
-http://svn.symfony-project.com/plugins/sfFilebasePlugin/lib/filter/doctrine
-http://svn.symfony-project.com
+201
+https://subversion.anymotion.de/doppspares/plugins/sfFilebasePlugin/lib/filter/doctrine
+https://subversion.anymotion.de/doppspares
 
 
 
-2009-05-24T20:55:56.962697Z
-18608
-joshiausdemwald
+2009-09-08T12:59:47.312500Z
+115
+johannes
 
 
 svn:special svn:externals svn:needs-lock
@@ -24,7 +24,7 @@ svn:special svn:externals svn:needs-lock
 
 
 
-ee427ae8-e902-0410-961c-c3ed070cd9f9
+
 
 
 
@@ -39,11 +39,11 @@ file
 
 
 
-2009-05-23T00:41:10.000000Z
+2009-09-27T14:59:21.000000Z
 68a383666fccc0b880d2339ee3f308bd
-2009-05-19T13:39:28.364655Z
-18463
-joshiausdemwald
+2009-09-08T12:59:47.312500Z
+115
+johannes
 
 
 
@@ -73,11 +73,11 @@ file
 
 
 
-2009-05-24T18:02:09.000000Z
+2009-09-27T14:59:21.000000Z
 cd19d78ca63d47c76c08835bebb7b5a4
-2009-05-24T20:55:56.962697Z
-18608
-joshiausdemwald
+2009-09-08T12:59:47.312500Z
+115
+johannes
 
 
 
@@ -107,11 +107,11 @@ file
 
 
 
-2009-05-24T17:21:13.000000Z
+2009-09-27T14:59:21.000000Z
 3cea43103b5ca7e3c65b7dd9565635e1
-2009-05-21T22:49:06.804539Z
-18526
-joshiausdemwald
+2009-09-08T12:59:47.312500Z
+115
+johannes
 
 
 

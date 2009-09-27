@@ -101,7 +101,7 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
           if(!@mkdir($this->getPathname())) throw new sfFilebasePluginException(sprintf('Error creating filebase base directory %s: %', $this->getPathname(), implode("\n", error_get_last())));
           if(!@chmod($this->getPathname(), $dir_chmod)) throw new sfFilebasePluginException(sprintf('Error changing directory permissions for filebase base directory %s: %', $this->getPathname(), implode("\n", error_get_last())));
         }
-        else throw new sfFilebasePluginException(sprintf('Filebase base directory % cannot be created due to write protection of its parent directory.', $this->getPathname()));
+        else throw new sfFilebasePluginException(sprintf('Filebase base directory %s cannot be created due to write protection of its parent directory.', $this->getPathname()));
       }
       else throw new sfFilebasePluginException(sprintf('Filebase base directory %s does not exist.', $this->getPathname()));
     }
@@ -163,7 +163,7 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
     }
     return $this->cacheDirectory;
   }
-  
+
   /**
    * Returns cache directory for this filebase.
    * 
@@ -198,16 +198,21 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
    * Returns an unique hash value representation
    * of the given pathname, relative from filebaseDirectory.
    *
+   * If $absolute is set to true, the hash will be calculated
+   * from the file's absolute pathname. Note that this will prevent
+   * you from finding a file by it's hash value.
+   *
+   * @todo implement finding file by it's absolute pathname's hash
    * @param mixed sfFilebasePluginFile | string $file
+   * @param boolean $absolute
    * @return string $hash_value
    */
-  public function getHashForFile($file)
+  public function getHashForFile($file, $absolute = false)
   {
     $file = $this->getFilebaseFile($file);
-    if(!$this->isInFilebase($file)) throw new sfFilebasePluginException('FilebaseFile %s does not belong to filebase %s, access denied due to security issues.', $file->getPathname(), $this->getPathname());
-    return sha1($file->getRelativePathFromFilebaseDirectory());
+      return sha1($absolute ? $file->getPathname() : $file->getRelativePathFromFilebaseDirectory());
   }
-  
+
   /**
    * Moves a file to the given destination directory or pathname.
    * 
@@ -730,7 +735,8 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
    *
    * Returns null if file does not exist.
    *
-   * @param string md5 hash of relativePathFromFilebaseDirectory
+   * @todo retrieve file by absolute pathname's hash
+   * @param string Hash representation of relativePathFromFilebaseDirectory
    * @return sfFilebasePluginFile $file
    */
   public function getFileByHash($hash)

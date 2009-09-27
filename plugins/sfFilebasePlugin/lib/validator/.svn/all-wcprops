@@ -1,11 +1,11 @@
 K 25
 svn:wc:ra_dav:version-url
-V 54
-/!svn/ver/18342/plugins/sfFilebasePlugin/lib/validator
+V 63
+/doppspares/!svn/ver/115/plugins/sfFilebasePlugin/lib/validator
 END
 sfFilebasePluginValidatorFile.php
 K 25
 svn:wc:ra_dav:version-url
-V 88
-/!svn/ver/18342/plugins/sfFilebasePlugin/lib/validator/sfFilebasePluginValidatorFile.php
+V 97
+/doppspares/!svn/ver/115/plugins/sfFilebasePlugin/lib/validator/sfFilebasePluginValidatorFile.php
 END

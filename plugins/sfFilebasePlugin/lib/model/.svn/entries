@@ -1,15 +1,15 @@
 9
 
 dir
-19428
-http://svn.symfony-project.com/plugins/sfFilebasePlugin/lib/model
-http://svn.symfony-project.com
+201
+https://subversion.anymotion.de/doppspares/plugins/sfFilebasePlugin/lib/model
+https://subversion.anymotion.de/doppspares
 
 
 
-2009-06-13T14:53:45.754733Z
-19225
-joshiausdemwald
+2009-09-08T12:59:47.312500Z
+115
+johannes
 
 
 svn:special svn:externals svn:needs-lock
@@ -24,7 +24,7 @@ svn:special svn:externals svn:needs-lock
 
 
 
-ee427ae8-e902-0410-961c-c3ed070cd9f9
+
 
 
 
