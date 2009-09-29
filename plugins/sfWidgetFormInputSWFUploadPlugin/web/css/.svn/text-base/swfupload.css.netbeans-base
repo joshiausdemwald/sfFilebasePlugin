@@ -1,0 +1,270 @@
+.swfupload-wrapper
+{
+  float: left;
+}
+
+.swfupload-queue,
+.swfupload-queue-controlscontainer
+{
+  position: relative;
+  padding: 5px;
+  margin-bottom: 5px;
+  background: #f3f3f3 none;
+  -moz-border-radius: 2px;
+  border: 1px #e8e8e8 solid;
+  border-bottom-color: #d5d5d5;
+  border-top-color: #f4f4f4;
+}
+
+.swfupload-queue-controlscontainer object
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  outline: 0;
+  display: block;
+}
+
+.swfupload-queue-controlscontainer a
+{
+  font-size: 13px;
+  font-weight: bold;
+  padding-right: 5px;
+  color: #333;
+}
+
+.swfupload-queue-controlscontainer a.mouseover,
+.swfupload-queue-controlscontainer a:hover
+{
+  text-decoration: underline !important;
+}
+
+.swfupload-queue-controlscontainer a.disabled
+{
+  color: #ccc !important;
+  text-decoration: none !important;
+}
+
+div.swfupload-queue
+{
+  margin: 0 0 20px 0;
+  padding: 5px;
+  width: 372px;
+}
+
+div.swfupload-queue .swfupload-queue-messagecontainer
+{
+  margin: 0;
+  padding: 0;
+  font-size: 11px;
+  padding: 0 0 5px 0;
+  font-weight: bold;
+  line-height: 13px;
+  color: #ccc;
+}
+
+div.swfupload-queue-error .swfupload-queue-messagecontainer
+{
+  color: #e58477;
+}
+
+div.swfupload-queue .swfupload-progressbar-wrapper
+{
+  height: 20px;
+  padding-top:5px;
+}
+
+div.swfupload-queue .swfupload-progressbar-container,
+div.swfupload-queue .swfupload-progressbar-text
+{
+  float:left;
+  margin: 0;
+  padding: 0;
+}
+
+div.swfupload-queue .swfupload-progressbar-container
+{
+  width:85%;
+  border: 1px #5d6368 solid;
+  background:#eee;
+  -moz-border-radius: 2px;
+  background: url("../images/swfupload-loader-background.png") left center repeat-x;
+}
+
+div.swfupload-queue .swfupload-progressbar-text
+{
+  width:auto;
+  font-weight: bold;
+  padding-left:10px;
+  position:relative;
+  top: -2px;
+  left: 0;
+}
+
+div.swfupload-queue .swfupload-progressbar
+{
+  background: #a7a7a7 none;
+  border: #6a6a6a;
+  height: 9px;
+  background: url("../images/swfupload-loader.png") left center repeat-x;
+}
+
+div.swfupload-queue .swfupload-queue-togglequeuelink
+{
+  position: absolute;
+  top: 3px;
+  right: -19px;
+  padding: 0;
+  outline: none;
+  z-index: 1000;
+  height: 19px;
+  width: 18px;
+  background: transparent url("../images/swfupload-toggle-queue.png") top left no-repeat;
+}
+div.swfupload-queue .swfupload-queue-togglequeuelink:hover
+{
+  background: transparent url("../images/swfupload-toggle-queue-hover.png");
+}
+
+div.swfupload-queue .swfupload-queue-togglequeuelink-expanded
+{
+  background: transparent url("../images/swfupload-toggle-queue-expanded.png");
+}
+
+div.swfupload-queue .swfupload-queue-togglequeuelink-expanded:hover
+{
+  background: transparent url("../images/swfupload-toggle-queue-expanded-hover.png");
+}
+
+div.swfupload-queue .swfupload-queue-togglequeuelink span
+{
+  height: 0;
+  font-size: 1px;
+  line-height: 1px;
+  width: 0;
+  overflow: hidden;
+  position: absolute;
+  left: -999px;
+  top: -999px;
+}
+
+div.swfupload-queue ul
+{
+  padding: 0;
+  margin: 0;
+  display: block;
+  overflow: hidden;
+}
+
+div.swfupload-queue ul li
+{
+  list-style: none;
+  display: block;
+  margin: 0;
+  padding: 0 5px;
+  margin-top: 5px;
+  background: #333 none;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #666;
+  border-top-color: #999;
+  border-bottom-color: #000;
+  color: #fff;
+  -moz-border-radius:3px
+}
+
+div.swfupload-queue ul li .swfupload-progressbar-container
+{
+  border-color: #ccc;
+}
+
+div.swfupload-queue ul li .swfupload-progressbar-container,
+div.swfupload-queue ul li .swfupload-progressbar
+{
+  height: 7px;
+}
+
+div.swfupload-queue ul li.swfupload-queued-file-queued
+{
+  /*background: #adadff none;*/
+}
+
+div.swfupload-queue ul li.swfupload-queued-file-ok .swfupload-queued-file-messagecontainer
+{
+  color: #78ff00;
+}
+
+div.swfupload-queue ul li.swfupload-queued-file-error .swfupload-queued-file-messagecontainer
+{
+  color: #ff3304;
+}
+
+
+
+div.swfupload-queue ul li a
+{
+  display: block;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 18px;
+  width: 18px;
+  background: transparent url("../images/swfupload-cancel.png") top left no-repeat !important;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  outline: none;
+}
+
+div.swfupload-queue ul li a:hover
+{
+  background-image: url("../images/swfupload-cancel-hover.png") !important;
+}
+
+div.swfupload-queue ul li a span
+{
+  font-size: 1px;
+  height: 0;
+  width: 0;
+  line-height: 1px;
+  position: absolute;
+  top: -999px;
+  left: -999px;
+  background: transparent none;
+}
+
+div.swfupload-queue .swfupload-queued-file-messagecontainer
+{
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 13px;
+  color: #fff;
+  padding: 5px 0;
+}
+
+div.swfupload-queue ul li .swfupload-queued-file-infocontainer
+{
+  height: 18px;
+}
+
+div.swfupload-queue ul li .swfupload-queued-file-infocontainer .swfupload-queued-file-filename
+{
+  font-size: 13px;
+  font-weight: bold;
+  display: block;
+  float: left;
+  width: 230px;
+  overflow: hidden;
+  height: 18px;
+}
+
+div.swfupload-queue ul li .swfupload-queued-file-infocontainer .swfupload-queued-file-filesize
+{
+  font-size: 11px;
+  display: block;
+  float: right;
+  padding-left: 10px;
+  height: 18px;
+  text-align:right;
+  padding-right: 53px;
+}
