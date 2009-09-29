@@ -33,9 +33,6 @@ ee427ae8-e902-0410-961c-c3ed070cd9f9
 
 0
 
-helper
-dir
-
 sfFilebasePluginWebRequest.php
 file
 
@@ -70,73 +67,8 @@ joshiausdemwald
 
 1435
 
-sfFilebasePluginRecursiveIteratorIterator.php
-file
-
-
-
-
-2009-09-27T14:59:22.000000Z
-95cb237387f1d1785f63eaa7d9bf016e
-2009-05-19T11:01:14.377410Z
-18453
-joshiausdemwald
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1086
-
-sfFilebasePluginFileExif.php
-file
-
-
-
-
-2009-09-27T14:59:22.000000Z
-8ebd4eca7204f344f8a9cd262263ebe6
-2009-05-13T16:04:25.955815Z
-18227
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1035
+helper
+dir
 
 sfFilebasePluginGfxEditor.php
 file
@@ -172,8 +104,73 @@ joshiausdemwald
 
 11968
 
-filter
-dir
+sfFilebasePluginFileExif.php
+file
+
+
+
+
+2009-09-27T14:59:22.000000Z
+8ebd4eca7204f344f8a9cd262263ebe6
+2009-05-13T16:04:25.955815Z
+18227
+joshiausdemwald
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1035
+
+sfFilebasePluginRecursiveIteratorIterator.php
+file
+
+
+
+
+2009-09-27T14:59:22.000000Z
+95cb237387f1d1785f63eaa7d9bf016e
+2009-05-19T11:01:14.377410Z
+18453
+joshiausdemwald
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1086
 
 validator
 dir
@@ -197,6 +194,9 @@ dir
 
 http://svn.symfony-project.com/plugins/sfFilebasePlugin/lib/Validator
 18226
+
+filter
+dir
 
 sfFilebasePluginUploadedFile.php
 file
@@ -300,40 +300,6 @@ has-props
 
 5612
 
-sfFilebasePluginFileObject.php
-file
-
-
-
-
-2009-09-27T14:59:22.000000Z
-ccd822cfd1674fb3b711694732588c2d
-2009-05-13T16:04:25.955815Z
-18227
-joshiausdemwald
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-5833
-
 sfFilebasePluginRecursiveDirectoryIterator.php
 file
 
@@ -368,8 +334,39 @@ has-props
 
 2392
 
-model
-dir
+sfFilebasePluginFileObject.php
+file
+
+
+
+
+2009-09-27T14:59:22.000000Z
+ccd822cfd1674fb3b711694732588c2d
+2009-05-13T16:04:25.955815Z
+18227
+joshiausdemwald
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5833
 
 sfFilebasePluginGfxEditorAdapterGD.php
 file
@@ -404,6 +401,9 @@ joshiausdemwald
 
 
 8740
+
+model
+dir
 
 task
 dir
@@ -481,14 +481,14 @@ joshiausdemwald
 
 sfFilebasePluginUtil.php
 file
+22595
 
 
 
-
-2009-09-27T14:59:22.000000Z
-f821d346aa4b1d55f77f517b05ea0c19
-2009-09-18T08:32:30.002598Z
-22125
+2009-09-29T09:42:23.000000Z
+d11f3e045b68f34f2e882b649f656f13
+2009-09-29T09:46:28.097271Z
+22595
 joshiausdemwald
 
 
@@ -511,7 +511,7 @@ joshiausdemwald
 
 
 
-25952
+25957
 
 sfFilebasePluginFile.php
 file

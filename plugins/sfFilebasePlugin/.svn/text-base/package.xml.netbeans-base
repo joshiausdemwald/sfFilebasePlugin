@@ -10,9 +10,9 @@
     <email>johannes.heinen@gmail.com</email>
     <active>yes</active>
   </lead>
-  <date>2009-09-18</date>
+  <date>2009-09-27</date>
   <version>
-    <release>0.8.7</release>
+    <release>0.8.8</release>
     <api>0.7.0</api>
   </version>
   <stability>
@@ -517,6 +517,21 @@
   <phprelease>
   </phprelease>
   <changelog>
+    <release>
+      <version>
+        <release>0.8.8</release>
+        <api>0.7.0</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-09-27</date>
+      <notes>
+      * Fixed a bug in an throwed exception (missing sprintf)
+      </notes>
+    </release>
     <release>
       <version>
         <release>0.8.7</release>
