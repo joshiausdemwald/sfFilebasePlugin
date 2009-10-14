@@ -1,15 +1,15 @@
 9
 
 dir
-201
-https://subversion.anymotion.de/doppspares/plugins/sfFilebasePlugin/lib/task
-https://subversion.anymotion.de/doppspares
+22845
+http://svn.symfony-project.com/plugins/sfFilebasePlugin/branches/image-transform/lib/task
+http://svn.symfony-project.com
 
 
 
-2009-09-08T12:59:47.312500Z
-115
-johannes
+2009-05-27T06:26:58.676959Z
+18679
+joshiausdemwald
 
 
 svn:special svn:externals svn:needs-lock
@@ -24,14 +24,7 @@ svn:special svn:externals svn:needs-lock
 
 
 
-
-
-
-
-
-
-
-0
+ee427ae8-e902-0410-961c-c3ed070cd9f9
 
 sfFilebaseCreaterootTask.class.php
 file
@@ -39,11 +32,11 @@ file
 
 
 
-2009-09-27T14:59:22.000000Z
+2009-10-06T20:21:01.000000Z
 6025218c13e80599a9df87528e16b016
-2009-09-08T12:59:47.312500Z
-115
-johannes
+2009-05-27T06:26:58.676959Z
+18679
+joshiausdemwald
 
 
 
@@ -73,12 +66,12 @@ file
 
 
 
-2009-09-27T14:59:22.000000Z
+2009-10-06T20:21:01.000000Z
 768a649172f4e1f8044af4fe26f97d25
-2009-09-08T12:59:47.312500Z
-115
-johannes
-
+2009-05-27T06:26:58.676959Z
+18679
+joshiausdemwald
+has-props
 
 
 

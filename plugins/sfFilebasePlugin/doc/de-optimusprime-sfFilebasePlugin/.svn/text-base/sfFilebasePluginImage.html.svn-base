@@ -93,10 +93,12 @@
 	<div class="nav-bar">
 					<span class="disabled">Description</span> |
 							<a href="#sec-descendents">Descendents</a>
-			|											<a href="#sec-vars">Vars</a>
+			|											<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
 						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
 						
-					</div>
+											<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+						
+			</div>
 	<div class="info-box-body">
         		<!-- ========== Info from phpDoc block ========= -->
 <p class="short-description">sfFilebasePluginImage is a special sfFilebasePluginFile which represents an  image file.</p>
@@ -124,10 +126,12 @@
 		<div class="nav-bar">
 			<a href="#sec-description">Description</a> |
 			<span class="disabled">Descendents</span>
-			|												<a href="#sec-vars">Vars</a>
+			|												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
 								|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
 							
-								</div>
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+					</div>
 		<div class="info-box-body">
 			<table cellpadding="2" cellspacing="0" class="class-table">
 				<tr>
@@ -144,7 +148,62 @@
 		</div>
 	</div>
 
+	<a name="sec-const-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constant Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+						<span class="disabled">Constants</span> (<a href="#sec-consts">details</a>)
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="const-summary">
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#ADAPTER_GD" title="details" class="const-name">ADAPTER_GD</a> = 					<span class="var-type"> 'GD'</span>
 
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#ADAPTER_IMAGICK" title="details" class="const-name">ADAPTER_IMAGICK</a> = 					<span class="var-type"> 'ImageMagick'</span>
+
+				</div>
+							</div>
+		</div>
+	</div>
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+												<div class="var-title">
+					static <span class="var-type">mixed</span>
+					<a href="#$DEFAULT_ADAPTER" title="details" class="var-name">$DEFAULT_ADAPTER</a>
+				</div>
+																																				<div class="var-title">
+					<span class="var-type">sfImage</span>
+					<a href="#$sfImage" title="details" class="var-name">$sfImage</a>
+				</div>
+											</div>
+		</div>
+	</div>
 
 	<a name="sec-method-summary"></a>
 	<div class="info-box">
@@ -152,17 +211,19 @@
 		<div class="nav-bar">
 			<a href="#sec-description">Description</a> |
 							<a href="#sec-descendents">Descendents</a> |
-																		<a href="#sec-vars">Vars</a>
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
 				 
 				|
 						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
 		</div>
 		<div class="info-box-body">			
 			<div class="method-summary">
-																																																																														
+																																																																																																																						
 				<div class="method-definition">
-											<span class="method-result">array</span>
-										<a href="#getDimensions" title="details" class="method-name">getDimensions</a>
+											<span class="method-result">string</span>
+										<a href="#getBinaryString" title="details" class="method-name">getBinaryString</a>
 										()
 									</div>
 														
@@ -173,15 +234,21 @@
 									</div>
 														
 				<div class="method-definition">
-											<span class="method-result">array</span>
-										<a href="#getImagesize" title="details" class="method-name">getImagesize</a>
+											<span class="method-result">string</span>
+										<a href="#getQuality" title="details" class="method-name">getQuality</a>
 										()
 									</div>
 														
 				<div class="method-definition">
-											<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>
+											<span class="method-result">sfImage</span>
+										<a href="#getSfImage" title="details" class="method-name">getSfImage</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$adapter</span> = <span class="var-default">null</span>])
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginImage.html">sfFilebasePluginImage</a></span>
 										<a href="#getThumbnail" title="details" class="method-name">getThumbnail</a>
-											(<span class="var-type"></span>&nbsp;<span class="var-name">$dimensions</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$quality</span> = <span class="var-default">60</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$mime</span> = <span class="var-default">'image/png'</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$preserve_transparency</span> = <span class="var-default">true</span>], <span class="var-type">integer</span>&nbsp;<span class="var-name">$quality:</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$preserve_transparency:</span>)
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$width</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$height</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$method</span> = <span class="var-default">'fit'</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$background</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$quality</span> = <span class="var-default">60</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$mime</span> = <span class="var-default">'image/png'</span>])
 									</div>
 														
 				<div class="method-definition">
@@ -191,21 +258,45 @@
 									</div>
 														
 				<div class="method-definition">
+											<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginImage.html">sfFilebasePluginImage</a></span>
+										<a href="#loadString" title="details" class="method-name">loadString</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>)
+									</div>
+														
+				<div class="method-definition">
 											<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFileExif.html">sfFilebasePluginFileExif</a></span>
 										<a href="#readExif" title="details" class="method-name">readExif</a>
 										()
 									</div>
 														
 				<div class="method-definition">
-											<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginImage.html">sfFilebasePluginImage</a></span>
-										<a href="#resize" title="details" class="method-name">resize</a>
-											(<span class="var-type"></span>&nbsp;<span class="var-name">$dimensions</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$quality</span> = <span class="var-default">60</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$preserve_transparency</span> = <span class="var-default">true</span>], <span class="var-type">integer</span>&nbsp;<span class="var-name">$quality:</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$preserve_transparency:</span>)
+											<span class="method-result">boolean</span>
+										<a href="#save" title="details" class="method-name">save</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">0</span>)
 									</div>
 														
 				<div class="method-definition">
 											<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginImage.html">sfFilebasePluginImage</a></span>
-										<a href="#rotate" title="details" class="method-name">rotate</a>
-											(<span class="var-type"></span>&nbsp;<span class="var-name">$deg</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$bgcolor</span> = <span class="var-default">'#000000'</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$preserve_transparency</span> = <span class="var-default">true</span>], <span class="var-type">float</span>&nbsp;<span class="var-name">$deg:</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$bgcolor:</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$preserve_transparency:</span>)
+										<a href="#saveAs" title="details" class="method-name">saveAs</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$mime</span> = <span class="var-default">null</span>])
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#setMimeType" title="details" class="method-name">setMimeType</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$mime</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginImage.html">sfFilebasePluginImage</a></span>
+										<a href="#setQuality" title="details" class="method-name">setQuality</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$quality</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginImage.html">sfFilebasePluginImage</a></span>
+										<a href="#__call" title="details" class="method-name">__call</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$arguments</span>)
 									</div>
 											</div>
 		</div>
@@ -220,12 +311,56 @@
 										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
 						
 			
+												<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
 										| 
 									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
 							
 					</div>
 		<div class="info-box-body">
-			
+			<a name="var$DEFAULT_ADAPTER" id="$DEFAULT_ADAPTER"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			static <span class="var-type">mixed</span>
+			<span class="var-name">$DEFAULT_ADAPTER</span>
+			 = <span class="var-default"> sfFilebasePluginImage::ADAPTER_IMAGICK</span>			(line <span class="line-number">26</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+
+<a name="var$sfImage" id="$sfImage"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">sfImage</span>
+			<span class="var-name">$sfImage</span>
+						(line <span class="line-number">31</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
 							<h4>Inherited Variables</h4>
 				<A NAME='inherited_vars'><!-- --></A>
 									<p>Inherited from <span class="classname"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span></p>
@@ -247,31 +382,32 @@
 		<div class="nav-bar">
 			<a href="#sec-description">Description</a> |
 							<a href="#sec-descendents">Descendents</a> |
-															<a href="#sec-vars">Vars</a>
-																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																			<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
 						
 		</div>
 		<div class="info-box-body">
 			<A NAME='method_detail'></A>
-<a name="methodgetDimensions" id="getDimensions"><!-- --></a>
+<a name="methodgetBinaryString" id="getBinaryString"><!-- --></a>
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">getDimensions</span> (line <span class="line-number">93</span>)
+		<span class="method-title">getBinaryString</span> (line <span class="line-number">213</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Returns Image-Dimensions as an array.</p>
-<p class="description"><p>{0: width, 1: height, 'width': width, 'height' : height }</p><p>This is a wrapper function for sfFilebasePluginImage::getImageSize()</p></p>
+<p class="short-description">Converts the image to a string  Returns the image as a string</p>
 	<ul class="tags">
-				<li><span class="field">throws:</span> sfFilebasePluginException</li>
+				<li><span class="field">see:</span> sfImage::toString()</li>
 				<li><span class="field">access:</span> public</li>
 			</ul>
 	
 	<div class="method-signature">
-		<span class="method-result">array</span>
+		<span class="method-result">string</span>
 		<span class="method-name">
-			getDimensions
+			getBinaryString
 		</span>
 				()
 			</div>
@@ -283,12 +419,13 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getHeight</span> (line <span class="line-number">78</span>)
+		<span class="method-title">getHeight</span> (line <span class="line-number">151</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Returns height of image</p>
+<p class="short-description">Returns the image height</p>
 	<ul class="tags">
+				<li><span class="field">see:</span> sfImage::getHeight</li>
 				<li><span class="field">access:</span> public</li>
 			</ul>
 	
@@ -303,23 +440,24 @@
 		
 			
 	</div>
-<a name="methodgetImagesize" id="getImagesize"><!-- --></a>
+<a name="methodgetQuality" id="getQuality"><!-- --></a>
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">getImagesize</span> (line <span class="line-number">57</span>)
+		<span class="method-title">getQuality</span> (line <span class="line-number">184</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Returns size of image</p>
+<p class="short-description">Returns the image quality</p>
 	<ul class="tags">
+				<li><span class="field">see:</span> sfImage:getQuality()</li>
 				<li><span class="field">access:</span> public</li>
 			</ul>
 	
 	<div class="method-signature">
-		<span class="method-result">array</span>
+		<span class="method-result">string</span>
 		<span class="method-name">
-			getImagesize
+			getQuality
 		</span>
 				()
 			</div>
@@ -327,60 +465,91 @@
 		
 			
 	</div>
-<a name="methodgetThumbnail" id="getThumbnail"><!-- --></a>
+<a name="methodgetSfImage" id="getSfImage"><!-- --></a>
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getThumbnail</span> (line <span class="line-number">47</span>)
+		<span class="method-title">getSfImage</span> (line <span class="line-number">93</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Returns thumbnail for an image file.</p>
+<p class="short-description">Returns the sfImage instance associated with this  file info object.</p>
 	<ul class="tags">
 				<li><span class="field">access:</span> public</li>
 			</ul>
 	
 	<div class="method-signature">
-		<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>
+		<span class="method-result">sfImage</span>
 		<span class="method-name">
-			getThumbnail
+			getSfImage
 		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$dimensions</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$quality</span> = <span class="var-default">60</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$mime</span> = <span class="var-default">'image/png'</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$preserve_transparency</span> = <span class="var-default">true</span>], <span class="var-type">integer</span>&nbsp;<span class="var-name">$quality:</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$preserve_transparency:</span>)
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$adapter</span> = <span class="var-default">null</span>])
 			</div>
 	
 			<ul class="parameters">
 					<li>
-				<span class="var-type">mixed</span>
-				<span class="var-name">$dimensions</span><span class="var-description">: sfFilebasePluginFile | string $file</span>			</li>
+				<span class="var-type"></span>
+				<span class="var-name">$adapter</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetThumbnail" id="getThumbnail"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getThumbnail</span> (line <span class="line-number">38</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a cached thumbnail image.</p>
+<p class="description"><p>$width, $height, $method='fit', $background=null</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginImage.html">sfFilebasePluginImage</a></span>
+		<span class="method-name">
+			getThumbnail
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$width</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$height</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$method</span> = <span class="var-default">'fit'</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$background</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$quality</span> = <span class="var-default">60</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$mime</span> = <span class="var-default">'image/png'</span>])
+			</div>
+	
+			<ul class="parameters">
 					<li>
-				<span class="var-type">integer</span>
-				<span class="var-name">$quality:</span><span class="var-description">: in %</span>			</li>
+				<span class="var-type"></span>
+				<span class="var-name">$width</span>			</li>
 					<li>
-				<span class="var-type">boolean</span>
-				<span class="var-name">$preserve_transparency:</span><span class="var-description">: True if transparency should be  preserved</span>			</li>
+				<span class="var-type"></span>
+				<span class="var-name">$height</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$method</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$background</span>			</li>
 					<li>
 				<span class="var-type"></span>
 				<span class="var-name">$quality</span>			</li>
 					<li>
 				<span class="var-type"></span>
 				<span class="var-name">$mime</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$preserve_transparency</span>			</li>
 				</ul>
 		
 			
 	</div>
 <a name="methodgetWidth" id="getWidth"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">getWidth</span> (line <span class="line-number">67</span>)
+		<span class="method-title">getWidth</span> (line <span class="line-number">141</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Returns width of image</p>
+<p class="short-description">Returns the image pixel width</p>
 	<ul class="tags">
+				<li><span class="field">see:</span> sfImage::getWidth()</li>
 				<li><span class="field">access:</span> public</li>
 			</ul>
 	
@@ -395,11 +564,42 @@
 		
 			
 	</div>
+<a name="methodloadString" id="loadString"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">loadString</span> (line <span class="line-number">199</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Loads image from a string</p>
+<p class="description"><p>Loads the image from a string</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> sfImage::loadString</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginImage.html">sfFilebasePluginImage</a></span>
+		<span class="method-name">
+			loadString
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$string</span><span class="var-description">: Image string</span>			</li>
+				</ul>
+		
+			
+	</div>
 <a name="methodreadExif" id="readExif"><!-- --></a>
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">readExif</span> (line <span class="line-number">109</span>)
+		<span class="method-title">readExif</span> (line <span class="line-number">56</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -419,89 +619,159 @@
 		
 			
 	</div>
-<a name="methodresize" id="resize"><!-- --></a>
+<a name="methodsave" id="save"><!-- --></a>
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">resize</span> (line <span class="line-number">32</span>)
+		<span class="method-title">save</span> (line <span class="line-number">112</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Resizes an image and returns pointer to resized image.</p>
+<p class="short-description">Saves the image to disk  Saves the image to the filesystem</p>
 	<ul class="tags">
-				<li><span class="field">return:</span> The resized image</li>
+				<li><span class="field">see:</span> sfImage::save();</li>
 				<li><span class="field">access:</span> public</li>
 			</ul>
 	
 	<div class="method-signature">
-		<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginImage.html">sfFilebasePluginImage</a></span>
+		<span class="method-result">boolean</span>
 		<span class="method-name">
-			resize
+			save
 		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$dimensions</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$quality</span> = <span class="var-default">60</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$preserve_transparency</span> = <span class="var-default">true</span>], <span class="var-type">integer</span>&nbsp;<span class="var-name">$quality:</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$preserve_transparency:</span>)
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">0</span>)
 			</div>
 	
 			<ul class="parameters">
 					<li>
-				<span class="var-type">array</span>
-				<span class="var-name">$dimensions</span><span class="var-description">: (indexed by 0,1 or width/height or both)</span>			</li>
-					<li>
-				<span class="var-type">integer</span>
-				<span class="var-name">$quality:</span><span class="var-description">: In %</span>			</li>
-					<li>
-				<span class="var-type">boolean</span>
-				<span class="var-name">$preserve_transparency:</span><span class="var-description">: true if transparecy should be  preserved</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$quality</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$preserve_transparency</span>			</li>
+				<span class="var-type">string</span>
+				<span class="var-name">0</span>			</li>
 				</ul>
 		
 			
 	</div>
-<a name="methodrotate" id="rotate"><!-- --></a>
+<a name="methodsaveAs" id="saveAs"><!-- --></a>
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">rotate</span> (line <span class="line-number">132</span>)
+		<span class="method-title">saveAs</span> (line <span class="line-number">129</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Rotates an image to $deg degree</p>
+<p class="short-description">Saves the image to the specified filename</p>
+<p class="description"><p>Allows the saving to a different filename</p></p>
 	<ul class="tags">
-				<li><span class="field">return:</span> THe rotated image</li>
+				<li><span class="field">see:</span> sfImage::saveAs()</li>
 				<li><span class="field">access:</span> public</li>
 			</ul>
 	
 	<div class="method-signature">
 		<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginImage.html">sfFilebasePluginImage</a></span>
 		<span class="method-name">
-			rotate
+			saveAs
 		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$deg</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$bgcolor</span> = <span class="var-default">'#000000'</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$preserve_transparency</span> = <span class="var-default">true</span>], <span class="var-type">float</span>&nbsp;<span class="var-name">$deg:</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$bgcolor:</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$preserve_transparency:</span>)
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$mime</span> = <span class="var-default">null</span>])
 			</div>
 	
 			<ul class="parameters">
 					<li>
-				<span class="var-type">float</span>
-				<span class="var-name">$deg:</span><span class="var-description">: The amount to rotate</span>			</li>
+				<span class="var-type">string</span>
+				<span class="var-name">$filename</span><span class="var-description">: Filename</span>			</li>
 					<li>
 				<span class="var-type">string</span>
-				<span class="var-name">$bgcolor:</span><span class="var-description">: The background color of the rotated image, #00000  as default, in html-hexadecimal notation.</span>			</li>
+				<span class="var-name">$mime</span><span class="var-description">: MIME type</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetMimeType" id="setMimeType"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setMimeType</span> (line <span class="line-number">173</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the MIME type</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> sfImage::setMIMEType()</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setMimeType
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$mime</span>)
+			</div>
+	
+			<ul class="parameters">
 					<li>
-				<span class="var-type">boolean</span>
-				<span class="var-name">$preserve_transparency:</span><span class="var-description">: True if transparency should be preserved.</span>			</li>
+				<span class="var-type">string</span>
+				<span class="var-name">$mime</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetQuality" id="setQuality"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setQuality</span> (line <span class="line-number">162</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the image quality</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> sfImage::setQuality()</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginImage.html">sfFilebasePluginImage</a></span>
+		<span class="method-name">
+			setQuality
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$quality</span>)
+			</div>
+	
+			<ul class="parameters">
 					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$deg</span>			</li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$quality</span><span class="var-description">: Valid range is from 0 (worst) to 100 (best)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__call" id="__call"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">__call</span> (line <span class="line-number">80</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Magic method. This allows the calling of execute tranform methods on sfImageTranform objects.</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> sfImage::__call</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginImage.html">sfFilebasePluginImage</a></span>
+		<span class="method-name">
+			__call
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$arguments</span>)
+			</div>
+	
+			<ul class="parameters">
 					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$bgcolor</span>			</li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: the name of the transform, sfImage&lt;NAME&gt;</span>			</li>
 					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$preserve_transparency</span>			</li>
+				<span class="var-type">array</span>
+				<span class="var-name">$arguments</span><span class="var-description">: Arguments for the transform class execute method</span>			</li>
 				</ul>
 		
 			
@@ -512,7 +782,9 @@
 					<p>Inherited From <span class="classname"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span></p>
 					<blockquote>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#method__construct">sfFilebasePluginFile::__construct()</a></span><br>
+													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodchgrp">sfFilebasePluginFile::chgrp()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodchmod">sfFilebasePluginFile::chmod()</a></span><br>
+													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodchown">sfFilebasePluginFile::chown()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodcopy">sfFilebasePluginFile::copy()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methoddelete">sfFilebasePluginFile::delete()</a></span><br>
 													<span class="method-name"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html#methodexistsAndIsWritable">sfFilebasePluginFile::existsAndIsWritable()</a></span><br>
@@ -546,9 +818,59 @@
 		</div>
 	</div>
 
+	<a name="sec-consts"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="constADAPTER_GD" id="ADAPTER_GD"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ADAPTER_GD</span>
+			 = <span class="const-default"> 'GD'</span>
+			(line <span class="line-number">23</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constADAPTER_IMAGICK" id="ADAPTER_IMAGICK"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ADAPTER_IMAGICK</span>
+			 = <span class="const-default"> 'ImageMagick'</span>
+			(line <span class="line-number">24</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+						
+		</div>
+	</div>
 
 	<p class="notes" id="credit">
-		Documentation generated on Mon, 25 May 2009 15:21:38 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Wed, 14 Oct 2009 16:21:00 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
 	</p>
 	</div></body>
 </html>

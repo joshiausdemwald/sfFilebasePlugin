@@ -228,12 +228,12 @@ class sfFilebasePluginGfxEditor
     $extension = $image->getExtension();
 
     list($width, $height) = $image->getImagesize();
-
+    
     if($new_height === null)
     {
       $new_height = round ($height * $new_width / $width);
     }
-    else
+    elseif($new_width===null)
     {
       $new_width  = round($width * $new_height / $height);
     }

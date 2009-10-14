@@ -1,8 +1,8 @@
 9
 
 dir
-22128
-http://svn.symfony-project.com/plugins/sfFilebasePlugin/web/js/vendor/ext/resources/images/vista/sizer
+22845
+http://svn.symfony-project.com/plugins/sfFilebasePlugin/branches/image-transform/web/js/vendor/ext/resources/images/vista/sizer
 http://svn.symfony-project.com
 
 
@@ -24,14 +24,7 @@ svn:special svn:externals svn:needs-lock
 
 
 
-
-
-
-
-
-
-
-0
+ee427ae8-e902-0410-961c-c3ed070cd9f9
 
 ne-handle.gif
 file
@@ -39,7 +32,7 @@ file
 
 
 
-2008-08-23T17:27:00.000000Z
+2009-10-06T20:21:03.000000Z
 0c768f0f893c4e6ff7642af3f2d34945
 2009-05-20T10:49:09.091097Z
 18490
@@ -73,7 +66,7 @@ file
 
 
 
-2008-08-23T17:27:00.000000Z
+2009-10-06T20:21:03.000000Z
 b2159eeed4b26a8bee5aec9a05dc73b2
 2009-05-20T10:49:09.091097Z
 18490
@@ -101,47 +94,13 @@ has-props
 
 1318
 
-nw-handle-dark.gif
-file
-
-
-
-
-2008-08-23T17:27:00.000000Z
-1bcc898557117f206936e19c7cf86241
-2009-05-20T10:49:09.091097Z
-18490
-joshiausdemwald
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-839
-
 e-handle-dark.gif
 file
 
 
 
 
-2008-08-23T17:27:00.000000Z
+2009-10-06T20:21:03.000000Z
 1f1c7d1dfb1b0fbb1a42ab9df1b830c7
 2009-05-20T10:49:09.091097Z
 18490
@@ -169,14 +128,14 @@ has-props
 
 1062
 
-nw-handle.gif
+nw-handle-dark.gif
 file
 
 
 
 
-2008-08-23T17:27:00.000000Z
-1236d11a3ff21e0879547922249ba832
+2009-10-06T20:21:03.000000Z
+1bcc898557117f206936e19c7cf86241
 2009-05-20T10:49:09.091097Z
 18490
 joshiausdemwald
@@ -201,7 +160,7 @@ has-props
 
 
 
-853
+839
 
 e-handle.gif
 file
@@ -209,7 +168,7 @@ file
 
 
 
-2008-08-23T17:27:00.000000Z
+2009-10-06T20:21:03.000000Z
 920872e382be4fca73604ee71c4e5fd6
 2009-05-20T10:49:09.091097Z
 18490
@@ -237,13 +196,47 @@ has-props
 
 1586
 
+nw-handle.gif
+file
+
+
+
+
+2009-10-06T20:21:03.000000Z
+1236d11a3ff21e0879547922249ba832
+2009-05-20T10:49:09.091097Z
+18490
+joshiausdemwald
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+853
+
 se-handle-dark.gif
 file
 
 
 
 
-2008-08-23T17:27:00.000000Z
+2009-10-06T20:21:03.000000Z
 83ea781d13ac7f4a4084f74e9658ab6d
 2009-05-20T10:49:09.091097Z
 18490
@@ -277,7 +270,7 @@ file
 
 
 
-2008-08-23T17:27:00.000000Z
+2009-10-06T20:21:03.000000Z
 a52ffe91b3f48693fd27f13a8d4aa330
 2009-05-20T10:49:09.091097Z
 18490
@@ -311,7 +304,7 @@ file
 
 
 
-2008-08-23T17:27:00.000000Z
+2009-10-06T20:21:03.000000Z
 b87bc36f8a55f0b574a6fea3a4fa0004
 2009-05-20T10:49:09.091097Z
 18490
@@ -345,7 +338,7 @@ file
 
 
 
-2008-08-23T17:27:00.000000Z
+2009-10-06T20:21:03.000000Z
 bd8b1042c698c564522773116f07d84e
 2009-05-20T10:49:09.091097Z
 18490
@@ -373,47 +366,13 @@ has-props
 
 855
 
-s-handle-dark.gif
-file
-
-
-
-
-2008-08-23T17:27:00.000000Z
-1a2a1311ef7fb20bb0de09f2e8b83dbc
-2009-05-20T10:49:09.091097Z
-18490
-joshiausdemwald
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1060
-
 ne-handle-dark.gif
 file
 
 
 
 
-2008-08-23T17:27:00.000000Z
+2009-10-06T20:21:03.000000Z
 2e7d7cbba5678b50e0dd91240892214a
 2009-05-20T10:49:09.091097Z
 18490
@@ -440,4 +399,38 @@ has-props
 
 
 839
+
+s-handle-dark.gif
+file
+
+
+
+
+2009-10-06T20:21:03.000000Z
+1a2a1311ef7fb20bb0de09f2e8b83dbc
+2009-05-20T10:49:09.091097Z
+18490
+joshiausdemwald
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1060
 

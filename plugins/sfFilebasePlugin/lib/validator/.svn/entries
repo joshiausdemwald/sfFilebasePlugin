@@ -1,16 +1,16 @@
 9
 
 dir
-201
-https://subversion.anymotion.de/doppspares/plugins/sfFilebasePlugin/lib/validator
-https://subversion.anymotion.de/doppspares
+22845
+http://svn.symfony-project.com/plugins/sfFilebasePlugin/branches/image-transform/lib/validator
+http://svn.symfony-project.com
 
 
 
-2009-09-08T12:59:47.312500Z
-115
-johannes
-
+2009-05-16T15:28:17.233027Z
+18342
+joshiausdemwald
+has-props
 
 svn:special svn:externals svn:needs-lock
 
@@ -24,14 +24,7 @@ svn:special svn:externals svn:needs-lock
 
 
 
-
-
-
-
-
-
-
-0
+ee427ae8-e902-0410-961c-c3ed070cd9f9
 
 sfFilebasePluginValidatorFile.php
 file
@@ -39,11 +32,11 @@ file
 
 
 
-2009-09-27T14:59:22.000000Z
+2009-10-06T20:21:01.000000Z
 9428d271739b2a7a3bb30ccf5d766efc
-2009-09-08T12:59:47.312500Z
-115
-johannes
+2009-05-16T15:28:17.233027Z
+18342
+joshiausdemwald
 
 
 

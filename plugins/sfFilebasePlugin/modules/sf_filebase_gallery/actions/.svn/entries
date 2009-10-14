@@ -1,8 +1,8 @@
 9
 
 dir
-22128
-http://svn.symfony-project.com/plugins/sfFilebasePlugin/modules/sf_filebase_gallery/actions
+22845
+http://svn.symfony-project.com/plugins/sfFilebasePlugin/branches/image-transform/modules/sf_filebase_gallery/actions
 http://svn.symfony-project.com
 
 
@@ -25,13 +25,6 @@ svn:special svn:externals svn:needs-lock
 
 
 ee427ae8-e902-0410-961c-c3ed070cd9f9
-
-
-
-
-
-
-0
 
 components.class.php
 file
@@ -39,7 +32,7 @@ file
 
 
 
-2009-06-18T13:05:31.000000Z
+2009-10-06T20:21:01.000000Z
 c630722851d4420aca977525a4613eda
 2009-06-18T13:32:13.826883Z
 19387
@@ -73,7 +66,7 @@ file
 
 
 
-2009-06-20T20:05:14.000000Z
+2009-10-06T20:21:01.000000Z
 63bc1d2a1ecf2771fd388c87db706352
 2009-06-24T07:25:42.689533Z
 19487

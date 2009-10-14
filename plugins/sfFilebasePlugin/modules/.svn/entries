@@ -1,16 +1,16 @@
 9
 
 dir
-22128
-http://svn.symfony-project.com/plugins/sfFilebasePlugin/modules
+22845
+http://svn.symfony-project.com/plugins/sfFilebasePlugin/branches/image-transform/modules
 http://svn.symfony-project.com
 
 
 
-2009-09-18T08:52:49.200874Z
-22126
+2009-10-06T20:15:54.002592Z
+22839
 joshiausdemwald
-
+has-props
 
 svn:special svn:externals svn:needs-lock
 
@@ -25,39 +25,12 @@ svn:special svn:externals svn:needs-lock
 
 
 ee427ae8-e902-0410-961c-c3ed070cd9f9
-
-
-
-
-
-
-0
 
 sf_filebase_file
 dir
 
 sf_filebase_gallery
 dir
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-http://svn.symfony-project.com/plugins/sfFilebasePlugin/modules/sf_filebase_overview
-19219
 
 sf_filebase_filedeliverer
 dir

@@ -1,8 +1,8 @@
 9
 
 dir
-22128
-http://svn.symfony-project.com/plugins/sfFilebasePlugin/modules/sf_filebase_directory/templates
+22845
+http://svn.symfony-project.com/plugins/sfFilebasePlugin/branches/image-transform/modules/sf_filebase_directory/templates
 http://svn.symfony-project.com
 
 
@@ -25,13 +25,6 @@ svn:special svn:externals svn:needs-lock
 
 
 ee427ae8-e902-0410-961c-c3ed070cd9f9
-
-
-
-
-
-
-0
 
 editSuccess.php
 file
@@ -39,7 +32,7 @@ file
 
 
 
-2009-06-18T11:09:52.000000Z
+2009-10-06T20:21:01.000000Z
 d738e1587e98a38f4a03cea330403829
 2009-06-18T13:32:13.826883Z
 19387
@@ -73,7 +66,7 @@ file
 
 
 
-2009-05-21T16:41:16.000000Z
+2009-10-06T20:21:01.000000Z
 b52845554b05ab0b25bebb45268b8528
 2009-05-21T16:44:10.817203Z
 18510
@@ -107,7 +100,7 @@ file
 
 
 
-2009-05-21T16:41:19.000000Z
+2009-10-06T20:21:01.000000Z
 5b0c971477fb2cf3c56ffd770d23c33d
 2009-05-21T16:44:10.817203Z
 18510

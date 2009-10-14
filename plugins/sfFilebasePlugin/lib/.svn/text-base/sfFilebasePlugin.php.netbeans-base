@@ -31,11 +31,6 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
   protected $uploadedFilesManager;
   
   /**
-   * @var sfFilebasePluginGfxEditor
-   */
-  protected $gfxEditor;
-
-  /**
    * Holds cached instances of filebase for retrieving
    * them by a static factory method.
    *
@@ -101,7 +96,7 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
           if(!@mkdir($this->getPathname())) throw new sfFilebasePluginException(sprintf('Error creating filebase base directory %s: %', $this->getPathname(), implode("\n", error_get_last())));
           if(!@chmod($this->getPathname(), $dir_chmod)) throw new sfFilebasePluginException(sprintf('Error changing directory permissions for filebase base directory %s: %', $this->getPathname(), implode("\n", error_get_last())));
         }
-        else throw new sfFilebasePluginException(sprintf('Filebase base directory % cannot be created due to write protection of its parent directory.', $this->getPathname()));
+        else throw new sfFilebasePluginException(sprintf('Filebase base directory %s cannot be created due to write protection of its parent directory.', $this->getPathname()));
       }
       else throw new sfFilebasePluginException(sprintf('Filebase base directory %s does not exist.', $this->getPathname()));
     }
@@ -113,7 +108,6 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
     // Initialize cache.
     $this->initCache($cache_directory);
     $this->uploadedFilesManager = new sfFilebasePluginUploadedFilesManager($this);
-    $this->gfxEditor            = new sfFilebasePluginGfxEditor($this);
   }
 
   /**
@@ -138,11 +132,12 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
   /**
    * Checks if a file exists in file system.
    *
-   * @param boolean true if $filename exists filebase
+   * @param sfFilebaseFile | string $pathname
+   * @return boolean true if $filename exists filebase
    */
-  public function getFileExists($filename)
+  public function getFileExists($pathname)
   {
-    return file_exists($this->getFilebaseFile($filename));
+    return file_exists((string)$pathname);
   }
 
   /**
@@ -163,7 +158,7 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
     }
     return $this->cacheDirectory;
   }
-  
+
   /**
    * Returns cache directory for this filebase.
    * 
@@ -198,16 +193,21 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
    * Returns an unique hash value representation
    * of the given pathname, relative from filebaseDirectory.
    *
+   * If $absolute is set to true, the hash will be calculated
+   * from the file's absolute pathname. Note that this will prevent
+   * you from finding a file by it's hash value.
+   *
+   * @todo implement finding file by it's absolute pathname's hash
    * @param mixed sfFilebasePluginFile | string $file
+   * @param boolean $absolute
    * @return string $hash_value
    */
-  public function getHashForFile($file)
+  public function getHashForFile($file, $absolute = false)
   {
     $file = $this->getFilebaseFile($file);
-    if(!$this->isInFilebase($file)) throw new sfFilebasePluginException('FilebaseFile %s does not belong to filebase %s, access denied due to security issues.', $file->getPathname(), $this->getPathname());
-    return sha1($file->getRelativePathFromFilebaseDirectory());
+      return sha1($absolute ? $file->getPathname() : $file->getRelativePathFromFilebaseDirectory());
   }
-  
+
   /**
    * Moves a file to the given destination directory or pathname.
    * 
@@ -272,10 +272,10 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
     if(!$source->fileExists())                        throw new sfFilebasePluginException(sprintf('Error copying file %s: File does not exist.', $source->getPathname()));
     if(!$source->isReadable())                        throw new sfFilebasePluginException(sprintf('Error copying file %s: Source is read protected.', $source->getPathname()));
     if(!$source instanceof sfFilebasePluginDirectory) throw new sfFilebasePluginException(sprintf('Source file %s is not a directory.', $source->getPathname()));
-    if(!$this->isInFilebase($destination))   throw new sfFilebasePluginException(sprintf('FilebaseFile %s does not belong to filebase %s, access denied due to security issues.', $destination->getPathname(), $this->getPathname()));
-    if($destination->liesWithin($source))  throw new sfFilebasePluginException(sprintf('Error copying file: Destination directory %s lies within source directory %s.', $destination, $source));
+    if(!$this->isInFilebase($destination))            throw new sfFilebasePluginException(sprintf('FilebaseFile %s does not belong to filebase %s, access denied due to security issues.', $destination->getPathname(), $this->getPathname()));
+    if($destination->liesWithin($source))             throw new sfFilebasePluginException(sprintf('Error copying file: Destination directory %s lies within source directory %s.', $destination, $source));
 
-    // Destination directory does not exist, so createit.
+    // Destination directory does not exist, so create it.
     // Example: copy /hans/wurst to /otherdir/newdir/newname
     // With this man can change the target directory filename
     if($destination->fileExists())
@@ -283,15 +283,16 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
       if($destination instanceof sfFilebaseDirectory)
       {
         $destination = $destination . '/' . $source->getFilename();
-        return $this->copyDirectory($source, $destination);
+        return $this->copyDirectory($source, $destination, $allow_overwrite);
       }
       else
       {
-        if($allow_overwrite)
+        if($destination->isFile())
         {
-          $destination->delete();
+          if($allow_overwrite)
+            $destination->delete();
+          else throw new sfFilebasePluginException(sprintf('Destination %s already exists.', $destination));
         }
-        else throw new sfFilebasePluginException(sprintf('Destination %s already exists.', $destination));
       }
     }
     else
@@ -302,9 +303,9 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
     // @ todo check this behaviour
     foreach($source AS $file)
     {
-      $file->copy($destination . '/' .  $file->getPathname());
+      $file->copy($destination, $allow_overwrite);
     }
-    return $destination;
+    return $this->getFilebaseFile($destination);
   }
 
   /**
@@ -360,7 +361,7 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
       
       if(!@copy($source->getPathname(), $destination->getPathname()))   throw new sfFilebasePluginException(sprintf('Error copying file %s to %s.', $source->getPathname(), $destination->getPathname()));
     }
-    return $destination;
+    return $this->getFilebaseFile($destination);
   }
 
   /**
@@ -436,7 +437,7 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
       }
     }
     
-    if(!$directory->isEmpty())                              throw new sfFilebasePluginException(sprintf('Error deleting directory %s: Directory is not empty.', $directory->getPathname()));
+    if(!$directory->isEmpty())                              throw new sfFilebasePluginException(sprintf('Error deleting directory %s: Directory is not empty. Use sfFilebaseDirectory::delete(true) to force deletion.', $directory->getPathname()));
 
     if(!@rmdir($directory->getPathname()))
     {
@@ -453,12 +454,68 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
    * @throws sfFilebasePluginException
    * @return sfFilebasePluginFile $file
    */
-  public function chmodFile($destination, $perms = 0755)
+  public function chmodFile($destination, $perms = 0755, $recursive = true)
   {
-    if(!$destination->fileExists())         throw new sfFilebasePluginException(sprintf('FilebaseFile %s does not exist.', $destination->getPathname()));
-    if(!$this->isInFilebase($destination))  throw new sfFilebasePluginException(sprintf('FilebaseFile %s does not belong to filebase %s, access denied due to security issues.', $destination->getPathname(), $this->getPathname()));
+    $destination = $this->getFilebaseFile($destination);
     if(!$destination->isWritable())                         throw new sfFilebasePluginException(sprintf('FilebaseFile %s is write protected.', $destination->getPathname()));
+    if(!$destination->fileExists())                         throw new sfFilebasePluginException(sprintf('FilebaseFile %s does not exist.', $destination->getPathname()));
+    if(!$this->isInFilebase($destination))                  throw new sfFilebasePluginException(sprintf('FilebaseFile %s does not belong to filebase %s, access denied due to security issues.', $destination->getPathname(), $this->getPathname()));
+    if($destination instanceof sfFilebasePluginDirectory && $recursive)
+    {
+      foreach ($destination->getIterator() AS $file)
+      {
+        $file->chmod($perms, $recursive);
+      }
+    }
     if(!@chmod($destination->getPathname(), $perms))        throw new sfFilebasePluginException(sprintf('Error chmod-ing directory %s: %s', $destination->getPathname(), implode("\n", error_get_last())));
+    return $destination;
+  }
+
+  /**
+   * Changes the file's user. This only works on *nix
+   * systems.
+   * 
+   * @param sfFilebasePluginFile | string $destination
+   * @param string $user
+   */
+  public function chownFile($destination, $user, $recursive = false)
+  {
+    $destination = $this->getFilebaseFile($destination);
+    if(!$destination->isWritable())                       throw new sfFilebasePluginException(sprintf('FilebaseFile %s is write protected.', $destination->getPathname()));
+    if(!$destination->fileExists())                       throw new sfFilebasePluginException(sprintf('FilebaseFile %s does not exist.', $destination->getPathname()));
+    if(!$this->isInFilebase($destination))                throw new sfFilebasePluginException(sprintf('FilebaseFile %s does not belong to filebase %s, access denied due to security issues.', $destination->getPathname(), $this->getPathname()));
+    if($destination instanceof sfFilebaseDirectory && $recursive)
+    {
+      foreach ($destination->getIterator() AS $file)
+      {
+        $file->chown($user, $recursive);
+      }
+    }
+    if(!@chown($destination->getPathname(), $user))       throw new sfFilebasePluginException(sprintf('Error chown-ing directory %s: %s', $destination->getPathname(), implode("\n", error_get_last())));
+    return $destination;
+  }
+
+  /**
+   * Changes the file's group owner. This only works on *nix
+   * systems.
+   *
+   * @param sfFilebasePluginFile | string $destination
+   * @param string $user
+   */
+  public function chgrp($destination, $group, $recursive = false)
+  {
+    $destination = $this->getFilebaseFile($destination);
+    if(!$destination->isWritable())                       throw new sfFilebasePluginException(sprintf('FilebaseFile %s is write protected.', $destination->getPathname()));
+    if(!$destination->fileExists())                       throw new sfFilebasePluginException(sprintf('FilebaseFile %s does not exist.', $destination->getPathname()));
+    if(!$this->isInFilebase($destination))                throw new sfFilebasePluginException(sprintf('FilebaseFile %s does not belong to filebase %s, access denied due to security issues.', $destination->getPathname(), $this->getPathname()));
+    if($destination instanceof sfFilebaseDirectory && $recursive)
+    {
+      foreach ($destination->getIterator() AS $file)
+      {
+        $file->chgrp($group, $recursive);
+      }
+    }
+    if(!@chgrp($destination->getPathname(), $group))       throw new sfFilebasePluginException(sprintf('Error chgrp-ing directory %s: %s', $destination->getPathname(), implode("\n", error_get_last())));
     return $destination;
   }
 
@@ -606,83 +663,6 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
   }
 
   /**
-   * Resizes an image, replacing the original version
-   * by its resized avatar.
-   *
-   * @param mixed sfFilebasePluginImage | string $image
-   * @param array $dimensions: array(width, height) or array('width'=>x ,'height'=>y)
-   * @param integer $quality
-   * @param boolean $preserve_transparency: True if transparency should be
-   *                                        preserved
-   * @return sfFilebasePluginImage
-   */
-  public function resizeImage($image, array $dimensions, $quality = 60, $preserve_transparency = true)
-  {
-    return $this->imageCopyResampled($image, $image, $dimensions, true, $quality, $preserve_transparency);
-  }
-
-  /**
-   * Resamples an image using php internal gd-functions. Used by thumbnail and resize
-   * method.
-   *
-   * Dimensions is a 2-dim array with height, width or both, the other sides size is
-   * calculated. It can have string-keys (width/height) or integer (0=>width,1=>height)
-   *
-   * @param mixed sfFilebasePluginImage | string $src: The souce image
-   * @param mixed sfFilebasePluginImage | string $dst: The destination image, may be the same as $src
-   * @param integer $width: The original width
-   * @param integer $height: The original height
-   * @param integer $dimensions: The new dimensions array('width'=>optional, 'height'=>optional, 0=>width, 1=>height)
-   * @param boolean $overwrite: source image may be overwritten if set to true
-   * @param integer $quality The sample-quality in percent
-   * @param integer $preserve_transparency: If set to true, transparency of
-   *                                        png or gif images shall be preserved.
-   * 
-   */
-  public function imageCopyResampled($src, $dst, array $dimensions, $overwrite = false, $quality = 60, $preserve_transparency = true)
-  {
-    return $this->gfxEditor->imageCopyResampled($src, $dst, $dimensions, $overwrite, $quality, $preserve_transparency);
-  }
-
-  /**
-   *
-   * @param mixed sfFilebasePluginImage | string $image
-   * @param array $dimensions
-   * @param integer $quality
-   * @param integer $preserve_transparency: If set to true, transparency of
-   *                                        png or gif images shall be preserved.
-   * @return sfFilebasePluginImage $thumbnail
-   */
-  public function getThumbnailForImage($image, array $dimensions, $quality = 60, $mime='image/png', $preserve_transparency = true)
-  { 
-    $image = $this->getFilebaseFile($image);
-    $cache_fileinfo = $this->gfxEditor->getThumbnailFileinfo($image,$dimensions, $mime);
-
-    if(!$cache_fileinfo->fileExists())
-    {
-      return $this->gfxEditor->createThumbnail($image, $dimensions, $quality, $mime, $preserve_transparency);
-    }
-    return $cache_fileinfo;
-  }
-
-  /**
-   * Rotates an image file
-   *
-   * @see sfFilebasePluginGfxEditor::imageRotate()
-   * @param sfFilebasePluginImage $image
-   * @param float $deg
-   * @param $bgcolor: The background color of the rotated image in html-hex
-   *                  notation, default #00000
-   * @param integer $preserve_transparency: If set to true, transparency of
-   *                png or gif images shall be preserved.
-   * @return sfFilebasePluginImage $img: the rotated image
-   */
-  public function rotateImage (sfFilebasePluginImage $image, $deg, $bgcolor = '#000000', $preserve_transparency = true)
-  {
-    return $this->gfxEditor->imageRotate($image, $deg, $bgcolor, $preserve_transparency);
-  }
-
-   /**
    * Returns true if sfFilebasePluginFile is an
    * image file. Used to factory
    * a sfFilebasePluginImage instance by sfFilebasePlugin::
@@ -695,18 +675,6 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
   public function getIsImage(sfFilebasePluginFile $file)
   {
     return sfFilebasePluginUtil::getIsImage($file);
-  }
-
-  /**
-   * Returns true if $file is a supported image, what means that it can
-   * be processed by either GD-lib or imagick extension
-   *
-   * @param sfFilebasePluginFile $file
-   * @return boolean $is_supported_image: True if $file is supported
-   */
-  public function getIsSupportedImage(sfFilebasePluginFile $file)
-  {
-    return sfFilebasePluginUtil::getIsSupportedImage($file);
   }
 
   /**
@@ -730,7 +698,8 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
    *
    * Returns null if file does not exist.
    *
-   * @param string md5 hash of relativePathFromFilebaseDirectory
+   * @todo retrieve file by absolute pathname's hash
+   * @param string Hash representation of relativePathFromFilebaseDirectory
    * @return sfFilebasePluginFile $file
    */
   public function getFileByHash($hash)
@@ -758,8 +727,7 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
     $container  = $this->getFilebaseFile($container);
     // file = /path/to/lalala/bumsdi
     // container = /path/to
-    
-    if(strpos($file->getPathname(), $container->getPathname()) === 0)
+    if(strpos(sfFilebasePluginUtil::unifySlashes($file->getPathname()), sfFilebasePluginUtil::unifySlashes($container->getPathname()) . '/') === 0)
     {
       return true;
     }

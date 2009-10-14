@@ -1,15 +1,15 @@
 9
 
 dir
-201
-https://subversion.anymotion.de/doppspares/plugins/sfFilebasePlugin/lib/form
-https://subversion.anymotion.de/doppspares
+22845
+http://svn.symfony-project.com/plugins/sfFilebasePlugin/branches/image-transform/lib/form
+http://svn.symfony-project.com
 
 
 
-2009-09-08T12:59:47.312500Z
-115
-johannes
+2009-06-20T12:37:35.170657Z
+19415
+joshiausdemwald
 
 
 svn:special svn:externals svn:needs-lock
@@ -24,14 +24,7 @@ svn:special svn:externals svn:needs-lock
 
 
 
-
-
-
-
-
-
-
-0
+ee427ae8-e902-0410-961c-c3ed070cd9f9
 
 doctrine
 dir

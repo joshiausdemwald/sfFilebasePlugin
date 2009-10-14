@@ -1,8 +1,8 @@
 9
 
 dir
-22128
-http://svn.symfony-project.com/plugins/sfFilebasePlugin/web/js/vendor/ext/resources/images
+22845
+http://svn.symfony-project.com/plugins/sfFilebasePlugin/branches/image-transform/web/js/vendor/ext/resources/images
 http://svn.symfony-project.com
 
 
@@ -24,14 +24,7 @@ svn:special svn:externals svn:needs-lock
 
 
 
-
-
-
-
-
-
-
-0
+ee427ae8-e902-0410-961c-c3ed070cd9f9
 
 gray
 dir

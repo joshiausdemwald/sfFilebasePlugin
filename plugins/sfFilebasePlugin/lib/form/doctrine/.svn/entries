@@ -1,15 +1,15 @@
 9
 
 dir
-201
-https://subversion.anymotion.de/doppspares/plugins/sfFilebasePlugin/lib/form/doctrine
-https://subversion.anymotion.de/doppspares
+22845
+http://svn.symfony-project.com/plugins/sfFilebasePlugin/branches/image-transform/lib/form/doctrine
+http://svn.symfony-project.com
 
 
 
-2009-09-08T12:59:47.312500Z
-115
-johannes
+2009-06-20T12:37:35.170657Z
+19415
+joshiausdemwald
 
 
 svn:special svn:externals svn:needs-lock
@@ -24,14 +24,7 @@ svn:special svn:externals svn:needs-lock
 
 
 
-
-
-
-
-
-
-
-0
+ee427ae8-e902-0410-961c-c3ed070cd9f9
 
 PluginsfFilebaseFileForm.class.php
 file
@@ -39,11 +32,11 @@ file
 
 
 
-2009-09-27T14:59:21.000000Z
+2009-10-06T20:21:01.000000Z
 c25f88863fc0344842f4daa193c58069
-2009-09-08T12:59:47.312500Z
-115
-johannes
+2009-06-20T12:37:35.170657Z
+19415
+joshiausdemwald
 
 
 
@@ -73,11 +66,11 @@ file
 
 
 
-2009-09-27T14:59:21.000000Z
+2009-10-06T20:21:01.000000Z
 97b0415a3fcc63a7094494b943a917c5
-2009-09-08T12:59:47.312500Z
-115
-johannes
+2009-06-19T15:58:36.680652Z
+19405
+joshiausdemwald
 
 
 
@@ -107,11 +100,11 @@ file
 
 
 
-2009-09-27T14:59:21.000000Z
+2009-10-06T20:21:01.000000Z
 eb0778b2ed8ac9b8ac444292b021518d
-2009-09-08T12:59:47.312500Z
-115
-johannes
+2009-05-27T06:26:58.676959Z
+18679
+joshiausdemwald
 
 
 

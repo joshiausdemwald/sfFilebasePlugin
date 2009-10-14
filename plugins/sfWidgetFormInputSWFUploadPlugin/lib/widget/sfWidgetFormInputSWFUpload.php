@@ -149,9 +149,9 @@ class sfWidgetFormInputSWFUpload extends sfWidgetFormInputFile
   {
     self::$INSTANCE_COUNT++;
     //*.jpg;*.gif
-    $extensions = is_array($this->getOption('swf_upload_file_types')) ?
-      implode(';', $this->getOption('swf_upload_file_types')):
-      $this->getOption('swf_upload_file_types');
+    $extensions = is_array($this->getOption('swfupload_file_types')) ?
+      implode(';', $this->getOption('swfupload_file_types')):
+      $this->getOption('swfupload_file_types');
 
     $output = parent::render($name, $value, $attributes, $errors);
 

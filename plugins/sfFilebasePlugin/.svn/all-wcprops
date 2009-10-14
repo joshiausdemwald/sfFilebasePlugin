@@ -1,101 +1,35 @@
 K 25
 svn:wc:ra_dav:version-url
-V 40
-/!svn/ver/22126/plugins/sfFilebasePlugin
+V 65
+/!svn/ver/22845/plugins/sfFilebasePlugin/branches/image-transform
 END
 files.txt
 K 25
 svn:wc:ra_dav:version-url
-V 50
-/!svn/ver/22126/plugins/sfFilebasePlugin/files.txt
+V 75
+/!svn/ver/23037/plugins/sfFilebasePlugin/branches/image-transform/files.txt
 END
-LICENSE
+sfFilebasePlugin-0.9.0.tgz
 K 25
 svn:wc:ra_dav:version-url
-V 48
-/!svn/ver/18108/plugins/sfFilebasePlugin/LICENSE
+V 92
+/!svn/ver/23051/plugins/sfFilebasePlugin/branches/image-transform/sfFilebasePlugin-0.9.0.tgz
 END
-sfFilebasePlugin-0.8.0.tgz
+sfFilebasePlugin-0.9.1.tgz
 K 25
 svn:wc:ra_dav:version-url
-V 67
-/!svn/ver/19232/plugins/sfFilebasePlugin/sfFilebasePlugin-0.8.0.tgz
-END
-sfFilebasePlugin-0.8.1.tgz
-K 25
-svn:wc:ra_dav:version-url
-V 67
-/!svn/ver/19238/plugins/sfFilebasePlugin/sfFilebasePlugin-0.8.1.tgz
-END
-sfFilebasePlugin-0.8.2.tgz
-K 25
-svn:wc:ra_dav:version-url
-V 67
-/!svn/ver/19388/plugins/sfFilebasePlugin/sfFilebasePlugin-0.8.2.tgz
-END
-sfFilebasePlugin-0.8.3.tgz
-K 25
-svn:wc:ra_dav:version-url
-V 67
-/!svn/ver/19417/plugins/sfFilebasePlugin/sfFilebasePlugin-0.8.3.tgz
+V 92
+/!svn/ver/23053/plugins/sfFilebasePlugin/branches/image-transform/sfFilebasePlugin-0.9.1.tgz
 END
 package.xml
 K 25
 svn:wc:ra_dav:version-url
-V 52
-/!svn/ver/22595/plugins/sfFilebasePlugin/package.xml
-END
-sfFilebasePlugin-0.8.4.tgz
-K 25
-svn:wc:ra_dav:version-url
-V 67
-/!svn/ver/19430/plugins/sfFilebasePlugin/sfFilebasePlugin-0.8.4.tgz
-END
-sfFilebasePlugin-0.8.5.tgz
-K 25
-svn:wc:ra_dav:version-url
-V 67
-/!svn/ver/19490/plugins/sfFilebasePlugin/sfFilebasePlugin-0.8.5.tgz
-END
-package
-K 25
-svn:wc:ra_dav:version-url
-V 48
-/!svn/ver/18578/plugins/sfFilebasePlugin/package
-END
-sfFilebasePlugin-0.8.6.tgz
-K 25
-svn:wc:ra_dav:version-url
-V 67
-/!svn/ver/19515/plugins/sfFilebasePlugin/sfFilebasePlugin-0.8.6.tgz
+V 77
+/!svn/ver/23052/plugins/sfFilebasePlugin/branches/image-transform/package.xml
 END
 README
 K 25
 svn:wc:ra_dav:version-url
-V 47
-/!svn/ver/18608/plugins/sfFilebasePlugin/README
-END
-sfFilebasePlugin-0.8.7.tgz
-K 25
-svn:wc:ra_dav:version-url
-V 67
-/!svn/ver/22501/plugins/sfFilebasePlugin/sfFilebasePlugin-0.8.7.tgz
-END
-sfFilebasePlugin-0.8.8.tgz
-K 25
-svn:wc:ra_dav:version-url
-V 67
-/!svn/ver/22502/plugins/sfFilebasePlugin/sfFilebasePlugin-0.8.8.tgz
-END
-sfFilebasePlugin-0.8.9.tgz
-K 25
-svn:wc:ra_dav:version-url
-V 67
-/!svn/ver/22595/plugins/sfFilebasePlugin/sfFilebasePlugin-0.8.9.tgz
-END
-makedoc
-K 25
-svn:wc:ra_dav:version-url
-V 48
-/!svn/ver/18172/plugins/sfFilebasePlugin/makedoc
+V 72
+/!svn/ver/23051/plugins/sfFilebasePlugin/branches/image-transform/README
 END

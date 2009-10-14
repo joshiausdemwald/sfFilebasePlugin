@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/23029/plugins/sfFilebasePlugin/branches/image-transform/test/unit
+END
+sample.txt
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/23029/plugins/sfFilebasePlugin/branches/image-transform/test/unit/sample.txt
+END
+FilebaseTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/23044/plugins/sfFilebasePlugin/branches/image-transform/test/unit/FilebaseTest.php
+END
+splTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/23029/plugins/sfFilebasePlugin/branches/image-transform/test/unit/splTest.php
+END
+FilebaseUtilTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/!svn/ver/23029/plugins/sfFilebasePlugin/branches/image-transform/test/unit/FilebaseUtilTest.php
+END
+test.JPG
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/23029/plugins/sfFilebasePlugin/branches/image-transform/test/unit/test.JPG
+END

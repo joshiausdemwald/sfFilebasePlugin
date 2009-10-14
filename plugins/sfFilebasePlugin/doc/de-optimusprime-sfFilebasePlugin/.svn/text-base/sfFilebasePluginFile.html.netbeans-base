@@ -1,0 +1,1441 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class sfFilebasePluginFile</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class sfFilebasePluginFile</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|											<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">sfFilebasePluginFile represents each file that is not  handled in a special way.</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> splFileInfo</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_lib---sfFilebasePluginFile.php.html">/lib/sfFilebasePluginFile.php</a> (line <span class="field">20</span>)
+		</p>
+		
+				
+		<pre>SplFileInfo
+   |
+   --sfFilebasePluginFile</pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+								|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginImage.html">sfFilebasePluginImage</a></td>
+					<td>
+											sfFilebasePluginImage is a special sfFilebasePluginFile which represents an  image file.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginDirectory.html">sfFilebasePluginDirectory</a></td>
+					<td>
+											sfFilebasePlugin directory represents a directory
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																<div class="var-title">
+					<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html">sfFilebasePlugin</a></span>
+					<a href="#$filebase" title="details" class="var-name">$filebase</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFileObject.html">sfFilebasePluginFileObject</a></span>
+					<a href="#$filebaseFileObject" title="details" class="var-name">$filebaseFileObject</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																																																																																														
+				<div class="method-definition">
+											<span class="method-result">sfFilebasePluginFile</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$path_name</span>, <span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html">sfFilebasePlugin</a></span>&nbsp;<span class="var-name">$filebase</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$file_name</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>
+										<a href="#chmod" title="details" class="method-name">chmod</a>
+											([<span class="var-type">integer</span>&nbsp;<span class="var-name">$perms</span> = <span class="var-default">0755</span>])
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>
+										<a href="#copy" title="details" class="method-name">copy</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$destination</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$overwrite</span> = <span class="var-default">false</span>], <span class="var-type">boolean</span>&nbsp;<span class="var-name">$overwrite:</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#delete" title="details" class="method-name">delete</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#existsAndIsWritable" title="details" class="method-name">existsAndIsWritable</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#fileExists" title="details" class="method-name">fileExists</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getAbsolutePathFromWebroot" title="details" class="method-name">getAbsolutePathFromWebroot</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getATime" title="details" class="method-name">getATime</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$format</span> = <span class="var-default">false</span>])
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getContentType" title="details" class="method-name">getContentType</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getCTime" title="details" class="method-name">getCTime</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$format</span> = <span class="var-default">false</span>])
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getExtension" title="details" class="method-name">getExtension</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html">sfFilebasePlugin</a></span>
+										<a href="#getFilebase" title="details" class="method-name">getFilebase</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>
+										<a href="#getFilebaseFile" title="details" class="method-name">getFilebaseFile</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getHash" title="details" class="method-name">getHash</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getHumanReadableFileType" title="details" class="method-name">getHumanReadableFileType</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getMimeType" title="details" class="method-name">getMimeType</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">'application/octet-stream'</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$default;</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getMTime" title="details" class="method-name">getMTime</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$format</span> = <span class="var-default">false</span>])
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">integer</span>
+										<a href="#getNestingLevel" title="details" class="method-name">getNestingLevel</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getRelativePathFromFilebaseDirectory" title="details" class="method-name">getRelativePathFromFilebaseDirectory</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getSize" title="details" class="method-name">getSize</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$format</span> = <span class="var-default">null</span>])
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#isHidden" title="details" class="method-name">isHidden</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#isImage" title="details" class="method-name">isImage</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#isLink" title="details" class="method-name">isLink</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#isRWritable" title="details" class="method-name">isRWritable</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#isWebImage" title="details" class="method-name">isWebImage</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#liesWithin" title="details" class="method-name">liesWithin</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$file</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>
+										<a href="#move" title="details" class="method-name">move</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$destination</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$allow_overwrite</span> = <span class="var-default">false</span>], <span class="var-type">boolean</span>&nbsp;<span class="var-name">$allow_overwrite:</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFileObject.html">sfFilebasePluginFileObject</a></span>
+										<a href="#openFile" title="details" class="method-name">openFile</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$open_mode</span> = <span class="var-default">'r'</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$use_include_path</span> = <span class="var-default">false</span>], [<span class="var-type">ressource</span>&nbsp;<span class="var-name">$context</span> = <span class="var-default">null</span>])
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>
+										<a href="#rename" title="details" class="method-name">rename</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$new_name</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$overwrite</span> = <span class="var-default">false</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$new_name:</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$overwrite:</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#__toString" title="details" class="method-name">__toString</a>
+										()
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$filebase" id="$filebase"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html">sfFilebasePlugin</a></span>
+			<span class="var-name">$filebase</span>
+						(line <span class="line-number">27</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Reference to files' Filebase-instance</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$filebaseFileObject" id="$filebaseFileObject"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFileObject.html">sfFilebasePluginFileObject</a></span>
+			<span class="var-name">$filebaseFileObject</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">36</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">sfFilebasePluginFileObject reference,  only not null if file was  opened for reading/writing.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">43</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">sfFilebasePluginFile</span>
+		<span class="method-name">
+			__construct
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$path_name</span>, <span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html">sfFilebasePlugin</a></span>&nbsp;<span class="var-name">$filebase</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$file_name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$file_name</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$path_name</span>			</li>
+					<li>
+				<span class="var-type"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html">sfFilebasePlugin</a></span>
+				<span class="var-name">$filebase</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt>SplFileInfo::constructor __construct ( $file_name )</dt>
+					</dl>
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginThumbnail.html#method__construct">sfFilebasePluginThumbnail::__construct()</a>
+								: Constructor
+							</li>
+					<li>
+				<a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html#method__construct">sfFilebasePlugin::__construct()</a>
+								: Constructor. Parameters are filebase-&quot;root&quot;-directory and cache-dir for  e.g. temp-files and thumbnails.
+							</li>
+				</ul>
+	</div>
+<a name="methodchmod" id="chmod"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">chmod</span> (line <span class="line-number">276</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Changes the access permissions of a sfFilebasePluginFile</p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> sfFilebasePluginException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>
+		<span class="method-name">
+			chmod
+		</span>
+					([<span class="var-type">integer</span>&nbsp;<span class="var-name">$perms</span> = <span class="var-default">0755</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$perms</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginDirectory.html#methodchmod">sfFilebasePluginDirectory::chmod()</a>
+							</li>
+				</ul>
+	</div>
+<a name="methodcopy" id="copy"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">copy</span> (line <span class="line-number">302</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Copies a file to the given destination.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>
+		<span class="method-name">
+			copy
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$destination</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$overwrite</span> = <span class="var-default">false</span>], <span class="var-type">boolean</span>&nbsp;<span class="var-name">$overwrite:</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$overwrite:</span><span class="var-description">: If true dest file will be overwritten</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$destination</span><span class="var-description">: sfFilebasePluginFile | string $destination</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$overwrite</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginDirectory.html#methodcopy">sfFilebasePluginDirectory::copy()</a>
+								: Copies this folder to target destination
+							</li>
+				</ul>
+	</div>
+<a name="methoddelete" id="delete"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">delete</span> (line <span class="line-number">264</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Trys to delete a file from fs.</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> sfFilebasePlugin::delete()</li>
+				<li><span class="field">throws:</span> sfFilebasePluginException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			delete
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginDirectory.html#methoddelete">sfFilebasePluginDirectory::delete()</a>
+								: Trys to delete the directory from fs.
+							</li>
+				</ul>
+	</div>
+<a name="methodexistsAndIsWritable" id="existsAndIsWritable"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">existsAndIsWritable</span> (line <span class="line-number">244</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns true if file exists and is writable.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			existsAndIsWritable
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodfileExists" id="fileExists"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">fileExists</span> (line <span class="line-number">73</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns true if file exist in filesystem.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			fileExists
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetAbsolutePathFromWebroot" id="getAbsolutePathFromWebroot"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getAbsolutePathFromWebroot</span> (line <span class="line-number">339</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns filename, as seen absolutely from webroot.</p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> sfFilebasePluginException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getAbsolutePathFromWebroot
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetATime" id="getATime"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getATime</span> (line <span class="line-number">188</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getATime
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$format</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$format</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt>SplFileInfo::getATime (  )</dt>
+					</dl>
+			
+	</div>
+<a name="methodgetContentType" id="getContentType"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getContentType</span> (line <span class="line-number">201</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieves Content-Type (mime-type)  of File.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getContentType
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetCTime" id="getCTime"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getCTime</span> (line <span class="line-number">174</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getCTime
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$format</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$format</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt>SplFileInfo::getCTime (  )</dt>
+					</dl>
+			
+	</div>
+<a name="methodgetExtension" id="getExtension"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getExtension</span> (line <span class="line-number">58</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns extension of file</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> or null if file has no extension</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getExtension
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetFilebase" id="getFilebase"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getFilebase</span> (line <span class="line-number">224</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a sfFilebasePlugin instance</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html">sfFilebasePlugin</a></span>
+		<span class="method-name">
+			getFilebase
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetFilebaseFile" id="getFilebaseFile"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getFilebaseFile</span> (line <span class="line-number">382</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a new (child of) sfFilebasePluginFile. It returns an instance,  not regarding if the file exists or not. So you can fetch an instance  and create the underlying file by sfFilebasePlugin-methods.</p>
+<p class="description"><p>This method checks if file is a directory, an image  a link ... but beware, some attributes can only  be calculated if the file really exists in file system.</p><p>For example, if you want to retrieve a directory that does  not exists, an instance of sfFilebasePluginFile is recieved.</p><p>This behavior is simple and logically correct, but you have to keep it in  mind: sfFilebasePlugin cannot forecast what files you want to create. It  is probably more confusing for windows users where files are mostly  identified by its extension.</p><p>If the dir exists, you'll get a sfFilebasePluginDirectory.</p></p>
+	<ul class="tags">
+				<li><span class="field">todo:</span> Implement (sym)link handling.</li>
+				<li><span class="field">access:</span> public</li>
+				<li><span class="field">example:</span> example not found</li>
+				<li><span class="field">example:</span> example not found</li>
+				<li><span class="field">example:</span> example not found</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>
+		<span class="method-name">
+			getFilebaseFile
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$filename</span><span class="var-description">: | sfFilebasePluginFile $filename</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetHash" id="getHash"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getHash</span> (line <span class="line-number">253</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Generates md5 hash from pathname.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getHash
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetHumanReadableFileType" id="getHumanReadableFileType"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getHumanReadableFileType</span> (line <span class="line-number">448</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a human readable string file type.</p>
+<p class="description"><p>This could be for example &quot;jpeg image&quot; or &quot;wma audio&quot;</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getHumanReadableFileType
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginDirectory.html#methodgetHumanReadableFileType">sfFilebasePluginDirectory::getHumanReadableFileType()</a>
+								: Returns a human readable string file type.
+							</li>
+				</ul>
+	</div>
+<a name="methodgetMimeType" id="getMimeType"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getMimeType</span> (line <span class="line-number">214</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns Mime-Type (Content-Type)  of file or default if mime type  cannot be determined.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getMimeType
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">'application/octet-stream'</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$default;</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$default;</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$default</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetMTime" id="getMTime"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getMTime</span> (line <span class="line-number">181</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getMTime
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$format</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$format</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt>SplFileInfo::getMTime (  )</dt>
+					</dl>
+			
+	</div>
+<a name="methodgetNestingLevel" id="getNestingLevel"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getNestingLevel</span> (line <span class="line-number">459</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the nesting level of the file, relative to its base filebase  directory.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			getNestingLevel
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetRelativePathFromFilebaseDirectory" id="getRelativePathFromFilebaseDirectory"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getRelativePathFromFilebaseDirectory</span> (line <span class="line-number">327</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Converts an absolute Pathname to a relative one,  as seen from sfFilebasePlugin-Directory.</p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> sfFilebasePluginException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getRelativePathFromFilebaseDirectory
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetSize" id="getSize"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getSize</span> (line <span class="line-number">162</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">If Format is string, Size will be formatted (kb, mb ...)</p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> sfFilebasePluginException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getSize
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$format</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$format</span><span class="var-description">: = null | string</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt>SplFileInfo::getSize (  )</dt>
+					</dl>
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginDirectory.html#methodgetSize">sfFilebasePluginDirectory::getSize()</a>
+								: Calculates size of the directory,  cumulating every sub-file and dir.
+							</li>
+				</ul>
+	</div>
+<a name="methodisHidden" id="isHidden"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">isHidden</span> (line <span class="line-number">86</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns true if a file is hidden or null  if that cannot be determined (e.g. unter  windows).</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> true if file is hidden</li>
+				<li><span class="field">todo:</span> check functionlity under windows ntfs</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			isHidden
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodisImage" id="isImage"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">isImage</span> (line <span class="line-number">126</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns true if sfFilebasePluginFile is an</p>
+<p class="description"><p>image file. Used to factory  a sfFilebasePluginImage instance by sfFilebasePlugin::  getFilebaseFile()</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> true if file is an image</li>
+				<li><span class="field">see:</span> sfFilebaseUtil::getIsImage()</li>
+				<li><span class="field">todo:</span> improved mime-type detection</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			isImage
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodisLink" id="isLink"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">isLink</span> (line <span class="line-number">111</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns true if file is a link</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			isLink
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt>SplFileInfo::isLink (  )</dt>
+					</dl>
+			
+	</div>
+<a name="methodisRWritable" id="isRWritable"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">isRWritable</span> (line <span class="line-number">234</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns true if file is read- and write-able.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			isRWritable
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodisWebImage" id="isWebImage"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">isWebImage</span> (line <span class="line-number">141</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns true if sfFilebasePluginFile is a</p>
+<p class="description"><p>&lt;strong&gt;web&lt;/strong&gt; image file. Used to factory  a sfFilebasePluginImage instance by sfFilebasePlugin::  getFilebaseFile()</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> true if file is an image</li>
+				<li><span class="field">see:</span> <a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePlugin.html#methodgetIsWebImage">sfFilebasePlugin::getIsWebImage()</a></li>
+				<li><span class="field">todo:</span> improved mime-type detection</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			isWebImage
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodliesWithin" id="liesWithin"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">liesWithin</span> (line <span class="line-number">473</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checks if this file is a child of the given filebase  directory.</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> sfFilebasePlugin::fileLiesWithin</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			liesWithin
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$file</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$file</span><span class="var-description">: sfFilebaseDirectory | string $file</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmove" id="move"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">move</span> (line <span class="line-number">315</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Moves a file to the given destination file or directory.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>
+		<span class="method-name">
+			move
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$destination</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$allow_overwrite</span> = <span class="var-default">false</span>], <span class="var-type">boolean</span>&nbsp;<span class="var-name">$allow_overwrite:</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$allow_overwrite:</span><span class="var-description">: Move and replace existing files</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$destination</span><span class="var-description">: sfFilebasePluginFile | string destination</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$allow_overwrite</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodopenFile" id="openFile"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">openFile</span> (line <span class="line-number">435</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Opens the file for read/writing</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFileObject.html">sfFilebasePluginFileObject</a></span>
+		<span class="method-name">
+			openFile
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$open_mode</span> = <span class="var-default">'r'</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$use_include_path</span> = <span class="var-default">false</span>], [<span class="var-type">ressource</span>&nbsp;<span class="var-name">$context</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$open_mode</span>			</li>
+					<li>
+				<span class="var-type">ressource</span>
+				<span class="var-name">$context</span><span class="var-description">: stream context</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$use_include_path</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt>SplFileInfo::openFile ( [$open_mode = ], [$use_include_path = ], [$context = ] )</dt>
+					</dl>
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginDirectory.html#methodopenFile">sfFilebasePluginDirectory::openFile()</a>
+								: Opens this File, overwriting splFileInfo::openFile().
+							</li>
+				</ul>
+	</div>
+<a name="methodrename" id="rename"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">rename</span> (line <span class="line-number">290</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Renames a file.</p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> sfFilebasePluginException</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginFile.html">sfFilebasePluginFile</a></span>
+		<span class="method-name">
+			rename
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$new_name</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$overwrite</span> = <span class="var-default">false</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$new_name:</span>, <span class="var-type">boolean</span>&nbsp;<span class="var-name">$overwrite:</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$new_name:</span><span class="var-description">: The new filename</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$overwrite:</span><span class="var-description">: If true, existing files with same name will be  overwritten.</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$new_name</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$overwrite</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../de-optimusprime-sfFilebasePlugin/sfFilebasePluginDirectory.html#methodrename">sfFilebasePluginDirectory::rename()</a>
+								: Wraps a sfFilebasePluginDirectory around the return  value of sfFilebasePluginFile::rename() to handle  the proper instance.
+							</li>
+				</ul>
+	</div>
+<a name="method__toString" id="__toString"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">__toString</span> (line <span class="line-number">151</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ToString method</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			__toString
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt>SplFileInfo::__toString (  )</dt>
+					</dl>
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname">SplFileInfo (Internal Class)</span></p>
+					<blockquote>
+													<span class="method-name">constructor __construct ( $file_name )</span><br>
+													<span class="method-name">getATime (  )</span><br>
+													<span class="method-name">getBasename ( [$suffix = ] )</span><br>
+													<span class="method-name">getCTime (  )</span><br>
+													<span class="method-name">getFileInfo ( [$class_name = ] )</span><br>
+													<span class="method-name">getFilename (  )</span><br>
+													<span class="method-name">getGroup (  )</span><br>
+													<span class="method-name">getInode (  )</span><br>
+													<span class="method-name">getLinkTarget (  )</span><br>
+													<span class="method-name">getMTime (  )</span><br>
+													<span class="method-name">getOwner (  )</span><br>
+													<span class="method-name">getPath (  )</span><br>
+													<span class="method-name">getPathInfo ( [$class_name = ] )</span><br>
+													<span class="method-name">getPathname (  )</span><br>
+													<span class="method-name">getPerms (  )</span><br>
+													<span class="method-name">getRealPath (  )</span><br>
+													<span class="method-name">getSize (  )</span><br>
+													<span class="method-name">getType (  )</span><br>
+													<span class="method-name">isDir (  )</span><br>
+													<span class="method-name">isExecutable (  )</span><br>
+													<span class="method-name">isFile (  )</span><br>
+													<span class="method-name">isLink (  )</span><br>
+													<span class="method-name">isReadable (  )</span><br>
+													<span class="method-name">isWritable (  )</span><br>
+													<span class="method-name">openFile ( [$open_mode = ], [$use_include_path = ], [$context = ] )</span><br>
+													<span class="method-name">setFileClass ( [$class_name = ] )</span><br>
+													<span class="method-name">setInfoClass ( [$class_name = ] )</span><br>
+													<span class="method-name">__toString (  )</span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Mon, 25 May 2009 15:21:37 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+	</p>
+	</div></body>
+</html>

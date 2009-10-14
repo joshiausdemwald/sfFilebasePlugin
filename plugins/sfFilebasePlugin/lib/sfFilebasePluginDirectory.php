@@ -32,19 +32,6 @@ class sfFilebasePluginDirectory extends sfFilebasePluginFile implements Iterator
     return $this->filebase->deleteDirectory($this, $ignore_contents);
   }
 
-  public function chmod($perms = 0755, $recursive = true)
-  {
-    $chmod = parent::chmod($perms);
-    if($recursive)
-    {
-      foreach($this AS $child)
-      {
-        $child->chmod($perms, true);
-      }
-    }
-    return $chmod;
-  }
-
   /**
    * Wraps a sfFilebasePluginDirectory around the return
    * value of sfFilebasePluginFile::rename() to handle
@@ -140,12 +127,7 @@ class sfFilebasePluginDirectory extends sfFilebasePluginFile implements Iterator
    */
   public function offsetGet($offset)
   {
-    $file = $this->getFilebaseFile($offset);
-    if($file->fileExists())
-    {
-      return $file;
-    }
-    throw new sfFilebasePluginException (sprintf('File %s does not exist in directory %s.', $file->getPathname(), $this->getPathname()));
+    return $this->getFilebaseFile($offset);
   }
 
   /**
@@ -158,6 +140,7 @@ class sfFilebasePluginDirectory extends sfFilebasePluginFile implements Iterator
   {
     $file = $this->offsetGet($offset);
     $file->delete();
+    $file = null;
   }
 
   /**
@@ -168,11 +151,7 @@ class sfFilebasePluginDirectory extends sfFilebasePluginFile implements Iterator
    */
   public function offsetSet($offset, $value)
   {
-    $offset = $this->getFilebaseFile($offset);
-    if($offset->fileExists()) throw new sfFilebasePluginException('File %s cannot be created on the fly: Destination already exists.', $offset->getPathname());
-
-    // Analyze value
-    //if($offset)
+    throw new sfFilebasePluginException('On-The-Fly creation of files by ArrayAccess::offsetSet() is not supported.');
   }
 
   /**

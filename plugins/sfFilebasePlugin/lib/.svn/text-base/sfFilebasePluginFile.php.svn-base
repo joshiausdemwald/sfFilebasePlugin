@@ -282,9 +282,31 @@ class sfFilebasePluginFile extends SplFileInfo
    * @throws sfFilebasePluginException
    * @return sfFilebasePluginFile $file
    */
-  public function chmod($perms = 0755)
+  public function chmod($perms = 0755, $recursive = false)
   {
-    return $this->filebase->chmodFile($this, $perms);
+    return $this->filebase->chmodFile($this, $perms, $recursive);
+  }
+
+  /**
+   * Changes the ownership of a file
+   * @param string $user
+   * @throws sfFilebasePluginException
+   * @return sfFilebasePluginFile $file
+   */
+  public function chown($user, $recursive = false)
+  {
+    return $this->filebase->chownFile($this, $user, $recursive);
+  }
+
+  /**
+   * Changes the ownership of a file
+   * @param string $user
+   * @throws sfFilebasePluginException
+   * @return sfFilebasePluginFile $file
+   */
+  public function chgrp($group, $recursive = false)
+  {
+    return $this->filebase->chgrpFile($this, $group, $recursive);
   }
 
   /**
@@ -425,7 +447,7 @@ class sfFilebasePluginFile extends SplFileInfo
       
       // Can image be processed by filebase, either throw GD or throug imagick?
       // Then return instance of sfFilebasePluginImage...
-      elseif($this->filebase->getIsSupportedImage($filename))
+      elseif($this->filebase->getIsImage($filename))
       {
         $filename = new sfFilebasePluginImage($filename->getPathname(), $this->filebase);
       }

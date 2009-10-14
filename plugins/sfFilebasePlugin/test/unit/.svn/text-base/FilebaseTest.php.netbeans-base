@@ -1,0 +1,48 @@
+<?php
+/* 
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+include(dirname(__FILE__).'/../bootstrap/unit.php');
+
+try
+{
+  $t = new lime_test(17, new lime_output_color());
+  $t->diag('Ok, let\'s take a look... These tests are as incomplete as tests can be.');
+  $t->diag('Any exeptions thrown during testrun may cause in file-permission issues. After a test-run failed, please manually clean up the standard-filebase-directory unter sfConfig::get(sf_upload_dir) and run php ./symfony fix-perms task as a system administrator.');
+
+  ###  INSTANCIATING FILEBASE
+  $t->isa_ok($f = new sfFilebasePlugin(), 'sfFilebasePlugin', 'sfFilebasePlugin instanziated.');
+  $t->ok($f->getCacheDirectory()->fileExists(), 'sfFilebasePlugin::getCacheDirectory()::fileExists() is true');
+  $t->diag('Performing some operations on the filebase.');
+
+  ### TEST CREATE DIRECTORY
+  $t->isa_ok($d1 = $f->mkDir('test'), 'sfFilebasePluginDirectory', 'sfFilebasePlugin::mkDir(): Created new directory.');
+  $t->isa_ok($f1 = $f->touch('test/testfile'), 'sfFilebasePluginFile', 'sfFilebasePlugin::touch() created an empty file.');
+  $t->isa_ok($f2 = $f1->copy('test/test2'), 'sfFilebasePluginFile', 'sfFilebasePluginFile::copy() copied the file');
+
+  $t->ok($f2->fileExists(), 'sfFilebasePluginFile::fileExists() is true for the copied file');
+
+  $t->diag('Try to copy the whole directory');
+  $t->isa_ok($d2 = $d1->copy('testdir2'), 'sfFilebasePluginDirectory', 'sfFilebasePluginDirectory::copy() copied the directory to a new one');
+  $d3 = $f->mkdir('testdir3');
+  $t->isa_ok($d1->copy('testdir3'), 'sfFilebasePluginDirectory', 'sfFilebasePluginDirectory::copy() copied the directory into a existing one.');
+  $t->isa_ok($d1->copy('testdir3', true), 'sfFilebasePluginDirectory', 'Copying of the directory overriding existing content');
+
+  ### CHMOD
+  $t->diag ('Playing with file properties');
+  $t->ok($perms = $f1->chmod(0777)->getPerms(), sprintf('Changed mod of file to %s', decbin($perms)));
+  $t->ok($perms = $d3->chmod(0777, true)->getPerms(), sprintf('Recursively changed mod of a directory to %s', decbin($perms)));
+  $t->ok($perms = $d3->chmod(0700, true)->getPerms(), sprintf('Recursively changed mod of a directory to %s', decbin($perms)));
+
+  ### CLEANUP
+  $t->ok($f1->delete(), 'Deleted file.');
+  $t->ok($f2->delete(), 'Deleted file.');
+  $t->ok($d1->delete(), 'Deleted empty directory.');
+  $t->ok($d2->delete(true), 'Deleted non empty directory.');
+  $t->ok($d3->delete(true), 'Deleted non empty directory.');
+}
+catch(Exception $e)
+{
+  $t->fail((string)$e);
+}

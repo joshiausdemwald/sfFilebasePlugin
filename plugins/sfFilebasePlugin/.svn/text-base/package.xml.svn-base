@@ -10,10 +10,10 @@
     <email>johannes.heinen@gmail.com</email>
     <active>yes</active>
   </lead>
-  <date>2009-09-29</date>
+  <date>2009-10-14</date>
   <version>
-    <release>0.8.9</release>
-    <api>0.7.0</api>
+    <release>0.9.1</release>
+    <api>0.8.0</api>
   </version>
   <stability>
     <release>stable</release>
@@ -27,7 +27,6 @@
 <file role="data" name="config/doctrine/schema.yml" />
 <file role="data" name="config/routing.yml" />
 <file role="data" name="config/core_compile.yml" />
-<file role="data" name="lib/sfFilebasePluginGfxEditorAdapterInterface.php" />
 <file role="data" name="lib/sfFilebasePluginImage.php" />
 <file role="data" name="lib/model/doctrine/PluginsfFilebaseFile.class.php" />
 <file role="data" name="lib/model/doctrine/PluginsfFilebaseDirectoryTable.class.php" />
@@ -46,7 +45,6 @@
 <file role="data" name="lib/form/doctrine/PluginsfFilebaseDirectoryForm.class.php" />
 <file role="data" name="lib/form/doctrine/PluginsfAbstractFileForm.class.php" />
 <file role="data" name="lib/form/doctrine/PluginsfFilebaseFileForm.class.php" />
-<file role="data" name="lib/sfFilebasePluginGfxEditorAdapterGD.php" />
 <file role="data" name="lib/sfFilebasePluginException.php" />
 <file role="data" name="lib/helper/tagcloudHelper.php" />
 <file role="data" name="lib/helper/sfFilebasePluginHelper.php" />
@@ -56,13 +54,11 @@
 <file role="data" name="lib/filter/doctrine/PluginsfAbstractFileFormFilter.class.php" />
 <file role="data" name="lib/filter/doctrine/PluginsfFilebaseFileFormFilter.class.php" />
 <file role="data" name="lib/filter/doctrine/PluginsfFilebaseDirectoryFormFilter.class.php" />
-<file role="data" name="lib/sfFilebasePluginGfxEditor.php" />
 <file role="data" name="lib/sfFilebasePluginThumbnail.php" />
 <file role="data" name="lib/sfFilebasePluginUploadedFile.php" />
 <file role="data" name="lib/sfFilebasePluginWebRequest.php" />
 <file role="data" name="lib/sfFilebasePluginFile.php" />
 <file role="data" name="lib/sfFilebasePlugin.php" />
-<file role="data" name="lib/sfFilebasePluginGfxEditorAdapterIMagick.php" />
 <file role="data" name="modules/sf_filebase_filedeliverer/config/view.yml" />
 <file role="data" name="modules/sf_filebase_filedeliverer/actions/components.class.php" />
 <file role="data" name="modules/sf_filebase_filedeliverer/actions/actions.class.php" />
@@ -92,6 +88,12 @@
 <file role="data" name="modules/sf_filebase_directory/templates/newSuccess.php" />
 <file role="data" name="modules/sf_filebase_directory/templates/indexSuccess.php" />
 <file role="data" name="modules/sf_filebase_directory/templates/editSuccess.php" />
+<file role="data" name="test/bootstrap/unit.php" />
+<file role="data" name="test/unit/FilebaseTest.php" />
+<file role="data" name="test/unit/sample.txt" />
+<file role="data" name="test/unit/test.JPG" />
+<file role="data" name="test/unit/FilebaseUtilTest.php" />
+<file role="data" name="test/unit/splTest.php" />
 <file role="data" name="web/images/up.png" />
 <file role="data" name="web/images/folder.png" />
 <file role="data" name="web/images/edit.png" />
@@ -475,6 +477,7 @@
 <file role="data" name="web/css/cloud.css" />
 
 
+
       <file role="data" name="README" />
       <file role="data" name="LICENSE" />
     </dir>
@@ -504,6 +507,11 @@
         <channel>plugins.symfony-project.org</channel>
         <min>1.0.3</min>
       </package>
+      <package>
+        <name>sfImageTransformPlugin</name>
+        <channel>plugins.symfony-project.org</channel>
+        <min>1.2.0</min>
+      </package>
     </required>
     <optional>
       <package>
@@ -517,6 +525,24 @@
   <phprelease>
   </phprelease>
   <changelog>
+    <release>
+      <version>
+        <release>0.9.1</release>
+        <api>0.8.0</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-10-14</date>
+      <notes>
+      * Replaced thumbnail and image manipulation capabilities by methods provided
+      by sfImageTransformPlugin.
+      * Started writing unit tests for filebase core functionalities
+      * Various bugfixes
+      </notes>
+    </release>
     <release>
       <version>
         <release>0.8.9</release>

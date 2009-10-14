@@ -12,22 +12,6 @@
 <H2>
 	
 </H2>
-<h2>Root interface sfFilebasePluginGfxEditorAdapterInterface</h2>
-<ul>
-<li><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditorAdapterInterface.html">sfFilebasePluginGfxEditorAdapterInterface</a></li></ul>
-
-<h2>Root class sfFilebasePluginGfxEditor</h2>
-<ul>
-<li><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditor.html">sfFilebasePluginGfxEditor</a></li></ul>
-
-<h2>Root class sfFilebasePluginGfxEditorAdapterGD</h2>
-<ul>
-<li><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditorAdapterGD.html">sfFilebasePluginGfxEditorAdapterGD</a></li></ul>
-
-<h2>Root class sfFilebasePluginGfxEditorAdapterIMagick</h2>
-<ul>
-<li><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginGfxEditorAdapterIMagick.html">sfFilebasePluginGfxEditorAdapterIMagick</a></li></ul>
-
 <h2>Root class sfFilebasePluginStruct</h2>
 <ul>
 <li><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginStruct.html">sfFilebasePluginStruct</a> (implements )<ul>
@@ -60,7 +44,7 @@
 
 <h2>Root class sfValidatorFile</h2>
 <ul>
-<li><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginValidatorFile.html">sfFilebasePluginValidatorFile</a></li></ul>
+<li><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginValidatorFile.html">sfFilebasePluginValidatorFile</a></li><li><a href="de-optimusprime-sfFilebasePlugin/____dummy.html">____dummy</a></li></ul>
 
 <h2>Root class sfWebRequest</h2>
 <ul>
@@ -81,7 +65,7 @@
 <li><a href="de-optimusprime-sfFilebasePlugin/sfFilebasePluginFileObject.html">sfFilebasePluginFileObject</a></li></ul>
 
 	<p class="notes" id="credit">
-		Documentation generated on Mon, 25 May 2009 15:21:35 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Wed, 14 Oct 2009 16:20:56 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
 	</p>
 	</body>
 </html>

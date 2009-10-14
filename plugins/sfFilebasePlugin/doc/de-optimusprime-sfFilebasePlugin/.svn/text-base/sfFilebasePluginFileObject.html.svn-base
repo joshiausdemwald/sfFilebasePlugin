@@ -342,22 +342,18 @@
 			<ul class="parameters">
 					<li>
 				<span class="var-type">flags</span>
-				<span class="var-name">$flags</span><span class="var-description">: int[optional] &lt;p&gt;
- For all versions prior to PHP 6, this parameter is called  use_include_path and is a bool.  The flags parameter is only available since  PHP 6. If you use an older version and want to search for  filename in the  include path, this  parameter must be true. Since PHP 6, you have to use the  FILE_USE_INCLUDE_PATH flag instead.  &lt;/p&gt;  &lt;p&gt;
+				<span class="var-name">$flags</span><span class="var-description">: int[optional] &lt;p&gt;  For all versions prior to PHP 6, this parameter is called  use_include_path and is a bool.  The flags parameter is only available since  PHP 6. If you use an older version and want to search for  filename in the  include path, this  parameter must be true. Since PHP 6, you have to use the  FILE_USE_INCLUDE_PATH flag instead.  &lt;/p&gt;  &lt;p&gt;
  The value of flags can be any combination of  the following flags (with some restrictions), joined with the binary OR  (|) operator.  &lt;/p&gt;  &lt;p&gt;
  &lt;table&gt;  Available flags  &lt;tr valign=&quot;top&quot;&gt;  &lt;td&gt;Flag&lt;/td&gt;  &lt;td&gt;Description&lt;/td&gt;  &lt;/tr&gt;  &lt;tr valign=&quot;top&quot;&gt;  &lt;td&gt;  FILE_USE_INCLUDE_PATH  &lt;/td&gt;  &lt;td&gt;  Search for filename in the include directory.  See include_path for more  information.  &lt;/td&gt;  &lt;/tr&gt;  &lt;tr valign=&quot;top&quot;&gt;  &lt;td&gt;  FILE_TEXT  &lt;/td&gt;  &lt;td&gt;  If unicode semantics are enabled, the default encoding of the read  data is UTF-8. You can specify a different encoding by creating a  custom context or by changing the default using  stream_default_encoding. This flag cannot be  used with FILE_BINARY.  &lt;/td&gt;  &lt;/tr&gt;  &lt;tr valign=&quot;top&quot;&gt;  &lt;td&gt;  FILE_BINARY  &lt;/td&gt;  &lt;td&gt;  With this flag, the file is read in binary mode. This is the default  setting and cannot be used with FILE_TEXT.  &lt;/td&gt;  &lt;/tr&gt;  &lt;/table&gt;  &lt;/p&gt;</span>			</li>
 					<li>
 				<span class="var-type">context</span>
-				<span class="var-name">$context</span><span class="var-description">: resource[optional] &lt;p&gt;
- A valid context resource created with  stream_context_create. If you don't need to use a  custom context, you can skip this parameter by &amp;null;.  &lt;/p&gt;</span>			</li>
+				<span class="var-name">$context</span><span class="var-description">: resource[optional] &lt;p&gt;  A valid context resource created with  stream_context_create. If you don't need to use a  custom context, you can skip this parameter by &amp;null;.  &lt;/p&gt;</span>			</li>
 					<li>
 				<span class="var-type">offset</span>
-				<span class="var-name">$offset</span><span class="var-description">: int[optional] &lt;p&gt;
- The offset where the reading starts.  &lt;/p&gt;</span>			</li>
+				<span class="var-name">$offset</span><span class="var-description">: int[optional] &lt;p&gt;  The offset where the reading starts.  &lt;/p&gt;</span>			</li>
 					<li>
 				<span class="var-type">maxlen</span>
-				<span class="var-name">$maxlen</span><span class="var-description">: int[optional] &lt;p&gt;
- Maximum length of data read.  &lt;/p&gt;</span>			</li>
+				<span class="var-name">$maxlen</span><span class="var-description">: int[optional] &lt;p&gt;  Maximum length of data read.  &lt;/p&gt;</span>			</li>
 				</ul>
 		
 			
@@ -595,7 +591,7 @@
 	</div>
 
 	<p class="notes" id="credit">
-		Documentation generated on Mon, 25 May 2009 15:21:37 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Wed, 14 Oct 2009 16:20:59 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
 	</p>
 	</div></body>
 </html>

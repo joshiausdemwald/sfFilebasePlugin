@@ -1,16 +1,16 @@
 9
 
 dir
-22128
-http://svn.symfony-project.com/plugins/sfFilebasePlugin/data
+22845
+http://svn.symfony-project.com/plugins/sfFilebasePlugin/branches/image-transform/data
 http://svn.symfony-project.com
 
 
 
-2009-05-15T13:33:14.190224Z
-18306
+2009-10-06T20:15:54.002592Z
+22839
 joshiausdemwald
-
+has-props
 
 svn:special svn:externals svn:needs-lock
 
@@ -24,12 +24,5 @@ svn:special svn:externals svn:needs-lock
 
 
 
-
-
-
-
-
-
-
-0
+ee427ae8-e902-0410-961c-c3ed070cd9f9
 

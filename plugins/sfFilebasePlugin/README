@@ -4,10 +4,22 @@ sfFilebasePlugin
 *sfFilebasePlugin* provides an unified **api** for **filesystem related
 operations** with focus on web based applications (yes, really.)
 
+*sfFilebasePlugin* provides a wrapper for doing image manipulations very
+easily. For that, sfFilebasePlugin uses the great image manipulation capabilities
+of sfImageTransformPlugin (http://symfony-project.org/plugins/sfImageTransformPlugin).
+
+There are also helpers that provide easy access to uploaded files, an uploaded
+file validator, a SfWebRequest child class for transforming the $__FILES array
+into a more accessible structure and a few other features that simplify upload
+handling.
+
 Additionally, there is a admin module and a simple to use component to render
 a **drag'n'drop** treeview based on ext js for most simply organizing your files
 in a directory structure, all maintained through a doctrine driven hierarchical
 database. (Still in developement, but at meantime rather stable)
+
+In connection with sfWidgetFormInputSwfUpload you can perform multi file uploads
+within a few quick steps.
 
 The core plugin consists of a set of classes based on built in **SPL classes**
 (SplFileInfo/ -Object, DirectoryIterator ...) written by Marcus Boerger.
@@ -47,24 +59,16 @@ the plugin provides an extension of `SplFileObject` named
 *  easily **convert path names** from absolute to relative, web root based or
    filebase root based. Each file related plugin method has an overloaded signature, so that it does not matter whether you pass an absolute, relative pathname or an instance of sfFilebasePluginFile or one of its children.
 
-*  manipulate images or **generate thumbnails** (you are humbly invited to help 
-   me by implementing much more image-manipulation capabilities). Included is a
-   hidden cache layer which automatically stores generated binary data.
+*  manipulate images or **generate thumbnails** (based on the great
+   sfImageTransformPlugin. Included is a hidden cache layer which automatically
+   stores generated binary data if you want to do so.
 
 Image manipulation capabilities
 -------------------------------
 
-As of version 0.5.10, sfFilebasePlugin can manipulate images using both the
-GD lib and the pecl imagick extension.
-
-*  Rotate images with imagick and GD (for PHP precompiled gd version presumed)
-*  Resize images
-   *   **Preserve transparency** when resizing an gif/png image.
-   Automatically done by defining an transparent color or preserving alpha
-   channel if given.
-*  Create and cache Thumbnails
-*  Use adapter classes for easily implementing new image stuff based on both
-   libraries.
+As of Version >= 0.9, sfFilebasePlugin uses the image transform capabilities of
+sfImageTransformPlugin to perform image manipulation. So refer to the plugin
+documentation of sfImageTransformPlugin to see what you are able to accomplish.
 
 Installation
 ============
@@ -116,7 +120,7 @@ SfFilebasePlugin provides frontend modules for easy adminstration of your files
 and directories (in developement progress yet).
 
 The administration area uses the ExtJs ([http://extjs.com/](extjs.com])) to render
-some fance widgets like a tree view of your directory/file structure. With this
+some fancy widgets like a tree view of your directory/file structure. With this
 you are able to **drag and drop** files or whole directory structures within
 your filebase with just a click on your mouse button.
 
@@ -309,7 +313,7 @@ Iterate over sub-directories:
 Fetch some Files that exists in file system (the short way):
 ------------------------------------------------------------
 
-    $file = $filebase['/myfile.txt'];
+    $file = $filebase['myfile.txt'];
 
     // open the file
     $pointer = $file->openFile();
@@ -324,7 +328,7 @@ Fetch some Files that exists in file system (the short way):
     $image = $dir['image.jpg'];
 
     // Create a thumbnail:
-    $tn = $image->getThumbnail(array('width'=>100));
+    $tn = $image->getThumbnail($width, $height);
 
     // .... and so on ;)
 
@@ -404,6 +408,14 @@ app.yml (see above).
 SfFilebasePluginValidatorFile now takes a new option, "allow_overwrite". If
 you set this option to false (default is true), then your form throws a new
 sfValidatorError when the uploaded file already exists in file system.
+
+Image Manipulation
+==================
+Every instance of sfFilebasePluginImage implement the same physical methods
+as sfFile, the image manipulation base class of sfImageTransformPlugin.
+Additionally you can use every virtual method to do transforms, so e.g.
+$myImage->thumbnail(200,200) works as expected. For further documentation
+refer to the manual of sfImageTransformPlugin
 
 Error-Handling
 ==============

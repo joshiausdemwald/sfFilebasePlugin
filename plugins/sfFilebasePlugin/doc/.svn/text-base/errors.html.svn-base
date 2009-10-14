@@ -27,10 +27,6 @@
 <a href="#sfFilebasePluginFile.php">sfFilebasePluginFile.php</a><br>
 <a href="#sfFilebasePluginFileExif.php">sfFilebasePluginFileExif.php</a><br>
 <a href="#sfFilebasePluginFileObject.php">sfFilebasePluginFileObject.php</a><br>
-<a href="#sfFilebasePluginGfxEditor.php">sfFilebasePluginGfxEditor.php</a><br>
-<a href="#sfFilebasePluginGfxEditorAdapterGD.php">sfFilebasePluginGfxEditorAdapterGD.php</a><br>
-<a href="#sfFilebasePluginGfxEditorAdapterIMagick.php">sfFilebasePluginGfxEditorAdapterIMagick.php</a><br>
-<a href="#sfFilebasePluginGfxEditorAdapterInterface.php">sfFilebasePluginGfxEditorAdapterInterface.php</a><br>
 <a href="#sfFilebasePluginImage.php">sfFilebasePluginImage.php</a><br>
 <a href="#sfFilebasePluginRecursiveDirectoryIterator.php">sfFilebasePluginRecursiveDirectoryIterator.php</a><br>
 <a href="#sfFilebasePluginRecursiveIteratorIterator.php">sfFilebasePluginRecursiveIteratorIterator.php</a><br>
@@ -44,23 +40,24 @@
 <a name="Post-parsing"></a>
 <h1>Post-parsing</h1>
 <h2>Warnings:</h2><br>
-<b>Warning</b> - Class PluginsfAbstractFile parent BasesfAbstractFile not found<br>
 <b>Warning</b> - Class sfFilebasePluginValidatorFile parent sfValidatorFile not found<br>
 <b>Warning</b> - Class PluginsfFilebaseDirectoryForm parent BasesfFilebaseDirectoryForm not found<br>
+<b>Warning</b> - Class PluginsfAbstractFileForm parent BasePluginsfAbstractFileForm not found<br>
+<b>Warning</b> - Class PluginsfFilebaseFileForm parent BasesfFilebaseFileForm not found<br>
+<b>Warning</b> - Class PluginsfAbstractFile parent BasesfAbstractFile not found<br>
 <b>Warning</b> - Class PluginsfFilebaseDirectory parent BasesfFilebaseDirectory not found<br>
-<b>Warning</b> - Class PluginsfAbstractFileTable parent Doctrine_Table not found<br>
 <b>Warning</b> - Class PluginsfFilebaseFile parent BasesfFilebaseFile not found<br>
 <b>Warning</b> - Class PluginsfFilebaseDirectoryTable parent sfAbstractFileTable not found<br>
 <b>Warning</b> - Class PluginsfFilebaseFileTable parent Doctrine_Table not found<br>
-<b>Warning</b> - Class PluginsfAbstractFileForm parent BasesfAbstractFileForm not found<br>
-<b>Warning</b> - Class PluginsfFilebaseFileForm parent BasesfFilebaseFileForm not found<br>
-<b>Warning</b> - Class PluginsfFilebaseDirectoryFormFilter parent BasesfFilebaseDirectoryFormFilter not found<br>
+<b>Warning</b> - Class PluginsfAbstractFileTable parent Doctrine_Table not found<br>
+<b>Warning</b> - Class sfFilebaseImportTask parent sfBaseTask not found<br>
+<b>Warning</b> - Class sfFilebaseCreaterootTask parent sfBaseTask not found<br>
+<b>Warning</b> - Class PluginsfAbstractFileFormFilter parent BasesfAbstractFileFormFilter not found<br>
 <b>Warning</b> - Class sfFilebasePluginUploadedFile parent sfValidatedFile not found<br>
 <b>Warning</b> - Class sfFilebasePluginWebRequest parent sfWebRequest not found<br>
+<b>Warning</b> - Class ____dummy parent sfValidatorFile not found<br>
 <b>Warning</b> - Class PluginsfFilebaseFileFormFilter parent BasesfFilebaseFileFormFilter not found<br>
-<b>Warning</b> - Class PluginsfAbstractFileFormFilter parent BasesfAbstractFileFormFilter not found<br>
-<b>Warning</b> - Class sfFilebaseCreaterootTask parent sfBaseTask not found<br>
-<b>Warning</b> - Class sfFilebaseImportTask parent sfBaseTask not found<br>
+<b>Warning</b> - Class PluginsfFilebaseDirectoryFormFilter parent BasesfFilebaseDirectoryFormFilter not found<br>
 <a name="PluginsfAbstractFile.class.php"></a>
 <h1>PluginsfAbstractFile.class.php</h1>
 <h2>Warnings:</h2><br>
@@ -68,7 +65,7 @@
 <a name="PluginsfAbstractFileForm.class.php"></a>
 <h1>PluginsfAbstractFileForm.class.php</h1>
 <h2>Warnings:</h2><br>
-<b>Warning on line 13</b> - DocBlock would be page-level, but precedes class "PluginsfAbstractFileForm", use another DocBlock to document the file<br>
+<b>Warning on line 10</b> - DocBlock would be page-level, but precedes class "PluginsfAbstractFileForm", use another DocBlock to document the file<br>
 <a name="PluginsfAbstractFileFormFilter.class.php"></a>
 <h1>PluginsfAbstractFileFormFilter.class.php</h1>
 <h2>Warnings:</h2><br>
@@ -100,7 +97,7 @@
 <a name="PluginsfFilebaseFileForm.class.php"></a>
 <h1>PluginsfFilebaseFileForm.class.php</h1>
 <h2>Warnings:</h2><br>
-<b>Warning on line 13</b> - DocBlock would be page-level, but precedes class "PluginsfFilebaseFileForm", use another DocBlock to document the file<br>
+<b>Warning on line 16</b> - DocBlock would be page-level, but precedes class "PluginsfFilebaseFileForm", use another DocBlock to document the file<br>
 <a name="PluginsfFilebaseFileFormFilter.class.php"></a>
 <h1>PluginsfFilebaseFileFormFilter.class.php</h1>
 <h2>Warnings:</h2><br>
@@ -133,12 +130,12 @@
 <h1>sfFilebasePluginFile.php</h1>
 <h2>Warnings:</h2><br>
 <b>Warning on line 20</b> - no @package tag was used in a DocBlock for class sfFilebasePluginFile<br>
-<b>Warning on line 381</b> - example file "          if it exists in FS, or a sfFilebaseFile if not." does not exist<br>
-<b>Warning on line 381</b> - example file "          foreach ($filebase AS $file) ..." does not exist<br>
-<b>Warning on line 381</b> - example file "Creating a new file:
+<b>Warning on line 412</b> - example file "          foreach ($filebase AS $file) ..." does not exist<br>
+<b>Warning on line 412</b> - example file "Creating a new file:
           $new_file = $filebase->getFilebaseFile('path/to/new/file.txt');
           $filebase->touch($new_file);
           In Short: $filebase->touch('path/to/new/file.txt');" does not exist<br>
+<b>Warning on line 412</b> - example file "          if it exists in FS, or a sfFilebaseFile if not." does not exist<br>
 <a name="sfFilebasePluginFileExif.php"></a>
 <h1>sfFilebasePluginFileExif.php</h1>
 <h2>Warnings:</h2><br>
@@ -148,27 +145,13 @@
 <h2>Warnings:</h2><br>
 <b>Warning on line 19</b> - no @package tag was used in a DocBlock for class sfFilebasePluginFileObject<br>
 <b>Warning on line 56</b> - Unknown tag "@throw" used<br>
-<a name="sfFilebasePluginGfxEditor.php"></a>
-<h1>sfFilebasePluginGfxEditor.php</h1>
-<h2>Warnings:</h2><br>
-<b>Warning on line 19</b> - no @package tag was used in a DocBlock for class sfFilebasePluginGfxEditor<br>
-<a name="sfFilebasePluginGfxEditorAdapterGD.php"></a>
-<h1>sfFilebasePluginGfxEditorAdapterGD.php</h1>
-<h2>Warnings:</h2><br>
-<b>Warning on line 19</b> - no @package tag was used in a DocBlock for class sfFilebasePluginGfxEditorAdapterGD<br>
-<b>Warning on line 252</b> - Unknown tag "@experimental" used<br>
-<a name="sfFilebasePluginGfxEditorAdapterIMagick.php"></a>
-<h1>sfFilebasePluginGfxEditorAdapterIMagick.php</h1>
-<h2>Warnings:</h2><br>
-<b>Warning on line 20</b> - no @package tag was used in a DocBlock for class sfFilebasePluginGfxEditorAdapterIMagick<br>
-<a name="sfFilebasePluginGfxEditorAdapterInterface.php"></a>
-<h1>sfFilebasePluginGfxEditorAdapterInterface.php</h1>
-<h2>Warnings:</h2><br>
-<b>Warning on line 19</b> - no @package tag was used in a DocBlock for interface sfFilebasePluginGfxEditorAdapterInterface<br>
 <a name="sfFilebasePluginImage.php"></a>
 <h1>sfFilebasePluginImage.php</h1>
 <h2>Warnings:</h2><br>
 <b>Warning on line 21</b> - no @package tag was used in a DocBlock for class sfFilebasePluginImage<br>
+<b>Warning on line 79</b> - @method magic tag does not have name, illegal. Ignoring tag "@method  "<br>
+<h2>Errors:</h2><br>
+<b>Error on line 79</b> - "@method" tag was used without any parameters, illegal<br>
 <a name="sfFilebasePluginRecursiveDirectoryIterator.php"></a>
 <h1>sfFilebasePluginRecursiveDirectoryIterator.php</h1>
 <h2>Warnings:</h2><br>
@@ -181,8 +164,8 @@
 <h1>sfFilebasePluginStruct.php</h1>
 <h2>Warnings:</h2><br>
 <b>Warning on line 18</b> - no @package tag was used in a DocBlock for class sfFilebasePluginStruct<br>
-<b>Warning on line 117</b> - example file "$this->setVarname(value) sets "varname" to "value"" does not exist<br>
 <b>Warning on line 117</b> - example file "$this->getVarname() returns valueof "varname", error if not set" does not exist<br>
+<b>Warning on line 117</b> - example file "$this->setVarname(value) sets "varname" to "value"" does not exist<br>
 <b>Warning on line 117</b> - example file "$this->getVarname(std_value) returns value of "varname" or std_value if not set" does not exist<br>
 <a name="sfFilebasePluginThumbnail.php"></a>
 <h1>sfFilebasePluginThumbnail.php</h1>
@@ -191,9 +174,11 @@
 <a name="sfFilebasePluginUploadedFile.php"></a>
 <h1>sfFilebasePluginUploadedFile.php</h1>
 <h2>Warnings:</h2><br>
-<b>Warning on line 20</b> - no @package tag was used in a DocBlock for class sfFilebasePluginUploadedFile<br>
-<b>Warning on line 198</b> - example file "$file->isError(sfFilebaseUploadedFile::UPLOAD_ERR_NO_FILE)" does not exist<br>
-<b>Warning on line 198</b> - example file "$file->isError()" does not exist<br>
+<b>Warning on line 17</b> - no @package tag was used in a DocBlock for class ____dummy<br>
+<b>Warning on line 17</b> - Unknown tag "@todo:" used<br>
+<b>Warning on line 26</b> - no @package tag was used in a DocBlock for class sfFilebasePluginUploadedFile<br>
+<b>Warning on line 235</b> - example file "$file->isError(sfFilebaseUploadedFile::UPLOAD_ERR_NO_FILE)" does not exist<br>
+<b>Warning on line 235</b> - example file "$file->isError()" does not exist<br>
 <a name="sfFilebasePluginUploadedFilesManager.php"></a>
 <h1>sfFilebasePluginUploadedFilesManager.php</h1>
 <h2>Warnings:</h2><br>
@@ -211,7 +196,7 @@
 <h2>Warnings:</h2><br>
 <b>Warning on line 10</b> - DocBlock would be page-level, but precedes class "TagcloudHelper", use another DocBlock to document the file<br>
 	<p class="notes" id="credit">
-		Documentation generated on Mon, 25 May 2009 15:21:39 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+		Documentation generated on Wed, 14 Oct 2009 16:21:01 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
 	</p>
 	</body>
 </html>

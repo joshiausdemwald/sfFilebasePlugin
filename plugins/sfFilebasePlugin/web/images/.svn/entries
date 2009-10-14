@@ -1,8 +1,8 @@
 9
 
 dir
-22128
-http://svn.symfony-project.com/plugins/sfFilebasePlugin/web/images
+22845
+http://svn.symfony-project.com/plugins/sfFilebasePlugin/branches/image-transform/web/images
 http://svn.symfony-project.com
 
 
@@ -25,13 +25,6 @@ svn:special svn:externals svn:needs-lock
 
 
 ee427ae8-e902-0410-961c-c3ed070cd9f9
-
-
-
-
-
-
-0
 
 delete.png
 file
@@ -39,7 +32,7 @@ file
 
 
 
-2009-06-23T20:03:29.000000Z
+2009-10-06T20:21:01.000000Z
 6a39b61050e9f939487a70b5d979fb00
 2009-06-24T07:25:42.689533Z
 19487
@@ -73,7 +66,7 @@ file
 
 
 
-2009-05-24T14:25:15.000000Z
+2009-10-06T20:21:01.000000Z
 196aa29c950f3eaf8a6f1506eec0a132
 2009-05-24T20:55:56.962697Z
 18608
@@ -107,7 +100,7 @@ file
 
 
 
-2009-06-20T16:36:24.000000Z
+2009-10-06T20:21:01.000000Z
 6b804947fd5be9525de671a88c92252f
 2009-06-20T16:44:20.485268Z
 19429
@@ -141,7 +134,7 @@ file
 
 
 
-2009-05-24T14:25:33.000000Z
+2009-10-06T20:21:01.000000Z
 3d1bfcf55d8f10f8ea00d314778350a6
 2009-05-24T20:55:56.962697Z
 18608

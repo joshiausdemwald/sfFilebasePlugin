@@ -1,14 +1,14 @@
 9
 
 dir
-22128
-http://svn.symfony-project.com/plugins/sfFilebasePlugin/modules/sf_filebase_gallery/config
+22845
+http://svn.symfony-project.com/plugins/sfFilebasePlugin/branches/image-transform/modules/sf_filebase_gallery/config
 http://svn.symfony-project.com
 
 
 
-2009-06-18T13:32:13.826883Z
-19387
+2009-05-25T13:25:12.219977Z
+18625
 joshiausdemwald
 
 
@@ -25,13 +25,6 @@ svn:special svn:externals svn:needs-lock
 
 
 ee427ae8-e902-0410-961c-c3ed070cd9f9
-
-
-
-
-
-
-0
 
 view.yml
 file
@@ -39,10 +32,10 @@ file
 
 
 
-2009-06-18T11:07:29.000000Z
+2009-10-06T20:21:01.000000Z
 b7469ea27c3b0e61e1a55301d65a2c5d
-2009-06-18T13:32:13.826883Z
-19387
+2009-05-25T13:25:12.219977Z
+18625
 joshiausdemwald
 
 

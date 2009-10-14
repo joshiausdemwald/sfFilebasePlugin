@@ -166,7 +166,7 @@ class sfFilebasePluginFile extends SplFileInfo
     $size = parent::getSize();
     if($format)
     {
-      return sfFilebasePlugin::getStringFilesize((double)$size);
+      return sfFilebasePluginUtil::getStringFilesize((double)$size);
     }
     return $size;
   }
@@ -247,12 +247,21 @@ class sfFilebasePluginFile extends SplFileInfo
   }
 
   /**
-   * Generates md5 hash from pathname.
-   * @return string $hash
+   * Returns an unique hash value representation
+   * of the given pathname, relative from filebaseDirectory.
+   *
+   * If $absolute is set to true, the hash will be calculated
+   * from the file's absolute pathname. Note that this will prevent
+   * you from finding a file by it's hash value after your filesystems
+   * directory layout has been changed.
+   *
+   * @see   sfFilebasePlugin::getHashForFile
+   * @param boolean $absolute
+   * @return string $hash_value
    */
-  public function getHash()
+  public function getHash($absolute = false)
   {
-    return $this->getFilebase()->getHashForFile($this);
+    return $this->getFilebase()->getHashForFile($this, $absolute);
   }
 
   /**
@@ -273,9 +282,20 @@ class sfFilebasePluginFile extends SplFileInfo
    * @throws sfFilebasePluginException
    * @return sfFilebasePluginFile $file
    */
-  public function chmod($perms = 0755)
+  public function chmod($perms = 0755, $recursive = false)
   {
-    return $this->filebase->chmodFile($this, $perms);
+    return $this->filebase->chmodFile($this, $perms, $recursive);
+  }
+
+  /**
+   * Changes the ownership of a file
+   * @param string $user
+   * @throws sfFilebasePluginException
+   * @return sfFilebasePluginFile $file
+   */
+  public function chown($user, $recursive = false)
+  {
+    return $this->filebase->chownFile($this, $user, $recursive);
   }
 
   /**
@@ -416,7 +436,7 @@ class sfFilebasePluginFile extends SplFileInfo
       
       // Can image be processed by filebase, either throw GD or throug imagick?
       // Then return instance of sfFilebasePluginImage...
-      elseif($this->filebase->getIsSupportedImage($filename))
+      elseif($this->filebase->getIsImage($filename))
       {
         $filename = new sfFilebasePluginImage($filename->getPathname(), $this->filebase);
       }

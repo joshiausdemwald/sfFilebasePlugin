@@ -1,16 +1,16 @@
 9
 
 dir
-22128
-http://svn.symfony-project.com/plugins/sfFilebasePlugin/config
+22845
+http://svn.symfony-project.com/plugins/sfFilebasePlugin/branches/image-transform/config
 http://svn.symfony-project.com
 
 
 
-2009-06-24T07:25:42.689533Z
-19487
+2009-10-06T20:15:54.002592Z
+22839
 joshiausdemwald
-
+has-props
 
 svn:special svn:externals svn:needs-lock
 
@@ -25,13 +25,6 @@ svn:special svn:externals svn:needs-lock
 
 
 ee427ae8-e902-0410-961c-c3ed070cd9f9
-
-
-
-
-
-
-0
 
 core_compile.yml
 file
@@ -39,7 +32,7 @@ file
 
 
 
-2009-05-23T00:02:55.000000Z
+2009-10-06T20:21:01.000000Z
 42d9e5f6710dd5e8bf8cb8ecbfb9ee16
 2009-05-23T00:28:54.340722Z
 18578
@@ -67,13 +60,16 @@ joshiausdemwald
 
 1732
 
+doctrine
+dir
+
 routing.yml
 file
 
 
 
 
-2009-06-23T20:26:30.000000Z
+2009-10-06T20:21:01.000000Z
 ac88ac2e34f15e75fd3b8185d972b0bb
 2009-06-24T07:25:42.689533Z
 19487
@@ -101,16 +97,13 @@ joshiausdemwald
 
 1653
 
-doctrine
-dir
-
 config.php
 file
 
 
 
 
-2009-05-24T14:05:47.000000Z
+2009-10-06T20:21:01.000000Z
 2fe6cf04438f4a54411a5c4fcae05cad
 2009-05-13T16:04:25.955815Z
 18227

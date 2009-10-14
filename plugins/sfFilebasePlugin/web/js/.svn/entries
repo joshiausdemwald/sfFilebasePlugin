@@ -1,8 +1,8 @@
 9
 
 dir
-22128
-http://svn.symfony-project.com/plugins/sfFilebasePlugin/web/js
+22845
+http://svn.symfony-project.com/plugins/sfFilebasePlugin/branches/image-transform/web/js
 http://svn.symfony-project.com
 
 
@@ -25,13 +25,6 @@ svn:special svn:externals svn:needs-lock
 
 
 ee427ae8-e902-0410-961c-c3ed070cd9f9
-
-
-
-
-
-
-0
 
 fileupload.js
 file
@@ -39,7 +32,7 @@ file
 
 
 
-2009-06-13T16:17:35.000000Z
+2009-10-06T20:21:03.000000Z
 bd9bc8a260d774eb3b43eec0a0f9e5cc
 2009-06-13T16:18:47.468110Z
 19235
