@@ -65,7 +65,7 @@ EOF;
       }
     }
 
-    $filebase = sfFilebasePlugin::getInstance();
+    $filebase = sfConfig::get('sf_public_filebase');
     if(!$filebase->fileExists() || !$filebase->isWritable())
     {
       throw new Exception(sprintf('Filebase root directory %s does not exist or is write protected. Ensure that the directory exists in file system and that it is writable by the running php processes/apache users.', $filebase->getPathname()));

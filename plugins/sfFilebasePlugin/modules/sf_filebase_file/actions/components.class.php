@@ -17,7 +17,7 @@ class sf_filebase_fileComponents extends sfComponents
 {
   public function executeRetrieveFiles(sfWebRequest $request)
   {
-    $f = sfFilebasePlugin::getInstance();
+    $f = sfConfig::get('sf_public_filebase');
     $this->is_edit = false;
     if($this->form instanceof sfForm)
     {

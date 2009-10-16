@@ -23,7 +23,7 @@ class sfFilebasePluginImage extends sfFilebasePluginFile
   const ADAPTER_GD = 'GD';
   const ADAPTER_IMAGICK = 'ImageMagick';
 
-  public static $DEFAULT_ADAPTER = sfFilebasePluginImage::ADAPTER_IMAGICK;
+  public static $DEFAULT_ADAPTER = sfFilebasePluginImage::ADAPTER_GD;
 
   /**
    * @var sfImage $image

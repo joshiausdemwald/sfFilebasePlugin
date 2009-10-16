@@ -1,14 +1,14 @@
 9
 
 dir
-22845
-http://svn.symfony-project.com/plugins/sfFilebasePlugin/branches/image-transform/lib/filter/doctrine
+23120
+http://svn.symfony-project.com/plugins/sfFilebasePlugin/trunk/lib/filter/doctrine
 http://svn.symfony-project.com
 
 
 
-2009-05-24T20:55:56.962697Z
-18608
+2009-10-16T11:57:42.692992Z
+23118
 joshiausdemwald
 
 
@@ -59,6 +59,40 @@ joshiausdemwald
 
 
 496
+
+PlugintestererFormFilter.class.php
+file
+
+
+
+
+2009-10-16T09:31:22.000000Z
+f8889311f139f1e091b5ac2120943dd4
+2009-10-16T11:57:42.692992Z
+23118
+joshiausdemwald
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+252
 
 PluginsfFilebaseFileFormFilter.class.php
 file

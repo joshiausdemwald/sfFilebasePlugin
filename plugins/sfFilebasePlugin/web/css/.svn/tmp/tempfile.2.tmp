@@ -1,0 +1,184 @@
+/**
+ * This file is part of the sfFilebasePlugin package.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @package   de.optimusprime.sfFilebasePlugin.adminArea
+ * @author    Johannes Heinen <johannes.heinen@gmail.com>
+ * @license   MIT license
+ * @copyright 2007-2009 Johannes Heinen <johannes.heinen@gmail.com>
+ */
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+html[xmlns] .clearfix {
+	display: block;
+}
+
+* html .clearfix {
+	height: 1%;
+}
+
+#Sf_Filebase_Tree
+{
+  float: left;
+  width: 210px;
+}
+
+#Sf_Filebase_Gallery_Container
+{
+  padding: 0 300px 0 300px;
+}
+
+#Sf_Filebase_Gallery ul
+{
+  padding: 0;
+  margin: 0;
+}
+
+#Sf_Filebase_Gallery li.file
+{
+  position: relative;
+  float: left;
+  width: 100px;
+  height: 139px;
+  background: #eee;
+  border-right: 5px #fff solid;
+  border-bottom: 5px #fff solid;
+}
+
+#Sf_Filebase_Gallery li.file-parent
+{
+  float: none;
+  height: 100px;
+}
+
+#Sf_Filebase_Gallery li.file a
+{
+  width: 100px;
+  height: 139px;
+  display: block;
+}
+
+#Sf_Filebase_Gallery li.file-parent a
+{
+  height: 100px;
+}
+
+#Sf_Filebase_Gallery li.file a:hover
+{
+  background-color: #e8e8e8;
+}
+
+#Sf_Filebase_Gallery li.file-parent a
+{
+  background: transparent url("../images/up.png") 17px 17px no-repeat;
+}
+
+#Sf_Filebase_Gallery li.file-directory a
+{
+  background: transparent url("../images/folder.png") 17px 17px no-repeat;
+}
+
+#Sf_Filebase_Gallery li.file-parent a span
+{
+  position: absolute;
+  left: -999px;
+  top: -999px;
+  height: 0;
+  line-height: 1px;
+  font-size: 0;
+}
+
+#Sf_Filebase_Gallery li.file div.contents
+{
+  font-size: 10px;
+}
+
+#Sf_Filebase_Gallery li.file div.contents a
+{
+  text-decoration: none;
+  color: #333;
+}
+
+#Sf_Filebase_Gallery li.file div.contents a span
+{
+  position: absolute;
+  bottom: 0px;
+  display: block;
+  padding: 5px;
+  overflow: hidden;
+  width: 90px;
+  z-index:100;
+}
+
+#Sf_Filebase_Gallery li span.file-directory-controls,
+#Sf_Filebase_Gallery li span.file-controls
+{
+  display: block;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+#Sf_Filebase_Gallery li span.file-directory-controls a,
+#Sf_Filebase_Gallery li span.file-controls a
+{
+  float:    left;
+  display:  block;
+  height:   16px;
+  width:    16px;
+  outline:  none;
+}
+
+#Sf_Filebase_Gallery li span.file-directory-controls span,
+#Sf_Filebase_Gallery li span.file-controls span
+{
+  position: absolute;
+  left: -999px;
+  top: -999px;
+  height: 0;
+  width: 0;
+  line-height: 1px;
+  font-size: 1px;
+  color: #fff;
+  background: transparent none;
+  display: block;
+}
+
+#Sf_Filebase_Gallery li a.directory-edit-link,
+#Sf_Filebase_Gallery li a.file-edit-link
+{
+  background: transparent url("../images/edit.png") bottom left no-repeat;
+}
+
+#Sf_Filebase_Gallery li a.directory-delete-link,
+#Sf_Filebase_Gallery li a.file-delete-link
+{
+  background: transparent url("../images/delete.png") bottom left no-repeat;
+}
+
+#Sf_Filebase_Gallery li span.file-directory-controls a:hover,
+#Sf_Filebase_Gallery li span.file-controls a:hover
+{
+  height: 18px;
+  background-color: transparent;
+}
+
+#Sf_Filebase_Tagcloud
+{
+  float: right;
+  width: 180px;
+}

@@ -201,7 +201,7 @@ class sfFilebasePluginFileObject extends splFileObject
   public function writeLn($str, $nl_delim = "\n", $length = null)
   {
     return $length === null ?
-      $this->fwrite($str . $nl_delim):
+      $this->fwrite($str . $nl_delim) :
       $this->fwrite($str . $nl_delim, $length);
   }
 }

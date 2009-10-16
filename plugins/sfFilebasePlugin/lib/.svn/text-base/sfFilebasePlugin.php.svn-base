@@ -19,11 +19,18 @@
 class sfFilebasePlugin extends sfFilebasePluginDirectory
 {
   /**
+   * This is the default filebase, set by setDefaultFilebase()
+   * of at first instanciation.
+   * @var sfFilebasePlugin
+   */
+  protected static $defaultFilebase = null;
+
+  /**
    * FileInfo Object of Cache Directory
    *
-   * @var sfFilebasePluginFile $cacheDirectory
+   * @var sfFilebasePluginCache: The file cache
    */
-  protected $cacheDirectory;
+  protected $cache;
 
   /**
    * @var sfFilebasePluginUploadedFilesManager $uploadedFilesManager
@@ -70,35 +77,29 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
    * @throws  sfFilebasePluginException
    * @param   string $mode
    */
-  function __construct($path_name = null, $cache_directory = null, $create = true, $dir_chmod = 0777)
+  function __construct($path_name, $cache_directory = null)
   {
-    if($path_name === null)
-    {
-      $path_name = sfConfig::get('app_sf_filebase_plugin_path_name', sfConfig::get('sf_upload_dir'));
-    }
-    if($cache_directory === null)
-    {
-      $cache_directory = sfConfig::get('app_sf_filebase_plugin_cache_directory', $path_name . '/.' . md5(get_class()));
-    }
-
-    $path_name === null && $path_name = sfConfig::get('sf_upload_dir', null);
-
     parent::__construct($path_name, $this);
 
+    // SET THE DEFAULT FILEBASE IF NO FILEBASE EXISTS YET
+    try 
+    { 
+      sfFilebasePlugin::getDefaultFilebase();
+    }
+    catch (Exception $e)
+    {
+      sfFilebasePlugin::setDefaultFilebase($this);
+    }
+    
     if(!$this->fileExists())
     {
       // Should filebase dir be created by default?
-      if($create)
+      $p = $this->getFilebaseFile($this->getPath());
+      if($p->isWritable())
       {
-        $p = $this->getFilebaseFile($this->getPath());
-        if($p->isWritable())
-        {
-          if(!@mkdir($this->getPathname())) throw new sfFilebasePluginException(sprintf('Error creating filebase base directory %s: %', $this->getPathname(), implode("\n", error_get_last())));
-          if(!@chmod($this->getPathname(), $dir_chmod)) throw new sfFilebasePluginException(sprintf('Error changing directory permissions for filebase base directory %s: %', $this->getPathname(), implode("\n", error_get_last())));
-        }
-        else throw new sfFilebasePluginException(sprintf('Filebase base directory %s cannot be created due to write protection of its parent directory.', $this->getPathname()));
+        if(!@mkdir($this->getPathname())) throw new sfFilebasePluginException(sprintf('Error creating filebase base directory %s: %', $this->getPathname(), implode("\n", error_get_last())));
       }
-      else throw new sfFilebasePluginException(sprintf('Filebase base directory %s does not exist.', $this->getPathname()));
+      else throw new sfFilebasePluginException(sprintf('Filebase base directory %s cannot be created due to write protection of its parent directory.', $this->getPathname()));
     }
     if(!$this->isDir())         throw new sfFilebasePluginException(sprintf('Filebase base directory %s is not a directory', $this->getPathname()));
     if(!$this->isReadable())    throw new sfFilebasePluginException(sprintf('Filebase base directory %s is not readable', $this->getPathname()));
@@ -106,8 +107,30 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
     if(!$this->isWritable())   throw new sfFilebasePluginException(sprintf('Filebase base directory %s is read or write protected', $this->getPathname()));
     
     // Initialize cache.
-    $this->initCache($cache_directory);
+    $this->cache = new sfFilebasePluginCache($this);
     $this->uploadedFilesManager = new sfFilebasePluginUploadedFilesManager($this);
+  }
+
+  /**
+   * Sets the default filebase which is accessible via getInstance() without
+   * a path parameter.
+   * @param sfFilebasePlugin $filebase
+   */
+  public static function setDefaultFilebase(sfFilebasePlugin $filebase)
+  {
+    self::$defaultFilebase = $filebase;
+  }
+
+  /**
+   * Returns the default filebase if one was already instanciated
+   * @throws sfFilebasePluginException
+   * @return sfFilebasePlugin $filebase
+   */
+  public static function getDefaultFilebase()
+  {
+    if(self::$defaultFilebase === null)
+      throw new sfFilebasePluginException('An active filebase plugin instance does not yet exist.');
+    return self::$defaultFilebase;
   }
 
   /**
@@ -121,12 +144,36 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
    */
   public static function getInstance($path_name = null, $cache_directory = null, $create = true)
   {
+    if($path_name === null)
+    {
+      try
+      {
+        $filebase = self::getDefaultFilebase();
+        return $filebase;
+      }
+      catch(Exception $e)
+      {
+        throw new sfFilebasePluginException('You must specify a base directory for each filebase');
+      }
+    }
     $hashcookie = md5($path_name.$cache_directory);
     if(!array_key_exists($hashcookie, self::$instances))
     {
       self::$instances[$hashcookie] = new sfFilebasePlugin($path_name, $cache_directory);
     }
     return self::$instances[$hashcookie];
+  }
+
+  /**
+   * Copies a file to the filebase's cache
+   *
+   * @see sfFilebasePluginCache::addFile()
+   * @param sfFilebasePluginFile $file
+   * @return sfFilebasePluginFile $file
+   */
+  public function cacheFile(sfFilebasePluginFile $file)
+  {
+    return $this->cache->addFile($file);
   }
 
   /**
@@ -141,52 +188,23 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
   }
 
   /**
-   * Checks if CacheDirectory exists, if
-   * not, then create it.
-   *
-   * @param $cache_directory Path to cache_dir.
-   * @throws sfFilebasePluginException
-   * @return sfFilebasePluginFile $cache_directory
-   */
-  protected function initCache($cache_directory)
-  {
-    $this->cacheDirectory = $this->getFilebaseFile($cache_directory);
-
-    if(!$this->cacheDirectory->fileExists())
-    {
-      self::mkDir($this->cacheDirectory, 0777);
-    }
-    return $this->cacheDirectory;
-  }
-
-  /**
    * Returns cache directory for this filebase.
-   * 
+   * This is only a proxy for sfFilebasePluginCache::getCacheDirectory()
    * @return sfFilebasePluginDirectory $cacheDirectory
    */
   public function getCacheDirectory()
   {
-    return $this->cacheDirectory;
+    return $this->cache->getCacheDirectory();
   }
 
   /**
    * Clears the cache directory
-   *
+   * @see sfFilebasePluginCache::clear()
+   * @return boolean true if everything went fine
    */
   public function clearCache()
   {
-    foreach($this->cacheDirectory AS $file)
-    {
-      if($file->isDir())
-      {
-        $file->deleteRecursive();
-      }
-      else
-      {
-        $file->delete();
-      }
-    }
-    return true;
+    return $this->cache->clear();
   }
 
   /**
@@ -454,7 +472,7 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
    * @throws sfFilebasePluginException
    * @return sfFilebasePluginFile $file
    */
-  public function chmodFile($destination, $perms = 0755, $recursive = true)
+  public function chmodFile($destination, $perms, $recursive = true)
   {
     $destination = $this->getFilebaseFile($destination);
     if(!$destination->isWritable())                         throw new sfFilebasePluginException(sprintf('FilebaseFile %s is write protected.', $destination->getPathname()));
@@ -527,7 +545,7 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
    * @throws sfFilebasePluginException
    * @return sfFilebasePluginFile $file
    */
-  public function mkDir($path, $perms = 0755)
+  public function mkDir($path, $perms = null)
   {
     // Wrap around, because isDir() returs false on non-existing files.
     $path = new sfFilebasePluginDirectory($this->getFilebaseFile($path), $this);
@@ -538,8 +556,10 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
     if(!$this->isInFilebase($dest)) throw new sfFilebasePluginException(sprintf('Destination directory %s does not belong to filebase %s, access forbidden due to security issues.', $dest->getPathname(), $this->getPathname()));
     if($path->fileExists()) throw new sfFilebasePluginException (sprintf('Directory %s already exists',$path->getPathname()));
     if(!@mkdir($path->getPathname())) throw new sfFilebasePluginException(sprintf('Error creating directory %s', $path->getPathname()), 2010);
-    //  Chmodde dir
-    $path->chmod($perms);
+    
+    if($perms !==null)
+      //  Chmodde dir
+      $path->chmod($perms);
     return $path;
   }
 
@@ -550,7 +570,7 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
    * @param integer $perms
    * @return sfFilebasePluginFile $new_file
    */
-  public function touch($path, $perms = 0755)
+  public function touch($path, $perms = null)
   {
      // Wrap around, because isDir() returs false on non-existing files.
     $path = new sfFilebasePluginFile($this->getFilebaseFile($path), $this);
@@ -561,8 +581,10 @@ class sfFilebasePlugin extends sfFilebasePluginDirectory
     if($path->fileExists()) throw new sfFilebasePluginException (sprintf('File %s already exists',$path->getPathname()));
     if(!@touch($path->getPathname())) throw new sfFilebasePluginException(sprintf('Error creating file %s', $path->getPathname()));
 
-    //  Chmodde file
-    $path->chmod($perms);
+    if($perms !== null)
+      //  Chmodde file
+      $path->chmod($perms);
+      
     return $path;
   }
 

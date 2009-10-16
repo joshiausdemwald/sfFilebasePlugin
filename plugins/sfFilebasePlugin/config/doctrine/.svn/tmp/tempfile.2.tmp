@@ -1,0 +1,54 @@
+#/**
+# * This file is part of the sfFilebasePlugin package.
+# *
+# * For the full copyright and license information, please view the LICENSE
+# * file that was distributed with this source code.
+# *
+# * @package   de.optimusprime.sfFilebasePlugin.adminArea
+# * @author    Johannes Heinen <johannes.heinen@gmail.com>
+# * @license   MIT license
+# * @copyright 2007-2009 Johannes Heinen <johannes.heinen@gmail.com>
+# */
+sfAbstractFile:
+  tableName: sf_abstract_files
+  columns:
+    filename:                   { type: string(255), notnull: true }
+    hash:                       { type: string(255), notnull: true }
+    comment:                    { type: string, notnull: false }
+    title:                      { type: string(255),  notnull: false }
+    environment:                { type: string(255), notnull: false }
+    application:                { type: string(255), notnull: false }
+    tags:                       { type: string(255), notnull: false }
+  
+  actAs:
+    NestedSet:
+      hasManyRoots:   true,
+      rootColumnName: root_id
+
+  relations:
+    rootNode:
+      class:        sfFilebaseDirectory
+      local:        root_id
+      foreign:      id
+      onDelete:     cascade
+      onUpdate:     cascade
+      foreignAlias: descendants
+
+sfFilebaseFile:
+  tableName: sf_filebase_files
+  inheritance:
+    extends:  sfAbstractFile
+    type:     column_aggregation
+    keyField: type
+    keyValue: 1
+  columns:
+    author:     { type: string(255),  notnull: false }
+    copyright:  { type: string(255),  notnull: false }
+
+sfFilebaseDirectory:
+  tableName: sf_filebase_directories
+  inheritance:
+    extends:  sfAbstractFile
+    type:     column_aggregation
+    keyField: type
+    keyValue: 2

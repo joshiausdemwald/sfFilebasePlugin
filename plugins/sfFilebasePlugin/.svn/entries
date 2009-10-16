@@ -1,16 +1,16 @@
 9
 
 dir
-22845
-http://svn.symfony-project.com/plugins/sfFilebasePlugin/branches/image-transform
+23120
+http://svn.symfony-project.com/plugins/sfFilebasePlugin/trunk
 http://svn.symfony-project.com
 
 
 
-2009-10-06T20:20:22.860082Z
-22845
+2009-10-16T12:20:43.650623Z
+23120
 joshiausdemwald
-
+has-props
 
 svn:special svn:externals svn:needs-lock
 
@@ -35,17 +35,21 @@ ee427ae8-e902-0410-961c-c3ed070cd9f9
 
 test
 dir
+
+
+
+delete
 
 files.txt
 file
-23037
+23131
 
 
 
-2009-10-14T12:46:39.000000Z
-a31efd45733e51d8dc1c287cdb9bf7a0
-2009-10-14T12:48:10.760793Z
-23037
+2009-10-16T13:30:50.000000Z
+9a442ff693d60bee766ef9399618537d
+2009-10-16T13:41:43.593324Z
+23131
 joshiausdemwald
 has-props
 
@@ -68,7 +72,7 @@ has-props
 
 
 
-39104
+39454
 
 LICENSE
 file
@@ -106,14 +110,14 @@ has-props
 
 sfFilebasePlugin-0.9.0.tgz
 file
-23051
 
 
 
-2009-10-14T14:49:23.000000Z
+
+2009-10-16T08:45:08.000000Z
 a6095b690a4ab0295c584b19248c7baa
-2009-10-14T14:49:40.451684Z
-23051
+2009-10-16T08:46:02.639224Z
+23112
 joshiausdemwald
 has-props
 
@@ -140,14 +144,14 @@ has-props
 
 sfFilebasePlugin-0.9.1.tgz
 file
-23053
 
 
 
-2009-10-14T14:50:27.000000Z
+
+2009-10-16T08:45:13.000000Z
 37b35b9121e82b2a0d5a64fec6efd78d
-2009-10-14T14:52:26.877122Z
-23053
+2009-10-16T08:46:02.639224Z
+23112
 joshiausdemwald
 has-props
 
@@ -174,14 +178,14 @@ has-props
 
 package.xml
 file
-23052
+23132
 
 
 
-2009-10-14T14:49:42.000000Z
-04d1ec56903909bd977cb2bff3c9610e
-2009-10-14T14:49:52.726745Z
-23052
+2009-10-16T13:42:06.000000Z
+9d076db15eb16278ebb4c55951b4ea16
+2009-10-16T13:42:16.058353Z
+23132
 joshiausdemwald
 has-props
 
@@ -204,7 +208,7 @@ has-props
 
 
 
-61293
+62110
 
 package
 file
@@ -242,14 +246,14 @@ has-props
 
 README
 file
-23051
+23131
 
 
 
-2009-10-14T14:49:07.000000Z
-62ad8564bd295e5ca45e67a9e324c37a
-2009-10-14T14:49:40.451684Z
-23051
+2009-10-16T13:41:38.000000Z
+80a1b6ab916c63bf05cc486c3e9f5990
+2009-10-16T13:41:43.593324Z
+23131
 joshiausdemwald
 has-props
 
@@ -272,7 +276,7 @@ has-props
 
 
 
-18636
+19953
 
 makedoc
 file
@@ -308,10 +312,10 @@ has-props
 
 92
 
-config
+doc
 dir
 
-doc
+config
 dir
 
 lib

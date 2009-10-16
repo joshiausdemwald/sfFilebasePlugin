@@ -26,7 +26,7 @@ class sf_filebase_filedelivererActions extends sfActions
   {
     $id = $request->getParameter('file', null);
     $this->forward404If($id === null);
-    $f = sfFilebasePlugin::getInstance();
+    $f = sfConfig::get('sf_public_filebase');
     $file_object = Doctrine::getTable('sfFilebaseFile')->find($id);
     $this->forward404Unless($file_object);
     $file = $f->getFilebaseFile($file_object->getHash());
@@ -45,7 +45,7 @@ class sf_filebase_filedelivererActions extends sfActions
   {
     $id = $request->getParameter('file', null);
     $this->forward404If($id === null);
-    $f = sfFilebasePlugin::getInstance();
+    $f = sfConfig::get('sf_public_filebase');
     $file_object = Doctrine::getTable('sfFilebaseFile')->find($id);
     $file = $f->getFilebaseFile($file_object->getHash())->getThumbnail($request->getParameter('width', null), $request->getParameter('height', null), 'center');
     $this->forward404If($file === null);

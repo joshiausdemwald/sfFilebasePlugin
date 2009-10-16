@@ -1,35 +1,39 @@
+K 26
+svn:wc:ra_dav:activity-url
+V 10
+/!svn/act/
 K 25
 svn:wc:ra_dav:version-url
-V 65
-/!svn/ver/22845/plugins/sfFilebasePlugin/branches/image-transform
+V 46
+/!svn/ver/23120/plugins/sfFilebasePlugin/trunk
 END
 files.txt
 K 25
 svn:wc:ra_dav:version-url
-V 75
-/!svn/ver/23037/plugins/sfFilebasePlugin/branches/image-transform/files.txt
+V 56
+/!svn/ver/23131/plugins/sfFilebasePlugin/trunk/files.txt
 END
 sfFilebasePlugin-0.9.0.tgz
 K 25
 svn:wc:ra_dav:version-url
-V 92
-/!svn/ver/23051/plugins/sfFilebasePlugin/branches/image-transform/sfFilebasePlugin-0.9.0.tgz
+V 73
+/!svn/ver/23112/plugins/sfFilebasePlugin/trunk/sfFilebasePlugin-0.9.0.tgz
 END
 sfFilebasePlugin-0.9.1.tgz
 K 25
 svn:wc:ra_dav:version-url
-V 92
-/!svn/ver/23053/plugins/sfFilebasePlugin/branches/image-transform/sfFilebasePlugin-0.9.1.tgz
+V 73
+/!svn/ver/23112/plugins/sfFilebasePlugin/trunk/sfFilebasePlugin-0.9.1.tgz
 END
 package.xml
 K 25
 svn:wc:ra_dav:version-url
-V 77
-/!svn/ver/23052/plugins/sfFilebasePlugin/branches/image-transform/package.xml
+V 58
+/!svn/ver/23132/plugins/sfFilebasePlugin/trunk/package.xml
 END
 README
 K 25
 svn:wc:ra_dav:version-url
-V 72
-/!svn/ver/23051/plugins/sfFilebasePlugin/branches/image-transform/README
+V 53
+/!svn/ver/23131/plugins/sfFilebasePlugin/trunk/README
 END

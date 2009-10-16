@@ -1,0 +1,38 @@
+#/**
+# * This file is part of the sfFilebasePlugin package.
+# *
+# * For the full copyright and license information, please view the LICENSE
+# * file that was distributed with this source code.
+# *
+# * @package   de.optimusprime.sfFilebasePlugin
+# * @author    Johannes Heinen <johannes.heinen@gmail.com>
+# * @license   MIT license
+# * @copyright 2007-2009 Johannes Heinen <johannes.heinen@gmail.com>
+# */
+- %SF_PLUGINS_DIR%/sfFilebasePlugin/lib/sfFilebasePluginFile.php
+- %SF_PLUGINS_DIR%/sfFilebasePlugin/lib/sfFilebasePluginDirectory.php
+- %SF_PLUGINS_DIR%/sfFilebasePlugin/lib/sfFilebasePlugin.php
+
+- %SF_PLUGINS_DIR%/sfFilebasePlugin/lib/sfFilebasePluginStruct.php
+
+- %SF_PLUGINS_DIR%/sfFilebasePlugin/lib/sfFilebasePluginFileExif.php
+- %SF_PLUGINS_DIR%/sfFilebasePlugin/lib/sfFilebasePluginFileObject.php
+
+- %SF_PLUGINS_DIR%/sfFilebasePlugin/lib/sfFilebasePluginException.php
+
+- %SF_PLUGINS_DIR%/sfFilebasePlugin/lib/sfFilebasePluginGfxEditorAdapterInterface.php
+- %SF_PLUGINS_DIR%/sfFilebasePlugin/lib/sfFilebasePluginGfxEditorAdapterGD.php
+- %SF_PLUGINS_DIR%/sfFilebasePlugin/lib/sfFilebasePluginGfxEditorAdapterIMagick.php
+- %SF_PLUGINS_DIR%/sfFilebasePlugin/lib/sfFilebasePluginGfxEditor.php
+
+- %SF_PLUGINS_DIR%/sfFilebasePlugin/lib/sfFilebasePluginImage.php
+
+- %SF_PLUGINS_DIR%/sfFilebasePlugin/lib/sfFilebasePluginRecursiveDirectoryIterator.php
+- %SF_PLUGINS_DIR%/sfFilebasePlugin/lib/sfFilebasePluginRecursiveIteratorIterator.php
+
+- %SF_PLUGINS_DIR%/sfFilebasePlugin/lib/sfFilebasePluginThumbnail.php
+- %SF_PLUGINS_DIR%/sfFilebasePlugin/lib/sfFilebasePluginUploadedFilesManager.php
+
+- %SF_PLUGINS_DIR%/sfFilebasePlugin/lib/sfFilebasePluginUtil.php
+- %SF_PLUGINS_DIR%/sfFilebasePlugin/lib/sfFilebasePluginWebRequest.php
+

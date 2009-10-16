@@ -63,7 +63,7 @@
           </li>
         <?php else:?>
           <?php if(!$tag || $node->hasTag($tag)):?>
-            <?php $file = sfFilebasePlugin::getInstance()->getFilebaseFile($node->getHash())?>
+            <?php $file = sfConfig::get('sf_public_filebase')->getFilebaseFile($node->getHash())?>
             <li class="file<?php $file instanceof sfFilebaseImage && print ' file-image'?>">
               <div class="contents">
                 <?php #if($file->isImage()):?>

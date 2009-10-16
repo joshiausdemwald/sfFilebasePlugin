@@ -49,7 +49,7 @@ abstract class PluginsfFilebaseFileForm extends BasesfFilebaseFileForm
       );
       
       $this->validatorSchema['hash']  = new sfFilebasePluginValidatorFile(array(
-        'path'=>sfFilebasePlugin::getInstance()->getPathname(),
+        'path'=>sfConfig::get('sf_public_filebase')->getPathname(),
         'allow_overwrite'=> true,
         'required'=>true
       ));

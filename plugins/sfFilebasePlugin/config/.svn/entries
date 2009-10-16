@@ -1,14 +1,14 @@
 9
 
 dir
-22845
-http://svn.symfony-project.com/plugins/sfFilebasePlugin/branches/image-transform/config
+23120
+http://svn.symfony-project.com/plugins/sfFilebasePlugin/trunk/config
 http://svn.symfony-project.com
 
 
 
-2009-10-06T20:15:54.002592Z
-22839
+2009-10-16T11:57:42.692992Z
+23118
 joshiausdemwald
 has-props
 
@@ -99,14 +99,14 @@ joshiausdemwald
 
 config.php
 file
+23129
 
 
 
-
-2009-10-06T20:21:01.000000Z
-2fe6cf04438f4a54411a5c4fcae05cad
-2009-05-13T16:04:25.955815Z
-18227
+2009-10-16T13:28:23.000000Z
+dd77a0aeb0b47b6f01d95f38a66350cb
+2009-10-16T13:28:26.878382Z
+23129
 joshiausdemwald
 
 
@@ -129,5 +129,5 @@ joshiausdemwald
 
 
 
-461
+613
 

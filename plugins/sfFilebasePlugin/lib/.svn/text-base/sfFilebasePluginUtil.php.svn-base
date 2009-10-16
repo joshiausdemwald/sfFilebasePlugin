@@ -527,8 +527,52 @@ class sfFilebasePluginUtil
    */
   public static function unifySlashes($path)
   {
-    $path = preg_replace('#[\\\/]+#','/', $path);
-    return rtrim(str_replace('\\','/',$path),'/');
+    return self::realpath($path);
+  }
+
+  /**
+   * Replaces native php function realpath(), without
+   * checking if the path physically exists on file system.
+   * Returns false if the path could not be converted.
+   * @param string $path
+   * @return string $cleaned up path
+   */
+  public static function realpath($path)
+  {
+    $pathinfo = self::pathInfo($path);
+
+    $path = preg_replace('#[\\\/]+#','/', $pathinfo['stripped_path']);
+    
+    $parts = explode('/', $path);
+    $new_path = array();
+
+    foreach($parts AS $i=>$part)
+    {
+      if(empty($part) || $part == '.')
+      {
+        continue;
+      }
+      if($part == '..')
+      {
+        if(count($new_path)>0)
+        {
+          array_pop($new_path);
+          continue;
+        }
+        return false;
+      }
+      $new_path[] = $part;
+    }
+    $path = implode('/', $new_path);
+    if($pathinfo['is_absolute'])
+    {
+      if($pathinfo['drive_letter'])
+      {
+        return $pathinfo['drive_letter'] . ':/' . $path;
+      }
+      return '/' . $path;
+    }
+    else return $path;
   }
 
   /**
@@ -632,7 +676,32 @@ class sfFilebasePluginUtil
    */
   public static function isAbsolutePathname($pathname)
   {
-    return ((strpos($pathname, '/') === 0 || preg_match('#[a-z]:(\\\|/)#i',$pathname)));
+    $pathinfo = self::pathInfo($pathname);
+    return $pathinfo['is_absolute'];
+  }
+
+  /**
+   * Returns some additional information about a raw pathname
+   * as an array(
+   *   is_absolute: true if the pathname is absolute
+   *   drive_letter: the drive letter on windows
+   *   fs: string (unix or win)
+   *   pathname: the full pathname as given
+   *   stripped_path: the pathname without the trailing slash and/or drive letter
+   * )
+   * @param string $pathname
+   * @return array $info
+   */
+  public static function pathInfo($pathname)
+  {
+    preg_match('#^((/)|(([a-z]):(\\\|/)))?(.*?)$#i',$pathname, $matches);
+    return array(
+      'is_absolute'         => !empty($matches[1]) || !empty($matches[2]),
+      'drive_letter'        => empty($matches[4]) ? null : strtoupper($matches[4]),
+      'fs'                  => empty($matches[3]) ? 'unix' : 'win',
+      'pathname'            => $pathname,
+      'stripped_path'       => $matches[6]
+    );
   }
 
   /**

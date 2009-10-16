@@ -1,14 +1,14 @@
 9
 
 dir
-22845
-http://svn.symfony-project.com/plugins/sfFilebasePlugin/branches/image-transform/lib/form/doctrine
+23120
+http://svn.symfony-project.com/plugins/sfFilebasePlugin/trunk/lib/form/doctrine
 http://svn.symfony-project.com
 
 
 
-2009-06-20T12:37:35.170657Z
-19415
+2009-10-16T11:57:42.692992Z
+23118
 joshiausdemwald
 
 
@@ -28,14 +28,14 @@ ee427ae8-e902-0410-961c-c3ed070cd9f9
 
 PluginsfFilebaseFileForm.class.php
 file
+23128
 
 
 
-
-2009-10-06T20:21:01.000000Z
-c25f88863fc0344842f4daa193c58069
-2009-06-20T12:37:35.170657Z
-19415
+2009-10-16T13:13:39.000000Z
+c0b3203781a0ddac5c765201f0e7ccd5
+2009-10-16T13:28:06.349543Z
+23128
 joshiausdemwald
 
 
@@ -58,7 +58,7 @@ joshiausdemwald
 
 
 
-5444
+5448
 
 PluginsfFilebaseDirectoryForm.class.php
 file
@@ -127,4 +127,38 @@ joshiausdemwald
 
 
 300
+
+PlugintestererForm.class.php
+file
+
+
+
+
+2009-10-16T09:31:21.000000Z
+0c238db04c3ebd1a3ad56776dcae0c16
+2009-10-16T11:57:42.692992Z
+23118
+joshiausdemwald
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+235
 

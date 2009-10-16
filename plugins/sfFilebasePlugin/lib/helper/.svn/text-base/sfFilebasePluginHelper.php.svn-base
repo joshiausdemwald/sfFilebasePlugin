@@ -29,5 +29,5 @@ function get_filebase($path_name = null, $cache_directory = null)
 
 function url_for_asset($path_name)
 {
-  $f = sfFilebasePlugin::getInstance();
+  $f = sfConfig::get('sf_public_filebase')->getAbsolutePathFromWebroot($path_name);
 }

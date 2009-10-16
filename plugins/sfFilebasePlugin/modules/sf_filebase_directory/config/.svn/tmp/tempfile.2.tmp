@@ -1,0 +1,40 @@
+#/**
+# * This file is part of the sfFilebasePlugin package.
+# *
+# * For the full copyright and license information, please view the LICENSE
+# * file that was distributed with this source code.
+# *
+# * @package   de.optimusprime.sfFilebasePlugin.adminArea
+# * @author    Johannes Heinen <johannes.heinen@gmail.com>
+# * @license   MIT license
+# * @copyright 2007-2009 Johannes Heinen <johannes.heinen@gmail.com>
+# */
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           sfFilebaseDirectory
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          sf_filebase_directory
+    with_doctrine_route:     1
+
+    config:
+      actions: ~
+      fields:
+        pathname:
+          label: Directory's pathname
+        sf_filebase_directories_id:
+          label: Parent directory
+        parent_directory_link:
+          label: Parent directory
+      list:
+        display: [filename, title, comment, tagsFormatted]
+      filter:
+        display: [filename, title, comment, tags]
+      form:
+        display: [filename, directory, title, comment, tags]
+      edit:    ~
+      new:     ~

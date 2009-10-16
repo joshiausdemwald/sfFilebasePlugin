@@ -5,6 +5,7 @@ CREATE TABLE sf_guard_user_permission (user_id INT, permission_id INT, created_a
 CREATE TABLE sf_guard_permission (id INT AUTO_INCREMENT, name VARCHAR(255) UNIQUE, description TEXT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE sf_guard_group_permission (group_id INT, permission_id INT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(group_id, permission_id)) ENGINE = INNODB;
 CREATE TABLE sf_guard_group (id INT AUTO_INCREMENT, name VARCHAR(255) UNIQUE, description TEXT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE tester (id BIGINT AUTO_INCREMENT, path_name VARCHAR(255) NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE sf_abstract_files (id BIGINT AUTO_INCREMENT, filename VARCHAR(255) NOT NULL, hash VARCHAR(255) NOT NULL, comment TEXT, title VARCHAR(255), environment VARCHAR(255), application VARCHAR(255), tags VARCHAR(255), type VARCHAR(255), author VARCHAR(255), copyright VARCHAR(255), root_id BIGINT, lft INT, rgt INT, level SMALLINT, INDEX root_id_idx (root_id), PRIMARY KEY(id)) ENGINE = INNODB;
 ALTER TABLE sf_guard_user_group ADD CONSTRAINT sf_guard_user_group_user_id_sf_guard_user_id FOREIGN KEY (user_id) REFERENCES sf_guard_user(id) ON DELETE CASCADE;
 ALTER TABLE sf_guard_user_group ADD CONSTRAINT sf_guard_user_group_group_id_sf_guard_group_id FOREIGN KEY (group_id) REFERENCES sf_guard_group(id) ON DELETE CASCADE;

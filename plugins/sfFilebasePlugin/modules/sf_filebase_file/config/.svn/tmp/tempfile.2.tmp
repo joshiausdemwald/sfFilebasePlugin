@@ -1,0 +1,40 @@
+#/**
+# * This file is part of the sfFilebasePlugin package.
+# *
+# * For the full copyright and license information, please view the LICENSE
+# * file that was distributed with this source code.
+# *
+# * @package   de.optimusprime.sfFilebasePlugin.adminArea
+# * @author    Johannes Heinen <johannes.heinen@gmail.com>
+# * @license   MIT license
+# * @copyright 2007-2009 Johannes Heinen <johannes.heinen@gmail.com>
+# */
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           sfFilebaseFile
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          sf_filebase_file
+    with_doctrine_route:     1
+
+    config:
+      fields:
+        pathname:
+          label: File
+        sf_filebase_directories_id:
+          label: Directory
+        retrieveFiles:
+          label: Properties
+      list:
+        display: [~retrieveFiles, title, author, copyright, tagsFormatted]
+      filter:
+        display: [filename, title, comment, author, copyright, tags]
+      form: ~
+      edit:
+        display: [~retrieveFiles, filename, directory, title, comment, author, copyright, tags]
+      new:
+        display: [hash, directory, title, comment, author, copyright, tags]

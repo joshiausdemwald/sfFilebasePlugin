@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/23118/plugins/sfFilebasePlugin/trunk/lib/form/doctrine
+END
+PluginsfFilebaseFileForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/!svn/ver/23128/plugins/sfFilebasePlugin/trunk/lib/form/doctrine/PluginsfFilebaseFileForm.class.php
+END
+PlugintestererForm.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/23118/plugins/sfFilebasePlugin/trunk/lib/form/doctrine/PlugintestererForm.class.php
+END

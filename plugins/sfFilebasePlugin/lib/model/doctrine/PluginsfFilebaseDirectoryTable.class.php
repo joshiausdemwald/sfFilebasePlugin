@@ -20,9 +20,10 @@ class PluginsfFilebaseDirectoryTable extends sfAbstractFileTable
     $tree = $tree_object->fetchTree(array('root_id'=>$root->getId()));
     if(!$tree)
     {
+      $filebase = sfConfig::get('sf_public_filebase');
       $root = new sfFilebaseDirectory();
-      $root->setFilename(sfFilebasePlugin::getInstance()->getFilename());
-      $root->setHash(sfFilebasePlugin::getInstance()->getHash());
+      $root->setFilename($filebase->getFilename());
+      $root->setHash($filebase->getHash());
       $root->save();
       $tree_object->createRoot($root);
       $tree = $tree_object->fetchTree();

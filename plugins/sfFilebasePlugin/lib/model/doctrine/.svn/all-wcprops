@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/23118/plugins/sfFilebasePlugin/trunk/lib/model/doctrine
+END
+Plugintesterer.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/!svn/ver/23118/plugins/sfFilebasePlugin/trunk/lib/model/doctrine/Plugintesterer.class.php
+END
+PluginsfFilebaseDirectoryTable.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/!svn/ver/23128/plugins/sfFilebasePlugin/trunk/lib/model/doctrine/PluginsfFilebaseDirectoryTable.class.php
+END
+PlugintestererTable.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/!svn/ver/23118/plugins/sfFilebasePlugin/trunk/lib/model/doctrine/PlugintestererTable.class.php
+END

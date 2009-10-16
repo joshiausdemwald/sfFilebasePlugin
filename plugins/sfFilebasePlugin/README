@@ -13,6 +13,9 @@ file validator, a SfWebRequest child class for transforming the $__FILES array
 into a more accessible structure and a few other features that simplify upload
 handling.
 
+sfFilebasePlugin provides as *doctrine behaviour* to easily connect your systems
+files with a database. 
+
 Additionally, there is a admin module and a simple to use component to render
 a **drag'n'drop** treeview based on ext js for most simply organizing your files
 in a directory structure, all maintained through a doctrine driven hierarchical
@@ -165,6 +168,10 @@ In /apps/frontend/config/app.yml, write:
     all:
       sf_filebase_plugin:
         path_name: /home/joshi/www/test/web/uploads/assets
+
+You can create as much instances of a filebase as you want to, but this will
+be your default filebase which is used by the modules and doctrine models to store
+uploaded files in.
 
 Now switch to your shell window and type:
 
@@ -416,6 +423,35 @@ as sfFile, the image manipulation base class of sfImageTransformPlugin.
 Additionally you can use every virtual method to do transforms, so e.g.
 $myImage->thumbnail(200,200) works as expected. For further documentation
 refer to the manual of sfImageTransformPlugin
+
+Doctrine behaviour
+==================
+You may find the behavior class files in the plugins lib directory, under
+lib/doctrine/template. Usage is simple:
+
+    testerer:
+      tableName: tester
+      actAs:
+        File:
+          name: path_name
+          filebaseDirectory: <?php echo dirname(__FILE__)?>/../../test/assets
+          checkExistence: true
+
+As you can see, woman creates a table named tester and object model "testerer".
+The behaviour adds a column named "path_name", and a filebase "root" directory
+must also be provided (you may use the one configured within your app.yml, too).
+
+Then fetching a tuple, simply do the following:
+
+    // Retrieves the corresponding sfFilebasePluginFile instance
+    Doctrine::getTable('testerer')->find(1)->getFile();
+
+    // And vice-versa
+    Doctrine::getTable('testerer')->find(1)->setFile('path/to/file');
+
+If checkExistence key isset to true, your doctrine built-in validation checks
+if the file really exists in your filesystem before persisting the tuple into
+your database.
 
 Error-Handling
 ==============

@@ -1,0 +1,50 @@
+#/**
+# * This file is part of the sfFilebasePlugin package.
+# *
+# * For the full copyright and license information, please view the LICENSE
+# * file that was distributed with this source code.
+# *
+# * @package   de.optimusprime.sfFilebasePlugin.adminArea
+# * @author    Johannes Heinen <johannes.heinen@gmail.com>
+# * @license   MIT license
+# * @copyright 2007-2009 Johannes Heinen <johannes.heinen@gmail.com>
+# */
+sf_filebase_directory:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                sfFilebaseDirectory
+    module:               sf_filebase_directory
+    prefix_path:          sf_filebase_directory
+    column:               id
+    with_wildcard_routes: true
+    #with_show: false
+
+sf_filebase_file:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                sfFilebaseFile
+    module:               sf_filebase_file
+    prefix_path:          sf_filebase_file
+    column:               id
+    with_wildcard_routes: true
+    #with_show: false
+
+sf_filebase_move_file:
+  url: sf_filebase_move_file
+  param: { module:  sf_filebase_filedeliverer, action: moveFile }
+
+sf_filebase_get_tree:
+  url: sf_filebase_get_tree
+  param: { module: sf_filebase_filedeliverer, action: getTree }
+
+sf_filebase_download_file:
+  url: sf_filebase_download/:file
+  param: { module: sf_filebase_filedeliverer, action: download }
+  
+sf_filebase_display_image:
+  url: sf_filebase_download/:file/:width/:height
+  param: { module: sf_filebase_filedeliverer, action: display_image, width: null, height: null }
+
+sf_filebase_gallery:
+  url: sf_filebase_gallery/:id/:tag
+  param: { module: sf_filebase_gallery, action: index, id: null, tag: null }

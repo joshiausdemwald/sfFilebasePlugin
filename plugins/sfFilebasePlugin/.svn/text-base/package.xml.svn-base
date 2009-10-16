@@ -10,17 +10,17 @@
     <email>johannes.heinen@gmail.com</email>
     <active>yes</active>
   </lead>
-  <date>2009-10-14</date>
+  <date>2009-10-16</date>
   <version>
-    <release>0.9.1</release>
-    <api>0.8.0</api>
+    <release>1.0.0</release>
+    <api>1.0.0</api>
   </version>
   <stability>
     <release>stable</release>
     <api>stable</api>
   </stability>
   <license uri="http://www.symfony-project.org/license">MIT license</license>
-  <notes>This is the first release candidate shipped with an administrative gui, build on top of DOCTRINE 1.1.</notes>
+  <notes>This is the first stable release of sfFilebasePlugin. With space for improvments.</notes>
   <contents>
     <dir name="/">
       <file role="data" name="config/config.php" />
@@ -33,6 +33,8 @@
 <file role="data" name="lib/model/doctrine/PluginsfFilebaseFileTable.class.php" />
 <file role="data" name="lib/model/doctrine/PluginsfAbstractFileTable.class.php" />
 <file role="data" name="lib/model/doctrine/PluginsfFilebaseDirectory.class.php" />
+<file role="data" name="lib/model/doctrine/Plugintesterer.class.php" />
+<file role="data" name="lib/model/doctrine/PlugintestererTable.class.php" />
 <file role="data" name="lib/model/doctrine/PluginsfAbstractFile.class.php" />
 <file role="data" name="lib/sfFilebasePluginFileObject.php" />
 <file role="data" name="lib/sfFilebasePluginUploadedFilesManager.php" />
@@ -44,7 +46,10 @@
 <file role="data" name="lib/validator/sfFilebasePluginValidatorFile.php" />
 <file role="data" name="lib/form/doctrine/PluginsfFilebaseDirectoryForm.class.php" />
 <file role="data" name="lib/form/doctrine/PluginsfAbstractFileForm.class.php" />
+<file role="data" name="lib/form/doctrine/PlugintestererForm.class.php" />
 <file role="data" name="lib/form/doctrine/PluginsfFilebaseFileForm.class.php" />
+<file role="data" name="lib/doctrine/template/listener/File.php" />
+<file role="data" name="lib/doctrine/template/File.php" />
 <file role="data" name="lib/sfFilebasePluginException.php" />
 <file role="data" name="lib/helper/tagcloudHelper.php" />
 <file role="data" name="lib/helper/sfFilebasePluginHelper.php" />
@@ -54,11 +59,13 @@
 <file role="data" name="lib/filter/doctrine/PluginsfAbstractFileFormFilter.class.php" />
 <file role="data" name="lib/filter/doctrine/PluginsfFilebaseFileFormFilter.class.php" />
 <file role="data" name="lib/filter/doctrine/PluginsfFilebaseDirectoryFormFilter.class.php" />
+<file role="data" name="lib/filter/doctrine/PlugintestererFormFilter.class.php" />
 <file role="data" name="lib/sfFilebasePluginThumbnail.php" />
 <file role="data" name="lib/sfFilebasePluginUploadedFile.php" />
 <file role="data" name="lib/sfFilebasePluginWebRequest.php" />
 <file role="data" name="lib/sfFilebasePluginFile.php" />
 <file role="data" name="lib/sfFilebasePlugin.php" />
+<file role="data" name="lib/sfFilebasePluginCache.php" />
 <file role="data" name="modules/sf_filebase_filedeliverer/config/view.yml" />
 <file role="data" name="modules/sf_filebase_filedeliverer/actions/components.class.php" />
 <file role="data" name="modules/sf_filebase_filedeliverer/actions/actions.class.php" />
@@ -90,10 +97,7 @@
 <file role="data" name="modules/sf_filebase_directory/templates/editSuccess.php" />
 <file role="data" name="test/bootstrap/unit.php" />
 <file role="data" name="test/unit/FilebaseTest.php" />
-<file role="data" name="test/unit/sample.txt" />
-<file role="data" name="test/unit/test.JPG" />
-<file role="data" name="test/unit/FilebaseUtilTest.php" />
-<file role="data" name="test/unit/splTest.php" />
+<file role="data" name="test/assets/150px-PHP_Logo.svg.png" />
 <file role="data" name="web/images/up.png" />
 <file role="data" name="web/images/folder.png" />
 <file role="data" name="web/images/edit.png" />
@@ -476,8 +480,6 @@
 <file role="data" name="web/css/main.css" />
 <file role="data" name="web/css/cloud.css" />
 
-
-
       <file role="data" name="README" />
       <file role="data" name="LICENSE" />
     </dir>
@@ -525,6 +527,23 @@
   <phprelease>
   </phprelease>
   <changelog>
+    <release>
+      <version>
+        <release>1.0.0</release>
+        <api>1.0.0</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-10-16</date>
+      <notes>
+      * First stable 1.0 release
+      * More unit tests, coverage of appr. 70 % core functionalities, more 2 come.
+      * Few bugfixes, more improvemenets in utility classes
+      </notes>
+    </release>
     <release>
       <version>
         <release>0.9.1</release>

@@ -1,14 +1,14 @@
 9
 
 dir
-23029
-http://svn.symfony-project.com/plugins/sfFilebasePlugin/branches/image-transform/test
+23120
+http://svn.symfony-project.com/plugins/sfFilebasePlugin/trunk/test
 http://svn.symfony-project.com
 
 
 
-2009-10-14T11:19:43.384121Z
-23029
+2009-10-16T12:20:43.650623Z
+23120
 joshiausdemwald
 
 
@@ -24,16 +24,12 @@ svn:special svn:externals svn:needs-lock
 
 
 
-
-
-
-
-
-
-
-0
+ee427ae8-e902-0410-961c-c3ed070cd9f9
 
 unit
+dir
+
+assets
 dir
 
 bootstrap

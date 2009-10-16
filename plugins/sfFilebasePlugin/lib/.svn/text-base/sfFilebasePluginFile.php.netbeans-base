@@ -76,6 +76,15 @@ class sfFilebasePluginFile extends SplFileInfo
   }
 
   /**
+   * Caches this file by copying it into
+   * the cache directory
+   */
+  public function cache()
+  {
+    return $this->filebase->cacheFile($this);
+  }
+
+  /**
    * Returns true if a file is hidden or null
    * if that cannot be determined (e.g. unter
    * windows).
@@ -299,6 +308,17 @@ class sfFilebasePluginFile extends SplFileInfo
   }
 
   /**
+   * Changes the ownership of a file
+   * @param string $user
+   * @throws sfFilebasePluginException
+   * @return sfFilebasePluginFile $file
+   */
+  public function chgrp($group, $recursive = false)
+  {
+    return $this->filebase->chgrpFile($this, $group, $recursive);
+  }
+
+  /**
    * Renames a file.
    *
    * @param string $new_name: The new filename
@@ -348,6 +368,16 @@ class sfFilebasePluginFile extends SplFileInfo
   {
     if(!$this->getFilebase()->isInFilebase($this)) throw new sfFilebasePluginException(sprintf('Path %s does not lie within FilebaseDirectory', $this->getPathname()));
     return ltrim(preg_replace('#^'.sfFilebasePluginUtil::unifySlashes($this->getFilebase()->getPathname()).'#','', sfFilebasePluginUtil::unifySlashes($this->getPathname()),1),'/\\');
+  }
+
+  /**
+   * Returns true if this file lies within the
+   * filebase's directory.
+   * @return boolean
+   */
+  public function getIsInFilebase()
+  {
+    return $this->filebase->isInFilebase($this);
   }
 
    /**

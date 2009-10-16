@@ -1,14 +1,14 @@
 9
 
 dir
-22845
-http://svn.symfony-project.com/plugins/sfFilebasePlugin/branches/image-transform/lib/model/doctrine
+23120
+http://svn.symfony-project.com/plugins/sfFilebasePlugin/trunk/lib/model/doctrine
 http://svn.symfony-project.com
 
 
 
-2009-06-13T14:53:45.754733Z
-19225
+2009-10-16T11:57:42.692992Z
+23118
 joshiausdemwald
 
 
@@ -128,16 +128,16 @@ joshiausdemwald
 
 1408
 
-PluginsfFilebaseDirectoryTable.class.php
+Plugintesterer.class.php
 file
 
 
 
 
-2009-10-06T20:21:01.000000Z
-285b0e068ebc377b9cc05d96f23c0d44
-2009-06-13T14:53:45.754733Z
-19225
+2009-10-16T09:30:21.000000Z
+5071a7fe36094ea61c01d42bdea523e3
+2009-10-16T11:57:42.692992Z
+23118
 joshiausdemwald
 
 
@@ -160,7 +160,41 @@ joshiausdemwald
 
 
 
-1960
+328
+
+PluginsfFilebaseDirectoryTable.class.php
+file
+23128
+
+
+
+2009-10-16T13:15:07.000000Z
+67db84da0262cead568b9409e5aa4df1
+2009-10-16T13:28:06.349543Z
+23128
+joshiausdemwald
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1971
 
 PluginsfFilebaseFile.class.php
 file
@@ -229,4 +263,38 @@ joshiausdemwald
 
 
 468
+
+PlugintestererTable.class.php
+file
+
+
+
+
+2009-10-16T09:30:21.000000Z
+9e78df03f9baff2604e222f6f60b8c5d
+2009-10-16T11:57:42.692992Z
+23118
+joshiausdemwald
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+67
 

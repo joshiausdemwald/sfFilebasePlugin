@@ -1,25 +1,47 @@
-END
-sfFilebasePlugin.php
 K 25
 svn:wc:ra_dav:version-url
-V 90
-/!svn/ver/23035/plugins/sfFilebasePlugin/branches/image-transform/lib/sfFilebasePlugin.php
+V 50
+/!svn/ver/23120/plugins/sfFilebasePlugin/trunk/lib
+END
+sfFilebasePluginFileObject.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/23112/plugins/sfFilebasePlugin/trunk/lib/sfFilebasePluginFileObject.php
+END
+sfFilebasePluginUtil.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/23118/plugins/sfFilebasePlugin/trunk/lib/sfFilebasePluginUtil.php
 END
 sfFilebasePluginFile.php
 K 25
 svn:wc:ra_dav:version-url
-V 94
-/!svn/ver/23035/plugins/sfFilebasePlugin/branches/image-transform/lib/sfFilebasePluginFile.php
+V 75
+/!svn/ver/23112/plugins/sfFilebasePlugin/trunk/lib/sfFilebasePluginFile.php
+END
+sfFilebasePlugin.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/23128/plugins/sfFilebasePlugin/trunk/lib/sfFilebasePlugin.php
 END
 sfFilebasePluginImage.php
 K 25
 svn:wc:ra_dav:version-url
-V 95
-/!svn/ver/23025/plugins/sfFilebasePlugin/branches/image-transform/lib/sfFilebasePluginImage.php
+V 76
+/!svn/ver/23112/plugins/sfFilebasePlugin/trunk/lib/sfFilebasePluginImage.php
+END
+sfFilebasePluginCache.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/23118/plugins/sfFilebasePlugin/trunk/lib/sfFilebasePluginCache.php
 END
 sfFilebasePluginDirectory.php
 K 25
 svn:wc:ra_dav:version-url
-V 99
-/!svn/ver/23035/plugins/sfFilebasePlugin/branches/image-transform/lib/sfFilebasePluginDirectory.php
+V 80
+/!svn/ver/23112/plugins/sfFilebasePlugin/trunk/lib/sfFilebasePluginDirectory.php
 END
