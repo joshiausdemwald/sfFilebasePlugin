@@ -1,11 +1,17 @@
 K 25
 svn:wc:ra_dav:version-url
 V 56
-/!svn/ver/23120/plugins/sfFilebasePlugin/trunk/test/unit
+/!svn/ver/23270/plugins/sfFilebasePlugin/trunk/test/unit
 END
 FilebaseTest.php
 K 25
 svn:wc:ra_dav:version-url
 V 73
-/!svn/ver/23127/plugins/sfFilebasePlugin/trunk/test/unit/FilebaseTest.php
+/!svn/ver/24089/plugins/sfFilebasePlugin/trunk/test/unit/FilebaseTest.php
+END
+MimeDetectionTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/24089/plugins/sfFilebasePlugin/trunk/test/unit/MimeDetectionTest.php
 END

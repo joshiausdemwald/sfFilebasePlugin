@@ -15,6 +15,17 @@ sfLoader::loadHelpers(array('Url'));
 
 abstract class PluginsfFilebaseFileForm extends BasesfFilebaseFileForm
 {
+  /**
+   * @var sfFilebasePlugin $filebase
+   */
+  protected $filebase;
+
+  public function __construct(sfFilebasePlugin $filebase, $object = null, $options = array(), $CSRFSecret = null)
+  {
+    $this->filebase = $filebase;
+    parent::__construct($object, $options, $CSRFSecret);
+  }
+
   public function setup()
   {
     parent::setup();
@@ -48,11 +59,13 @@ abstract class PluginsfFilebaseFileForm extends BasesfFilebaseFileForm
         )
       );
       
-      $this->validatorSchema['hash']  = new sfFilebasePluginValidatorFile(array(
-        'path'=>sfConfig::get('sf_public_filebase')->getPathname(),
-        'allow_overwrite'=> true,
-        'required'=>true
-      ));
+      $this->validatorSchema['hash'] = $this->filebase->getUploadedFilesManager()->createFileUploadValidator(
+        array(
+          'path'=>$this->filebase->getPathname(),
+          'allow_overwrite'=> true,
+          'required'=>true
+        )
+      );
 
       $this->widgetSchema['directory']->setDefault($directory_choices[0]['id']);
     }

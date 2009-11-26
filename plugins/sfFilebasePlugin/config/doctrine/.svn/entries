@@ -1,14 +1,14 @@
 9
 
 dir
-23120
+23778
 http://svn.symfony-project.com/plugins/sfFilebasePlugin/trunk/config/doctrine
 http://svn.symfony-project.com
 
 
 
-2009-10-16T11:57:42.692992Z
-23118
+2009-11-11T12:53:25.005560Z
+23778
 joshiausdemwald
 
 
@@ -28,14 +28,14 @@ ee427ae8-e902-0410-961c-c3ed070cd9f9
 
 schema.yml
 file
+24210
 
 
 
-
-2009-10-16T09:44:01.000000Z
-f6892f048f55a46dbd7df2ddc43bf95e
-2009-10-16T11:57:42.692992Z
-23118
+2009-11-21T12:27:29.000000Z
+4cb0e0b7876f481f8a943721111fde58
+2009-11-21T12:35:52.682619Z
+24210
 joshiausdemwald
 has-props
 
@@ -58,5 +58,5 @@ has-props
 
 
 
-1846
+1799
 

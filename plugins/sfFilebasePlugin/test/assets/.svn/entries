@@ -1,14 +1,14 @@
 9
 
 dir
-23120
+23778
 http://svn.symfony-project.com/plugins/sfFilebasePlugin/trunk/test/assets
 http://svn.symfony-project.com
 
 
 
-2009-10-16T11:57:42.692992Z
-23118
+2009-10-23T07:20:06.301216Z
+23270
 joshiausdemwald
 
 
@@ -35,7 +35,7 @@ file
 
 
 
-2009-10-16T12:21:31.000000Z
+2009-11-21T12:27:29.000000Z
 635b17fe4d4f2a415a5480b3815516e4
 2009-10-16T08:46:02.639224Z
 23112
@@ -63,6 +63,70 @@ has-props
 
 8107
 
+test_utf7
+file
+
+
+
+
+2009-11-21T12:27:29.000000Z
+545df0a6edaaffd1c8a6f9fc217cc56b
+2009-10-23T07:20:06.301216Z
+23270
+joshiausdemwald
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+98
+
+images
+dir
+
 .f977cf20dcf2d1e0812a0c4c3836ab92
 dir
+
+textsamples
+dir
+
+abcdefg
+dir
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+deleted
 

@@ -51,18 +51,14 @@ class sfFilebasePluginFile extends SplFileInfo
   }
 
   /**
-   * Returns extension of file
+   * Returns extension of file.
    *
+   * @see sfFilebasePlugin::getExtension()
    * @return string $extension or null if file has no extension
    */
   public function getExtension()
   {
-    $extension = pathinfo(parent::getFilename(),PATHINFO_EXTENSION);
-    if(!empty($extension))
-    {
-      return $extension;
-    }
-    return null;
+    return $this->filebase->getFileExtension($this);
   }
   
   /**
@@ -466,7 +462,7 @@ class sfFilebasePluginFile extends SplFileInfo
       
       // Can image be processed by filebase, either throw GD or throug imagick?
       // Then return instance of sfFilebasePluginImage...
-      elseif($this->filebase->getIsImage($filename))
+      elseif($this->filebase->getIsWebImage($filename))
       {
         $filename = new sfFilebasePluginImage($filename->getPathname(), $this->filebase);
       }
@@ -523,5 +519,15 @@ class sfFilebasePluginFile extends SplFileInfo
   public function liesWithin($file)
   {
     return $this->filebase->fileLiesWithin($this, $file);
+  }
+
+  /**
+   * Returns a binary string representation
+   * of this file.
+   * @return string
+   */
+  public function getBinaryString()
+  {
+    return $this->openFile()->fileGetContents();
   }
 }

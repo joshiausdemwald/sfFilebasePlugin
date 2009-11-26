@@ -67,9 +67,9 @@ class sfFilebasePluginImage extends sfFilebasePluginFile
     }
     else throw new sfFilebasePluginException(sprintf('Image type %s hat no build-in support for exif metadata.', $this->getExtension()));
   }
-  
+
   /**
-   * Magic method. This allows the calling of execute tranform methods on sfImageTranform objects.
+   * Magic method. This allows the calling of execute transform methods on sfImageTranform objects.
    *
    * @method
    * @see sfImage::__call
@@ -130,7 +130,7 @@ class sfFilebasePluginImage extends sfFilebasePluginFile
   {
     $mime === null && $mime = $this->getMimeType('');
     $image = $this->getSfImage()->saveAs($filename, $mime);
-    return new sfFilebasePluginImage($image->getFilename(), $this->getFilebase());
+    return new sfFilebasePluginImage($image->getAdapter()->getFilename(), $this->getFilebase());
   }
 
  /**

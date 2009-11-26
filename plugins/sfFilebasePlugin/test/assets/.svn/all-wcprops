@@ -1,11 +1,17 @@
 K 25
 svn:wc:ra_dav:version-url
 V 58
-/!svn/ver/23118/plugins/sfFilebasePlugin/trunk/test/assets
+/!svn/ver/23270/plugins/sfFilebasePlugin/trunk/test/assets
 END
 150px-PHP_Logo.svg.png
 K 25
 svn:wc:ra_dav:version-url
 V 81
 /!svn/ver/23112/plugins/sfFilebasePlugin/trunk/test/assets/150px-PHP_Logo.svg.png
+END
+test_utf7
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/23270/plugins/sfFilebasePlugin/trunk/test/assets/test_utf7
 END

@@ -31,7 +31,7 @@ class sfFilebasePluginUtil
    * @var array $extensions
    * @staticvar array $extensions
    */
-  private static $extensions = array(
+  public static $extensions = array(
     'application/andrew-inset' => 'ez',
     'application/appledouble' => 'base64',
     'application/applefile' => 'base64',
@@ -450,6 +450,9 @@ class sfFilebasePluginUtil
   public static $mime_dependencies = array(
     'application/zip'=>array(
       'odt'
+    ),
+    'audio/mpeg' => array(
+      'txt'
     )
   );
 
@@ -796,10 +799,16 @@ class sfFilebasePluginUtil
    * and returns it, otherwise a $default value will
    * be returned (application/octet-stream per default)
    *
+   * If $extension isset to <> null, this extension will
+   * be assumed as the given file's native extension (used
+   * by file upload manager where the tmp-file has no extension)
+   *
    * $file must be an instance of sfFilebasePluginFile
    *
    * @param   sfFilebasePluginFile  $absolute_path
    * @param   string                $default
+   * @param   string                $default mime
+   * @param   string                $default_extension
    * @return  string               $mime_type
    */
   public static function getMimeType(sfFilebasePluginFile $file, $default = 'application/octet-stream', $extension = null)
@@ -808,10 +817,7 @@ class sfFilebasePluginUtil
 
     $ext = $extension === null ? $file->getExtension() : $extension;
     
-    // Using file_exists() instead of sfFilebasePluginFile::fileExists()
-    // to avoid recursion issue. sfFilebasePluginFile::fileExists()
-    // calls sfFilebasePlugin::getFilebaseFile() calls
-    // sfFilebaseUtil::getMimeType()...
+    // CALL file_exists() TO AVOID RECURSIONS
     if(file_exists($file->getPathname()))
     {
       if(!$file->isReadable()) throw new sfFilebasePluginException(sprintf('File %s is read protected.', $file->getPathname()));
@@ -819,15 +825,19 @@ class sfFilebasePluginUtil
       // 1st step, check magic mimeinfo
       if(class_exists('finfo'))
       {
-        $finfo = new finfo(FILEINFO_MIME);
+        $finfo = new finfo(FILEINFO_MIME, '/usr/share/file/magic');
         $mime_type = $finfo->file($file->getPathname());
       }
-      elseif(function_exists('mime_content_type'))
+
+      if(!$mime_type && function_exists('mime_content_type'))
       {
         $mime_type = mime_content_type($file->getPathname());
       }
     }
 
+    // COMPARE DETECTED MIME TYPE WITH
+    // THE FILE'S EXTENSION BY REGARDING
+    // MIME DEPENDENCIES
     if($mime_type)
     {
       if(!empty($ext))

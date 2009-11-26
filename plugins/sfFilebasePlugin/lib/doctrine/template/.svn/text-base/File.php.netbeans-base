@@ -19,10 +19,9 @@ class Doctrine_Template_File extends Doctrine_Template
   protected $_options = array(
     'name' =>  'pathname',
     'alias' =>  null,
-    'expression' =>  false,
     'options' =>  array('notnull' => true),
-    'filebaseDirectory' => null
-
+    'filebaseDirectory' => null,
+    'checkExistence' => true
   );
 
   /**
@@ -75,40 +74,5 @@ class Doctrine_Template_File extends Doctrine_Template
     $file = $this->filebase->getFilebaseFile($file);
     $this->_invoker[$this->getOption('name')] = $file->getRelativePathFromFilebaseDirectory();
     return $this;
-  }
-
-  /**
-   * set
-   *
-   * @param mixed $name
-   * @param mixed $value
-   * @return void
-   */
-  public function set($name, $value)
-  {
-    if($name == $this->getOption('name'))
-    {
-      $this->setFile($value);
-    }
-    else
-    {
-      $this->_invoker->set($name, $value);
-    }
-  }
-
-  /**
-   * set
-   *
-   * @param mixed $name
-   * @param mixed $value
-   * @return void
-   */
-  public function get($name)
-  {
-    if($name == $this->getOption('name'))
-    {
-      return $this->getFile();
-    }
-    return $this->_invoker->get($name);
   }
 }

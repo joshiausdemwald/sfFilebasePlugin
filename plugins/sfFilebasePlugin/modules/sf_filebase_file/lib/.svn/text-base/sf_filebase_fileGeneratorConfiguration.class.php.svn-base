@@ -21,4 +21,21 @@
  */
 class sf_filebase_fileGeneratorConfiguration extends BaseSf_filebase_fileGeneratorConfiguration
 {
+  /**
+   * Gets a new form object.
+   *
+   * @param  mixed $object
+   *
+   * @return sfForm
+   */
+  public function getForm($object = null)
+  {
+    $class = $this->getFormClass();
+
+    $form = new $class(sfConfig::get('sf_public_filebase'), $object, $this->getFormOptions());
+
+    $this->fixFormFields($form);
+
+    return $form;
+  }
 }

@@ -20,3 +20,6 @@ include($configuration->getSymfonyLibDir().'/vendor/lime/lime.php');
 // INITIALIZING DATABASE
 $app_conf = ProjectConfiguration::getApplicationConfiguration($_SERVER['argv'][1], $_SERVER['argv'][2], true);
 sfContext::createInstance($app_conf)->loadFactories();
+
+###  INSTANCIATING FILEBASE
+sfFilebasePlugin::createFilebase('test', realpath(dirname(__FILE__) . '/../assets'));

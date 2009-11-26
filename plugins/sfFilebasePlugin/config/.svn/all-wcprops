@@ -1,11 +1,17 @@
 K 25
 svn:wc:ra_dav:version-url
 V 53
-/!svn/ver/23118/plugins/sfFilebasePlugin/trunk/config
+/!svn/ver/23778/plugins/sfFilebasePlugin/trunk/config
+END
+core_compile.yml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/24214/plugins/sfFilebasePlugin/trunk/config/core_compile.yml
 END
 config.php
 K 25
 svn:wc:ra_dav:version-url
 V 64
-/!svn/ver/23129/plugins/sfFilebasePlugin/trunk/config/config.php
+/!svn/ver/24210/plugins/sfFilebasePlugin/trunk/config/config.php
 END

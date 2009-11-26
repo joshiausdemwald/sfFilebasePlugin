@@ -1,11 +1,11 @@
 K 25
 svn:wc:ra_dav:version-url
 V 68
-/!svn/ver/23120/plugins/sfFilebasePlugin/trunk/lib/doctrine/template
+/!svn/ver/23778/plugins/sfFilebasePlugin/trunk/lib/doctrine/template
 END
 File.php
 K 25
 svn:wc:ra_dav:version-url
 V 77
-/!svn/ver/23126/plugins/sfFilebasePlugin/trunk/lib/doctrine/template/File.php
+/!svn/ver/23778/plugins/sfFilebasePlugin/trunk/lib/doctrine/template/File.php
 END

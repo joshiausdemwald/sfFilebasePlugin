@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/23270/plugins/sfFilebasePlugin/trunk/test/assets/images
+END
+testbild.psd
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/23270/plugins/sfFilebasePlugin/trunk/test/assets/images/testbild.psd
+END
+jpg_cmyk.jpg
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/23270/plugins/sfFilebasePlugin/trunk/test/assets/images/jpg_cmyk.jpg
+END
+gif.gif
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/23270/plugins/sfFilebasePlugin/trunk/test/assets/images/gif.gif
+END
+jpg_rgb.jpg
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/23270/plugins/sfFilebasePlugin/trunk/test/assets/images/jpg_rgb.jpg
+END
+png_24bit.png
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/23270/plugins/sfFilebasePlugin/trunk/test/assets/images/png_24bit.png
+END
+png_8bit.png
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/23270/plugins/sfFilebasePlugin/trunk/test/assets/images/png_8bit.png
+END

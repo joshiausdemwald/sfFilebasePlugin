@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 65
-/!svn/ver/23118/plugins/sfFilebasePlugin/trunk/lib/model/doctrine
+/!svn/ver/23128/plugins/sfFilebasePlugin/trunk/lib/model/doctrine
 END
 Plugintesterer.class.php
 K 25

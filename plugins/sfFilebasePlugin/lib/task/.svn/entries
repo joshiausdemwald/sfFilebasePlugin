@@ -1,14 +1,14 @@
 9
 
 dir
-23120
+23778
 http://svn.symfony-project.com/plugins/sfFilebasePlugin/trunk/lib/task
 http://svn.symfony-project.com
 
 
 
-2009-05-27T06:26:58.676959Z
-18679
+2009-10-16T13:28:06.349543Z
+23128
 joshiausdemwald
 
 
@@ -28,11 +28,11 @@ ee427ae8-e902-0410-961c-c3ed070cd9f9
 
 sfFilebaseCreaterootTask.class.php
 file
-23128
 
 
 
-2009-10-16T13:09:06.000000Z
+
+2009-11-21T12:27:29.000000Z
 7b325f0dd6a3532f017dd8fdbeeca055
 2009-10-16T13:28:06.349543Z
 23128
@@ -62,11 +62,11 @@ joshiausdemwald
 
 sfFilebaseImportTask.class.php
 file
-23128
 
 
 
-2009-10-16T13:11:20.000000Z
+
+2009-11-21T12:27:29.000000Z
 58e56171029759cf2214ab7a2a3a3275
 2009-10-16T13:28:06.349543Z
 23128

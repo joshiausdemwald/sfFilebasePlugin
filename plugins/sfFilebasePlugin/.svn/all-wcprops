@@ -5,31 +5,19 @@ V 10
 K 25
 svn:wc:ra_dav:version-url
 V 46
-/!svn/ver/23120/plugins/sfFilebasePlugin/trunk
+/!svn/ver/23778/plugins/sfFilebasePlugin/trunk
 END
 files.txt
 K 25
 svn:wc:ra_dav:version-url
 V 56
-/!svn/ver/23131/plugins/sfFilebasePlugin/trunk/files.txt
-END
-sfFilebasePlugin-0.9.0.tgz
-K 25
-svn:wc:ra_dav:version-url
-V 73
-/!svn/ver/23112/plugins/sfFilebasePlugin/trunk/sfFilebasePlugin-0.9.0.tgz
-END
-sfFilebasePlugin-0.9.1.tgz
-K 25
-svn:wc:ra_dav:version-url
-V 73
-/!svn/ver/23112/plugins/sfFilebasePlugin/trunk/sfFilebasePlugin-0.9.1.tgz
+/!svn/ver/23305/plugins/sfFilebasePlugin/trunk/files.txt
 END
 package.xml
 K 25
 svn:wc:ra_dav:version-url
 V 58
-/!svn/ver/23132/plugins/sfFilebasePlugin/trunk/package.xml
+/!svn/ver/23305/plugins/sfFilebasePlugin/trunk/package.xml
 END
 README
 K 25

@@ -1,14 +1,14 @@
 9
 
 dir
-23120
+23778
 http://svn.symfony-project.com/plugins/sfFilebasePlugin/trunk/config
 http://svn.symfony-project.com
 
 
 
-2009-10-16T11:57:42.692992Z
-23118
+2009-11-11T12:53:25.005560Z
+23778
 joshiausdemwald
 has-props
 
@@ -28,14 +28,14 @@ ee427ae8-e902-0410-961c-c3ed070cd9f9
 
 core_compile.yml
 file
+24214
 
 
 
-
-2009-10-06T20:21:01.000000Z
-42d9e5f6710dd5e8bf8cb8ecbfb9ee16
-2009-05-23T00:28:54.340722Z
-18578
+2009-11-21T15:53:42.000000Z
+faad72e190aea9bb70959ba4ef10e9cc
+2009-11-21T15:57:22.085006Z
+24214
 joshiausdemwald
 
 
@@ -58,7 +58,7 @@ joshiausdemwald
 
 
 
-1732
+1849
 
 doctrine
 dir
@@ -69,7 +69,7 @@ file
 
 
 
-2009-10-06T20:21:01.000000Z
+2009-09-08T12:59:47.000000Z
 ac88ac2e34f15e75fd3b8185d972b0bb
 2009-06-24T07:25:42.689533Z
 19487
@@ -99,14 +99,14 @@ joshiausdemwald
 
 config.php
 file
-23129
+24210
 
 
 
-2009-10-16T13:28:23.000000Z
-dd77a0aeb0b47b6f01d95f38a66350cb
-2009-10-16T13:28:26.878382Z
-23129
+2009-11-21T12:27:29.000000Z
+0040778014c12838f842978acfa3594e
+2009-11-21T12:35:52.682619Z
+24210
 joshiausdemwald
 
 
@@ -129,5 +129,5 @@ joshiausdemwald
 
 
 
-613
+934
 

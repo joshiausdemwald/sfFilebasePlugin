@@ -1,14 +1,14 @@
 9
 
 dir
-23120
+23778
 http://svn.symfony-project.com/plugins/sfFilebasePlugin/trunk
 http://svn.symfony-project.com
 
 
 
-2009-10-16T12:20:43.650623Z
-23120
+2009-11-11T12:53:25.005560Z
+23778
 joshiausdemwald
 has-props
 
@@ -42,14 +42,14 @@ delete
 
 files.txt
 file
-23131
 
 
 
-2009-10-16T13:30:50.000000Z
-9a442ff693d60bee766ef9399618537d
-2009-10-16T13:41:43.593324Z
-23131
+
+2009-10-24T10:16:29.000000Z
+38e144217cb13df903ee3fce5be7d59f
+2009-10-24T10:19:10.722836Z
+23305
 joshiausdemwald
 has-props
 
@@ -72,7 +72,7 @@ has-props
 
 
 
-39454
+40831
 
 LICENSE
 file
@@ -80,7 +80,7 @@ file
 
 
 
-2009-10-06T20:21:03.000000Z
+2009-09-08T12:59:47.000000Z
 e449a1748dcd04844e7005e3e5abce74
 2009-10-06T20:15:54.002592Z
 22839
@@ -108,16 +108,16 @@ has-props
 
 1063
 
-sfFilebasePlugin-0.9.0.tgz
+makedoc
 file
 
 
 
 
-2009-10-16T08:45:08.000000Z
-a6095b690a4ab0295c584b19248c7baa
-2009-10-16T08:46:02.639224Z
-23112
+2009-10-06T20:21:03.000000Z
+587356ceade359db66080ad6e16f3313
+2009-10-06T20:15:54.002592Z
+22839
 joshiausdemwald
 has-props
 
@@ -140,52 +140,33 @@ has-props
 
 
 
-2906084
+92
 
-sfFilebasePlugin-0.9.1.tgz
-file
-
-
-
-
-2009-10-16T08:45:13.000000Z
-37b35b9121e82b2a0d5a64fec6efd78d
-2009-10-16T08:46:02.639224Z
-23112
-joshiausdemwald
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2906072
+config
+dir
+
+doc
+dir
+
+lib
+dir
+
+modules
+dir
+
+data
+dir
 
 package.xml
 file
-23132
 
 
 
-2009-10-16T13:42:06.000000Z
-9d076db15eb16278ebb4c55951b4ea16
-2009-10-16T13:42:16.058353Z
-23132
+
+2009-10-24T10:16:59.000000Z
+492f6434f602e54da472c95dc1b36415
+2009-10-24T10:19:10.722836Z
+23305
 joshiausdemwald
 has-props
 
@@ -208,7 +189,7 @@ has-props
 
 
 
-62110
+65741
 
 package
 file
@@ -246,11 +227,11 @@ has-props
 
 README
 file
-23131
 
 
 
-2009-10-16T13:41:38.000000Z
+
+2009-11-21T12:27:29.000000Z
 80a1b6ab916c63bf05cc486c3e9f5990
 2009-10-16T13:41:43.593324Z
 23131
@@ -277,55 +258,6 @@ has-props
 
 
 19953
-
-makedoc
-file
-
-
-
-
-2009-10-06T20:21:03.000000Z
-587356ceade359db66080ad6e16f3313
-2009-10-06T20:15:54.002592Z
-22839
-joshiausdemwald
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-92
-
-doc
-dir
-
-config
-dir
-
-lib
-dir
-
-modules
-dir
-
-data
-dir
 
 web
 dir

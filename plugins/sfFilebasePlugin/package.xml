@@ -10,10 +10,10 @@
     <email>johannes.heinen@gmail.com</email>
     <active>yes</active>
   </lead>
-  <date>2009-10-16</date>
+  <date>2009-10-24</date>
   <version>
-    <release>1.0.0</release>
-    <api>1.0.0</api>
+    <release>1.0.4</release>
+    <api>1.0.4</api>
   </version>
   <stability>
     <release>stable</release>
@@ -97,6 +97,28 @@
 <file role="data" name="modules/sf_filebase_directory/templates/editSuccess.php" />
 <file role="data" name="test/bootstrap/unit.php" />
 <file role="data" name="test/unit/FilebaseTest.php" />
+<file role="data" name="test/unit/MimeDetectionTest.php" />
+<file role="data" name="test/assets/images/jpg_rgb.jpg" />
+<file role="data" name="test/assets/images/jpg_cmyk.jpg" />
+<file role="data" name="test/assets/images/testbild.psd" />
+<file role="data" name="test/assets/images/png_24bit.png" />
+<file role="data" name="test/assets/images/gif.gif" />
+<file role="data" name="test/assets/images/png_8bit.png" />
+<file role="data" name="test/assets/test_utf7" />
+<file role="data" name="test/assets/textsamples/test_utf16" />
+<file role="data" name="test/assets/textsamples/test_ucs4.txt" />
+<file role="data" name="test/assets/textsamples/test_utf16le" />
+<file role="data" name="test/assets/textsamples/test_utf16be.txt" />
+<file role="data" name="test/assets/textsamples/test_ucs4" />
+<file role="data" name="test/assets/textsamples/test_utf16.txt" />
+<file role="data" name="test/assets/textsamples/test_utf7" />
+<file role="data" name="test/assets/textsamples/test_utf32.txt" />
+<file role="data" name="test/assets/textsamples/test_utf16be" />
+<file role="data" name="test/assets/textsamples/test_utf32" />
+<file role="data" name="test/assets/textsamples/test_ucs2.txt" />
+<file role="data" name="test/assets/textsamples/test_ucs2" />
+<file role="data" name="test/assets/textsamples/test_utf7.txt" />
+<file role="data" name="test/assets/textsamples/test_utf16le.txt" />
 <file role="data" name="test/assets/150px-PHP_Logo.svg.png" />
 <file role="data" name="web/images/up.png" />
 <file role="data" name="web/images/folder.png" />
@@ -487,7 +509,7 @@
   <dependencies>
     <required>
       <php>
-        <min>5.1.7</min>
+        <min>5.2.3</min>
       </php>
       <pearinstaller>
         <min>1.4.1</min>
@@ -503,30 +525,107 @@
         <name>sfWidgetFormInputSWFUploadPlugin</name>
         <channel>plugins.symfony-project.org</channel>
         <min>0.9.1</min>
+        <max>1.0.0</max>
+        <exclude>1.0.0</exclude>
       </package>
       <package>
         <name>sfWidgetFormTreePlugin</name>
         <channel>plugins.symfony-project.org</channel>
         <min>1.0.3</min>
-      </package>
-      <package>
-        <name>sfImageTransformPlugin</name>
-        <channel>plugins.symfony-project.org</channel>
-        <min>1.2.0</min>
+        <max>2.0.0</max>
+        <exclude>2.0.0</exclude>
       </package>
     </required>
     <optional>
       <package>
+        <name>sfImageTransformPlugin</name>
+        <channel>pear.symfony-project.org</channel>
+        <min>1.2.0</min>
+        <max>2.0.0</max>
+        <exclude>2.0.0</exclude>
+      </package>
+      <package>
         <name>Doctrine</name>
         <channel>pear.phpdoctrine.org</channel>
         <min>1.1.0</min>
-        <exclude>1.0.0</exclude>
+        <max>1.2.0</max>
+        <exclude>1.2.0</exclude>
       </package>
     </optional>
   </dependencies>
   <phprelease>
   </phprelease>
   <changelog>
+    <release>
+      <version>
+        <release>1.0.4</release>
+        <api>1.0.4</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-10-24</date>
+      <notes>
+      * Improved file upload handling
+      * Added reference to concrete filebase instance to
+          * sfFilebasePluginValidatorFile
+          * sfFilebasePluginUploadedFilesManager
+          * sfFIlebasePluginUploadedFile
+        To avoid weired path errors when using more than one filebase instance
+        in a project. You now don't have to set the filebase path anymore,
+        that will be done automatically as each instance of the widget, helpers
+        and validators retrieve a pointer to the current filebase or the upload
+        manager.
+      </notes>
+    </release>
+    <release>
+      <version>
+        <release>1.0.3</release>
+        <api>1.0.3</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-10-23</date>
+      <notes>
+      * Removed old GFX-Classes from core_compile.yml
+      * Fixed a bug in saveAs Method the pointed to the wrong image reference
+      </notes>
+    </release>
+    <release>
+      <version>
+        <release>1.0.2</release>
+        <api>1.0.2</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-10-22</date>
+      <notes>
+      * improve doctrine file behaviour
+      </notes>
+    </release>
+    <release>
+      <version>
+        <release>1.0.1</release>
+        <api>1.0.1</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license>MIT license</license>
+      <date>2009-10-22</date>
+      <notes>
+      * improve automatic package install by defining required dependencies
+      </notes>
+    </release>
     <release>
       <version>
         <release>1.0.0</release>

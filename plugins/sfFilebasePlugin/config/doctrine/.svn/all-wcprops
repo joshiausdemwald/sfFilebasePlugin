@@ -1,11 +1,11 @@
 K 25
 svn:wc:ra_dav:version-url
 V 62
-/!svn/ver/23118/plugins/sfFilebasePlugin/trunk/config/doctrine
+/!svn/ver/23778/plugins/sfFilebasePlugin/trunk/config/doctrine
 END
 schema.yml
 K 25
 svn:wc:ra_dav:version-url
 V 73
-/!svn/ver/23118/plugins/sfFilebasePlugin/trunk/config/doctrine/schema.yml
+/!svn/ver/24210/plugins/sfFilebasePlugin/trunk/config/doctrine/schema.yml
 END

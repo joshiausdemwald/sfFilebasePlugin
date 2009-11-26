@@ -1,3 +1,7 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/23128/plugins/sfFilebasePlugin/trunk/lib/task
 END
 sfFilebaseCreaterootTask.class.php
 K 25

@@ -53,9 +53,9 @@ sfFilebaseDirectory:
     keyField: type
     keyValue: 2
 
-testerer:
-  tableName: tester
-  actAs:
-    File:
-      name: path_name
-      filebaseDirectory: <?php echo dirname(__FILE__)?>/../../test/assets
+#testerer:
+#  tableName: tester
+#  actAs:
+#    File:
+#      name: path_name
+#      filebase: test

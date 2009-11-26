@@ -24,6 +24,36 @@
 class sfFilebasePluginValidatorFile extends sfValidatorFile
 {
   /**
+   * The file upload manager as provided by sfFilebasePlugin
+   * @var sfFilebasePluginUploadedFilesManager
+   */
+  protected $manager;
+
+  /**
+   * Constructor.
+   *
+   * Available options:
+   *
+   *  * required:    true if the value is required, false otherwise (default to true)
+   *  * trim:        true if the value must be trimmed, false otherwise (default to false)
+   *  * empty_value: empty value when value is not required
+   *
+   * Available error codes:
+   *
+   *  * required
+   *  * invalid
+   *
+   * @param array $options   An array of options
+   * @param array $messages  An array of error messages
+   * @param sfFilebasePluginUploadedFilesManager $manager
+   */
+  public function __construct($options = array(), $messages = array(), sfFilebasePluginUploadedFilesManager $manager)
+  {
+    $this->manager = $manager;
+    parent::__construct($options, $messages);
+  }
+
+  /**
    * Configures the current validator.
    *
    * The api for sfFilebasePluginValidatorFile is derived from sfValidatorFile.
@@ -71,35 +101,25 @@ class sfFilebasePluginValidatorFile extends sfValidatorFile
   protected function configure($options = array(), $messages = array())
   {
     parent::configure($options, $messages);
+
     unset($this->options['mime_type_guessers']);
     $this->addOption('mime_categories', array(
       'web_images' => sfFilebasePluginUtil::$WEB_IMAGES)
     );
     $this->addOption('allow_overwrite', false);
-    $this->addOption('filebase', sfFilebasePlugin::getInstance());
     $this->setOption('validated_file_class', 'sfFilebasePluginUploadedFile');
 
     $this->addMessage('file_exists', 'Destinated file %file% already exists.');
 
-    // cleanup filebase option
-    $fb = $this->getOption('filebase');
-    if(is_string($fb))
-    {
-      $this->setOption('filebase', sfFilebasePlugin::getInstance($fb));
-    }
-    elseif(!$this->getOption('filebase') instanceof sfFilebasePlugin)
-    {
-      $this->setOption('filebase', sfFilebasePlugin::getInstance());
-    }
-
+    $filebase = $this->getManager()->getFilebase();
     // Calculate target path
     if(!$this->getOption('path'))
     {
-      $this->setOption('path', $this->getOption('filebase')->getPathname());
+      $this->setOption('path', $filebase->getPathname());
     }
     else
     {
-      $this->setOption('path', $this->getOption('filebase')->getFilebaseFile($path)->getPathname());
+      $this->setOption('path', $filebase->getFilebaseFile($path)->getPathname());
     }
   }
 
@@ -122,7 +142,7 @@ class sfFilebasePluginValidatorFile extends sfValidatorFile
       {
         throw new sfValidatorError($this, 'invalid', array('value' => 'File array describes no valid uploaded file.'));
       }
-      $value = sfFilebasePluginUploadedFilesManager::produceUploadedFile($value, $this->getOption('path'));
+      $value = $this->manager->produceUploadedFile($value, $this->getOption('path'));
     }
 
     
@@ -205,9 +225,9 @@ class sfFilebasePluginValidatorFile extends sfValidatorFile
         throw new sfValidatorError($this, 'mime_types', array('mime_types' => $mimeTypes, 'mime_type' => $mimeType));
       }
     }
-
-    $path = $this->getOption('filebase')->getFilebaseFile($this->getOption('path'));
-    $path_name = $this->getOption('filebase')->getFilebaseFile($path->getPathname() . '/' . $value->getOriginalName());
+    $filebase = $this->manager->getFilebase();
+    $path = $filebase->getFilebaseFile($this->getOption('path'));
+    $path_name = $filebase->getFilebaseFile($path->getPathname() . '/' . $value->getOriginalName());
     if($path_name->fileExists())
     {
       if(!$this->getOption('allow_overwrite'))
@@ -250,7 +270,7 @@ class sfFilebasePluginValidatorFile extends sfValidatorFile
    */
   protected function getMimeType($file, $fallback)
   {
-    return $this->getOption('filebase')->getFilebaseFile($file)->getMimeType($fallback);
+    return $this->manager->getFilebase()->getFilebaseFile($file)->getMimeType($fallback);
   }
 
   /**
@@ -268,5 +288,16 @@ class sfFilebasePluginValidatorFile extends sfValidatorFile
     { 
       return sfFilebasePluginUploadedFilesManager::isUploadedFile($value);
     }
+  }
+
+  /**
+   * Returns the file upload manager as provided by
+   * sfFilebasePlugin. Retrieve the current filebase by
+   * using $this->getManager()->getFilebase();
+   * @return sfFilebasePluginUploadedFilesManager $manager
+   */
+  public function getManager()
+  {
+    return $this->manager;
   }
 }
